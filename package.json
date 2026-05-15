@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "node scripts/indexnow-postbuild.cjs",
     "start": "next start",
+    "psi": "node scripts/psi-audit.cjs",
     "lint": "next lint",
     "seo-agent": "npx tsx scripts/seo-agent.ts",
     "seo-agent:daily": "npx tsx scripts/seo-agent.ts --daily"
