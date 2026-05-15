@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Wind, Bike, TreePine, Package, BookOpen, Mountain } from "lucide-react";
+import { Wind, MountainSnow, TreePine, Package, BookOpen, Mountain } from "lucide-react";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { PageHero } from "@/components/layout/PageHero";
 import { JsonLd } from "@/components/layout/JsonLd";

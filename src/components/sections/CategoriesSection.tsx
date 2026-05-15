@@ -5,7 +5,7 @@ import {
   Wind,
   Hotel,
   Car,
-  Bike,
+  MountainSnow,
   TreePine,
   Package,
   PartyPopper,
