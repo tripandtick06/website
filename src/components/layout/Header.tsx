@@ -13,6 +13,7 @@ import {
   MountainSnow,
   TreePine,
   Package,
+  UserCircle,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLocale, useT } from "@/lib/i18n/I18nProvider";
@@ -93,6 +94,8 @@ export function Header() {
     { href: "/turlar", label: t.nav.tours, icon: TreePine },
     { href: "/paketler", label: t.nav.packages, icon: Package },
   ];
+
+  // Mevcut nav-row kalabaligini onlemek icin "Rezervasyonum" link'i sadece mobile-menu'da gosterilir.
 
   return (
     <header
@@ -193,6 +196,17 @@ export function Header() {
             )}
           </div>
 
+          {/* Hesabim (desktop) */}
+          <Link
+            href="/hesabim"
+            className="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-white/75 hover:text-white hover:bg-white/[0.08] text-sm font-medium transition-all"
+            title="Rezervasyonum"
+            aria-label="Rezervasyonum"
+          >
+            <UserCircle className="w-4 h-4" />
+            <span className="hidden xl:inline">Rezervasyonum</span>
+          </Link>
+
           {/* CTA */}
           <Link
             href="/balonlar"
@@ -232,6 +246,14 @@ export function Header() {
             className="flex items-center gap-3 px-4 py-3 text-white/80 hover:text-white hover:bg-white/[0.06] rounded-lg transition-all"
           >
             <span className="font-medium">{t.nav.blog}</span>
+          </Link>
+          <Link
+            href="/hesabim"
+            onClick={() => setMobileOpen(false)}
+            className="flex items-center gap-3 px-4 py-3 text-white/80 hover:text-white hover:bg-white/[0.06] rounded-lg transition-all"
+          >
+            <UserCircle className="w-5 h-5" />
+            <span className="font-medium">Rezervasyonum</span>
           </Link>
           <div className="mt-4 px-4">
             <Link href="/balonlar" className="btn-accent w-full block text-center">

@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import {
   CalendarDays,
@@ -13,49 +14,41 @@ import {
   Bot,
   RefreshCcw,
   Search,
+  ExternalLink,
+  Tag as TagIcon,
+  Trash2,
 } from "lucide-react";
 import { BALLOON_PACKAGES } from "@/data/services/balloons";
 import { ACTIVITIES, TOURS, HOTELS, PACKAGES, TRANSFERS } from "@/data/services/catalog";
 import { OPERATORS } from "@/data/services/operators";
 import { formatPrice, cn } from "@/lib/utils";
 import type { AvailabilityStatus, DayAvailability } from "@/data/availability";
+import {
+  MOCK_BOOKINGS,
+  getBookingStats,
+  type BookingStatus,
+} from "@/data/mock-bookings";
+import {
+  MOCK_CUSTOMERS,
+  getCustomerStats,
+  getNationalityLabel,
+  type CustomerSegment,
+} from "@/data/mock-customers";
+import type { Coupon, CouponType } from "@/data/coupons";
+import { getCouponStatus } from "@/data/coupons";
 
 const ADMIN_AUTH_KEY = "tripandtick:admin:auth";
 
-type Tab = "dashboard" | "fiyatlar" | "rezervasyonlar" | "takvim" | "operatorler" | "seo";
-type BookingStatus = "pending" | "confirmed" | "cancelled" | "completed";
+type Tab =
+  | "dashboard"
+  | "fiyatlar"
+  | "rezervasyonlar"
+  | "takvim"
+  | "operatorler"
+  | "kuponlar"
+  | "musteriler"
+  | "seo";
 type BookingFilter = "all" | BookingStatus;
-
-interface MockBooking {
-  id: string;
-  customerName: string;
-  email: string;
-  service: string;
-  date: string;
-  pax: number;
-  total: number;
-  status: BookingStatus;
-}
-
-function mockBookings(): MockBooking[] {
-  const names = ["Ayse Demir", "Mehmet Kara", "Lisa Schneider", "John Smith", "Maria Garcia", "Wei Chen", "Ahmed Hassan", "Sophie Martin", "Anna Schmidt", "Carlos Mendez"];
-  const services = ["Standart Balon Uçuşu", "Konfor Balon Uçuşu", "Deluxe Balon Uçuşu", "Romantik Özel Balon", "ATV Tur", "Kırmızı Tur"];
-  const statuses: BookingStatus[] = ["confirmed", "confirmed", "confirmed", "pending", "completed", "cancelled"];
-  return Array.from({ length: 30 }).map((_, i) => {
-    const d = new Date();
-    d.setDate(d.getDate() + (i % 20) - 5);
-    return {
-      id: `TT-${(1000 + i).toString().padStart(4, "0")}`,
-      customerName: names[i % names.length],
-      email: names[i % names.length].toLowerCase().replace(" ", ".") + "@example.com",
-      service: services[i % services.length],
-      date: d.toISOString().slice(0, 10),
-      pax: ((i % 4) + 1) * 2,
-      total: 165 * (((i % 4) + 1) * 2) + (i % 3) * 50,
-      status: statuses[i % statuses.length],
-    };
-  });
-}
 
 export default function AdminDashboard() {
   const searchParams = useSearchParams();
@@ -75,6 +68,8 @@ export default function AdminDashboard() {
         {tab === "rezervasyonlar" && "Rezervasyonlar"}
         {tab === "takvim" && "Takvim & Doluluk"}
         {tab === "operatorler" && "Operatorler"}
+        {tab === "kuponlar" && "Kuponlar"}
+        {tab === "musteriler" && "Musteriler"}
         {tab === "seo" && "SEO Agent"}
       </h1>
       <p className="text-slate-500 text-sm mb-6">
@@ -83,6 +78,8 @@ export default function AdminDashboard() {
         {tab === "rezervasyonlar" && "Tum rezervasyonlari filtrele ve yonet."}
         {tab === "takvim" && "Aylik takvim, gunluk doluluk durumu."}
         {tab === "operatorler" && "Operatorler ve komisyon yonetimi."}
+        {tab === "kuponlar" && "Kupon kodlari, indirim oranlari ve kullanim limitleri."}
+        {tab === "musteriler" && "Musteri segmentleri, harcama ve aktivite."}
         {tab === "seo" && "SEO agent makale uretim panosu."}
       </p>
 
@@ -91,23 +88,58 @@ export default function AdminDashboard() {
       {tab === "rezervasyonlar" && <BookingsTab />}
       {tab === "takvim" && <CalendarTab />}
       {tab === "operatorler" && <OperatorsTab />}
+      {tab === "kuponlar" && <CouponsTab />}
+      {tab === "musteriler" && <CustomersTab />}
       {tab === "seo" && <SeoAgentTab />}
     </div>
   );
 }
 
 function DashboardTab() {
-  const bookings = useMemo(() => mockBookings(), []);
-  const recentBookings = bookings.slice(0, 10);
-  const todayRevenue = bookings.filter((b) => b.date === new Date().toISOString().slice(0, 10)).reduce((s, b) => s + b.total, 0);
+  const stats = useMemo(() => getBookingStats(), []);
+  const recentBookings = useMemo(
+    () =>
+      [...MOCK_BOOKINGS]
+        .sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1))
+        .slice(0, 10),
+    []
+  );
+  const occupancy = Math.min(
+    100,
+    Math.round((stats.byStatus.confirmed + stats.byStatus.completed) / Math.max(1, stats.total) * 100)
+  );
 
   return (
     <div className="space-y-6">
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <StatCard icon={CalendarDays} title="Bugün Rezervasyon" value="12" delta="+24%" tone="emerald" />
-        <StatCard icon={TrendingUp} title="Aylık Gelir" value={formatPrice(48750, "EUR")} delta="+18%" tone="amber" />
-        <StatCard icon={UsersIcon} title="Doluluk Oranı" value="78%" delta="+5%" tone="primary" />
-        <StatCard icon={CalendarDays} title="Bugün Toplam" value={formatPrice(todayRevenue, "EUR")} delta="" tone="slate" />
+        <StatCard
+          icon={CalendarDays}
+          title="Bugün Rezervasyon"
+          value={String(stats.todayCount)}
+          delta={`${stats.byStatus.pending} bekliyor`}
+          tone="emerald"
+        />
+        <StatCard
+          icon={TrendingUp}
+          title="Aylık Gelir"
+          value={formatPrice(stats.monthRevenue, "EUR")}
+          delta={`${stats.total} toplam rez.`}
+          tone="amber"
+        />
+        <StatCard
+          icon={UsersIcon}
+          title="Doluluk Oranı"
+          value={`${occupancy}%`}
+          delta={`${stats.byStatus.confirmed} onaylı`}
+          tone="primary"
+        />
+        <StatCard
+          icon={CalendarDays}
+          title="Ort. Sepet"
+          value={formatPrice(stats.averageTicket, "EUR")}
+          delta={formatPrice(stats.todayRevenue, "EUR") + " bugün"}
+          tone="slate"
+        />
       </div>
 
       <div className="grid lg:grid-cols-3 gap-6">
@@ -126,6 +158,7 @@ function DashboardTab() {
                   <th className="py-2">Tarih</th>
                   <th className="py-2 text-right">Tutar</th>
                   <th className="py-2 text-right">Durum</th>
+                  <th className="py-2 text-right"></th>
                 </tr>
               </thead>
               <tbody>
@@ -133,10 +166,18 @@ function DashboardTab() {
                   <tr key={b.id} className="border-b border-slate-100 hover:bg-slate-50">
                     <td className="py-2 font-mono text-xs">{b.id}</td>
                     <td className="py-2">{b.customerName}</td>
-                    <td className="py-2 text-slate-600">{b.service}</td>
+                    <td className="py-2 text-slate-600">{b.serviceName}</td>
                     <td className="py-2 text-slate-600">{b.date}</td>
-                    <td className="py-2 text-right font-medium">{formatPrice(b.total, "EUR")}</td>
+                    <td className="py-2 text-right font-medium">{formatPrice(b.total, b.currency)}</td>
                     <td className="py-2 text-right"><StatusBadge status={b.status} /></td>
+                    <td className="py-2 text-right">
+                      <Link
+                        href={`/admin/rezervasyon/${b.id}`}
+                        className="text-primary hover:text-primary-dark inline-flex items-center gap-1 text-xs font-medium"
+                      >
+                        Detay <ExternalLink className="w-3 h-3" />
+                      </Link>
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -301,13 +342,21 @@ function PricesTab() {
 }
 
 function BookingsTab() {
-  const all = useMemo(() => mockBookings(), []);
+  const all = MOCK_BOOKINGS;
   const [statusFilter, setStatusFilter] = useState<BookingFilter>("all");
   const [search, setSearch] = useState("");
 
   const filtered = all.filter((b) => {
     if (statusFilter !== "all" && b.status !== statusFilter) return false;
-    if (search && !b.customerName.toLowerCase().includes(search.toLowerCase()) && !b.id.toLowerCase().includes(search.toLowerCase())) return false;
+    if (search) {
+      const q = search.toLowerCase();
+      const hit =
+        b.customerName.toLowerCase().includes(q) ||
+        b.id.toLowerCase().includes(q) ||
+        b.customerEmail.toLowerCase().includes(q) ||
+        b.serviceName.toLowerCase().includes(q);
+      if (!hit) return false;
+    }
     return true;
   });
 
@@ -319,7 +368,7 @@ function BookingsTab() {
           <input
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            placeholder="Ad veya kod ara..."
+            placeholder="Ad, e-posta, kod veya hizmet ara..."
             className="w-full pl-10 pr-3 py-2 border border-slate-300 rounded-lg text-sm"
           />
         </div>
@@ -328,7 +377,7 @@ function BookingsTab() {
           onChange={(e) => setStatusFilter(e.target.value as BookingFilter)}
           className="px-3 py-2 border border-slate-300 rounded-lg text-sm"
         >
-          <option value="all">Tüm Durumlar</option>
+          <option value="all">Tüm Durumlar ({all.length})</option>
           <option value="confirmed">Onaylı</option>
           <option value="pending">Bekliyor</option>
           <option value="cancelled">İptal</option>
@@ -347,6 +396,7 @@ function BookingsTab() {
               <th className="p-3 text-right">Kişi</th>
               <th className="p-3 text-right">Tutar</th>
               <th className="p-3 text-right">Durum</th>
+              <th className="p-3 text-right"></th>
             </tr>
           </thead>
           <tbody>
@@ -355,17 +405,25 @@ function BookingsTab() {
                 <td className="p-3 font-mono text-xs">{b.id}</td>
                 <td className="p-3">
                   <p>{b.customerName}</p>
-                  <p className="text-xs text-slate-400">{b.email}</p>
+                  <p className="text-xs text-slate-400">{b.customerEmail}</p>
                 </td>
-                <td className="p-3 text-slate-600">{b.service}</td>
+                <td className="p-3 text-slate-600">{b.serviceName}</td>
                 <td className="p-3 text-slate-600">{b.date}</td>
                 <td className="p-3 text-right">{b.pax}</td>
-                <td className="p-3 text-right font-medium">{formatPrice(b.total, "EUR")}</td>
+                <td className="p-3 text-right font-medium">{formatPrice(b.total, b.currency)}</td>
                 <td className="p-3 text-right"><StatusBadge status={b.status} /></td>
+                <td className="p-3 text-right">
+                  <Link
+                    href={`/admin/rezervasyon/${b.id}`}
+                    className="text-primary hover:text-primary-dark inline-flex items-center gap-1 text-xs font-medium"
+                  >
+                    Detay <ExternalLink className="w-3 h-3" />
+                  </Link>
+                </td>
               </tr>
             ))}
             {filtered.length === 0 && (
-              <tr><td colSpan={7} className="p-8 text-center text-slate-400">Filtreye uyan rezervasyon yok.</td></tr>
+              <tr><td colSpan={8} className="p-8 text-center text-slate-400">Filtreye uyan rezervasyon yok.</td></tr>
             )}
           </tbody>
         </table>
@@ -751,6 +809,60 @@ function OperatorsTab() {
           </div>
         </div>
       )}
+    </div>
+  );
+}
+
+// Stubs — CouponsTab + CustomersTab task #24 alaninda zenginlestirilecek.
+// Build YESIL kalmasi icin placeholder.
+function CouponsTab() {
+  return (
+    <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-10 text-center text-slate-500">
+      <TagIcon className="w-10 h-10 text-slate-300 mx-auto mb-3" />
+      <p className="font-semibold">Kupon yönetimi (Faz 2)</p>
+      <p className="text-xs mt-1">Bu sekme diger sprint'te eklenecek.</p>
+    </div>
+  );
+}
+
+function CustomersTab() {
+  const stats = useMemo(() => getCustomerStats(), []);
+  return (
+    <div className="space-y-4">
+      <div className="grid sm:grid-cols-4 gap-4">
+        <StatCard icon={UsersIcon} title="Toplam Musteri" value={String(stats.total)} tone="primary" />
+        <StatCard icon={TrendingUp} title="Toplam Gelir" value={formatPrice(stats.totalRevenue, "EUR")} tone="emerald" />
+        <StatCard icon={CalendarDays} title="VIP" value={String(stats.vip)} tone="amber" />
+        <StatCard icon={UsersIcon} title="Yeni" value={String(stats.new)} tone="slate" />
+      </div>
+      <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-x-auto">
+        <table className="w-full text-sm">
+          <thead className="bg-slate-50 text-left text-slate-600 border-b border-slate-200">
+            <tr>
+              <th className="p-3">Ad</th>
+              <th className="p-3">E-posta</th>
+              <th className="p-3">Uyruk</th>
+              <th className="p-3 text-right">Rezervasyon</th>
+              <th className="p-3 text-right">Harcama</th>
+              <th className="p-3 text-right">Segment</th>
+            </tr>
+          </thead>
+          <tbody>
+            {MOCK_CUSTOMERS.slice(0, 20).map((c) => (
+              <tr key={c.id} className="border-b border-slate-100 hover:bg-slate-50">
+                <td className="p-3 font-medium">{c.fullName}</td>
+                <td className="p-3 text-xs text-slate-500">{c.email}</td>
+                <td className="p-3 text-slate-600">{getNationalityLabel(c.nationality)}</td>
+                <td className="p-3 text-right">{c.totalBookings}</td>
+                <td className="p-3 text-right">{formatPrice(c.totalSpent, "EUR")}</td>
+                <td className="p-3 text-right">
+                  <span className="inline-block px-2 py-0.5 bg-slate-100 text-slate-700 rounded text-xs capitalize">{c.segment}</span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }

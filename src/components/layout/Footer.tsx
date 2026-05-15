@@ -22,6 +22,7 @@ import { cn } from "@/lib/utils";
 import { useLocale, useT } from "@/lib/i18n/I18nProvider";
 import { isLocale } from "@/lib/i18n/dictionaries";
 import { COMPANY, telHref, whatsappHref } from "@/data/founder";
+import { CurrencySwitcher } from "@/components/booking/CurrencySwitcher";
 
 type FooterLang = {
   code: string;
@@ -74,6 +75,7 @@ export function Footer() {
     { href: "/blog", label: t.nav.blog },
     { href: "/iletisim", label: t.nav.contact },
     { href: "/sss", label: t.nav.faq },
+    { href: "/hesabim", label: "Rezervasyonum" },
   ];
 
   const FOOTER_LEGAL = [
@@ -170,8 +172,13 @@ export function Footer() {
                 </a>
               ))}
 
+              {/* Currency switcher */}
+              <div className="ml-auto">
+                <CurrencySwitcher variant="footer" />
+              </div>
+
               {/* Dil dropdown — Header ile sync */}
-              <div className="relative ml-auto" ref={langRef}>
+              <div className="relative" ref={langRef}>
                 <button
                   type="button"
                   onClick={() => setLangOpen((v) => !v)}

@@ -35,14 +35,21 @@ export function middleware(req: NextRequest) {
     return NextResponse.next();
   }
 
+  // Stripe webhook bypass — Stripe IP'lerinden gelir, signature verify yeterli koruma.
+  // Rate-limit Stripe retry mantigini bozar.
+  if (pathname.startsWith("/api/stripe/webhook")) {
+    return NextResponse.next();
+  }
+
   const ip = getClientIp(req);
 
-  // Rate-limit /api/seo-agent + /api/checkout + /api/contact + /api/availability
+  // Rate-limit /api/seo-agent + /api/checkout + /api/contact + /api/availability + /api/cancel
   const rateLimited =
     pathname.startsWith("/api/seo-agent") ||
     pathname.startsWith("/api/checkout") ||
     pathname.startsWith("/api/contact") ||
-    pathname.startsWith("/api/availability");
+    pathname.startsWith("/api/availability") ||
+    pathname.startsWith("/api/cancel");
 
   if (rateLimited) {
     const rl = rateLimit(`${ip}:${pathname}`);
