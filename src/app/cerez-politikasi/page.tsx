@@ -4,12 +4,30 @@ import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { PageHero } from "@/components/layout/PageHero";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { breadcrumbSchema, SITE_URL } from "@/lib/schema";
+import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
 
 export const metadata: Metadata = {
   title: "Çerez Politikası — Trip and Tick",
   description:
     "Trip and Tick çerez politikası: zorunlu, analitik, fonksiyonel ve pazarlama çerezleri. Çerez yönetimi ve tarayıcı ayarları rehberi.",
-  alternates: { canonical: `${SITE_URL}/cerez-politikasi` },
+  alternates: {
+    canonical: `${SITE_URL}/cerez-politikasi`,
+    languages: generateHreflang("/cerez-politikasi"),
+  },
+  openGraph: {
+    title: "Çerez Politikası",
+    description: "Zorunlu, analitik, fonksiyonel ve pazarlama çerezleri rehberi.",
+    url: `${SITE_URL}/cerez-politikasi`,
+    type: "website",
+    images: [
+      {
+        url: ogImageUrl("Çerez Politikası", "Zorunlu · Analitik · Pazarlama"),
+        width: 1200,
+        height: 630,
+        alt: "Çerez Politikası — Trip and Tick",
+      },
+    ],
+  },
 };
 
 const COOKIE_TYPES = [

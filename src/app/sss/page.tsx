@@ -4,12 +4,33 @@ import { PageHero } from "@/components/layout/PageHero";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { FAQ_ITEMS, type FAQItem } from "@/data/faq";
 import { breadcrumbSchema, faqPageSchema, SITE_URL } from "@/lib/schema";
+import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
 
 export const metadata: Metadata = {
   title: "Sık Sorulan Sorular — Kapadokya Balon Turu SSS | Trip and Tick",
   description:
     "Kapadokya balon turu fiyatı, yaş sınırı, iptal politikası, ödeme yöntemleri ve diğer sık sorulan sorulara hızlı cevaplar. AI search optimize.",
-  alternates: { canonical: `${SITE_URL}/sss` },
+  alternates: {
+    canonical: `${SITE_URL}/sss`,
+    languages: generateHreflang("/sss"),
+  },
+  openGraph: {
+    title: "Sık Sorulan Sorular",
+    description: "Balon turu, fiyat, yaş, iptal, ödeme — hızlı cevaplar.",
+    url: `${SITE_URL}/sss`,
+    type: "website",
+    images: [
+      {
+        url: ogImageUrl(
+          "Sık Sorulan Sorular",
+          "Balon Turu · Fiyat · İptal · Ödeme — Hızlı Cevaplar"
+        ),
+        width: 1200,
+        height: 630,
+        alt: "SSS — Trip and Tick",
+      },
+    ],
+  },
 };
 
 const CATEGORY_LABELS: Record<FAQItem["category"], string> = {

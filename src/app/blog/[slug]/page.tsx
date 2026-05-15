@@ -4,6 +4,8 @@ import path from "path";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { SITE_URL } from "@/lib/schema";
+import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
 
 interface BlogArticle {
   slug: string;
@@ -69,15 +71,36 @@ export async function generateMetadata({
   const article = await getArticle(params.slug);
   if (!article) return { title: "Yazı Bulunamadı" };
 
+  const path = `/blog/${article.slug}`;
+  const title = article.metaTitle || article.title;
   return {
-    title: article.metaTitle || article.title,
+    title,
     description: article.metaDescription,
+    alternates: {
+      canonical: `${SITE_URL}${path}`,
+      languages: generateHreflang(path),
+    },
     openGraph: {
-      title: article.metaTitle || article.title,
+      title,
       description: article.metaDescription,
+      url: `${SITE_URL}${path}`,
       type: "article",
       publishedTime: article.publishedAt,
       tags: article.tags,
+      images: [
+        {
+          url: ogImageUrl(title.slice(0, 100), article.excerpt?.slice(0, 140)),
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: article.metaDescription,
+      images: [ogImageUrl(title.slice(0, 100), article.excerpt?.slice(0, 140))],
     },
   };
 }

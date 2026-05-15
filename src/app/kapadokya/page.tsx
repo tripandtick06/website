@@ -6,12 +6,33 @@ import { PageHero } from "@/components/layout/PageHero";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { KAPADOKYA_PILLARS } from "@/data/services/catalog";
 import { breadcrumbSchema, SITE_URL } from "@/lib/schema";
+import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
 
 export const metadata: Metadata = {
   title: "Kapadokya Rehberi 2026 — Balon, Otel, Tur, Aktiviteler | Trip and Tick",
   description:
     "Kapadokya tatil rehberi: balon turu fiyatları, en iyi oteller, gezi turları, aktiviteler, fotoğraf noktaları ve ne zaman gidilir? Detaylı tüm rehber tek sayfada.",
-  alternates: { canonical: `${SITE_URL}/kapadokya` },
+  alternates: {
+    canonical: `${SITE_URL}/kapadokya`,
+    languages: generateHreflang("/kapadokya"),
+  },
+  openGraph: {
+    title: "Kapadokya Rehberi 2026",
+    description: "Balon, otel, tur, aktiviteler — tüm Kapadokya rehberi tek sayfada.",
+    url: `${SITE_URL}/kapadokya`,
+    type: "website",
+    images: [
+      {
+        url: ogImageUrl(
+          "Kapadokya Rehberi 2026",
+          "Balon · Otel · Tur · Aktivite · Fotoğraf Noktaları"
+        ),
+        width: 1200,
+        height: 630,
+        alt: "Kapadokya Rehberi — Trip and Tick",
+      },
+    ],
+  },
 };
 
 const CATEGORIES = [

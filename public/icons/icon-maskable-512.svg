@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" fill="#1A2B6B"/>
+  <ellipse cx="256" cy="232" rx="92" ry="106" fill="#FF6B35"/>
+  <ellipse cx="256" cy="232" rx="30" ry="106" fill="#FF8A5C" opacity="0.55"/>
+  <path d="M226 330 L256 362 L286 330 Z" fill="#FF6B35"/>
+  <rect x="236" y="362" width="40" height="30" rx="5" fill="#C2410C"/>
+  <text x="256" y="430" font-family="system-ui, -apple-system, sans-serif" font-size="42" font-weight="800" text-anchor="middle" fill="#FFFFFF">TT</text>
+</svg>

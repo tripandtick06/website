@@ -9,17 +9,32 @@ import { OPERATORS } from "@/data/services/operators";
 import { FAQ_ITEMS } from "@/data/faq";
 import { formatPrice } from "@/lib/utils";
 import { breadcrumbSchema, faqPageSchema, SITE_URL } from "@/lib/schema";
+import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
 
 export const metadata: Metadata = {
   title: "Kapadokya Balon Turu Fiyatları 2026 — Trip and Tick",
   description:
     "Kapadokya balon turu €165'ten başlar. Standart, Konfor, Deluxe ve Romantik özel paketler. 9+ TÜRSAB lisanslı operatör, %100 iade garantisi, en düşük fiyat garantisi.",
-  alternates: { canonical: `${SITE_URL}/balonlar` },
+  alternates: {
+    canonical: `${SITE_URL}/balonlar`,
+    languages: generateHreflang("/balonlar"),
+  },
   openGraph: {
     title: "Kapadokya Balon Turu Fiyatları 2026",
     description: "€165'ten başlayan paketler. 9+ operatör, %100 iade garantisi.",
     url: `${SITE_URL}/balonlar`,
     type: "website",
+    images: [
+      {
+        url: ogImageUrl(
+          "Kapadokya Balon Turu Fiyatları 2026",
+          "€165'ten · 9+ TÜRSAB Operatör · %100 İade Garantisi"
+        ),
+        width: 1200,
+        height: 630,
+        alt: "Kapadokya Balon Turu — Trip and Tick",
+      },
+    ],
   },
 };
 

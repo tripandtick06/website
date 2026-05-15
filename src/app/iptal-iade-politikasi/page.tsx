@@ -4,12 +4,33 @@ import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { PageHero } from "@/components/layout/PageHero";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { breadcrumbSchema, SITE_URL } from "@/lib/schema";
+import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
 
 export const metadata: Metadata = {
   title: "İptal & İade Politikası — %100 İade Garantisi | Trip and Tick",
   description:
     "Trip and Tick iptal & iade politikası: 72+ saat öncesi %100 iade, hava iptali her zaman tam iade. 5-10 iş günü içinde geri ödeme.",
-  alternates: { canonical: `${SITE_URL}/iptal-iade-politikasi` },
+  alternates: {
+    canonical: `${SITE_URL}/iptal-iade-politikasi`,
+    languages: generateHreflang("/iptal-iade-politikasi"),
+  },
+  openGraph: {
+    title: "İptal & İade Politikası",
+    description: "72+ saat öncesi %100 iade, hava iptali her zaman tam iade.",
+    url: `${SITE_URL}/iptal-iade-politikasi`,
+    type: "website",
+    images: [
+      {
+        url: ogImageUrl(
+          "İptal & İade Politikası",
+          "%100 İade Garantisi · 72 Saat Kuralı"
+        ),
+        width: 1200,
+        height: 630,
+        alt: "İptal & İade — Trip and Tick",
+      },
+    ],
+  },
 };
 
 const POLICY_ROWS = [

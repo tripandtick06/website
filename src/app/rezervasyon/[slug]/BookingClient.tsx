@@ -263,12 +263,54 @@ export function BookingClient({ service }: { service: BookingService }) {
     return ok;
   }
 
-  function applyPromo() {
-    if (!promoCode.trim()) {
+  const [couponMessage, setCouponMessage] = useState<string>("");
+  const [couponApplying, setCouponApplying] = useState<boolean>(false);
+
+  async function applyPromo() {
+    const code = promoCode.trim();
+    setCouponMessage("");
+    if (!code) {
       setPromoStatus("idle");
       return;
     }
-    setPromoStatus(isValidPromoCode(promoCode) ? "valid" : "invalid");
+    setCouponApplying(true);
+    try {
+      // Pre-discount total — API tarafından otoritatif hesaplanir.
+      const paxCount = adults + children;
+      const adultsLine = adults * service.adultPrice;
+      const childrenLine = Math.round(children * service.adultPrice * service.childRatio);
+      const insuranceTotal = insurance ? paxCount * INSURANCE_PRICE_PER_PAX : 0;
+      const preDiscountTotal = adultsLine + childrenLine + insuranceTotal;
+
+      const res = await fetch("/api/coupon/validate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ code, total: preDiscountTotal, slug: service.slug }),
+      });
+      const data = await res.json();
+      if (data.valid) {
+        setPromoStatus("valid");
+        setCouponMessage(data.message ?? "Kupon uygulandı.");
+      } else if (isValidPromoCode(code)) {
+        // Faz 1 fallback: client'taki hardcoded WELCOME10/EMERCE5 listesi geçerli ise yine kabul.
+        setPromoStatus("valid");
+        setCouponMessage("Kupon uygulandı (lokal).");
+      } else {
+        setPromoStatus("invalid");
+        setCouponMessage(data.message ?? "Kupon geçersiz.");
+      }
+    } catch (err) {
+      console.error("[booking] coupon validate failed", err);
+      if (isValidPromoCode(code)) {
+        setPromoStatus("valid");
+        setCouponMessage("Kupon uygulandı (lokal).");
+      } else {
+        setPromoStatus("invalid");
+        setCouponMessage("Kupon doğrulanamadı.");
+      }
+    } finally {
+      setCouponApplying(false);
+    }
   }
 
   async function startCheckout() {
@@ -503,6 +545,8 @@ export function BookingClient({ service }: { service: BookingService }) {
                 setPromoCode={setPromoCode}
                 applyPromo={applyPromo}
                 promoStatus={promoStatus}
+                couponMessage={couponMessage}
+                couponApplying={couponApplying}
                 policyAccepted={policyAccepted}
                 setPolicyAccepted={setPolicyAccepted}
                 totalPrice={totalPrice}
@@ -929,6 +973,8 @@ function Step4Summary(props: {
   setPromoCode: (v: string) => void;
   applyPromo: () => void;
   promoStatus: "idle" | "valid" | "invalid";
+  couponMessage: string;
+  couponApplying: boolean;
   policyAccepted: boolean;
   setPolicyAccepted: (v: boolean) => void;
   totalPrice: number;
@@ -943,7 +989,7 @@ function Step4Summary(props: {
 }) {
   const {
     service, date, adults, children, insurance, setInsurance,
-    promoCode, setPromoCode, applyPromo, promoStatus,
+    promoCode, setPromoCode, applyPromo, promoStatus, couponMessage, couponApplying,
     policyAccepted, setPolicyAccepted,
     totalPrice, adultsLine, childrenLine, insuranceTotal, discountAmount,
     canContinue, onBack, onNext,
@@ -980,10 +1026,22 @@ function Step4Summary(props: {
               placeholder="WELCOME10"
               className="flex-1 border border-slate-300 rounded-lg px-3 py-2 text-sm uppercase"
             />
-            <button onClick={applyPromo} className="px-4 py-2 bg-slate-900 text-white rounded-lg text-sm hover:bg-slate-800">Uygula</button>
+            <button
+              onClick={applyPromo}
+              disabled={couponApplying}
+              className="px-4 py-2 bg-slate-900 text-white rounded-lg text-sm hover:bg-slate-800 disabled:opacity-50"
+            >
+              {couponApplying ? "Doğrulanıyor..." : "Uygula"}
+            </button>
           </div>
-          {promoStatus === "valid" && <p className="text-xs text-emerald-600 mt-2">✓ Kod geçerli — indirim uygulandı.</p>}
-          {promoStatus === "invalid" && <p className="text-xs text-rose-600 mt-2">Kod geçersiz.</p>}
+          {promoStatus === "valid" && (
+            <p className="text-xs text-emerald-600 mt-2">
+              ✓ {couponMessage || "Kod geçerli — indirim uygulandı."}
+            </p>
+          )}
+          {promoStatus === "invalid" && (
+            <p className="text-xs text-rose-600 mt-2">{couponMessage || "Kod geçersiz."}</p>
+          )}
         </div>
 
         <div className="border-2 border-amber-200 bg-amber-50 rounded-lg p-4">

@@ -34,8 +34,8 @@ export default function NotFound() {
     event.preventDefault();
     const trimmed = query.trim();
     if (!trimmed) return;
-    // FAZ-1: gercek arama yok — kullaniciyi balonlara yonlendir.
-    router.push(`/balonlar?q=${encodeURIComponent(trimmed)}`);
+    // /ara unified search sayfasi — tum hizmet katalogu uzerinde substring eslesme.
+    router.push(`/ara?q=${encodeURIComponent(trimmed)}`);
   }
 
   return (

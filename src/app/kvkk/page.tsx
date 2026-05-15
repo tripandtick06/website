@@ -4,12 +4,30 @@ import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { PageHero } from "@/components/layout/PageHero";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { breadcrumbSchema, SITE_URL } from "@/lib/schema";
+import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
 
 export const metadata: Metadata = {
   title: "KVKK Aydınlatma Metni — 6698 Sayılı Kanun | Trip and Tick",
   description:
     "Trip and Tick KVKK aydınlatma metni: veri sorumlusu, kişisel veri işleme amaçları, aktarım, saklama ve KVKK m.11 kapsamındaki kullanıcı hakları.",
-  alternates: { canonical: `${SITE_URL}/kvkk` },
+  alternates: {
+    canonical: `${SITE_URL}/kvkk`,
+    languages: generateHreflang("/kvkk"),
+  },
+  openGraph: {
+    title: "KVKK Aydınlatma Metni",
+    description: "6698 Sayılı Kanun · Veri sorumlusu · Kullanıcı hakları.",
+    url: `${SITE_URL}/kvkk`,
+    type: "website",
+    images: [
+      {
+        url: ogImageUrl("KVKK Aydınlatma Metni", "6698 Sayılı Kanun"),
+        width: 1200,
+        height: 630,
+        alt: "KVKK — Trip and Tick",
+      },
+    ],
+  },
 };
 
 export default function KvkkPage() {

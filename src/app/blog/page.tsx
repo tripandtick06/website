@@ -1,7 +1,10 @@
+import type { Metadata } from "next";
 import { ArrowRight, Calendar, Tag, Search } from "lucide-react";
 import fs from "fs/promises";
 import path from "path";
 import Link from "next/link";
+import { SITE_URL } from "@/lib/schema";
+import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
 
 interface BlogArticle {
   slug: string;
@@ -53,10 +56,31 @@ async function getBlogArticles(): Promise<BlogArticle[]> {
   }
 }
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Blog — Kapadokya Seyahat Rehberi | Trip and Tick",
   description:
     "Kapadokya balon turu, gezi rehberi, aktiviteler ve otel tavsiyeleri hakkında en güncel blog yazıları. Fiyatlar, ipuçları ve deneyimler.",
+  alternates: {
+    canonical: `${SITE_URL}/blog`,
+    languages: generateHreflang("/blog"),
+  },
+  openGraph: {
+    title: "Blog — Kapadokya Seyahat Rehberi",
+    description: "Balon turu, gezi rehberi, aktiviteler — fiyatlar ve ipuçları.",
+    url: `${SITE_URL}/blog`,
+    type: "website",
+    images: [
+      {
+        url: ogImageUrl(
+          "Blog — Kapadokya Seyahat Rehberi",
+          "Balon Turu · Gezi · Aktivite · İpuçları"
+        ),
+        width: 1200,
+        height: 630,
+        alt: "Trip and Tick — Blog",
+      },
+    ],
+  },
 };
 
 export default async function BlogPage() {

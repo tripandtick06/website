@@ -5,12 +5,33 @@ import { ServiceCard } from "@/components/layout/ServiceCard";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { PACKAGES } from "@/data/services/catalog";
 import { breadcrumbSchema, SITE_URL } from "@/lib/schema";
+import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
 
 export const metadata: Metadata = {
   title: "Kapadokya Tatil Paketleri — Balayı, Aile, Macera | Trip and Tick",
   description:
     "Kapadokya tam gün paketler, balayı, aile, macera ve evlilik teklifi paketleri. Tek rezervasyonda balon + otel + tur — avantajlı fiyat.",
-  alternates: { canonical: `${SITE_URL}/paketler` },
+  alternates: {
+    canonical: `${SITE_URL}/paketler`,
+    languages: generateHreflang("/paketler"),
+  },
+  openGraph: {
+    title: "Kapadokya Tatil Paketleri",
+    description: "Balayı, aile, macera paketleri — balon + otel + tur tek rezervasyon.",
+    url: `${SITE_URL}/paketler`,
+    type: "website",
+    images: [
+      {
+        url: ogImageUrl(
+          "Kapadokya Tatil Paketleri",
+          "Balayı · Aile · Macera · Evlilik Teklifi"
+        ),
+        width: 1200,
+        height: 630,
+        alt: "Kapadokya Tatil Paketleri — Trip and Tick",
+      },
+    ],
+  },
 };
 
 export default function PaketlerPage() {

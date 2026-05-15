@@ -14,6 +14,7 @@ import {
   TreePine,
   Package,
   UserCircle,
+  Search,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLocale, useT } from "@/lib/i18n/I18nProvider";
@@ -135,6 +136,16 @@ export function Header() {
 
         {/* Right Side */}
         <div className="flex items-center gap-3">
+          {/* Search */}
+          <Link
+            href="/ara"
+            className="p-2 rounded-lg text-white/75 hover:text-white hover:bg-white/[0.08] transition-all"
+            aria-label="Arama"
+            title="Arama"
+          >
+            <Search className="w-4 h-4" />
+          </Link>
+
           {/* Language Switcher */}
           <div className="relative" ref={langWrapperRef}>
             <button

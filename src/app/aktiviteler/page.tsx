@@ -6,12 +6,33 @@ import { ServiceCard } from "@/components/layout/ServiceCard";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { ACTIVITIES } from "@/data/services/catalog";
 import { breadcrumbSchema, SITE_URL } from "@/lib/schema";
+import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
 
 export const metadata: Metadata = {
   title: "Kapadokya Aktiviteleri — ATV, At Binme, Jeep Safari | Trip and Tick",
   description:
     "Kapadokya'da yapılacak en iyi aktiviteler: ATV turları, at binme, jeep safari. Rehberli, sigortalı, otel transferi dahil. Anında rezervasyon.",
-  alternates: { canonical: `${SITE_URL}/aktiviteler` },
+  alternates: {
+    canonical: `${SITE_URL}/aktiviteler`,
+    languages: generateHreflang("/aktiviteler"),
+  },
+  openGraph: {
+    title: "Kapadokya Aktiviteleri",
+    description: "ATV, at binme, jeep safari — rehberli & sigortalı.",
+    url: `${SITE_URL}/aktiviteler`,
+    type: "website",
+    images: [
+      {
+        url: ogImageUrl(
+          "Kapadokya Aktiviteleri",
+          "ATV · At Binme · Jeep Safari — €29'dan"
+        ),
+        width: 1200,
+        height: 630,
+        alt: "Kapadokya Aktiviteleri — Trip and Tick",
+      },
+    ],
+  },
 };
 
 export default function AktivitelerPage() {

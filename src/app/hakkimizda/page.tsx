@@ -20,13 +20,34 @@ import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { PageHero } from "@/components/layout/PageHero";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { breadcrumbSchema, personSchema, SITE_URL } from "@/lib/schema";
+import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
 import { COMPANY, FOUNDER, telHref } from "@/data/founder";
 
 export const metadata: Metadata = {
   title: "Hakkımızda — TÜRSAB Lisanslı Kapadokya Acentası | Trip and Tick",
   description:
     "Trip and Tick: 2024'ten beri Kapadokya'da hizmet veren TÜRSAB lisanslı online seyahat acentası. 9+ operatör, 12.000+ mutlu müşteri, en düşük fiyat garantisi.",
-  alternates: { canonical: `${SITE_URL}/hakkimizda` },
+  alternates: {
+    canonical: `${SITE_URL}/hakkimizda`,
+    languages: generateHreflang("/hakkimizda"),
+  },
+  openGraph: {
+    title: "Hakkımızda — TÜRSAB Lisanslı Kapadokya Acentası",
+    description: "2024'ten beri 12.000+ müşteri, 9+ operatör, en düşük fiyat garantisi.",
+    url: `${SITE_URL}/hakkimizda`,
+    type: "website",
+    images: [
+      {
+        url: ogImageUrl(
+          "Hakkımızda",
+          "TÜRSAB Lisanslı · 12.000+ Müşteri · 9+ Operatör"
+        ),
+        width: 1200,
+        height: 630,
+        alt: "Trip and Tick — Hakkımızda",
+      },
+    ],
+  },
 };
 
 const STATS = [

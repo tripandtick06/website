@@ -6,12 +6,33 @@ import { ServiceCard } from "@/components/layout/ServiceCard";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { HOTELS } from "@/data/services/catalog";
 import { breadcrumbSchema, SITE_URL } from "@/lib/schema";
+import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
 
 export const metadata: Metadata = {
   title: "Kapadokya Otel Rezervasyonu — Mağara Otel & Butik | Trip and Tick",
   description:
     "Kapadokya mağara otelleri, butik konaklamalar ve aile otelleri. Göreme & Ürgüp merkezli seçenekler — en uygun fiyat, anında onay.",
-  alternates: { canonical: `${SITE_URL}/oteller` },
+  alternates: {
+    canonical: `${SITE_URL}/oteller`,
+    languages: generateHreflang("/oteller"),
+  },
+  openGraph: {
+    title: "Kapadokya Otel Rezervasyonu",
+    description: "Mağara otelleri, butik & aile otelleri — Göreme & Ürgüp.",
+    url: `${SITE_URL}/oteller`,
+    type: "website",
+    images: [
+      {
+        url: ogImageUrl(
+          "Kapadokya Otel Rezervasyonu",
+          "Mağara Oteller · Butik Konaklamalar · En Uygun Fiyat"
+        ),
+        width: 1200,
+        height: 630,
+        alt: "Kapadokya Otelleri — Trip and Tick",
+      },
+    ],
+  },
 };
 
 export default function OtellerPage() {

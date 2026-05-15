@@ -813,60 +813,6 @@ function OperatorsTab() {
   );
 }
 
-// Stubs — CouponsTab + CustomersTab task #24 alaninda zenginlestirilecek.
-// Build YESIL kalmasi icin placeholder.
-function CouponsTab() {
-  return (
-    <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-10 text-center text-slate-500">
-      <TagIcon className="w-10 h-10 text-slate-300 mx-auto mb-3" />
-      <p className="font-semibold">Kupon yönetimi (Faz 2)</p>
-      <p className="text-xs mt-1">Bu sekme diger sprint'te eklenecek.</p>
-    </div>
-  );
-}
-
-function CustomersTab() {
-  const stats = useMemo(() => getCustomerStats(), []);
-  return (
-    <div className="space-y-4">
-      <div className="grid sm:grid-cols-4 gap-4">
-        <StatCard icon={UsersIcon} title="Toplam Musteri" value={String(stats.total)} tone="primary" />
-        <StatCard icon={TrendingUp} title="Toplam Gelir" value={formatPrice(stats.totalRevenue, "EUR")} tone="emerald" />
-        <StatCard icon={CalendarDays} title="VIP" value={String(stats.vip)} tone="amber" />
-        <StatCard icon={UsersIcon} title="Yeni" value={String(stats.new)} tone="slate" />
-      </div>
-      <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-x-auto">
-        <table className="w-full text-sm">
-          <thead className="bg-slate-50 text-left text-slate-600 border-b border-slate-200">
-            <tr>
-              <th className="p-3">Ad</th>
-              <th className="p-3">E-posta</th>
-              <th className="p-3">Uyruk</th>
-              <th className="p-3 text-right">Rezervasyon</th>
-              <th className="p-3 text-right">Harcama</th>
-              <th className="p-3 text-right">Segment</th>
-            </tr>
-          </thead>
-          <tbody>
-            {MOCK_CUSTOMERS.slice(0, 20).map((c) => (
-              <tr key={c.id} className="border-b border-slate-100 hover:bg-slate-50">
-                <td className="p-3 font-medium">{c.fullName}</td>
-                <td className="p-3 text-xs text-slate-500">{c.email}</td>
-                <td className="p-3 text-slate-600">{getNationalityLabel(c.nationality)}</td>
-                <td className="p-3 text-right">{c.totalBookings}</td>
-                <td className="p-3 text-right">{formatPrice(c.totalSpent, "EUR")}</td>
-                <td className="p-3 text-right">
-                  <span className="inline-block px-2 py-0.5 bg-slate-100 text-slate-700 rounded text-xs capitalize">{c.segment}</span>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </div>
-  );
-}
-
 function SeoAgentTab() {
   const [running, setRunning] = useState(false);
   const [output, setOutput] = useState<string>("");
@@ -934,6 +880,508 @@ function SeoAgentTab() {
         <p className="text-sm text-slate-500">
           {articleCount === null ? "Yukleniyor..." : articleCount === 0 ? "Henuz makale yok. Agent calistirin." : `${articleCount} makale uretildi.`}
         </p>
+      </div>
+    </div>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────
+// Kuponlar tab
+// ─────────────────────────────────────────────────────────────
+
+interface CouponFormState {
+  code: string;
+  type: CouponType;
+  value: string;
+  validFrom: string;
+  validUntil: string;
+  usageLimit: string;
+  minPurchase: string;
+  applicableSlugs: string;
+  active: boolean;
+  description: string;
+}
+
+function emptyCouponForm(): CouponFormState {
+  const now = new Date();
+  const inAYear = new Date(now.getTime() + 365 * 86400000);
+  return {
+    code: "",
+    type: "percent",
+    value: "10",
+    validFrom: now.toISOString().slice(0, 10),
+    validUntil: inAYear.toISOString().slice(0, 10),
+    usageLimit: "100",
+    minPurchase: "",
+    applicableSlugs: "",
+    active: true,
+    description: "",
+  };
+}
+
+function couponAuthToken(): string {
+  if (typeof window === "undefined") return "";
+  return window.localStorage.getItem(ADMIN_AUTH_KEY) ?? "";
+}
+
+function CouponsTab() {
+  const [coupons, setCoupons] = useState<Coupon[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [form, setForm] = useState<CouponFormState>(emptyCouponForm());
+  const [error, setError] = useState<string | null>(null);
+  const [saving, setSaving] = useState(false);
+
+  const load = useCallback(async () => {
+    setLoading(true);
+    try {
+      const res = await fetch("/api/admin/coupons", {
+        headers: { "x-admin-token": couponAuthToken() },
+        cache: "no-store",
+      });
+      if (!res.ok) throw new Error(`Yüklenemedi (${res.status})`);
+      const data = await res.json();
+      setCoupons(data.coupons ?? []);
+    } catch (err) {
+      console.error(err);
+      setError(err instanceof Error ? err.message : "Bilinmeyen hata");
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    load();
+  }, [load]);
+
+  async function saveCoupon() {
+    setSaving(true);
+    setError(null);
+    try {
+      const payload = {
+        code: form.code.trim().toUpperCase(),
+        type: form.type,
+        value: Number(form.value),
+        validFrom: new Date(form.validFrom + "T00:00:00.000Z").toISOString(),
+        validUntil: new Date(form.validUntil + "T23:59:59.000Z").toISOString(),
+        usageLimit: Number(form.usageLimit),
+        usedCount: 0,
+        minPurchase: form.minPurchase ? Number(form.minPurchase) : undefined,
+        applicableSlugs: form.applicableSlugs
+          .split(",")
+          .map((s) => s.trim())
+          .filter(Boolean),
+        active: form.active,
+        description: form.description || undefined,
+      };
+      const res = await fetch("/api/admin/coupons", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-admin-token": couponAuthToken(),
+        },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        throw new Error(err?.error ?? `Kaydedilemedi (${res.status})`);
+      }
+      setModalOpen(false);
+      setForm(emptyCouponForm());
+      await load();
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Bilinmeyen hata");
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  async function removeCoupon(code: string) {
+    if (!confirm(`${code} kuponunu silmek istiyor musunuz?`)) return;
+    try {
+      const res = await fetch(`/api/admin/coupons?code=${encodeURIComponent(code)}`, {
+        method: "DELETE",
+        headers: { "x-admin-token": couponAuthToken() },
+      });
+      if (!res.ok) throw new Error(`Silinemedi (${res.status})`);
+      await load();
+    } catch (err) {
+      alert(err instanceof Error ? err.message : "Hata");
+    }
+  }
+
+  return (
+    <div className="space-y-4">
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <div className="flex items-center gap-2 text-sm text-slate-600">
+          <TagIcon className="w-4 h-4" />
+          <span>{loading ? "Yükleniyor..." : `${coupons.length} kupon`}</span>
+        </div>
+        <button
+          onClick={() => {
+            setForm(emptyCouponForm());
+            setModalOpen(true);
+          }}
+          className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg text-sm font-semibold"
+        >
+          <Plus className="w-4 h-4" /> Yeni Kupon
+        </button>
+      </div>
+
+      {error && (
+        <div className="bg-rose-50 border-l-4 border-rose-500 text-rose-800 text-sm p-3 rounded">
+          {error}
+        </div>
+      )}
+
+      <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-x-auto">
+        <table className="w-full text-sm">
+          <thead className="bg-slate-50 text-left text-slate-600 border-b border-slate-200">
+            <tr>
+              <th className="p-3">Kod</th>
+              <th className="p-3">Tip</th>
+              <th className="p-3 text-right">Değer</th>
+              <th className="p-3 text-right">Kullanım</th>
+              <th className="p-3">Son Tarih</th>
+              <th className="p-3">Hizmet</th>
+              <th className="p-3 text-right">Durum</th>
+              <th className="p-3 text-right"></th>
+            </tr>
+          </thead>
+          <tbody>
+            {coupons.map((c) => {
+              const status = getCouponStatus(c);
+              const statusMap: Record<typeof status, { color: string; label: string }> = {
+                active: { color: "bg-emerald-100 text-emerald-700", label: "Aktif" },
+                expired: { color: "bg-slate-200 text-slate-600", label: "Süresi Doldu" },
+                exhausted: { color: "bg-rose-100 text-rose-700", label: "Limit Doldu" },
+                inactive: { color: "bg-slate-100 text-slate-500", label: "Pasif" },
+              };
+              const s = statusMap[status];
+              return (
+                <tr key={c.code} className="border-b border-slate-100 hover:bg-slate-50">
+                  <td className="p-3 font-mono font-bold text-slate-900">{c.code}</td>
+                  <td className="p-3 text-slate-600">
+                    {c.type === "percent" ? "Yüzde" : "Sabit"}
+                  </td>
+                  <td className="p-3 text-right font-medium">
+                    {c.type === "percent" ? `%${c.value}` : formatPrice(c.value, "EUR")}
+                  </td>
+                  <td className="p-3 text-right text-slate-600">
+                    {c.usedCount} / {c.usageLimit}
+                  </td>
+                  <td className="p-3 text-slate-600">
+                    {new Date(c.validUntil).toLocaleDateString("tr-TR")}
+                  </td>
+                  <td className="p-3 text-xs text-slate-500">
+                    {c.applicableSlugs && c.applicableSlugs.length > 0
+                      ? `${c.applicableSlugs.length} hizmet`
+                      : "Tümü"}
+                    {c.minPurchase ? ` · min €${c.minPurchase}` : ""}
+                  </td>
+                  <td className="p-3 text-right">
+                    <span className={cn("inline-block px-2 py-0.5 rounded text-xs", s.color)}>
+                      {s.label}
+                    </span>
+                  </td>
+                  <td className="p-3 text-right">
+                    <button
+                      onClick={() => removeCoupon(c.code)}
+                      className="text-rose-500 hover:text-rose-700"
+                      aria-label={`${c.code} sil`}
+                    >
+                      <Trash2 className="w-4 h-4" />
+                    </button>
+                  </td>
+                </tr>
+              );
+            })}
+            {!loading && coupons.length === 0 && (
+              <tr>
+                <td colSpan={8} className="p-8 text-center text-slate-400">
+                  Henüz kupon yok.
+                </td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </div>
+
+      {modalOpen && (
+        <div
+          className="fixed inset-0 bg-black/40 flex items-center justify-center z-50 p-4"
+          onClick={() => setModalOpen(false)}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="bg-white rounded-2xl p-6 max-w-lg w-full max-h-[90vh] overflow-y-auto"
+          >
+            <h3 className="font-bold text-lg mb-4">Yeni Kupon Ekle</h3>
+            <div className="space-y-3 text-sm">
+              <div>
+                <label className="block text-xs font-medium text-slate-700 mb-1">Kod</label>
+                <input
+                  value={form.code}
+                  onChange={(e) => setForm({ ...form, code: e.target.value.toUpperCase() })}
+                  placeholder="WELCOME10"
+                  className="w-full border border-slate-300 rounded-lg px-3 py-2 uppercase font-mono"
+                />
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label className="block text-xs font-medium text-slate-700 mb-1">Tip</label>
+                  <select
+                    value={form.type}
+                    onChange={(e) => setForm({ ...form, type: e.target.value as CouponType })}
+                    className="w-full border border-slate-300 rounded-lg px-3 py-2"
+                  >
+                    <option value="percent">Yüzde (%)</option>
+                    <option value="fixed">Sabit (€)</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-xs font-medium text-slate-700 mb-1">Değer</label>
+                  <input
+                    type="number"
+                    value={form.value}
+                    onChange={(e) => setForm({ ...form, value: e.target.value })}
+                    className="w-full border border-slate-300 rounded-lg px-3 py-2"
+                  />
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label className="block text-xs font-medium text-slate-700 mb-1">Başlangıç</label>
+                  <input
+                    type="date"
+                    value={form.validFrom}
+                    onChange={(e) => setForm({ ...form, validFrom: e.target.value })}
+                    className="w-full border border-slate-300 rounded-lg px-3 py-2"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-medium text-slate-700 mb-1">Bitiş</label>
+                  <input
+                    type="date"
+                    value={form.validUntil}
+                    onChange={(e) => setForm({ ...form, validUntil: e.target.value })}
+                    className="w-full border border-slate-300 rounded-lg px-3 py-2"
+                  />
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label className="block text-xs font-medium text-slate-700 mb-1">Kullanım Limiti</label>
+                  <input
+                    type="number"
+                    value={form.usageLimit}
+                    onChange={(e) => setForm({ ...form, usageLimit: e.target.value })}
+                    className="w-full border border-slate-300 rounded-lg px-3 py-2"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-medium text-slate-700 mb-1">Min. Sepet (€)</label>
+                  <input
+                    type="number"
+                    value={form.minPurchase}
+                    onChange={(e) => setForm({ ...form, minPurchase: e.target.value })}
+                    placeholder="0"
+                    className="w-full border border-slate-300 rounded-lg px-3 py-2"
+                  />
+                </div>
+              </div>
+              <div>
+                <label className="block text-xs font-medium text-slate-700 mb-1">
+                  Hizmet Slug&apos;ları (virgülle, boş = tümü)
+                </label>
+                <input
+                  value={form.applicableSlugs}
+                  onChange={(e) => setForm({ ...form, applicableSlugs: e.target.value })}
+                  placeholder="aile-paketi, macera-paketi"
+                  className="w-full border border-slate-300 rounded-lg px-3 py-2 font-mono text-xs"
+                />
+              </div>
+              <div>
+                <label className="block text-xs font-medium text-slate-700 mb-1">Açıklama</label>
+                <textarea
+                  value={form.description}
+                  onChange={(e) => setForm({ ...form, description: e.target.value })}
+                  rows={2}
+                  className="w-full border border-slate-300 rounded-lg px-3 py-2"
+                />
+              </div>
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={form.active}
+                  onChange={(e) => setForm({ ...form, active: e.target.checked })}
+                  className="w-4 h-4"
+                />
+                <span className="text-sm">Aktif</span>
+              </label>
+
+              {error && (
+                <div className="bg-rose-50 border-l-4 border-rose-500 text-rose-800 text-xs p-2 rounded">
+                  {error}
+                </div>
+              )}
+            </div>
+            <div className="flex justify-end gap-2 mt-5">
+              <button
+                onClick={() => setModalOpen(false)}
+                className="px-4 py-2 border border-slate-300 rounded-lg text-sm"
+              >
+                İptal
+              </button>
+              <button
+                onClick={saveCoupon}
+                disabled={saving || !form.code.trim()}
+                className="px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white rounded-lg text-sm font-semibold disabled:opacity-50"
+              >
+                {saving ? "Kaydediliyor..." : "Kaydet"}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────
+// Musteriler tab
+// ─────────────────────────────────────────────────────────────
+
+function CustomersTab() {
+  const stats = useMemo(() => getCustomerStats(), []);
+  const [segmentFilter, setSegmentFilter] = useState<"all" | CustomerSegment>("all");
+  const [countryFilter, setCountryFilter] = useState<string>("all");
+  const [search, setSearch] = useState("");
+
+  const countries = useMemo(() => {
+    const set = new Set<string>();
+    MOCK_CUSTOMERS.forEach((c) => set.add(c.nationality));
+    return Array.from(set).sort();
+  }, []);
+
+  const filtered = MOCK_CUSTOMERS.filter((c) => {
+    if (segmentFilter !== "all" && c.segment !== segmentFilter) return false;
+    if (countryFilter !== "all" && c.nationality !== countryFilter) return false;
+    if (search) {
+      const q = search.toLowerCase();
+      const hit =
+        c.fullName.toLowerCase().includes(q) ||
+        c.email.toLowerCase().includes(q) ||
+        c.id.toLowerCase().includes(q);
+      if (!hit) return false;
+    }
+    return true;
+  });
+
+  const segmentLabel: Record<CustomerSegment, { color: string; label: string }> = {
+    new: { color: "bg-blue-100 text-blue-700", label: "Yeni" },
+    returning: { color: "bg-emerald-100 text-emerald-700", label: "Tekrar" },
+    vip: { color: "bg-amber-100 text-amber-700", label: "VIP" },
+    cancelled: { color: "bg-rose-100 text-rose-700", label: "İptal" },
+  };
+
+  return (
+    <div className="space-y-4">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <StatCard icon={UsersIcon} title="Toplam Müşteri" value={String(stats.total)} tone="primary" />
+        <StatCard icon={TrendingUp} title="VIP" value={String(stats.vip)} delta={`${stats.returning} tekrar`} tone="amber" />
+        <StatCard icon={UsersIcon} title="Yeni" value={String(stats.new)} delta={`${stats.cancelled} iptal`} tone="emerald" />
+        <StatCard
+          icon={TrendingUp}
+          title="Toplam Gelir"
+          value={formatPrice(stats.totalRevenue, "EUR")}
+          tone="slate"
+        />
+      </div>
+
+      <div className="flex flex-wrap gap-3 items-center">
+        <div className="relative flex-1 min-w-[200px]">
+          <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
+          <input
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Ad, e-posta veya ID ara..."
+            className="w-full pl-10 pr-3 py-2 border border-slate-300 rounded-lg text-sm"
+          />
+        </div>
+        <select
+          value={segmentFilter}
+          onChange={(e) => setSegmentFilter(e.target.value as "all" | CustomerSegment)}
+          className="px-3 py-2 border border-slate-300 rounded-lg text-sm"
+        >
+          <option value="all">Tüm Segmentler</option>
+          <option value="new">Yeni</option>
+          <option value="returning">Tekrar</option>
+          <option value="vip">VIP</option>
+          <option value="cancelled">İptal</option>
+        </select>
+        <select
+          value={countryFilter}
+          onChange={(e) => setCountryFilter(e.target.value)}
+          className="px-3 py-2 border border-slate-300 rounded-lg text-sm"
+        >
+          <option value="all">Tüm Ülkeler</option>
+          {countries.map((c) => (
+            <option key={c} value={c}>
+              {getNationalityLabel(c)}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-x-auto">
+        <table className="w-full text-sm">
+          <thead className="bg-slate-50 text-left text-slate-600 border-b border-slate-200">
+            <tr>
+              <th className="p-3">Müşteri</th>
+              <th className="p-3">Uyruk</th>
+              <th className="p-3">Segment</th>
+              <th className="p-3 text-right">Rezervasyon</th>
+              <th className="p-3 text-right">Harcama</th>
+              <th className="p-3">Son Aktivite</th>
+            </tr>
+          </thead>
+          <tbody>
+            {filtered.map((c) => (
+              <tr key={c.id} className="border-b border-slate-100 hover:bg-slate-50">
+                <td className="p-3">
+                  <p className="font-medium">{c.fullName}</p>
+                  <p className="text-xs text-slate-400">{c.email}</p>
+                </td>
+                <td className="p-3 text-slate-600">{getNationalityLabel(c.nationality)}</td>
+                <td className="p-3">
+                  <span
+                    className={cn(
+                      "inline-block px-2 py-0.5 rounded text-xs font-medium",
+                      segmentLabel[c.segment].color
+                    )}
+                  >
+                    {segmentLabel[c.segment].label}
+                  </span>
+                </td>
+                <td className="p-3 text-right">{c.totalBookings}</td>
+                <td className="p-3 text-right font-medium">
+                  {formatPrice(c.totalSpent, "EUR")}
+                </td>
+                <td className="p-3 text-xs text-slate-500">
+                  {new Date(c.lastActivity).toLocaleDateString("tr-TR")}
+                </td>
+              </tr>
+            ))}
+            {filtered.length === 0 && (
+              <tr>
+                <td colSpan={6} className="p-8 text-center text-slate-400">
+                  Filtreye uyan müşteri yok.
+                </td>
+              </tr>
+            )}
+          </tbody>
+        </table>
       </div>
     </div>
   );

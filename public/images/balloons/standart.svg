@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1A2B6B"/>
+      <stop offset="100%" stop-color="#FF6B35"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#sky)"/>
+  <ellipse cx="600" cy="320" rx="160" ry="200" fill="#FFFFFF" opacity="0.95"/>
+  <ellipse cx="600" cy="320" rx="55" ry="200" fill="#FF8A5C" opacity="0.6"/>
+  <path d="M540 510 L600 580 L660 510 Z" fill="#FFFFFF" opacity="0.85"/>
+  <rect x="566" y="580" width="68" height="48" rx="6" fill="#C2410C"/>
+  <text x="600" y="700" font-family="system-ui, -apple-system, sans-serif" font-size="48" font-weight="800" text-anchor="middle" fill="#FFFFFF">Standart Paket</text>
+  <text x="600" y="745" font-family="system-ui, -apple-system, sans-serif" font-size="22" text-anchor="middle" fill="#FFFFFF" opacity="0.85">Trip and Tick — Kapadokya Balon Turu</text>
+</svg>

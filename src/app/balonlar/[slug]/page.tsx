@@ -24,6 +24,7 @@ import {
   faqPageSchema,
   SITE_URL,
 } from "@/lib/schema";
+import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
 
 interface PageParams {
   params: { slug: string };
@@ -36,15 +37,28 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: PageParams): Metadata {
   const pkg = getBalloonPackageBySlug(params.slug);
   if (!pkg) return { title: "Paket Bulunamadı" };
+  const path = `/balonlar/${pkg.slug}`;
+  const ogTitle = `${pkg.name} — ${formatPrice(pkg.adultPrice, pkg.currency)}`;
   return {
     title: `${pkg.name} — ${formatPrice(pkg.adultPrice, pkg.currency)} | Trip and Tick`,
     description: pkg.shortDescription,
-    alternates: { canonical: `${SITE_URL}/balonlar/${pkg.slug}` },
+    alternates: {
+      canonical: `${SITE_URL}${path}`,
+      languages: generateHreflang(path),
+    },
     openGraph: {
       title: pkg.name,
       description: pkg.shortDescription,
-      url: `${SITE_URL}/balonlar/${pkg.slug}`,
+      url: `${SITE_URL}${path}`,
       type: "website",
+      images: [
+        {
+          url: ogImageUrl(ogTitle, pkg.shortDescription),
+          width: 1200,
+          height: 630,
+          alt: pkg.name,
+        },
+      ],
     },
   };
 }

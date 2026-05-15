@@ -4,12 +4,30 @@ import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { PageHero } from "@/components/layout/PageHero";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { breadcrumbSchema, SITE_URL } from "@/lib/schema";
+import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
 
 export const metadata: Metadata = {
   title: "Gizlilik Politikası — KVKK Uyumlu | Trip and Tick",
   description:
     "Trip and Tick gizlilik politikası: kişisel verilerin toplanması, kullanımı, saklanması ve kullanıcı hakları. KVKK ve GDPR uyumlu işleme.",
-  alternates: { canonical: `${SITE_URL}/gizlilik-politikasi` },
+  alternates: {
+    canonical: `${SITE_URL}/gizlilik-politikasi`,
+    languages: generateHreflang("/gizlilik-politikasi"),
+  },
+  openGraph: {
+    title: "Gizlilik Politikası — KVKK Uyumlu",
+    description: "KVKK ve GDPR uyumlu veri işleme politikamız.",
+    url: `${SITE_URL}/gizlilik-politikasi`,
+    type: "website",
+    images: [
+      {
+        url: ogImageUrl("Gizlilik Politikası", "KVKK & GDPR Uyumlu"),
+        width: 1200,
+        height: 630,
+        alt: "Gizlilik Politikası — Trip and Tick",
+      },
+    ],
+  },
 };
 
 export default function GizlilikPage() {

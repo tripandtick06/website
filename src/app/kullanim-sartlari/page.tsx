@@ -4,12 +4,30 @@ import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { PageHero } from "@/components/layout/PageHero";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { breadcrumbSchema, SITE_URL } from "@/lib/schema";
+import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
 
 export const metadata: Metadata = {
   title: "Kullanım Şartları — Mesafeli Satış Sözleşmesi | Trip and Tick",
   description:
     "Trip and Tick kullanım şartları ve mesafeli satış sözleşmesi: hizmet kapsamı, ödeme, iptal, sorumluluk reddi ve uyuşmazlık çözümü.",
-  alternates: { canonical: `${SITE_URL}/kullanim-sartlari` },
+  alternates: {
+    canonical: `${SITE_URL}/kullanim-sartlari`,
+    languages: generateHreflang("/kullanim-sartlari"),
+  },
+  openGraph: {
+    title: "Kullanım Şartları — Mesafeli Satış Sözleşmesi",
+    description: "Hizmet kapsamı, ödeme, iptal, sorumluluk.",
+    url: `${SITE_URL}/kullanim-sartlari`,
+    type: "website",
+    images: [
+      {
+        url: ogImageUrl("Kullanım Şartları", "Mesafeli Satış Sözleşmesi"),
+        width: 1200,
+        height: 630,
+        alt: "Kullanım Şartları — Trip and Tick",
+      },
+    ],
+  },
 };
 
 export default function KullanimSartlariPage() {

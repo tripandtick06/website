@@ -5,12 +5,33 @@ import { ServiceCard } from "@/components/layout/ServiceCard";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { TOURS } from "@/data/services/catalog";
 import { breadcrumbSchema, SITE_URL } from "@/lib/schema";
+import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
 
 export const metadata: Metadata = {
   title: "Kapadokya Gezi Turları — Kırmızı, Yeşil, Gün Batımı | Trip and Tick",
   description:
     "Kapadokya'nın en popüler gezi turları: Kırmızı Tur (Göreme + Uçhisar), Yeşil Tur (Ihlara + Derinkuyu), gün batımı ve fotoğraf turları. Rehberli, transfer dahil.",
-  alternates: { canonical: `${SITE_URL}/turlar` },
+  alternates: {
+    canonical: `${SITE_URL}/turlar`,
+    languages: generateHreflang("/turlar"),
+  },
+  openGraph: {
+    title: "Kapadokya Gezi Turları",
+    description: "Kırmızı, Yeşil, Gün Batımı turları — rehberli, transfer dahil.",
+    url: `${SITE_URL}/turlar`,
+    type: "website",
+    images: [
+      {
+        url: ogImageUrl(
+          "Kapadokya Gezi Turları",
+          "Kırmızı · Yeşil · Gün Batımı · Fotoğraf Turları"
+        ),
+        width: 1200,
+        height: 630,
+        alt: "Kapadokya Gezi Turları — Trip and Tick",
+      },
+    ],
+  },
 };
 
 export default function TurlarPage() {

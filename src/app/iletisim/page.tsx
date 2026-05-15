@@ -5,12 +5,33 @@ import { PageHero } from "@/components/layout/PageHero";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { ContactForm } from "./ContactForm";
 import { breadcrumbSchema, SITE_URL } from "@/lib/schema";
+import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
 
 export const metadata: Metadata = {
   title: "İletişim — Trip and Tick Kapadokya Acentası",
   description:
     "Trip and Tick ile iletişime geçin: info@tripandtick.com, +90 500 123 45 67. Göreme/Nevşehir ofisi. WhatsApp 7/24, e-posta 4 saat içinde yanıt.",
-  alternates: { canonical: `${SITE_URL}/iletisim` },
+  alternates: {
+    canonical: `${SITE_URL}/iletisim`,
+    languages: generateHreflang("/iletisim"),
+  },
+  openGraph: {
+    title: "İletişim — Trip and Tick",
+    description: "WhatsApp 7/24, e-posta 4 saat içinde yanıt, Göreme/Nevşehir ofisi.",
+    url: `${SITE_URL}/iletisim`,
+    type: "website",
+    images: [
+      {
+        url: ogImageUrl(
+          "İletişim",
+          "WhatsApp 7/24 · E-posta 4 saat · Göreme Ofis"
+        ),
+        width: 1200,
+        height: 630,
+        alt: "İletişim — Trip and Tick",
+      },
+    ],
+  },
 };
 
 const CONTACT_ITEMS = [

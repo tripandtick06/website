@@ -29,6 +29,7 @@ const TABS = [
 export function SearchWidget() {
   const router = useRouter();
   const [activeTab, setActiveTab] = useState("balloon");
+  const [destination, setDestination] = useState("");
   const [date, setDate] = useState("2026-03-20");
   const [adults, setAdults] = useState(2);
   const [children, setChildren] = useState(0);
@@ -36,13 +37,31 @@ export function SearchWidget() {
 
   const handleSearch = () => {
     setSearching(true);
+
+    // Override: destinasyon "Goreme"/"Göreme"/"Kapadokya" disinda doluysa /ara'ya yonlendir.
+    const destTrimmed = destination.trim();
+    const destNorm = destTrimmed.toLocaleLowerCase("tr");
+    const isGoremeDefault =
+      !destTrimmed ||
+      destNorm === "goreme" ||
+      destNorm === "göreme" ||
+      destNorm.includes("kapadokya");
+
+    if (!isGoremeDefault) {
+      const qs = new URLSearchParams({ q: destTrimmed }).toString();
+      setTimeout(() => {
+        router.push(`/ara?${qs}`);
+        setSearching(false);
+      }, 300);
+      return;
+    }
+
     const tab = TABS.find((t) => t.id === activeTab);
     const basePath = tab?.path ?? "/balonlar";
 
     const params = new URLSearchParams();
     if (date) params.set("date", date);
     if (adults) params.set("adults", String(adults));
-    // Otel sayfasinda cocuk parametresi yok — sadece digerlerinde
     if (activeTab !== "hotel" && children > 0) {
       params.set("children", String(children));
     }
@@ -50,7 +69,6 @@ export function SearchWidget() {
     const qs = params.toString();
     const target = qs ? `${basePath}?${qs}` : basePath;
 
-    // 300ms UI feedback sonra yonlendir
     setTimeout(() => {
       router.push(target);
       setSearching(false);
@@ -89,8 +107,12 @@ export function SearchWidget() {
             <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
             <input
               type="text"
+              name="destination"
+              value={destination}
+              onChange={(e) => setDestination(e.target.value)}
               placeholder="Göreme, Kapadokya"
               className="input-field !pl-10"
+              aria-label="Destinasyon veya hizmet ara"
             />
           </div>
         </div>
