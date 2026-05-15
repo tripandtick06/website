@@ -399,3 +399,390 @@ export function adminBookingEmailText(b: BookingEmailPayload): string {
   ];
   return lines.filter((l): l is string => l !== null).join("\n");
 }
+
+// ============================================================================
+// MARKETING TEMPLATES (Brevo campaigns) — Faz 1 newsletter + Faz 2 cart/bday/seasonal
+// ============================================================================
+
+function shellHtml(opts: {
+  title: string;
+  preheader?: string;
+  badge?: string;
+  badgeColor?: string;
+  heading: string;
+  body: string;
+  ctaLabel?: string;
+  ctaUrl?: string;
+  footnote?: string;
+}): string {
+  const badgeColor = opts.badgeColor ?? BRAND_ACCENT;
+  return `<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${escapeHtml(opts.title)}</title>
+</head>
+<body style="margin:0;padding:0;background:${BRAND_BG};font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#1f2937;">
+${opts.preheader ? `<div style="display:none;font-size:1px;color:${BRAND_BG};line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;">${escapeHtml(opts.preheader)}</div>` : ""}
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${BRAND_BG};padding:32px 16px;">
+  <tr><td align="center">
+    <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;background:#ffffff;border-radius:16px;overflow:hidden;box-shadow:0 4px 16px rgba(15,23,42,0.06);">
+      <tr><td style="background:${BRAND_PRIMARY};padding:24px 32px;">
+        <div style="font-size:20px;font-weight:800;color:#ffffff;letter-spacing:-0.02em;">
+          Trip <span style="color:${BRAND_GOLD};">and</span> Tick
+        </div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.75);margin-top:2px;">Kapadokya · TÜRSAB Lisanslı OTA</div>
+      </td></tr>
+
+      <tr><td style="padding:32px 32px 8px 32px;">
+        ${opts.badge ? `<div style="display:inline-block;background:${badgeColor}1a;color:${badgeColor};padding:6px 12px;border-radius:999px;font-size:12px;font-weight:700;margin-bottom:14px;text-transform:uppercase;letter-spacing:0.06em;">${escapeHtml(opts.badge)}</div>` : ""}
+        <h1 style="margin:0 0 12px 0;font-size:24px;line-height:1.3;color:${BRAND_PRIMARY};">${escapeHtml(opts.heading)}</h1>
+        <div style="font-size:15px;line-height:1.7;color:#475569;">${opts.body}</div>
+      </td></tr>
+
+      ${opts.ctaUrl ? `<tr><td style="padding:24px 32px 8px 32px;">
+        <a href="${escapeHtml(opts.ctaUrl)}" style="display:inline-block;background:${BRAND_ACCENT};color:#ffffff;padding:14px 24px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px;">${escapeHtml(opts.ctaLabel ?? "Devam Et")}</a>
+      </td></tr>` : ""}
+
+      ${opts.footnote ? `<tr><td style="padding:8px 32px 24px 32px;font-size:12px;color:#94a3b8;line-height:1.6;">${opts.footnote}</td></tr>` : ""}
+
+      <tr><td style="background:#f1f5f9;padding:20px 32px;text-align:center;font-size:12px;color:#64748b;">
+        <div style="margin-bottom:6px;"><strong>Trip and Tick</strong> · Göreme Merkez, Nevşehir, Türkiye</div>
+        <div>TÜRSAB lisanslı seyahat acentası · &copy; ${new Date().getFullYear()} Trip and Tick</div>
+        <div style="margin-top:8px;"><a href="${SITE_URL}" style="color:${BRAND_ACCENT};text-decoration:none;">tripandtick.com</a></div>
+      </td></tr>
+    </table>
+  </td></tr>
+</table>
+</body>
+</html>`;
+}
+
+// ----------------------------------------------------------------------------
+// 1) WELCOME — newsletter signup hosgeldin bonusu
+// ----------------------------------------------------------------------------
+export interface WelcomeEmailParams {
+  name?: string;
+  email: string;
+  locale: string;
+  discountCode?: string;
+  discountPercent?: number;
+}
+
+export function welcomeEmailHtml(p: WelcomeEmailParams): string {
+  const name = p.name?.trim() || p.email.split("@")[0];
+  const code = p.discountCode ?? "HOSGELDIN5";
+  const pct = p.discountPercent ?? 5;
+  const body = `
+    <p style="margin:0 0 14px 0;">Merhaba <strong>${escapeHtml(name)}</strong>,</p>
+    <p style="margin:0 0 14px 0;">
+      Trip and Tick bültenine hoş geldiniz! Kapadokya'nın en rekabetçi fiyatlı OTA'sından
+      sezon fırsatları, yeni paketler ve sadece abonelerimize özel kampanyalar artık doğrudan
+      e-posta kutunuzda.
+    </p>
+    <div style="background:linear-gradient(135deg,#fff7ed 0%,#ffedd5 100%);border:2px solid ${BRAND_ACCENT};border-radius:12px;padding:18px;text-align:center;margin:18px 0;">
+      <div style="font-size:11px;color:#9a3412;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px;">Hoşgeldin Bonusu</div>
+      <div style="font-size:28px;font-weight:800;color:${BRAND_ACCENT};letter-spacing:0.14em;font-family:'SF Mono','Courier New',monospace;">${escapeHtml(code)}</div>
+      <div style="font-size:13px;color:#7c2d12;margin-top:6px;">İlk rezervasyonunuzda <strong>%${pct} indirim</strong>.</div>
+    </div>
+    <p style="margin:0;">Hoş geldin uçuşunuzu seçmeye hazır mısınız?</p>
+  `;
+  return shellHtml({
+    title: "Trip and Tick — Hoşgeldin Bonusu",
+    preheader: `İlk rezervasyonunuzda %${pct} indirim — kod: ${code}`,
+    badge: "Hoş Geldiniz",
+    heading: "Hoş Geldin Bonusunuz Hazır!",
+    body,
+    ctaLabel: "Balon Turlarını Keşfet",
+    ctaUrl: `${SITE_URL}/balonlar`,
+    footnote: `Locale: ${escapeHtml(p.locale)}. Bültenden ayrılmak için <a href="${SITE_URL}/abonelik-iptali" style="color:${BRAND_ACCENT};">tıklayın</a>.`,
+  });
+}
+
+export function welcomeEmailText(p: WelcomeEmailParams): string {
+  const name = p.name?.trim() || p.email.split("@")[0];
+  const code = p.discountCode ?? "HOSGELDIN5";
+  const pct = p.discountPercent ?? 5;
+  return [
+    `Trip and Tick — Hoş Geldiniz!`,
+    ``,
+    `Merhaba ${name},`,
+    ``,
+    `Bültenimize hoş geldiniz. Kapadokya'nın en rekabetçi fiyatlı OTA'sından`,
+    `sezon fırsatları artık doğrudan e-postanızda.`,
+    ``,
+    `HOŞGELDİN KODU: ${code}`,
+    `İlk rezervasyonunuzda %${pct} indirim.`,
+    ``,
+    `Balon turları: ${SITE_URL}/balonlar`,
+    ``,
+    `--`,
+    `Trip and Tick · TÜRSAB lisanslı seyahat acentası`,
+    `Locale: ${p.locale}`,
+    `Abonelikten çıkış: ${SITE_URL}/abonelik-iptali`,
+  ].join("\n");
+}
+
+// ----------------------------------------------------------------------------
+// 2) CART ABANDONMENT — sepet terki (Faz 2 trigger 1h / 24h)
+// ----------------------------------------------------------------------------
+export interface CartAbandonmentParams {
+  customerName: string;
+  serviceName: string;
+  bookingDraftUrl: string;
+  variant?: "1h" | "24h";
+  discountCode?: string;
+}
+
+export function cartAbandonmentEmailHtml(p: CartAbandonmentParams): string {
+  const isLate = p.variant === "24h";
+  const body = `
+    <p style="margin:0 0 14px 0;">Merhaba <strong>${escapeHtml(p.customerName)}</strong>,</p>
+    <p style="margin:0 0 14px 0;">
+      <strong>${escapeHtml(p.serviceName)}</strong> rezervasyonunuzu tamamlamadan ayrıldığınızı fark ettik.
+      Yarım kalmış rezervasyonunuz hâlâ sizi bekliyor.
+    </p>
+    ${isLate && p.discountCode ? `
+      <div style="background:#fffbeb;border-left:4px solid ${BRAND_GOLD};padding:14px 16px;border-radius:6px;margin:14px 0;">
+        <div style="font-weight:700;color:#78350f;font-size:14px;margin-bottom:4px;">Son Şans %10 İndirim</div>
+        <div style="font-size:13px;color:#92400e;">
+          Kod: <strong>${escapeHtml(p.discountCode)}</strong> — 24 saat geçerli.
+        </div>
+      </div>
+    ` : ""}
+    <p style="margin:14px 0 0 0;">
+      ${isLate ? "Stoklar hızla tükeniyor." : "Birkaç dakika içinde tamamlayabilirsiniz."}
+    </p>
+  `;
+  return shellHtml({
+    title: "Rezervasyonunuz sizi bekliyor",
+    preheader: `${p.serviceName} rezervasyonunuz hâlâ açık.`,
+    badge: isLate ? "Son Çağrı" : "Hatırlatma",
+    badgeColor: isLate ? BRAND_GOLD : BRAND_ACCENT,
+    heading: isLate ? "Son Şans — Rezervasyonu Tamamlayın" : "Rezervasyonunuza Devam Edin",
+    body,
+    ctaLabel: "Rezervasyonu Tamamla",
+    ctaUrl: p.bookingDraftUrl,
+    footnote: "Bu e-postayı yarım kalmış rezervasyonunuz nedeniyle aldınız. Tekrar görmek istemiyorsanız aboneliği iptal edebilirsiniz.",
+  });
+}
+
+export function cartAbandonmentEmailText(p: CartAbandonmentParams): string {
+  return [
+    `Trip and Tick — Rezervasyonunuz sizi bekliyor`,
+    ``,
+    `Merhaba ${p.customerName},`,
+    ``,
+    `${p.serviceName} rezervasyonunuzu tamamlamadan ayrıldınız.`,
+    `Devam etmek için: ${p.bookingDraftUrl}`,
+    p.discountCode ? `\nİndirim kodu: ${p.discountCode}` : "",
+    ``,
+    `--`,
+    `Trip and Tick`,
+  ].join("\n");
+}
+
+// ----------------------------------------------------------------------------
+// 3) BIRTHDAY DISCOUNT — dogum gunu kampanya
+// ----------------------------------------------------------------------------
+export interface BirthdayDiscountParams {
+  name: string;
+  discount: number; // percent
+  code: string;
+  validUntil?: string; // YYYY-MM-DD
+}
+
+export function birthdayDiscountEmailHtml(p: BirthdayDiscountParams): string {
+  const body = `
+    <p style="margin:0 0 14px 0;">Doğum gününüz kutlu olsun, <strong>${escapeHtml(p.name)}</strong>!</p>
+    <p style="margin:0 0 14px 0;">
+      Bu özel gün için size küçük bir hediyemiz var. Trip and Tick ailesinden
+      doğum günü indiriminizi kullanın ve Kapadokya'yı keşfedin.
+    </p>
+    <div style="background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);border:2px solid ${BRAND_GOLD};border-radius:12px;padding:20px;text-align:center;margin:18px 0;">
+      <div style="font-size:11px;color:#78350f;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px;">Doğum Günü İndirimi</div>
+      <div style="font-size:36px;font-weight:800;color:${BRAND_GOLD};">%${p.discount}</div>
+      <div style="font-size:14px;color:#7c2d12;margin-top:6px;">Kod: <strong style="font-family:'SF Mono','Courier New',monospace;">${escapeHtml(p.code)}</strong></div>
+      ${p.validUntil ? `<div style="font-size:12px;color:#92400e;margin-top:6px;">Son kullanım: ${escapeHtml(formatDateTr(p.validUntil))}</div>` : ""}
+    </div>
+  `;
+  return shellHtml({
+    title: "Doğum gününüz kutlu olsun!",
+    preheader: `Size %${p.discount} doğum günü indirimi.`,
+    badge: "Doğum Günü",
+    badgeColor: BRAND_GOLD,
+    heading: "Doğum Gününüz Kutlu Olsun!",
+    body,
+    ctaLabel: "İndirimi Kullan",
+    ctaUrl: `${SITE_URL}/balonlar?coupon=${encodeURIComponent(p.code)}`,
+  });
+}
+
+export function birthdayDiscountEmailText(p: BirthdayDiscountParams): string {
+  return [
+    `Doğum gününüz kutlu olsun, ${p.name}!`,
+    ``,
+    `Trip and Tick'ten doğum günü hediyeniz: %${p.discount} indirim`,
+    `Kod: ${p.code}`,
+    p.validUntil ? `Son kullanım: ${formatDateTr(p.validUntil)}` : "",
+    ``,
+    `Balon turları: ${SITE_URL}/balonlar?coupon=${p.code}`,
+  ].join("\n");
+}
+
+// ----------------------------------------------------------------------------
+// 4) POST-FLIGHT FEEDBACK — ucus sonrasi 24h NPS + review + referral
+// ----------------------------------------------------------------------------
+export interface PostFlightFeedbackParams {
+  name: string;
+  serviceName: string;
+  reviewUrl: string;
+  referralCode?: string;
+}
+
+export function postFlightFeedbackEmailHtml(p: PostFlightFeedbackParams): string {
+  const body = `
+    <p style="margin:0 0 14px 0;">Merhaba <strong>${escapeHtml(p.name)}</strong>,</p>
+    <p style="margin:0 0 14px 0;">
+      <strong>${escapeHtml(p.serviceName)}</strong> deneyiminiz nasıldı? Görüşleriniz hem bizim
+      hem de gelecek misafirlerimiz için çok değerli.
+    </p>
+    <p style="margin:0 0 14px 0;">Birkaç dakikanızı ayırarak değerlendirmenizi paylaşır mısınız?</p>
+    ${p.referralCode ? `
+      <div style="background:#ecfdf5;border-left:4px solid #10b981;padding:14px 16px;border-radius:6px;margin:18px 0;">
+        <div style="font-weight:700;color:#065f46;font-size:14px;margin-bottom:4px;">Arkadaşlarınızı Davet Edin</div>
+        <div style="font-size:13px;color:#047857;line-height:1.6;">
+          Referans kodunuzla bir arkadaşınızı çağırın; siz <strong>500 puan</strong>, arkadaşınız
+          <strong>%5 indirim</strong> kazansın.<br>
+          Kodunuz: <strong style="font-family:'SF Mono','Courier New',monospace;">${escapeHtml(p.referralCode)}</strong>
+        </div>
+      </div>
+    ` : ""}
+  `;
+  return shellHtml({
+    title: "Deneyiminiz nasıldı?",
+    preheader: `${p.serviceName} hakkında geri bildiriminizi rica ederiz.`,
+    badge: "Geri Bildirim",
+    badgeColor: "#10b981",
+    heading: "Deneyiminizi Paylaşır Mısınız?",
+    body,
+    ctaLabel: "Değerlendirme Bırak",
+    ctaUrl: p.reviewUrl,
+  });
+}
+
+export function postFlightFeedbackEmailText(p: PostFlightFeedbackParams): string {
+  return [
+    `Merhaba ${p.name},`,
+    ``,
+    `${p.serviceName} deneyiminiz nasıldı?`,
+    `Değerlendirme bırakın: ${p.reviewUrl}`,
+    p.referralCode ? `\nReferans kodunuz: ${p.referralCode}` : "",
+    ``,
+    `--`,
+    `Trip and Tick`,
+  ].join("\n");
+}
+
+// ----------------------------------------------------------------------------
+// 5) SEASONAL CAMPAIGN — sezon kampanyasi (Faz 2)
+// ----------------------------------------------------------------------------
+export interface SeasonalCampaignParams {
+  season: string;
+  headline: string;
+  offers: Array<{ name: string; price: number; currency: string; href: string }>;
+  ctaUrl: string;
+}
+
+export function seasonalCampaignEmailHtml(p: SeasonalCampaignParams): string {
+  const offersHtml = p.offers
+    .slice(0, 4)
+    .map(
+      (o) => `
+      <tr><td style="padding:10px 0;border-bottom:1px solid #e2e8f0;">
+        <a href="${escapeHtml(o.href)}" style="display:flex;justify-content:space-between;align-items:center;text-decoration:none;color:#0f172a;font-weight:600;">
+          <span>${escapeHtml(o.name)}</span>
+          <span style="color:${BRAND_ACCENT};font-weight:800;">${escapeHtml(formatCurrency(o.price, o.currency))}</span>
+        </a>
+      </td></tr>
+    `
+    )
+    .join("");
+  const body = `
+    <p style="margin:0 0 14px 0;">${escapeHtml(p.headline)}</p>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:14px;">
+      ${offersHtml}
+    </table>
+  `;
+  return shellHtml({
+    title: `Trip and Tick — ${p.season}`,
+    preheader: p.headline,
+    badge: p.season,
+    heading: `${p.season} Fırsatları`,
+    body,
+    ctaLabel: "Tüm Kampanyaları Gör",
+    ctaUrl: p.ctaUrl,
+  });
+}
+
+export function seasonalCampaignEmailText(p: SeasonalCampaignParams): string {
+  const offers = p.offers
+    .map((o) => `- ${o.name}: ${formatCurrency(o.price, o.currency)} — ${o.href}`)
+    .join("\n");
+  return [
+    `Trip and Tick — ${p.season} Fırsatları`,
+    ``,
+    p.headline,
+    ``,
+    offers,
+    ``,
+    `Tümü: ${p.ctaUrl}`,
+  ].join("\n");
+}
+
+// ----------------------------------------------------------------------------
+// 6) REFERRAL ACTIVATION — referans onayi
+// ----------------------------------------------------------------------------
+export interface ReferralActivationParams {
+  referrerName: string;
+  code: string;
+  bonusPoints: number;
+}
+
+export function referralActivationEmailHtml(p: ReferralActivationParams): string {
+  const body = `
+    <p style="margin:0 0 14px 0;">Tebrikler <strong>${escapeHtml(p.referrerName)}</strong>!</p>
+    <p style="margin:0 0 14px 0;">
+      <strong>${escapeHtml(p.code)}</strong> referans kodunuzu kullanan yeni bir misafir Trip and Tick
+      ailesine katıldı.
+    </p>
+    <div style="background:#ecfdf5;border:2px solid #10b981;border-radius:12px;padding:20px;text-align:center;margin:18px 0;">
+      <div style="font-size:11px;color:#065f46;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px;">Kazandınız</div>
+      <div style="font-size:36px;font-weight:800;color:#10b981;">+${p.bonusPoints.toLocaleString("tr-TR")} puan</div>
+      <div style="font-size:13px;color:#047857;margin-top:6px;">Hesabınıza eklendi.</div>
+    </div>
+    <p style="margin:14px 0 0 0;">Daha fazla davet, daha fazla puan!</p>
+  `;
+  return shellHtml({
+    title: "Referansınız aktive oldu!",
+    preheader: `${p.bonusPoints} puan kazandınız.`,
+    badge: "Referans",
+    badgeColor: "#10b981",
+    heading: "Referansınız Aktive Oldu!",
+    body,
+    ctaLabel: "Hesabımı Gör",
+    ctaUrl: `${SITE_URL}/hesabim`,
+  });
+}
+
+export function referralActivationEmailText(p: ReferralActivationParams): string {
+  return [
+    `Tebrikler ${p.referrerName}!`,
+    ``,
+    `Referans kodunuz ${p.code} kullanıldı.`,
+    `+${p.bonusPoints} puan hesabınıza eklendi.`,
+    ``,
+    `Hesabım: ${SITE_URL}/hesabim`,
+  ].join("\n");
+}

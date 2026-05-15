@@ -63,6 +63,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${SITE_URL}/blog`,
     languages: generateHreflang("/blog"),
+    types: {
+      "application/rss+xml": `${SITE_URL}/blog/rss.xml`,
+    },
   },
   openGraph: {
     title: "Blog — Kapadokya Seyahat Rehberi",

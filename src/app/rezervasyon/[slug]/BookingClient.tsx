@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState, type ChangeEvent } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { z } from "zod";
@@ -32,6 +32,7 @@ import {
 } from "@/lib/booking-storage";
 import { formatPrice, formatDate, cn } from "@/lib/utils";
 import { AvailabilityBadge } from "@/components/booking/AvailabilityBadge";
+import { AvailabilityCalendar } from "@/components/booking/AvailabilityCalendar";
 import type { AvailabilityStatus } from "@/data/availability";
 
 interface PublicAvailability {
@@ -863,14 +864,17 @@ function Step2DateAndPax(props: {
       <div className="space-y-6 mb-6">
         <div>
           <label className="block text-sm font-medium text-slate-700 mb-2">Uçuş Tarihi</label>
-          <input
-            type="date"
-            min={tomorrowIso()}
-            value={date}
-            onChange={(e: ChangeEvent<HTMLInputElement>) => setDate(e.target.value)}
-            className="w-full border border-slate-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-500"
+          <AvailabilityCalendar
+            serviceSlug={service.slug}
+            selectedDate={date}
+            onSelect={setDate}
+            minDate={tomorrowIso()}
           />
-          <p className="text-xs text-slate-500 mt-1">En erken yarın için rezervasyon yapabilirsiniz.</p>
+          <p className="text-xs text-slate-500 mt-2">
+            {date
+              ? `Seçili tarih: ${date}`
+              : "Yeşil = müsait, sarı = sınırlı, kırmızı = dolu. En erken yarın için rezervasyon yapabilirsiniz."}
+          </p>
 
           {date && availabilityLoading && (
             <p className="text-xs text-slate-500 mt-2">Doluluk kontrol ediliyor...</p>

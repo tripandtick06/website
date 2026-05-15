@@ -158,6 +158,17 @@ export const REVIEWS: Review[] = [
 ];
 
 /**
+ * Append-only helper (Faz 1) — moderation-onayli yorumlari REVIEWS dizisine
+ * eklemek icin. Faz 2'de Supabase fetch ile yer degistirir.
+ *
+ * Caller: programatik test + Faz 2 promote-from-store akisi.
+ */
+export function addReview(review: Review): Review {
+  REVIEWS.unshift(review);
+  return review;
+}
+
+/**
  * Stabil "random" secimi: site server-render edildiginde tutarli olsun diye
  * basit deterministic shuffle (seed-tabanli) yapilabilir, fakat default'ta
  * tum review'lari donduruyoruz; component tarafinda slice/sort tercih edilir.

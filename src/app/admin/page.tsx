@@ -17,6 +17,10 @@ import {
   ExternalLink,
   Tag as TagIcon,
   Trash2,
+  Mail,
+  Send,
+  Power,
+  PowerOff,
 } from "lucide-react";
 import { BALLOON_PACKAGES } from "@/data/services/balloons";
 import { ACTIVITIES, TOURS, HOTELS, PACKAGES, TRANSFERS } from "@/data/services/catalog";
@@ -44,6 +48,7 @@ import {
   getTier,
 } from "@/data/loyalty";
 import { generateReferralCode, getReferralStats } from "@/lib/referral";
+import { CAMPAIGNS, type EmailCampaign } from "@/data/email-campaigns";
 
 const ADMIN_AUTH_KEY = "tripandtick:admin:auth";
 
@@ -56,6 +61,7 @@ type Tab =
   | "kuponlar"
   | "musteriler"
   | "sadakat"
+  | "eposta"
   | "seo";
 type BookingFilter = "all" | BookingStatus;
 
@@ -80,6 +86,7 @@ export default function AdminDashboard() {
         {tab === "kuponlar" && "Kuponlar"}
         {tab === "musteriler" && "Musteriler"}
         {tab === "sadakat" && "Sadakat"}
+        {tab === "eposta" && "E-posta Kampanyalari"}
         {tab === "seo" && "SEO Agent"}
       </h1>
       <p className="text-slate-500 text-sm mb-6">
@@ -91,6 +98,7 @@ export default function AdminDashboard() {
         {tab === "kuponlar" && "Kupon kodlari, indirim oranlari ve kullanim limitleri."}
         {tab === "musteriler" && "Musteri segmentleri, harcama ve aktivite."}
         {tab === "sadakat" && "Puan dagilimi, tier istatistigi, referans performansi."}
+        {tab === "eposta" && "Brevo kampanyalari, abone sayisi, test gonderim."}
         {tab === "seo" && "SEO agent makale uretim panosu."}
       </p>
 
@@ -102,6 +110,7 @@ export default function AdminDashboard() {
       {tab === "kuponlar" && <CouponsTab />}
       {tab === "musteriler" && <CustomersTab />}
       {tab === "sadakat" && <LoyaltyTab />}
+      {tab === "eposta" && <EmailCampaignsTab />}
       {tab === "seo" && <SeoAgentTab />}
     </div>
   );
@@ -1627,6 +1636,213 @@ function LoyaltyTab() {
           </div>
         </div>
       )}
+    </div>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────
+// E-posta Kampanyalari tab (Brevo)
+// ─────────────────────────────────────────────────────────────
+
+const CAMPAIGN_TRIGGER_LABEL: Record<EmailCampaign["trigger"], string> = {
+  newsletter_signup: "Newsletter Kayit",
+  abandoned_cart: "Sepet Terki",
+  post_flight: "Ucus Sonrasi",
+  birthday: "Dogum Gunu",
+  seasonal: "Sezon Kampanya",
+};
+
+function EmailCampaignsTab() {
+  const [campaigns, setCampaigns] = useState<EmailCampaign[]>(() => CAMPAIGNS);
+  const [testEmail, setTestEmail] = useState("admin@tripandtick.com");
+  const [testCampaign, setTestCampaign] = useState<string>(CAMPAIGNS[0]?.id ?? "");
+  const [testStatus, setTestStatus] = useState<string>("");
+  const [subscriberCount, setSubscriberCount] = useState<number | null>(null);
+  const [stats, setStats] = useState<{
+    sent: number;
+    opened: number;
+    clicked: number;
+    openRate: string;
+    clickRate: string;
+  } | null>(null);
+
+  useEffect(() => {
+    // Mock — Brevo Contacts API GET counts (Faz 2: real call).
+    setSubscriberCount(1247);
+    setStats({
+      sent: 4892,
+      opened: 2104,
+      clicked: 612,
+      openRate: "43.0%",
+      clickRate: "12.5%",
+    });
+  }, []);
+
+  function toggleActive(id: string) {
+    setCampaigns((prev) =>
+      prev.map((c) => (c.id === id ? { ...c, active: !c.active } : c))
+    );
+  }
+
+  async function sendTest() {
+    if (!testEmail.includes("@")) {
+      setTestStatus("Gecerli e-posta girin.");
+      return;
+    }
+    setTestStatus("Gonderim hazirlaniyor...");
+    // Faz 2: real Brevo test send via /api/admin/email-test.
+    setTimeout(() => {
+      setTestStatus(
+        `Mock: ${testCampaign} sablonu ${testEmail} adresine gonderildi (Faz 2'de gercek API'a baglanacak).`
+      );
+    }, 800);
+  }
+
+  const activeCount = campaigns.filter((c) => c.active).length;
+
+  return (
+    <div className="space-y-6">
+      <div className="grid sm:grid-cols-4 gap-4">
+        <StatCard
+          icon={Mail}
+          title="Aboneler"
+          value={subscriberCount !== null ? subscriberCount.toLocaleString("tr-TR") : "—"}
+          delta="Brevo listesi"
+          tone="primary"
+        />
+        <StatCard
+          icon={Send}
+          title="Bu Ay Gonderim"
+          value={stats ? stats.sent.toLocaleString("tr-TR") : "—"}
+          delta={stats ? `Acilim %${stats.openRate}` : ""}
+          tone="emerald"
+        />
+        <StatCard
+          icon={TrendingUp}
+          title="Tiklama Orani"
+          value={stats?.clickRate ?? "—"}
+          delta={stats ? `${stats.clicked} tiklama` : ""}
+          tone="amber"
+        />
+        <StatCard
+          icon={Power}
+          title="Aktif Kampanya"
+          value={`${activeCount} / ${campaigns.length}`}
+          tone="slate"
+        />
+      </div>
+
+      <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+        <div className="px-6 py-4 border-b border-slate-100 flex items-center justify-between gap-3">
+          <h2 className="font-bold text-slate-900">Kampanyalar</h2>
+          <span className="text-xs text-slate-500">
+            Brevo otomasyon — toggle ile aktif/pasif.
+          </span>
+        </div>
+        <div className="divide-y divide-slate-100">
+          {campaigns.map((c) => (
+            <div
+              key={c.id}
+              className="px-6 py-4 flex flex-col sm:flex-row sm:items-center gap-3"
+            >
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-2 flex-wrap">
+                  <span className="font-semibold text-slate-900">{c.name}</span>
+                  <span className="inline-block px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 text-[10px] font-bold uppercase tracking-wide">
+                    {CAMPAIGN_TRIGGER_LABEL[c.trigger]}
+                  </span>
+                  {c.delay_hours !== undefined && c.delay_hours > 0 && (
+                    <span className="inline-block px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 text-[10px] font-bold uppercase tracking-wide">
+                      +{c.delay_hours}h
+                    </span>
+                  )}
+                  {c.audience_segment && (
+                    <span className="inline-block px-2 py-0.5 rounded-full bg-indigo-50 text-indigo-700 text-[10px] font-bold uppercase tracking-wide">
+                      {c.audience_segment}
+                    </span>
+                  )}
+                </div>
+                {c.description && (
+                  <p className="text-xs text-slate-500 mt-1 leading-relaxed">
+                    {c.description}
+                  </p>
+                )}
+              </div>
+              <button
+                onClick={() => toggleActive(c.id)}
+                className={cn(
+                  "inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors",
+                  c.active
+                    ? "bg-emerald-100 text-emerald-700 hover:bg-emerald-200"
+                    : "bg-slate-100 text-slate-500 hover:bg-slate-200"
+                )}
+              >
+                {c.active ? (
+                  <>
+                    <Power className="w-3.5 h-3.5" />
+                    Aktif
+                  </>
+                ) : (
+                  <>
+                    <PowerOff className="w-3.5 h-3.5" />
+                    Pasif
+                  </>
+                )}
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6">
+        <h2 className="font-bold text-slate-900 mb-3">Test Gonderim</h2>
+        <p className="text-sm text-slate-500 mb-4">
+          Secili sablonu kendinize gondererek tasarimi inceleyin (mock — Faz 2&apos;de
+          gercek Brevo API).
+        </p>
+        <div className="flex flex-col sm:flex-row gap-2">
+          <select
+            value={testCampaign}
+            onChange={(e) => setTestCampaign(e.target.value)}
+            className="px-3 py-2 rounded-lg border border-slate-200 text-sm bg-white focus:outline-none focus:border-primary"
+          >
+            {campaigns.map((c) => (
+              <option key={c.id} value={c.id}>
+                {c.name}
+              </option>
+            ))}
+          </select>
+          <input
+            type="email"
+            value={testEmail}
+            onChange={(e) => setTestEmail(e.target.value)}
+            placeholder="test@tripandtick.com"
+            className="flex-1 px-3 py-2 rounded-lg border border-slate-200 text-sm focus:outline-none focus:border-primary"
+          />
+          <button
+            onClick={sendTest}
+            className="inline-flex items-center gap-2 bg-primary text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-primary/90"
+          >
+            <Send className="w-4 h-4" />
+            Test Gonder
+          </button>
+        </div>
+        {testStatus && (
+          <p className="mt-3 text-xs text-slate-600 bg-slate-50 p-3 rounded-lg">
+            {testStatus}
+          </p>
+        )}
+      </div>
+
+      <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6">
+        <h3 className="font-bold text-slate-900 mb-3">Brevo Entegrasyon Notlari</h3>
+        <ul className="text-xs text-slate-600 space-y-1.5 leading-relaxed">
+          <li>• Newsletter abone API: <code className="bg-slate-100 px-1.5 py-0.5 rounded">POST /api/newsletter</code> (canli)</li>
+          <li>• Welcome mail Brevo template ID: <code className="bg-slate-100 px-1.5 py-0.5 rounded">BREVO_WELCOME_TEMPLATE_ID</code> env</li>
+          <li>• List ID: <code className="bg-slate-100 px-1.5 py-0.5 rounded">BREVO_LIST_ID</code> env (varsayilan 2)</li>
+          <li>• Sepet terki, dogum gunu, sezon kampanyalari Faz 2&apos;de Brevo Automation Workflow ile tetiklenecek.</li>
+        </ul>
+      </div>
     </div>
   );
 }

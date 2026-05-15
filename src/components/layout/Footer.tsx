@@ -23,6 +23,7 @@ import { useLocale, useT } from "@/lib/i18n/I18nProvider";
 import { isLocale } from "@/lib/i18n/dictionaries";
 import { COMPANY, telHref, whatsappHref } from "@/data/founder";
 import { CurrencySwitcher } from "@/components/booking/CurrencySwitcher";
+import { NewsletterForm } from "@/components/marketing/NewsletterForm";
 
 type FooterLang = {
   code: string;
@@ -72,6 +73,8 @@ export function Footer() {
 
   const FOOTER_COMPANY = [
     { href: "/hakkimizda", label: t.nav.about },
+    { href: "/operatorler", label: "Operatörler" },
+    { href: "/yorum", label: "Yorum Yaz" },
     { href: "/blog", label: t.nav.blog },
     { href: "/iletisim", label: t.nav.contact },
     { href: "/sss", label: t.nav.faq },
@@ -107,6 +110,19 @@ export function Footer() {
             <Globe className="w-5 h-5 text-accent" />
             <span>{t.trust.languages}</span>
           </div>
+        </div>
+      </div>
+
+      {/* Newsletter — inline (slim variant after trust bar) */}
+      <div className="border-b border-slate-800">
+        <div className="container-main py-8 grid gap-6 sm:grid-cols-[1fr_2fr] items-center">
+          <div>
+            <h5 className="text-white font-bold text-base mb-1">Hoşgeldin Bonusu</h5>
+            <p className="text-xs text-slate-400 leading-relaxed">
+              Bültene abone olun, ilk rezervasyonunuzda %5 indirim + sezon fırsatları.
+            </p>
+          </div>
+          <NewsletterForm variant="inline" source="footer" />
         </div>
       </div>
 

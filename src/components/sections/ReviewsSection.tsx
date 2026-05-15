@@ -1,4 +1,5 @@
-import { Star, Quote } from "lucide-react";
+import Link from "next/link";
+import { Star, Quote, PenLine } from "lucide-react";
 import { pickReviews } from "@/data/reviews";
 
 const AVATAR_COLORS = [
@@ -31,6 +32,19 @@ export function ReviewsSection() {
           </h2>
           <p className="text-slate-500 mt-2 text-sm sm:text-base">
             Trip and Tick&apos;e güvenenlerin gerçek deneyimleri
+          </p>
+        </div>
+
+        <div className="text-center mb-8">
+          <Link
+            href="/yorum"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-amber-500 hover:bg-amber-600 text-white rounded-full text-sm font-bold transition-colors shadow-sm"
+          >
+            <PenLine className="w-4 h-4" />
+            Yorumunuzu Yazın
+          </Link>
+          <p className="text-xs text-slate-400 mt-2">
+            Trip and Tick ile yaşadığınız deneyimi paylaşın
           </p>
         </div>
 

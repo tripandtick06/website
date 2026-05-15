@@ -3,11 +3,13 @@ import fs from "fs";
 import path from "path";
 import { BALLOON_PACKAGES } from "@/data/services/balloons";
 import { KAPADOKYA_PILLARS } from "@/data/services/catalog";
+import { OPERATORS } from "@/data/services/operators";
 import { SITE_URL } from "@/lib/schema";
 
 // Auto-consumed by Next.js → /sitemap.xml. No source-file importer.
 // Reads: src/data/blog/*.json (fields used: filename only for slug derivation).
 // /rezervasyon/* intentionally excluded — funnel pages, noindex.
+// Siralama: statik → money pages → category hubs → editorial → operator → balon → pillar → blog → legal.
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -27,6 +29,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: url("/turlar"), lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: url("/paketler"), lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: url("/transferler"), lastModified: now, changeFrequency: "weekly", priority: 0.7 },
+
+    // Operator listeleme — trust + brand authority.
+    { url: url("/operatorler"), lastModified: now, changeFrequency: "weekly", priority: 0.7 },
 
     // Editorial.
     { url: url("/blog"), lastModified: now, changeFrequency: "daily", priority: 0.7 },
@@ -51,6 +56,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: now,
     changeFrequency: "weekly",
     priority: 0.9,
+  }));
+
+  // Operator detay sayfalari — 10 TURSAB lisansli operator.
+  const operatorPages: MetadataRoute.Sitemap = OPERATORS.map((op) => ({
+    url: url(`/operatorler/${op.id}`),
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.6,
   }));
 
   const pillarPages: MetadataRoute.Sitemap = KAPADOKYA_PILLARS.map((p) => ({
@@ -79,5 +92,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // sessiz hata — sitemap derlenebilmeli
   }
 
-  return [...staticPages, ...balloonPages, ...pillarPages, ...blogPages];
+  // Dedupe — bazi pillar slug'lari blog JSON slug'lariyla cakisir (intentional).
+  const combined = [...staticPages, ...operatorPages, ...balloonPages, ...pillarPages, ...blogPages];
+  const seen = new Set<string>();
+  const deduped: MetadataRoute.Sitemap = [];
+  for (const entry of combined) {
+    if (seen.has(entry.url)) continue;
+    seen.add(entry.url);
+    deduped.push(entry);
+  }
+  return deduped;
 }
