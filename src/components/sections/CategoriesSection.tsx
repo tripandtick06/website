@@ -38,7 +38,7 @@ export function CategoriesSection() {
       href: "/transferler",
     },
     {
-      icon: Bike,
+      icon: MountainSnow,
       name: t.categories.atv,
       sub: t.categories.atv_sub,
       href: "/aktiviteler",

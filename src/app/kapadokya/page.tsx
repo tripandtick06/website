@@ -45,7 +45,7 @@ const CATEGORIES = [
   },
   {
     href: "/aktiviteler",
-    icon: Bike,
+    icon: MountainSnow,
     title: "Aktiviteler",
     desc: "ATV, at binme, jeep safari — €29'dan",
     color: "from-success to-success-light",
