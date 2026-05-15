@@ -9,7 +9,7 @@
 //       Lookup-form fallback (kod + email): mock match-by-id (kod normalize TT-XXXXXXXX).
 // Iptal: /api/cancel POST.
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import {
@@ -17,16 +17,22 @@ import {
   Calendar,
   CheckCircle2,
   ChevronRight,
+  Copy,
+  Crown,
   Download,
   ExternalLink,
   FileText,
+  Gift,
   Mail,
   Search,
+  Sparkles,
   Ticket,
   Trash2,
   XCircle,
+  Share2,
 } from "lucide-react";
 import { useCurrency } from "@/lib/currency";
+import type { LoyaltyTransaction, LoyaltyTier } from "@/data/loyalty";
 
 interface StoredBooking {
   bookingId: string;
@@ -124,10 +130,30 @@ function icalDownloadUrl(b: StoredBooking): string {
   return `/api/ical?${params.toString()}`;
 }
 
+type HesabimTab = "rezervasyonlar" | "puanlarim" | "referans";
+
+interface LoyaltyData {
+  balance: number;
+  redeemableEuro: number;
+  tier: LoyaltyTier;
+  nextTier: LoyaltyTier | null;
+  transactions: LoyaltyTransaction[];
+  referral: {
+    code: string;
+    invited: number;
+    confirmed: number;
+    pending: number;
+    totalBonus: number;
+  };
+  config?: { earnRate: number; redemptionRate: number; referralBonus: number };
+}
+
 export default function HesabimPage() {
   const searchParams = useSearchParams();
   const initialCode = searchParams.get("code")?.toUpperCase() ?? "";
+  const initialTab = (searchParams.get("tab") as HesabimTab) ?? "rezervasyonlar";
   const { format } = useCurrency();
+  const [tab, setTab] = useState<HesabimTab>(initialTab);
   const [bookings, setBookings] = useState<StoredBooking[]>([]);
   const [code, setCode] = useState(initialCode);
   const [email, setEmail] = useState("");
@@ -136,10 +162,64 @@ export default function HesabimPage() {
   const [cancelReason, setCancelReason] = useState("");
   const [cancelResult, setCancelResult] = useState<{ ok: boolean; msg: string } | null>(null);
   const [cancelLoading, setCancelLoading] = useState(false);
+  const [loyalty, setLoyalty] = useState<LoyaltyData | null>(null);
+  const [loyaltyLoading, setLoyaltyLoading] = useState(false);
+  const [loyaltyEmail, setLoyaltyEmail] = useState<string>("");
+  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     setBookings(readBookings());
   }, []);
+
+  // Email seed loyalty fetch icin — son bookingden veya local lookup
+  useEffect(() => {
+    const stored = readBookings();
+    if (stored.length > 0) {
+      setLoyaltyEmail((prev) => prev || stored[0].customerEmail);
+    }
+  }, []);
+
+  const fetchLoyalty = useCallback(async (queryEmail: string) => {
+    if (!queryEmail || !/^\S+@\S+\.\S+$/.test(queryEmail)) return;
+    setLoyaltyLoading(true);
+    try {
+      const res = await fetch(`/api/loyalty?email=${encodeURIComponent(queryEmail)}`);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = (await res.json()) as LoyaltyData;
+      setLoyalty(data);
+    } catch (err) {
+      console.error("[hesabim] loyalty fetch error", err);
+      setLoyalty(null);
+    } finally {
+      setLoyaltyLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    if ((tab === "puanlarim" || tab === "referans") && loyaltyEmail) {
+      fetchLoyalty(loyaltyEmail);
+    }
+  }, [tab, loyaltyEmail, fetchLoyalty]);
+
+  const tierProgress = useMemo(() => {
+    if (!loyalty?.nextTier) return 100;
+    const current = loyalty.tier.min;
+    const next = loyalty.nextTier.min;
+    if (next === current) return 100;
+    return Math.min(100, Math.round(((loyalty.balance - current) / (next - current)) * 100));
+  }, [loyalty]);
+
+  function copyReferral() {
+    if (!loyalty?.referral?.code) return;
+    const inviteUrl = `${window.location.origin}/davet/${loyalty.referral.code}`;
+    navigator.clipboard.writeText(inviteUrl).then(
+      () => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      },
+      () => {}
+    );
+  }
 
   const handleLookup = useCallback(
     (e: React.FormEvent) => {
@@ -235,10 +315,36 @@ export default function HesabimPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-amber-50 pt-[88px] pb-20">
       <div className="container-main max-w-5xl">
-        <div className="mb-8">
-          <h1 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-2">Rezervasyonlarim</h1>
-          <p className="text-slate-600">Rezervasyon kodunuzla geymisinizi goruntuleyin, fatura indirin, iptal talebinde bulunun.</p>
+        <div className="mb-6">
+          <h1 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-2">Hesabim</h1>
+          <p className="text-slate-600">Rezervasyonlar, puanlar, referans kodu — hepsi tek yerde.</p>
         </div>
+
+        <div className="flex gap-2 mb-6 border-b border-slate-200">
+          {([
+            { id: "rezervasyonlar" as const, label: "Rezervasyonlar", icon: Ticket },
+            { id: "puanlarim" as const, label: "Puanlarim", icon: Sparkles },
+            { id: "referans" as const, label: "Referans", icon: Gift },
+          ]).map((t) => {
+            const Icon = t.icon;
+            const active = tab === t.id;
+            return (
+              <button
+                key={t.id}
+                onClick={() => setTab(t.id)}
+                className={
+                  active
+                    ? "inline-flex items-center gap-2 px-4 py-2.5 border-b-2 border-amber-500 text-amber-700 font-semibold"
+                    : "inline-flex items-center gap-2 px-4 py-2.5 text-slate-500 hover:text-slate-800"
+                }
+              >
+                <Icon className="w-4 h-4" /> {t.label}
+              </button>
+            );
+          })}
+        </div>
+
+        {tab === "rezervasyonlar" && <>
 
         <form
           onSubmit={handleLookup}
@@ -395,6 +501,234 @@ export default function HesabimPage() {
             <ExternalLink className="w-4 h-4" /> WhatsApp destek
           </a>
         </div>
+
+        </>}
+
+        {tab === "puanlarim" && (
+          <section className="space-y-5">
+            <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-5">
+              <label className="block text-xs font-semibold text-slate-600 mb-1.5 uppercase tracking-wide">
+                E-posta
+              </label>
+              <div className="flex gap-2">
+                <input
+                  value={loyaltyEmail}
+                  onChange={(e) => setLoyaltyEmail(e.target.value)}
+                  type="email"
+                  placeholder="ornek@email.com"
+                  className="flex-1 px-3 py-2 rounded-lg border border-slate-300 focus:border-amber-500 focus:ring-2 focus:ring-amber-200 outline-none text-slate-900"
+                />
+                <button
+                  onClick={() => fetchLoyalty(loyaltyEmail)}
+                  className="px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white rounded-lg font-semibold text-sm"
+                >
+                  Sorgula
+                </button>
+              </div>
+              <p className="text-xs text-slate-500 mt-2">
+                Mock veri: ilk 10 musterinin (CUST-0001..CUST-0009) puanlari tanimli.
+              </p>
+            </div>
+
+            {loyaltyLoading && (
+              <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 text-center text-slate-500">
+                Puanlar yukleniyor...
+              </div>
+            )}
+
+            {!loyaltyLoading && loyalty && (
+              <>
+                <div className="grid sm:grid-cols-3 gap-4">
+                  <div className="bg-white rounded-2xl shadow-sm border border-amber-200 p-5">
+                    <div className="flex items-center gap-2 text-amber-700 mb-2">
+                      <Sparkles className="w-5 h-5" />
+                      <span className="text-xs font-semibold uppercase tracking-wide">Mevcut Puan</span>
+                    </div>
+                    <p className="text-3xl font-extrabold text-amber-700">{loyalty.balance}</p>
+                    <p className="text-xs text-slate-500 mt-1">= €{loyalty.redeemableEuro} kullanilabilir</p>
+                  </div>
+                  <div className="bg-white rounded-2xl shadow-sm border border-violet-200 p-5">
+                    <div className="flex items-center gap-2 text-violet-700 mb-2">
+                      <Crown className="w-5 h-5" />
+                      <span className="text-xs font-semibold uppercase tracking-wide">Tier</span>
+                    </div>
+                    <p className="text-2xl font-extrabold text-violet-700">{loyalty.tier.name}</p>
+                    <p className="text-xs text-slate-500 mt-1">
+                      Otomatik %{loyalty.tier.discount} indirim
+                    </p>
+                  </div>
+                  <div className="bg-white rounded-2xl shadow-sm border border-rose-200 p-5">
+                    <div className="flex items-center gap-2 text-rose-700 mb-2">
+                      <Gift className="w-5 h-5" />
+                      <span className="text-xs font-semibold uppercase tracking-wide">Referans Bonus</span>
+                    </div>
+                    <p className="text-3xl font-extrabold text-rose-700">{loyalty.referral.totalBonus}</p>
+                    <p className="text-xs text-slate-500 mt-1">{loyalty.referral.confirmed} davet onayli</p>
+                  </div>
+                </div>
+
+                {loyalty.nextTier && (
+                  <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-5">
+                    <div className="flex items-center justify-between text-sm mb-2">
+                      <span className="text-slate-700 font-semibold">
+                        {loyalty.tier.name} → {loyalty.nextTier.name}
+                      </span>
+                      <span className="text-slate-500">
+                        {loyalty.nextTier.min - loyalty.balance} puan kaldi
+                      </span>
+                    </div>
+                    <div className="h-3 bg-slate-100 rounded-full overflow-hidden">
+                      <div
+                        className="h-full bg-gradient-to-r from-amber-400 to-amber-600"
+                        style={{ width: `${tierProgress}%` }}
+                      />
+                    </div>
+                    <p className="text-xs text-slate-500 mt-2">
+                      Bir sonraki tier'da otomatik %{loyalty.nextTier.discount} indirim devreye girer.
+                    </p>
+                  </div>
+                )}
+
+                <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-5">
+                  <h3 className="font-bold text-slate-900 mb-3">Son Hareketler</h3>
+                  {loyalty.transactions.length === 0 ? (
+                    <p className="text-sm text-slate-500">Henuz puan hareketi yok.</p>
+                  ) : (
+                    <ul className="divide-y divide-slate-100">
+                      {loyalty.transactions.slice(0, 10).map((tx) => (
+                        <li key={tx.id} className="flex items-center justify-between py-2.5 text-sm">
+                          <div>
+                            <p className="font-medium text-slate-800">{tx.description}</p>
+                            <p className="text-xs text-slate-500">
+                              {new Date(tx.createdAt).toLocaleDateString("tr-TR")}
+                              {tx.bookingId ? ` · ${tx.bookingId}` : ""}
+                              {" · "}{tx.type}
+                            </p>
+                          </div>
+                          <span
+                            className={
+                              tx.points > 0
+                                ? "font-bold text-emerald-600"
+                                : "font-bold text-rose-600"
+                            }
+                          >
+                            {tx.points > 0 ? "+" : ""}
+                            {tx.points}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+
+                <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4 text-sm text-amber-900">
+                  <p className="font-semibold mb-1">Puanlarinizi nasil kullanirsiniz?</p>
+                  <p>
+                    Bir sonraki rezervasyonda Step 4 (Ozet) ekraninda puanlariniz otomatik onerilir.
+                    {loyalty.config && (
+                      <>
+                        {" "}Sistem her €{loyalty.config.earnRate} harcamada {loyalty.config.earnRate} puan
+                        ekler, {loyalty.config.redemptionRate} puan = €1 indirim.
+                      </>
+                    )}
+                  </p>
+                </div>
+              </>
+            )}
+
+            {!loyaltyLoading && !loyalty && (
+              <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 text-center text-slate-500">
+                Once e-posta sorgulayin.
+              </div>
+            )}
+          </section>
+        )}
+
+        {tab === "referans" && (
+          <section className="space-y-5">
+            {!loyalty && !loyaltyLoading && (
+              <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-5">
+                <label className="block text-xs font-semibold text-slate-600 mb-1.5 uppercase tracking-wide">
+                  E-posta
+                </label>
+                <div className="flex gap-2">
+                  <input
+                    value={loyaltyEmail}
+                    onChange={(e) => setLoyaltyEmail(e.target.value)}
+                    type="email"
+                    placeholder="ornek@email.com"
+                    className="flex-1 px-3 py-2 rounded-lg border border-slate-300 outline-none text-slate-900"
+                  />
+                  <button
+                    onClick={() => fetchLoyalty(loyaltyEmail)}
+                    className="px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white rounded-lg font-semibold text-sm"
+                  >
+                    Kodu Goster
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {loyalty && (
+              <>
+                <div className="bg-white rounded-2xl shadow-sm border border-amber-200 p-6 text-center">
+                  <p className="text-xs uppercase font-semibold text-amber-700 tracking-wider mb-2">
+                    Referans Kodunuz
+                  </p>
+                  <p className="text-4xl font-extrabold text-amber-700 font-mono tracking-wider mb-3">
+                    {loyalty.referral.code}
+                  </p>
+                  <p className="text-sm text-slate-600 mb-4">
+                    Bu kodu paylasin — her arkadasiniz +{loyalty.config?.referralBonus ?? 150} puan, siz de
+                    +{loyalty.config?.referralBonus ?? 150} puan kazanin.
+                  </p>
+                  <div className="flex flex-wrap justify-center gap-2">
+                    <button
+                      onClick={copyReferral}
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white rounded-lg text-sm font-semibold"
+                    >
+                      <Copy className="w-4 h-4" />
+                      {copied ? "Kopyalandi!" : "Linki Kopyala"}
+                    </button>
+                    <a
+                      href={`https://wa.me/?text=${encodeURIComponent(
+                        `Trip and Tick'te %5 indirim ve 150 puan kazanmak icin davet kodum: ${typeof window !== "undefined" ? window.location.origin : ""}/davet/${loyalty.referral.code}`
+                      )}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg text-sm font-semibold"
+                    >
+                      <Share2 className="w-4 h-4" /> WhatsApp ile Paylas
+                    </a>
+                    <a
+                      href={`mailto:?subject=${encodeURIComponent("Trip and Tick davetim — 150 puan + %5 indirim")}&body=${encodeURIComponent(
+                        `Selam! Kapadokya balon turu ararken Trip and Tick'i kullanmaya basladim. Sana da bedavadan 150 puan + %5 indirim cikiyor:\n\n${typeof window !== "undefined" ? window.location.origin : ""}/davet/${loyalty.referral.code}`
+                      )}`}
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-slate-700 hover:bg-slate-800 text-white rounded-lg text-sm font-semibold"
+                    >
+                      <Mail className="w-4 h-4" /> E-posta
+                    </a>
+                  </div>
+                </div>
+
+                <div className="grid sm:grid-cols-3 gap-4">
+                  <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 text-center">
+                    <p className="text-xs uppercase text-slate-500">Toplam Davet</p>
+                    <p className="text-2xl font-extrabold text-slate-900">{loyalty.referral.invited}</p>
+                  </div>
+                  <div className="bg-white rounded-2xl shadow-sm border border-emerald-200 p-4 text-center">
+                    <p className="text-xs uppercase text-emerald-600">Onaylandi</p>
+                    <p className="text-2xl font-extrabold text-emerald-700">{loyalty.referral.confirmed}</p>
+                  </div>
+                  <div className="bg-white rounded-2xl shadow-sm border border-amber-200 p-4 text-center">
+                    <p className="text-xs uppercase text-amber-600">Bekliyor</p>
+                    <p className="text-2xl font-extrabold text-amber-700">{loyalty.referral.pending}</p>
+                  </div>
+                </div>
+              </>
+            )}
+          </section>
+        )}
       </div>
 
       {cancelDialog && (

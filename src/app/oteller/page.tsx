@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { PageHero } from "@/components/layout/PageHero";
-import { ServiceCard } from "@/components/layout/ServiceCard";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { HOTELS } from "@/data/services/catalog";
 import { breadcrumbSchema, SITE_URL } from "@/lib/schema";
 import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
+import { HotelsGrid } from "@/components/oteller/HotelsGrid";
 
 export const metadata: Metadata = {
   title: "Kapadokya Otel Rezervasyonu — Mağara Otel & Butik | Trip and Tick",
@@ -49,11 +49,7 @@ export default function OtellerPage() {
 
       <section className="section-padding bg-slate-50">
         <div className="container-main">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {HOTELS.map((item) => (
-              <ServiceCard key={item.slug} item={item} />
-            ))}
-          </div>
+          <HotelsGrid hotels={HOTELS} />
 
           <div className="mt-12 text-center bg-white rounded-2xl p-8 border border-slate-200">
             <h3 className="text-xl font-bold text-slate-900 mb-2">

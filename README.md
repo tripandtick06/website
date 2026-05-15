@@ -83,6 +83,36 @@ Tum keyler `.env.local` icinde, `.env.local.template` referans. Ozet:
 | `BREVO_API_KEY` | Email capture / transactional | Opsiyonel |
 | `ADMIN_DEMO_USER` / `ADMIN_DEMO_PASS` | /admin paneli demo creds | Opsiyonel |
 
+## Supabase setup (Faz 2)
+
+TripAndTick canli DB icin Supabase + Postgres. Env yoksa kod mock-fallback
+(mock-bookings.ts + availability-store.ts) ile calismaya devam eder; production
+icin asagidaki adimlari yap:
+
+1. **Project create**: <https://supabase.com/dashboard> -> "New project". Region
+   `eu-central` (Frankfurt). Database password olustur, kaybetme.
+2. **Migration**: Project -> SQL Editor -> "New query". `supabase/migrations/0001_initial_schema.sql`
+   icerigini yapistir + Run. 8 tablo + RLS + trigger olusur (idempotent).
+3. **Seed (opsiyonel)**: SQL Editor -> `supabase/seed.sql` yapistir + Run.
+   10 musteri, 5 booking, 90 satir availability, 6 coupon test verisi.
+4. **Env keys**: Settings -> API:
+   - `Project URL` -> `NEXT_PUBLIC_SUPABASE_URL`
+   - `anon` public key -> `NEXT_PUBLIC_SUPABASE_ANON_KEY` (browser-safe, RLS uygulanir)
+   - `service_role` key -> `SUPABASE_SERVICE_ROLE_KEY` (SERVER-ONLY, RLS bypass —
+     sadece backend admin operasyonlari icin, ASLA client-bundle'a koyma)
+5. **Vercel env**: Dashboard -> Settings -> Environment Variables. Tum 3 keyi
+   Production + Preview icin ekle.
+6. **Dogrula**: `npx next dev` baslat -> /api/health 200 OK + booking submit
+   sonrasi Supabase Studio -> Table editor -> bookings'te yeni satir.
+
+### RLS politikalari (deny-by-default)
+
+- `availability`: public SELECT (rezervasyon takvimi).
+- `reviews`: public SELECT WHERE `published = TRUE`.
+- `coupons`: public SELECT WHERE `active = TRUE` (kod dogrulama).
+- `customers`, `bookings`, `loyalty_transactions`, `agencies`, `email_log`:
+  hicbir public erisim — sadece `service_role` admin client RLS bypass eder.
+
 ## Scripts
 
 ```bash

@@ -7,6 +7,9 @@ import {
   adminBookingEmailText,
   type BookingEmailPayload,
 } from "@/lib/email-templates";
+import { persistBooking } from "@/lib/db/bookings";
+import { upsertCustomer } from "@/lib/db/customers";
+import { supabaseEnabled } from "@/lib/supabase";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -117,6 +120,52 @@ export async function POST(req: NextRequest) {
     };
 
     console.info("[api/booking] Yeni rezervasyon", JSON.stringify(record, null, 2));
+
+    // Faz 2: Supabase persist (env yoksa mock-log fallback)
+    const leadPaxForDb = parsed.data.passengers[0];
+    const paxCount = parsed.data.adults + parsed.data.children;
+    const unitPrice =
+      paxCount > 0 ? Math.round((parsed.data.totalPrice / paxCount) * 100) / 100 : parsed.data.totalPrice;
+
+    let customerId: string | null = null;
+    try {
+      const customer = await upsertCustomer(leadPaxForDb.email, {
+        fullName: leadPaxForDb.fullName,
+        phone: leadPaxForDb.phone,
+        nationality: leadPaxForDb.nationality,
+      });
+      customerId = customer?.id ?? null;
+    } catch (err) {
+      console.warn("[api/booking] upsertCustomer error (devam)", err);
+    }
+
+    try {
+      await persistBooking({
+        id: bookingId,
+        customerId,
+        serviceSlug: parsed.data.serviceSlug,
+        serviceName: parsed.data.serviceName,
+        date: parsed.data.date,
+        adults: parsed.data.adults,
+        children: parsed.data.children,
+        passengers: parsed.data.passengers,
+        unitPrice,
+        totalPrice: parsed.data.totalPrice,
+        currency: parsed.data.currency,
+        insurance: parsed.data.insurance ?? false,
+        promoCode: parsed.data.promoCode ?? null,
+        paymentStatus: "pending",
+        bookingStatus: "pending",
+        stripeSessionId: parsed.data.paymentSessionId ?? null,
+        specialRequests: parsed.data.specialRequests ?? null,
+      });
+    } catch (err) {
+      console.warn("[api/booking] persistBooking error (devam — mock fallback)", err);
+    }
+
+    if (!supabaseEnabled) {
+      console.info("[api/booking] Supabase env yok — mock log mode aktif");
+    }
 
     // Faz 2: Brevo e-posta tetigi (musteri + admin paralel)
     const leadPax = parsed.data.passengers[0];

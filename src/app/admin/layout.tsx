@@ -15,6 +15,7 @@ import {
   X,
   Ticket,
   UserCircle2,
+  Sparkles,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -28,6 +29,7 @@ const NAV = [
   { href: "/admin?tab=operatorler", label: "Operatorler", icon: Users },
   { href: "/admin?tab=kuponlar", label: "Kuponlar", icon: Ticket },
   { href: "/admin?tab=musteriler", label: "Musteriler", icon: UserCircle2 },
+  { href: "/admin?tab=sadakat", label: "Sadakat", icon: Sparkles },
   { href: "/admin?tab=seo", label: "SEO Agent", icon: Bot },
 ];
 

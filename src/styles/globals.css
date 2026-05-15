@@ -77,3 +77,14 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+/* RTL support — Urdu (ur). Tailwind RTL plugin yok, manuel minimal flip. */
+[dir="rtl"] body {
+  text-align: right;
+}
+[dir="rtl"] .text-left {
+  text-align: right;
+}
+[dir="rtl"] .text-right {
+  text-align: left;
+}

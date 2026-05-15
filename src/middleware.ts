@@ -43,13 +43,14 @@ export function middleware(req: NextRequest) {
 
   const ip = getClientIp(req);
 
-  // Rate-limit /api/seo-agent + /api/checkout + /api/contact + /api/availability + /api/cancel
+  // Rate-limit /api/seo-agent + /api/checkout + /api/contact + /api/availability + /api/cancel + /api/b2b
   const rateLimited =
     pathname.startsWith("/api/seo-agent") ||
     pathname.startsWith("/api/checkout") ||
     pathname.startsWith("/api/contact") ||
     pathname.startsWith("/api/availability") ||
-    pathname.startsWith("/api/cancel");
+    pathname.startsWith("/api/cancel") ||
+    pathname.startsWith("/api/b2b");
 
   if (rateLimited) {
     const rl = rateLimit(`${ip}:${pathname}`);

@@ -34,13 +34,13 @@ type FooterLang = {
 const FOOTER_LANGUAGES: FooterLang[] = [
   { code: "tr", label: "Türkçe", flag: "TR", disabled: false },
   { code: "en", label: "English", flag: "EN", disabled: false },
-  { code: "de", label: "Deutsch", flag: "DE", disabled: true },
-  { code: "fr", label: "Français", flag: "FR", disabled: true },
-  { code: "es", label: "Español", flag: "ES", disabled: true },
-  { code: "nl", label: "Nederlands", flag: "NL", disabled: true },
-  { code: "zh", label: "中文", flag: "ZH", disabled: true },
-  { code: "hi", label: "हिन्दी", flag: "HI", disabled: true },
-  { code: "ur", label: "اردو", flag: "UR", disabled: true },
+  { code: "de", label: "Deutsch", flag: "DE", disabled: false },
+  { code: "fr", label: "Français", flag: "FR", disabled: false },
+  { code: "es", label: "Español", flag: "ES", disabled: false },
+  { code: "nl", label: "Nederlands", flag: "NL", disabled: false },
+  { code: "zh", label: "中文", flag: "ZH", disabled: false },
+  { code: "hi", label: "हिन्दी", flag: "HI", disabled: false },
+  { code: "ur", label: "اردو", flag: "UR", disabled: false },
 ];
 
 export function Footer() {
@@ -76,6 +76,7 @@ export function Footer() {
     { href: "/iletisim", label: t.nav.contact },
     { href: "/sss", label: t.nav.faq },
     { href: "/hesabim", label: "Rezervasyonum" },
+    { href: "/b2b", label: "B2B Acente" },
   ];
 
   const FOOTER_LEGAL = [

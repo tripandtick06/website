@@ -15,6 +15,7 @@ import {
 import {
   DEFAULT_LOCALE,
   DICTIONARIES,
+  LOCALE_DIR,
   LOCALE_STORAGE_KEY,
   isLocale,
   type Dictionary,
@@ -45,9 +46,11 @@ export function I18nProvider({ children }: { children: ReactNode }) {
         setLocaleState(stored);
         if (typeof document !== "undefined") {
           document.documentElement.lang = stored;
+          document.documentElement.dir = LOCALE_DIR[stored];
         }
       } else if (typeof document !== "undefined") {
         document.documentElement.lang = locale;
+        document.documentElement.dir = LOCALE_DIR[locale];
       }
     } catch {
       // localStorage may throw (private mode, quota, etc.) — fall back silently.
@@ -68,6 +71,7 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     }
     if (typeof document !== "undefined") {
       document.documentElement.lang = next;
+      document.documentElement.dir = LOCALE_DIR[next];
     }
   }, []);
 

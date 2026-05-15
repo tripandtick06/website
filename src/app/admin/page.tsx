@@ -36,6 +36,14 @@ import {
 } from "@/data/mock-customers";
 import type { Coupon, CouponType } from "@/data/coupons";
 import { getCouponStatus } from "@/data/coupons";
+import {
+  MOCK_LOYALTY_TX,
+  LOYALTY_CONFIG,
+  getCustomerBalance,
+  getLoyaltyStats,
+  getTier,
+} from "@/data/loyalty";
+import { generateReferralCode, getReferralStats } from "@/lib/referral";
 
 const ADMIN_AUTH_KEY = "tripandtick:admin:auth";
 
@@ -47,6 +55,7 @@ type Tab =
   | "operatorler"
   | "kuponlar"
   | "musteriler"
+  | "sadakat"
   | "seo";
 type BookingFilter = "all" | BookingStatus;
 
@@ -70,6 +79,7 @@ export default function AdminDashboard() {
         {tab === "operatorler" && "Operatorler"}
         {tab === "kuponlar" && "Kuponlar"}
         {tab === "musteriler" && "Musteriler"}
+        {tab === "sadakat" && "Sadakat"}
         {tab === "seo" && "SEO Agent"}
       </h1>
       <p className="text-slate-500 text-sm mb-6">
@@ -80,6 +90,7 @@ export default function AdminDashboard() {
         {tab === "operatorler" && "Operatorler ve komisyon yonetimi."}
         {tab === "kuponlar" && "Kupon kodlari, indirim oranlari ve kullanim limitleri."}
         {tab === "musteriler" && "Musteri segmentleri, harcama ve aktivite."}
+        {tab === "sadakat" && "Puan dagilimi, tier istatistigi, referans performansi."}
         {tab === "seo" && "SEO agent makale uretim panosu."}
       </p>
 
@@ -90,6 +101,7 @@ export default function AdminDashboard() {
       {tab === "operatorler" && <OperatorsTab />}
       {tab === "kuponlar" && <CouponsTab />}
       {tab === "musteriler" && <CustomersTab />}
+      {tab === "sadakat" && <LoyaltyTab />}
       {tab === "seo" && <SeoAgentTab />}
     </div>
   );
@@ -1383,6 +1395,238 @@ function CustomersTab() {
           </tbody>
         </table>
       </div>
+    </div>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────
+// Sadakat tab — puan ozeti + per-customer tablo + admin override
+// ─────────────────────────────────────────────────────────────
+
+function LoyaltyTab() {
+  const stats = useMemo(() => getLoyaltyStats(), []);
+  const [search, setSearch] = useState("");
+  const [overrideOpen, setOverrideOpen] = useState<string | null>(null);
+  const [overrideAmount, setOverrideAmount] = useState<number>(100);
+  const [overrideNote, setOverrideNote] = useState<string>("Admin bonus");
+  const [overrideMsg, setOverrideMsg] = useState<string>("");
+
+  const rows = useMemo(() => {
+    const seen = new Set<string>();
+    MOCK_LOYALTY_TX.forEach((tx) => seen.add(tx.customerId));
+    return Array.from(seen)
+      .map((id) => {
+        const cust = MOCK_CUSTOMERS.find((c) => c.id === id);
+        const balance = getCustomerBalance(id);
+        const tier = getTier(balance);
+        const referral = getReferralStats(id);
+        return { id, cust, balance, tier, referral };
+      })
+      .filter((r) => r.cust)
+      .filter((r) => {
+        if (!search) return true;
+        const q = search.toLowerCase();
+        return (
+          r.cust!.fullName.toLowerCase().includes(q) ||
+          r.cust!.email.toLowerCase().includes(q) ||
+          r.id.toLowerCase().includes(q)
+        );
+      })
+      .sort((a, b) => b.balance - a.balance);
+  }, [search]);
+
+  function applyOverride(customerId: string) {
+    // Mock: in-memory MOCK_LOYALTY_TX'e ekleme. Faz 2: Supabase write.
+    MOCK_LOYALTY_TX.unshift({
+      id: `LTX-ADM-${Date.now()}`,
+      customerId,
+      points: overrideAmount,
+      type: "bonus",
+      description: overrideNote || "Admin override",
+      createdAt: new Date().toISOString(),
+    });
+    setOverrideMsg(
+      `${customerId} icin ${overrideAmount > 0 ? "+" : ""}${overrideAmount} puan eklendi (mock).`
+    );
+    setTimeout(() => setOverrideMsg(""), 3000);
+    setOverrideOpen(null);
+  }
+
+  return (
+    <div className="space-y-5">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <StatCard
+          icon={Bot}
+          title="Aktif Musteri"
+          value={String(stats.customers)}
+          delta={`ort ${stats.averageBalance} puan`}
+          tone="primary"
+        />
+        <StatCard
+          icon={TrendingUp}
+          title="Toplam Dagitilan"
+          value={String(stats.totalEarned)}
+          delta="puan"
+          tone="emerald"
+        />
+        <StatCard
+          icon={CalendarDays}
+          title="Toplam Harcanan"
+          value={String(stats.totalRedeemed)}
+          delta="puan"
+          tone="amber"
+        />
+        <StatCard
+          icon={UsersIcon}
+          title="Referans Bonusu"
+          value={String(stats.totalReferralBonus)}
+          delta="puan"
+          tone="slate"
+        />
+      </div>
+
+      <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm text-amber-900 grid sm:grid-cols-4 gap-3">
+        <div>
+          <p className="text-xs uppercase text-amber-700">Kazanim Orani</p>
+          <p className="font-semibold">€1 = {LOYALTY_CONFIG.earnRate} puan</p>
+        </div>
+        <div>
+          <p className="text-xs uppercase text-amber-700">Kullanim Orani</p>
+          <p className="font-semibold">{LOYALTY_CONFIG.redemptionRate} puan = €1</p>
+        </div>
+        <div>
+          <p className="text-xs uppercase text-amber-700">Referans Bonusu</p>
+          <p className="font-semibold">+{LOYALTY_CONFIG.referralBonus} puan</p>
+        </div>
+        <div>
+          <p className="text-xs uppercase text-amber-700">Tier Sayisi</p>
+          <p className="font-semibold">{LOYALTY_CONFIG.tiers.length} (Standard → Platinum)</p>
+        </div>
+      </div>
+
+      {overrideMsg && (
+        <div className="bg-emerald-50 border border-emerald-200 text-emerald-700 rounded-lg p-3 text-sm">
+          {overrideMsg}
+        </div>
+      )}
+
+      <div className="flex flex-wrap gap-3 items-center">
+        <div className="relative flex-1 min-w-[200px]">
+          <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
+          <input
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Ad, e-posta veya ID ara..."
+            className="w-full pl-10 pr-3 py-2 border border-slate-300 rounded-lg text-sm"
+          />
+        </div>
+      </div>
+
+      <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-x-auto">
+        <table className="w-full text-sm">
+          <thead className="bg-slate-50 text-left text-slate-600 border-b border-slate-200">
+            <tr>
+              <th className="p-3">Musteri</th>
+              <th className="p-3">Referans Kodu</th>
+              <th className="p-3 text-right">Bakiye</th>
+              <th className="p-3 text-right">Tier</th>
+              <th className="p-3 text-right">Davet/Onayli</th>
+              <th className="p-3 text-right">Aksiyon</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((r) => (
+              <tr key={r.id} className="border-b border-slate-100 hover:bg-slate-50">
+                <td className="p-3">
+                  <p className="font-medium">{r.cust!.fullName}</p>
+                  <p className="text-xs text-slate-400">{r.cust!.email}</p>
+                </td>
+                <td className="p-3 font-mono text-xs">{generateReferralCode(r.cust!.email)}</td>
+                <td className="p-3 text-right">
+                  <span className="font-bold text-amber-700">{r.balance}</span>
+                  <span className="text-xs text-slate-400 ml-1">puan</span>
+                </td>
+                <td className="p-3 text-right">
+                  <span className="inline-block px-2 py-0.5 rounded text-xs bg-violet-100 text-violet-700">
+                    {r.tier.name}
+                  </span>
+                </td>
+                <td className="p-3 text-right text-slate-600">
+                  {r.referral.invited} / <span className="text-emerald-600 font-medium">{r.referral.confirmed}</span>
+                </td>
+                <td className="p-3 text-right">
+                  <button
+                    onClick={() => {
+                      setOverrideOpen(r.id);
+                      setOverrideAmount(100);
+                      setOverrideNote("Admin bonus");
+                    }}
+                    className="text-amber-600 hover:text-amber-700 inline-flex items-center gap-1 text-xs font-medium"
+                  >
+                    <Plus className="w-3.5 h-3.5" /> Puan Ekle
+                  </button>
+                </td>
+              </tr>
+            ))}
+            {rows.length === 0 && (
+              <tr>
+                <td colSpan={6} className="p-8 text-center text-slate-400">
+                  Henuz puan kaydi yok.
+                </td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </div>
+
+      {overrideOpen && (
+        <div
+          className="fixed inset-0 bg-black/40 flex items-center justify-center z-50 p-4"
+          onClick={() => setOverrideOpen(null)}
+        >
+          <div onClick={(e) => e.stopPropagation()} className="bg-white rounded-2xl p-6 max-w-md w-full">
+            <h3 className="font-bold text-lg mb-3">Puan Override — {overrideOpen}</h3>
+            <div className="space-y-3 text-sm">
+              <div>
+                <label className="block text-xs font-medium text-slate-700 mb-1">
+                  Miktar (negatif degerle dusurun)
+                </label>
+                <input
+                  type="number"
+                  value={overrideAmount}
+                  onChange={(e) => setOverrideAmount(Number(e.target.value))}
+                  className="w-full border border-slate-300 rounded-lg px-3 py-2"
+                />
+              </div>
+              <div>
+                <label className="block text-xs font-medium text-slate-700 mb-1">Aciklama</label>
+                <input
+                  value={overrideNote}
+                  onChange={(e) => setOverrideNote(e.target.value)}
+                  className="w-full border border-slate-300 rounded-lg px-3 py-2"
+                />
+              </div>
+              <div className="bg-amber-50 border-l-4 border-amber-500 text-amber-900 p-2 text-xs rounded">
+                Bu islem mock-data tarafinda log'lanir. Faz 2'de Supabase audit trail.
+              </div>
+            </div>
+            <div className="flex justify-end gap-2 mt-5">
+              <button
+                onClick={() => setOverrideOpen(null)}
+                className="px-4 py-2 border border-slate-300 rounded-lg text-sm"
+              >
+                Iptal
+              </button>
+              <button
+                onClick={() => applyOverride(overrideOpen)}
+                className="px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white rounded-lg text-sm font-semibold"
+              >
+                Uygula
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

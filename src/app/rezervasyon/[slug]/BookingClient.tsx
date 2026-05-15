@@ -131,6 +131,11 @@ export function BookingClient({ service }: { service: BookingService }) {
   const [submitting, setSubmitting] = useState<boolean>(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [bookingCode, setBookingCode] = useState<string>("");
+  const [paymentProvider, setPaymentProvider] = useState<"stripe" | "iyzico">(
+    service.currency === "TRY" ? "iyzico" : "stripe"
+  );
+  const [referralCode, setReferralCode] = useState<string>("");
+  const [referralBonusPct, setReferralBonusPct] = useState<number>(0);
   const [availability, setAvailability] = useState<PublicAvailability | null>(null);
   const [availabilityLoading, setAvailabilityLoading] = useState<boolean>(false);
   const [emailSent, setEmailSent] = useState<boolean>(false);
@@ -152,6 +157,20 @@ export function BookingClient({ service }: { service: BookingService }) {
       setInsurance(draft.insurance);
       setPromoCode(draft.promoCode ?? "");
       setPassengers(draft.passengers.length > 0 ? draft.passengers : [makeEmptyPassenger()]);
+    }
+
+    // Davet linkinden gelen referans kodu otomatik uygula (%5 indirim)
+    try {
+      const raw = window.localStorage.getItem("tripandtick:referral");
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        if (parsed?.code && /^TT-[A-Z0-9]{4,8}$/.test(parsed.code)) {
+          setReferralCode(parsed.code);
+          setReferralBonusPct(5);
+        }
+      }
+    } catch {
+      // ignore
     }
   }, [service.slug, isOnConfirmationStep]);
 
@@ -326,8 +345,51 @@ export function BookingClient({ service }: { service: BookingService }) {
     }
     setSubmitting(true);
     setSubmitError(null);
+    const leadPax = passengers[0];
+
     try {
-      const leadPax = passengers[0];
+      if (paymentProvider === "iyzico") {
+        const bookingId = generateBookingCode();
+        const nameParts = (leadPax?.fullName ?? "Misafir Yolcu").trim().split(/\s+/);
+        const name = nameParts[0] ?? "Misafir";
+        const surname = nameParts.slice(1).join(" ") || "Yolcu";
+        const res = await fetch("/api/iyzico/checkout", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            bookingId,
+            total: discountedTotal,
+            currency: service.currency,
+            items: [
+              {
+                id: service.slug,
+                name: service.name,
+                category: service.category,
+                price: discountedTotal,
+              },
+            ],
+            customer: {
+              name,
+              surname,
+              email: leadPax?.email ?? "noreply@tripandtick.com",
+              phone: leadPax?.phone ?? "",
+              identityNumber: "11111111111",
+              city: "Nevsehir",
+              country: "Turkey",
+              address: leadPax?.accommodation ?? "Kapadokya, Goreme",
+            },
+          }),
+        });
+        if (!res.ok) {
+          const err = await res.json().catch(() => ({}));
+          throw new Error(err?.error ?? `iyzico baslatilamadi (${res.status})`);
+        }
+        const data = (await res.json()) as { paymentPageUrl?: string };
+        if (!data.paymentPageUrl) throw new Error("iyzico URL alinamadi");
+        window.location.href = data.paymentPageUrl;
+        return;
+      }
+
       const res = await fetch("/api/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -337,7 +399,7 @@ export function BookingClient({ service }: { service: BookingService }) {
           date,
           adults,
           children,
-          totalPrice,
+          totalPrice: discountedTotal,
           currency: service.currency,
           customerEmail: leadPax?.email ?? "",
         }),
@@ -459,6 +521,10 @@ export function BookingClient({ service }: { service: BookingService }) {
   const childrenLine = Math.round(children * service.adultPrice * service.childRatio);
   const subtotalBeforeDiscount = adultsLine + childrenLine + insuranceTotal;
   const discountAmount = subtotalBeforeDiscount - totalPrice;
+  const referralDiscount = referralBonusPct > 0
+    ? Math.round(totalPrice * (referralBonusPct / 100))
+    : 0;
+  const discountedTotal = Math.max(0, totalPrice - referralDiscount);
 
   function handleStartOver() {
     clearDraft();
@@ -549,12 +615,15 @@ export function BookingClient({ service }: { service: BookingService }) {
                 couponApplying={couponApplying}
                 policyAccepted={policyAccepted}
                 setPolicyAccepted={setPolicyAccepted}
-                totalPrice={totalPrice}
+                totalPrice={discountedTotal}
                 adultsLine={adultsLine}
                 childrenLine={childrenLine}
                 insuranceTotal={insuranceTotal}
                 discountAmount={discountAmount}
                 discount={discount}
+                referralCode={referralCode}
+                referralDiscount={referralDiscount}
+                referralBonusPct={referralBonusPct}
                 canContinue={canStep4Continue}
                 onBack={goBack}
                 onNext={goNext}
@@ -563,7 +632,9 @@ export function BookingClient({ service }: { service: BookingService }) {
             {step === 5 && (
               <Step5Payment
                 service={service}
-                totalPrice={totalPrice}
+                totalPrice={discountedTotal}
+                paymentProvider={paymentProvider}
+                setPaymentProvider={setPaymentProvider}
                 submitting={submitting}
                 error={submitError}
                 onBack={goBack}
@@ -627,10 +698,16 @@ export function BookingClient({ service }: { service: BookingService }) {
                   <span>−{formatPrice(discountAmount, service.currency)}</span>
                 </div>
               )}
+              {referralDiscount > 0 && (
+                <div className="flex justify-between text-rose-600">
+                  <span>Referans (%{referralBonusPct}) {referralCode && <em className="text-[10px] opacity-70">— {referralCode}</em>}</span>
+                  <span>−{formatPrice(referralDiscount, service.currency)}</span>
+                </div>
+              )}
               <hr className="my-3" />
               <div className="flex justify-between items-baseline text-lg">
                 <span className="font-bold">Toplam</span>
-                <span className="font-bold text-amber-600">{formatPrice(totalPrice, service.currency)}</span>
+                <span className="font-bold text-amber-600">{formatPrice(discountedTotal, service.currency)}</span>
               </div>
               {service.marketPrice && (
                 <p className="text-xs text-emerald-700">
@@ -983,6 +1060,9 @@ function Step4Summary(props: {
   insuranceTotal: number;
   discountAmount: number;
   discount: number;
+  referralCode: string;
+  referralDiscount: number;
+  referralBonusPct: number;
   canContinue: boolean;
   onBack: () => void;
   onNext: () => void;
@@ -992,6 +1072,7 @@ function Step4Summary(props: {
     promoCode, setPromoCode, applyPromo, promoStatus, couponMessage, couponApplying,
     policyAccepted, setPolicyAccepted,
     totalPrice, adultsLine, childrenLine, insuranceTotal, discountAmount,
+    referralCode, referralDiscount, referralBonusPct,
     canContinue, onBack, onNext,
   } = props;
 
@@ -1051,6 +1132,14 @@ function Step4Summary(props: {
             {children > 0 && <div className="flex justify-between"><span>Çocuk × {children}</span><span>{formatPrice(childrenLine, service.currency)}</span></div>}
             {insurance && <div className="flex justify-between"><span>Sigorta × {paxCount}</span><span>{formatPrice(insuranceTotal, service.currency)}</span></div>}
             {discountAmount > 0 && <div className="flex justify-between text-emerald-700"><span>İndirim</span><span>−{formatPrice(discountAmount, service.currency)}</span></div>}
+            {referralDiscount > 0 && (
+              <div className="flex justify-between text-rose-700">
+                <span>
+                  Referans %{referralBonusPct}{referralCode ? ` (${referralCode})` : ""}
+                </span>
+                <span>−{formatPrice(referralDiscount, service.currency)}</span>
+              </div>
+            )}
             <hr className="my-2 border-amber-300" />
             <div className="flex justify-between text-lg font-bold"><span>Toplam</span><span className="text-amber-600">{formatPrice(totalPrice, service.currency)}</span></div>
           </div>
@@ -1082,19 +1171,78 @@ function Step4Summary(props: {
 function Step5Payment(props: {
   service: BookingService;
   totalPrice: number;
+  paymentProvider: "stripe" | "iyzico";
+  setPaymentProvider: (v: "stripe" | "iyzico") => void;
   submitting: boolean;
   error: string | null;
   onBack: () => void;
   onPay: () => void;
 }) {
-  const { service, totalPrice, submitting, error, onBack, onPay } = props;
+  const { service, totalPrice, paymentProvider, setPaymentProvider, submitting, error, onBack, onPay } = props;
+  const isTry = service.currency === "TRY";
+
   return (
     <div>
       <h2 className="text-2xl font-bold text-slate-900 mb-4">5. Güvenli Ödeme</h2>
+
+      <div className="space-y-3 mb-5">
+        <label
+          className={cn(
+            "flex items-start gap-3 border-2 rounded-lg p-4 cursor-pointer transition-all",
+            paymentProvider === "stripe"
+              ? "border-amber-500 bg-amber-50"
+              : "border-slate-200 hover:border-slate-300"
+          )}
+        >
+          <input
+            type="radio"
+            checked={paymentProvider === "stripe"}
+            onChange={() => setPaymentProvider("stripe")}
+            className="mt-1 w-4 h-4 text-amber-500"
+          />
+          <div className="flex-1">
+            <p className="font-semibold text-slate-900">Kart ile odeme (Stripe — EUR/USD)</p>
+            <p className="text-sm text-slate-600 mt-0.5">
+              VISA · Mastercard · AmEx · Apple Pay · Google Pay. 3D Secure destekli.
+            </p>
+          </div>
+        </label>
+
+        <label
+          className={cn(
+            "flex items-start gap-3 border-2 rounded-lg p-4 cursor-pointer transition-all",
+            paymentProvider === "iyzico"
+              ? "border-amber-500 bg-amber-50"
+              : "border-slate-200 hover:border-slate-300"
+          )}
+        >
+          <input
+            type="radio"
+            checked={paymentProvider === "iyzico"}
+            onChange={() => setPaymentProvider("iyzico")}
+            className="mt-1 w-4 h-4 text-amber-500"
+          />
+          <div className="flex-1">
+            <p className="font-semibold text-slate-900">iyzico ile (TRY — Türk kartlari)</p>
+            <p className="text-sm text-slate-600 mt-0.5">
+              Tüm Türk bankalari · taksitli ödeme · Bankkart · Maximum · Bonus · Axess · World.
+            </p>
+          </div>
+        </label>
+
+        <div className="border-l-4 border-amber-400 bg-amber-50 p-3 rounded text-xs text-amber-900">
+          <strong>Bilgi:</strong> AmEx (American Express) ve UnionPay kartlar sadece <strong>TRY</strong>{" "}
+          ile odenebilir → bu kart ile odeyecekseniz <strong>iyzico</strong> secin.
+          {isTry && " Bu hizmet TRY fiyatlandirildigi icin iyzico onerilir."}
+        </div>
+      </div>
+
       <div className="space-y-4">
         <div className="border border-slate-200 rounded-lg p-6 text-center">
           <ShieldCheck className="w-12 h-12 text-emerald-500 mx-auto mb-3" />
-          <p className="text-slate-700 mb-1">Ödeme <strong>Stripe</strong> ile SSL 256-bit şifreli yapılır.</p>
+          <p className="text-slate-700 mb-1">
+            Ödeme <strong>{paymentProvider === "iyzico" ? "iyzico" : "Stripe"}</strong> ile SSL 256-bit şifreli yapılır.
+          </p>
           <p className="text-sm text-slate-500">Kart bilgileri Trip and Tick'e iletilmez.</p>
         </div>
 
@@ -1118,7 +1266,7 @@ function Step5Payment(props: {
         </button>
 
         <div className="flex items-center justify-center gap-4 text-xs text-slate-400 pt-2">
-          <span>VISA</span><span>•</span><span>Mastercard</span><span>•</span><span>AmEx</span><span>•</span><span>Apple Pay</span>
+          <span>VISA</span><span>•</span><span>Mastercard</span><span>•</span><span>AmEx</span><span>•</span><span>Apple Pay</span><span>•</span><span>iyzico</span>
         </div>
       </div>
       <div className="mt-6">

@@ -1,11 +1,43 @@
-// i18n dictionaries — FAZ 1: TR + EN only.
-// User verbatim: "dil degismiyor. bu ilk hata."
-// localStorage key: "tripandtick:locale", value "tr" | "en".
+// i18n dictionaries — FAZ 2: TR + EN + 7 dil (DE/FR/ES/NL/ZH/HI/UR).
+// User verbatim: "digerlerini yap"
+// localStorage key: "tripandtick:locale", value Locale union.
+// UR = RTL (LOCALE_DIR.ur = "rtl"), digerleri LTR.
 
-export type Locale = "tr" | "en";
+export type Locale =
+  | "tr"
+  | "en"
+  | "de"
+  | "fr"
+  | "es"
+  | "nl"
+  | "zh"
+  | "hi"
+  | "ur";
 
 export const DEFAULT_LOCALE: Locale = "tr";
-export const SUPPORTED_LOCALES: Locale[] = ["tr", "en"];
+export const SUPPORTED_LOCALES: Locale[] = [
+  "tr",
+  "en",
+  "de",
+  "fr",
+  "es",
+  "nl",
+  "zh",
+  "hi",
+  "ur",
+];
+
+export const LOCALE_DIR: Record<Locale, "ltr" | "rtl"> = {
+  tr: "ltr",
+  en: "ltr",
+  de: "ltr",
+  fr: "ltr",
+  es: "ltr",
+  nl: "ltr",
+  zh: "ltr",
+  hi: "ltr",
+  ur: "rtl",
+};
 
 export const DICTIONARIES = {
   tr: {
@@ -228,6 +260,774 @@ export const DICTIONARIES = {
       },
     },
   },
+  de: {
+    common: {
+      reserve: "Jetzt buchen",
+      learnMore: "Mehr erfahren",
+      from: "ab",
+      perPerson: "pro Person",
+      loading: "Wird geladen...",
+    },
+    nav: {
+      balloons: "Ballonfahrten",
+      hotels: "Hotels",
+      activities: "Aktivitäten",
+      tours: "Rundfahrten",
+      packages: "Pakete",
+      blog: "Blog",
+      about: "Über uns",
+      contact: "Kontakt",
+      faq: "FAQ",
+    },
+    hero: {
+      badge: "Nevşehir / Kappadokien",
+      title1: "Kappadokiens",
+      title2: "beste Erlebnisse",
+      title3: "zu Top-Preisen",
+      subtitle:
+        "Von Heißluftballonfahrten über Hotelreservierungen bis hin zu ATV-Touren und exklusiven Paketen — alles auf einer Plattform, mit transparenten Preisen.",
+    },
+    footer: {
+      rights: "Alle Rechte vorbehalten.",
+      services: "Leistungen",
+      company: "Unternehmen",
+      legal: "Rechtliches",
+    },
+    trust: {
+      refund: "100% Rückerstattungsgarantie",
+      secure: "3D Secure Zahlung",
+      insurance: "40 Mio. € Versicherung",
+      languages: "9 Sprachen verfügbar",
+    },
+    hero_trust: {
+      refund: "100% Rückerstattung",
+      insurance: "40 Mio. € Versicherung",
+      operators: "9+ Anbieter",
+      tursab: "TÜRSAB-lizenziert",
+    },
+    stats: {
+      operators: "Partner-Anbieter",
+      customers: "Zufriedene Reisende",
+      rating: "Durchschnittliche Bewertung",
+      refund: "Rückerstattungsgarantie",
+      langs: "Sprachen",
+    },
+    cta: {
+      mobile: "Jetzt buchen",
+      price_guarantee: "Bestpreis-Garantie",
+    },
+    categories: {
+      tag: "Unsere Leistungen",
+      title: "Alles aus einer Hand",
+      subtitle:
+        "Außer dem Flugticket finden Sie hier jeden Reiseservice, den Sie in Kappadokien brauchen.",
+      balloons: "Ballonfahrten",
+      balloons_sub: "ab 165 €",
+      hotels: "Hotels & Unterkünfte",
+      hotels_sub: "Vom Höhlenhotel bis zum Resort",
+      transfer: "Transfer",
+      transfer_sub: "Flughafen & Überlandtransfer",
+      atv: "ATV-Touren",
+      atv_sub: "ab 29 $",
+      tours: "Rundfahrten",
+      tours_sub: "Rote & Grüne Tour",
+      packages: "Sonderpakete",
+      packages_sub: "Flitterwochen, Antrag, Geburtstag",
+      horse: "Reiten",
+      horse_sub: "Sonnenauf- & Sonnenuntergang",
+      insurance: "Reiseversicherung",
+      insurance_sub: "Umfassender Schutz",
+    },
+    packages_section: {
+      tag: "Empfohlene Pakete",
+      title: "Die beliebtesten Angebote",
+      subtitle:
+        "Wir haben die Preise der Mitbewerber verglichen und die besten Angebote für Sie ausgewählt.",
+      standart_badge: "Am beliebtesten",
+      standart_title: "Standard-Ballonflug",
+      balayi_badge: "Deluxe",
+      balayi_title: "Romantisches Flitterwochen-Paket",
+      macera_badge: "Abenteuer",
+      macera_title: "Abenteuer-Paket (2 Tage)",
+      reserve: "Buchen",
+      market_price: "Marktpreis",
+    },
+    not_found: {
+      title: "Diese Seite ist davongeflogen",
+      message:
+        "Die gesuchte Seite ist mit einem Ballon davongeflogen und nicht zurückgekehrt 🎈 Keine Sorge — wir bringen Sie zu den schönsten Zielen.",
+      suggestions_title: "Vielleicht suchten Sie nach",
+      search_placeholder: "Wonach suchten Sie?",
+      back: "Zurück",
+      home: "Startseite",
+      suggestions: {
+        balonlar: "Ballonfahrten",
+        aktiviteler: "Aktivitäten",
+        turlar: "Rundfahrten",
+        paketler: "Pakete",
+        sss: "FAQ",
+        iletisim: "Kontakt",
+      },
+    },
+  },
+  fr: {
+    common: {
+      reserve: "Réserver",
+      learnMore: "En savoir plus",
+      from: "à partir de",
+      perPerson: "par personne",
+      loading: "Chargement...",
+    },
+    nav: {
+      balloons: "Vols en montgolfière",
+      hotels: "Hôtels",
+      activities: "Activités",
+      tours: "Excursions",
+      packages: "Forfaits",
+      blog: "Blog",
+      about: "À propos",
+      contact: "Contact",
+      faq: "FAQ",
+    },
+    hero: {
+      badge: "Nevşehir / Cappadoce",
+      title1: "Les meilleures",
+      title2: "expériences en Cappadoce",
+      title3: "aux meilleurs prix",
+      subtitle:
+        "Des vols en montgolfière aux réservations d'hôtels, des excursions en quad aux forfaits privés — le tout sur une seule plateforme, avec des tarifs transparents.",
+    },
+    footer: {
+      rights: "Tous droits réservés.",
+      services: "Services",
+      company: "Société",
+      legal: "Mentions légales",
+    },
+    trust: {
+      refund: "Garantie de remboursement 100%",
+      secure: "Paiement 3D Secure",
+      insurance: "Assurance 40 M€",
+      languages: "9 langues disponibles",
+    },
+    hero_trust: {
+      refund: "Remboursement 100%",
+      insurance: "Assurance 40 M€",
+      operators: "9+ opérateurs",
+      tursab: "Licence TÜRSAB",
+    },
+    stats: {
+      operators: "Opérateurs partenaires",
+      customers: "Voyageurs satisfaits",
+      rating: "Note moyenne",
+      refund: "Garantie de remboursement",
+      langs: "Langues",
+    },
+    cta: {
+      mobile: "Réserver maintenant",
+      price_guarantee: "Garantie du meilleur prix",
+    },
+    categories: {
+      tag: "Nos services",
+      title: "Tout au même endroit",
+      subtitle:
+        "Hors billet d'avion, retrouvez ici tous les services de voyage dont vous avez besoin en Cappadoce.",
+      balloons: "Vols en montgolfière",
+      balloons_sub: "à partir de 165 €",
+      hotels: "Hôtels & hébergements",
+      hotels_sub: "Des hôtels troglodytes aux resorts",
+      transfer: "Transferts",
+      transfer_sub: "Aéroport & interurbain",
+      atv: "Excursions en quad",
+      atv_sub: "à partir de 29 $",
+      tours: "Excursions",
+      tours_sub: "Tours Rouge & Vert",
+      packages: "Forfaits spéciaux",
+      packages_sub: "Lune de miel, demande, anniversaire",
+      horse: "Équitation",
+      horse_sub: "Lever & coucher du soleil",
+      insurance: "Assurance voyage",
+      insurance_sub: "Couverture complète",
+    },
+    packages_section: {
+      tag: "Forfaits en vedette",
+      title: "Les plus populaires",
+      subtitle:
+        "Nous avons comparé les prix de la concurrence et sélectionné les meilleures offres pour vous.",
+      standart_badge: "Le plus populaire",
+      standart_title: "Vol en montgolfière standard",
+      balayi_badge: "Deluxe",
+      balayi_title: "Forfait romantique lune de miel",
+      macera_badge: "Aventure",
+      macera_title: "Forfait aventure (2 jours)",
+      reserve: "Réserver",
+      market_price: "Prix du marché",
+    },
+    not_found: {
+      title: "Cette page s'est envolée",
+      message:
+        "La page recherchée s'est envolée en montgolfière et n'est jamais revenue 🎈 Pas de souci — laissez-nous vous emmener vers les plus belles destinations.",
+      suggestions_title: "Vous cherchiez peut-être",
+      search_placeholder: "Que cherchiez-vous ?",
+      back: "Retour",
+      home: "Accueil",
+      suggestions: {
+        balonlar: "Vols en montgolfière",
+        aktiviteler: "Activités",
+        turlar: "Excursions",
+        paketler: "Forfaits",
+        sss: "FAQ",
+        iletisim: "Contact",
+      },
+    },
+  },
+  es: {
+    common: {
+      reserve: "Reservar",
+      learnMore: "Más información",
+      from: "desde",
+      perPerson: "por persona",
+      loading: "Cargando...",
+    },
+    nav: {
+      balloons: "Vuelos en globo",
+      hotels: "Hoteles",
+      activities: "Actividades",
+      tours: "Excursiones",
+      packages: "Paquetes",
+      blog: "Blog",
+      about: "Sobre nosotros",
+      contact: "Contacto",
+      faq: "Preguntas frecuentes",
+    },
+    hero: {
+      badge: "Nevşehir / Capadocia",
+      title1: "Las mejores",
+      title2: "experiencias de Capadocia",
+      title3: "al mejor precio",
+      subtitle:
+        "Desde vuelos en globo hasta reservas de hoteles, excursiones en quad y paquetes privados — todo en una sola plataforma, con precios transparentes.",
+    },
+    footer: {
+      rights: "Todos los derechos reservados.",
+      services: "Servicios",
+      company: "Empresa",
+      legal: "Aviso legal",
+    },
+    trust: {
+      refund: "Garantía de reembolso 100%",
+      secure: "Pago 3D Secure",
+      insurance: "Seguro de 40 M€",
+      languages: "9 idiomas disponibles",
+    },
+    hero_trust: {
+      refund: "Reembolso 100%",
+      insurance: "Seguro 40 M€",
+      operators: "9+ operadores",
+      tursab: "Licencia TÜRSAB",
+    },
+    stats: {
+      operators: "Operadores asociados",
+      customers: "Viajeros satisfechos",
+      rating: "Valoración media",
+      refund: "Garantía de reembolso",
+      langs: "Idiomas",
+    },
+    cta: {
+      mobile: "Reservar ahora",
+      price_guarantee: "Garantía del mejor precio",
+    },
+    categories: {
+      tag: "Nuestros servicios",
+      title: "Todo en un solo lugar",
+      subtitle:
+        "Excepto los vuelos, aquí encontrará todos los servicios de viaje que necesita en Capadocia.",
+      balloons: "Vuelos en globo",
+      balloons_sub: "desde 165 €",
+      hotels: "Hoteles y alojamientos",
+      hotels_sub: "De hoteles cueva a resorts",
+      transfer: "Traslados",
+      transfer_sub: "Aeropuerto e interurbanos",
+      atv: "Excursiones en quad",
+      atv_sub: "desde 29 $",
+      tours: "Excursiones",
+      tours_sub: "Tour Rojo y Verde",
+      packages: "Paquetes especiales",
+      packages_sub: "Luna de miel, propuesta, cumpleaños",
+      horse: "Paseos a caballo",
+      horse_sub: "Amanecer y atardecer",
+      insurance: "Seguro de viaje",
+      insurance_sub: "Cobertura integral",
+    },
+    packages_section: {
+      tag: "Paquetes destacados",
+      title: "Los más elegidos",
+      subtitle:
+        "Hemos comparado los precios de la competencia y seleccionado las mejores ofertas para usted.",
+      standart_badge: "Más popular",
+      standart_title: "Vuelo en globo estándar",
+      balayi_badge: "Deluxe",
+      balayi_title: "Paquete romántico luna de miel",
+      macera_badge: "Aventura",
+      macera_title: "Paquete aventura (2 días)",
+      reserve: "Reservar",
+      market_price: "Precio del mercado",
+    },
+    not_found: {
+      title: "Esta página se ha ido en globo",
+      message:
+        "La página que busca se subió a un globo y no volvió 🎈 Tranquilo — déjenos llevarle a los mejores destinos.",
+      suggestions_title: "Quizás buscaba",
+      search_placeholder: "¿Qué estaba buscando?",
+      back: "Volver",
+      home: "Inicio",
+      suggestions: {
+        balonlar: "Vuelos en globo",
+        aktiviteler: "Actividades",
+        turlar: "Excursiones",
+        paketler: "Paquetes",
+        sss: "Preguntas frecuentes",
+        iletisim: "Contacto",
+      },
+    },
+  },
+  nl: {
+    common: {
+      reserve: "Nu boeken",
+      learnMore: "Meer informatie",
+      from: "vanaf",
+      perPerson: "per persoon",
+      loading: "Laden...",
+    },
+    nav: {
+      balloons: "Ballonvaarten",
+      hotels: "Hotels",
+      activities: "Activiteiten",
+      tours: "Excursies",
+      packages: "Pakketten",
+      blog: "Blog",
+      about: "Over ons",
+      contact: "Contact",
+      faq: "Veelgestelde vragen",
+    },
+    hero: {
+      badge: "Nevşehir / Cappadocië",
+      title1: "De beste ervaringen",
+      title2: "van Cappadocië",
+      title3: "tegen de beste prijs",
+      subtitle:
+        "Van ballonvaarten tot hotelreserveringen, van quadtochten tot privépakketten — alles op één platform, met transparante prijzen.",
+    },
+    footer: {
+      rights: "Alle rechten voorbehouden.",
+      services: "Diensten",
+      company: "Bedrijf",
+      legal: "Juridisch",
+    },
+    trust: {
+      refund: "100% terugbetalingsgarantie",
+      secure: "3D Secure betaling",
+      insurance: "€40M verzekering",
+      languages: "9 talen beschikbaar",
+    },
+    hero_trust: {
+      refund: "100% terugbetaling",
+      insurance: "€40M verzekering",
+      operators: "9+ aanbieders",
+      tursab: "TÜRSAB-gelicentieerd",
+    },
+    stats: {
+      operators: "Partneraanbieders",
+      customers: "Tevreden reizigers",
+      rating: "Gemiddelde beoordeling",
+      refund: "Terugbetalingsgarantie",
+      langs: "Talen",
+    },
+    cta: {
+      mobile: "Boek nu",
+      price_guarantee: "Laagste prijs garantie",
+    },
+    categories: {
+      tag: "Onze diensten",
+      title: "Alles op één plek",
+      subtitle:
+        "Vluchten uitgezonderd, vindt u hier elke reisdienst die u in Cappadocië nodig heeft.",
+      balloons: "Ballonvaarten",
+      balloons_sub: "vanaf €165",
+      hotels: "Hotels & verblijven",
+      hotels_sub: "Van grotwoning-hotels tot resorts",
+      transfer: "Transfers",
+      transfer_sub: "Luchthaven & langeafstand",
+      atv: "Quadtochten",
+      atv_sub: "vanaf $29",
+      tours: "Excursies",
+      tours_sub: "Rode & Groene tour",
+      packages: "Speciale pakketten",
+      packages_sub: "Huwelijksreis, aanzoek, verjaardag",
+      horse: "Paardrijden",
+      horse_sub: "Zonsopgang & zonsondergang",
+      insurance: "Reisverzekering",
+      insurance_sub: "Volledige dekking",
+    },
+    packages_section: {
+      tag: "Uitgelichte pakketten",
+      title: "De populairste keuzes",
+      subtitle:
+        "We hebben de prijzen van concurrenten vergeleken en de beste aanbiedingen voor u geselecteerd.",
+      standart_badge: "Meest gekozen",
+      standart_title: "Standaard ballonvaart",
+      balayi_badge: "Deluxe",
+      balayi_title: "Romantisch huwelijksreis-pakket",
+      macera_badge: "Avontuur",
+      macera_title: "Avonturenpakket (2 dagen)",
+      reserve: "Boek",
+      market_price: "Marktprijs",
+    },
+    not_found: {
+      title: "Deze pagina is opgestegen",
+      message:
+        "De pagina die u zoekt is in een luchtballon opgestegen en niet teruggekomen 🎈 Geen zorgen — laat ons u naar de mooiste bestemmingen brengen.",
+      suggestions_title: "Misschien zocht u",
+      search_placeholder: "Wat zocht u?",
+      back: "Terug",
+      home: "Home",
+      suggestions: {
+        balonlar: "Ballonvaarten",
+        aktiviteler: "Activiteiten",
+        turlar: "Excursies",
+        paketler: "Pakketten",
+        sss: "Veelgestelde vragen",
+        iletisim: "Contact",
+      },
+    },
+  },
+  zh: {
+    common: {
+      reserve: "立即预订",
+      learnMore: "了解更多",
+      from: "起价",
+      perPerson: "每人",
+      loading: "加载中...",
+    },
+    nav: {
+      balloons: "热气球之旅",
+      hotels: "酒店",
+      activities: "活动体验",
+      tours: "观光游",
+      packages: "套餐",
+      blog: "博客",
+      about: "关于我们",
+      contact: "联系我们",
+      faq: "常见问题",
+    },
+    hero: {
+      badge: "内夫谢希尔 / 卡帕多奇亚",
+      title1: "卡帕多奇亚的",
+      title2: "最佳体验",
+      title3: "最优惠的价格",
+      subtitle:
+        "从热气球之旅到酒店预订,从越野车冒险到专属套餐 — 一站式平台,价格透明。",
+    },
+    footer: {
+      rights: "版权所有。",
+      services: "服务",
+      company: "公司",
+      legal: "法律声明",
+    },
+    trust: {
+      refund: "100% 退款保证",
+      secure: "3D Secure 安全支付",
+      insurance: "4000万欧元保险",
+      languages: "支持9种语言",
+    },
+    hero_trust: {
+      refund: "100% 退款保证",
+      insurance: "4000万欧元保险",
+      operators: "9+ 合作运营商",
+      tursab: "TÜRSAB 持牌",
+    },
+    stats: {
+      operators: "合作运营商",
+      customers: "满意旅客",
+      rating: "平均评分",
+      refund: "退款保证",
+      langs: "语种",
+    },
+    cta: {
+      mobile: "立即预订",
+      price_guarantee: "最低价保证",
+    },
+    categories: {
+      tag: "我们的服务",
+      title: "一站式服务",
+      subtitle: "除机票外,在卡帕多奇亚所需的每一项旅行服务,这里应有尽有。",
+      balloons: "热气球之旅",
+      balloons_sub: "€165起",
+      hotels: "酒店与住宿",
+      hotels_sub: "从洞穴酒店到度假村",
+      transfer: "接送服务",
+      transfer_sub: "机场及城际",
+      atv: "越野车之旅",
+      atv_sub: "$29起",
+      tours: "观光游",
+      tours_sub: "红线与绿线",
+      packages: "特色套餐",
+      packages_sub: "蜜月、求婚、生日",
+      horse: "骑马",
+      horse_sub: "日出与日落",
+      insurance: "旅行保险",
+      insurance_sub: "全面保障",
+    },
+    packages_section: {
+      tag: "精选套餐",
+      title: "最受欢迎之选",
+      subtitle: "我们对比了同业价格,为您精选最优惠的方案。",
+      standart_badge: "最受欢迎",
+      standart_title: "标准热气球飞行",
+      balayi_badge: "豪华版",
+      balayi_title: "浪漫蜜月套餐",
+      macera_badge: "冒险",
+      macera_title: "冒险套餐(2天)",
+      reserve: "预订",
+      market_price: "市场价",
+    },
+    not_found: {
+      title: "此页面已乘热气球远去",
+      message:
+        "您要找的页面坐上了热气球,再也没回来 🎈 别担心 — 让我们带您前往最美的目的地。",
+      suggestions_title: "您也许在找",
+      search_placeholder: "您在搜索什么?",
+      back: "返回",
+      home: "首页",
+      suggestions: {
+        balonlar: "热气球之旅",
+        aktiviteler: "活动体验",
+        turlar: "观光游",
+        paketler: "套餐",
+        sss: "常见问题",
+        iletisim: "联系我们",
+      },
+    },
+  },
+  hi: {
+    common: {
+      reserve: "अभी बुक करें",
+      learnMore: "और जानें",
+      from: "से शुरू",
+      perPerson: "प्रति व्यक्ति",
+      loading: "लोड हो रहा है...",
+    },
+    nav: {
+      balloons: "बैलून यात्राएँ",
+      hotels: "होटल",
+      activities: "गतिविधियाँ",
+      tours: "दर्शनीय यात्राएँ",
+      packages: "पैकेज",
+      blog: "ब्लॉग",
+      about: "हमारे बारे में",
+      contact: "संपर्क",
+      faq: "अक्सर पूछे जाने वाले प्रश्न",
+    },
+    hero: {
+      badge: "नेवशेहिर / कप्पाडोकिया",
+      title1: "कप्पाडोकिया के",
+      title2: "सर्वश्रेष्ठ अनुभव",
+      title3: "सर्वोत्तम दाम पर",
+      subtitle:
+        "हॉट एयर बैलून यात्रा से लेकर होटल बुकिंग तक, एटीवी रोमांच से लेकर निजी पैकेज तक — एक ही प्लेटफ़ॉर्म पर, पारदर्शी कीमतों के साथ।",
+    },
+    footer: {
+      rights: "सर्वाधिकार सुरक्षित।",
+      services: "सेवाएँ",
+      company: "कंपनी",
+      legal: "कानूनी",
+    },
+    trust: {
+      refund: "100% धन-वापसी गारंटी",
+      secure: "3D Secure भुगतान",
+      insurance: "€40M बीमा",
+      languages: "9 भाषाएँ उपलब्ध",
+    },
+    hero_trust: {
+      refund: "100% धन-वापसी",
+      insurance: "€40M बीमा",
+      operators: "9+ ऑपरेटर",
+      tursab: "TÜRSAB लाइसेंस प्राप्त",
+    },
+    stats: {
+      operators: "साझेदार ऑपरेटर",
+      customers: "संतुष्ट यात्री",
+      rating: "औसत रेटिंग",
+      refund: "धन-वापसी गारंटी",
+      langs: "भाषाएँ",
+    },
+    cta: {
+      mobile: "अभी बुक करें",
+      price_guarantee: "सबसे कम कीमत की गारंटी",
+    },
+    categories: {
+      tag: "हमारी सेवाएँ",
+      title: "सबकुछ एक ही जगह",
+      subtitle:
+        "उड़ान टिकट को छोड़कर, कप्पाडोकिया में जिस भी यात्रा-सेवा की आपको ज़रूरत है, वह यहाँ उपलब्ध है।",
+      balloons: "बैलून यात्राएँ",
+      balloons_sub: "€165 से शुरू",
+      hotels: "होटल और ठहरने की जगह",
+      hotels_sub: "गुफा होटलों से रिज़ॉर्ट तक",
+      transfer: "ट्रांसफ़र",
+      transfer_sub: "हवाई अड्डा और अंतर-शहरीय",
+      atv: "एटीवी यात्राएँ",
+      atv_sub: "$29 से शुरू",
+      tours: "दर्शनीय यात्राएँ",
+      tours_sub: "रेड और ग्रीन टूर",
+      packages: "विशेष पैकेज",
+      packages_sub: "हनीमून, प्रपोज़ल, जन्मदिन",
+      horse: "घुड़सवारी",
+      horse_sub: "सूर्योदय और सूर्यास्त",
+      insurance: "यात्रा बीमा",
+      insurance_sub: "व्यापक सुरक्षा",
+    },
+    packages_section: {
+      tag: "चुनिंदा पैकेज",
+      title: "सबसे लोकप्रिय विकल्प",
+      subtitle:
+        "हमने प्रतिस्पर्धियों की कीमतों की तुलना की और आपके लिए सर्वोत्तम सौदे चुने हैं।",
+      standart_badge: "सबसे लोकप्रिय",
+      standart_title: "मानक बैलून उड़ान",
+      balayi_badge: "डिलक्स",
+      balayi_title: "रोमांटिक हनीमून पैकेज",
+      macera_badge: "रोमांच",
+      macera_title: "रोमांच पैकेज (2 दिन)",
+      reserve: "बुक करें",
+      market_price: "बाज़ार मूल्य",
+    },
+    not_found: {
+      title: "यह पेज बैलून पर उड़ गया",
+      message:
+        "जिस पेज को आप ढूँढ रहे हैं वह बैलून में बैठकर उड़ गया और वापस नहीं आया 🎈 चिंता न करें — हम आपको सबसे शानदार जगहों तक ले चलते हैं।",
+      suggestions_title: "शायद आप इन्हें खोज रहे थे",
+      search_placeholder: "आप क्या ढूँढ रहे थे?",
+      back: "वापस जाएँ",
+      home: "मुखपृष्ठ",
+      suggestions: {
+        balonlar: "बैलून यात्राएँ",
+        aktiviteler: "गतिविधियाँ",
+        turlar: "दर्शनीय यात्राएँ",
+        paketler: "पैकेज",
+        sss: "अक्सर पूछे जाने वाले प्रश्न",
+        iletisim: "संपर्क",
+      },
+    },
+  },
+  ur: {
+    common: {
+      reserve: "ابھی بُک کریں",
+      learnMore: "مزید جانیں",
+      from: "سے شروع",
+      perPerson: "فی فرد",
+      loading: "لوڈ ہو رہا ہے...",
+    },
+    nav: {
+      balloons: "غبارے کے سفر",
+      hotels: "ہوٹل",
+      activities: "سرگرمیاں",
+      tours: "سیاحتی دورے",
+      packages: "پیکجز",
+      blog: "بلاگ",
+      about: "ہمارے بارے میں",
+      contact: "رابطہ",
+      faq: "اکثر پوچھے گئے سوالات",
+    },
+    hero: {
+      badge: "نَوشہر / کیپاڈوکیا",
+      title1: "کیپاڈوکیا کے",
+      title2: "بہترین تجربات",
+      title3: "بہترین قیمت پر",
+      subtitle:
+        "گرم ہوا کے غباروں کی سواری سے لے کر ہوٹل بکنگ تک، اے ٹی وی مہمات سے لے کر خصوصی پیکجز تک — سب کچھ ایک ہی پلیٹ فارم پر، شفاف قیمتوں کے ساتھ۔",
+    },
+    footer: {
+      rights: "جملہ حقوق محفوظ ہیں۔",
+      services: "خدمات",
+      company: "کمپنی",
+      legal: "قانونی",
+    },
+    trust: {
+      refund: "100% رقم واپسی کی ضمانت",
+      secure: "3D Secure ادائیگی",
+      insurance: "€40M بیمہ",
+      languages: "9 زبانیں دستیاب",
+    },
+    hero_trust: {
+      refund: "100% رقم واپسی",
+      insurance: "€40M بیمہ",
+      operators: "9+ آپریٹرز",
+      tursab: "TÜRSAB لائسنس یافتہ",
+    },
+    stats: {
+      operators: "شراکت دار آپریٹرز",
+      customers: "خوش مسافر",
+      rating: "اوسط درجہ بندی",
+      refund: "رقم واپسی کی ضمانت",
+      langs: "زبانیں",
+    },
+    cta: {
+      mobile: "ابھی بُک کریں",
+      price_guarantee: "کم ترین قیمت کی ضمانت",
+    },
+    categories: {
+      tag: "ہماری خدمات",
+      title: "سب کچھ ایک ہی جگہ",
+      subtitle:
+        "ہوائی ٹکٹ کے علاوہ، کیپاڈوکیا میں جس بھی سفری خدمت کی آپ کو ضرورت ہو، یہاں دستیاب ہے۔",
+      balloons: "غبارے کے سفر",
+      balloons_sub: "€165 سے شروع",
+      hotels: "ہوٹل اور قیام",
+      hotels_sub: "غار ہوٹلز سے ریزورٹس تک",
+      transfer: "ٹرانسفر",
+      transfer_sub: "ایئرپورٹ اور بین الشہری",
+      atv: "اے ٹی وی سفر",
+      atv_sub: "$29 سے شروع",
+      tours: "سیاحتی دورے",
+      tours_sub: "سرخ اور سبز دورہ",
+      packages: "خصوصی پیکجز",
+      packages_sub: "ہنی مون، تجویز، سالگرہ",
+      horse: "گھڑ سواری",
+      horse_sub: "طلوع و غروبِ آفتاب",
+      insurance: "سفری بیمہ",
+      insurance_sub: "جامع تحفظ",
+    },
+    packages_section: {
+      tag: "نمایاں پیکجز",
+      title: "سب سے زیادہ پسندیدہ",
+      subtitle:
+        "ہم نے حریفوں کی قیمتوں کا موازنہ کیا اور آپ کے لیے بہترین پیشکشیں منتخب کی ہیں۔",
+      standart_badge: "سب سے مقبول",
+      standart_title: "معیاری غبارہ پرواز",
+      balayi_badge: "ڈیلکس",
+      balayi_title: "رومانوی ہنی مون پیکج",
+      macera_badge: "مہم",
+      macera_title: "مہم پیکج (2 دن)",
+      reserve: "بُک کریں",
+      market_price: "مارکیٹ قیمت",
+    },
+    not_found: {
+      title: "یہ صفحہ غبارے میں اُڑ گیا",
+      message:
+        "جس صفحے کی آپ تلاش کر رہے ہیں وہ غبارے پر سوار ہو کر اُڑ گیا اور واپس نہیں آیا 🎈 پریشان نہ ہوں — ہم آپ کو بہترین مقامات تک لے چلتے ہیں۔",
+      suggestions_title: "شاید آپ یہ تلاش کر رہے تھے",
+      search_placeholder: "آپ کیا تلاش کر رہے تھے؟",
+      back: "واپس جائیں",
+      home: "صفحۂ اول",
+      suggestions: {
+        balonlar: "غبارے کے سفر",
+        aktiviteler: "سرگرمیاں",
+        turlar: "سیاحتی دورے",
+        paketler: "پیکجز",
+        sss: "اکثر پوچھے گئے سوالات",
+        iletisim: "رابطہ",
+      },
+    },
+  },
 } as const;
 
 export type Dictionary = typeof DICTIONARIES.tr;
@@ -235,5 +1035,15 @@ export type Dictionary = typeof DICTIONARIES.tr;
 export const LOCALE_STORAGE_KEY = "tripandtick:locale";
 
 export function isLocale(value: unknown): value is Locale {
-  return value === "tr" || value === "en";
+  return (
+    value === "tr" ||
+    value === "en" ||
+    value === "de" ||
+    value === "fr" ||
+    value === "es" ||
+    value === "nl" ||
+    value === "zh" ||
+    value === "hi" ||
+    value === "ur"
+  );
 }
