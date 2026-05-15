@@ -15,7 +15,7 @@ const checkoutSchema = z.object({
   customerEmail: z.string().email().optional().or(z.literal("")),
 });
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://tripandtick.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.tripandtick.com";
 
 export async function POST(req: NextRequest) {
   try {

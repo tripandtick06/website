@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "tr_TR",
-    url: "https://tripandtick.com",
+    url: "https://www.tripandtick.com",
     siteName: "Trip and Tick",
     title: "Trip and Tick — Kapadokya'nın En İyi Deneyimleri",
     description: "En düşük fiyat garantisi ile balon turu, otel, transfer ve aktiviteler.",

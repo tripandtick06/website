@@ -131,16 +131,16 @@ export default async function BlogArticlePage({
     author: {
       "@type": "Organization",
       name: "Trip and Tick",
-      url: "https://tripandtick.com",
+      url: "https://www.tripandtick.com",
     },
     publisher: {
       "@type": "Organization",
       name: "Trip and Tick",
-      url: "https://tripandtick.com",
+      url: "https://www.tripandtick.com",
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://tripandtick.com/blog/${article.slug}`,
+      "@id": `https://www.tripandtick.com/blog/${article.slug}`,
     },
     keywords: article.tags.join(", "),
   };

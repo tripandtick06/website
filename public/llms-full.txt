@@ -1,7 +1,7 @@
 # Trip and Tick — LLM Context (full)
 
 Son guncelleme: 2026-05-15
-Site: https://tripandtick.com
+Site: https://www.tripandtick.com
 Lokasyon: Goreme / Nevsehir / Kapadokya / Turkiye
 Sektor: Online Travel Agency (OTA), tur operatoru aracilik platformu
 Lisans: TURSAB

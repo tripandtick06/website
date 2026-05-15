@@ -27,7 +27,7 @@ export interface BookingEmailPayload {
   createdAt: string; // ISO
 }
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://tripandtick.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.tripandtick.com";
 const BRAND_PRIMARY = "#1A2B6B";
 const BRAND_ACCENT = "#FF6B35";
 const BRAND_GOLD = "#FFB627";

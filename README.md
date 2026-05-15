@@ -73,7 +73,7 @@ Tum keyler `.env.local` icinde, `.env.local.template` referans. Ozet:
 
 | Key | Aciklama | Zorunlu |
 |---|---|---|
-| `NEXT_PUBLIC_SITE_URL` | Production canonical, orn https://tripandtick.com | Evet |
+| `NEXT_PUBLIC_SITE_URL` | Production canonical, orn https://www.tripandtick.com | Evet |
 | `ANTHROPIC_API_KEY` | SEO agent + content gen, `tripandtick-seo-*` scoped key | Evet (agent icin) |
 | `STRIPE_SECRET_KEY` | Stripe server (test: `sk_test_...`) | Evet (odeme) |
 | `STRIPE_PUBLISHABLE_KEY` | Client (test: `pk_test_...`) | Evet (odeme) |
@@ -92,7 +92,7 @@ npm start                # Production server
 npm run lint             # ESLint
 npm run seo-agent        # Tek seferlik SEO agent (manuel)
 npm run seo-agent:daily  # Daily cron variant (autonom 4h batch)
-node scripts/psi-audit.cjs https://tripandtick.com
+node scripts/psi-audit.cjs https://www.tripandtick.com
                          # PSI audit (mobile+desktop) -> scripts/logs/psi-*.json
 ```
 
@@ -108,7 +108,7 @@ vercel --prod           # production deploy
 1. Vercel dashboard -> Settings -> Environment Variables: yukaridaki tum
    anahtarlari ekle (Production + Preview).
 2. Domain bag: `tripandtick.com` + `www.tripandtick.com` -> Vercel DNS A/CNAME.
-3. Stripe: live mode'a gec, webhook endpoint `https://tripandtick.com/api/stripe/webhook`,
+3. Stripe: live mode'a gec, webhook endpoint `https://www.tripandtick.com/api/stripe/webhook`,
    `STRIPE_WEBHOOK_SECRET` rotate et.
 4. `/api/health` 200 OK kontrolu post-deploy.
 

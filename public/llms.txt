@@ -4,8 +4,8 @@
 > rezervasyonu, ATV / at / jeep aktiviteleri, gunluk turlar ve kombine paketler.
 > 9+ TURSAB lisansli operator, %100 iade garantisi, en dusuk fiyat garantisi.
 
-Site: https://tripandtick.com
-Iletisim: https://tripandtick.com/iletisim
+Site: https://www.tripandtick.com
+Iletisim: https://www.tripandtick.com/iletisim
 E-posta: info@tripandtick.com
 Telefon: +90 500 123 45 67
 Lokasyon: Goreme / Nevsehir / Turkiye
@@ -13,32 +13,32 @@ Dil: TR (primary), EN/DE/FR/ES/NL/ZH/HI/UR (planlanan)
 
 ## Ana sayfalar
 
-- [Anasayfa](https://tripandtick.com/) — kategoriler, en cok satanlar, garantiler
-- [Balon turlari](https://tripandtick.com/balonlar) — 4 paket EUR 165'ten baslayan
-- [Oteller](https://tripandtick.com/oteller) — Kapadokya magara + butik oteller
-- [Aktiviteler](https://tripandtick.com/aktiviteler) — ATV, at binme, jeep safari
-- [Turlar](https://tripandtick.com/turlar) — gunluk Red/Green tur
-- [Paketler](https://tripandtick.com/paketler) — kombine deneyim paketleri (balayi/aile/macera)
-- [Transferler](https://tripandtick.com/transferler) — Nevsehir/Kayseri havalimani transfer
-- [Kapadokya rehberi](https://tripandtick.com/kapadokya) — destinasyon overview
+- [Anasayfa](https://www.tripandtick.com/) — kategoriler, en cok satanlar, garantiler
+- [Balon turlari](https://www.tripandtick.com/balonlar) — 4 paket EUR 165'ten baslayan
+- [Oteller](https://www.tripandtick.com/oteller) — Kapadokya magara + butik oteller
+- [Aktiviteler](https://www.tripandtick.com/aktiviteler) — ATV, at binme, jeep safari
+- [Turlar](https://www.tripandtick.com/turlar) — gunluk Red/Green tur
+- [Paketler](https://www.tripandtick.com/paketler) — kombine deneyim paketleri (balayi/aile/macera)
+- [Transferler](https://www.tripandtick.com/transferler) — Nevsehir/Kayseri havalimani transfer
+- [Kapadokya rehberi](https://www.tripandtick.com/kapadokya) — destinasyon overview
 
 ## Bilgi
 
-- [SSS](https://tripandtick.com/sss) — sik sorulan sorular (balon iptal, hava, sigorta)
-- [Blog](https://tripandtick.com/blog) — Kapadokya rehberi, gezi ipuclari
-- [Hakkimizda](https://tripandtick.com/hakkimizda)
-- [Iletisim](https://tripandtick.com/iletisim)
+- [SSS](https://www.tripandtick.com/sss) — sik sorulan sorular (balon iptal, hava, sigorta)
+- [Blog](https://www.tripandtick.com/blog) — Kapadokya rehberi, gezi ipuclari
+- [Hakkimizda](https://www.tripandtick.com/hakkimizda)
+- [Iletisim](https://www.tripandtick.com/iletisim)
 
 ## Yasal
 
-- [Gizlilik Politikasi](https://tripandtick.com/gizlilik-politikasi)
-- [Kullanim Sartlari](https://tripandtick.com/kullanim-sartlari)
-- [Iptal & Iade Politikasi](https://tripandtick.com/iptal-iade-politikasi) — 72+ saat %100 iade
-- [Cerez Politikasi](https://tripandtick.com/cerez-politikasi)
-- [KVKK Aydinlatma](https://tripandtick.com/kvkk)
+- [Gizlilik Politikasi](https://www.tripandtick.com/gizlilik-politikasi)
+- [Kullanim Sartlari](https://www.tripandtick.com/kullanim-sartlari)
+- [Iptal & Iade Politikasi](https://www.tripandtick.com/iptal-iade-politikasi) — 72+ saat %100 iade
+- [Cerez Politikasi](https://www.tripandtick.com/cerez-politikasi)
+- [KVKK Aydinlatma](https://www.tripandtick.com/kvkk)
 
 ## API
 
-- Sitemap: https://tripandtick.com/sitemap.xml
-- Robots: https://tripandtick.com/robots.txt
-- Detayli LLM context: https://tripandtick.com/llms-full.txt
+- Sitemap: https://www.tripandtick.com/sitemap.xml
+- Robots: https://www.tripandtick.com/robots.txt
+- Detayli LLM context: https://www.tripandtick.com/llms-full.txt

@@ -58,7 +58,7 @@ export async function GET(req: NextRequest) {
     `SUMMARY:${escapeIcal(serviceName)} — Trip and Tick`,
     `LOCATION:${escapeIcal("Kapadokya, Nevsehir, Turkey")}`,
     `DESCRIPTION:${escapeIcal(
-      `Rezervasyon kodu: ${bookingId}\nLutfen ucustan 30 dakika once otelinizde transfer aracini bekleyin.\nDetay: https://tripandtick.com/rezervasyon`
+      `Rezervasyon kodu: ${bookingId}\nLutfen ucustan 30 dakika once otelinizde transfer aracini bekleyin.\nDetay: https://www.tripandtick.com/rezervasyon`
     )}`,
     "STATUS:CONFIRMED",
     "BEGIN:VALARM",
