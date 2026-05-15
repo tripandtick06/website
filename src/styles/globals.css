@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: 26 43 107;
+    --accent: 255 107 53;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 font-sans;
+  }
+
+  ::selection {
+    @apply bg-accent/20 text-accent-dark;
+  }
+}
+
+@layer components {
+  .container-main {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-xl font-semibold
+           hover:bg-primary-light transition-all duration-200
+           active:scale-[0.98] shadow-sm hover:shadow-card;
+  }
+
+  .btn-accent {
+    @apply bg-accent text-white px-6 py-3 rounded-xl font-semibold
+           hover:bg-accent-light transition-all duration-200
+           active:scale-[0.98] shadow-glow hover:shadow-lg;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl border border-slate-200
+           transition-all duration-300 hover:shadow-card hover:-translate-y-1;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 border-2 border-slate-200 rounded-xl
+           text-[15px] font-medium text-slate-800
+           placeholder:text-slate-400 outline-none
+           focus:border-primary transition-colors;
+  }
+
+  .section-tag {
+    @apply inline-block bg-primary/[0.08] text-primary
+           px-4 py-1.5 rounded-full text-xs font-bold
+           uppercase tracking-wider mb-3;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent
+           bg-gradient-to-r from-primary to-accent;
+  }
+}
+
+/* Smooth fade-in animation for scroll */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
