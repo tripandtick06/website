@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import {
   Wind,
@@ -12,32 +14,34 @@ import {
   CreditCard,
   Globe,
 } from "lucide-react";
-
-const FOOTER_SERVICES = [
-  { href: "/balonlar", label: "Balon Turları" },
-  { href: "/oteller", label: "Otel Rezervasyonu" },
-  { href: "/aktiviteler", label: "ATV Turları" },
-  { href: "/aktiviteler", label: "At Binme" },
-  { href: "/turlar", label: "Gezi Turları" },
-  { href: "/paketler", label: "Özel Paketler" },
-  { href: "/transferler", label: "Transfer" },
-];
-
-const FOOTER_COMPANY = [
-  { href: "/hakkimizda", label: "Hakkımızda" },
-  { href: "/blog", label: "Blog & Rehber" },
-  { href: "/iletisim", label: "İletişim" },
-  { href: "/sss", label: "SSS" },
-];
-
-const FOOTER_LEGAL = [
-  { href: "/iptal-iade-politikasi", label: "İptal & İade" },
-  { href: "/gizlilik-politikasi", label: "Gizlilik Politikası" },
-  { href: "/kullanim-sartlari", label: "Kullanım Şartları" },
-  { href: "/cerez-politikasi", label: "KVKK & Çerezler" },
-];
+import { useT } from "@/lib/i18n/I18nProvider";
 
 export function Footer() {
+  const t = useT();
+
+  const FOOTER_SERVICES = [
+    { href: "/balonlar", label: t.nav.balloons },
+    { href: "/oteller", label: t.nav.hotels },
+    { href: "/aktiviteler", label: t.nav.activities },
+    { href: "/turlar", label: t.nav.tours },
+    { href: "/paketler", label: t.nav.packages },
+    { href: "/transferler", label: "Transfer" },
+  ];
+
+  const FOOTER_COMPANY = [
+    { href: "/hakkimizda", label: t.nav.about },
+    { href: "/blog", label: t.nav.blog },
+    { href: "/iletisim", label: t.nav.contact },
+    { href: "/sss", label: t.nav.faq },
+  ];
+
+  const FOOTER_LEGAL = [
+    { href: "/iptal-iade-politikasi", label: "İptal & İade" },
+    { href: "/gizlilik-politikasi", label: "Gizlilik Politikası" },
+    { href: "/kullanim-sartlari", label: "Kullanım Şartları" },
+    { href: "/cerez-politikasi", label: "KVKK & Çerezler" },
+  ];
+
   return (
     <footer className="bg-slate-900 text-slate-400">
       {/* Trust Bar */}
@@ -45,19 +49,19 @@ export function Footer() {
         <div className="container-main py-6 flex flex-wrap items-center justify-center gap-8 text-sm">
           <div className="flex items-center gap-2">
             <Shield className="w-5 h-5 text-accent" />
-            <span>%100 İade Garantisi</span>
+            <span>{t.trust.refund}</span>
           </div>
           <div className="flex items-center gap-2">
             <CreditCard className="w-5 h-5 text-accent" />
-            <span>3D Secure Ödeme</span>
+            <span>{t.trust.secure}</span>
           </div>
           <div className="flex items-center gap-2">
             <Shield className="w-5 h-5 text-accent" />
-            <span>40M€ Sigorta</span>
+            <span>{t.trust.insurance}</span>
           </div>
           <div className="flex items-center gap-2">
             <Globe className="w-5 h-5 text-accent" />
-            <span>9 Dil Desteği</span>
+            <span>{t.trust.languages}</span>
           </div>
         </div>
       </div>
@@ -96,6 +100,7 @@ export function Footer() {
                   key={i}
                   href="#"
                   className="w-9 h-9 rounded-lg bg-white/[0.06] border border-white/10 flex items-center justify-center text-slate-400 hover:bg-accent hover:text-white hover:border-accent transition-all"
+                  aria-label="Social link"
                 >
                   <Icon className="w-4 h-4" />
                 </a>
@@ -105,7 +110,7 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h5 className="text-white font-bold text-sm mb-4">Hizmetler</h5>
+            <h5 className="text-white font-bold text-sm mb-4">{t.footer.services}</h5>
             {FOOTER_SERVICES.map((link) => (
               <Link
                 key={link.label}
@@ -119,7 +124,7 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <h5 className="text-white font-bold text-sm mb-4">Şirket</h5>
+            <h5 className="text-white font-bold text-sm mb-4">{t.footer.company}</h5>
             {FOOTER_COMPANY.map((link) => (
               <Link
                 key={link.label}
@@ -133,7 +138,7 @@ export function Footer() {
 
           {/* Legal */}
           <div>
-            <h5 className="text-white font-bold text-sm mb-4">Yasal</h5>
+            <h5 className="text-white font-bold text-sm mb-4">{t.footer.legal}</h5>
             {FOOTER_LEGAL.map((link) => (
               <Link
                 key={link.label}
@@ -150,7 +155,7 @@ export function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-slate-800">
         <div className="container-main py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
-          <span>© 2026 Trip and Tick. Tüm hakları saklıdır.</span>
+          <span>© 2026 Trip and Tick. {t.footer.rights}</span>
           <span className="text-slate-500">Nevşehir / Kapadokya, Türkiye</span>
         </div>
       </div>

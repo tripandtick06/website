@@ -1,14 +1,20 @@
-import { ShieldCheck, Lock, BadgeDollarSign, Award, Globe } from "lucide-react";
+"use client";
 
-const GUARANTEES = [
-  { icon: ShieldCheck, title: "%100 İade Garantisi", sub: "Operatör iptali = tam iade" },
-  { icon: Lock, title: "3D Secure Ödeme", sub: "PCI-DSS uyumlu altyapı" },
-  { icon: BadgeDollarSign, title: "En Düşük Fiyat", sub: "Fiyat farkını biz karşılarız" },
-  { icon: Award, title: "40M€ Sigorta", sub: "Tüm uçuşlarda dahil" },
-  { icon: Globe, title: "9 Dil Desteği", sub: "Kendi dilinizde hizmet" },
-];
+import { ShieldCheck, Lock, BadgeDollarSign, Award, Globe } from "lucide-react";
+import { useT } from "@/lib/i18n/I18nProvider";
 
 export function GuaranteeSection() {
+  const t = useT();
+
+  // Faz 1: 4 keys mapped from dictionary; "En Düşük Fiyat" card keeps TR copy.
+  const GUARANTEES = [
+    { icon: ShieldCheck, title: t.trust.refund, sub: "Operatör iptali = tam iade" },
+    { icon: Lock, title: t.trust.secure, sub: "PCI-DSS uyumlu altyapı" },
+    { icon: BadgeDollarSign, title: "En Düşük Fiyat", sub: "Fiyat farkını biz karşılarız" },
+    { icon: Award, title: t.trust.insurance, sub: "Tüm uçuşlarda dahil" },
+    { icon: Globe, title: t.trust.languages, sub: "Kendi dilinizde hizmet" },
+  ];
+
   return (
     <section className="relative bg-gradient-to-br from-[#0F1B4D] via-primary to-[#2A1A4A] text-white py-20 sm:py-24 overflow-hidden">
       {/* Decorative */}

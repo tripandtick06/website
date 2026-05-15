@@ -228,11 +228,14 @@ export default function BalonDetayPage({ params }: PageParams) {
                 </div>
 
                 <Link
-                  href={`/rezervasyon/${pkg.slug}`}
-                  className="btn-accent w-full block text-center mb-3"
+                  href={`/rezervasyon/${pkg.slug}#tarih`}
+                  className="btn-accent w-full block text-center mb-2"
                 >
                   Tarih Seç & Rezerve Et
                 </Link>
+                <p className="text-xs text-center text-slate-500 mb-3">
+                  Tarih seçiminde günlük doluluk anında kontrol edilir.
+                </p>
                 <Link
                   href="/iletisim"
                   className="block text-center text-sm font-semibold text-primary hover:underline"

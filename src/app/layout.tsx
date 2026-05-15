@@ -4,6 +4,7 @@ import "@/styles/globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import CookieConsentMount from "@/components/booking/CookieConsentMount";
+import { I18nProvider } from "@/lib/i18n/I18nProvider";
 
 const inter = Inter({ subsets: ["latin", "latin-ext"], variable: "--font-inter" });
 
@@ -42,10 +43,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="tr" className={inter.variable}>
       <body className="font-sans antialiased">
-        <Header />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
-        <CookieConsentMount />
+        <I18nProvider>
+          <Header />
+          <main className="min-h-screen">{children}</main>
+          <Footer />
+          <CookieConsentMount />
+        </I18nProvider>
       </body>
     </html>
   );

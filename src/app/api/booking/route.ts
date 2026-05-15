@@ -1,5 +1,12 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { z } from "zod";
+import {
+  customerBookingEmailHtml,
+  customerBookingEmailText,
+  adminBookingEmailHtml,
+  adminBookingEmailText,
+  type BookingEmailPayload,
+} from "@/lib/email-templates";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -25,13 +32,66 @@ const bookingSchema = z.object({
   insurance: z.boolean().optional().default(false),
   promoCode: z.string().optional(),
   paymentSessionId: z.string().optional(),
+  specialRequests: z.string().max(2000).optional(),
 });
+
+const BREVO_API_KEY = process.env.BREVO_API_KEY;
+const BREVO_FROM_EMAIL = process.env.BREVO_FROM_EMAIL ?? "noreply@tripandtick.com";
+const BREVO_FROM_NAME = process.env.BREVO_FROM_NAME ?? "Trip and Tick";
+const ADMIN_EMAIL = process.env.ADMIN_EMAIL ?? "info@tripandtick.com";
 
 function generateBookingId(): string {
   const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
   let id = "TT-";
   for (let i = 0; i < 8; i++) id += chars[Math.floor(Math.random() * chars.length)];
   return id;
+}
+
+interface BrevoSendInput {
+  to: { email: string; name: string };
+  subject: string;
+  htmlContent: string;
+  textContent: string;
+  replyTo?: { email: string; name?: string };
+  tag: "customer" | "admin";
+}
+
+async function sendBrevoEmail(input: BrevoSendInput): Promise<{ ok: boolean; status?: number; error?: string }> {
+  if (!BREVO_API_KEY) {
+    console.info(
+      `[api/booking] BREVO_API_KEY yok — ${input.tag} mail loglandi`,
+      JSON.stringify({ to: input.to.email, subject: input.subject })
+    );
+    return { ok: false, error: "BREVO_API_KEY missing" };
+  }
+  try {
+    const res = await fetch("https://api.brevo.com/v3/smtp/email", {
+      method: "POST",
+      headers: {
+        "api-key": BREVO_API_KEY,
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        sender: { email: BREVO_FROM_EMAIL, name: BREVO_FROM_NAME },
+        to: [input.to],
+        ...(input.replyTo ? { replyTo: input.replyTo } : {}),
+        subject: input.subject,
+        htmlContent: input.htmlContent,
+        textContent: input.textContent,
+        tags: ["booking", input.tag],
+      }),
+    });
+    if (!res.ok) {
+      const errText = await res.text().catch(() => "");
+      console.error(`[api/booking] Brevo ${input.tag} gonderim hatasi`, res.status, errText);
+      return { ok: false, status: res.status, error: errText };
+    }
+    return { ok: true, status: res.status };
+  } catch (err) {
+    console.error(`[api/booking] Brevo ${input.tag} fetch error`, err);
+    return { ok: false, error: err instanceof Error ? err.message : String(err) };
+  }
 }
 
 export async function POST(req: NextRequest) {
@@ -58,14 +118,69 @@ export async function POST(req: NextRequest) {
 
     console.info("[api/booking] Yeni rezervasyon", JSON.stringify(record, null, 2));
 
-    // Faz 2: Brevo e-posta tetigi
-    // await sendBookingConfirmation({ to: leadPax.email, bookingId, ... })
+    // Faz 2: Brevo e-posta tetigi (musteri + admin paralel)
+    const leadPax = parsed.data.passengers[0];
+    const emailPayload: BookingEmailPayload = {
+      bookingId,
+      customerName: leadPax.fullName,
+      customerEmail: leadPax.email,
+      customerPhone: leadPax.phone,
+      serviceName: parsed.data.serviceName,
+      serviceSlug: parsed.data.serviceSlug,
+      date: parsed.data.date,
+      adults: parsed.data.adults,
+      children: parsed.data.children,
+      totalPrice: parsed.data.totalPrice,
+      currency: parsed.data.currency,
+      passengers: parsed.data.passengers.map((p) => ({
+        fullName: p.fullName,
+        email: p.email,
+        phone: p.phone,
+        nationality: p.nationality,
+      })),
+      insurance: parsed.data.insurance ?? false,
+      specialRequests: parsed.data.specialRequests,
+      createdAt,
+    };
+
+    const customerSend = sendBrevoEmail({
+      to: { email: leadPax.email, name: leadPax.fullName },
+      subject: `Rezervasyonunuz Onaylandı — ${bookingId}`,
+      htmlContent: customerBookingEmailHtml(emailPayload),
+      textContent: customerBookingEmailText(emailPayload),
+      replyTo: { email: ADMIN_EMAIL, name: "Trip and Tick" },
+      tag: "customer",
+    });
+
+    const adminSend = sendBrevoEmail({
+      to: { email: ADMIN_EMAIL, name: "Trip and Tick" },
+      subject: `YENI REZERVASYON: ${bookingId} — ${parsed.data.serviceName}`,
+      htmlContent: adminBookingEmailHtml(emailPayload),
+      textContent: adminBookingEmailText(emailPayload),
+      replyTo: { email: leadPax.email, name: leadPax.fullName },
+      tag: "admin",
+    });
+
+    // Paralel — hata olsa bile booking 200 doner
+    const [customerResult, adminResult] = await Promise.allSettled([customerSend, adminSend]);
+
+    const emailStatus = {
+      customer: customerResult.status === "fulfilled" ? customerResult.value.ok : false,
+      admin: adminResult.status === "fulfilled" ? adminResult.value.ok : false,
+    };
+
+    if (!emailStatus.customer || !emailStatus.admin) {
+      console.warn("[api/booking] Mail gonderim kismi/tam hata", JSON.stringify(emailStatus));
+    }
 
     return NextResponse.json({
       bookingId,
       status: "pending",
       createdAt,
-      message: "Rezervasyonunuz alındı. Onay e-postası birazdan iletilecek.",
+      emailSent: emailStatus,
+      message: emailStatus.customer
+        ? "Rezervasyonunuz alındı. Onay e-postası iletildi."
+        : "Rezervasyonunuz alındı. E-posta gönderiminde gecikme olabilir — kodunuzu not edin.",
     });
   } catch (err) {
     console.error("[api/booking] persist error", err);

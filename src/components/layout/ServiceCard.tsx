@@ -1,10 +1,10 @@
 import Link from "next/link";
-import { Star, Clock, Check, Hotel, Bike, TreePine, Package, Car, Wind } from "lucide-react";
+import { Star, Clock, Check, Hotel, MountainSnow, TreePine, Package, Car, Wind } from "lucide-react";
 import { formatPrice } from "@/lib/utils";
 import type { ServiceItem } from "@/data/services/catalog";
 
 const CATEGORY_ICON: Record<ServiceItem["category"], typeof Wind> = {
-  activity: Bike,
+  activity: MountainSnow,
   tour: TreePine,
   hotel: Hotel,
   package: Package,
@@ -19,6 +19,31 @@ const CATEGORY_GRADIENT: Record<ServiceItem["category"], string> = {
   transfer: "from-slate-600 to-slate-700",
 };
 
+// Slug bazli emoji — daha dogru gorsel
+function slugEmoji(slug: string): string | null {
+  if (slug.startsWith("atv-")) return "🏍️";
+  if (slug.startsWith("at-")) return "🐴";
+  if (slug.startsWith("jeep-")) return "🚙";
+  if (slug.includes("magara")) return "🏛️";
+  if (slug.includes("resort") || slug.includes("aile")) return "🏨";
+  if (slug.includes("butik")) return "🛏️";
+  if (slug.includes("kirmizi")) return "🌅";
+  if (slug.includes("yesil")) return "🌿";
+  if (slug.includes("gun-batimi")) return "🌇";
+  if (slug.includes("instagram")) return "📸";
+  if (slug.includes("yeralti")) return "🏛️";
+  if (slug.includes("balayi")) return "💍";
+  if (slug.includes("macera")) return "🎢";
+  if (slug.includes("evlilik")) return "💐";
+  if (slug.includes("aile-paketi")) return "👨‍👩‍👧";
+  if (slug.includes("tam-gun")) return "🌞";
+  if (slug.includes("kurumsal")) return "🏢";
+  if (slug.includes("nev-otel") || slug.includes("kayseri-otel")) return "✈️";
+  if (slug.includes("minibus")) return "🚌";
+  if (slug.includes("vip")) return "🚘";
+  return null;
+}
+
 export interface ServiceCardProps {
   item: ServiceItem;
   ctaHref?: string;
@@ -28,12 +53,17 @@ export function ServiceCard({ item, ctaHref }: ServiceCardProps) {
   const Icon = CATEGORY_ICON[item.category];
   const gradient = CATEGORY_GRADIENT[item.category];
   const href = ctaHref || `/rezervasyon/${item.slug}`;
+  const emoji = slugEmoji(item.slug);
 
   return (
     <article className="card overflow-hidden flex flex-col h-full">
       {/* Hero / Icon area */}
       <div className={`relative h-48 bg-gradient-to-br ${gradient} flex items-center justify-center`}>
-        <Icon className="w-20 h-20 text-white/85" strokeWidth={1.4} />
+        {emoji ? (
+          <span className="text-7xl opacity-90 drop-shadow-lg" aria-hidden="true">{emoji}</span>
+        ) : (
+          <Icon className="w-20 h-20 text-white/85" strokeWidth={1.4} />
+        )}
         {item.badge && (
           <span className="absolute top-3 left-3 bg-white text-primary px-2.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wide shadow-sm">
             {item.badge}

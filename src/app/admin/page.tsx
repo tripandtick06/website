@@ -15,8 +15,12 @@ import {
   Search,
 } from "lucide-react";
 import { BALLOON_PACKAGES } from "@/data/services/balloons";
+import { ACTIVITIES, TOURS, HOTELS, PACKAGES, TRANSFERS } from "@/data/services/catalog";
 import { OPERATORS } from "@/data/services/operators";
 import { formatPrice, cn } from "@/lib/utils";
+import type { AvailabilityStatus, DayAvailability } from "@/data/availability";
+
+const ADMIN_AUTH_KEY = "tripandtick:admin:auth";
 
 type Tab = "dashboard" | "fiyatlar" | "rezervasyonlar" | "takvim" | "operatorler" | "seo";
 type BookingStatus = "pending" | "confirmed" | "cancelled" | "completed";
@@ -370,40 +374,311 @@ function BookingsTab() {
   );
 }
 
+interface ServiceOption {
+  slug: string;
+  name: string;
+  category: string;
+}
+
+const TR_MONTHS = [
+  "Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran",
+  "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık",
+];
+
+function buildServiceOptions(): ServiceOption[] {
+  const balloons: ServiceOption[] = BALLOON_PACKAGES.map((b) => ({
+    slug: b.slug, name: b.name, category: "Balon",
+  }));
+  const acts: ServiceOption[] = ACTIVITIES.map((s) => ({
+    slug: s.slug, name: s.name, category: "Aktivite",
+  }));
+  const tours: ServiceOption[] = TOURS.map((s) => ({
+    slug: s.slug, name: s.name, category: "Tur",
+  }));
+  const hotels: ServiceOption[] = HOTELS.map((s) => ({
+    slug: s.slug, name: s.name, category: "Otel",
+  }));
+  const packs: ServiceOption[] = PACKAGES.map((s) => ({
+    slug: s.slug, name: s.name, category: "Paket",
+  }));
+  const transfers: ServiceOption[] = TRANSFERS.map((s) => ({
+    slug: s.slug, name: s.name, category: "Transfer",
+  }));
+  return [...balloons, ...acts, ...tours, ...hotels, ...packs, ...transfers];
+}
+
+function toIso(year: number, monthIdx: number, day: number): string {
+  return `${year}-${String(monthIdx + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+}
+
 function CalendarTab() {
-  const days = Array.from({ length: 31 }, (_, i) => i + 1);
-  const occupancy = (d: number): { pct: number; color: string; status: string } => {
-    const seed = (d * 7 + 13) % 100;
-    if (seed > 85) return { pct: seed, color: "bg-rose-500", status: "Dolu" };
-    if (seed > 60) return { pct: seed, color: "bg-amber-500", status: "Doluyor" };
-    if (seed > 20) return { pct: seed, color: "bg-emerald-500", status: "Müsait" };
-    return { pct: seed, color: "bg-slate-300", status: "Az" };
-  };
+  const services = useMemo(buildServiceOptions, []);
+  const [slug, setSlug] = useState<string>(services[0]?.slug ?? "");
+  const today = useMemo(() => new Date(), []);
+  const [year, setYear] = useState<number>(today.getFullYear());
+  const [monthIdx, setMonthIdx] = useState<number>(today.getMonth());
+  const [days, setDays] = useState<DayAvailability[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [editingDate, setEditingDate] = useState<string | null>(null);
+  const [editStatus, setEditStatus] = useState<AvailabilityStatus>("available");
+  const [editRemaining, setEditRemaining] = useState<number>(0);
+  const [editTotal, setEditTotal] = useState<number>(0);
+  const [editNote, setEditNote] = useState<string>("");
+  const [saving, setSaving] = useState(false);
+  const [saveError, setSaveError] = useState<string | null>(null);
+
+  function authToken(): string {
+    if (typeof window === "undefined") return "";
+    return window.localStorage.getItem(ADMIN_AUTH_KEY) ?? "";
+  }
+
+  const fromIso = toIso(year, monthIdx, 1);
+  const lastDayOfMonth = new Date(year, monthIdx + 1, 0).getDate();
+  const toIsoEnd = toIso(year, monthIdx, lastDayOfMonth);
+
+  useEffect(() => {
+    if (!slug) return;
+    setLoading(true);
+    setEditingDate(null);
+    const token = authToken();
+    fetch(`/api/availability?slug=${encodeURIComponent(slug)}&from=${fromIso}&to=${toIsoEnd}`, {
+      headers: token ? { "x-admin-token": token } : {},
+    })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data) => {
+        if (data?.days) setDays(data.days as DayAvailability[]);
+        else setDays([]);
+      })
+      .catch(() => setDays([]))
+      .finally(() => setLoading(false));
+  }, [slug, fromIso, toIsoEnd]);
+
+  function openEdit(day: DayAvailability) {
+    setEditingDate(day.date);
+    setEditStatus(day.status);
+    setEditRemaining(day.remainingSlots);
+    setEditTotal(day.totalSlots);
+    setEditNote(day.note ?? "");
+    setSaveError(null);
+  }
+
+  async function saveEdit() {
+    if (!editingDate) return;
+    setSaving(true);
+    setSaveError(null);
+    const token = authToken();
+    try {
+      const res = await fetch("/api/availability", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          ...(token ? { "x-admin-token": token } : {}),
+        },
+        body: JSON.stringify({
+          slug,
+          date: editingDate,
+          status: editStatus,
+          remainingSlots: editRemaining,
+          totalSlots: editTotal,
+          note: editNote || undefined,
+        }),
+      });
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        throw new Error(err?.error ?? `Kaydedilemedi (${res.status})`);
+      }
+      const data = await res.json();
+      const updated = data.day as DayAvailability;
+      setDays((prev) => prev.map((d) => (d.date === updated.date ? updated : d)));
+      setEditingDate(null);
+    } catch (err) {
+      setSaveError(err instanceof Error ? err.message : "Bilinmeyen hata");
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  function dayCellStyle(d: DayAvailability) {
+    const dateObj = new Date(`${d.date}T00:00:00Z`);
+    const isPast = dateObj < new Date(new Date().toISOString().slice(0, 10));
+    if (isPast) return "bg-slate-100 text-slate-400";
+    if (d.status === "full") return "bg-rose-50 border-rose-300 text-rose-900";
+    if (d.status === "limited") return "bg-amber-50 border-amber-300 text-amber-900";
+    return "bg-emerald-50 border-emerald-300 text-emerald-900";
+  }
+
+  function changeMonth(delta: number) {
+    let m = monthIdx + delta;
+    let y = year;
+    if (m < 0) { m = 11; y -= 1; }
+    if (m > 11) { m = 0; y += 1; }
+    setMonthIdx(m);
+    setYear(y);
+  }
 
   return (
-    <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6">
-      <h2 className="font-bold text-slate-900 mb-4">Mart 2026 — Doluluk Takvimi</h2>
-      <div className="grid grid-cols-7 gap-2 text-center text-xs text-slate-500 mb-2">
-        {["Pt", "Sa", "Ca", "Pe", "Cu", "Ct", "Pa"].map((d) => <div key={d}>{d}</div>)}
+    <div className="space-y-4">
+      <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 flex flex-wrap items-center gap-3">
+        <label className="text-sm font-medium text-slate-700">Hizmet:</label>
+        <select
+          value={slug}
+          onChange={(e) => setSlug(e.target.value)}
+          className="border border-slate-300 rounded-lg px-3 py-2 text-sm min-w-[280px]"
+        >
+          {(() => {
+            const groups: Record<string, ServiceOption[]> = {};
+            services.forEach((s) => {
+              groups[s.category] = groups[s.category] ?? [];
+              groups[s.category].push(s);
+            });
+            return Object.entries(groups).map(([cat, items]) => (
+              <optgroup key={cat} label={cat}>
+                {items.map((s) => (
+                  <option key={s.slug} value={s.slug}>{s.name}</option>
+                ))}
+              </optgroup>
+            ));
+          })()}
+        </select>
+        <div className="ml-auto flex items-center gap-2">
+          <button onClick={() => changeMonth(-1)} className="px-3 py-1.5 border border-slate-300 rounded-lg text-sm hover:bg-slate-50">‹</button>
+          <span className="text-sm font-semibold text-slate-900 min-w-[140px] text-center">
+            {TR_MONTHS[monthIdx]} {year}
+          </span>
+          <button onClick={() => changeMonth(1)} className="px-3 py-1.5 border border-slate-300 rounded-lg text-sm hover:bg-slate-50">›</button>
+        </div>
       </div>
-      <div className="grid grid-cols-7 gap-2">
-        {days.map((d) => {
-          const o = occupancy(d);
-          return (
-            <div key={d} className="border border-slate-200 rounded-lg p-2 hover:shadow transition-shadow cursor-pointer">
-              <p className="font-semibold text-sm">{d}</p>
-              <div className={cn("h-1.5 rounded-full mt-1", o.color)} style={{ width: `${o.pct}%` }} />
-              <p className="text-xs text-slate-500 mt-1">{o.pct}%</p>
+
+      <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6">
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="font-bold text-slate-900">Doluluk Takvimi</h2>
+          {loading && <span className="text-xs text-slate-500">Yükleniyor...</span>}
+        </div>
+        <div className="grid grid-cols-7 gap-2 text-center text-xs text-slate-500 mb-2">
+          {["Pt", "Sa", "Ça", "Pe", "Cu", "Ct", "Pa"].map((d) => <div key={d}>{d}</div>)}
+        </div>
+        <div className="grid grid-cols-7 gap-2">
+          {(() => {
+            const firstDay = new Date(year, monthIdx, 1).getDay(); // 0=Pa..6=Ct
+            // Pazartesi=0 olacak sekilde shift: (firstDay+6)%7
+            const shift = (firstDay + 6) % 7;
+            const blanks = Array.from({ length: shift }, (_, i) => (
+              <div key={`b${i}`} className="h-20" />
+            ));
+            const cells = days.map((d) => {
+              const dayNum = Number(d.date.slice(8, 10));
+              return (
+                <button
+                  key={d.date}
+                  onClick={() => openEdit(d)}
+                  className={cn(
+                    "h-20 border-2 rounded-lg p-2 text-left hover:shadow transition-all",
+                    dayCellStyle(d)
+                  )}
+                  title={`${d.date} — ${d.status}, ${d.remainingSlots}/${d.totalSlots}`}
+                >
+                  <p className="font-bold text-sm">{dayNum}</p>
+                  <p className="text-[10px] uppercase font-semibold mt-0.5">
+                    {d.status === "full" ? "Dolu" : d.status === "limited" ? "Az" : "Müsait"}
+                  </p>
+                  <p className="text-[10px] mt-0.5">{d.remainingSlots}/{d.totalSlots}</p>
+                </button>
+              );
+            });
+            return [...blanks, ...cells];
+          })()}
+        </div>
+        <div className="flex flex-wrap gap-4 mt-4 text-xs">
+          <Legend color="bg-emerald-500" label="Müsait" />
+          <Legend color="bg-amber-500" label="Az koltuk (≤3)" />
+          <Legend color="bg-rose-500" label="Dolu" />
+          <Legend color="bg-slate-300" label="Geçmiş" />
+        </div>
+        <p className="text-xs text-slate-400 mt-3">
+          Bir güne tıklayarak status, koltuk sayısı ve not düzenleyebilirsiniz.
+          Değişiklikler anında booking sayfasına yansır (POST /api/availability).
+        </p>
+      </div>
+
+      {editingDate && (
+        <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50 p-4" onClick={() => setEditingDate(null)}>
+          <div onClick={(e) => e.stopPropagation()} className="bg-white rounded-2xl p-6 max-w-md w-full">
+            <h3 className="font-bold text-lg mb-1">{editingDate} — Doluluk Düzenle</h3>
+            <p className="text-xs text-slate-500 mb-4">
+              {services.find((s) => s.slug === slug)?.name ?? slug}
+            </p>
+            <div className="space-y-3">
+              <div>
+                <label className="block text-xs font-medium text-slate-700 mb-1">Durum</label>
+                <select
+                  value={editStatus}
+                  onChange={(e) => setEditStatus(e.target.value as AvailabilityStatus)}
+                  className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm"
+                >
+                  <option value="available">Müsait</option>
+                  <option value="limited">Az koltuk</option>
+                  <option value="full">Dolu</option>
+                </select>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label className="block text-xs font-medium text-slate-700 mb-1">Kalan Koltuk</label>
+                  <input
+                    type="number"
+                    min={0}
+                    value={editRemaining}
+                    onChange={(e) => setEditRemaining(Number(e.target.value))}
+                    className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-medium text-slate-700 mb-1">Toplam Kapasite</label>
+                  <input
+                    type="number"
+                    min={0}
+                    value={editTotal}
+                    onChange={(e) => setEditTotal(Number(e.target.value))}
+                    className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm"
+                  />
+                </div>
+              </div>
+              <div>
+                <label className="block text-xs font-medium text-slate-700 mb-1">Not (opsiyonel)</label>
+                <textarea
+                  value={editNote}
+                  onChange={(e) => setEditNote(e.target.value)}
+                  rows={2}
+                  placeholder="Örn: Hava durumu nedeniyle iptal riski"
+                  className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm"
+                />
+              </div>
+
+              <div className="bg-slate-50 rounded-lg p-2 text-xs text-slate-600">
+                <strong>İpucu:</strong> Status'u boş bırakırsanız kalan/toplam slot'tan otomatik hesaplanır
+                (0=dolu, ≤3=limited, üstü=müsait).
+              </div>
+
+              {saveError && (
+                <div className="bg-rose-50 border-l-4 border-rose-500 text-rose-800 text-xs p-2 rounded">
+                  {saveError}
+                </div>
+              )}
             </div>
-          );
-        })}
-      </div>
-      <div className="flex gap-4 mt-4 text-xs">
-        <Legend color="bg-emerald-500" label="Müsait" />
-        <Legend color="bg-amber-500" label="Doluyor" />
-        <Legend color="bg-rose-500" label="Dolu" />
-        <Legend color="bg-slate-300" label="Az satış" />
-      </div>
+            <div className="flex justify-end gap-2 mt-5">
+              <button onClick={() => setEditingDate(null)} className="px-4 py-2 border border-slate-300 rounded-lg text-sm">
+                İptal
+              </button>
+              <button
+                onClick={saveEdit}
+                disabled={saving}
+                className="px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white rounded-lg text-sm font-semibold disabled:opacity-50"
+              >
+                {saving ? "Kaydediliyor..." : "Kaydet"}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

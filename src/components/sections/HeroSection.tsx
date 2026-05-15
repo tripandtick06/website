@@ -2,8 +2,11 @@
 
 import { MapPin } from "lucide-react";
 import { SearchWidget } from "@/components/booking/SearchWidget";
+import { useT } from "@/lib/i18n/I18nProvider";
 
 export function HeroSection() {
+  const t = useT();
+
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-[#0F1B4D] via-primary to-[#2A1A4A] overflow-hidden px-4 pt-[100px] pb-16">
       {/* Background Decorative Circles */}
@@ -18,23 +21,22 @@ export function HeroSection() {
         <span className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse-slow" />
         <MapPin className="w-3.5 h-3.5 text-accent-light" />
         <span className="text-sm font-semibold text-accent-light">
-          Nevşehir / Kapadokya
+          {t.hero.badge}
         </span>
       </div>
 
       {/* Heading */}
       <h1 className="relative text-center text-white font-black tracking-tight leading-[1.08] mb-5 text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
-        Kapadokya&apos;nın
+        {t.hero.title1}
         <br />
-        <span className="text-accent">En İyi Deneyimleri</span>
+        <span className="text-accent">{t.hero.title2}</span>
         <br />
-        En Uygun Fiyatla
+        {t.hero.title3}
       </h1>
 
       {/* Subtitle */}
       <p className="relative text-white/65 text-center max-w-xl mb-10 text-base sm:text-lg font-normal">
-        Balon turlarından otel rezervasyonuna, ATV turlarından özel paketlere
-        — tek platformda, şeffaf fiyatlarla.
+        {t.hero.subtitle}
       </p>
 
       {/* Search Widget */}

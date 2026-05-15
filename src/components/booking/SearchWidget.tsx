@@ -4,7 +4,7 @@ import { useState } from "react";
 import {
   Wind,
   Hotel,
-  Bike,
+  MountainSnow,
   TreePine,
   Package,
   CalendarDays,
@@ -20,7 +20,7 @@ import { cn } from "@/lib/utils";
 const TABS = [
   { id: "balloon", label: "Balon Uçuşu", icon: Wind },
   { id: "hotel", label: "Otel", icon: Hotel },
-  { id: "atv", label: "ATV Turu", icon: Bike },
+  { id: "atv", label: "Aktiviteler", icon: MountainSnow },
   { id: "tour", label: "Gezi Turları", icon: TreePine },
   { id: "package", label: "Paketler", icon: Package },
 ];

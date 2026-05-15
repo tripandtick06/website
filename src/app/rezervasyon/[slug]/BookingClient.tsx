@@ -31,6 +31,15 @@ import {
   type BookingStep,
 } from "@/lib/booking-storage";
 import { formatPrice, formatDate, cn } from "@/lib/utils";
+import { AvailabilityBadge } from "@/components/booking/AvailabilityBadge";
+import type { AvailabilityStatus } from "@/data/availability";
+
+interface PublicAvailability {
+  date: string;
+  status: AvailabilityStatus;
+  remainingSlots: number;
+  note?: string;
+}
 
 export interface BookingService {
   slug: string;
@@ -122,9 +131,15 @@ export function BookingClient({ service }: { service: BookingService }) {
   const [submitting, setSubmitting] = useState<boolean>(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [bookingCode, setBookingCode] = useState<string>("");
+  const [availability, setAvailability] = useState<PublicAvailability | null>(null);
+  const [availabilityLoading, setAvailabilityLoading] = useState<boolean>(false);
+  const [emailSent, setEmailSent] = useState<boolean>(false);
+  const [emailStatus, setEmailStatus] = useState<"pending" | "sent" | "error">("pending");
+  const [emailError, setEmailError] = useState<string | null>(null);
 
   useEffect(() => {
     if (isOnConfirmationStep) {
+      // Lokal fallback kodu (API cevabi gelmeden once UI bos kalmasin diye)
       setBookingCode(generateBookingCode());
       return;
     }
@@ -201,6 +216,28 @@ export function BookingClient({ service }: { service: BookingService }) {
     step,
   ]);
 
+  // Tarih degistiginde doluluk sorgusu (Step 2 sinyal + Step 5 defansif blok).
+  useEffect(() => {
+    if (!date) {
+      setAvailability(null);
+      return;
+    }
+    const controller = new AbortController();
+    setAvailabilityLoading(true);
+    fetch(
+      `/api/availability?slug=${encodeURIComponent(service.slug)}&date=${encodeURIComponent(date)}`,
+      { signal: controller.signal }
+    )
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data) => {
+        if (data?.day) setAvailability(data.day as PublicAvailability);
+        else setAvailability(null);
+      })
+      .catch(() => setAvailability(null))
+      .finally(() => setAvailabilityLoading(false));
+    return () => controller.abort();
+  }, [date, service.slug]);
+
   function goNext() {
     if (step < 6) setStep((s) => (s + 1) as BookingStep);
   }
@@ -235,6 +272,16 @@ export function BookingClient({ service }: { service: BookingService }) {
   }
 
   async function startCheckout() {
+    if (availabilityFull) {
+      setSubmitError("Bu tarih dolu. Lütfen başka bir tarih seçin.");
+      return;
+    }
+    if (availabilityShort) {
+      setSubmitError(
+        `Bu tarihte yeterli koltuk yok (${availability?.remainingSlots ?? 0} kaldı).`
+      );
+      return;
+    }
     setSubmitting(true);
     setSubmitError(null);
     try {
@@ -273,7 +320,94 @@ export function BookingClient({ service }: { service: BookingService }) {
     );
   }
 
-  const canStep2Continue = !!date && date >= tomorrowIso();
+  async function sendBookingEmail(): Promise<void> {
+    setEmailStatus("pending");
+    setEmailError(null);
+    try {
+      // Onay step'inde draft hala localStorage'da olabilir (clearDraft Step6'da degil)
+      const draft = loadDraft();
+      const pax = draft?.passengers && draft.passengers.length > 0
+        ? draft.passengers
+        : passengers;
+      const lead = pax[0];
+      if (!lead || !lead.email) {
+        throw new Error("Yolcu e-postası bulunamadı");
+      }
+
+      const res = await fetch("/api/booking", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          serviceSlug: service.slug,
+          serviceName: service.name,
+          date: draft?.date ?? date,
+          adults: draft?.adults ?? adults,
+          children: draft?.children ?? children,
+          totalPrice: draft?.totalPrice ?? totalPrice,
+          currency: service.currency,
+          passengers: pax.map((p) => ({
+            fullName: p.fullName || "Yolcu",
+            email: p.email,
+            phone: p.phone || "+90",
+            nationality: p.nationality || "TR",
+            age: p.age,
+            accommodation: p.accommodation,
+          })),
+          insurance: draft?.insurance ?? insurance,
+          promoCode: draft?.promoCode,
+          paymentSessionId: sessionId ?? undefined,
+        }),
+      });
+
+      if (!res.ok) {
+        const errBody = await res.json().catch(() => ({}));
+        throw new Error(errBody?.error ?? `Mail gönderilemedi (${res.status})`);
+      }
+
+      const data = (await res.json()) as {
+        bookingId?: string;
+        emailSent?: { customer: boolean; admin: boolean };
+      };
+      if (data.bookingId) setBookingCode(data.bookingId);
+      const customerOk = data.emailSent?.customer ?? false;
+      setEmailStatus(customerOk ? "sent" : "error");
+      if (!customerOk) {
+        setEmailError("E-posta sağlayıcısı geçici olarak yanıt vermiyor. Lütfen birazdan tekrar deneyin.");
+      }
+      setEmailSent(true);
+    } catch (err) {
+      console.error("[booking] sendBookingEmail failed", err);
+      setEmailStatus("error");
+      setEmailError(err instanceof Error ? err.message : "Bilinmeyen hata");
+      setEmailSent(true);
+    }
+  }
+
+  // Step 6'ya ulasildiginda otomatik tek seferlik gonderim
+  useEffect(() => {
+    if (step !== 6) return;
+    if (emailSent) return;
+    if (isDemo) {
+      // Demo modunda gercek mail gondermeyelim
+      setEmailStatus("sent");
+      setEmailSent(true);
+      return;
+    }
+    void sendBookingEmail();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [step]);
+
+  const paxTotal = adults + children;
+  const availabilityFull = availability?.status === "full";
+  const availabilityShort =
+    !!availability &&
+    availability.status !== "full" &&
+    availability.remainingSlots < paxTotal;
+  const canStep2Continue =
+    !!date &&
+    date >= tomorrowIso() &&
+    !availabilityFull &&
+    !availabilityShort;
   const canStep4Continue = policyAccepted;
 
   const discount = getPromoDiscount(promoCode);
@@ -336,6 +470,9 @@ export function BookingClient({ service }: { service: BookingService }) {
                 children={children}
                 setChildren={setChildren}
                 canContinue={canStep2Continue}
+                availability={availability}
+                availabilityLoading={availabilityLoading}
+                paxTotal={paxTotal}
                 onBack={goBack}
                 onNext={goNext}
               />
@@ -396,6 +533,12 @@ export function BookingClient({ service }: { service: BookingService }) {
                 date={date}
                 paxCount={paxCount}
                 totalPrice={totalPrice}
+                emailStatus={emailStatus}
+                emailError={emailError}
+                onResend={() => {
+                  setEmailSent(false);
+                  void sendBookingEmail();
+                }}
                 onStartOver={handleStartOver}
               />
             )}
@@ -568,10 +711,31 @@ function Step2DateAndPax(props: {
   children: number;
   setChildren: (v: number) => void;
   canContinue: boolean;
+  availability: PublicAvailability | null;
+  availabilityLoading: boolean;
+  paxTotal: number;
   onBack: () => void;
   onNext: () => void;
 }) {
-  const { service, date, setDate, adults, setAdults, children, setChildren, canContinue, onBack, onNext } = props;
+  const {
+    service, date, setDate, adults, setAdults, children, setChildren,
+    canContinue, availability, availabilityLoading, paxTotal, onBack, onNext,
+  } = props;
+
+  const showFull = !!date && availability?.status === "full";
+  const showShort =
+    !!date &&
+    !!availability &&
+    availability.status !== "full" &&
+    availability.remainingSlots < paxTotal;
+  const showLimited =
+    !!date &&
+    !!availability &&
+    availability.status === "limited" &&
+    availability.remainingSlots >= paxTotal;
+  const showOk =
+    !!date && !!availability && availability.status === "available" && !showShort;
+
   return (
     <div>
       <h2 className="text-2xl font-bold text-slate-900 mb-4">2. Tarih ve Kişi Sayısı</h2>
@@ -586,6 +750,44 @@ function Step2DateAndPax(props: {
             className="w-full border border-slate-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-500"
           />
           <p className="text-xs text-slate-500 mt-1">En erken yarın için rezervasyon yapabilirsiniz.</p>
+
+          {date && availabilityLoading && (
+            <p className="text-xs text-slate-500 mt-2">Doluluk kontrol ediliyor...</p>
+          )}
+
+          {showFull && (
+            <div className="mt-3 border-l-4 border-rose-500 bg-rose-50 p-3 rounded text-sm text-rose-900">
+              <strong>Bu tarih dolu.</strong> Lütfen başka bir tarih seçin.
+              {availability?.note && <p className="mt-1 text-xs">{availability.note}</p>}
+            </div>
+          )}
+
+          {showShort && (
+            <div className="mt-3 border-l-4 border-rose-500 bg-rose-50 p-3 rounded text-sm text-rose-900">
+              <strong>Yeterli koltuk yok</strong> — bu tarihte sadece {availability!.remainingSlots} koltuk kaldı, siz {paxTotal} kişisiniz.
+              Kişi sayısını azaltın veya başka tarih seçin.
+            </div>
+          )}
+
+          {showLimited && (
+            <div className="mt-3 border-l-4 border-amber-500 bg-amber-50 p-3 rounded text-sm text-amber-900 flex items-start gap-2">
+              <AlertTriangle className="w-4 h-4 text-amber-600 mt-0.5 flex-shrink-0" />
+              <div>
+                <strong>Sadece {availability!.remainingSlots} koltuk kaldı!</strong> Hızlı rezervasyon önerilir.
+                {availability?.note && <p className="mt-1 text-xs">{availability.note}</p>}
+              </div>
+            </div>
+          )}
+
+          {showOk && (
+            <div className="mt-3 inline-flex">
+              <AvailabilityBadge
+                status={availability!.status}
+                remainingSlots={availability!.remainingSlots}
+                size="sm"
+              />
+            </div>
+          )}
         </div>
         <Counter label="Yetişkin (12+ yaş)" value={adults} min={1} max={20} onChange={setAdults} />
         <Counter label={`Çocuk (${service.minAge || 6}-11 yaş)`} value={children} min={0} max={10} onChange={setChildren} disabled={service.minAge >= 16} />
@@ -874,16 +1076,45 @@ function Step6Confirmation(props: {
   date: string;
   paxCount: number;
   totalPrice: number;
+  emailStatus: "pending" | "sent" | "error";
+  emailError: string | null;
+  onResend: () => void;
   onStartOver: () => void;
 }) {
-  const { service, bookingCode, date, paxCount, totalPrice, onStartOver } = props;
+  const { service, bookingCode, date, paxCount, totalPrice, emailStatus, emailError, onResend, onStartOver } = props;
+
+  const emailBanner =
+    emailStatus === "pending" ? (
+      <div className="bg-slate-50 border border-slate-200 rounded-lg p-3 max-w-md mx-auto mb-4 text-sm text-slate-600 flex items-center justify-center gap-2">
+        <span className="inline-block w-3 h-3 border-2 border-slate-300 border-t-amber-500 rounded-full animate-spin" />
+        E-postanız gönderiliyor...
+      </div>
+    ) : emailStatus === "sent" ? (
+      <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-3 max-w-md mx-auto mb-4 text-sm text-emerald-700">
+        ✓ Bilet e-postanıza gönderildi. Gelmediyse spam klasörünü kontrol edin.
+      </div>
+    ) : (
+      <div className="bg-rose-50 border border-rose-200 rounded-lg p-3 max-w-md mx-auto mb-4 text-sm text-rose-700">
+        <p className="font-semibold mb-1">E-posta gönderilemedi</p>
+        <p className="text-xs mb-2">{emailError ?? "Bilinmeyen hata"}</p>
+        <button
+          onClick={onResend}
+          className="inline-flex items-center gap-2 px-3 py-1.5 bg-rose-600 hover:bg-rose-700 text-white rounded-md text-xs font-semibold"
+        >
+          Tekrar Gönder
+        </button>
+      </div>
+    );
+
   return (
     <div className="text-center py-6">
       <div className="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
         <CheckCircle2 className="w-12 h-12 text-emerald-600" />
       </div>
       <h2 className="text-2xl font-bold text-slate-900 mb-2">Rezervasyonunuz Onaylandı!</h2>
-      <p className="text-slate-600 mb-6">Detaylar e-postanıza gönderildi.</p>
+      <p className="text-slate-600 mb-4">Rezervasyon kodunuzu not edin — onay e-postası da yola çıktı.</p>
+
+      {emailBanner}
 
       <div className="bg-amber-50 border-2 border-amber-200 rounded-lg p-4 max-w-md mx-auto mb-6">
         <p className="text-sm text-slate-600 mb-1">Rezervasyon Kodu</p>

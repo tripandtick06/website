@@ -10,36 +10,46 @@ import {
   Wind,
   Hotel,
   Car,
-  Bike,
+  MountainSnow,
   TreePine,
   Package,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useLocale, useT } from "@/lib/i18n/I18nProvider";
+import { isLocale } from "@/lib/i18n/dictionaries";
 
-const NAV_ITEMS = [
-  { href: "/balonlar", label: "Balon Turları", icon: Wind },
-  { href: "/oteller", label: "Oteller", icon: Hotel },
-  { href: "/aktiviteler", label: "Aktiviteler", icon: Bike },
-  { href: "/turlar", label: "Gezi Turları", icon: TreePine },
-  { href: "/paketler", label: "Paketler", icon: Package },
-];
+type LangEntry = {
+  code: string;
+  label: string;
+  flag: string;
+  disabled: boolean;
+};
 
-const LANGUAGES = [
-  { code: "tr", label: "Türkçe", flag: "TR" },
-  { code: "en", label: "English", flag: "EN" },
-  { code: "de", label: "Deutsch", flag: "DE" },
-  { code: "fr", label: "Français", flag: "FR" },
-  { code: "es", label: "Español", flag: "ES" },
-  { code: "nl", label: "Nederlands", flag: "NL" },
-  { code: "zh", label: "中文", flag: "ZH" },
-  { code: "hi", label: "हिन्दी", flag: "HI" },
-  { code: "ur", label: "اردو", flag: "UR" },
+const LANGUAGES: LangEntry[] = [
+  { code: "tr", label: "Türkçe", flag: "TR", disabled: false },
+  { code: "en", label: "English", flag: "EN", disabled: false },
+  { code: "de", label: "Deutsch", flag: "DE", disabled: true },
+  { code: "fr", label: "Français", flag: "FR", disabled: true },
+  { code: "es", label: "Español", flag: "ES", disabled: true },
+  { code: "nl", label: "Nederlands", flag: "NL", disabled: true },
+  { code: "zh", label: "中文", flag: "ZH", disabled: true },
+  { code: "hi", label: "हिन्दी", flag: "HI", disabled: true },
+  { code: "ur", label: "اردو", flag: "UR", disabled: true },
 ];
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
-  const [currentLang, setCurrentLang] = useState("tr");
+  const { locale, setLocale } = useLocale();
+  const t = useT();
+
+  const NAV_ITEMS = [
+    { href: "/balonlar", label: t.nav.balloons, icon: Wind },
+    { href: "/oteller", label: t.nav.hotels, icon: Hotel },
+    { href: "/aktiviteler", label: t.nav.activities, icon: MountainSnow },
+    { href: "/turlar", label: t.nav.tours, icon: TreePine },
+    { href: "/paketler", label: t.nav.packages, icon: Package },
+  ];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-primary/[0.97] backdrop-blur-xl border-b border-white/[0.06]">
@@ -70,7 +80,7 @@ export function Header() {
             href="/blog"
             className="px-4 py-2 rounded-lg text-sm font-medium text-white/75 hover:text-white hover:bg-white/[0.08] transition-all"
           >
-            Blog
+            {t.nav.blog}
           </Link>
         </nav>
 
@@ -81,31 +91,58 @@ export function Header() {
             <button
               onClick={() => setLangOpen(!langOpen)}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 border border-white/15 text-white text-sm font-medium hover:bg-white/15 transition-all"
+              aria-haspopup="listbox"
+              aria-expanded={langOpen}
             >
               <Globe className="w-4 h-4" />
-              {currentLang.toUpperCase()}
+              {locale.toUpperCase()}
               <ChevronDown className="w-3 h-3" />
             </button>
             {langOpen && (
-              <div className="absolute right-0 top-full mt-2 w-48 bg-white rounded-xl shadow-elevated border border-slate-100 py-2 z-50">
-                {LANGUAGES.map((lang) => (
-                  <button
-                    key={lang.code}
-                    onClick={() => {
-                      setCurrentLang(lang.code);
-                      setLangOpen(false);
-                    }}
-                    className={cn(
-                      "w-full text-left px-4 py-2 text-sm font-medium hover:bg-slate-50 transition-colors flex items-center justify-between",
-                      currentLang === lang.code
-                        ? "text-primary bg-primary/5"
-                        : "text-slate-700"
-                    )}
-                  >
-                    <span>{lang.label}</span>
-                    <span className="text-xs text-slate-400 font-mono">{lang.flag}</span>
-                  </button>
-                ))}
+              <div
+                className="absolute right-0 top-full mt-2 w-56 bg-white rounded-xl shadow-elevated border border-slate-100 py-2 z-50"
+                role="listbox"
+              >
+                {LANGUAGES.map((lang) => {
+                  const isActive = locale === lang.code;
+                  if (lang.disabled) {
+                    return (
+                      <button
+                        key={lang.code}
+                        type="button"
+                        disabled
+                        title="Faz 2'de eklenecek"
+                        className="w-full text-left px-4 py-2 text-sm font-medium text-slate-400 opacity-50 cursor-not-allowed flex items-center justify-between"
+                      >
+                        <span>{lang.label}</span>
+                        <span className="text-[10px] font-semibold uppercase tracking-wide bg-slate-100 text-slate-500 px-2 py-0.5 rounded-full">
+                          Yakında
+                        </span>
+                      </button>
+                    );
+                  }
+                  return (
+                    <button
+                      key={lang.code}
+                      type="button"
+                      onClick={() => {
+                        if (isLocale(lang.code)) {
+                          setLocale(lang.code);
+                        }
+                        setLangOpen(false);
+                      }}
+                      className={cn(
+                        "w-full text-left px-4 py-2 text-sm font-medium hover:bg-slate-50 transition-colors flex items-center justify-between",
+                        isActive
+                          ? "text-primary bg-primary/5"
+                          : "text-slate-700"
+                      )}
+                    >
+                      <span>{lang.label}</span>
+                      <span className="text-xs text-slate-400 font-mono">{lang.flag}</span>
+                    </button>
+                  );
+                })}
               </div>
             )}
           </div>
@@ -115,13 +152,14 @@ export function Header() {
             href="/balonlar"
             className="hidden sm:inline-flex btn-accent text-sm !py-2 !px-5"
           >
-            Rezervasyon Yap
+            {t.common.reserve}
           </Link>
 
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="lg:hidden p-2 text-white"
+            aria-label="Menu"
           >
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -147,11 +185,11 @@ export function Header() {
             onClick={() => setMobileOpen(false)}
             className="flex items-center gap-3 px-4 py-3 text-white/80 hover:text-white hover:bg-white/[0.06] rounded-lg transition-all"
           >
-            <span className="font-medium">Blog</span>
+            <span className="font-medium">{t.nav.blog}</span>
           </Link>
           <div className="mt-4 px-4">
             <Link href="/balonlar" className="btn-accent w-full block text-center">
-              Rezervasyon Yap
+              {t.common.reserve}
             </Link>
           </div>
         </div>
