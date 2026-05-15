@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import {
   Wind,
@@ -10,35 +12,73 @@ import {
   Shield,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-
-const CATEGORIES = [
-  {
-    icon: Wind,
-    name: "Balon Turları",
-    sub: "€165'ten başlayan",
-    href: "/balonlar",
-    featured: true,
-  },
-  { icon: Hotel, name: "Otel & Konaklama", sub: "Mağara otellerinden resort'lara", href: "/oteller" },
-  { icon: Car, name: "Transfer", sub: "Havalimanı & Şehirlerarası", href: "/transferler" },
-  { icon: Bike, name: "ATV Turları", sub: "$29'dan başlayan", href: "/aktiviteler" },
-  { icon: TreePine, name: "Gezi Turları", sub: "Kırmızı & Yeşil Tur", href: "/turlar" },
-  { icon: Package, name: "Özel Paketler", sub: "Balayı, teklif, doğum günü", href: "/paketler" },
-  { icon: PartyPopper, name: "At Binme", sub: "Gün doğumu & batımı", href: "/aktiviteler" },
-  { icon: Shield, name: "Seyahat Sigortası", sub: "Kapsamlı güvence", href: "#" },
-];
+import { useT } from "@/lib/i18n/I18nProvider";
 
 export function CategoriesSection() {
+  const t = useT();
+
+  const CATEGORIES = [
+    {
+      icon: Wind,
+      name: t.categories.balloons,
+      sub: t.categories.balloons_sub,
+      href: "/balonlar",
+      featured: true,
+    },
+    {
+      icon: Hotel,
+      name: t.categories.hotels,
+      sub: t.categories.hotels_sub,
+      href: "/oteller",
+    },
+    {
+      icon: Car,
+      name: t.categories.transfer,
+      sub: t.categories.transfer_sub,
+      href: "/transferler",
+    },
+    {
+      icon: Bike,
+      name: t.categories.atv,
+      sub: t.categories.atv_sub,
+      href: "/aktiviteler",
+    },
+    {
+      icon: TreePine,
+      name: t.categories.tours,
+      sub: t.categories.tours_sub,
+      href: "/turlar",
+    },
+    {
+      icon: Package,
+      name: t.categories.packages,
+      sub: t.categories.packages_sub,
+      href: "/paketler",
+    },
+    {
+      icon: PartyPopper,
+      name: t.categories.horse,
+      sub: t.categories.horse_sub,
+      href: "/aktiviteler",
+    },
+    {
+      icon: Shield,
+      name: t.categories.insurance,
+      sub: t.categories.insurance_sub,
+      href: "#",
+    },
+  ];
+
   return (
     <section className="section-padding bg-slate-50">
       <div className="container-main">
         <div className="text-center mb-12">
-          <span className="section-tag">Hizmetlerimiz</span>
+          <span className="section-tag">{t.categories.tag}</span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Her Şey Tek Yerden
+            {t.categories.title}
           </h2>
           <p className="text-slate-500 mt-3 max-w-md mx-auto">
-            Uçak bileti hariç, Kapadokya&apos;da ihtiyacınız olan her seyahat hizmeti burada.
+            {t.categories.subtitle}
           </p>
         </div>
 

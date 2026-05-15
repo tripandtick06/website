@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import {
   Globe,
@@ -42,6 +42,49 @@ export function Header() {
   const [langOpen, setLangOpen] = useState(false);
   const { locale, setLocale } = useLocale();
   const t = useT();
+  const langWrapperRef = useRef<HTMLDivElement | null>(null);
+  const mobileWrapperRef = useRef<HTMLDivElement | null>(null);
+
+  // Click-outside + Escape close (langOpen + mobileOpen)
+  useEffect(() => {
+    if (!langOpen && !mobileOpen) return;
+
+    function handlePointerDown(event: MouseEvent | TouchEvent) {
+      const target = event.target as Node | null;
+      if (
+        langOpen &&
+        langWrapperRef.current &&
+        target &&
+        !langWrapperRef.current.contains(target)
+      ) {
+        setLangOpen(false);
+      }
+      if (
+        mobileOpen &&
+        mobileWrapperRef.current &&
+        target &&
+        !mobileWrapperRef.current.contains(target)
+      ) {
+        setMobileOpen(false);
+      }
+    }
+
+    function handleKey(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        if (langOpen) setLangOpen(false);
+        if (mobileOpen) setMobileOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handlePointerDown);
+    document.addEventListener("touchstart", handlePointerDown);
+    document.addEventListener("keydown", handleKey);
+    return () => {
+      document.removeEventListener("mousedown", handlePointerDown);
+      document.removeEventListener("touchstart", handlePointerDown);
+      document.removeEventListener("keydown", handleKey);
+    };
+  }, [langOpen, mobileOpen]);
 
   const NAV_ITEMS = [
     { href: "/balonlar", label: t.nav.balloons, icon: Wind },
@@ -52,7 +95,10 @@ export function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-primary/[0.97] backdrop-blur-xl border-b border-white/[0.06]">
+    <header
+      ref={mobileWrapperRef}
+      className="fixed top-0 left-0 right-0 z-50 bg-primary/[0.97] backdrop-blur-xl border-b border-white/[0.06]"
+    >
       <div className="container-main flex items-center justify-between h-[68px]">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 group">
@@ -87,7 +133,7 @@ export function Header() {
         {/* Right Side */}
         <div className="flex items-center gap-3">
           {/* Language Switcher */}
-          <div className="relative">
+          <div className="relative" ref={langWrapperRef}>
             <button
               onClick={() => setLangOpen(!langOpen)}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 border border-white/15 text-white text-sm font-medium hover:bg-white/15 transition-all"

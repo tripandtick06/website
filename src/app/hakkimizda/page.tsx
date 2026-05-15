@@ -1,10 +1,26 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Shield, Users, Star, Award, Heart, Target, Eye, Trophy } from "lucide-react";
+import {
+  Shield,
+  Users,
+  Star,
+  Award,
+  Heart,
+  Target,
+  Eye,
+  Trophy,
+  Mail,
+  Phone,
+  MapPin,
+  Receipt,
+  Calendar,
+  BadgeCheck,
+} from "lucide-react";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { PageHero } from "@/components/layout/PageHero";
 import { JsonLd } from "@/components/layout/JsonLd";
-import { breadcrumbSchema, SITE_URL } from "@/lib/schema";
+import { breadcrumbSchema, personSchema, SITE_URL } from "@/lib/schema";
+import { COMPANY, FOUNDER, telHref } from "@/data/founder";
 
 export const metadata: Metadata = {
   title: "Hakkımızda — TÜRSAB Lisanslı Kapadokya Acentası | Trip and Tick",
@@ -159,6 +175,131 @@ export default function HakkimizdaPage() {
         </div>
       </section>
 
+      {/* Founder / Kurucu Ekip */}
+      <section className="section-padding bg-white">
+        <div className="container-main max-w-5xl">
+          <div className="text-center mb-10">
+            <span className="section-tag">Kurucu Ekip</span>
+            <h2 className="text-3xl font-extrabold text-slate-900">
+              Trip and Tick&apos;in Arkasındaki Ekip
+            </h2>
+          </div>
+          <div className="card p-8 max-w-3xl mx-auto">
+            <div className="flex items-start gap-5">
+              <div className="w-16 h-16 rounded-full bg-accent/[0.1] flex items-center justify-center shrink-0">
+                <Users className="w-8 h-8 text-accent" />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-2xl font-bold text-slate-900">
+                  {FOUNDER.name}
+                </h3>
+                <div className="text-sm text-accent font-semibold mt-1 mb-3">
+                  {FOUNDER.title}
+                </div>
+                <p className="text-slate-700 leading-relaxed mb-4">
+                  {FOUNDER.bio}
+                </p>
+                <a
+                  href={`mailto:${FOUNDER.email}`}
+                  className="inline-flex items-center gap-2 text-sm text-accent hover:underline"
+                >
+                  <Mail className="w-4 h-4" /> {FOUNDER.email}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Company contact grid */}
+      <section className="section-padding bg-slate-50">
+        <div className="container-main max-w-5xl">
+          <div className="text-center mb-10">
+            <span className="section-tag">Şirket Bilgileri</span>
+            <h2 className="text-3xl font-extrabold text-slate-900">
+              {COMPANY.legalName}
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div className="card p-6">
+              <Phone className="w-7 h-7 text-accent mb-3" />
+              <div className="text-xs text-slate-500 uppercase tracking-wide mb-1">
+                Telefon
+              </div>
+              <a
+                href={telHref(COMPANY.phone)}
+                className="text-slate-900 font-semibold hover:text-accent"
+              >
+                {COMPANY.phone}
+              </a>
+            </div>
+            <div className="card p-6">
+              <Mail className="w-7 h-7 text-accent mb-3" />
+              <div className="text-xs text-slate-500 uppercase tracking-wide mb-1">
+                E-posta
+              </div>
+              <a
+                href={`mailto:${COMPANY.email}`}
+                className="block text-slate-900 font-semibold hover:text-accent"
+              >
+                {COMPANY.email}
+              </a>
+              <a
+                href={`mailto:${COMPANY.altEmail}`}
+                className="block text-sm text-slate-600 hover:text-accent mt-1"
+              >
+                {COMPANY.altEmail}
+              </a>
+            </div>
+            <div className="card p-6">
+              <Receipt className="w-7 h-7 text-accent mb-3" />
+              <div className="text-xs text-slate-500 uppercase tracking-wide mb-1">
+                Fatura / Muhasebe
+              </div>
+              <a
+                href={`mailto:${COMPANY.billingEmail}`}
+                className="text-slate-900 font-semibold hover:text-accent"
+              >
+                {COMPANY.billingEmail}
+              </a>
+            </div>
+            <div className="card p-6">
+              <MapPin className="w-7 h-7 text-accent mb-3" />
+              <div className="text-xs text-slate-500 uppercase tracking-wide mb-1">
+                Adres
+              </div>
+              <div className="text-slate-900 font-semibold leading-snug">
+                {COMPANY.address.street}
+                <br />
+                {COMPANY.address.locality}, {COMPANY.address.region}{" "}
+                {COMPANY.address.postalCode}
+                <br />
+                Türkiye
+              </div>
+            </div>
+            <div className="card p-6">
+              <BadgeCheck className="w-7 h-7 text-accent mb-3" />
+              <div className="text-xs text-slate-500 uppercase tracking-wide mb-1">
+                TÜRSAB Lisans No
+              </div>
+              <div className="text-slate-900 font-semibold">{COMPANY.tursab}</div>
+            </div>
+            <div className="card p-6">
+              <Calendar className="w-7 h-7 text-accent mb-3" />
+              <div className="text-xs text-slate-500 uppercase tracking-wide mb-1">
+                Kuruluş
+              </div>
+              <div className="text-slate-900 font-semibold">
+                {new Date(COMPANY.foundingDate).toLocaleDateString("tr-TR", {
+                  year: "numeric",
+                  month: "long",
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-gradient-to-br from-primary to-primary-dark text-white py-16">
         <div className="container-main text-center">
           <h2 className="text-3xl font-extrabold mb-3">Sorularınız mı var?</h2>
@@ -171,7 +312,12 @@ export default function HakkimizdaPage() {
         </div>
       </section>
 
-      <JsonLd data={breadcrumbSchema([{ name: "Hakkımızda", href: "/hakkimizda" }])} />
+      <JsonLd
+        data={[
+          breadcrumbSchema([{ name: "Hakkımızda", href: "/hakkimizda" }]),
+          personSchema(FOUNDER),
+        ]}
+      />
     </>
   );
 }

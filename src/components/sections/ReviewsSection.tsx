@@ -1,30 +1,26 @@
 import { Star, Quote } from "lucide-react";
+import { pickReviews } from "@/data/reviews";
 
-const REVIEWS = [
-  {
-    text: "Harika bir deneyimdi! Fiyatlar gerçekten rekabetçi, diğer sitelere bakıp karşılaştırdım. Transfer dakikası dakikasına geldi, rehberimiz çok iyiydi.",
-    name: "Ayşe K.",
-    location: "İstanbul, Türkiye",
-    rating: 5,
-    color: "bg-primary",
-  },
-  {
-    text: "Amazing experience! Booking was super easy, the price was the best we found online. The sunrise balloon flight was absolutely breathtaking.",
-    name: "Marco T.",
-    location: "Milan, Italy",
-    rating: 5,
-    color: "bg-accent",
-  },
-  {
-    text: "Das Preis-Leistungs-Verhältnis ist unschlagbar. Wir haben mehrere Anbieter verglichen und Trip and Tick war mit Abstand am günstigsten.",
-    name: "Laura S.",
-    location: "Berlin, Deutschland",
-    rating: 5,
-    color: "bg-success",
-  },
+const AVATAR_COLORS = [
+  "bg-primary",
+  "bg-accent",
+  "bg-success",
+  "bg-warning",
+  "bg-rose-500",
+  "bg-violet-500",
 ];
 
+function formatDate(iso: string): string {
+  // YYYY-MM-DD → DD.MM.YYYY (TR locale)
+  const [y, m, d] = iso.split("-");
+  if (!y || !m || !d) return iso;
+  return `${d}.${m}.${y}`;
+}
+
 export function ReviewsSection() {
+  // Server-render'da tutarli olsun: seedKey sabit ("homepage").
+  const reviews = pickReviews(6, "homepage");
+
   return (
     <section className="section-padding bg-white">
       <div className="container-main">
@@ -33,33 +29,63 @@ export function ReviewsSection() {
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             12.000+ Mutlu Yolcu
           </h2>
+          <p className="text-slate-500 mt-2 text-sm sm:text-base">
+            Trip and Tick&apos;e güvenenlerin gerçek deneyimleri
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1100px] mx-auto">
-          {REVIEWS.map((review) => (
-            <div key={review.name} className="bg-slate-50 rounded-2xl p-6 border border-slate-200 relative">
-              <Quote className="absolute top-4 right-4 w-8 h-8 text-slate-200" />
-              <div className="flex gap-0.5 mb-4">
-                {Array.from({ length: review.rating }).map((_, i) => (
-                  <Star key={i} className="w-4 h-4 text-warning fill-warning" />
-                ))}
-              </div>
-              <p className="text-sm text-slate-600 leading-relaxed mb-5 italic">
-                &ldquo;{review.text}&rdquo;
-              </p>
-              <div className="flex items-center gap-3">
-                <div
-                  className={`w-10 h-10 rounded-full ${review.color} flex items-center justify-center text-white font-bold text-sm`}
-                >
-                  {review.name[0]}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1200px] mx-auto">
+          {reviews.map((review, idx) => {
+            const color = AVATAR_COLORS[idx % AVATAR_COLORS.length];
+            const initial = review.avatar || review.name[0] || "?";
+            return (
+              <article
+                key={review.id}
+                className="bg-slate-50 rounded-2xl p-6 border border-slate-200 relative flex flex-col"
+              >
+                <Quote className="absolute top-4 right-4 w-8 h-8 text-slate-200" />
+                <div className="flex items-center justify-between mb-3">
+                  <div
+                    className="flex gap-0.5"
+                    aria-label={`${review.rating} yıldız puan`}
+                  >
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <Star
+                        key={i}
+                        className={
+                          i < review.rating
+                            ? "w-4 h-4 text-warning fill-warning"
+                            : "w-4 h-4 text-slate-200"
+                        }
+                      />
+                    ))}
+                  </div>
+                  <span className="text-[11px] uppercase font-bold text-slate-400 tracking-wider">
+                    {review.service}
+                  </span>
                 </div>
-                <div>
-                  <div className="font-bold text-sm text-slate-900">{review.name}</div>
-                  <div className="text-xs text-slate-400">{review.location}</div>
+                <p className="text-sm text-slate-600 leading-relaxed mb-5 italic flex-1">
+                  &ldquo;{review.text}&rdquo;
+                </p>
+                <div className="flex items-center gap-3 pt-4 border-t border-slate-200">
+                  <div
+                    className={`w-10 h-10 rounded-full ${color} flex items-center justify-center text-white font-bold text-sm`}
+                  >
+                    {initial}
+                  </div>
+                  <div className="flex-1">
+                    <div className="font-bold text-sm text-slate-900 flex items-center gap-1.5">
+                      {review.name}
+                      <span aria-hidden>{review.flag}</span>
+                    </div>
+                    <div className="text-xs text-slate-400">
+                      {formatDate(review.date)}
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          ))}
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>

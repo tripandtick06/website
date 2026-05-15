@@ -74,15 +74,26 @@ export default function IletisimPage() {
                 </ul>
               </div>
 
-              <div className="bg-slate-200 rounded-2xl h-64 flex items-center justify-center border border-slate-300">
-                <div className="text-center text-slate-500 p-4">
-                  <MapPin className="w-10 h-10 mx-auto mb-2" />
-                  <p className="text-sm font-semibold">Göreme Merkez, Nevşehir</p>
-                  <p className="text-xs mt-1">
-                    Harita yakında — şimdilik adres üstündeki Google Maps linkini kullanın.
-                  </p>
-                </div>
+              <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-card">
+                <iframe
+                  title="Trip and Tick — Göreme, Nevşehir konumu"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3175.5!2d34.8289!3d38.6431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sG%C3%B6reme!5e0!3m2!1str!2str!4v1736000000000"
+                  width="100%"
+                  height="360"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  allowFullScreen
+                />
               </div>
+              <a
+                href="https://maps.google.com/?q=G%C3%B6reme,%20Nev%C5%9Fehir,%20T%C3%BCrkiye"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 inline-flex items-center gap-2 px-4 py-2.5 bg-primary text-white rounded-xl text-sm font-bold hover:bg-primary-dark transition-colors"
+              >
+                <MapPin className="w-4 h-4" /> Yol Tarifi
+              </a>
             </div>
 
             <div>

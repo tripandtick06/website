@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Clock,
   Users,
@@ -8,6 +10,7 @@ import {
   Check,
   ArrowRight,
 } from "lucide-react";
+import { useT } from "@/lib/i18n/I18nProvider";
 
 interface PackageCardProps {
   badge: string;
@@ -20,6 +23,8 @@ interface PackageCardProps {
   unit: string;
   gradient: string;
   icon: React.ReactNode;
+  marketLabel: string;
+  reserveLabel: string;
 }
 
 function PackageCard({
@@ -33,6 +38,8 @@ function PackageCard({
   unit,
   gradient,
   icon,
+  marketLabel,
+  reserveLabel,
 }: PackageCardProps) {
   const badgeColors = {
     accent: "bg-accent",
@@ -77,12 +84,12 @@ function PackageCard({
 
         <div className="flex items-center justify-between pt-4 border-t border-slate-100">
           <div>
-            <div className="text-sm text-slate-400 line-through">Piyasa: €{marketPrice}</div>
+            <div className="text-sm text-slate-400 line-through">{marketLabel}: €{marketPrice}</div>
             <div className="text-2xl font-black text-primary">€{price}</div>
             <div className="text-xs text-slate-500">{unit}</div>
           </div>
           <button className="btn-accent flex items-center gap-2 !text-sm !py-2.5 !px-5">
-            Rezervasyon <ArrowRight className="w-4 h-4" />
+            {reserveLabel} <ArrowRight className="w-4 h-4" />
           </button>
         </div>
       </div>
@@ -91,24 +98,30 @@ function PackageCard({
 }
 
 export function PackagesSection() {
+  const t = useT();
+  const marketLabel = t.packages_section.market_price;
+  const reserveLabel = t.packages_section.reserve;
+
   return (
     <section className="section-padding bg-white">
       <div className="container-main">
         <div className="text-center mb-12">
-          <span className="section-tag">Öne Çıkan Paketler</span>
+          <span className="section-tag">{t.packages_section.tag}</span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            En Çok Tercih Edilenler
+            {t.packages_section.title}
           </h2>
           <p className="text-slate-500 mt-3 max-w-md mx-auto">
-            Rakip fiyatları karşılaştırdık, en iyi teklifleri sizin için seçtik.
+            {t.packages_section.subtitle}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 max-w-[1200px] mx-auto">
           <PackageCard
-            badge="En Popüler"
+            marketLabel={marketLabel}
+            reserveLabel={reserveLabel}
+            badge={t.packages_section.standart_badge}
             badgeColor="accent"
-            title="Standart Balon Uçuşu"
+            title={t.packages_section.standart_title}
             meta={[
               { icon: <Clock className="w-4 h-4" />, text: "60+ dk" },
               { icon: <Users className="w-4 h-4" />, text: "16-20 kişi" },
@@ -129,9 +142,11 @@ export function PackagesSection() {
           />
 
           <PackageCard
-            badge="Deluxe"
+            marketLabel={marketLabel}
+            reserveLabel={reserveLabel}
+            badge={t.packages_section.balayi_badge}
             badgeColor="warning"
-            title="Romantik Balayı Paketi"
+            title={t.packages_section.balayi_title}
             meta={[
               { icon: <Wind className="w-4 h-4" />, text: "Özel balon" },
               { icon: <Clock className="w-4 h-4" />, text: "2 gece otel" },
@@ -152,9 +167,11 @@ export function PackagesSection() {
           />
 
           <PackageCard
-            badge="Macera"
+            marketLabel={marketLabel}
+            reserveLabel={reserveLabel}
+            badge={t.packages_section.macera_badge}
             badgeColor="success"
-            title="Macera Paketi (2 Gün)"
+            title={t.packages_section.macera_title}
             meta={[
               { icon: <Wind className="w-4 h-4" />, text: "Balon" },
               { icon: <Zap className="w-4 h-4" />, text: "ATV" },

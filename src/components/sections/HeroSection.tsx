@@ -1,6 +1,6 @@
 "use client";
 
-import { MapPin } from "lucide-react";
+import { MapPin, ShieldCheck, Wallet, Users, BadgeCheck } from "lucide-react";
 import { SearchWidget } from "@/components/booking/SearchWidget";
 import { useT } from "@/lib/i18n/I18nProvider";
 
@@ -42,6 +42,26 @@ export function HeroSection() {
       {/* Search Widget */}
       <div className="relative w-full max-w-[920px]">
         <SearchWidget />
+      </div>
+
+      {/* Trust Badges */}
+      <div className="relative mt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-5 max-w-3xl">
+        <div className="flex items-center gap-2 bg-white/[0.07] border border-white/15 backdrop-blur-md rounded-full px-4 py-2 text-white/90 text-xs sm:text-sm font-medium">
+          <Wallet className="w-4 h-4 text-accent-light shrink-0" />
+          <span>{t.hero_trust.refund}</span>
+        </div>
+        <div className="flex items-center gap-2 bg-white/[0.07] border border-white/15 backdrop-blur-md rounded-full px-4 py-2 text-white/90 text-xs sm:text-sm font-medium">
+          <ShieldCheck className="w-4 h-4 text-accent-light shrink-0" />
+          <span>{t.hero_trust.insurance}</span>
+        </div>
+        <div className="flex items-center gap-2 bg-white/[0.07] border border-white/15 backdrop-blur-md rounded-full px-4 py-2 text-white/90 text-xs sm:text-sm font-medium">
+          <Users className="w-4 h-4 text-accent-light shrink-0" />
+          <span>{t.hero_trust.operators}</span>
+        </div>
+        <div className="flex items-center gap-2 bg-white/[0.07] border border-white/15 backdrop-blur-md rounded-full px-4 py-2 text-white/90 text-xs sm:text-sm font-medium">
+          <BadgeCheck className="w-4 h-4 text-accent-light shrink-0" />
+          <span>{t.hero_trust.tursab}</span>
+        </div>
       </div>
     </section>
   );

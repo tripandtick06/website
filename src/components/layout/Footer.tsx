@@ -1,23 +1,64 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import {
   Wind,
   Mail,
   Phone,
   MapPin,
+  MessageCircle,
   Instagram,
   Facebook,
   Twitter,
   Youtube,
+  Linkedin,
   Shield,
   CreditCard,
   Globe,
+  ChevronDown,
 } from "lucide-react";
-import { useT } from "@/lib/i18n/I18nProvider";
+import { cn } from "@/lib/utils";
+import { useLocale, useT } from "@/lib/i18n/I18nProvider";
+import { isLocale } from "@/lib/i18n/dictionaries";
+import { COMPANY, telHref, whatsappHref } from "@/data/founder";
+
+type FooterLang = {
+  code: string;
+  label: string;
+  flag: string;
+  disabled: boolean;
+};
+
+const FOOTER_LANGUAGES: FooterLang[] = [
+  { code: "tr", label: "Türkçe", flag: "TR", disabled: false },
+  { code: "en", label: "English", flag: "EN", disabled: false },
+  { code: "de", label: "Deutsch", flag: "DE", disabled: true },
+  { code: "fr", label: "Français", flag: "FR", disabled: true },
+  { code: "es", label: "Español", flag: "ES", disabled: true },
+  { code: "nl", label: "Nederlands", flag: "NL", disabled: true },
+  { code: "zh", label: "中文", flag: "ZH", disabled: true },
+  { code: "hi", label: "हिन्दी", flag: "HI", disabled: true },
+  { code: "ur", label: "اردو", flag: "UR", disabled: true },
+];
 
 export function Footer() {
   const t = useT();
+  const { locale, setLocale } = useLocale();
+  const [langOpen, setLangOpen] = useState(false);
+  const langRef = useRef<HTMLDivElement | null>(null);
+
+  // Click-outside close
+  useEffect(() => {
+    if (!langOpen) return;
+    const handler = (e: MouseEvent) => {
+      if (langRef.current && !langRef.current.contains(e.target as Node)) {
+        setLangOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, [langOpen]);
 
   const FOOTER_SERVICES = [
     { href: "/balonlar", label: t.nav.balloons },
@@ -84,27 +125,115 @@ export function Footer() {
               Nevşehir / Göreme, Türkiye.
             </p>
             <div className="space-y-2 text-sm">
-              <a href="mailto:info@tripandtick.com" className="flex items-center gap-2 hover:text-white transition-colors">
-                <Mail className="w-4 h-4" /> info@tripandtick.com
+              <a
+                href={`mailto:${COMPANY.email}`}
+                className="flex items-center gap-2 hover:text-white transition-colors"
+              >
+                <Mail className="w-4 h-4" /> {COMPANY.email}
               </a>
-              <a href="tel:+905001234567" className="flex items-center gap-2 hover:text-white transition-colors">
-                <Phone className="w-4 h-4" /> +90 500 123 45 67
+              <a
+                href={telHref(COMPANY.phone)}
+                className="flex items-center gap-2 hover:text-white transition-colors"
+              >
+                <Phone className="w-4 h-4" /> {COMPANY.phone}
+              </a>
+              <a
+                href={whatsappHref(COMPANY.whatsapp)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:text-white transition-colors"
+              >
+                <MessageCircle className="w-4 h-4" /> WhatsApp
               </a>
               <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4" /> Göreme, Nevşehir, Türkiye
+                <MapPin className="w-4 h-4" /> {COMPANY.address.locality},{" "}
+                {COMPANY.address.region}, Türkiye
               </div>
             </div>
-            <div className="flex gap-3 mt-5">
-              {[Instagram, Facebook, Twitter, Youtube].map((Icon, i) => (
+            <div className="flex flex-wrap items-center gap-3 mt-5">
+              {[
+                { Icon: Instagram, href: COMPANY.social.instagram, label: "Instagram" },
+                { Icon: Facebook, href: COMPANY.social.facebook, label: "Facebook" },
+                { Icon: Twitter, href: COMPANY.social.twitter, label: "Twitter" },
+                { Icon: Youtube, href: COMPANY.social.youtube, label: "YouTube" },
+                { Icon: Linkedin, href: COMPANY.social.linkedin, label: "LinkedIn" },
+              ].map(({ Icon, href, label }) => (
                 <a
-                  key={i}
-                  href="#"
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-9 h-9 rounded-lg bg-white/[0.06] border border-white/10 flex items-center justify-center text-slate-400 hover:bg-accent hover:text-white hover:border-accent transition-all"
-                  aria-label="Social link"
+                  aria-label={label}
                 >
                   <Icon className="w-4 h-4" />
                 </a>
               ))}
+
+              {/* Dil dropdown — Header ile sync */}
+              <div className="relative ml-auto" ref={langRef}>
+                <button
+                  type="button"
+                  onClick={() => setLangOpen((v) => !v)}
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/[0.06] border border-white/10 text-slate-300 text-xs font-bold hover:bg-white/[0.12] hover:text-white transition-all"
+                  aria-haspopup="listbox"
+                  aria-expanded={langOpen}
+                  aria-label="Dil seç"
+                >
+                  <Globe className="w-3.5 h-3.5" />
+                  {locale.toUpperCase()}
+                  <ChevronDown className="w-3 h-3" />
+                </button>
+                {langOpen && (
+                  <div
+                    className="absolute right-0 bottom-full mb-2 w-52 bg-white rounded-xl shadow-elevated border border-slate-100 py-2 z-50"
+                    role="listbox"
+                  >
+                    {FOOTER_LANGUAGES.map((lang) => {
+                      const isActive = locale === lang.code;
+                      if (lang.disabled) {
+                        return (
+                          <button
+                            key={lang.code}
+                            type="button"
+                            disabled
+                            title="Faz 2'de eklenecek"
+                            className="w-full text-left px-4 py-2 text-sm font-medium text-slate-400 opacity-50 cursor-not-allowed flex items-center justify-between"
+                          >
+                            <span>{lang.label}</span>
+                            <span className="text-[10px] font-semibold uppercase tracking-wide bg-slate-100 text-slate-500 px-2 py-0.5 rounded-full">
+                              Yakında
+                            </span>
+                          </button>
+                        );
+                      }
+                      return (
+                        <button
+                          key={lang.code}
+                          type="button"
+                          onClick={() => {
+                            if (isLocale(lang.code)) {
+                              setLocale(lang.code);
+                            }
+                            setLangOpen(false);
+                          }}
+                          className={cn(
+                            "w-full text-left px-4 py-2 text-sm font-medium hover:bg-slate-50 transition-colors flex items-center justify-between",
+                            isActive
+                              ? "text-primary bg-primary/5"
+                              : "text-slate-700"
+                          )}
+                        >
+                          <span>{lang.label}</span>
+                          <span className="text-xs text-slate-400 font-mono">
+                            {lang.flag}
+                          </span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
 

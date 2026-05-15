@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import {
   Wind,
   Hotel,
@@ -18,22 +19,42 @@ import {
 import { cn } from "@/lib/utils";
 
 const TABS = [
-  { id: "balloon", label: "Balon Uçuşu", icon: Wind },
-  { id: "hotel", label: "Otel", icon: Hotel },
-  { id: "atv", label: "Aktiviteler", icon: MountainSnow },
-  { id: "tour", label: "Gezi Turları", icon: TreePine },
-  { id: "package", label: "Paketler", icon: Package },
+  { id: "balloon", label: "Balon Uçuşu", icon: Wind, path: "/balonlar" },
+  { id: "hotel", label: "Otel", icon: Hotel, path: "/oteller" },
+  { id: "atv", label: "Aktiviteler", icon: MountainSnow, path: "/aktiviteler" },
+  { id: "tour", label: "Gezi Turları", icon: TreePine, path: "/turlar" },
+  { id: "package", label: "Paketler", icon: Package, path: "/paketler" },
 ];
 
 export function SearchWidget() {
+  const router = useRouter();
   const [activeTab, setActiveTab] = useState("balloon");
+  const [date, setDate] = useState("2026-03-20");
   const [adults, setAdults] = useState(2);
   const [children, setChildren] = useState(0);
   const [searching, setSearching] = useState(false);
 
   const handleSearch = () => {
     setSearching(true);
-    setTimeout(() => setSearching(false), 1500);
+    const tab = TABS.find((t) => t.id === activeTab);
+    const basePath = tab?.path ?? "/balonlar";
+
+    const params = new URLSearchParams();
+    if (date) params.set("date", date);
+    if (adults) params.set("adults", String(adults));
+    // Otel sayfasinda cocuk parametresi yok — sadece digerlerinde
+    if (activeTab !== "hotel" && children > 0) {
+      params.set("children", String(children));
+    }
+
+    const qs = params.toString();
+    const target = qs ? `${basePath}?${qs}` : basePath;
+
+    // 300ms UI feedback sonra yonlendir
+    setTimeout(() => {
+      router.push(target);
+      setSearching(false);
+    }, 300);
   };
 
   return (
@@ -83,7 +104,8 @@ export function SearchWidget() {
             <CalendarDays className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
             <input
               type="date"
-              defaultValue="2026-03-20"
+              value={date}
+              onChange={(e) => setDate(e.target.value)}
               className="input-field !pl-10"
             />
           </div>

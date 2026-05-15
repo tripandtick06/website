@@ -1,5 +1,7 @@
 // Schema.org JSON-LD helpers — Trip and Tick AI cite-friendly markup.
 
+import { COMPANY, FOUNDER, type Founder } from "@/data/founder";
+
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://tripandtick.com";
 
@@ -11,30 +13,53 @@ export const ORGANIZATION_SCHEMA = {
   "@id": ORG_ID,
   name: "Trip and Tick",
   alternateName: "TripAndTick",
+  legalName: COMPANY.legalName,
+  foundingDate: COMPANY.foundingDate,
   url: SITE_URL,
   logo: `${SITE_URL}/logo.png`,
   image: `${SITE_URL}/og-default.jpg`,
   description:
     "Kapadokya balon turu, otel, transfer ve gezi turları için TÜRSAB lisanslı online seyahat acentası. 9+ operatörle doğrudan acentelik, en düşük fiyat garantisi.",
-  email: "info@tripandtick.com",
-  telephone: "+90-500-123-4567",
+  email: COMPANY.email,
+  telephone: COMPANY.phone,
   priceRange: "€€",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Göreme Merkez",
-    addressLocality: "Göreme",
-    addressRegion: "Nevşehir",
-    postalCode: "50180",
-    addressCountry: "TR",
+    streetAddress: COMPANY.address.street,
+    addressLocality: COMPANY.address.locality,
+    addressRegion: COMPANY.address.region,
+    postalCode: COMPANY.address.postalCode,
+    addressCountry: COMPANY.address.country,
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 38.6431,
-    longitude: 34.8289,
+    latitude: COMPANY.geo.lat,
+    longitude: COMPANY.geo.lng,
   },
   areaServed: {
     "@type": "Place",
     name: "Kapadokya",
+  },
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      telephone: COMPANY.phone,
+      email: COMPANY.email,
+      contactType: "customer service",
+      areaServed: "TR",
+      availableLanguage: ["Turkish", "English"],
+    },
+    {
+      "@type": "ContactPoint",
+      email: COMPANY.billingEmail,
+      contactType: "billing support",
+    },
+  ],
+  founder: {
+    "@type": "Person",
+    name: FOUNDER.name,
+    jobTitle: FOUNDER.title,
+    email: FOUNDER.email,
   },
   aggregateRating: {
     "@type": "AggregateRating",
@@ -44,12 +69,29 @@ export const ORGANIZATION_SCHEMA = {
     worstRating: "1",
   },
   sameAs: [
-    "https://www.instagram.com/tripandtick",
-    "https://www.facebook.com/tripandtick",
-    "https://twitter.com/tripandtick",
+    COMPANY.social.instagram,
+    COMPANY.social.facebook,
+    COMPANY.social.twitter,
+    COMPANY.social.youtube,
+    COMPANY.social.linkedin,
   ],
   openingHours: "Mo-Su 00:00-23:59",
 };
+
+export function personSchema(p: Founder) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: p.name,
+    jobTitle: p.title,
+    description: p.bio,
+    email: p.email,
+    telephone: p.phone,
+    image: p.image ? `${SITE_URL}${p.image}` : undefined,
+    sameAs: [p.linkedin, p.twitter].filter(Boolean),
+    worksFor: { "@id": ORG_ID },
+  };
+}
 
 export function breadcrumbSchema(items: { name: string; href: string }[]) {
   return {
