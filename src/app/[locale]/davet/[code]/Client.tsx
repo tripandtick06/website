@@ -114,7 +114,7 @@ export default function DavetClient() {
         </div>
 
         <div className="mt-8 text-center text-sm text-slate-500">
-          Sorulariniz mi var? <a href="mailto:info@tripandtick.com" className="text-amber-600 hover:underline">info@tripandtick.com</a> · WhatsApp <a href="https://wa.me/905001234567" className="text-amber-600 hover:underline">+90 500 123 45 67</a>
+          Sorulariniz mi var? <a href="mailto:info@tripandtick.com" className="text-amber-600 hover:underline">info@tripandtick.com</a> · WhatsApp <a href="https://wa.me/905374647861" className="text-amber-600 hover:underline">+90 537 464 78 61</a>
         </div>
       </div>
     </main>

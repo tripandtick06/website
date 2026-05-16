@@ -493,7 +493,7 @@ export default function HesabimPage() {
             <ChevronRight className="w-4 h-4 rotate-180" /> Ana Sayfa
           </Link>
           <a
-            href="https://wa.me/905001234567"
+            href="https://wa.me/905374647861"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-1.5 hover:text-amber-600"

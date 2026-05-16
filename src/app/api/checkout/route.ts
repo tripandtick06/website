@@ -34,9 +34,13 @@ export async function POST(req: NextRequest) {
 
     // Demo mode — Stripe key yoksa direkt success-page URL'i dondur
     if (!stripeKey || stripeKey === "sk_test_dummy" || stripeKey.startsWith("dummy")) {
-      console.warn("[api/checkout] DEMO MODE — Stripe key bulunamadi");
-      const demoUrl = `${SITE_URL}/rezervasyon/basarili?demo=1&total=${totalPrice}&currency=${currency}&slug=${encodeURIComponent(serviceSlug)}`;
-      return NextResponse.json({ url: demoUrl, demo: true });
+      console.warn("[api/checkout] DEMO MODE — STRIPE_SECRET_KEY env-var bulunamadi (Cloudflare Pages dashboard'dan ekleyin)");
+      const demoUrl = `${SITE_URL}/tr/rezervasyon/basarili?demo=1&total=${totalPrice}&currency=${currency}&slug=${encodeURIComponent(serviceSlug)}`;
+      return NextResponse.json({
+        url: demoUrl,
+        demo: true,
+        message: "Demo mode — Stripe env-var Cloudflare'de set degil. Production gercek odeme icin STRIPE_SECRET_KEY ekleyin.",
+      });
     }
 
     // Real Stripe Checkout
@@ -66,8 +70,8 @@ export async function POST(req: NextRequest) {
           quantity: 1,
         },
       ],
-      success_url: `${SITE_URL}/rezervasyon/basarili?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${SITE_URL}/rezervasyon/iptal?slug=${encodeURIComponent(serviceSlug)}`,
+      success_url: `${SITE_URL}/tr/rezervasyon/basarili?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${SITE_URL}/tr/rezervasyon/iptal?slug=${encodeURIComponent(serviceSlug)}`,
       customer_email: customerEmail || undefined,
       metadata: {
         serviceSlug,

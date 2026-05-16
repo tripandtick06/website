@@ -199,7 +199,7 @@ export function customerBookingEmailHtml(b: BookingEmailPayload): string {
         <tr><td style="padding:0 32px 32px 32px;border-top:1px solid #e2e8f0;padding-top:24px;">
           <h2 style="margin:0 0 8px 0;font-size:15px;color:${BRAND_PRIMARY};">İletişim</h2>
           <p style="margin:0 0 6px 0;font-size:14px;color:#475569;">
-            <strong>WhatsApp / Telefon:</strong> <a href="tel:+905001234567" style="color:${BRAND_ACCENT};text-decoration:none;">+90 500 123 45 67</a>
+            <strong>WhatsApp / Telefon:</strong> <a href="tel:+905374647861" style="color:${BRAND_ACCENT};text-decoration:none;">+90 537 464 78 61</a>
           </p>
           <p style="margin:0 0 6px 0;font-size:14px;color:#475569;">
             <strong>E-posta:</strong> <a href="mailto:info@tripandtick.com" style="color:${BRAND_ACCENT};text-decoration:none;">info@tripandtick.com</a>
@@ -258,7 +258,7 @@ export function customerBookingEmailText(b: BookingEmailPayload): string {
     `3. Rezervasyon kodunuzla kalkış noktasında check-in yapın.`,
     ``,
     `İletişim:`,
-    `Telefon / WhatsApp: +90 500 123 45 67`,
+    `Telefon / WhatsApp: +90 537 464 78 61`,
     `E-posta: info@tripandtick.com`,
     `Web: ${SITE_URL}`,
     ``,

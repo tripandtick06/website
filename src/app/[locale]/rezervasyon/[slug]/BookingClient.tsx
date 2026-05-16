@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Link } from "@/i18n/routing";
 import { z } from "zod";
@@ -117,6 +117,13 @@ export function BookingClient({ service }: { service: BookingService }) {
   const isOnConfirmationStep = !!sessionId || isDemo;
 
   const [step, setStep] = useState<BookingStep>(isOnConfirmationStep ? 6 : 1);
+  const formTopRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (formTopRef.current) {
+      formTopRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [step]);
   const [date, setDate] = useState<string>("");
   const [adults, setAdults] = useState<number>(2);
   const [children, setChildren] = useState<number>(0);
@@ -550,7 +557,7 @@ export function BookingClient({ service }: { service: BookingService }) {
 
   return (
     <main className="min-h-screen bg-slate-50 py-10 px-4">
-      <div className="max-w-5xl mx-auto">
+      <div ref={formTopRef} className="max-w-5xl mx-auto scroll-mt-20">
         <nav className="text-sm text-slate-500 mb-4">
           <Link href="/" className="hover:underline">Ana Sayfa</Link>
           <span className="mx-2">›</span>

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { MessageCircle } from "lucide-react";
 
 const WHATSAPP_HREF =
-  "https://wa.me/905001234567?text=Merhaba,%20Trip%20and%20Tick%20hakkinda%20bilgi%20almak%20istiyorum.";
+  "https://wa.me/905374647861?text=Merhaba,%20Trip%20and%20Tick%20hakkinda%20bilgi%20almak%20istiyorum.";
 
 export function WhatsAppFAB() {
   const [hovered, setHovered] = useState(false);

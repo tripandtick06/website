@@ -20,7 +20,7 @@ export const FOUNDER: Founder = {
   title: "Kurucu Ekip",
   bio: "TÜRSAB lisansli 9+ operatör ile çalisan, Göreme/Nevşehir merkezli online seyahat acentesi.",
   email: "info@tripandtick.com",
-  phone: "+90-500-123-4567",
+  phone: "+90 537 464 78 61",
 };
 
 export interface CompanyAddress {
@@ -61,11 +61,11 @@ export interface Company {
 export const COMPANY: Company = {
   legalName: "Trip and Tick Seyahat Acentası",
   foundingDate: "2024-06-01",
-  phone: "+90-500-123-4567",
+  phone: "+90 537 464 78 61",
   email: "info@tripandtick.com",
   altEmail: "destek@tripandtick.com",
   billingEmail: "fatura@tripandtick.com",
-  whatsapp: "905001234567",
+  whatsapp: "905374647861",
   address: {
     street: "Göreme Merkez Mah.",
     locality: "Göreme",

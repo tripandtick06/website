@@ -109,7 +109,7 @@ export default function SssPage() {
               Ekibimiz 7/24 WhatsApp'ta. Sorunuzu yazın, anında yanıt alın.
             </p>
             <a
-              href="https://wa.me/905001234567"
+              href="https://wa.me/905374647861"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-accent inline-block"

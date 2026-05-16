@@ -20,10 +20,10 @@ async function handle(req: NextRequest, body: Record<string, string>): Promise<N
   const token = body.token ?? url.searchParams.get("token") ?? "";
 
   if (!token || !bookingId) {
-    return NextResponse.redirect(`${SITE_URL}/rezervasyon/iptal?reason=missing-token`);
+    return NextResponse.redirect(`${SITE_URL}/tr/rezervasyon/iptal?reason=missing-token`);
   }
   // Demo: dogrudan basarili sayfaya yonlendir (Faz 2: gercek iyzico verify).
-  const target = new URL(`${SITE_URL}/rezervasyon/basarili`);
+  const target = new URL(`${SITE_URL}/tr/rezervasyon/basarili`);
   target.searchParams.set("provider", "iyzico");
   target.searchParams.set("token", token);
   target.searchParams.set("bookingId", bookingId);

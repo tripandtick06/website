@@ -10,7 +10,7 @@ import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
 export const metadata: Metadata = {
   title: "İletişim — Trip and Tick Kapadokya Acentası",
   description:
-    "Trip and Tick ile iletişime geçin: info@tripandtick.com, +90 500 123 45 67. Göreme/Nevşehir ofisi. WhatsApp 7/24, e-posta 4 saat içinde yanıt.",
+    "Trip and Tick ile iletişime geçin: info@tripandtick.com, +90 537 464 78 61. Göreme/Nevşehir ofisi. WhatsApp 7/24, e-posta 4 saat içinde yanıt.",
   alternates: {
     canonical: `${SITE_URL}/iletisim`,
     languages: generateHreflang("/iletisim"),
@@ -36,8 +36,8 @@ export const metadata: Metadata = {
 
 const CONTACT_ITEMS = [
   { icon: Mail, label: "E-posta", value: "info@tripandtick.com", href: "mailto:info@tripandtick.com", note: "4 saat içinde yanıt (mesai saati)" },
-  { icon: Phone, label: "Telefon", value: "+90 500 123 45 67", href: "tel:+905001234567", note: "TR/EN destek" },
-  { icon: MessageCircle, label: "WhatsApp", value: "+90 500 123 45 67", href: "https://wa.me/905001234567", note: "7/24 anlık mesaj" },
+  { icon: Phone, label: "Telefon", value: "+90 537 464 78 61", href: "tel:+905374647861", note: "TR/EN destek" },
+  { icon: MessageCircle, label: "WhatsApp", value: "+90 537 464 78 61", href: "https://wa.me/905374647861", note: "7/24 anlık mesaj" },
   { icon: MapPin, label: "Ofis", value: "Göreme Merkez, Nevşehir 50180", href: "https://maps.google.com/?q=Goreme+Nevsehir", note: "Türkiye" },
 ];
 

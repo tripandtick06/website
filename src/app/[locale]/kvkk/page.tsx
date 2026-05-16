@@ -59,7 +59,7 @@ export default function KvkkPage() {
           <p className="text-slate-700 mb-4">
             <strong>Adres:</strong> Göreme Merkez, Nevşehir 50180, Türkiye<br />
             <strong>E-posta:</strong> info@tripandtick.com<br />
-            <strong>Telefon:</strong> +90 500 123 45 67
+            <strong>Telefon:</strong> +90 537 464 78 61
           </p>
 
           <h2 className="text-2xl font-extrabold mt-8 mb-3">

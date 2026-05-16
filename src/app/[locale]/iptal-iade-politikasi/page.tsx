@@ -148,7 +148,7 @@ export default function IptalIadePage() {
           </h2>
           <ul className="list-disc pl-6 space-y-2 text-slate-700 mb-6">
             <li><strong>E-posta:</strong> info@tripandtick.com — rezervasyon no + iptal sebebi.</li>
-            <li><strong>WhatsApp:</strong> +90 500 123 45 67 — anlık talep.</li>
+            <li><strong>WhatsApp:</strong> +90 537 464 78 61 — anlık talep.</li>
             <li>Talep onaylanır onaylanmaz e-posta ile bildirilir.</li>
           </ul>
 

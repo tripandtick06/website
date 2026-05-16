@@ -30,7 +30,7 @@ export async function POST(req: NextRequest) {
       );
     }
     const { bookingId, total, currency } = parsed.data;
-    const demoUrl = `${SITE_URL}/rezervasyon/basarili?demo=1&provider=iyzico&total=${total}&currency=${currency}&bookingId=${encodeURIComponent(bookingId)}`;
+    const demoUrl = `${SITE_URL}/tr/rezervasyon/basarili?demo=1&provider=iyzico&total=${total}&currency=${currency}&bookingId=${encodeURIComponent(bookingId)}`;
     return NextResponse.json({
       paymentPageUrl: demoUrl,
       conversationId: bookingId,

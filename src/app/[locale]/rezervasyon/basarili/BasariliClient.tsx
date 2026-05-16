@@ -178,7 +178,7 @@ export function BasariliClient(props: Props) {
 
         <p className="text-xs text-slate-400 mt-8">
           Sorulariniz icin <a href="mailto:hello@tripandtick.com" className="underline">hello@tripandtick.com</a> veya{" "}
-          <a href="https://wa.me/905555555555" className="underline" target="_blank" rel="noreferrer">WhatsApp</a>.
+          <a href="https://wa.me/905374647861" className="underline" target="_blank" rel="noreferrer">WhatsApp</a>.
         </p>
       </div>
     </main>

@@ -41,7 +41,7 @@ export default function CancelPage({ searchParams }: { searchParams: { slug?: st
             <ArrowLeft className="w-4 h-4" /> Tekrar Dene
           </Link>
           <a
-            href="https://wa.me/905555555555"
+            href="https://wa.me/905374647861"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 border border-emerald-500 text-emerald-700 hover:bg-emerald-50 px-6 py-3 rounded-lg font-medium"
@@ -53,7 +53,7 @@ export default function CancelPage({ searchParams }: { searchParams: { slug?: st
         <div className="border-t border-slate-100 pt-6 text-xs text-slate-500">
           <p>Sorun yaşıyorsanız:</p>
           <p className="mt-1">
-            <a href="mailto:hello@tripandtick.com" className="underline">hello@tripandtick.com</a> · +90 555 555 55 55
+            <a href="mailto:hello@tripandtick.com" className="underline">hello@tripandtick.com</a> · +90 537 464 78 61
           </p>
         </div>
       </div>
