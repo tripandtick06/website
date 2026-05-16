@@ -437,6 +437,8 @@ export function BookingClient({ service }: { service: BookingService }) {
           adults,
           children,
           totalPrice: discountedTotal,
+          insurance,
+          promoCode: promoCode || undefined,
           currency: service.currency,
           customerEmail: leadPax?.email ?? "",
           locale,
