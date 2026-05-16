@@ -11,7 +11,7 @@ import { persistBooking } from "@/lib/db/bookings";
 import { upsertCustomer } from "@/lib/db/customers";
 import { supabaseEnabled } from "@/lib/supabase";
 
-export const runtime = "nodejs";
+export const runtime = "edge";
 export const dynamic = "force-dynamic";
 
 const passengerSchema = z.object({

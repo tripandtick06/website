@@ -1,6 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 
-export const runtime = "nodejs";
+export const runtime = "edge";
 export const dynamic = "force-dynamic";
 
 function pad(n: number): string {

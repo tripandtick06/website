@@ -9,7 +9,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import { receiptHtml } from "@/lib/receipt-html";
 import type { BookingEmailPayload } from "@/lib/email-templates";
 
-export const runtime = "nodejs";
+export const runtime = "edge";
 export const dynamic = "force-dynamic";
 
 interface Ctx {

@@ -20,7 +20,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 import { welcomeEmailHtml, welcomeEmailText } from "@/lib/email-templates";
 
-export const runtime = "nodejs";
+export const runtime = "edge";
 export const dynamic = "force-dynamic";
 
 const newsletterSchema = z.object({
