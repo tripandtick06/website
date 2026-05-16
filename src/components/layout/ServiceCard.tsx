@@ -52,7 +52,10 @@ export interface ServiceCardProps {
 export function ServiceCard({ item, ctaHref }: ServiceCardProps) {
   const Icon = CATEGORY_ICON[item.category];
   const gradient = CATEGORY_GRADIENT[item.category];
-  const href = ctaHref || `/rezervasyon/${item.slug}`;
+  // Otel kategorisi info-only flow — /oteller/[slug] info page (rezervasyon yok).
+  const isHotelInfoOnly = item.category === "hotel";
+  const defaultHref = isHotelInfoOnly ? `/oteller/${item.slug}` : `/rezervasyon/${item.slug}`;
+  const href = ctaHref || defaultHref;
   const emoji = slugEmoji(item.slug);
 
   return (
@@ -103,21 +106,29 @@ export function ServiceCard({ item, ctaHref }: ServiceCardProps) {
 
         <div className="flex items-end justify-between gap-3 mt-auto pt-3 border-t border-slate-100">
           <div>
-            {item.marketPrice && item.marketPrice > item.adultPrice && (
-              <div className="text-xs text-slate-400 line-through leading-none mb-0.5">
-                {formatPrice(item.marketPrice, item.currency)}
-              </div>
+            {item.priceOnRequest ? (
+              <>
+                <div className="text-lg font-extrabold text-primary leading-tight">
+                  Bilgi Al
+                </div>
+                <div className="text-[10px] text-slate-500 mt-1">Telefon / e-posta ile</div>
+              </>
+            ) : (
+              <>
+                {item.marketPrice && item.marketPrice > item.adultPrice && (
+                  <div className="text-xs text-slate-400 line-through leading-none mb-0.5">
+                    {formatPrice(item.marketPrice, item.currency)}
+                  </div>
+                )}
+                <div className="text-2xl font-extrabold text-primary leading-none">
+                  {formatPrice(item.adultPrice, item.currency)}
+                </div>
+                <div className="text-[10px] text-slate-500 mt-1">kişi başı</div>
+              </>
             )}
-            <div className="text-2xl font-extrabold text-primary leading-none">
-              {formatPrice(item.adultPrice, item.currency)}
-            </div>
-            <div className="text-[10px] text-slate-500 mt-1">kişi başı</div>
           </div>
-          <Link
-            href={href}
-            className="btn-accent text-sm !py-2 !px-4 flex-shrink-0"
-          >
-            Rezervasyon
+          <Link href={href} className="btn-accent text-sm !py-2 !px-4 flex-shrink-0">
+            {isHotelInfoOnly ? "Bilgi & Form" : "Rezervasyon"}
           </Link>
         </div>
       </div>

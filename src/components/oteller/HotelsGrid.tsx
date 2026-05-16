@@ -20,39 +20,32 @@ import { ServiceCard } from "@/components/layout/ServiceCard";
 import { cn } from "@/lib/utils";
 import type { ServiceItem } from "@/data/services/catalog";
 
-const STORAGE_KEY = "tripandtick:oteller:typeFilter";
+const STORAGE_KEY = "tripandtick:oteller:tierFilter";
 
-type TypeId = "all" | "magara" | "butik" | "resort" | "glamping" | "apart";
+type TierId = "all" | "budget" | "mid" | "lux";
 
-const TYPES: { id: TypeId; label: string }[] = [
+const TIERS: { id: TierId; label: string }[] = [
   { id: "all", label: "Tümü" },
-  { id: "magara", label: "Mağara" },
-  { id: "butik", label: "Butik" },
-  { id: "resort", label: "Resort" },
-  { id: "glamping", label: "Glamping" },
-  { id: "apart", label: "Apart" },
+  { id: "budget", label: "Ucuz / Ekonomik" },
+  { id: "mid", label: "Orta Halli" },
+  { id: "lux", label: "Lüks / Premium" },
 ];
 
-function matches(hotel: ServiceItem, type: TypeId): boolean {
-  if (type === "all") return true;
-  if (type === "magara") return hotel.slug.includes("magara");
-  if (type === "butik") return hotel.slug.includes("butik");
-  if (type === "resort") return hotel.slug.startsWith("resort");
-  if (type === "glamping") return hotel.slug.startsWith("glamping");
-  if (type === "apart") return hotel.slug.startsWith("apart");
-  return true;
+function matches(hotel: ServiceItem, tier: TierId): boolean {
+  if (tier === "all") return true;
+  return hotel.tier === tier;
 }
 
 export function HotelsGrid({ hotels }: { hotels: ServiceItem[] }) {
-  const [type, setType] = useState<TypeId>("all");
+  const [type, setType] = useState<TierId>("all");
   const [hydrated, setHydrated] = useState(false);
 
   // localStorage hydrate (1 kere)
   useEffect(() => {
     if (typeof window === "undefined") return;
     const saved = window.localStorage.getItem(STORAGE_KEY);
-    if (saved && TYPES.some((t) => t.id === saved)) {
-      setType(saved as TypeId);
+    if (saved && TIERS.some((t) => t.id === saved)) {
+      setType(saved as TierId);
     }
     setHydrated(true);
   }, []);
@@ -69,20 +62,16 @@ export function HotelsGrid({ hotels }: { hotels: ServiceItem[] }) {
   );
 
   const counts = useMemo(() => {
-    const m: Record<TypeId, number> = {
+    const m: Record<TierId, number> = {
       all: hotels.length,
-      magara: 0,
-      butik: 0,
-      resort: 0,
-      glamping: 0,
-      apart: 0,
+      budget: 0,
+      mid: 0,
+      lux: 0,
     };
     hotels.forEach((h) => {
-      if (h.slug.includes("magara")) m.magara += 1;
-      if (h.slug.includes("butik")) m.butik += 1;
-      if (h.slug.startsWith("resort")) m.resort += 1;
-      if (h.slug.startsWith("glamping")) m.glamping += 1;
-      if (h.slug.startsWith("apart")) m.apart += 1;
+      if (h.tier === "budget") m.budget += 1;
+      else if (h.tier === "mid") m.mid += 1;
+      else if (h.tier === "lux") m.lux += 1;
     });
     return m;
   }, [hotels]);
@@ -94,7 +83,7 @@ export function HotelsGrid({ hotels }: { hotels: ServiceItem[] }) {
         role="tablist"
         aria-label="Otel tipi filtresi"
       >
-        {TYPES.map((t) => (
+        {TIERS.map((t) => (
           <button
             key={t.id}
             onClick={() => setType(t.id)}

@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import fs from "fs";
 import path from "path";
 import { BALLOON_PACKAGES } from "@/data/services/balloons";
-import { KAPADOKYA_PILLARS } from "@/data/services/catalog";
+import { KAPADOKYA_PILLARS, HOTELS } from "@/data/services/catalog";
 import { OPERATORS } from "@/data/services/operators";
 import { SITE_URL } from "@/lib/schema";
 import { generateHreflang } from "@/lib/hreflang";
@@ -45,6 +45,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     alternates: alt(`/balonlar/${pkg.slug}`),
   }));
 
+  const hotelPages: MetadataRoute.Sitemap = HOTELS.map((h) => ({
+    url: url(`/oteller/${h.slug}`),
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: 0.7,
+    alternates: alt(`/oteller/${h.slug}`),
+  }));
+
   const operatorPages: MetadataRoute.Sitemap = OPERATORS.map((op) => ({
     url: url(`/operatorler/${op.id}`),
     lastModified: now,
@@ -82,7 +90,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   // Dedupe — bazi pillar slug'lari blog JSON slug'lariyla cakisir (intentional).
-  const combined = [...staticPages, ...operatorPages, ...balloonPages, ...pillarPages, ...blogPages];
+  const combined = [...staticPages, ...operatorPages, ...balloonPages, ...hotelPages, ...pillarPages, ...blogPages];
   const seen = new Set<string>();
   const deduped: MetadataRoute.Sitemap = [];
   for (const entry of combined) {
