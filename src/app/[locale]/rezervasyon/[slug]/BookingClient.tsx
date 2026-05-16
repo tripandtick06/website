@@ -156,8 +156,9 @@ export function BookingClient({ service }: { service: BookingService }) {
   const [submitting, setSubmitting] = useState<boolean>(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [bookingCode, setBookingCode] = useState<string>("");
+  const iyzicoEnabled = process.env.NEXT_PUBLIC_IYZICO_ENABLED === "true";
   const [paymentProvider, setPaymentProvider] = useState<"stripe" | "iyzico">(
-    service.currency === "TRY" ? "iyzico" : "stripe"
+    iyzicoEnabled && service.currency === "TRY" ? "iyzico" : "stripe"
   );
   const [referralCode, setReferralCode] = useState<string>("");
   const [referralBonusPct, setReferralBonusPct] = useState<number>(0);
@@ -691,6 +692,7 @@ export function BookingClient({ service }: { service: BookingService }) {
                 totalPrice={discountedTotal}
                 paymentProvider={paymentProvider}
                 setPaymentProvider={setPaymentProvider}
+                iyzicoEnabled={iyzicoEnabled}
                 submitting={submitting}
                 error={submitError}
                 onBack={goBack}
@@ -1247,12 +1249,13 @@ function Step5Payment(props: {
   totalPrice: number;
   paymentProvider: "stripe" | "iyzico";
   setPaymentProvider: (v: "stripe" | "iyzico") => void;
+  iyzicoEnabled: boolean;
   submitting: boolean;
   error: string | null;
   onBack: () => void;
   onPay: () => void;
 }) {
-  const { service, totalPrice, paymentProvider, setPaymentProvider, submitting, error, onBack, onPay } = props;
+  const { service, totalPrice, paymentProvider, setPaymentProvider, iyzicoEnabled, submitting, error, onBack, onPay } = props;
   const isTry = service.currency === "TRY";
 
   return (
@@ -1282,33 +1285,47 @@ function Step5Payment(props: {
           </div>
         </label>
 
-        <label
-          className={cn(
-            "flex items-start gap-3 border-2 rounded-lg p-4 cursor-pointer transition-all",
-            paymentProvider === "iyzico"
-              ? "border-amber-500 bg-amber-50"
-              : "border-slate-200 hover:border-slate-300"
-          )}
-        >
-          <input
-            type="radio"
-            checked={paymentProvider === "iyzico"}
-            onChange={() => setPaymentProvider("iyzico")}
-            className="mt-1 w-4 h-4 text-amber-500"
-          />
-          <div className="flex-1">
-            <p className="font-semibold text-slate-900">iyzico ile (TRY — Türk kartlari)</p>
-            <p className="text-sm text-slate-600 mt-0.5">
-              Tüm Türk bankalari · taksitli ödeme · Bankkart · Maximum · Bonus · Axess · World.
-            </p>
+        {iyzicoEnabled ? (
+          <label
+            className={cn(
+              "flex items-start gap-3 border-2 rounded-lg p-4 cursor-pointer transition-all",
+              paymentProvider === "iyzico"
+                ? "border-amber-500 bg-amber-50"
+                : "border-slate-200 hover:border-slate-300"
+            )}
+          >
+            <input
+              type="radio"
+              checked={paymentProvider === "iyzico"}
+              onChange={() => setPaymentProvider("iyzico")}
+              className="mt-1 w-4 h-4 text-amber-500"
+            />
+            <div className="flex-1">
+              <p className="font-semibold text-slate-900">iyzico ile (TRY — Türk kartlari)</p>
+              <p className="text-sm text-slate-600 mt-0.5">
+                Tüm Türk bankalari · taksitli ödeme · Bankkart · Maximum · Bonus · Axess · World.
+              </p>
+            </div>
+          </label>
+        ) : (
+          <div className="flex items-start gap-3 border-2 border-slate-200 bg-slate-50 rounded-lg p-4 opacity-70">
+            <div className="mt-1 w-4 h-4 rounded-full border-2 border-slate-300" />
+            <div className="flex-1">
+              <p className="font-semibold text-slate-700">iyzico (TRY — Türk kartlari) <span className="text-xs font-normal text-amber-700">— Yakında</span></p>
+              <p className="text-sm text-slate-500 mt-0.5">
+                TR-tarafı iyzico merchant onay sürecinde. Şimdilik Stripe (EUR/USD) ile her kart kabul ediliyor (3D Secure, Apple Pay, Google Pay dahil).
+              </p>
+            </div>
           </div>
-        </label>
+        )}
 
-        <div className="border-l-4 border-amber-400 bg-amber-50 p-3 rounded text-xs text-amber-900">
-          <strong>Bilgi:</strong> AmEx (American Express) ve UnionPay kartlar sadece <strong>TRY</strong>{" "}
-          ile odenebilir → bu kart ile odeyecekseniz <strong>iyzico</strong> secin.
-          {isTry && " Bu hizmet TRY fiyatlandirildigi icin iyzico onerilir."}
-        </div>
+        {iyzicoEnabled && (
+          <div className="border-l-4 border-amber-400 bg-amber-50 p-3 rounded text-xs text-amber-900">
+            <strong>Bilgi:</strong> AmEx (American Express) ve UnionPay kartlar sadece <strong>TRY</strong>{" "}
+            ile odenebilir → bu kart ile odeyecekseniz <strong>iyzico</strong> secin.
+            {isTry && " Bu hizmet TRY fiyatlandirildigi icin iyzico onerilir."}
+          </div>
+        )}
       </div>
 
       <div className="space-y-4">
