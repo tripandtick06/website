@@ -39,6 +39,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Support / SSS.
     { url: url("/sss"), lastModified: now, changeFrequency: "monthly", priority: 0.7 },
 
+    // UGC / yorum gonderme — public entry point, indexable.
+    { url: url("/yorum"), lastModified: now, changeFrequency: "weekly", priority: 0.5 },
+
     // Trust / brand.
     { url: url("/hakkimizda"), lastModified: now, changeFrequency: "monthly", priority: 0.5 },
     { url: url("/iletisim"), lastModified: now, changeFrequency: "monthly", priority: 0.5 },
