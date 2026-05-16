@@ -334,6 +334,22 @@ export async function updateBookingStatus(
   }
 }
 
+/**
+ * Reschedule sonra bookings.date'i yeni-tarih ile guncelle.
+ * Format: YYYY-MM-DD (PostgreSQL DATE). Supabase yoksa mock log.
+ */
+export async function updateBookingDate(id: string, newDate: string): Promise<void> {
+  const client = supabaseAdmin();
+  if (!supabaseEnabled || !client) {
+    console.info("[db/bookings] mock updateDate", JSON.stringify({ id, newDate }));
+    return;
+  }
+  const { error } = await client.from("bookings").update({ date: newDate }).eq("id", id);
+  if (error) {
+    console.error("[db/bookings] updateDate failed", error.message);
+  }
+}
+
 interface BookingRow {
   id: string;
   customer_id: string | null;

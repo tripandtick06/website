@@ -15,6 +15,7 @@ import { verifyRescheduleToken } from "@/lib/reschedule-token";
 import {
   getBookingById,
   updateBookingStatus,
+  updateBookingDate,
 } from "@/lib/db/bookings";
 import { sendBrevoEmail, brevoAdminAddress } from "@/lib/brevo";
 import {
@@ -73,6 +74,7 @@ export async function POST(req: NextRequest) {
       "confirmed",
       booking.paymentStatus as "paid" | "pending" | "refunded" | "failed"
     );
+    await updateBookingDate(booking.id, newDate);
     console.info("[api/rezervasyon/yeniden-tarih] reschedule", {
       bookingId: booking.id,
       from: payload.originalDate,
@@ -112,7 +114,7 @@ export async function POST(req: NextRequest) {
 <li><b>Yeni tarih:</b> ${newDate}</li>
 <li><b>Tutar:</b> ${booking.totalPrice} ${booking.currency}</li>
 </ul>
-<p><b>Aksiyon:</b> DB'de bookings.date alanini elle guncelle (migration pending Q4).</p>`,
+<p><b>Aksiyon:</b> bookings.date DB-tarafi otomatik guncellendi.</p>`,
       tags: ["admin-reschedule"],
     });
 
