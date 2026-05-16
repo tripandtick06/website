@@ -18,7 +18,7 @@ multi-operator, anlik fiyatlandirma, Stripe odeme.
 | i18n | next-intl (TR + EN, locales/) |
 | Payments | Stripe + @stripe/stripe-js (test mode) |
 | AI agent | @anthropic-ai/sdk (SEO agent + content gen) |
-| Hosting | Vercel (production) |
+| Hosting | Cloudflare Pages (production) — `@cloudflare/next-on-pages` adapter |
 
 ## Klasor mimari
 
@@ -100,8 +100,8 @@ icin asagidaki adimlari yap:
    - `anon` public key -> `NEXT_PUBLIC_SUPABASE_ANON_KEY` (browser-safe, RLS uygulanir)
    - `service_role` key -> `SUPABASE_SERVICE_ROLE_KEY` (SERVER-ONLY, RLS bypass —
      sadece backend admin operasyonlari icin, ASLA client-bundle'a koyma)
-5. **Vercel env**: Dashboard -> Settings -> Environment Variables. Tum 3 keyi
-   Production + Preview icin ekle.
+5. **Cloudflare Pages env**: Dashboard -> tripandtick (Pages) -> Settings ->
+   Environment variables. Tum 3 keyi Production + Preview icin ekle.
 6. **Dogrula**: `npx next dev` baslat -> /api/health 200 OK + booking submit
    sonrasi Supabase Studio -> Table editor -> bookings'te yeni satir.
 
@@ -126,21 +126,36 @@ node scripts/psi-audit.cjs https://www.tripandtick.com
                          # PSI audit (mobile+desktop) -> scripts/logs/psi-*.json
 ```
 
-## Deploy (Vercel)
+## Deploy (Cloudflare Pages)
+
+Cloudflare Pages + `@cloudflare/next-on-pages` adapter ile edge-runtime
+deploy. Vercel YOK — domain de Cloudflare uzerinde.
 
 ```bash
-npm i -g vercel
-vercel login
-vercel link             # ilk seferinde proje secimi
-vercel --prod           # production deploy
+npm i -g wrangler
+wrangler login
+npm run build:cf            # @cloudflare/next-on-pages -> .vercel/output/static
+wrangler pages deploy .vercel/output/static --project-name=tripandtick
 ```
 
-1. Vercel dashboard -> Settings -> Environment Variables: yukaridaki tum
+Alternatif: Cloudflare dashboard -> Pages -> Connect GitHub `tripandtick06/website` -> auto-deploy her push'ta.
+
+Build ayarlari (Cloudflare Pages dashboard):
+- Framework preset: `Next.js`
+- Build command: `npm run build:cf`
+- Build output: `.vercel/output/static`
+- Node version: `20`
+- Compatibility flag: `nodejs_compat`
+
+1. Cloudflare Pages -> Settings -> Environment variables: yukaridaki tum
    anahtarlari ekle (Production + Preview).
-2. Domain bag: `tripandtick.com` + `www.tripandtick.com` -> Vercel DNS A/CNAME.
+2. Domain: `tripandtick.com` + `www.tripandtick.com` -> Pages -> Custom domains.
+   DNS zaten Cloudflare'de oldugu icin CNAME otomatik gelir.
 3. Stripe: live mode'a gec, webhook endpoint `https://www.tripandtick.com/api/stripe/webhook`,
    `STRIPE_WEBHOOK_SECRET` rotate et.
 4. `/api/health` 200 OK kontrolu post-deploy.
+5. SEO agent cron: Cloudflare dashboard -> Workers & Pages -> tripandtick ->
+   Settings -> Triggers -> Cron trigger `0 6 * * *` -> path `/api/seo-agent`.
 
 ## Faz roadmap
 

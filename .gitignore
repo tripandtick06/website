@@ -20,8 +20,10 @@ yarn-error.log*
 .DS_Store
 Thumbs.db
 
-# vercel
+# cloudflare build artifacts (next-on-pages writes .vercel/output/static)
 .vercel
+.wrangler/
+.dev.vars
 
 # testing
 coverage/

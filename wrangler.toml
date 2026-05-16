@@ -1,0 +1,18 @@
+# Cloudflare Pages config — @cloudflare/next-on-pages adapter
+# Reference: https://developers.cloudflare.com/pages/framework-guides/nextjs/
+#
+# Production deploy:
+#   1. npm run build:cf
+#   2. npx wrangler pages deploy .vercel/output/static --project-name=tripandtick
+# Veya GitHub auto-deploy (Pages dashboard -> Connect repo).
+
+name = "tripandtick"
+compatibility_date = "2025-01-15"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".vercel/output/static"
+
+# Production env (placeholders) — gercek degerler Cloudflare Pages dashboard'da
+# "Environment variables" + "Secrets" altinda set edilir.
+[vars]
+NEXT_PUBLIC_SITE_URL = "https://www.tripandtick.com"
+NEXT_PUBLIC_DEFAULT_LOCALE = "tr"

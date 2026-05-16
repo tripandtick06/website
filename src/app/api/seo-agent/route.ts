@@ -5,8 +5,11 @@
  *   Body: { mode: "daily" | "manual" | "audit", secret: string }
  *
  * Güvenlik: CRON_SECRET env değişkeni ile korunur.
- * Vercel Cron veya harici scheduler bu endpoint'i çağırabilir.
+ * Cloudflare Cron Trigger veya harici scheduler bu endpoint'i çağırabilir.
  */
+
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
 
 import { NextRequest, NextResponse } from "next/server";
 import Anthropic from "@anthropic-ai/sdk";
@@ -219,23 +222,23 @@ async function auditArticles(): Promise<{
 
 export async function POST(request: NextRequest) {
   try {
-    // Support both JSON body and Vercel Cron header auth
+    // Cloudflare Cron Trigger ile JSON body auth destegi
     let mode = "daily";
     let authorized = false;
 
-    // Check Vercel Cron auth header
+    // Authorization header (Bearer scheme)
     const authHeader = request.headers.get("authorization");
     if (authHeader === `Bearer ${CRON_SECRET}`) {
       authorized = true;
     }
 
-    // Check JSON body auth
+    // JSON body auth
     try {
       const body = await request.json();
       if (body.secret === CRON_SECRET) authorized = true;
       if (body.mode) mode = body.mode;
     } catch {
-      // No JSON body (Vercel Cron calls with empty body)
+      // No JSON body (cron calls genelde empty body)
     }
 
     if (!authorized) {

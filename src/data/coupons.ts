@@ -5,8 +5,8 @@
 //   - src/app/api/admin/coupons/route.ts (GET / POST / DELETE)
 //   - src/app/admin/page.tsx (Kuponlar tab UI)
 // Affected: rezervasyon kupon indirimi + admin yönetimi.
-// Data: ISO 8601 tarihler ("2026-12-31T23:59:59.000Z"). In-memory Map (Vercel
-// serverless restart'inda SEED'den yeniden doldurulur).
+// Data: ISO 8601 tarihler ("2026-12-31T23:59:59.000Z"). In-memory Map
+// (Cloudflare Pages Functions cold-start'inda SEED'den yeniden doldurulur).
 // User verbatim: "Coupon { code, type: 'percent'|'fixed', value, validFrom, validUntil,
 // usageLimit, usedCount, minPurchase?, applicableSlugs?, active }
 // MOCK_COUPONS: 5+ entry (WELCOME10 %10, EMERCE5 %5, AILE15 %15 sadece aile-paketi,
