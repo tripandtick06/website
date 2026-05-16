@@ -9,7 +9,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "@/i18n/routing";
-import { CalendarPlus, CheckCircle2, FileText, Home, Mail, UserCircle } from "lucide-react";
+import { AlertTriangle, CalendarPlus, CheckCircle2, FileText, Home, Mail, UserCircle } from "lucide-react";
 import { loadDraft, generateBookingCode, clearDraft } from "@/lib/booking-storage";
 
 interface Props {
@@ -120,15 +120,37 @@ export function BasariliClient(props: Props) {
   return (
     <main className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-emerald-50 flex items-center justify-center py-10 px-4 pt-[88px]">
       <div className="max-w-2xl w-full bg-white rounded-3xl shadow-xl p-8 lg:p-12 text-center">
+        {isDemo && (
+          <div className="bg-rose-50 border-2 border-rose-300 rounded-2xl p-4 mb-6 text-left flex items-start gap-3">
+            <AlertTriangle className="w-6 h-6 text-rose-600 flex-shrink-0 mt-0.5" />
+            <div>
+              <p className="font-bold text-rose-900 text-sm">TEST / DEMO MODU — Gerçek ödeme yapılmadı</p>
+              <p className="text-xs text-rose-800 mt-1">
+                Bu sayfa demo amaçlıdır. Hiçbir tutar tahsil edilmedi, rezervasyon operatöre iletilmedi.
+                Gerçek rezervasyon için lütfen bizimle iletişime geçin:{" "}
+                <a href="tel:+905374647861" className="font-semibold underline">+90 537 464 78 61</a>
+                {" / "}
+                <a href="https://wa.me/905374647861" className="font-semibold underline" target="_blank" rel="noreferrer">WhatsApp</a>.
+              </p>
+              <p className="text-[10px] text-rose-700 mt-2">
+                Admin: ödeme sağlayıcı (Stripe / iyzico) env-var Cloudflare Pages dashboard'unda set edilmemiş.
+              </p>
+            </div>
+          </div>
+        )}
         <div className="w-24 h-24 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
           <CheckCircle2 className="w-14 h-14 text-emerald-600" />
         </div>
 
-        <h1 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-3">Tesekkurler!</h1>
-        <p className="text-lg text-slate-600 mb-1">Rezervasyonunuz basariyla olusturuldu.</p>
+        <h1 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-3">
+          {isDemo ? "Demo Tamamlandı" : "Tesekkurler!"}
+        </h1>
+        <p className="text-lg text-slate-600 mb-1">
+          {isDemo ? "Test akışı bitti — gerçek rezervasyon oluşmadı." : "Rezervasyonunuz basariyla olusturuldu."}
+        </p>
         <p className="text-sm text-slate-500 mb-8">
           {isDemo
-            ? "Demo modunda — gercek odeme yapilmadi, Stripe henuz yapilandirilmamis."
+            ? "Demo modunda — gercek odeme yapilmadi, Stripe/iyzico henuz yapilandirilmamis."
             : "Odeme alindi ve bilgilendirme e-postasi gonderildi."}
         </p>
 
