@@ -8,6 +8,7 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { z } from "zod";
 import { iyzicoEnabled, checkoutFormInitialize } from "@/lib/iyzico-edge";
+import { computeServerTotal } from "@/lib/pricing";
 
 export const runtime = "edge";
 export const dynamic = "force-dynamic";
@@ -41,6 +42,14 @@ const checkoutSchema = z.object({
   locale: z.enum(LOCALES).optional(),
   items: z.array(basketItemSchema).optional(),
   customer: customerSchema.optional(),
+  // Q4 server-side authoritative: serviceSlug+date varsa total recalculate, client ignore.
+  serviceSlug: z.string().min(1).max(120).optional(),
+  serviceName: z.string().min(1).max(200).optional(),
+  date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional(),
+  adults: z.number().int().min(1).max(50).optional(),
+  children: z.number().int().min(0).max(20).optional(),
+  insurance: z.boolean().optional(),
+  promoCode: z.string().max(40).optional(),
 });
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.tripandtick.com";
@@ -77,14 +86,56 @@ export async function POST(req: NextRequest) {
     const { bookingId, total, currency, locale, items, customer } = parsed.data;
     const lp = localePath(locale);
 
+    // Server-side authoritative recalc — sadece serviceSlug+date+adults set ise.
+    let serverTotal = total;
+    let serverCurrency: string = currency;
+    let serverItems = items;
+    let hasOverride = false;
+    if (parsed.data.serviceSlug && parsed.data.date && parsed.data.adults !== undefined) {
+      const pricing = await computeServerTotal({
+        serviceSlug: parsed.data.serviceSlug,
+        date: parsed.data.date,
+        adults: parsed.data.adults,
+        children: parsed.data.children ?? 0,
+        insurance: parsed.data.insurance,
+        promoCode: parsed.data.promoCode,
+      });
+      if (!pricing.ok) {
+        return NextResponse.json(
+          { error: pricing.error, reason: pricing.reason ?? undefined },
+          { status: pricing.status }
+        );
+      }
+      serverTotal = pricing.serverTotal;
+      serverCurrency = pricing.currency;
+      hasOverride = Boolean(pricing.override);
+      const desc = `${parsed.data.adults} yetiskin + ${parsed.data.children ?? 0} cocuk — ${parsed.data.date}${hasOverride ? " (guncel fiyat)" : ""}`;
+      serverItems = [
+        {
+          id: parsed.data.serviceSlug,
+          name: parsed.data.serviceName ?? pricing.catalog.name,
+          category: desc,
+          price: serverTotal,
+        },
+      ];
+      console.info("[api/iyzico/checkout] server-auth recalc", {
+        bookingId,
+        clientTotal: total,
+        serverTotal,
+        hasOverride,
+      });
+    }
+
     if (!iyzicoEnabled()) {
       console.warn("[api/iyzico/checkout] DEMO — IYZICO env yok");
-      const demoUrl = `${SITE_URL}${lp}/rezervasyon/basarili?demo=1&provider=iyzico&total=${total}&currency=${currency}&bookingId=${encodeURIComponent(bookingId)}`;
+      const demoUrl = `${SITE_URL}${lp}/rezervasyon/basarili?demo=1&provider=iyzico&total=${serverTotal}&currency=${serverCurrency}&bookingId=${encodeURIComponent(bookingId)}`;
       return NextResponse.json({
         paymentPageUrl: demoUrl,
         conversationId: bookingId,
         token: `demo-${bookingId}`,
         demo: true,
+        serverTotal,
+        hasOverride,
         message: "Demo mode — IYZICO_API_KEY / IYZICO_SECRET env-var Cloudflare'de set degil.",
       });
     }
@@ -99,9 +150,9 @@ export async function POST(req: NextRequest) {
       country: "Turkey",
       address: "Kapadokya, Goreme",
     };
-    const basketItems = (items && items.length > 0
-      ? items
-      : [{ id: "default", name: "TripAndTick Hizmet", category: "Travel", price: total }]
+    const basketItems = (serverItems && serverItems.length > 0
+      ? serverItems
+      : [{ id: "default", name: "TripAndTick Hizmet", category: "Travel", price: serverTotal }]
     ).map((it) => ({
       id: it.id,
       name: it.name,
@@ -111,7 +162,7 @@ export async function POST(req: NextRequest) {
     }));
     const basketTotal = basketItems.reduce((sum, it) => sum + Number(it.price), 0);
     const price = money(basketTotal);
-    const paidPrice = money(total);
+    const paidPrice = money(serverTotal);
 
     const callbackUrl = `${SITE_URL}/api/iyzico/callback?bookingId=${encodeURIComponent(bookingId)}&locale=${encodeURIComponent(locale ?? DEFAULT_LOCALE)}`;
 
@@ -119,7 +170,7 @@ export async function POST(req: NextRequest) {
       conversationId: bookingId,
       price,
       paidPrice,
-      currency,
+      currency: serverCurrency as "TRY" | "USD" | "EUR" | "GBP",
       basketId: bookingId,
       callbackUrl,
       locale: iyzicoLocale(locale),
@@ -166,6 +217,8 @@ export async function POST(req: NextRequest) {
       conversationId: bookingId,
       token: result.raw.token,
       tokenExpireTime: result.raw.tokenExpireTime,
+      serverTotal,
+      hasOverride,
       demo: false,
     });
   } catch (err) {

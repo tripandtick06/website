@@ -397,6 +397,14 @@ export function BookingClient({ service }: { service: BookingService }) {
             total: discountedTotal,
             currency: service.currency,
             locale,
+            // Server-side authoritative recalc inputs (Q4 anti-tampering)
+            serviceSlug: service.slug,
+            serviceName: service.name,
+            date,
+            adults,
+            children,
+            insurance,
+            promoCode: promoCode || undefined,
             items: [
               {
                 id: service.slug,

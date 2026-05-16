@@ -7,17 +7,13 @@
 
 import { NextResponse, type NextRequest } from "next/server";
 import { z } from "zod";
-import { getOverride } from "@/lib/db/service-overrides";
-import { BALLOON_PACKAGES } from "@/data/services/balloons";
-import { ACTIVITIES, TOURS, HOTELS, PACKAGES, TRANSFERS } from "@/data/services/catalog";
+import { computeServerTotal } from "@/lib/pricing";
 
 export const runtime = "edge";
 export const dynamic = "force-dynamic";
 
 const LOCALES = ["tr", "en", "de", "fr", "es", "nl", "zh", "hi", "ur"] as const;
 const DEFAULT_LOCALE = "tr";
-const INSURANCE_PRICE_PER_PAX = 15;
-const DEFAULT_CHILD_RATIO = 0.8;
 
 const checkoutSchema = z.object({
   serviceSlug: z.string().min(1),
@@ -47,33 +43,6 @@ function stripeLocale(locale: string | undefined): "tr" | "en" | "de" | "fr" | "
   return map[locale ?? ""] ?? "auto";
 }
 
-interface CatalogEntry {
-  slug: string;
-  name: string;
-  adultPrice: number;
-  childRatio: number;
-  currency: string;
-  priceOnRequest?: boolean;
-}
-
-function findCatalog(slug: string): CatalogEntry | null {
-  const b = BALLOON_PACKAGES.find((p) => p.slug === slug);
-  if (b) return { slug: b.slug, name: b.name, adultPrice: b.adultPrice, childRatio: b.childRatio, currency: b.currency, priceOnRequest: b.priceOnRequest };
-  const all = [...ACTIVITIES, ...TOURS, ...HOTELS, ...PACKAGES, ...TRANSFERS];
-  const it = all.find((s) => s.slug === slug);
-  if (it) return { slug: it.slug, name: it.name, adultPrice: it.adultPrice, childRatio: DEFAULT_CHILD_RATIO, currency: it.currency, priceOnRequest: it.priceOnRequest };
-  return null;
-}
-
-function promoDiscount(code: string | undefined, preDiscount: number): number {
-  if (!code) return 0;
-  const c = code.toUpperCase().trim();
-  if (c === "WELCOME10") return Math.round(preDiscount * 0.1);
-  if (c === "EMERCE5") return Math.round(preDiscount * 0.05);
-  if (c === "AILE15") return Math.round(preDiscount * 0.15);
-  return 0;
-}
-
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
@@ -84,33 +53,21 @@ export async function POST(req: NextRequest) {
     const { serviceSlug, serviceName, currency, customerEmail, date, adults, children, locale, insurance, promoCode } = parsed.data;
     const lp = localePath(locale);
 
-    const catalog = findCatalog(serviceSlug);
-    if (!catalog) {
-      return NextResponse.json({ error: "Hizmet bulunamadi" }, { status: 404 });
-    }
-    if (catalog.priceOnRequest) {
+    const pricing = await computeServerTotal({
+      serviceSlug,
+      date,
+      adults,
+      children,
+      insurance,
+      promoCode,
+    });
+    if (!pricing.ok) {
       return NextResponse.json(
-        { error: "Bu hizmet icin direkt online odeme yok — bizimle iletisime gecin (telefon/WhatsApp)." },
-        { status: 400 }
+        { error: pricing.error, reason: pricing.reason ?? undefined },
+        { status: pricing.status }
       );
     }
-
-    const override = await getOverride(serviceSlug, date).catch(() => null);
-    if (override?.status === "cancelled" || override?.status === "sold_out") {
-      return NextResponse.json(
-        { error: `Bu tarih ${override.status === "cancelled" ? "iptal" : "dolu"} — lutfen baska tarih secin.`, reason: override.cancellationReason },
-        { status: 409 }
-      );
-    }
-
-    const effectiveAdultPrice = override?.priceOverride ?? catalog.adultPrice;
-    const pax = adults + children;
-    const adultsLine = adults * effectiveAdultPrice;
-    const childrenLine = Math.round(children * effectiveAdultPrice * catalog.childRatio);
-    const insuranceLine = insurance ? pax * INSURANCE_PRICE_PER_PAX : 0;
-    const preDiscount = adultsLine + childrenLine + insuranceLine;
-    const discount = promoDiscount(promoCode, preDiscount);
-    const serverTotal = Math.max(1, preDiscount - discount);
+    const { serverTotal, override } = pricing;
 
     const stripeKey = process.env.STRIPE_SECRET_KEY;
 

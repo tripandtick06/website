@@ -64,8 +64,7 @@ export const DICTIONARIES = {
       title1: "Kapadokya'nın",
       title2: "En İyi Deneyimleri",
       title3: "En Uygun Fiyatla",
-      subtitle:
-        "Balon turlarından otel rezervasyonuna, ATV turlarından özel paketlere — tek platformda, şeffaf fiyatlarla.",
+      subtitle: "Balon turlarından otel rezervasyonuna, ATV turlarından özel paketlere — tek platformda, şeffaf fiyatlarla.",
     },
     footer: {
       rights: "Tüm hakları saklıdır.",
@@ -99,8 +98,7 @@ export const DICTIONARIES = {
     categories: {
       tag: "Hizmetlerimiz",
       title: "Her Şey Tek Yerden",
-      subtitle:
-        "Uçak bileti hariç, Kapadokya'da ihtiyacınız olan her seyahat hizmeti burada.",
+      subtitle: "Uçak bileti hariç, Kapadokya'da ihtiyacınız olan her seyahat hizmeti burada.",
       balloons: "Balon Turları",
       balloons_sub: "€165'ten başlayan",
       hotels: "Otel & Konaklama",
@@ -121,8 +119,7 @@ export const DICTIONARIES = {
     packages_section: {
       tag: "Öne Çıkan Paketler",
       title: "En Çok Tercih Edilenler",
-      subtitle:
-        "Rakip fiyatları karşılaştırdık, en iyi teklifleri sizin için seçtik.",
+      subtitle: "Rakip fiyatları karşılaştırdık, en iyi teklifleri sizin için seçtik.",
       standart_badge: "En Popüler",
       standart_title: "Standart Balon Uçuşu",
       balayi_badge: "Deluxe",
@@ -174,8 +171,7 @@ export const DICTIONARIES = {
       title1: "Cappadocia's",
       title2: "Best Experiences",
       title3: "At Best Prices",
-      subtitle:
-        "From hot air balloon tours to hotel bookings, ATV adventures to private packages — all in one platform, transparent pricing.",
+      subtitle: "From hot air balloon tours to hotel bookings, ATV adventures to private packages — all in one platform, transparent pricing.",
     },
     footer: {
       rights: "All rights reserved.",
@@ -209,8 +205,7 @@ export const DICTIONARIES = {
     categories: {
       tag: "Our Services",
       title: "Everything in One Place",
-      subtitle:
-        "Excluding flights, every travel service you need in Cappadocia is right here.",
+      subtitle: "Excluding flights, every travel service you need in Cappadocia is right here.",
       balloons: "Balloon Tours",
       balloons_sub: "from €165",
       hotels: "Hotels & Stays",
@@ -231,8 +226,7 @@ export const DICTIONARIES = {
     packages_section: {
       tag: "Featured Packages",
       title: "Most Popular Picks",
-      subtitle:
-        "We compared competitor pricing and curated the best deals for you.",
+      subtitle: "We compared competitor pricing and curated the best deals for you.",
       standart_badge: "Most Popular",
       standart_title: "Standard Balloon Flight",
       balayi_badge: "Deluxe",
@@ -284,8 +278,7 @@ export const DICTIONARIES = {
       title1: "Kappadokiens",
       title2: "beste Erlebnisse",
       title3: "zu Top-Preisen",
-      subtitle:
-        "Von Heißluftballonfahrten über Hotelreservierungen bis hin zu ATV-Touren und exklusiven Paketen — alles auf einer Plattform, mit transparenten Preisen.",
+      subtitle: "Von Heißluftballonfahrten über Hotelreservierungen bis hin zu ATV-Touren und exklusiven Paketen — alles auf einer Plattform, mit transparenten Preisen.",
     },
     footer: {
       rights: "Alle Rechte vorbehalten.",
@@ -319,8 +312,7 @@ export const DICTIONARIES = {
     categories: {
       tag: "Unsere Leistungen",
       title: "Alles aus einer Hand",
-      subtitle:
-        "Außer dem Flugticket finden Sie hier jeden Reiseservice, den Sie in Kappadokien brauchen.",
+      subtitle: "Außer dem Flugticket finden Sie hier jeden Reiseservice, den Sie in Kappadokien brauchen.",
       balloons: "Ballonfahrten",
       balloons_sub: "ab 165 €",
       hotels: "Hotels & Unterkünfte",
@@ -341,8 +333,7 @@ export const DICTIONARIES = {
     packages_section: {
       tag: "Empfohlene Pakete",
       title: "Die beliebtesten Angebote",
-      subtitle:
-        "Wir haben die Preise der Mitbewerber verglichen und die besten Angebote für Sie ausgewählt.",
+      subtitle: "Wir haben die Preise der Mitbewerber verglichen und die besten Angebote für Sie ausgewählt.",
       standart_badge: "Am beliebtesten",
       standart_title: "Standard-Ballonflug",
       balayi_badge: "Deluxe",
@@ -394,8 +385,7 @@ export const DICTIONARIES = {
       title1: "Les meilleures",
       title2: "expériences en Cappadoce",
       title3: "aux meilleurs prix",
-      subtitle:
-        "Des vols en montgolfière aux réservations d'hôtels, des excursions en quad aux forfaits privés — le tout sur une seule plateforme, avec des tarifs transparents.",
+      subtitle: "Des vols en montgolfière aux réservations d'hôtels, des excursions en quad aux forfaits privés — le tout sur une seule plateforme, avec des tarifs transparents.",
     },
     footer: {
       rights: "Tous droits réservés.",
@@ -429,8 +419,7 @@ export const DICTIONARIES = {
     categories: {
       tag: "Nos services",
       title: "Tout au même endroit",
-      subtitle:
-        "Hors billet d'avion, retrouvez ici tous les services de voyage dont vous avez besoin en Cappadoce.",
+      subtitle: "Hors billet d'avion, retrouvez ici tous les services de voyage dont vous avez besoin en Cappadoce.",
       balloons: "Vols en montgolfière",
       balloons_sub: "à partir de 165 €",
       hotels: "Hôtels & hébergements",
@@ -451,8 +440,7 @@ export const DICTIONARIES = {
     packages_section: {
       tag: "Forfaits en vedette",
       title: "Les plus populaires",
-      subtitle:
-        "Nous avons comparé les prix de la concurrence et sélectionné les meilleures offres pour vous.",
+      subtitle: "Nous avons comparé les prix de la concurrence et sélectionné les meilleures offres pour vous.",
       standart_badge: "Le plus populaire",
       standart_title: "Vol en montgolfière standard",
       balayi_badge: "Deluxe",
@@ -504,8 +492,7 @@ export const DICTIONARIES = {
       title1: "Las mejores",
       title2: "experiencias de Capadocia",
       title3: "al mejor precio",
-      subtitle:
-        "Desde vuelos en globo hasta reservas de hoteles, excursiones en quad y paquetes privados — todo en una sola plataforma, con precios transparentes.",
+      subtitle: "Desde vuelos en globo hasta reservas de hoteles, excursiones en quad y paquetes privados — todo en una sola plataforma, con precios transparentes.",
     },
     footer: {
       rights: "Todos los derechos reservados.",
@@ -539,8 +526,7 @@ export const DICTIONARIES = {
     categories: {
       tag: "Nuestros servicios",
       title: "Todo en un solo lugar",
-      subtitle:
-        "Excepto los vuelos, aquí encontrará todos los servicios de viaje que necesita en Capadocia.",
+      subtitle: "Excepto los vuelos, aquí encontrará todos los servicios de viaje que necesita en Capadocia.",
       balloons: "Vuelos en globo",
       balloons_sub: "desde 165 €",
       hotels: "Hoteles y alojamientos",
@@ -561,8 +547,7 @@ export const DICTIONARIES = {
     packages_section: {
       tag: "Paquetes destacados",
       title: "Los más elegidos",
-      subtitle:
-        "Hemos comparado los precios de la competencia y seleccionado las mejores ofertas para usted.",
+      subtitle: "Hemos comparado los precios de la competencia y seleccionado las mejores ofertas para usted.",
       standart_badge: "Más popular",
       standart_title: "Vuelo en globo estándar",
       balayi_badge: "Deluxe",
@@ -614,8 +599,7 @@ export const DICTIONARIES = {
       title1: "De beste ervaringen",
       title2: "van Cappadocië",
       title3: "tegen de beste prijs",
-      subtitle:
-        "Van ballonvaarten tot hotelreserveringen, van quadtochten tot privépakketten — alles op één platform, met transparante prijzen.",
+      subtitle: "Van ballonvaarten tot hotelreserveringen, van quadtochten tot privépakketten — alles op één platform, met transparante prijzen.",
     },
     footer: {
       rights: "Alle rechten voorbehouden.",
@@ -649,8 +633,7 @@ export const DICTIONARIES = {
     categories: {
       tag: "Onze diensten",
       title: "Alles op één plek",
-      subtitle:
-        "Vluchten uitgezonderd, vindt u hier elke reisdienst die u in Cappadocië nodig heeft.",
+      subtitle: "Vluchten uitgezonderd, vindt u hier elke reisdienst die u in Cappadocië nodig heeft.",
       balloons: "Ballonvaarten",
       balloons_sub: "vanaf €165",
       hotels: "Hotels & verblijven",
@@ -671,8 +654,7 @@ export const DICTIONARIES = {
     packages_section: {
       tag: "Uitgelichte pakketten",
       title: "De populairste keuzes",
-      subtitle:
-        "We hebben de prijzen van concurrenten vergeleken en de beste aanbiedingen voor u geselecteerd.",
+      subtitle: "We hebben de prijzen van concurrenten vergeleken en de beste aanbiedingen voor u geselecteerd.",
       standart_badge: "Meest gekozen",
       standart_title: "Standaard ballonvaart",
       balayi_badge: "Deluxe",
@@ -724,8 +706,7 @@ export const DICTIONARIES = {
       title1: "卡帕多奇亚的",
       title2: "最佳体验",
       title3: "最优惠的价格",
-      subtitle:
-        "从热气球之旅到酒店预订,从越野车冒险到专属套餐 — 一站式平台,价格透明。",
+      subtitle: "从热气球之旅到酒店预订,从越野车冒险到专属套餐 — 一站式平台,价格透明。",
     },
     footer: {
       rights: "版权所有。",
@@ -832,8 +813,7 @@ export const DICTIONARIES = {
       title1: "कप्पाडोकिया के",
       title2: "सर्वश्रेष्ठ अनुभव",
       title3: "सर्वोत्तम दाम पर",
-      subtitle:
-        "हॉट एयर बैलून यात्रा से लेकर होटल बुकिंग तक, एटीवी रोमांच से लेकर निजी पैकेज तक — एक ही प्लेटफ़ॉर्म पर, पारदर्शी कीमतों के साथ।",
+      subtitle: "हॉट एयर बैलून यात्रा से लेकर होटल बुकिंग तक, एटीवी रोमांच से लेकर निजी पैकेज तक — एक ही प्लेटफ़ॉर्म पर, पारदर्शी कीमतों के साथ।",
     },
     footer: {
       rights: "सर्वाधिकार सुरक्षित।",
@@ -867,8 +847,7 @@ export const DICTIONARIES = {
     categories: {
       tag: "हमारी सेवाएँ",
       title: "सबकुछ एक ही जगह",
-      subtitle:
-        "उड़ान टिकट को छोड़कर, कप्पाडोकिया में जिस भी यात्रा-सेवा की आपको ज़रूरत है, वह यहाँ उपलब्ध है।",
+      subtitle: "उड़ान टिकट को छोड़कर, कप्पाडोकिया में जिस भी यात्रा-सेवा की आपको ज़रूरत है, वह यहाँ उपलब्ध है।",
       balloons: "बैलून यात्राएँ",
       balloons_sub: "€165 से शुरू",
       hotels: "होटल और ठहरने की जगह",
@@ -889,8 +868,7 @@ export const DICTIONARIES = {
     packages_section: {
       tag: "चुनिंदा पैकेज",
       title: "सबसे लोकप्रिय विकल्प",
-      subtitle:
-        "हमने प्रतिस्पर्धियों की कीमतों की तुलना की और आपके लिए सर्वोत्तम सौदे चुने हैं।",
+      subtitle: "हमने प्रतिस्पर्धियों की कीमतों की तुलना की और आपके लिए सर्वोत्तम सौदे चुने हैं।",
       standart_badge: "सबसे लोकप्रिय",
       standart_title: "मानक बैलून उड़ान",
       balayi_badge: "डिलक्स",
@@ -942,8 +920,7 @@ export const DICTIONARIES = {
       title1: "کیپاڈوکیا کے",
       title2: "بہترین تجربات",
       title3: "بہترین قیمت پر",
-      subtitle:
-        "گرم ہوا کے غباروں کی سواری سے لے کر ہوٹل بکنگ تک، اے ٹی وی مہمات سے لے کر خصوصی پیکجز تک — سب کچھ ایک ہی پلیٹ فارم پر، شفاف قیمتوں کے ساتھ۔",
+      subtitle: "گرم ہوا کے غباروں کی سواری سے لے کر ہوٹل بکنگ تک، اے ٹی وی مہمات سے لے کر خصوصی پیکجز تک — سب کچھ ایک ہی پلیٹ فارم پر، شفاف قیمتوں کے ساتھ۔",
     },
     footer: {
       rights: "جملہ حقوق محفوظ ہیں۔",
@@ -977,8 +954,7 @@ export const DICTIONARIES = {
     categories: {
       tag: "ہماری خدمات",
       title: "سب کچھ ایک ہی جگہ",
-      subtitle:
-        "ہوائی ٹکٹ کے علاوہ، کیپاڈوکیا میں جس بھی سفری خدمت کی آپ کو ضرورت ہو، یہاں دستیاب ہے۔",
+      subtitle: "ہوائی ٹکٹ کے علاوہ، کیپاڈوکیا میں جس بھی سفری خدمت کی آپ کو ضرورت ہو، یہاں دستیاب ہے۔",
       balloons: "غبارے کے سفر",
       balloons_sub: "€165 سے شروع",
       hotels: "ہوٹل اور قیام",
@@ -999,8 +975,7 @@ export const DICTIONARIES = {
     packages_section: {
       tag: "نمایاں پیکجز",
       title: "سب سے زیادہ پسندیدہ",
-      subtitle:
-        "ہم نے حریفوں کی قیمتوں کا موازنہ کیا اور آپ کے لیے بہترین پیشکشیں منتخب کی ہیں۔",
+      subtitle: "ہم نے حریفوں کی قیمتوں کا موازنہ کیا اور آپ کے لیے بہترین پیشکشیں منتخب کی ہیں۔",
       standart_badge: "سب سے مقبول",
       standart_title: "معیاری غبارہ پرواز",
       balayi_badge: "ڈیلکس",
