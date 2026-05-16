@@ -201,6 +201,121 @@ export async function listBookingsByCustomer(email: string): Promise<DBBooking[]
   return ((data ?? []) as BookingRow[]).map(rowToDBBooking);
 }
 
+export interface ImpactedBooking {
+  bookingId: string;
+  customerName: string;
+  customerEmail: string;
+  customerPhone: string;
+  serviceSlug: string;
+  serviceName: string;
+  date: string;
+  pax: number;
+  total: number;
+  currency: string;
+  bookingStatus: string;
+  paymentStatus: string;
+}
+
+/**
+ * Q3 Balon borsasi: belirli slugs + date kombosu icin etkilenen aktif rezervasyon listesi.
+ * Filter: booking_status in {confirmed, pending}, payment_status != refunded.
+ * Supabase varsa bookings tablosu; yoksa MOCK_BOOKINGS filter.
+ */
+export async function findImpactedBookings(opts: {
+  slugs: string[];
+  date: string;
+}): Promise<ImpactedBooking[]> {
+  if (opts.slugs.length === 0) return [];
+  const client = supabaseAdmin();
+
+  if (!supabaseEnabled || !client) {
+    const slugSet = new Set(opts.slugs);
+    return MOCK_BOOKINGS.filter(
+      (b) =>
+        slugSet.has(b.serviceSlug) &&
+        b.date === opts.date &&
+        (b.status === "confirmed" || b.status === "pending") &&
+        b.paymentStatus !== "refunded"
+    ).map((b) => ({
+      bookingId: b.id,
+      customerName: b.customerName,
+      customerEmail: b.customerEmail,
+      customerPhone: b.customerPhone,
+      serviceSlug: b.serviceSlug,
+      serviceName: b.serviceName,
+      date: b.date,
+      pax: b.pax,
+      total: b.total,
+      currency: b.currency,
+      bookingStatus: b.status,
+      paymentStatus: b.paymentStatus,
+    }));
+  }
+
+  const { data, error } = await client
+    .from("bookings")
+    .select("id, service_slug, service_name, date, adults, children, total_price, currency, booking_status, payment_status, passengers, customer_id")
+    .in("service_slug", opts.slugs)
+    .eq("date", opts.date)
+    .in("booking_status", ["confirmed", "pending"])
+    .neq("payment_status", "refunded");
+  if (error) {
+    console.error("[db/bookings] findImpactedBookings failed", error.message);
+    return [];
+  }
+
+  type Row = {
+    id: string;
+    service_slug: string;
+    service_name: string;
+    date: string;
+    adults: number;
+    children: number;
+    total_price: number | string;
+    currency: string;
+    booking_status: string;
+    payment_status: string;
+    passengers: BookingPassengerInput[] | null;
+    customer_id: string | null;
+  };
+
+  const rows = (data ?? []) as Row[];
+  const customerIds = Array.from(
+    new Set(rows.map((r) => r.customer_id).filter((x): x is string => Boolean(x)))
+  );
+  let customerMap = new Map<string, { full_name: string; email: string; phone: string }>();
+  if (customerIds.length > 0) {
+    const { data: customers } = await client
+      .from("customers")
+      .select("id, full_name, email, phone")
+      .in("id", customerIds);
+    customerMap = new Map(
+      ((customers ?? []) as Array<{ id: string; full_name: string; email: string; phone: string }>).map(
+        (c) => [c.id, { full_name: c.full_name, email: c.email, phone: c.phone }]
+      )
+    );
+  }
+
+  return rows.map((r) => {
+    const cust = r.customer_id ? customerMap.get(r.customer_id) : undefined;
+    const leadPassenger = Array.isArray(r.passengers) && r.passengers.length > 0 ? r.passengers[0] : undefined;
+    return {
+      bookingId: r.id,
+      customerName: cust?.full_name ?? leadPassenger?.fullName ?? "Müşteri",
+      customerEmail: cust?.email ?? leadPassenger?.email ?? "",
+      customerPhone: cust?.phone ?? leadPassenger?.phone ?? "",
+      serviceSlug: r.service_slug,
+      serviceName: r.service_name,
+      date: r.date,
+      pax: r.adults + r.children,
+      total: Number(r.total_price),
+      currency: r.currency,
+      bookingStatus: r.booking_status,
+      paymentStatus: r.payment_status,
+    };
+  });
+}
+
 export async function updateBookingStatus(
   id: string,
   status: "pending" | "confirmed" | "cancelled" | "completed",

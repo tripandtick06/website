@@ -79,6 +79,28 @@ export default function AdminFiyatPage() {
   const [bulkReason, setBulkReason] = useState<string>("");
   const [bulkSubmitting, setBulkSubmitting] = useState(false);
 
+  interface ImpactedRow {
+    bookingId: string;
+    customerName: string;
+    customerEmail: string;
+    serviceName: string;
+    pax: number;
+    total: number;
+    currency: string;
+    alternativeDates: string[];
+  }
+  interface PreviewState {
+    count: number;
+    totalPax: number;
+    totalRefund: number;
+    currency: string;
+    bookings: ImpactedRow[];
+  }
+  const [preview, setPreview] = useState<PreviewState | null>(null);
+  const [previewLoading, setPreviewLoading] = useState(false);
+  const [notifySending, setNotifySending] = useState(false);
+  const [notifyResult, setNotifyResult] = useState<string | null>(null);
+
   useEffect(() => {
     if (typeof window === "undefined") return;
     const tok = window.localStorage.getItem(AUTH_KEY);
@@ -172,13 +194,71 @@ export default function AdminFiyatPage() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error ?? `HTTP ${res.status}`);
       alert(`${data.count} hizmet iptal edildi.`);
-      setBulkSlugs([]);
-      setBulkReason("");
       await loadOverrides();
+      await loadImpactedPreview();
     } catch (err) {
       alert(err instanceof Error ? err.message : "Toplu iptal hatasi");
     } finally {
       setBulkSubmitting(false);
+    }
+  }
+
+  async function loadImpactedPreview() {
+    if (bulkSlugs.length === 0 || !bulkDate) {
+      setPreview(null);
+      return;
+    }
+    setPreviewLoading(true);
+    setNotifyResult(null);
+    try {
+      const res = await fetch("/api/admin/reschedule", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "x-admin-token": ADMIN_TOKEN },
+        body: JSON.stringify({ mode: "preview", slugs: bulkSlugs, date: bulkDate }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error ?? `HTTP ${res.status}`);
+      setPreview({
+        count: data.count ?? 0,
+        totalPax: data.totalPax ?? 0,
+        totalRefund: data.totalRefund ?? 0,
+        currency: data.currency ?? "EUR",
+        bookings: data.bookings ?? [],
+      });
+    } catch (err) {
+      alert(err instanceof Error ? err.message : "Preview hatasi");
+      setPreview(null);
+    } finally {
+      setPreviewLoading(false);
+    }
+  }
+
+  async function handleNotifyCustomers() {
+    if (!preview || preview.count === 0) return;
+    if (!confirm(`${preview.count} müşteriye iptal + alternatif/iade e-postası gönderilecek. Devam?`)) return;
+    setNotifySending(true);
+    setNotifyResult(null);
+    try {
+      const res = await fetch("/api/admin/reschedule", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "x-admin-token": ADMIN_TOKEN },
+        body: JSON.stringify({
+          mode: "send",
+          slugs: bulkSlugs,
+          date: bulkDate,
+          cancellationReason: bulkReason.trim() || undefined,
+          locale: "tr",
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error ?? `HTTP ${res.status}`);
+      setNotifyResult(
+        `OK — Toplam: ${data.total}, Gönderildi: ${data.sent}, Demo-log: ${data.demoLogged}, Atlandı (no email): ${data.skippedNoEmail}`
+      );
+    } catch (err) {
+      setNotifyResult(`HATA: ${err instanceof Error ? err.message : "Bilinmeyen"}`);
+    } finally {
+      setNotifySending(false);
     }
   }
 
@@ -295,6 +375,47 @@ export default function AdminFiyatPage() {
               <button onClick={handleBulkCancel} disabled={bulkSubmitting || bulkSlugs.length === 0} className="w-full bg-rose-600 hover:bg-rose-700 text-white py-2.5 rounded-lg font-semibold disabled:opacity-50">
                 {bulkSubmitting ? "Iptal ediliyor..." : `${bulkSlugs.length} hizmeti iptal et`}
               </button>
+
+              <div className="border-t border-slate-200 pt-3 mt-3 space-y-2">
+                <button
+                  onClick={loadImpactedPreview}
+                  disabled={previewLoading || bulkSlugs.length === 0 || !bulkDate}
+                  className="w-full text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 py-2 rounded-lg font-semibold disabled:opacity-50"
+                >
+                  {previewLoading ? "Yukleniyor..." : "Etkilenen rezervasyonlari onizle"}
+                </button>
+
+                {preview && (
+                  <div className="bg-amber-50 border border-amber-200 rounded-lg p-3 text-xs space-y-2">
+                    <div className="font-semibold text-amber-900">
+                      {preview.count} rezervasyon · {preview.totalPax} kisi · iade toplami: {preview.totalRefund} {preview.currency}
+                    </div>
+                    {preview.bookings.length > 0 && (
+                      <div className="max-h-32 overflow-y-auto space-y-1 text-[11px] text-amber-800">
+                        {preview.bookings.map((b) => (
+                          <div key={b.bookingId} className="flex justify-between border-b border-amber-200 pb-1 last:border-0">
+                            <span className="font-mono">{b.bookingId}</span>
+                            <span>{b.customerName} ({b.pax}p)</span>
+                            <span>{b.total} {b.currency}</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                    <button
+                      onClick={handleNotifyCustomers}
+                      disabled={notifySending || preview.count === 0}
+                      className="w-full bg-amber-600 hover:bg-amber-700 text-white py-2 rounded font-semibold disabled:opacity-50"
+                    >
+                      {notifySending ? "Gonderiliyor..." : `${preview.count} musteriye e-posta gonder`}
+                    </button>
+                    {notifyResult && (
+                      <div className={`text-[11px] rounded p-2 ${notifyResult.startsWith("HATA") ? "bg-rose-100 text-rose-700" : "bg-emerald-100 text-emerald-700"}`}>
+                        {notifyResult}
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
             </div>
           </section>
         </div>

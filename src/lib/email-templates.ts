@@ -460,6 +460,190 @@ ${opts.preheader ? `<div style="display:none;font-size:1px;color:${BRAND_BG};lin
 }
 
 // ----------------------------------------------------------------------------
+// Q3 BALON BORSASI — bulk-cancel sonrasi musteriye alt-tarih/refund magic link
+// ----------------------------------------------------------------------------
+
+export interface RescheduleEmailParams {
+  customerName: string;
+  bookingId: string;
+  serviceName: string;
+  originalDate: string; // YYYY-MM-DD
+  cancellationReason?: string;
+  magicLinkUrl: string;
+  alternativeDates: string[]; // YYYY-MM-DD[]
+  refundAmount: number;
+  currency: string;
+  ttlDays: number;
+}
+
+export function rescheduleBatchEmailHtml(p: RescheduleEmailParams): string {
+  const altListHtml = p.alternativeDates
+    .slice(0, 5)
+    .map(
+      (d) =>
+        `<li style="margin:6px 0;color:#0f172a;"><strong>${escapeHtml(formatDateTr(d))}</strong></li>`
+    )
+    .join("");
+  const body = `
+    <p style="margin:0 0 14px 0;">Merhaba <strong>${escapeHtml(p.customerName)}</strong>,</p>
+    <p style="margin:0 0 14px 0;">
+      Üzgünüz — <strong>${escapeHtml(formatDateTr(p.originalDate))}</strong> tarihindeki
+      <strong>${escapeHtml(p.serviceName)}</strong> rezervasyonunuz iptal edilmek zorunda kalındı.
+    </p>
+    ${p.cancellationReason ? `
+      <div style="background:#fef2f2;border-left:4px solid #ef4444;padding:14px 16px;border-radius:6px;margin:12px 0;">
+        <div style="font-weight:700;color:#991b1b;font-size:14px;margin-bottom:4px;">İptal Sebebi</div>
+        <div style="font-size:13px;color:#b91c1c;">${escapeHtml(p.cancellationReason)}</div>
+      </div>` : ""}
+
+    <p style="margin:0 0 14px 0;">
+      İki seçeneğiniz var — aşağıdaki <strong>tek tıklık link</strong> üzerinden seçin.
+    </p>
+
+    <h3 style="margin:18px 0 8px 0;font-size:15px;color:${BRAND_PRIMARY};">Seçenek 1 — Alternatif tarih (önerilen)</h3>
+    ${altListHtml ? `<p style="margin:0 0 6px 0;font-size:14px;color:#475569;">Önerilen ilk uygun tarihler:</p>
+    <ul style="margin:0 0 14px 18px;padding:0;font-size:14px;line-height:1.6;">${altListHtml}</ul>` : `
+    <p style="margin:0 0 14px 0;font-size:14px;color:#475569;">Linkten size uygun bir tarihi seçebilirsiniz.</p>`}
+
+    <h3 style="margin:18px 0 8px 0;font-size:15px;color:${BRAND_PRIMARY};">Seçenek 2 — %100 iade</h3>
+    <p style="margin:0 0 14px 0;font-size:14px;color:#475569;">
+      İstemezseniz <strong>${escapeHtml(formatCurrency(p.refundAmount, p.currency))}</strong> tutarın tamamı
+      hesabınıza 5 iş günü içinde iade edilir.
+    </p>
+
+    <div style="background:#fffbeb;border:1px solid ${BRAND_GOLD};border-radius:6px;padding:10px 14px;margin:18px 0;font-size:12px;color:#78350f;">
+      Bu link <strong>${p.ttlDays} gün</strong> içinde kullanılmalıdır. Rezervasyon kodu:
+      <strong style="font-family:'SF Mono','Courier New',monospace;">${escapeHtml(p.bookingId)}</strong>
+    </div>
+  `;
+  return shellHtml({
+    title: "Rezervasyonunuz iptal edildi — alternatif veya iade",
+    preheader: `${p.serviceName} ${formatDateTr(p.originalDate)} iptal — alternatif tarih veya tam iade seçin.`,
+    badge: "İptal · Aksiyon Bekliyor",
+    badgeColor: "#ef4444",
+    heading: "Rezervasyonunuz İptal Edildi",
+    body,
+    ctaLabel: "Alternatif Seç veya İade İste",
+    ctaUrl: p.magicLinkUrl,
+    footnote: `Sorularınız için <a href="https://wa.me/905374647861" style="color:${BRAND_ACCENT};">WhatsApp +90 537 464 78 61</a>.`,
+  });
+}
+
+export function rescheduleBatchEmailText(p: RescheduleEmailParams): string {
+  const lines = [
+    `Trip and Tick — Rezervasyon İptal & Aksiyon`,
+    ``,
+    `Merhaba ${p.customerName},`,
+    ``,
+    `${formatDateTr(p.originalDate)} tarihindeki ${p.serviceName} rezervasyonunuz iptal edildi.`,
+    `Rezervasyon kodu: ${p.bookingId}`,
+    p.cancellationReason ? `İptal sebebi: ${p.cancellationReason}` : null,
+    ``,
+    `İki seçenek:`,
+    `1) Alternatif tarih seç (önerilen):`,
+    ...p.alternativeDates.slice(0, 5).map((d) => `   - ${formatDateTr(d)}`),
+    `2) %100 iade (${formatCurrency(p.refundAmount, p.currency)}) — 5 iş günü`,
+    ``,
+    `Tek-tıklık link (${p.ttlDays} gün geçerli):`,
+    p.magicLinkUrl,
+    ``,
+    `WhatsApp: +90 537 464 78 61`,
+    `--`,
+    `Trip and Tick`,
+  ];
+  return lines.filter((l): l is string => l !== null).join("\n");
+}
+
+export interface RescheduleConfirmationParams {
+  customerName: string;
+  bookingId: string;
+  serviceName: string;
+  choice: "reschedule" | "refund";
+  newDate?: string; // YYYY-MM-DD (reschedule)
+  refundAmount?: number;
+  currency?: string;
+}
+
+export function rescheduleConfirmationEmailHtml(p: RescheduleConfirmationParams): string {
+  if (p.choice === "reschedule" && p.newDate) {
+    const body = `
+      <p style="margin:0 0 14px 0;">Merhaba <strong>${escapeHtml(p.customerName)}</strong>,</p>
+      <p style="margin:0 0 14px 0;">
+        Yeni rezervasyon tarihiniz onaylandı.
+      </p>
+      <div style="background:#ecfdf5;border:2px solid #10b981;border-radius:12px;padding:18px;text-align:center;margin:14px 0;">
+        <div style="font-size:12px;color:#065f46;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;">Yeni Tarih</div>
+        <div style="font-size:20px;font-weight:800;color:#065f46;">${escapeHtml(formatDateTr(p.newDate))}</div>
+        <div style="font-size:13px;color:#047857;margin-top:6px;">${escapeHtml(p.serviceName)} · Kod: ${escapeHtml(p.bookingId)}</div>
+      </div>
+      <p style="margin:0;font-size:14px;color:#475569;">Uçuştan 1 gün önce hava raporu için sizinle iletişime geçeceğiz.</p>
+    `;
+    return shellHtml({
+      title: "Yeni Tarih Onaylandı",
+      preheader: `${p.serviceName} ${formatDateTr(p.newDate)} tarihine taşındı.`,
+      badge: "Onaylandı",
+      badgeColor: "#10b981",
+      heading: "Yeni Tarihiniz Onaylandı",
+      body,
+    });
+  }
+  const refundLine =
+    p.refundAmount && p.currency
+      ? `<strong>${escapeHtml(formatCurrency(p.refundAmount, p.currency))}</strong> tutarın iadesi`
+      : "Tam iade";
+  const body = `
+    <p style="margin:0 0 14px 0;">Merhaba <strong>${escapeHtml(p.customerName)}</strong>,</p>
+    <p style="margin:0 0 14px 0;">
+      ${refundLine} talebiniz alındı. 5 iş günü içinde ödeme yaptığınız karta yansıyacaktır.
+    </p>
+    <p style="margin:0 0 14px 0;font-size:13px;color:#64748b;">
+      Rezervasyon kodu: <strong>${escapeHtml(p.bookingId)}</strong> · ${escapeHtml(p.serviceName)}
+    </p>
+    <p style="margin:0;font-size:14px;color:#475569;">
+      Tekrar Kapadokya'ya hoş geldiniz demek için sabırsızlanıyoruz.
+    </p>
+  `;
+  return shellHtml({
+    title: "İade Talebiniz Alındı",
+    preheader: "5 iş günü içinde iade.",
+    badge: "İade",
+    badgeColor: BRAND_ACCENT,
+    heading: "İade Talebiniz Alındı",
+    body,
+  });
+}
+
+export function rescheduleConfirmationEmailText(p: RescheduleConfirmationParams): string {
+  if (p.choice === "reschedule" && p.newDate) {
+    return [
+      `Trip and Tick — Yeni Tarih Onaylandı`,
+      ``,
+      `Merhaba ${p.customerName},`,
+      ``,
+      `Yeni tarih: ${formatDateTr(p.newDate)}`,
+      `Hizmet: ${p.serviceName}`,
+      `Kod: ${p.bookingId}`,
+      ``,
+      `--`,
+      `Trip and Tick`,
+    ].join("\n");
+  }
+  return [
+    `Trip and Tick — İade Talebiniz Alındı`,
+    ``,
+    `Merhaba ${p.customerName},`,
+    ``,
+    p.refundAmount && p.currency
+      ? `İade tutarı: ${formatCurrency(p.refundAmount, p.currency)} — 5 iş günü içinde karta.`
+      : `Tam iade — 5 iş günü içinde karta.`,
+    `Kod: ${p.bookingId} · ${p.serviceName}`,
+    ``,
+    `--`,
+    `Trip and Tick`,
+  ].join("\n");
+}
+
+// ----------------------------------------------------------------------------
 // 1) WELCOME — newsletter signup hosgeldin bonusu
 // ----------------------------------------------------------------------------
 export interface WelcomeEmailParams {
