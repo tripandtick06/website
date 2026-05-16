@@ -308,6 +308,16 @@ function PricesTab() {
   }
 
   return (
+    <div className="space-y-4">
+      <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm">
+        <p className="font-semibold text-amber-900 mb-1">Günlük dinamik fiyat + iptal/rotar</p>
+        <p className="text-amber-800 text-xs mb-2">
+          Tarihe özel fiyat override, hava iptal ve rotar yönetimi için yeni paneli kullanın.
+        </p>
+        <Link href="/admin/fiyat" className="inline-block bg-amber-500 hover:bg-amber-600 text-white text-xs font-semibold px-3 py-1.5 rounded-lg">
+          Fiyat & İptal Paneline Git →
+        </Link>
+      </div>
     <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-x-auto">
       <table className="w-full text-sm">
         <thead className="bg-slate-50 text-left text-slate-600 border-b border-slate-200">
@@ -358,6 +368,7 @@ function PricesTab() {
           Değişiklikleri Kaydet (Demo)
         </button>
       </div>
+    </div>
     </div>
   );
 }

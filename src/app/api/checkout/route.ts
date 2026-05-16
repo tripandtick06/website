@@ -4,6 +4,9 @@ import { z } from "zod";
 export const runtime = "edge";
 export const dynamic = "force-dynamic";
 
+const LOCALES = ["tr", "en", "de", "fr", "es", "nl", "zh", "hi", "ur"] as const;
+const DEFAULT_LOCALE = "tr";
+
 const checkoutSchema = z.object({
   serviceSlug: z.string().min(1),
   serviceName: z.string().min(1),
@@ -13,9 +16,24 @@ const checkoutSchema = z.object({
   totalPrice: z.number().positive().max(100000),
   currency: z.enum(["EUR", "TRY", "USD"]),
   customerEmail: z.string().email().optional().or(z.literal("")),
+  locale: z.enum(LOCALES).optional(),
 });
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.tripandtick.com";
+
+// next-intl localePrefix="as-needed": default locale (tr) prefix yok, digerleri /<locale>/
+function localePath(locale: string | undefined): string {
+  const l = locale ?? DEFAULT_LOCALE;
+  return l === DEFAULT_LOCALE ? "" : `/${l}`;
+}
+
+// Stripe locale enum subset — UI dili. hi (Hindi) + ur (Urdu) Stripe'ta yok → auto.
+function stripeLocale(locale: string | undefined): "tr" | "en" | "de" | "fr" | "es" | "nl" | "zh" | "auto" {
+  const map: Record<string, "tr" | "en" | "de" | "fr" | "es" | "nl" | "zh"> = {
+    tr: "tr", en: "en", de: "de", fr: "fr", es: "es", nl: "nl", zh: "zh",
+  };
+  return map[locale ?? ""] ?? "auto";
+}
 
 export async function POST(req: NextRequest) {
   try {
@@ -28,14 +46,15 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const { serviceSlug, serviceName, totalPrice, currency, customerEmail, date, adults, children } = parsed.data;
+    const { serviceSlug, serviceName, totalPrice, currency, customerEmail, date, adults, children, locale } = parsed.data;
+    const lp = localePath(locale);
 
     const stripeKey = process.env.STRIPE_SECRET_KEY;
 
     // Demo mode — Stripe key yoksa direkt success-page URL'i dondur
     if (!stripeKey || stripeKey === "sk_test_dummy" || stripeKey.startsWith("dummy")) {
       console.warn("[api/checkout] DEMO MODE — STRIPE_SECRET_KEY env-var bulunamadi (Cloudflare Pages dashboard'dan ekleyin)");
-      const demoUrl = `${SITE_URL}/tr/rezervasyon/basarili?demo=1&total=${totalPrice}&currency=${currency}&slug=${encodeURIComponent(serviceSlug)}`;
+      const demoUrl = `${SITE_URL}${lp}/rezervasyon/basarili?demo=1&total=${totalPrice}&currency=${currency}&slug=${encodeURIComponent(serviceSlug)}`;
       return NextResponse.json({
         url: demoUrl,
         demo: true,
@@ -70,16 +89,17 @@ export async function POST(req: NextRequest) {
           quantity: 1,
         },
       ],
-      success_url: `${SITE_URL}/tr/rezervasyon/basarili?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${SITE_URL}/tr/rezervasyon/iptal?slug=${encodeURIComponent(serviceSlug)}`,
+      success_url: `${SITE_URL}${lp}/rezervasyon/basarili?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${SITE_URL}${lp}/rezervasyon/iptal?slug=${encodeURIComponent(serviceSlug)}`,
       customer_email: customerEmail || undefined,
       metadata: {
         serviceSlug,
         date,
         adults: String(adults),
         children: String(children),
+        locale: locale ?? DEFAULT_LOCALE,
       },
-      locale: "tr",
+      locale: stripeLocale(locale),
     });
 
     return NextResponse.json({ url: session.url });

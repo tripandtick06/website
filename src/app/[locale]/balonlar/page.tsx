@@ -124,16 +124,29 @@ export default function BalonlarPage() {
 
                   <div className="flex items-end justify-between gap-3 mt-auto pt-4 border-t border-slate-100">
                     <div>
-                      <div className="text-xs text-slate-400 line-through">
-                        {formatPrice(pkg.marketPrice, pkg.currency)}
-                      </div>
-                      <div className="text-3xl font-extrabold text-primary leading-none">
-                        {formatPrice(pkg.adultPrice, pkg.currency)}
-                      </div>
-                      <div className="text-xs text-slate-500 mt-1">kişi başı / yetişkin</div>
+                      {pkg.priceOnRequest ? (
+                        <>
+                          <div className="text-2xl font-extrabold text-primary leading-tight">
+                            Özel fiyat sorunuz
+                          </div>
+                          <div className="text-xs text-slate-500 mt-1">Kişiye özel teklif</div>
+                        </>
+                      ) : (
+                        <>
+                          <div className="text-xs text-slate-400 line-through">
+                            {formatPrice(pkg.marketPrice, pkg.currency)}
+                          </div>
+                          <div className="text-3xl font-extrabold text-primary leading-none">
+                            {formatPrice(pkg.adultPrice, pkg.currency)}
+                          </div>
+                          <div className="text-xs text-slate-500 mt-1">
+                            {pkg.dynamicPricing ? "kişi başı (7 gün içi günlük değişir)" : "kişi başı / yetişkin"}
+                          </div>
+                        </>
+                      )}
                     </div>
                     <Link href={`/balonlar/${pkg.slug}`} className="btn-accent text-sm">
-                      Detay & Rezerve
+                      {pkg.priceOnRequest ? "Detay & İletişim" : "Detay & Rezerve"}
                     </Link>
                   </div>
                 </div>

@@ -25,16 +25,20 @@ export interface BalloonPackage {
   warnings: string[];
   minAge: number;
   highlights: string[];
+  // Fiyat gizli — UI "Özel fiyat sorunuz" CTA gosterir (telefon/WhatsApp).
+  priceOnRequest?: boolean;
+  // Standart balon icin: > 7 gun catalog adultPrice; <= 7 gun admin /admin/fiyat override.
+  dynamicPricing?: boolean;
 }
 
 export const BALLOON_PACKAGES: BalloonPackage[] = [
   {
     slug: "standart-balon-ucusu",
     name: "Standart Balon Uçuşu",
-    shortDescription: "En ekonomik balon turu. 60+ dk uçuş, geniş sepet, %100 hava iptali iadesi.",
+    shortDescription: "En ekonomik balon turu. 60 dk uçuş, geniş sepet, %100 hava iptali iadesi.",
     longDescription:
-      "Kapadokya'nın efsanevi peri bacalarını kuş bakışı izlemek için en uygun fiyatlı seçenek. Standart sepet 16-20 yolcu kapasiteli olup, profesyonel pilotlar eşliğinde 60 dakikadan fazla uçuş sunar. Otel transferi, hafif kahvaltı, 40 milyon Euro sigorta, uçuş sertifikası ve madalya, şampanya ile iniş kutlaması — hepsi fiyata dahildir.",
-    duration: "60+ dk",
+      "Kapadokya'nın efsanevi peri bacalarını kuş bakışı izlemek için en uygun fiyatlı seçenek. Standart sepet 16-20 yolcu kapasiteli olup, profesyonel pilotlar eşliğinde 60 dakika uçuş sunar. Otel transferi, hafif kahvaltı, 40 milyon Euro sigorta, uçuş sertifikası ve madalya, şampanya ile iniş kutlaması — hepsi fiyata dahildir. Fiyatlar hava şartları ve yoğunluğa göre günlük değişebilir — 7 günden uzak tarihler için katalog fiyatı, 7 gün içi için güncel fiyat geçerlidir.",
+    duration: "60 dk",
     durationMinutes: 60,
     capacity: { min: 16, max: 20 },
     adultPrice: 165,
@@ -61,55 +65,21 @@ export const BALLOON_PACKAGES: BalloonPackage[] = [
       "Hamileler binemez",
       "Ciddi kalp veya sağlık sorunu olanlar binemez",
       "Hava durumuna bağlı iptal — operatör iptalinde %100 iade",
+      "Fiyat 7 gün içi günlük değişebilir (hava şartları + yoğunluk)",
     ],
     minAge: 6,
-    highlights: ["60+ dakika", "Sertifika dahil", "Şampanya servis"],
-  },
-  {
-    slug: "konfor-balon-ucusu",
-    name: "Konfor Balon Uçuşu",
-    shortDescription: "Orta kapasite sepet (12-16 kişi), 75 dakika daha geniş ferah uçuş.",
-    longDescription:
-      "Daha az kalabalık sepet ister misiniz? Konfor uçuşu 12-16 yolcu ile orta kapasite sepette 75 dakikalık premium deneyim sunar. Daha geniş alan, daha rahat fotoğraf çekimi, kaliteli kahvaltı.",
-    duration: "75 dk",
-    durationMinutes: 75,
-    capacity: { min: 12, max: 16 },
-    adultPrice: 215,
-    childRatio: 0.8,
-    marketPrice: 260,
-    currency: "EUR",
-    operatorIds: ["urgup", "voyager", "universal", "aircappadocia"],
-    badge: "Konfor",
-    badgeColor: "primary",
-    rating: 4.95,
-    reviewCount: 1623,
-    images: ["/images/balloons/konfor-1.jpg"],
-    includes: [
-      "Otelden transfer",
-      "Sıcak kahvaltı",
-      "40M€ sigorta",
-      "Uçuş sertifikası ve madalya",
-      "Şampanya servisi",
-      "Daha geniş sepet",
-    ],
-    excludes: ["Kişisel harcamalar", "Premium fotoğraf paketi"],
-    warnings: [
-      "6 yaş altı çocuklar binemez",
-      "Hamileler binemez",
-      "Ciddi kalp veya sağlık sorunu olanlar binemez",
-    ],
-    minAge: 6,
-    highlights: ["75 dakika", "12-16 kişi", "Sıcak kahvaltı"],
+    highlights: ["60 dakika", "Sertifika dahil", "Şampanya servis"],
+    dynamicPricing: true,
   },
   {
     slug: "deluxe-balon-ucusu",
     name: "Deluxe Balon Uçuşu",
-    shortDescription: "Premium sepet (8-12 kişi), 90 dakika lüks deneyim + çerçeveli sertifika.",
+    shortDescription: "Küçük sepet (max 16 kişi), 60 dakika lüks deneyim + karton sertifika.",
     longDescription:
-      "Premium balon deneyimi. 8-12 yolcu kapasiteli özel sepette 90 dakikalık uçuş, çerçeveli sertifika, gourmet kahvaltı ve VIP transfer. En seçkin operatörlerle çalışılır.",
-    duration: "90 dk",
-    durationMinutes: 90,
-    capacity: { min: 8, max: 12 },
+      "Premium balon deneyimi. Küçük sepet (max 16 yolcu) ile daha ferah 60 dakika uçuş, karton uçuş sertifikası, gourmet kahvaltı ve VIP transfer. En seçkin operatörlerle çalışılır.",
+    duration: "60 dk",
+    durationMinutes: 60,
+    capacity: { min: 8, max: 16 },
     adultPrice: 295,
     childRatio: 0.85,
     marketPrice: 380,
@@ -124,7 +94,7 @@ export const BALLOON_PACKAGES: BalloonPackage[] = [
       "VIP otel transferi",
       "Gourmet kahvaltı",
       "40M€ sigorta",
-      "Çerçeveli uçuş sertifikası",
+      "Karton uçuş sertifikası",
       "Premium şampanya",
       "Profesyonel fotoğraf çekimi",
     ],
@@ -135,14 +105,14 @@ export const BALLOON_PACKAGES: BalloonPackage[] = [
       "Ciddi kalp veya sağlık sorunu olanlar binemez",
     ],
     minAge: 6,
-    highlights: ["90 dakika", "8-12 kişi", "Çerçeveli sertifika"],
+    highlights: ["60 dakika", "Küçük sepet (max 16)", "Karton sertifika"],
   },
   {
     slug: "romantik-ozel-balon",
     name: "Romantik Özel Balon",
-    shortDescription: "Sadece çiftler için özel sepet. Evlilik teklifi, balayı, yıldönümü.",
+    shortDescription: "Sadece çiftler için özel sepet. Evlilik teklifi, balayı, yıldönümü. Özel fiyat sorunuz.",
     longDescription:
-      "Sadece 2 kişilik özel sepet veya küçük grup (max 8). Hayatın en özel anları için tasarlandı. Özel dekor, sürpriz organizasyon, fotoğrafçı, premium şampanya, kişiselleştirilmiş sertifika.",
+      "Sadece 2 kişilik özel sepet veya küçük grup (max 8). Hayatın en özel anları için tasarlandı. Özel dekor, sürpriz organizasyon, fotoğrafçı, premium şampanya, kişiselleştirilmiş sertifika. Her organizasyon kişiye özel hazırlandığı için fiyatlandırma teklife göre yapılır — bizimle iletişime geçin.",
     duration: "60-90 dk",
     durationMinutes: 75,
     capacity: { min: 2, max: 8 },
@@ -161,7 +131,7 @@ export const BALLOON_PACKAGES: BalloonPackage[] = [
       "Özel dekor",
       "Premium şampanya",
       "Profesyonel fotoğrafçı",
-      "Çerçeveli sertifika",
+      "Karton sertifika",
       "Sürpriz organizasyon",
     ],
     excludes: ["Yüzük (evlilik teklifi paketi varsa)"],
@@ -172,6 +142,7 @@ export const BALLOON_PACKAGES: BalloonPackage[] = [
     ],
     minAge: 16,
     highlights: ["Sadece çiftler", "Özel dekor", "Fotoğrafçı dahil"],
+    priceOnRequest: true,
   },
 ];
 

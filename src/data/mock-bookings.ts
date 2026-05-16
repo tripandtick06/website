@@ -75,13 +75,14 @@ function rand(seed: number): () => number {
 
 const SERVICES = [
   { slug: "standart-balon-ucusu", name: "Standart Balon Uçuşu", category: "balloon" as const, price: 165 },
-  { slug: "konfor-balon-ucusu", name: "Konfor Balon Uçuşu", category: "balloon" as const, price: 215 },
   { slug: "deluxe-balon-ucusu", name: "Deluxe Balon Uçuşu", category: "balloon" as const, price: 295 },
   { slug: "romantik-ozel-balon", name: "Romantik Özel Balon", category: "balloon" as const, price: 580 },
   { slug: "atv-standart", name: "ATV Standart Tur", category: "activity" as const, price: 29 },
-  { slug: "atv-full", name: "ATV Full Experience", category: "activity" as const, price: 55 },
-  { slug: "jeep-tam", name: "Jeep Safari Tam Gün", category: "activity" as const, price: 85 },
+  { slug: "atv-sunset", name: "Sunset ATV Turu", category: "activity" as const, price: 39 },
+  { slug: "jeep-standart", name: "Jeep Safari Standart", category: "activity" as const, price: 45 },
+  { slug: "jeep-sunset", name: "Sunset Jeep Safari", category: "activity" as const, price: 55 },
   { slug: "at-sunrise", name: "Sunrise At Binme", category: "activity" as const, price: 35 },
+  { slug: "at-sunset", name: "Sunset At Binme", category: "activity" as const, price: 45 },
   { slug: "kirmizi-tur", name: "Kapadokya Kırmızı Tur", category: "tour" as const, price: 35 },
   { slug: "yesil-tur", name: "Kapadokya Yeşil Tur", category: "tour" as const, price: 40 },
   { slug: "gun-batimi-turu", name: "Gün Batımı Turu", category: "tour" as const, price: 25 },

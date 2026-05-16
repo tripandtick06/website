@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import { useLocale } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { z } from "zod";
 import {
@@ -40,6 +41,21 @@ interface PublicAvailability {
   status: AvailabilityStatus;
   remainingSlots: number;
   note?: string;
+}
+
+interface PriceInfo {
+  slug: string;
+  date: string;
+  catalogPrice: number;
+  effectivePrice: number;
+  currency: string;
+  status: "active" | "cancelled" | "delayed" | "sold_out";
+  cancellationReason: string | null;
+  delayMinutes: number | null;
+  note: string | null;
+  priceOnRequest: boolean;
+  dynamicPricing: boolean;
+  hasOverride: boolean;
 }
 
 export interface BookingService {
@@ -111,6 +127,7 @@ function makeEmptyPassenger(): BookingPassenger {
 export function BookingClient({ service }: { service: BookingService }) {
   const router = useRouter();
   const searchParams = useSearchParams();
+  const locale = useLocale();
 
   const sessionId = searchParams?.get("session_id");
   const isDemo = searchParams?.get("demo") === "1";
@@ -146,6 +163,8 @@ export function BookingClient({ service }: { service: BookingService }) {
   const [referralBonusPct, setReferralBonusPct] = useState<number>(0);
   const [availability, setAvailability] = useState<PublicAvailability | null>(null);
   const [availabilityLoading, setAvailabilityLoading] = useState<boolean>(false);
+  const [priceInfo, setPriceInfo] = useState<PriceInfo | null>(null);
+  const [priceLoading, setPriceLoading] = useState<boolean>(false);
   const [emailSent, setEmailSent] = useState<boolean>(false);
   const [emailStatus, setEmailStatus] = useState<"pending" | "sent" | "error">("pending");
   const [emailError, setEmailError] = useState<string | null>(null);
@@ -200,12 +219,12 @@ export function BookingClient({ service }: { service: BookingService }) {
       computeTotal({
         adults,
         children,
-        unitPrice: service.adultPrice,
+        unitPrice: priceInfo?.effectivePrice ?? service.adultPrice,
         childRatio: service.childRatio,
         insurance,
         promoCode,
       }),
-    [adults, children, service.adultPrice, service.childRatio, insurance, promoCode]
+    [adults, children, priceInfo, service.adultPrice, service.childRatio, insurance, promoCode]
   );
 
   useEffect(() => {
@@ -243,25 +262,33 @@ export function BookingClient({ service }: { service: BookingService }) {
     step,
   ]);
 
-  // Tarih degistiginde doluluk sorgusu (Step 2 sinyal + Step 5 defansif blok).
+  // Tarih degistiginde doluluk + dinamik fiyat/iptal/rotar sorgusu.
   useEffect(() => {
     if (!date) {
       setAvailability(null);
+      setPriceInfo(null);
       return;
     }
     const controller = new AbortController();
     setAvailabilityLoading(true);
-    fetch(
-      `/api/availability?slug=${encodeURIComponent(service.slug)}&date=${encodeURIComponent(date)}`,
-      { signal: controller.signal }
-    )
-      .then((r) => (r.ok ? r.json() : null))
-      .then((data) => {
-        if (data?.day) setAvailability(data.day as PublicAvailability);
-        else setAvailability(null);
-      })
-      .catch(() => setAvailability(null))
-      .finally(() => setAvailabilityLoading(false));
+    setPriceLoading(true);
+    Promise.allSettled([
+      fetch(`/api/availability?slug=${encodeURIComponent(service.slug)}&date=${encodeURIComponent(date)}`, { signal: controller.signal })
+        .then((r) => (r.ok ? r.json() : null))
+        .then((data) => {
+          if (data?.day) setAvailability(data.day as PublicAvailability);
+          else setAvailability(null);
+        }),
+      fetch(`/api/price?slug=${encodeURIComponent(service.slug)}&date=${encodeURIComponent(date)}`, { signal: controller.signal })
+        .then((r) => (r.ok ? r.json() : null))
+        .then((data) => {
+          if (data?.slug) setPriceInfo(data as PriceInfo);
+          else setPriceInfo(null);
+        }),
+    ]).finally(() => {
+      setAvailabilityLoading(false);
+      setPriceLoading(false);
+    });
     return () => controller.abort();
   }, [date, service.slug]);
 
@@ -304,8 +331,9 @@ export function BookingClient({ service }: { service: BookingService }) {
     try {
       // Pre-discount total — API tarafından otoritatif hesaplanir.
       const paxCount = adults + children;
-      const adultsLine = adults * service.adultPrice;
-      const childrenLine = Math.round(children * service.adultPrice * service.childRatio);
+      const unitPriceForCoupon = priceInfo?.effectivePrice ?? service.adultPrice;
+      const adultsLine = adults * unitPriceForCoupon;
+      const childrenLine = Math.round(children * unitPriceForCoupon * service.childRatio);
       const insuranceTotal = insurance ? paxCount * INSURANCE_PRICE_PER_PAX : 0;
       const preDiscountTotal = adultsLine + childrenLine + insuranceTotal;
 
@@ -368,6 +396,7 @@ export function BookingClient({ service }: { service: BookingService }) {
             bookingId,
             total: discountedTotal,
             currency: service.currency,
+            locale,
             items: [
               {
                 id: service.slug,
@@ -410,6 +439,7 @@ export function BookingClient({ service }: { service: BookingService }) {
           totalPrice: discountedTotal,
           currency: service.currency,
           customerEmail: leadPax?.email ?? "",
+          locale,
         }),
       });
       if (!res.ok) {
@@ -515,18 +545,26 @@ export function BookingClient({ service }: { service: BookingService }) {
     !!availability &&
     availability.status !== "full" &&
     availability.remainingSlots < paxTotal;
+  const overrideCancelled = priceInfo?.status === "cancelled";
+  const overrideSoldOut = priceInfo?.status === "sold_out";
+  const overrideDelayed = priceInfo?.status === "delayed";
   const canStep2Continue =
     !!date &&
     date >= tomorrowIso() &&
     !availabilityFull &&
-    !availabilityShort;
+    !availabilityShort &&
+    !overrideCancelled &&
+    !overrideSoldOut;
   const canStep4Continue = policyAccepted;
+
+  // Effective adultPrice — admin override varsa kullan, yoksa catalog.
+  const effectiveAdultPrice = priceInfo?.effectivePrice ?? service.adultPrice;
 
   const discount = getPromoDiscount(promoCode);
   const paxCount = adults + children;
   const insuranceTotal = insurance ? paxCount * INSURANCE_PRICE_PER_PAX : 0;
-  const adultsLine = adults * service.adultPrice;
-  const childrenLine = Math.round(children * service.adultPrice * service.childRatio);
+  const adultsLine = adults * effectiveAdultPrice;
+  const childrenLine = Math.round(children * effectiveAdultPrice * service.childRatio);
   const subtotalBeforeDiscount = adultsLine + childrenLine + insuranceTotal;
   const discountAmount = subtotalBeforeDiscount - totalPrice;
   const referralDiscount = referralBonusPct > 0
@@ -686,12 +724,27 @@ export function BookingClient({ service }: { service: BookingService }) {
               )}
               <div className="flex justify-between">
                 <span className="text-slate-600">Yetişkin</span>
-                <span>{adults} × {formatPrice(service.adultPrice, service.currency)}</span>
+                <span>{adults} × {formatPrice(effectiveAdultPrice, service.currency)}</span>
               </div>
               {children > 0 && (
                 <div className="flex justify-between">
                   <span className="text-slate-600">Çocuk</span>
-                  <span>{children} × {formatPrice(Math.round(service.adultPrice * service.childRatio), service.currency)}</span>
+                  <span>{children} × {formatPrice(Math.round(effectiveAdultPrice * service.childRatio), service.currency)}</span>
+                </div>
+              )}
+              {priceInfo?.hasOverride && priceInfo.effectivePrice !== priceInfo.catalogPrice && (
+                <div className="text-[10px] text-amber-700 mt-1">
+                  Bu tarih için güncel fiyat (katalog: {formatPrice(priceInfo.catalogPrice, priceInfo.currency)})
+                </div>
+              )}
+              {overrideCancelled && (
+                <div className="mt-2 text-xs text-rose-700 bg-rose-50 rounded p-2">
+                  <strong>Bu tarih iptal edildi.</strong> {priceInfo?.cancellationReason ?? ""}
+                </div>
+              )}
+              {overrideDelayed && (
+                <div className="mt-2 text-xs text-amber-700 bg-amber-50 rounded p-2">
+                  <strong>Bu tarihte {priceInfo?.delayMinutes ?? 0} dk rotar.</strong> {priceInfo?.note ?? ""}
                 </div>
               )}
               {insurance && (

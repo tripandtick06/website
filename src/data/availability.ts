@@ -31,25 +31,37 @@ export interface DayAvailability {
 export const DEFAULT_CAPACITY: Record<string, number> = {
   // Balon paketleri
   "standart-balon-ucusu": 80, // 4 sefer × 20 sepet
-  "konfor-balon-ucusu": 32, // 2 sefer × 16
-  "deluxe-balon-ucusu": 24, // 2 sefer × 12
+  "deluxe-balon-ucusu": 32, // 2 sefer × 16 (kucuk sepet)
   "romantik-ozel-balon": 8, // özel sepet
   // ATV
   "atv-standart": 30,
-  "atv-full": 24,
+  "atv-sunrise": 24,
+  "atv-sunset": 30,
   // Jeep
-  "jeep-yarim": 25,
-  "jeep-tam": 20,
+  "jeep-standart": 25,
+  "jeep-sunrise": 20,
+  "jeep-sunset": 25,
   // At
+  "at-standart": 20,
   "at-sunrise": 20,
   "at-sunset": 20,
-  "at-full": 16,
   // Turlar
   "kirmizi-tur": 50,
   "yesil-tur": 45,
+  "mix-tur": 45,
+  "sari-tur": 30,
   "gun-batimi-turu": 40,
   "instagram-turu": 20,
   "yeralti-turu": 50,
+  // Hamam
+  "hamam-standart": 40,
+  "hamam-deluxe": 20,
+  // Türk Gecesi
+  "turk-gecesi-yemekli": 80,
+  "turk-gecesi-yemeksiz": 80,
+  // Microlight
+  "microlight-standart": 12,
+  "microlight-deluxe": 8,
   // Oteller
   "magara-otel-deluxe": 15,
   "magara-otel-suit": 8,

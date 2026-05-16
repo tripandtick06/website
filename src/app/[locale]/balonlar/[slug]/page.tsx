@@ -38,9 +38,10 @@ export function generateMetadata({ params }: PageParams): Metadata {
   const pkg = getBalloonPackageBySlug(params.slug);
   if (!pkg) return { title: "Paket Bulunamadı" };
   const path = `/balonlar/${pkg.slug}`;
-  const ogTitle = `${pkg.name} — ${formatPrice(pkg.adultPrice, pkg.currency)}`;
+  const priceLabel = pkg.priceOnRequest ? "Özel Fiyat" : formatPrice(pkg.adultPrice, pkg.currency);
+  const ogTitle = `${pkg.name} — ${priceLabel}`;
   return {
-    title: `${pkg.name} — ${formatPrice(pkg.adultPrice, pkg.currency)} | Trip and Tick`,
+    title: `${pkg.name} — ${priceLabel} | Trip and Tick`,
     description: pkg.shortDescription,
     alternates: {
       canonical: `${SITE_URL}${path}`,

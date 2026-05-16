@@ -45,7 +45,7 @@ const STATIC_URLS = [
   "/kvkk",
 ];
 
-const BALLOON_SLUGS = ["standart-balon-ucusu", "konfor-balon-ucusu", "deluxe-balon-ucusu", "romantik-ozel-balon"];
+const BALLOON_SLUGS = ["standart-balon-ucusu", "deluxe-balon-ucusu", "romantik-ozel-balon"];
 BALLOON_SLUGS.forEach((s) => STATIC_URLS.push(`/balonlar/${s}`));
 
 const urls = STATIC_URLS.map((u) => `${HOST}${u}`);

@@ -11,13 +11,22 @@ import { z } from "zod";
 export const runtime = "edge";
 export const dynamic = "force-dynamic";
 
+const LOCALES = ["tr", "en", "de", "fr", "es", "nl", "zh", "hi", "ur"] as const;
+const DEFAULT_LOCALE = "tr";
+
 const checkoutSchema = z.object({
   bookingId: z.string().min(4),
   total: z.number().positive().max(1000000),
   currency: z.enum(["TRY", "USD", "EUR", "GBP"]).default("TRY"),
+  locale: z.enum(LOCALES).optional(),
 });
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.tripandtick.com";
+
+function localePath(locale: string | undefined): string {
+  const l = locale ?? DEFAULT_LOCALE;
+  return l === DEFAULT_LOCALE ? "" : `/${l}`;
+}
 
 export async function POST(req: NextRequest) {
   try {
@@ -29,8 +38,9 @@ export async function POST(req: NextRequest) {
         { status: 400 }
       );
     }
-    const { bookingId, total, currency } = parsed.data;
-    const demoUrl = `${SITE_URL}/tr/rezervasyon/basarili?demo=1&provider=iyzico&total=${total}&currency=${currency}&bookingId=${encodeURIComponent(bookingId)}`;
+    const { bookingId, total, currency, locale } = parsed.data;
+    const lp = localePath(locale);
+    const demoUrl = `${SITE_URL}${lp}/rezervasyon/basarili?demo=1&provider=iyzico&total=${total}&currency=${currency}&bookingId=${encodeURIComponent(bookingId)}`;
     return NextResponse.json({
       paymentPageUrl: demoUrl,
       conversationId: bookingId,
