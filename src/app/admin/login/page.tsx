@@ -6,8 +6,6 @@ import Link from "next/link";
 import { Lock, Mail, Eye, EyeOff, LogIn } from "lucide-react";
 
 const AUTH_KEY = "tripandtick:admin:auth";
-const DEMO_EMAIL = "admin@tripandtick.com";
-const DEMO_PASSWORD = "admin123";
 
 export default function AdminLoginPage() {
   const router = useRouter();
@@ -17,23 +15,30 @@ export default function AdminLoginPage() {
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
-  function handleSubmit(e: FormEvent) {
+  async function handleSubmit(e: FormEvent) {
     e.preventDefault();
     setError(null);
     setLoading(true);
-
-    setTimeout(() => {
-      if (email.trim().toLowerCase() === DEMO_EMAIL && password === DEMO_PASSWORD) {
-        const token = `demo-${Date.now()}-${Math.random().toString(36).slice(2)}`;
-        if (typeof window !== "undefined") {
-          window.localStorage.setItem(AUTH_KEY, token);
-        }
-        router.replace("/admin");
-      } else {
-        setError("E-posta veya şifre hatalı.");
+    try {
+      const res = await fetch("/api/admin/auth", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: email.trim().toLowerCase(), password }),
+      });
+      const data = await res.json();
+      if (!res.ok || !data.ok) {
+        setError(data.error ?? "Giris basarisiz");
         setLoading(false);
+        return;
       }
-    }, 400);
+      if (typeof window !== "undefined") {
+        window.localStorage.setItem(AUTH_KEY, data.token as string);
+      }
+      router.replace("/admin");
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Baglanti hatasi");
+      setLoading(false);
+    }
   }
 
   return (
@@ -102,13 +107,6 @@ export default function AdminLoginPage() {
             {loading ? "Giriş yapılıyor..." : "Giriş Yap"}
           </button>
         </form>
-
-        <div className="mt-6 bg-amber-50 border border-amber-200 rounded-lg p-3 text-xs text-amber-900">
-          <p className="font-semibold mb-1">Demo Erişim Bilgileri</p>
-          <p>E-posta: <code className="bg-white px-1 rounded">admin@tripandtick.com</code></p>
-          <p>Şifre: <code className="bg-white px-1 rounded">admin123</code></p>
-          <p className="mt-1 text-amber-700">Faz 2'de Supabase Auth + 2FA aktif olacak.</p>
-        </div>
 
         <p className="text-center text-xs text-slate-400 mt-4">
           <Link href="/" className="hover:underline">← Ana siteye dön</Link>

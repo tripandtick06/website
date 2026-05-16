@@ -60,6 +60,7 @@ export async function GET() {
       supabaseAdmin: has("SUPABASE_SERVICE_ROLE_KEY"),
       supabasePing,
       adminToken: has("ADMIN_API_TOKEN"),
+      adminPassword: has("ADMIN_PASSWORD"),
       rescheduleSecret: has("RESCHEDULE_SECRET") || has("ADMIN_API_TOKEN"),
     },
   });

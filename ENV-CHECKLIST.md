@@ -41,7 +41,8 @@ iyzico hesap aktiflesince:
 |---|---|---|
 | `ADMIN_API_TOKEN` | **secret** | `openssl rand -hex 32` cikti (32 byte = 64 hex char) |
 | `NEXT_PUBLIC_ADMIN_TOKEN` | plain | **Aynisi** — browser admin UI'sin `x-admin-token` header'i okumasi icin |
-| `ADMIN_EMAIL` | plain | `info@tripandtick.com` veya admin posta |
+| `ADMIN_EMAIL` | plain | `info@tripandtick.com` veya admin posta (login e-postasi olarak da kullanilir) |
+| `ADMIN_PASSWORD` | **secret** | Admin panel sifresi. Min 16 karakter + alfanumeric + ozel. `openssl rand -base64 24` cikti tavsiye. **Yoksa /api/admin/auth 503 reject.** |
 
 ## 5. Reschedule magic-link (zorunlu)
 

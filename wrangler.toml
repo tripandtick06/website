@@ -27,6 +27,7 @@ NEXT_PUBLIC_IYZICO_ENABLED = "false"
 # ADMIN_API_TOKEN          openssl rand -hex 32
 # NEXT_PUBLIC_ADMIN_TOKEN  ADMIN_API_TOKEN ile AYNI deger
 # ADMIN_EMAIL              info@tripandtick.com
+# ADMIN_PASSWORD           openssl rand -base64 24 (panel login)
 # RESCHEDULE_SECRET        openssl rand -hex 32
 # BREVO_API_KEY            xkeysib-...
 # BREVO_FROM_EMAIL         hello@tripandtick.com (DKIM verify gerekli)
