@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { supabaseAdmin, supabaseEnabled } from "@/lib/supabase";
 
 export const runtime = "edge";
 export const dynamic = "force-dynamic";
@@ -15,7 +16,34 @@ function stripeMode(): "live" | "test" | "missing" {
   return "test";
 }
 
+async function pingSupabase(): Promise<"ok" | "fail" | "disabled"> {
+  if (!supabaseEnabled) return "disabled";
+  const client = supabaseAdmin();
+  if (!client) return "disabled";
+  try {
+    const { error } = await client.from("service_overrides").select("service_slug").limit(1);
+    return error ? "fail" : "ok";
+  } catch {
+    return "fail";
+  }
+}
+
+async function pingBrevo(): Promise<"ok" | "fail" | "disabled"> {
+  const k = process.env.BREVO_API_KEY;
+  if (!k) return "disabled";
+  try {
+    const res = await fetch("https://api.brevo.com/v3/account", {
+      method: "GET",
+      headers: { "api-key": k, Accept: "application/json" },
+    });
+    return res.ok ? "ok" : "fail";
+  } catch {
+    return "fail";
+  }
+}
+
 export async function GET() {
+  const [supabasePing, brevoPing] = await Promise.all([pingSupabase(), pingBrevo()]);
   return NextResponse.json({
     status: "ok",
     timestamp: new Date().toISOString(),
@@ -27,8 +55,10 @@ export async function GET() {
       iyzicoEnabled: process.env.NEXT_PUBLIC_IYZICO_ENABLED === "true",
       iyzicoConfigured: has("IYZICO_API_KEY") && has("IYZICO_SECRET"),
       brevo: has("BREVO_API_KEY"),
+      brevoPing,
       supabase: has("NEXT_PUBLIC_SUPABASE_URL") && has("NEXT_PUBLIC_SUPABASE_ANON_KEY"),
       supabaseAdmin: has("SUPABASE_SERVICE_ROLE_KEY"),
+      supabasePing,
       adminToken: has("ADMIN_API_TOKEN"),
       rescheduleSecret: has("RESCHEDULE_SECRET") || has("ADMIN_API_TOKEN"),
     },

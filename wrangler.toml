@@ -37,5 +37,4 @@ NEXT_PUBLIC_IYZICO_ENABLED = "false"
 # CRON_SECRET              openssl rand -hex 32
 # ANTHROPIC_API_KEY        sk-ant-... (rotate)
 # GOOGLE_AI_API_KEY        AIza...
-# NEXT_PUBLIC_21STDEV_API_KEY  an_sk_... (rotate)
 # INDEXNOW_KEY             (opsiyonel)

@@ -195,7 +195,11 @@ function timingSafeEqual(a: string, b: string): boolean {
 }
 
 async function constructEvent(rawBody: string, signature: string | null): Promise<{ event: StripeEvent | null; verified: boolean; error?: string }> {
+  const isProd = process.env.NODE_ENV === "production";
   if (!STRIPE_WEBHOOK_SECRET || !signature) {
+    if (isProd) {
+      return { event: null, verified: false, error: "signature required in production" };
+    }
     // Dev / bypass mode — parse JSON, no signature verify.
     try {
       const parsed = JSON.parse(rawBody) as StripeEvent;

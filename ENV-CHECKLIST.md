@@ -90,7 +90,8 @@ supabase db push
 |---|---|---|
 | `ANTHROPIC_API_KEY` | **secret** | console.anthropic.com → **YENI key uret, eskiyi revoke et**. `Balon/claude api.txt` dosyasini DELETE. |
 | `GOOGLE_AI_API_KEY` | **secret** | Google AI Studio. Gemini fallback. |
-| `NEXT_PUBLIC_21STDEV_API_KEY` | plain | 21st.dev → **YENI key uret**. `Balon/21stdev api.txt` DELETE. |
+
+NOT: 21st.dev API kullanılmıyor — `Balon/21stdev api.txt` dosyasini revoke + DELETE (kod-bazinda referans yok).
 
 ## 10. IndexNow (opsiyonel — SEO)
 
