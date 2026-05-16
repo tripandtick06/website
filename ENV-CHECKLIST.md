@@ -99,6 +99,16 @@ NOT: 21st.dev API kullanılmıyor — `Balon/21stdev api.txt` dosyasini revoke +
 |---|---|---|
 | `INDEXNOW_KEY` | plain | https://www.bing.com/indexnow → key uret + `public/<key>.txt` yukle |
 
+## 11. Analytics + Search Console (opsiyonel ama tavsiye)
+
+| Key | Tip | Aciklama |
+|---|---|---|
+| `NEXT_PUBLIC_GA_ID` | plain | Google Analytics 4 measurement ID (`G-XXXXXXXXXX`) |
+| `NEXT_PUBLIC_GSC_VERIFICATION` | plain | Google Search Console meta-tag content (sadece kod, `google-site-verification=` prefix YOK) |
+| `NEXT_PUBLIC_BING_VERIFICATION` | plain | Bing Webmaster Tools content |
+| `NEXT_PUBLIC_YANDEX_VERIFICATION` | plain | Yandex Webmaster content (opsiyonel) |
+| `NEXT_PUBLIC_BAIDU_VERIFICATION` | plain | Baidu Webmaster content (opsiyonel — ZH pazar) |
+
 ---
 
 ## Cloudflare Pages Build settings
