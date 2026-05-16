@@ -10,6 +10,8 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { SearchClient } from "./SearchClient";
 
+export const runtime = "edge";
+
 interface PageProps {
   searchParams?: {
     q?: string;

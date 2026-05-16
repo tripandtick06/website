@@ -1,8 +1,8 @@
-// Server-side review submissions store (Faz 1: in-memory + JSON persist).
+// Server-side review submissions store (Edge runtime: globalThis in-memory only).
 // Faz 2'de Supabase tablo: reviews(id, name, email, service_slug, rating, title,
 //   message, language, status, created_at, moderated_at).
 //
-// Importers (yeni dosyalar bu commit'te ekleniyor):
+// Importers:
 //   - src/app/api/yorum/route.ts (POST submit)
 //   - src/app/api/admin/yorumlar/route.ts (admin moderation actions)
 //   - src/app/admin/yorumlar/page.tsx (admin UI fetch — via API)
@@ -10,11 +10,7 @@
 // Data: PendingReview { id "RV-XXXX-XXXX", name, email, phone?, serviceSlug,
 //       serviceName, rating 1-5, title, message, language, status enum,
 //       createdAt ISO 8601, moderatedAt? ISO 8601, moderatedBy? string }
-//       Cache file: .next/cache/reviews.json
-// User verbatim: "devam et"
-
-import { promises as fs } from "node:fs";
-import path from "node:path";
+//       Persistence YOK (Cloudflare Workers ephemeral — Faz 2 Supabase).
 
 export type ReviewStatus = "pending" | "approved" | "rejected";
 
@@ -35,8 +31,6 @@ export interface PendingReview {
   moderatedBy?: string;
 }
 
-const CACHE_FILE = path.join(process.cwd(), ".next", "cache", "reviews.json");
-
 type Store = Map<string, PendingReview>;
 
 const g = globalThis as unknown as {
@@ -49,29 +43,14 @@ function getStore(): Store {
   return g.__reviewsStore;
 }
 
+// Persistence kaldirildi — Cloudflare Workers ephemeral.
 export async function loadFromFile(): Promise<void> {
   if (g.__reviewsLoaded) return;
   g.__reviewsLoaded = true;
-  try {
-    const raw = await fs.readFile(CACHE_FILE, "utf8");
-    const parsed = JSON.parse(raw) as PendingReview[];
-    const store = getStore();
-    for (const r of parsed) store.set(r.id, r);
-  } catch {
-    // ilk acilis veya bozuk dosya — sessiz
-  }
 }
 
 async function persistToFile(): Promise<void> {
-  try {
-    const dir = path.dirname(CACHE_FILE);
-    await fs.mkdir(dir, { recursive: true });
-    const store = getStore();
-    const arr = Array.from(store.values());
-    await fs.writeFile(CACHE_FILE, JSON.stringify(arr, null, 2), "utf8");
-  } catch (err) {
-    console.error("[reviews-store] persist failed", err);
-  }
+  // no-op: gercek persistence Supabase'te.
 }
 
 function makeReviewId(): string {

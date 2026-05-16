@@ -1,19 +1,14 @@
-// Server-side availability store (Faz 1: in-memory + opsiyonel JSON dosya persist).
+// Server-side availability store (Edge runtime: globalThis in-memory only).
 // Faz 2'de Supabase tablo: availability(slug, date, status, remaining_slots, note).
 //
 // Importers:
 //   - src/app/api/availability/route.ts (GET + POST)
+//   - src/app/api/stripe/webhook/route.ts (slot decrement on checkout.session.completed)
 // Affected: admin Takvim edit + booking step 2 doluluk sorgu.
-// Data: In-memory Map<slug, Map<date, DayAvailability>>;
-//       Dosya .next/cache/availability.json — { [slug]: DayAvailability[] }
+// Data: In-memory Map<slug, Map<date, DayAvailability>>; persistence YOK
+//       (Cloudflare Workers ephemeral — gerçek persistence Supabase'e).
 //       Tarih: YYYY-MM-DD ISO.
-// User verbatim: "doluluk oranlarini bizim elden ayarlayabilmemiz gerekiyor.
-// mesela balon turunda veya atv yada at turunda doluluk oldugunda musteriye
-// odeme yaptirmadan once bunu bilgilendirebilmemiz gerekiyor. bunun icinde
-// elden de ayarlama yapabilmemiz gerekiyor."
 
-import { promises as fs } from "node:fs";
-import path from "node:path";
 import {
   generateMockMonth,
   getDefaultCapacity,
@@ -21,8 +16,6 @@ import {
   type AvailabilityStatus,
   type DayAvailability,
 } from "@/data/availability";
-
-const CACHE_FILE = path.join(process.cwd(), ".next", "cache", "availability.json");
 
 type SlugMap = Map<string, DayAvailability>;
 type Store = Map<string, SlugMap>;
@@ -114,8 +107,6 @@ export function setAvailability(
     note: patch.note !== undefined ? patch.note : current.note,
   };
   ensureSlugMap(slug).set(date, next);
-  // Fire-and-forget persist (best effort).
-  void saveToFile();
   return next;
 }
 
@@ -154,37 +145,13 @@ export function getRange(slug: string, from: string, to: string): DayAvailabilit
   return out;
 }
 
+// Persistence kaldirildi — Cloudflare Workers ephemeral.
+// API uyumlulugu icin no-op stub'lar (caller kodu degismedi).
 export async function loadFromFile(): Promise<void> {
   if (g.__availabilityLoaded) return;
   g.__availabilityLoaded = true;
-  try {
-    const raw = await fs.readFile(CACHE_FILE, "utf8");
-    const parsed = JSON.parse(raw) as Record<string, DayAvailability[]>;
-    const store = getStore();
-    for (const [slug, days] of Object.entries(parsed)) {
-      const m = new Map<string, DayAvailability>();
-      for (const day of days) {
-        m.set(day.date, day);
-      }
-      store.set(slug, m);
-    }
-  } catch {
-    // Dosya yok / bozuk — sessizce gec.
-  }
 }
 
 export async function saveToFile(): Promise<void> {
-  try {
-    await fs.mkdir(path.dirname(CACHE_FILE), { recursive: true });
-    const store = getStore();
-    const out: Record<string, DayAvailability[]> = {};
-    for (const [slug, m] of store.entries()) {
-      out[slug] = Array.from(m.values()).sort((a, b) =>
-        a.date.localeCompare(b.date)
-      );
-    }
-    await fs.writeFile(CACHE_FILE, JSON.stringify(out, null, 2), "utf8");
-  } catch (err) {
-    console.warn("[availability-store] saveToFile failed", err);
-  }
+  // no-op: edge runtime'da persistent fs yok; gercek persistence Supabase'te.
 }

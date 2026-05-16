@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { BasariliClient } from "./BasariliClient";
 
+export const runtime = "edge";
+
 // Server-component meta + client-component CTA buttons (PDF/iCal/Hesabim).
 // User verbatim: "en uzunundan basla, en son benim mudahelem gereken seyleri yap"
 

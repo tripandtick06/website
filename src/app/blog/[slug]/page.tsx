@@ -1,26 +1,12 @@
 import { ArrowLeft, Calendar, Tag, User, Share2, Clock } from "lucide-react";
-import fs from "fs/promises";
-import path from "path";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { SITE_URL } from "@/lib/schema";
 import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
+import { ARTICLES, type BlogArticle } from "@/data/blog";
 
-interface BlogArticle {
-  slug: string;
-  title: string;
-  metaTitle: string;
-  metaDescription: string;
-  excerpt: string;
-  content: string;
-  category: string;
-  tags: string[];
-  targetKeyword: string;
-  locale: string;
-  publishedAt: string;
-  seoScore: number;
-}
+export const runtime = "edge";
 
 const CATEGORY_LABELS: Record<string, string> = {
   "balon-turlari": "Balon Turları",
@@ -31,36 +17,18 @@ const CATEGORY_LABELS: Record<string, string> = {
   "genel": "Genel",
 };
 
-async function getArticle(slug: string): Promise<BlogArticle | null> {
-  const blogDir = path.join(process.cwd(), "src", "data", "blog");
-  try {
-    const files = await fs.readdir(blogDir);
-    for (const file of files.filter((f) => f.endsWith(".json") && !f.startsWith("_"))) {
-      const content = await fs.readFile(path.join(blogDir, file), "utf-8");
-      const article = JSON.parse(content) as BlogArticle;
-      if (article.slug === slug) return article;
-    }
-  } catch {}
-  return null;
+export async function generateStaticParams() {
+  return ARTICLES.map((a) => ({ slug: a.slug }));
 }
 
-async function getRelatedArticles(currentSlug: string, category: string): Promise<BlogArticle[]> {
-  const blogDir = path.join(process.cwd(), "src", "data", "blog");
-  try {
-    const files = await fs.readdir(blogDir);
-    const related: BlogArticle[] = [];
-    for (const file of files.filter((f) => f.endsWith(".json") && !f.startsWith("_"))) {
-      const content = await fs.readFile(path.join(blogDir, file), "utf-8");
-      const article = JSON.parse(content) as BlogArticle;
-      if (article.slug !== currentSlug && article.category === category) {
-        related.push(article);
-      }
-      if (related.length >= 3) break;
-    }
-    return related;
-  } catch {
-    return [];
-  }
+function getArticle(slug: string): BlogArticle | null {
+  return ARTICLES.find((a) => a.slug === slug) ?? null;
+}
+
+function getRelatedArticles(currentSlug: string, category: string): BlogArticle[] {
+  return ARTICLES.filter(
+    (a) => a.slug !== currentSlug && a.category === category
+  ).slice(0, 3);
 }
 
 export async function generateMetadata({

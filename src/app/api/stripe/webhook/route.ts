@@ -16,7 +16,7 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { setAvailability, getAvailability } from "@/lib/availability-store";
 
-export const runtime = "nodejs";
+export const runtime = "edge";
 export const dynamic = "force-dynamic";
 
 const BREVO_API_KEY = process.env.BREVO_API_KEY;
@@ -154,8 +154,47 @@ interface StripeEvent {
   data: { object: Record<string, unknown> };
 }
 
+// Stripe-Signature header parse: "t=<timestamp>,v1=<hex>"
+function parseStripeSignature(header: string): { timestamp: string | null; v1: string | null } {
+  const parts = header.split(",").map((p) => p.trim());
+  let timestamp: string | null = null;
+  let v1: string | null = null;
+  for (const part of parts) {
+    const eq = part.indexOf("=");
+    if (eq < 0) continue;
+    const k = part.slice(0, eq);
+    const v = part.slice(eq + 1);
+    if (k === "t") timestamp = v;
+    else if (k === "v1") v1 = v;
+  }
+  return { timestamp, v1 };
+}
+
+// Edge-safe HMAC SHA256 via Web Crypto API.
+async function hmacSha256Hex(secret: string, payload: string): Promise<string> {
+  const enc = new TextEncoder();
+  const key = await crypto.subtle.importKey(
+    "raw",
+    enc.encode(secret),
+    { name: "HMAC", hash: "SHA-256" },
+    false,
+    ["sign"]
+  );
+  const sig = await crypto.subtle.sign("HMAC", key, enc.encode(payload));
+  return Array.from(new Uint8Array(sig))
+    .map((b) => b.toString(16).padStart(2, "0"))
+    .join("");
+}
+
+function timingSafeEqual(a: string, b: string): boolean {
+  if (a.length !== b.length) return false;
+  let diff = 0;
+  for (let i = 0; i < a.length; i++) diff |= a.charCodeAt(i) ^ b.charCodeAt(i);
+  return diff === 0;
+}
+
 async function constructEvent(rawBody: string, signature: string | null): Promise<{ event: StripeEvent | null; verified: boolean; error?: string }> {
-  if (!STRIPE_SECRET_KEY || !STRIPE_WEBHOOK_SECRET || !signature) {
+  if (!STRIPE_WEBHOOK_SECRET || !signature) {
     // Dev / bypass mode — parse JSON, no signature verify.
     try {
       const parsed = JSON.parse(rawBody) as StripeEvent;
@@ -165,9 +204,20 @@ async function constructEvent(rawBody: string, signature: string | null): Promis
     }
   }
   try {
-    const Stripe = (await import("stripe")).default;
-    const stripe = new Stripe(STRIPE_SECRET_KEY, { apiVersion: "2024-06-20" });
-    const event = stripe.webhooks.constructEvent(rawBody, signature, STRIPE_WEBHOOK_SECRET) as unknown as StripeEvent;
+    const { timestamp, v1 } = parseStripeSignature(signature);
+    if (!timestamp || !v1) {
+      return { event: null, verified: false, error: "signature header parse failed" };
+    }
+    const expected = await hmacSha256Hex(STRIPE_WEBHOOK_SECRET, `${timestamp}.${rawBody}`);
+    if (!timingSafeEqual(expected, v1)) {
+      return { event: null, verified: false, error: "signature mismatch" };
+    }
+    // Replay protection: 5 dakikadan eski timestamp reddedilir.
+    const age = Math.abs(Date.now() / 1000 - parseInt(timestamp, 10));
+    if (Number.isFinite(age) && age > 300) {
+      return { event: null, verified: false, error: "timestamp outside tolerance" };
+    }
+    const event = JSON.parse(rawBody) as StripeEvent;
     return { event, verified: true };
   } catch (err) {
     return { event: null, verified: false, error: err instanceof Error ? err.message : "Signature verify failed" };

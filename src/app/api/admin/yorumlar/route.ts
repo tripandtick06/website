@@ -11,7 +11,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import { z } from "zod";
 import { deleteReview, setReviewStatus } from "@/lib/reviews-store";
 
-export const runtime = "nodejs";
+export const runtime = "edge";
 export const dynamic = "force-dynamic";
 
 function isAdmin(req: NextRequest): boolean {

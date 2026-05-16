@@ -13,7 +13,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import { z } from "zod";
 import { addReview, listReviews, type ReviewStatus } from "@/lib/reviews-store";
 
-export const runtime = "nodejs";
+export const runtime = "edge";
 export const dynamic = "force-dynamic";
 
 const submitSchema = z.object({

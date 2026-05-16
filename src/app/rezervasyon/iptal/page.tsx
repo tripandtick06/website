@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { XCircle, ArrowLeft, MessageCircle } from "lucide-react";
 
+export const runtime = "edge";
+
 export const metadata: Metadata = {
   title: "Ödeme İptal Edildi | Trip and Tick",
   description: "Ödeme işleminiz tamamlanmadı. Tekrar deneyebilirsiniz.",

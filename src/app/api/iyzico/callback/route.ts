@@ -1,19 +1,15 @@
-// POST/GET /api/iyzico/callback — iyzico hosted-page donus dogrulamasi.
+// POST/GET /api/iyzico/callback — DEMO/STUB mode (Cloudflare Pages edge runtime).
 //
-// Callers:
-//   - iyzico Checkout Form (paymentPageUrl) submit sonrasi (external)
-// Affected: rezervasyon basarili / iptal sayfa yonlendirmesi.
-// User verbatim: "iyzico'dan donus, payment status check; Booking status update (paid/failed);
-// Redirect `/rezervasyon/basarili?token=...` veya `/rezervasyon/iptal`"
+// iyzipay SDK Node-only oldugu icin edge-safe degil. /checkout demo-mode'da
+// iyzico'ya hicbir cagri yapmiyor; bu callback gercek iyzico-flow icin sadece
+// Faz 2 REST + WebCrypto rewrite sonrasi aktif olacak. Su an: gelirse
+// otomatik basarili redirect (demo).
 //
-// SECURITY:
-//   - Token + conversationId iyzico-server-side dogrulama (retrieveCheckoutForm).
-//   - Client tarafindan manipule edilemez.
+// Callers: iyzico hosted page external submit (Faz 2 sonra).
 
 import { NextResponse, type NextRequest } from "next/server";
-import { retrieveCheckoutForm } from "@/lib/iyzico";
 
-export const runtime = "nodejs";
+export const runtime = "edge";
 export const dynamic = "force-dynamic";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.tripandtick.com";
@@ -22,31 +18,17 @@ async function handle(req: NextRequest, body: Record<string, string>): Promise<N
   const url = new URL(req.url);
   const bookingId = url.searchParams.get("bookingId") ?? body.bookingId ?? "";
   const token = body.token ?? url.searchParams.get("token") ?? "";
-  const conversationIdParam = body.conversationId ?? bookingId;
 
   if (!token || !bookingId) {
     return NextResponse.redirect(`${SITE_URL}/rezervasyon/iptal?reason=missing-token`);
   }
-
-  try {
-    const verify = await retrieveCheckoutForm(token, conversationIdParam);
-    if (verify.status === "success" && (verify.paymentStatus === "SUCCESS" || !verify.paymentStatus)) {
-      // Basarili — booking-detail page'i redirect (token query string ile).
-      const target = new URL(`${SITE_URL}/rezervasyon/basarili`);
-      target.searchParams.set("provider", "iyzico");
-      target.searchParams.set("token", token);
-      target.searchParams.set("bookingId", bookingId);
-      return NextResponse.redirect(target.toString());
-    }
-    return NextResponse.redirect(
-      `${SITE_URL}/rezervasyon/iptal?provider=iyzico&reason=${encodeURIComponent(verify.paymentStatus ?? "failure")}&bookingId=${encodeURIComponent(bookingId)}`
-    );
-  } catch (err) {
-    console.error("[api/iyzico/callback] verify error", err);
-    return NextResponse.redirect(
-      `${SITE_URL}/rezervasyon/iptal?provider=iyzico&reason=error&bookingId=${encodeURIComponent(bookingId)}`
-    );
-  }
+  // Demo: dogrudan basarili sayfaya yonlendir (Faz 2: gercek iyzico verify).
+  const target = new URL(`${SITE_URL}/rezervasyon/basarili`);
+  target.searchParams.set("provider", "iyzico");
+  target.searchParams.set("token", token);
+  target.searchParams.set("bookingId", bookingId);
+  target.searchParams.set("demo", "1");
+  return NextResponse.redirect(target.toString());
 }
 
 export async function POST(req: NextRequest) {

@@ -21,7 +21,7 @@ import {
   setAvailability,
 } from "@/lib/availability-store";
 
-export const runtime = "nodejs";
+export const runtime = "edge";
 export const dynamic = "force-dynamic";
 
 const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
