@@ -17,6 +17,7 @@ import {
   updateBookingStatus,
   updateBookingDate,
 } from "@/lib/db/bookings";
+import { createStripeRefund } from "@/lib/stripe-refund";
 import { sendBrevoEmail, brevoAdminAddress } from "@/lib/brevo";
 import {
   rescheduleConfirmationEmailHtml,
@@ -128,10 +129,20 @@ export async function POST(req: NextRequest) {
 
   // action === "refund"
   await updateBookingStatus(booking.id, "cancelled", "refunded");
+
+  // Stripe Refunds API auto-trigger (sessionId veya paymentIntent varsa).
+  const refundResult = await createStripeRefund({
+    paymentIntent: booking.stripePaymentIntent,
+    sessionId: booking.stripeSessionId,
+    reason: "requested_by_customer",
+    metadata: { bookingId: booking.id, originalDate: payload.originalDate },
+  });
+
   console.info("[api/rezervasyon/yeniden-tarih] refund", {
     bookingId: booking.id,
     date: payload.originalDate,
     amount: booking.totalPrice,
+    stripeRefund: refundResult.ok ? refundResult.refundId : refundResult.error ?? "demo",
   });
 
   if (customerEmail) {
@@ -157,6 +168,12 @@ export async function POST(req: NextRequest) {
       tags: ["refund-confirm"],
     });
   }
+  const refundStatusLine = refundResult.ok
+    ? `Stripe Refund OTOMATIK gonderildi: <code>${refundResult.refundId}</code> (status: ${refundResult.status ?? "?"})`
+    : refundResult.demoLogged
+      ? "Stripe demo-log (canli key yok)"
+      : `Stripe AUTO-REFUND BASARISIZ: ${refundResult.error ?? "bilinmeyen"} — panelden elle isle`;
+
   await sendBrevoEmail({
     to: brevoAdminAddress(),
     subject: `[ADMIN] İade talebi — ${booking.id} (${booking.totalPrice} ${booking.currency})`,
@@ -168,7 +185,7 @@ export async function POST(req: NextRequest) {
 <li><b>Iade tutari:</b> ${booking.totalPrice} ${booking.currency}</li>
 <li><b>Odeme:</b> ${booking.stripeSessionId ? `Stripe ${booking.stripeSessionId}` : "—"}</li>
 </ul>
-<p><b>Aksiyon:</b> Stripe/iyzico panelinden iade isle (5 is gunu icinde).</p>`,
+<p><b>Durum:</b> ${refundStatusLine}</p>`,
     tags: ["admin-refund"],
   });
 
@@ -178,5 +195,8 @@ export async function POST(req: NextRequest) {
     bookingId: booking.id,
     refundAmount: booking.totalPrice,
     currency: booking.currency,
+    stripeRefund: refundResult.ok
+      ? { id: refundResult.refundId, status: refundResult.status }
+      : null,
   });
 }

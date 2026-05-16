@@ -101,6 +101,15 @@ export default function AdminFiyatPage() {
   const [notifySending, setNotifySending] = useState(false);
   const [notifyResult, setNotifyResult] = useState<string | null>(null);
 
+  // Manuel iade state
+  const [refundBookingId, setRefundBookingId] = useState("");
+  const [refundReason, setRefundReason] = useState<"requested_by_customer" | "duplicate" | "fraudulent">("requested_by_customer");
+  const [refundAmount, setRefundAmount] = useState("");
+  const [refundNotify, setRefundNotify] = useState(true);
+  const [refundNote, setRefundNote] = useState("");
+  const [refundSubmitting, setRefundSubmitting] = useState(false);
+  const [refundResult, setRefundResult] = useState<{ ok: boolean; msg: string } | null>(null);
+
   useEffect(() => {
     if (typeof window === "undefined") return;
     const tok = window.localStorage.getItem(AUTH_KEY);
@@ -259,6 +268,50 @@ export default function AdminFiyatPage() {
       setNotifyResult(`HATA: ${err instanceof Error ? err.message : "Bilinmeyen"}`);
     } finally {
       setNotifySending(false);
+    }
+  }
+
+  async function handleManualRefund() {
+    const id = refundBookingId.trim().toUpperCase();
+    if (!/^TT-[A-Z0-9]{8}$/.test(id)) {
+      setRefundResult({ ok: false, msg: "Booking ID formati hatali (TT-XXXXXXXX bekleniyor)" });
+      return;
+    }
+    if (!confirm(`${id} icin Stripe iade tetiklenecek (canli para hareketi). Devam?`)) return;
+    setRefundSubmitting(true);
+    setRefundResult(null);
+    try {
+      const body: Record<string, unknown> = {
+        bookingId: id,
+        reason: refundReason,
+        notifyCustomer: refundNotify,
+      };
+      const amt = parseFloat(refundAmount);
+      if (refundAmount.trim() && Number.isFinite(amt) && amt > 0) {
+        body.amountMinor = Math.round(amt * 100);
+      }
+      if (refundNote.trim()) body.note = refundNote.trim();
+      const res = await fetch("/api/admin/refund", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "x-admin-token": ADMIN_TOKEN },
+        body: JSON.stringify(body),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error ?? `HTTP ${res.status}`);
+      const r = data.refund ?? {};
+      setRefundResult({
+        ok: true,
+        msg: r.id
+          ? `OK — Stripe Refund ${r.id} (${r.status ?? "?"}) ${((r.amountMinor ?? 0) / 100).toFixed(2)} ${(r.currency ?? "").toUpperCase()}`
+          : "OK — demo-log (Stripe canli key yok)",
+      });
+      setRefundBookingId("");
+      setRefundAmount("");
+      setRefundNote("");
+    } catch (err) {
+      setRefundResult({ ok: false, msg: err instanceof Error ? err.message : "Bilinmeyen hata" });
+    } finally {
+      setRefundSubmitting(false);
     }
   }
 
@@ -466,6 +519,86 @@ export default function AdminFiyatPage() {
               </tbody>
             </table>
           )}
+        </section>
+
+        <section className="bg-white rounded-2xl shadow-sm p-6 mt-8 border-l-4 border-rose-400">
+          <h2 className="text-lg font-bold text-slate-900 mb-1">Manuel İade (Stripe Refunds API)</h2>
+          <p className="text-sm text-slate-600 mb-4">
+            Tek rezervasyon icin Stripe iadesi tetikler. Otomatik mail + DB status update.
+            Kismi iade icin tutar gir, bos birakirsan tam iade.
+          </p>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div>
+              <label className="text-xs font-semibold text-slate-700 block mb-1">Booking ID (TT-XXXXXXXX)</label>
+              <input
+                type="text"
+                value={refundBookingId}
+                onChange={(e) => setRefundBookingId(e.target.value)}
+                placeholder="TT-A1B2C3D4"
+                className="w-full border border-slate-300 rounded-md px-3 py-2 text-sm font-mono uppercase"
+              />
+            </div>
+            <div>
+              <label className="text-xs font-semibold text-slate-700 block mb-1">Iade sebebi</label>
+              <select
+                value={refundReason}
+                onChange={(e) => setRefundReason(e.target.value as typeof refundReason)}
+                className="w-full border border-slate-300 rounded-md px-3 py-2 text-sm"
+              >
+                <option value="requested_by_customer">Musteri talebi</option>
+                <option value="duplicate">Cift kayit</option>
+                <option value="fraudulent">Sahtekarlik</option>
+              </select>
+            </div>
+            <div>
+              <label className="text-xs font-semibold text-slate-700 block mb-1">Tutar (bos = tam iade)</label>
+              <input
+                type="number"
+                step="0.01"
+                min="0.01"
+                value={refundAmount}
+                onChange={(e) => setRefundAmount(e.target.value)}
+                placeholder="60.00"
+                className="w-full border border-slate-300 rounded-md px-3 py-2 text-sm"
+              />
+            </div>
+            <div className="flex items-end">
+              <label className="flex items-center gap-2 text-sm text-slate-700">
+                <input
+                  type="checkbox"
+                  checked={refundNotify}
+                  onChange={(e) => setRefundNotify(e.target.checked)}
+                  className="w-4 h-4"
+                />
+                Musteriye onay maili gonder
+              </label>
+            </div>
+            <div className="md:col-span-2">
+              <label className="text-xs font-semibold text-slate-700 block mb-1">Not (opsiyonel)</label>
+              <input
+                type="text"
+                value={refundNote}
+                onChange={(e) => setRefundNote(e.target.value)}
+                placeholder="Ic-log icin not"
+                maxLength={500}
+                className="w-full border border-slate-300 rounded-md px-3 py-2 text-sm"
+              />
+            </div>
+          </div>
+          <div className="mt-4 flex items-center gap-3">
+            <button
+              onClick={handleManualRefund}
+              disabled={refundSubmitting || !refundBookingId.trim()}
+              className="bg-rose-600 hover:bg-rose-700 disabled:bg-slate-300 text-white font-semibold py-2 px-5 rounded-md text-sm transition"
+            >
+              {refundSubmitting ? "Iade isleniyor…" : "Iade tetikle"}
+            </button>
+            {refundResult && (
+              <span className={`text-sm ${refundResult.ok ? "text-emerald-700" : "text-rose-700"}`}>
+                {refundResult.msg}
+              </span>
+            )}
+          </div>
         </section>
       </div>
     </main>
