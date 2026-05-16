@@ -5,7 +5,7 @@
 // Glob check: src/components/sections/LoyaltySection.tsx daha once yoktu.
 // User verbatim: "3 kart: Puan Kazan / Tier Yukseliş / Referans Bonusu; CTA '/hesabim'"
 
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { Sparkles, Crown, Gift, ChevronRight } from "lucide-react";
 import { LOYALTY_CONFIG } from "@/data/loyalty";
 

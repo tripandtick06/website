@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { useT } from "@/lib/i18n/I18nProvider";
 
 export function MobileStickyCTA() {

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { Star, Clock, Check, Hotel, MountainSnow, TreePine, Package, Car, Wind } from "lucide-react";
 import { formatPrice } from "@/lib/utils";
 import type { ServiceItem } from "@/data/services/catalog";

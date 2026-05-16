@@ -1,4 +1,8 @@
 import { NextResponse, type NextRequest } from "next/server";
+import createIntlMiddleware from "next-intl/middleware";
+import { routing } from "@/i18n/routing";
+
+const intlMiddleware = createIntlMiddleware(routing);
 
 // In-memory rate limiter (Faz 2: Upstash Redis)
 const RATE_LIMIT_MAX = 10; // requests
@@ -31,8 +35,11 @@ function rateLimit(key: string, max = RATE_LIMIT_MAX, windowMs = RATE_LIMIT_WIND
 export function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
+  // Non-API + non-admin paths → next-intl locale routing.
+  // /admin/* is TR-only (no locale prefix), bypass intl.
   if (!pathname.startsWith("/api/")) {
-    return NextResponse.next();
+    if (pathname.startsWith("/admin")) return NextResponse.next();
+    return intlMiddleware(req);
   }
 
   // Stripe webhook bypass — Stripe IP'lerinden gelir, signature verify yeterli koruma.
@@ -81,5 +88,10 @@ export function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/api/:path*"],
+  // API rate-limit + non-API locale routing.
+  // Exclude: _next, _vercel, static files (with extension).
+  matcher: [
+    "/api/:path*",
+    "/((?!_next|_vercel|.*\\..*).*)",
+  ],
 };
