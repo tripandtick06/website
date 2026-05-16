@@ -15,6 +15,7 @@
 
 import { NextResponse, type NextRequest } from "next/server";
 import { setAvailability, getAvailability } from "@/lib/availability-store";
+import { tryClaimEvent } from "@/lib/db/webhook-events";
 
 export const runtime = "edge";
 export const dynamic = "force-dynamic";
@@ -237,6 +238,14 @@ export async function POST(req: NextRequest) {
     }
 
     console.info(`[stripe/webhook] event=${event.type} verified=${verified} id=${event.id ?? "?"}`);
+
+    if (event.id) {
+      const claimed = await tryClaimEvent("stripe", event.id, event.type);
+      if (!claimed) {
+        console.info(`[stripe/webhook] duplicate event skip id=${event.id}`);
+        return NextResponse.json({ received: true, verified, duplicate: true, type: event.type }, { status: 200 });
+      }
+    }
 
     switch (event.type) {
       case "checkout.session.completed": {
