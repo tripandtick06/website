@@ -1,7 +1,8 @@
 // /api/admin/auth — admin login server-side.
 //
 // Auth: env ADMIN_EMAIL + ADMIN_PASSWORD. Constant-time string compare.
-// Rate-limit: middleware.ts global 10/dk + ek IP-bazli failed-attempt cap.
+// Rate-limit: middleware.ts ozel /api/admin/auth IP-bazli 5/15min cap
+//   (brute-force koruma — basari+fail toplam denemeleri sayar).
 // Response: { ok } + Set-Cookie httpOnly tripandtick_admin=ADMIN_API_TOKEN
 //   (Secure+SameSite=Strict+Path=/+Max-Age=86400). localStorage KULLANILMAZ.
 

@@ -19,6 +19,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 import { welcomeEmailHtml, welcomeEmailText } from "@/lib/email-templates";
+import {
+  signUnsubscribeToken,
+  buildUnsubscribeUrl,
+} from "@/lib/unsubscribe-token";
 
 export const runtime = "edge";
 export const dynamic = "force-dynamic";
@@ -101,6 +105,18 @@ async function brevoSendWelcomeEmail(
     return { ok: false, error: "BREVO_API_KEY missing" };
   }
   try {
+    // RFC 8058 List-Unsubscribe (Gmail/Yahoo marketing sender requirements).
+    const siteUrl =
+      process.env.NEXT_PUBLIC_SITE_URL ??
+      process.env.SITE_URL ??
+      "https://www.tripandtick.com";
+    const unsubToken = await signUnsubscribeToken(email, "marketing");
+    const unsubUrl = buildUnsubscribeUrl(siteUrl, unsubToken);
+    const listUnsubscribeHeaders = {
+      "List-Unsubscribe": `<${unsubUrl}>`,
+      "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
+    };
+
     // Prefer transactional template if configured.
     const body =
       BREVO_WELCOME_TEMPLATE_ID !== undefined
@@ -108,8 +124,13 @@ async function brevoSendWelcomeEmail(
             sender: { email: BREVO_FROM_EMAIL, name: BREVO_FROM_NAME },
             to: [{ email }],
             templateId: BREVO_WELCOME_TEMPLATE_ID,
-            params: { locale, year: new Date().getFullYear() },
+            params: {
+              locale,
+              year: new Date().getFullYear(),
+              unsubscribeUrl: unsubUrl,
+            },
             tags: ["newsletter", "welcome"],
+            headers: listUnsubscribeHeaders,
           }
         : {
             sender: { email: BREVO_FROM_EMAIL, name: BREVO_FROM_NAME },
@@ -118,6 +139,7 @@ async function brevoSendWelcomeEmail(
             htmlContent: welcomeEmailHtml({ email, locale }),
             textContent: welcomeEmailText({ email, locale }),
             tags: ["newsletter", "welcome"],
+            headers: listUnsubscribeHeaders,
           };
     const res = await fetch("https://api.brevo.com/v3/smtp/email", {
       method: "POST",

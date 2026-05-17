@@ -20,6 +20,9 @@ export interface BrevoSendInput {
   replyTo?: BrevoAddress;
   bcc?: BrevoAddress[];
   tags?: string[];
+  // RFC 8058 one-click List-Unsubscribe. Marketing/bulk send icin gerekli
+  // (Gmail/Yahoo Feb 2024 sender requirements). Transactional muaf.
+  unsubscribe?: { url: string };
 }
 
 export interface BrevoSendResult {
@@ -63,6 +66,12 @@ export async function sendBrevoEmail(input: BrevoSendInput): Promise<BrevoSendRe
     if (input.replyTo) payload.replyTo = input.replyTo;
     if (input.bcc && input.bcc.length > 0) payload.bcc = input.bcc;
     if (input.tags && input.tags.length > 0) payload.tags = input.tags;
+    if (input.unsubscribe?.url) {
+      payload.headers = {
+        "List-Unsubscribe": `<${input.unsubscribe.url}>`,
+        "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
+      };
+    }
 
     const res = await fetch("https://api.brevo.com/v3/smtp/email", {
       method: "POST",

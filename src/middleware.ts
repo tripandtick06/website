@@ -8,6 +8,9 @@ const intlMiddleware = createIntlMiddleware(routing);
 // In-memory rate limiter (Faz 2: Upstash Redis)
 const RATE_LIMIT_MAX = 10; // requests
 const RATE_LIMIT_WINDOW_MS = 60 * 1000; // 1 dakika
+// Admin login: 5 deneme / 15 dakika / IP (brute-force koruma)
+const ADMIN_AUTH_MAX = 5;
+const ADMIN_AUTH_WINDOW_MS = 15 * 60 * 1000;
 const buckets = new Map<string, { count: number; resetAt: number }>();
 
 function getClientIp(req: NextRequest): string {
@@ -63,6 +66,33 @@ export function middleware(req: NextRequest) {
   }
 
   const ip = getClientIp(req);
+
+  // Admin login: tek IP'den 5 deneme / 15 dakika cap.
+  // Brute-force koruma (general 10/dk yetersiz attacker icin).
+  if (pathname.startsWith("/api/admin/auth")) {
+    const rl = rateLimit(`${ip}:admin-auth`, ADMIN_AUTH_MAX, ADMIN_AUTH_WINDOW_MS);
+    if (!rl.ok) {
+      return new NextResponse(
+        JSON.stringify({
+          error: "Cok fazla deneme. 15 dakika sonra tekrar deneyin.",
+          retryAfter: Math.ceil((rl.resetAt - Date.now()) / 1000),
+        }),
+        {
+          status: 429,
+          headers: {
+            "Content-Type": "application/json",
+            "Retry-After": String(Math.ceil((rl.resetAt - Date.now()) / 1000)),
+            "X-RateLimit-Limit": String(ADMIN_AUTH_MAX),
+            "X-RateLimit-Remaining": "0",
+          },
+        }
+      );
+    }
+    const res = NextResponse.next();
+    res.headers.set("X-RateLimit-Limit", String(ADMIN_AUTH_MAX));
+    res.headers.set("X-RateLimit-Remaining", String(rl.remaining));
+    return res;
+  }
 
   // Rate-limit /api/seo-agent + /api/checkout + /api/contact + /api/availability + /api/cancel + /api/b2b
   const rateLimited =
