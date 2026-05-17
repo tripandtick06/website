@@ -1,6 +1,7 @@
 import { NextResponse, type NextRequest } from "next/server";
 import createIntlMiddleware from "next-intl/middleware";
 import { routing } from "@/i18n/routing";
+import { ADMIN_COOKIE_NAME, verifyAdminCookieValue } from "@/lib/admin-auth";
 
 const intlMiddleware = createIntlMiddleware(routing);
 
@@ -38,7 +39,20 @@ export function middleware(req: NextRequest) {
   // Non-API + non-admin paths → next-intl locale routing.
   // /admin/* is TR-only (no locale prefix), bypass intl.
   if (!pathname.startsWith("/api/")) {
-    if (pathname.startsWith("/admin")) return NextResponse.next();
+    if (pathname.startsWith("/admin")) {
+      // /admin/login serbest — login page accessible olmali.
+      if (pathname === "/admin/login" || pathname.startsWith("/admin/login/")) {
+        return NextResponse.next();
+      }
+      const cookie = req.cookies.get(ADMIN_COOKIE_NAME)?.value;
+      if (!verifyAdminCookieValue(cookie)) {
+        const url = req.nextUrl.clone();
+        url.pathname = "/admin/login";
+        url.search = "";
+        return NextResponse.redirect(url);
+      }
+      return NextResponse.next();
+    }
     return intlMiddleware(req);
   }
 

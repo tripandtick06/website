@@ -62,7 +62,7 @@ export default function GizlilikPage() {
             <li><strong>Kimlik:</strong> ad, soyad, doğum tarihi (yaş kontrolü), uyruk.</li>
             <li><strong>İletişim:</strong> e-posta adresi, telefon numarası, otel adresi.</li>
             <li><strong>Pasaport:</strong> uluslararası uçuş misafirleri için pasaport numarası.</li>
-            <li><strong>Finansal:</strong> ödeme tutarı, para birimi. Kart bilgileri Trip and Tick'te saklanmaz — Stripe/iyzico altyapısı kullanılır.</li>
+            <li><strong>Finansal:</strong> ödeme tutarı, para birimi. Kart bilgileri Trip and Tick'te saklanmaz — Stripe altyapısı kullanılır.</li>
             <li><strong>İşlem:</strong> rezervasyon geçmişi, tercihler, özel istekler.</li>
             <li><strong>Teknik:</strong> IP, tarayıcı, cihaz, çerez verisi.</li>
           </ul>
@@ -81,7 +81,7 @@ export default function GizlilikPage() {
           <p className="text-slate-700 mb-3">Veriler aşağıdaki taraflarla paylaşılır:</p>
           <ul className="list-disc pl-6 space-y-1.5 text-slate-700 mb-4">
             <li><strong>Operatörler:</strong> rezervasyon yaptığınız operatör (sadece o rezervasyon için gerekli minimum bilgi).</li>
-            <li><strong>Ödeme sağlayıcıları:</strong> Stripe, iyzico (PCI-DSS uyumlu).</li>
+            <li><strong>Ödeme sağlayıcısı:</strong> Stripe (PCI-DSS uyumlu).</li>
             <li><strong>E-posta servisi:</strong> Brevo (transactional + marketing).</li>
             <li><strong>Resmi makamlar:</strong> yasal talep halinde TÜRSAB, Gelir İdaresi, mahkemeler.</li>
           </ul>

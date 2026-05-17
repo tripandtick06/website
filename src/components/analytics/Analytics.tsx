@@ -2,21 +2,55 @@
 
 // Trip and Tick — Analytics ve error-tracking script injector.
 // Production-safe: env-degiskeni yoksa hicbir HTTP request yapilmaz.
-// Mount-noktasi: src/app/layout.tsx <body> sonu.
+// Mount-noktasi: src/app/[locale]/layout.tsx <body> sonu.
+//
+// GDPR/KVKK: GA4 + Hotjar SADECE cookie-consent "accepted" sonra yuklenir.
+// Sentry "necessary" kategoride — consent-disi calisir (security/error tracking).
+// CookieConsent component "tripandtick:consent" key'ine accepted/rejected yazar
+// + window 'tripandtick:consent-change' event tetikler.
 
+import { useEffect, useState } from "react";
 import Script from "next/script";
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 const HOTJAR_ID = process.env.NEXT_PUBLIC_HOTJAR_ID;
 const HOTJAR_SV = process.env.NEXT_PUBLIC_HOTJAR_SV || "6";
 const SENTRY_DSN = process.env.NEXT_PUBLIC_SENTRY_DSN;
+const CONSENT_KEY = "tripandtick:consent";
+
+function readConsent(): boolean {
+  if (typeof window === "undefined") return false;
+  try {
+    return window.localStorage.getItem(CONSENT_KEY) === "accepted";
+  } catch {
+    return false;
+  }
+}
 
 export function Analytics() {
+  const [consented, setConsented] = useState(false);
+
+  useEffect(() => {
+    setConsented(readConsent());
+    function onStorage(e: StorageEvent) {
+      if (e.key === CONSENT_KEY) setConsented(readConsent());
+    }
+    function onCustom() {
+      setConsented(readConsent());
+    }
+    window.addEventListener("storage", onStorage);
+    window.addEventListener("tripandtick:consent-change", onCustom);
+    return () => {
+      window.removeEventListener("storage", onStorage);
+      window.removeEventListener("tripandtick:consent-change", onCustom);
+    };
+  }, []);
+
   return (
     <>
-      {GA_ID ? <GoogleAnalytics gaId={GA_ID} /> : null}
-      {HOTJAR_ID ? <Hotjar hjid={HOTJAR_ID} hjsv={HOTJAR_SV} /> : null}
       {SENTRY_DSN ? <SentryStub dsn={SENTRY_DSN} /> : null}
+      {consented && GA_ID ? <GoogleAnalytics gaId={GA_ID} /> : null}
+      {consented && HOTJAR_ID ? <Hotjar hjid={HOTJAR_ID} hjsv={HOTJAR_SV} /> : null}
     </>
   );
 }

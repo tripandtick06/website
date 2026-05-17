@@ -95,7 +95,7 @@ export default function KvkkPage() {
           </p>
           <ul className="list-disc pl-6 space-y-1.5 text-slate-700 mb-4">
             <li>Anlaşmalı operatörler (rezervasyon bilgileri).</li>
-            <li>Ödeme sağlayıcıları (Stripe, iyzico — PCI-DSS).</li>
+            <li>Ödeme sağlayıcısı (Stripe — PCI-DSS).</li>
             <li>E-posta servisi (Brevo) — yurt içi.</li>
             <li>Yetkili kamu kurumları (yasal talep halinde).</li>
             <li>Hukuki danışmanlar ve mali müşavirler.</li>

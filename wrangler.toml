@@ -16,14 +16,11 @@ pages_build_output_dir = ".vercel/output/static"
 [vars]
 NEXT_PUBLIC_SITE_URL = "https://www.tripandtick.com"
 NEXT_PUBLIC_DEFAULT_LOCALE = "tr"
-NEXT_PUBLIC_IYZICO_ENABLED = "false"
 
 # --- Secret keys (Cloudflare Pages dashboard "Encrypted" olarak set) ---
 # STRIPE_SECRET_KEY        sk_live_...
 # STRIPE_WEBHOOK_SECRET    whsec_...
-# IYZICO_API_KEY           (iyzico merchant onay sonrasi)
-# IYZICO_SECRET            (iyzico merchant onay sonrasi)
-# IYZICO_BASE_URL          https://api.iyzipay.com
+# NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY  pk_live_...
 # ADMIN_API_TOKEN          openssl rand -hex 32
 # NEXT_PUBLIC_ADMIN_TOKEN  ADMIN_API_TOKEN ile AYNI deger
 # ADMIN_EMAIL              info@tripandtick.com

@@ -99,12 +99,13 @@ Settings → Environment Variables → **Production** (her variable icin "Encryp
 |---|---|
 | `NEXT_PUBLIC_SITE_URL` | `https://www.tripandtick.com` |
 | `NEXT_PUBLIC_DEFAULT_LOCALE` | `tr` |
-| `NEXT_PUBLIC_IYZICO_ENABLED` | `false` |
 | `STRIPE_SECRET_KEY` | Faz 1.1 — `sk_live_...` (Encrypt) |
+| `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` | Faz 1.1 — `pk_live_...` |
 | `STRIPE_WEBHOOK_SECRET` | Faz 1.1 — `whsec_...` (Encrypt) |
 | `ADMIN_API_TOKEN` | Faz 1.2 — token (Encrypt) |
 | `NEXT_PUBLIC_ADMIN_TOKEN` | Faz 1.2 — **AYNI** token |
 | `ADMIN_EMAIL` | `info@tripandtick.com` |
+| `ADMIN_PASSWORD` | Faz 1.2 — `openssl rand -base64 24` (Encrypt) |
 | `RESCHEDULE_SECRET` | Faz 1.2 — secret (Encrypt) |
 | `BREVO_API_KEY` | Faz 1.4 — `xkeysib-...` (Encrypt) |
 | `BREVO_FROM_EMAIL` | `hello@tripandtick.com` |
@@ -117,7 +118,6 @@ Settings → Environment Variables → **Production** (her variable icin "Encryp
 | `SEO_AGENT_AUTO_PUBLISH` | `false` |
 | `ANTHROPIC_API_KEY` | Faz 1.3 — rotated `sk-ant-...` (Encrypt) |
 | `GOOGLE_AI_API_KEY` | mevcut (Encrypt) |
-| `NEXT_PUBLIC_21STDEV_API_KEY` | Faz 1.3 — rotated |
 
 **Preview** environment'a ayni degerleri kopyala (Stripe-TEST keys + Supabase preview project tavsiye).
 
@@ -152,7 +152,6 @@ Settings → Environment Variables → **Production** (her variable icin "Encryp
 | 10 | `/admin/fiyat` → bir tarihte cancel | Public sayfa override gosterir |
 | 11 | `/admin/fiyat` → bulk-cancel → preview | Etkilenen rezervasyon listesi |
 | 12 | `/admin/fiyat` → notify → Brevo magic-link | Mail gelir + link tikla → reschedule page |
-| 13 | iyzico radio button (Step 5) | "Yakinda" disabled gorunur |
 
 ---
 
@@ -169,25 +168,17 @@ Settings → Environment Variables → **Production** (her variable icin "Encryp
 
 ---
 
-## Faz 5 — iyzico aktivasyon (onay sonrasi)
-
-1. iyzico Merchant Panel → API → **Canli ortam** keys
-2. Geri donus URL whitelist: `https://www.tripandtick.com/api/iyzico/callback`
-3. CF Pages env'e ekle:
-   - `IYZICO_API_KEY`
-   - `IYZICO_SECRET`
-   - `IYZICO_BASE_URL=https://api.iyzipay.com`
-   - `NEXT_PUBLIC_IYZICO_ENABLED=true`
-4. Re-deploy
-5. Smoke test: `/tr/rezervasyon/standart-balon-ucusu` → Step 5 → iyzico radio aktif
-
----
-
-## Faz 6 — Geri donus (rollback)
+## Faz 5 — Geri donus (rollback)
 
 CF Pages → Deployments → onceki yesil deployment → **Rollback to this deployment**.
 
 5-10 sn icinde eski versiyon canli.
+
+---
+
+## Faz 6 — Monitoring (Faz 1 sonrasi)
+
+Yukaridaki Faz 4 monitoring kanallari aktif kal.
 
 ---
 

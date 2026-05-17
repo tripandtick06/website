@@ -5,8 +5,6 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Lock, Mail, Eye, EyeOff, LogIn } from "lucide-react";
 
-const AUTH_KEY = "tripandtick:admin:auth";
-
 export default function AdminLoginPage() {
   const router = useRouter();
   const [email, setEmail] = useState("");
@@ -23,6 +21,7 @@ export default function AdminLoginPage() {
       const res = await fetch("/api/admin/auth", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+        credentials: "include",
         body: JSON.stringify({ email: email.trim().toLowerCase(), password }),
       });
       const data = await res.json();
@@ -30,9 +29,6 @@ export default function AdminLoginPage() {
         setError(data.error ?? "Giris basarisiz");
         setLoading(false);
         return;
-      }
-      if (typeof window !== "undefined") {
-        window.localStorage.setItem(AUTH_KEY, data.token as string);
       }
       router.replace("/admin");
     } catch (err) {

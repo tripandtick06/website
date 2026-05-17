@@ -133,7 +133,7 @@ export function BasariliClient(props: Props) {
                 <a href="https://wa.me/905374647861" className="font-semibold underline" target="_blank" rel="noreferrer">WhatsApp</a>.
               </p>
               <p className="text-[10px] text-rose-700 mt-2">
-                Admin: ödeme sağlayıcı (Stripe / iyzico) env-var Cloudflare Pages dashboard'unda set edilmemiş.
+                Admin: Stripe env-var Cloudflare Pages dashboard'unda set edilmemis.
               </p>
             </div>
           </div>
@@ -150,7 +150,7 @@ export function BasariliClient(props: Props) {
         </p>
         <p className="text-sm text-slate-500 mb-8">
           {isDemo
-            ? "Demo modunda — gercek odeme yapilmadi, Stripe/iyzico henuz yapilandirilmamis."
+            ? "Demo modunda — gercek odeme yapilmadi, Stripe henuz yapilandirilmamis."
             : "Odeme alindi ve bilgilendirme e-postasi gonderildi."}
         </p>
 

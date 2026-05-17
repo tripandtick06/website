@@ -1,24 +1,18 @@
 "use client";
 
-// B2B acente demo login — email + API key.
+// B2B acente login — server-side auth (httpOnly cookie).
 //
 // Importers: Next.js auto-route /b2b/login. /b2b/page.tsx "B2B Giris" link.
 // Affected: B2B acente authentication.
-// Data: agencies.ts'ten getAgencyByEmail match. Basarili → localStorage[
-//        'tripandtick:b2b:auth']=token, localStorage['tripandtick:b2b:agencyId']
-//        =agency.id, redirect /b2b/dashboard.
-// User verbatim: "Demo login: Email + API key (veya password). Demo:
-// acente@example.com / tt_b2b_demo123. localStorage tripandtick:b2b:auth token
-// + agencyId."
+// Data: POST /api/b2b/auth/login {email, apiKey} → Set-Cookie tripandtick_b2b
+//        (httpOnly, Secure, SameSite=Strict, 24h). Basarili → redirect /b2b/dashboard.
+// SECURITY: client-side agencies.ts import KALDIRILDI — MOCK_AGENCIES tum apiKey'leri
+// client bundle'a sizdiyordu. Tum dogrulama server-side /api/b2b/auth/login.
 
 import { useState, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import { Link } from "@/i18n/routing";
 import { Lock, Mail, Eye, EyeOff, LogIn, Building2 } from "lucide-react";
-import { getAgencyByEmail } from "@/data/agencies";
-
-const AUTH_KEY = "tripandtick:b2b:auth";
-const AGENCY_ID_KEY = "tripandtick:b2b:agencyId";
 
 export default function B2BLoginPage() {
   const router = useRouter();
@@ -28,36 +22,28 @@ export default function B2BLoginPage() {
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
-  function handleSubmit(e: FormEvent) {
+  async function handleSubmit(e: FormEvent) {
     e.preventDefault();
     setError(null);
     setLoading(true);
-
-    setTimeout(() => {
-      const agency = getAgencyByEmail(email);
-      if (!agency) {
-        setError("E-posta bulunamadı veya hesap pasif.");
+    try {
+      const res = await fetch("/api/b2b/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        body: JSON.stringify({ email: email.trim().toLowerCase(), apiKey: apiKey.trim() }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || !data.ok) {
+        setError(data.error ?? "Giris basarisiz");
         setLoading(false);
         return;
-      }
-      if (!agency.active) {
-        setError("Hesabınız pasif. Lütfen destek ekibimizle iletişime geçin.");
-        setLoading(false);
-        return;
-      }
-      if (agency.apiKey !== apiKey.trim()) {
-        setError("API key hatalı.");
-        setLoading(false);
-        return;
-      }
-
-      const token = `b2b-${Date.now()}-${Math.random().toString(36).slice(2)}`;
-      if (typeof window !== "undefined") {
-        window.localStorage.setItem(AUTH_KEY, token);
-        window.localStorage.setItem(AGENCY_ID_KEY, agency.id);
       }
       router.replace("/b2b/dashboard");
-    }, 400);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Baglanti hatasi");
+      setLoading(false);
+    }
   }
 
   return (

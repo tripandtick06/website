@@ -156,10 +156,6 @@ export function BookingClient({ service }: { service: BookingService }) {
   const [submitting, setSubmitting] = useState<boolean>(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [bookingCode, setBookingCode] = useState<string>("");
-  const iyzicoEnabled = process.env.NEXT_PUBLIC_IYZICO_ENABLED === "true";
-  const [paymentProvider, setPaymentProvider] = useState<"stripe" | "iyzico">(
-    iyzicoEnabled && service.currency === "TRY" ? "iyzico" : "stripe"
-  );
   const [referralCode, setReferralCode] = useState<string>("");
   const [referralBonusPct, setReferralBonusPct] = useState<number>(0);
   const [availability, setAvailability] = useState<PublicAvailability | null>(null);
@@ -385,57 +381,6 @@ export function BookingClient({ service }: { service: BookingService }) {
     const leadPax = passengers[0];
 
     try {
-      if (paymentProvider === "iyzico") {
-        const bookingId = generateBookingCode();
-        const nameParts = (leadPax?.fullName ?? "Misafir Yolcu").trim().split(/\s+/);
-        const name = nameParts[0] ?? "Misafir";
-        const surname = nameParts.slice(1).join(" ") || "Yolcu";
-        const res = await fetch("/api/iyzico/checkout", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            bookingId,
-            total: discountedTotal,
-            currency: service.currency,
-            locale,
-            // Server-side authoritative recalc inputs (Q4 anti-tampering)
-            serviceSlug: service.slug,
-            serviceName: service.name,
-            date,
-            adults,
-            children,
-            insurance,
-            promoCode: promoCode || undefined,
-            items: [
-              {
-                id: service.slug,
-                name: service.name,
-                category: service.category,
-                price: discountedTotal,
-              },
-            ],
-            customer: {
-              name,
-              surname,
-              email: leadPax?.email ?? "noreply@tripandtick.com",
-              phone: leadPax?.phone ?? "",
-              identityNumber: "11111111111",
-              city: "Nevsehir",
-              country: "Turkey",
-              address: leadPax?.accommodation ?? "Kapadokya, Goreme",
-            },
-          }),
-        });
-        if (!res.ok) {
-          const err = await res.json().catch(() => ({}));
-          throw new Error(err?.error ?? `iyzico baslatilamadi (${res.status})`);
-        }
-        const data = (await res.json()) as { paymentPageUrl?: string };
-        if (!data.paymentPageUrl) throw new Error("iyzico URL alinamadi");
-        window.location.href = data.paymentPageUrl;
-        return;
-      }
-
       const res = await fetch("/api/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -690,9 +635,6 @@ export function BookingClient({ service }: { service: BookingService }) {
               <Step5Payment
                 service={service}
                 totalPrice={discountedTotal}
-                paymentProvider={paymentProvider}
-                setPaymentProvider={setPaymentProvider}
-                iyzicoEnabled={iyzicoEnabled}
                 submitting={submitting}
                 error={submitError}
                 onBack={goBack}
@@ -1247,92 +1189,34 @@ function Step4Summary(props: {
 function Step5Payment(props: {
   service: BookingService;
   totalPrice: number;
-  paymentProvider: "stripe" | "iyzico";
-  setPaymentProvider: (v: "stripe" | "iyzico") => void;
-  iyzicoEnabled: boolean;
   submitting: boolean;
   error: string | null;
   onBack: () => void;
   onPay: () => void;
 }) {
-  const { service, totalPrice, paymentProvider, setPaymentProvider, iyzicoEnabled, submitting, error, onBack, onPay } = props;
-  const isTry = service.currency === "TRY";
+  const { service, totalPrice, submitting, error, onBack, onPay } = props;
 
   return (
     <div>
       <h2 className="text-2xl font-bold text-slate-900 mb-4">5. Güvenli Ödeme</h2>
 
       <div className="space-y-3 mb-5">
-        <label
-          className={cn(
-            "flex items-start gap-3 border-2 rounded-lg p-4 cursor-pointer transition-all",
-            paymentProvider === "stripe"
-              ? "border-amber-500 bg-amber-50"
-              : "border-slate-200 hover:border-slate-300"
-          )}
-        >
-          <input
-            type="radio"
-            checked={paymentProvider === "stripe"}
-            onChange={() => setPaymentProvider("stripe")}
-            className="mt-1 w-4 h-4 text-amber-500"
-          />
+        <div className="flex items-start gap-3 border-2 border-amber-500 bg-amber-50 rounded-lg p-4">
+          <div className="mt-1 w-4 h-4 rounded-full bg-amber-500" />
           <div className="flex-1">
-            <p className="font-semibold text-slate-900">Kart ile odeme (Stripe — EUR/USD)</p>
+            <p className="font-semibold text-slate-900">Kart ile odeme (Stripe)</p>
             <p className="text-sm text-slate-600 mt-0.5">
-              VISA · Mastercard · AmEx · Apple Pay · Google Pay. 3D Secure destekli.
+              VISA · Mastercard · AmEx · Apple Pay · Google Pay · 3D Secure destekli. EUR / USD / TRY tum kartlar.
             </p>
           </div>
-        </label>
-
-        {iyzicoEnabled ? (
-          <label
-            className={cn(
-              "flex items-start gap-3 border-2 rounded-lg p-4 cursor-pointer transition-all",
-              paymentProvider === "iyzico"
-                ? "border-amber-500 bg-amber-50"
-                : "border-slate-200 hover:border-slate-300"
-            )}
-          >
-            <input
-              type="radio"
-              checked={paymentProvider === "iyzico"}
-              onChange={() => setPaymentProvider("iyzico")}
-              className="mt-1 w-4 h-4 text-amber-500"
-            />
-            <div className="flex-1">
-              <p className="font-semibold text-slate-900">iyzico ile (TRY — Türk kartlari)</p>
-              <p className="text-sm text-slate-600 mt-0.5">
-                Tüm Türk bankalari · taksitli ödeme · Bankkart · Maximum · Bonus · Axess · World.
-              </p>
-            </div>
-          </label>
-        ) : (
-          <div className="flex items-start gap-3 border-2 border-slate-200 bg-slate-50 rounded-lg p-4 opacity-70">
-            <div className="mt-1 w-4 h-4 rounded-full border-2 border-slate-300" />
-            <div className="flex-1">
-              <p className="font-semibold text-slate-700">iyzico (TRY — Türk kartlari) <span className="text-xs font-normal text-amber-700">— Yakında</span></p>
-              <p className="text-sm text-slate-500 mt-0.5">
-                TR-tarafı iyzico merchant onay sürecinde. Şimdilik Stripe (EUR/USD) ile her kart kabul ediliyor (3D Secure, Apple Pay, Google Pay dahil).
-              </p>
-            </div>
-          </div>
-        )}
-
-        {iyzicoEnabled && (
-          <div className="border-l-4 border-amber-400 bg-amber-50 p-3 rounded text-xs text-amber-900">
-            <strong>Bilgi:</strong> AmEx (American Express) ve UnionPay kartlar sadece <strong>TRY</strong>{" "}
-            ile odenebilir → bu kart ile odeyecekseniz <strong>iyzico</strong> secin.
-            {isTry && " Bu hizmet TRY fiyatlandirildigi icin iyzico onerilir."}
-          </div>
-        )}
+        </div>
       </div>
 
       <div className="space-y-4">
         <div className="border border-slate-200 rounded-lg p-6 text-center">
           <ShieldCheck className="w-12 h-12 text-emerald-500 mx-auto mb-3" />
           <p className="text-slate-700 mb-1">
-            Ödeme <strong>{paymentProvider === "iyzico" ? "iyzico" : "Stripe"}</strong> ile SSL 256-bit şifreli yapılır.
+            Ödeme <strong>Stripe</strong> ile SSL 256-bit şifreli yapılır.
           </p>
           <p className="text-sm text-slate-500">Kart bilgileri Trip and Tick'e iletilmez.</p>
         </div>
@@ -1357,7 +1241,7 @@ function Step5Payment(props: {
         </button>
 
         <div className="flex items-center justify-center gap-4 text-xs text-slate-400 pt-2">
-          <span>VISA</span><span>•</span><span>Mastercard</span><span>•</span><span>AmEx</span><span>•</span><span>Apple Pay</span><span>•</span><span>iyzico</span>
+          <span>VISA</span><span>•</span><span>Mastercard</span><span>•</span><span>AmEx</span><span>•</span><span>Apple Pay</span><span>•</span><span>Google Pay</span>
         </div>
       </div>
       <div className="mt-6">

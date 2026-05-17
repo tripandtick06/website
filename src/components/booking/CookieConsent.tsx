@@ -22,6 +22,8 @@ function writeConsent(v: "accepted" | "rejected") {
   try {
     window.localStorage.setItem(STORAGE_KEY, v);
     window.localStorage.setItem(`${STORAGE_KEY}:ts`, String(Date.now()));
+    // Analytics.tsx (ve diger consent-gated component'ler) ayni-tab guncellemesi icin.
+    window.dispatchEvent(new Event("tripandtick:consent-change"));
   } catch {
     /* ignore */
   }

@@ -2,7 +2,7 @@
 
 Bu liste Cloudflare Pages Dashboard → Project → **Settings → Environment Variables** altinda `Production` (ve `Preview`) icin set edilir. Secret olanlar **Encrypted** olarak kayit edilmeli.
 
-**Stripe-only canli mod**: `NEXT_PUBLIC_IYZICO_ENABLED=false` (iyzico merchant onay sureci tamamlanana kadar). iyzico tarafi UI'da "Yakinda" gorunur, Stripe (EUR/USD) tum kart turlerini Apple Pay / Google Pay / 3DS dahil kabul eder.
+**Stripe-only odeme**: Stripe (EUR/USD) tum kart turlerini Apple Pay / Google Pay / 3DS dahil kabul eder.
 
 ---
 
@@ -12,30 +12,16 @@ Bu liste Cloudflare Pages Dashboard → Project → **Settings → Environment V
 |---|---|---|
 | `NEXT_PUBLIC_SITE_URL` | plain | `https://www.tripandtick.com` |
 | `NEXT_PUBLIC_DEFAULT_LOCALE` | plain | `tr` |
-| `NEXT_PUBLIC_IYZICO_ENABLED` | plain | `false` (Stripe-only mod) — iyzico aktiflesince `true` |
 
 ## 2. Stripe (zorunlu, prod-canli)
 
 | Key | Tip | Aciklama |
 |---|---|---|
 | `STRIPE_SECRET_KEY` | **secret** | Stripe Dashboard → Developers → API keys → **Live secret key** (`sk_live_...`). Restricted key ise `Checkout sessions: write` + `Payment intents: read` + `Refunds: read` yetkili. |
+| `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` | plain | Stripe Dashboard → Developers → API keys → **Publishable key** (`pk_live_...`). Client-side Stripe.js icin. |
 | `STRIPE_WEBHOOK_SECRET` | **secret** | Stripe Dashboard → Developers → Webhooks → endpoint olustur → `whsec_...`. **Endpoint URL**: `https://www.tripandtick.com/api/stripe/webhook`. Events: `checkout.session.completed`, `payment_intent.succeeded`, `payment_intent.payment_failed`, `charge.refunded`. |
 
-## 3. iyzico (su an PASSIVE — onay sonrasi aktif)
-
-| Key | Tip | Aciklama |
-|---|---|---|
-| `IYZICO_API_KEY` | **secret** | iyzico Merchant Panel → API Anahtarlari → Canli ortam. |
-| `IYZICO_SECRET` | **secret** | iyzico Merchant Panel → Secret Key. |
-| `IYZICO_BASE_URL` | plain | Prod: `https://api.iyzipay.com` · Sandbox: `https://sandbox-api.iyzipay.com` |
-| iyzico Merchant Panel → Geri donus URL'leri whitelist: `https://www.tripandtick.com/api/iyzico/callback` |  |  |
-
-iyzico hesap aktiflesince:
-1. Yukaridaki 3 key'i ekle
-2. `NEXT_PUBLIC_IYZICO_ENABLED=true` yap
-3. Re-deploy
-
-## 4. Admin Panel (zorunlu)
+## 3. Admin Panel (zorunlu)
 
 | Key | Tip | Deger |
 |---|---|---|
@@ -44,13 +30,13 @@ iyzico hesap aktiflesince:
 | `ADMIN_EMAIL` | plain | `info@tripandtick.com` veya admin posta (login e-postasi olarak da kullanilir) |
 | `ADMIN_PASSWORD` | **secret** | Admin panel sifresi. Min 16 karakter + alfanumeric + ozel. `openssl rand -base64 24` cikti tavsiye. **Yoksa /api/admin/auth 503 reject.** |
 
-## 5. Reschedule magic-link (zorunlu)
+## 4. Reschedule magic-link (zorunlu)
 
 | Key | Tip | Deger |
 |---|---|---|
 | `RESCHEDULE_SECRET` | **secret** | `openssl rand -hex 32`. Set edilmezse `ADMIN_API_TOKEN` fallback (yeterli ama ayri secret tavsiye). |
 
-## 6. Brevo (transactional + magic-link batch)
+## 5. Brevo (transactional + magic-link batch)
 
 | Key | Tip | Aciklama |
 |---|---|---|
@@ -61,7 +47,7 @@ iyzico hesap aktiflesince:
 
 **DNS verify (kritik)**: Brevo Dashboard → Senders → `tripandtick.com` domain ekle → DKIM `mail._domainkey` TXT + SPF + DMARC kayitlarini Cloudflare DNS'e ekle. Onaylanana kadar mailler spam'e duser.
 
-## 7. Supabase (zorunlu prod — yoksa in-memory fallback restart'ta data-kaybi)
+## 6. Supabase (zorunlu prod — yoksa in-memory fallback restart'ta data-kaybi)
 
 | Key | Tip | Aciklama |
 |---|---|---|
@@ -77,7 +63,7 @@ supabase db push
 # 0001_initial_schema + 0002_service_overrides apply olur
 ```
 
-## 8. Cron + Background
+## 7. Cron + Background
 
 | Key | Tip | Aciklama |
 |---|---|---|
@@ -85,7 +71,7 @@ supabase db push
 | `SEO_AGENT_CRON` | plain | `0 3 * * *` (gunluk 03:00) |
 | `SEO_AGENT_AUTO_PUBLISH` | plain | `false` (incelemeden auto-publish KAPALI) |
 
-## 9. AI keys (ROTATE — plain-text expose risk var)
+## 8. AI keys (ROTATE — plain-text expose risk var)
 
 | Key | Tip | Aciklama |
 |---|---|---|
@@ -94,13 +80,13 @@ supabase db push
 
 NOT: 21st.dev API kullanılmıyor — `Balon/21stdev api.txt` dosyasini revoke + DELETE (kod-bazinda referans yok).
 
-## 10. IndexNow (opsiyonel — SEO)
+## 9. IndexNow (opsiyonel — SEO)
 
 | Key | Tip | Aciklama |
 |---|---|---|
 | `INDEXNOW_KEY` | plain | https://www.bing.com/indexnow → key uret + `public/<key>.txt` yukle |
 
-## 11. Analytics + Search Console (opsiyonel ama tavsiye)
+## 10. Analytics + Search Console (opsiyonel ama tavsiye)
 
 | Key | Tip | Aciklama |
 |---|---|---|

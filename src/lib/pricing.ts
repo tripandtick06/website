@@ -1,8 +1,7 @@
-// Shared server-side pricing — Stripe + iyzico checkout anti-tampering.
+// Shared server-side pricing — Stripe checkout anti-tampering.
 //
 // Importers (callers):
 //   - src/app/api/checkout/route.ts (Stripe)
-//   - src/app/api/iyzico/checkout/route.ts (iyzico)
 // Catalog + service_overrides lookup → authoritative serverTotal.
 // Override cancelled/sold_out → ok:false + status 409.
 // Catalog priceOnRequest → ok:false + status 400.

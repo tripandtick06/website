@@ -21,8 +21,6 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const AUTH_KEY = "tripandtick:admin:auth";
-
 const NAV = [
   { href: "/admin", label: "Dashboard", icon: LayoutDashboard, exact: true },
   { href: "/admin?tab=fiyatlar", label: "Fiyatlar", icon: Tag },
@@ -40,26 +38,21 @@ const NAV = [
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const pathname = usePathname();
-  const [authorized, setAuthorized] = useState<boolean | null>(null);
   const [sidebarOpen, setSidebarOpen] = useState(false);
-
+  // mounted gate: useSearchParams iceren admin sayfalari prerender'da fail eder.
+  // Mount sonra render et — middleware zaten cookie auth halletmis durumda.
+  const [mounted, setMounted] = useState(false);
   useEffect(() => {
-    if (typeof window === "undefined") return;
-    if (pathname === "/admin/login") {
-      setAuthorized(true);
-      return;
-    }
-    const token = window.localStorage.getItem(AUTH_KEY);
-    if (!token) {
-      router.replace("/admin/login");
-      return;
-    }
-    setAuthorized(true);
-  }, [pathname, router]);
+    setMounted(true);
+  }, []);
 
-  function handleLogout() {
-    if (typeof window !== "undefined") {
-      window.localStorage.removeItem(AUTH_KEY);
+  // Auth httpOnly cookie ile middleware tarafindan korunuyor.
+  // /admin/login disinda buraya gelen istek = cookie zaten dogrulanmis.
+  async function handleLogout() {
+    try {
+      await fetch("/api/admin/logout", { method: "POST", credentials: "include" });
+    } catch {
+      // cookie zaten silinecek backend tarafindan; fail-safe redirect
     }
     router.replace("/admin/login");
   }
@@ -68,7 +61,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     return <>{children}</>;
   }
 
-  if (authorized === null) {
+  if (!mounted) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-slate-50">
         <p className="text-slate-500">Yetki kontrol ediliyor...</p>

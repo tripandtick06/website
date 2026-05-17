@@ -1,15 +1,15 @@
--- TripAndTick.com — webhook_events (idempotency dedup for Stripe/iyzico)
+-- TripAndTick.com — webhook_events (Stripe idempotency dedup)
 -- =====================================================================
--- Importers: src/lib/db/webhook-events.ts (yeni) + src/app/api/stripe/webhook/route.ts
+-- Importers: src/lib/db/webhook-events.ts + src/app/api/stripe/webhook/route.ts
 -- Affected: Stripe redeliver veya retry sirasinda duplicate event-process onlenir.
 -- Data:
---   webhook_events: event_id TEXT PK. Provider 'stripe' veya 'iyzico'.
+--   webhook_events: event_id TEXT PK. Provider 'stripe'.
 --     received_at TIMESTAMPTZ ISO 8601. type basit string.
 -- =====================================================================
 
 CREATE TABLE IF NOT EXISTS webhook_events (
   event_id TEXT PRIMARY KEY,
-  provider TEXT NOT NULL CHECK (provider IN ('stripe', 'iyzico')),
+  provider TEXT NOT NULL CHECK (provider IN ('stripe')),
   type TEXT NOT NULL,
   received_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );

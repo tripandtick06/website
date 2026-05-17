@@ -60,7 +60,7 @@ export async function POST(req: NextRequest) {
   }
   if (!booking.stripeSessionId && !booking.stripePaymentIntent) {
     return NextResponse.json(
-      { error: "Stripe odeme referansi yok — iyzico veya manuel kayit, panel'den isle" },
+      { error: "Stripe odeme referansi yok — manuel kayit, panel'den isle" },
       { status: 422 }
     );
   }

@@ -35,7 +35,7 @@ import {
   Wallet,
 } from "lucide-react";
 import { cn, formatPrice } from "@/lib/utils";
-import { getAgencyById, agencyNetPrice, type Agency } from "@/data/agencies";
+import { agencyNetPrice, type Agency } from "@/data/agencies";
 import { MOCK_BOOKINGS, type MockBooking } from "@/data/mock-bookings";
 import {
   ACTIVITIES,
@@ -46,9 +46,6 @@ import {
   type ServiceItem,
 } from "@/data/services/catalog";
 import { COMPANY } from "@/data/founder";
-
-const AUTH_KEY = "tripandtick:b2b:auth";
-const AGENCY_ID_KEY = "tripandtick:b2b:agencyId";
 
 type Tab = "bookings" | "new" | "pricing" | "api";
 
@@ -86,28 +83,36 @@ export default function B2BDashboardPage() {
   const [tab, setTab] = useState<Tab>("bookings");
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
-    const token = window.localStorage.getItem(AUTH_KEY);
-    const agencyId = window.localStorage.getItem(AGENCY_ID_KEY);
-    if (!token || !agencyId) {
-      router.replace("/b2b/login");
-      return;
-    }
-    const a = getAgencyById(agencyId);
-    if (!a || !a.active) {
-      window.localStorage.removeItem(AUTH_KEY);
-      window.localStorage.removeItem(AGENCY_ID_KEY);
-      router.replace("/b2b/login");
-      return;
-    }
-    setAgency(a);
-    setAuthChecked(true);
+    let cancelled = false;
+    (async () => {
+      try {
+        const res = await fetch("/api/b2b/auth/me", { credentials: "include" });
+        if (!res.ok) {
+          router.replace("/b2b/login");
+          return;
+        }
+        const data = await res.json();
+        if (!data?.ok || !data?.agency) {
+          router.replace("/b2b/login");
+          return;
+        }
+        if (cancelled) return;
+        setAgency(data.agency as Agency);
+        setAuthChecked(true);
+      } catch {
+        router.replace("/b2b/login");
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
   }, [router]);
 
-  function handleLogout() {
-    if (typeof window !== "undefined") {
-      window.localStorage.removeItem(AUTH_KEY);
-      window.localStorage.removeItem(AGENCY_ID_KEY);
+  async function handleLogout() {
+    try {
+      await fetch("/api/b2b/auth/logout", { method: "POST", credentials: "include" });
+    } catch {
+      // cookie zaten temizlenecek; redirect garantili
     }
     router.replace("/b2b/login");
   }

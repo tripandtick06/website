@@ -2,7 +2,6 @@
 //
 // Callers:
 //   - src/app/api/stripe/webhook/route.ts (Stripe redeliver/retry dedup)
-//   - src/app/api/iyzico/callback/route.ts (iyzico retry dedup — onay sonrasi)
 // Supabase yoksa in-memory Set fallback (process restart sonra sifirlanir).
 // Stripe redeliver TTL 30 gun — in-memory yetersiz, prod-Supabase ŞART.
 
@@ -32,7 +31,7 @@ function memorySeen(key: string): boolean {
  * Supabase varsa INSERT race-safe (PK conflict = duplicate).
  */
 export async function tryClaimEvent(
-  provider: "stripe" | "iyzico",
+  provider: "stripe",
   eventId: string,
   type: string
 ): Promise<boolean> {

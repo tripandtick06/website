@@ -1,15 +1,13 @@
 // /api/admin/auth — admin login server-side.
 //
-// Onceden /admin/login page.tsx CLIENT-SIDE password karsilastiriyordu
-// (bundle.js'de hardcoded — ciddi guvenlik acigi). Bu endpoint server-side
-// constant-time eq yapar + dogru ise ADMIN_API_TOKEN return eder.
-//
 // Auth: env ADMIN_EMAIL + ADMIN_PASSWORD. Constant-time string compare.
 // Rate-limit: middleware.ts global 10/dk + ek IP-bazli failed-attempt cap.
-// Response: { ok, token? } — frontend localStorage'a koyar (Faz X: httpOnly cookie).
+// Response: { ok } + Set-Cookie httpOnly tripandtick_admin=ADMIN_API_TOKEN
+//   (Secure+SameSite=Strict+Path=/+Max-Age=86400). localStorage KULLANILMAZ.
 
 import { NextResponse, type NextRequest } from "next/server";
 import { z } from "zod";
+import { ADMIN_COOKIE_NAME, ADMIN_COOKIE_MAX_AGE } from "@/lib/admin-auth";
 
 export const runtime = "edge";
 export const dynamic = "force-dynamic";
@@ -58,5 +56,13 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "E-posta veya sifre hatali" }, { status: 401 });
   }
 
-  return NextResponse.json({ ok: true, token: ADMIN_API_TOKEN });
+  const res = NextResponse.json({ ok: true });
+  res.cookies.set(ADMIN_COOKIE_NAME, ADMIN_API_TOKEN, {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+    sameSite: "strict",
+    path: "/",
+    maxAge: ADMIN_COOKIE_MAX_AGE,
+  });
+  return res;
 }
