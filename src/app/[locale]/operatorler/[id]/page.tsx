@@ -11,9 +11,6 @@ import type { Metadata } from "next";
 import { Link } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import {
-
-export const runtime = "edge";
-
   Star,
   MapPin,
   Phone,
@@ -25,6 +22,9 @@ export const runtime = "edge";
   Languages,
   CheckCircle2,
 } from "lucide-react";
+
+export const runtime = "edge";
+
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { OPERATORS, getOperatorById } from "@/data/services/operators";

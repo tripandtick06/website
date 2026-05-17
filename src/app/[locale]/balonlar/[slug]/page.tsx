@@ -2,9 +2,6 @@ import type { Metadata } from "next";
 import { Link } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import {
-
-export const runtime = "edge";
-
   Wind,
   Clock,
   Users,
@@ -15,6 +12,9 @@ export const runtime = "edge";
   Shield,
   Calendar,
 } from "lucide-react";
+
+export const runtime = "edge";
+
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { BALLOON_PACKAGES, getBalloonPackageBySlug } from "@/data/services/balloons";

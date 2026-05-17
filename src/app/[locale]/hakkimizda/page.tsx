@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { Link } from "@/i18n/routing";
 import {
-
-export const runtime = "edge";
-
   Shield,
   Users,
   Star,
@@ -19,6 +16,9 @@ export const runtime = "edge";
   Calendar,
   BadgeCheck,
 } from "lucide-react";
+
+export const runtime = "edge";
+
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { PageHero } from "@/components/layout/PageHero";
 import { JsonLd } from "@/components/layout/JsonLd";
