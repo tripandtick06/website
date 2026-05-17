@@ -11,6 +11,18 @@
 export const B2B_COOKIE_NAME = "tripandtick_b2b";
 export const B2B_COOKIE_MAX_AGE = 60 * 60 * 24; // 24 saat (saniye)
 
+// Fixture/test apiKey prefix — agencies.ts MOCK_AGENCIES kullanir.
+// Defense-in-depth: prod NODE_ENV'de bu prefix'li key'ler auth path'inde
+// hard-reject — fixture key bir sekilde upstream'e geri sizsa bile login/
+// API gate'e bile giremesin.
+export const B2B_FIXTURE_KEY_PREFIX = "tt_b2b_test_";
+
+export function isFixtureKeyInProd(apiKey: string | null | undefined): boolean {
+  if (!apiKey) return false;
+  if ((process.env.NODE_ENV ?? "development") !== "production") return false;
+  return apiKey.startsWith(B2B_FIXTURE_KEY_PREFIX);
+}
+
 function getSecret(): string {
   return (
     process.env.B2B_SESSION_SECRET ||

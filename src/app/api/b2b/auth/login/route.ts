@@ -10,6 +10,7 @@ import {
   B2B_COOKIE_NAME,
   B2B_COOKIE_MAX_AGE,
   signB2BSession,
+  isFixtureKeyInProd,
 } from "@/lib/b2b-session";
 
 export const runtime = "edge";
@@ -37,6 +38,10 @@ export async function POST(req: NextRequest) {
   const parsed = loginSchema.safeParse(body);
   if (!parsed.success) {
     return NextResponse.json({ error: "Gecersiz veri" }, { status: 400 });
+  }
+  // Defense-in-depth: prod'da fixture-key prefix hard-reject (DB-lookup'a bile gitme).
+  if (isFixtureKeyInProd(parsed.data.apiKey)) {
+    return NextResponse.json({ error: "Yetkisiz" }, { status: 401 });
   }
   const agency = getAgencyByEmail(parsed.data.email);
   if (!agency) {

@@ -11,6 +11,7 @@
 
 import { NextResponse, type NextRequest } from "next/server";
 import { getAgencyByApiKey, agencyNetPrice, type Agency } from "@/data/agencies";
+import { isFixtureKeyInProd } from "@/lib/b2b-session";
 import {
   ACTIVITIES,
   TOURS,
@@ -27,6 +28,8 @@ const ALL_SERVICES = [...ACTIVITIES, ...TOURS, ...HOTELS, ...PACKAGES, ...TRANSF
 function authAgency(req: NextRequest): Agency | null {
   const key = req.headers.get("x-api-key");
   if (!key) return null;
+  // Defense-in-depth: prod'da fixture-key prefix hard-reject.
+  if (isFixtureKeyInProd(key)) return null;
   return getAgencyByApiKey(key) ?? null;
 }
 
