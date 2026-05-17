@@ -6,6 +6,10 @@ import { Link } from "@/i18n/routing";
 import { SITE_URL } from "@/lib/schema";
 import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
 
+// CF Pages build (next-on-pages + vercel build): fs/promises Node-only,
+// edge runtime'da yok. force-static + SSG ile build-time prebuild.
+export const dynamic = "force-static";
+
 interface BlogArticle {
   slug: string;
   title: string;
