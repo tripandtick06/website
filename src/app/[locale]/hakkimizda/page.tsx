@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Link } from "@/i18n/routing";
 import {
+
+export const runtime = "edge";
+
   Shield,
   Users,
   Star,

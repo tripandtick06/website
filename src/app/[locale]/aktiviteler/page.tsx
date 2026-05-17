@@ -8,6 +8,9 @@ import { ACTIVITIES } from "@/data/services/catalog";
 import { breadcrumbSchema, SITE_URL } from "@/lib/schema";
 import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
 
+export const runtime = "edge";
+
+
 export const metadata: Metadata = {
   title: "Kapadokya Aktiviteleri — ATV, At Binme, Jeep Safari | Trip and Tick",
   description:

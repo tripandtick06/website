@@ -9,6 +9,9 @@ import { LoyaltySection } from "@/components/sections/LoyaltySection";
 import { StatsBar } from "@/components/sections/StatsBar";
 import { MobileStickyCTA } from "@/components/sections/MobileStickyCTA";
 
+export const runtime = "edge";
+
+
 export default function HomePage() {
   return (
     <>

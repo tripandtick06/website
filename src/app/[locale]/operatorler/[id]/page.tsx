@@ -11,6 +11,9 @@ import type { Metadata } from "next";
 import { Link } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import {
+
+export const runtime = "edge";
+
   Star,
   MapPin,
   Phone,

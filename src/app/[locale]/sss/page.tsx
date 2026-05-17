@@ -6,6 +6,9 @@ import { FAQ_ITEMS, type FAQItem } from "@/data/faq";
 import { breadcrumbSchema, faqPageSchema, SITE_URL } from "@/lib/schema";
 import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
 
+export const runtime = "edge";
+
+
 export const metadata: Metadata = {
   title: "Sık Sorulan Sorular — Kapadokya Balon Turu SSS | Trip and Tick",
   description:

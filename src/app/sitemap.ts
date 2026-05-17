@@ -1,6 +1,4 @@
 import type { MetadataRoute } from "next";
-import fs from "fs";
-import path from "path";
 import { BALLOON_PACKAGES } from "@/data/services/balloons";
 import { KAPADOKYA_PILLARS, HOTELS } from "@/data/services/catalog";
 import { OPERATORS } from "@/data/services/operators";
@@ -69,25 +67,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     alternates: alt(`/blog/${p.slug}`),
   }));
 
+  // TODO Q2: blog pages edge-compat content loader (glob-import / KV)
   const blogPages: MetadataRoute.Sitemap = [];
-  try {
-    const blogDir = path.join(process.cwd(), "src", "data", "blog");
-    if (fs.existsSync(blogDir)) {
-      const files = fs.readdirSync(blogDir).filter((f) => f.endsWith(".json"));
-      for (const file of files) {
-        const slug = file.replace(/^(tr|en|de|fr|es|nl|zh|hi|ur)-/, "").replace(/\.json$/, "");
-        blogPages.push({
-          url: url(`/blog/${slug}`),
-          lastModified: now,
-          changeFrequency: "weekly",
-          priority: 0.7,
-          alternates: alt(`/blog/${slug}`),
-        });
-      }
-    }
-  } catch {
-    // sessiz hata — sitemap derlenebilmeli
-  }
 
   // Dedupe — bazi pillar slug'lari blog JSON slug'lariyla cakisir (intentional).
   const combined = [...staticPages, ...operatorPages, ...balloonPages, ...hotelPages, ...pillarPages, ...blogPages];

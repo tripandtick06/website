@@ -11,6 +11,9 @@ import { formatPrice } from "@/lib/utils";
 import { breadcrumbSchema, faqPageSchema, SITE_URL } from "@/lib/schema";
 import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
 
+export const runtime = "edge";
+
+
 export const metadata: Metadata = {
   title: "Kapadokya Balon Turu Fiyatları 2026 — Trip and Tick",
   description:

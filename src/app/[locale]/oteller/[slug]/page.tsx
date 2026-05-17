@@ -16,6 +16,9 @@ import { breadcrumbSchema, SITE_URL } from "@/lib/schema";
 import { generateHreflang } from "@/lib/hreflang";
 import { Star, MapPin, Check, Phone, MessageSquare, Mail } from "lucide-react";
 
+export const runtime = "edge";
+
+
 interface PageParams {
   params: { locale: string; slug: string };
 }

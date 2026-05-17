@@ -8,6 +8,9 @@ import { breadcrumbSchema, SITE_URL } from "@/lib/schema";
 import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
 import { HotelsGrid } from "@/components/oteller/HotelsGrid";
 
+export const runtime = "edge";
+
+
 export const metadata: Metadata = {
   title: "Kapadokya Otel Rezervasyonu — Mağara Otel & Butik | Trip and Tick",
   description:

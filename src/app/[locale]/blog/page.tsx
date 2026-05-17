@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
 import { ArrowRight, Calendar, Tag, Search } from "lucide-react";
-import fs from "fs/promises";
-import path from "path";
 import { Link } from "@/i18n/routing";
 import { SITE_URL } from "@/lib/schema";
 import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
 
-// CF Pages build (next-on-pages + vercel build): fs/promises Node-only,
-// edge runtime'da yok. force-static + SSG ile build-time prebuild.
-export const dynamic = "force-static";
+// CF Pages edge runtime — fs/promises Node-only, kullanilamaz.
+// TODO Q2: blog content edge-compat ile yeniden (Webpack glob-import veya
+// generateStaticParams + build-time JSON embed). Su an bos liste fallback.
+export const runtime = "edge";
 
 interface BlogArticle {
   slug: string;
@@ -44,20 +43,8 @@ const CATEGORY_COLORS: Record<string, string> = {
 };
 
 async function getBlogArticles(): Promise<BlogArticle[]> {
-  const blogDir = path.join(process.cwd(), "src", "data", "blog");
-  try {
-    const files = await fs.readdir(blogDir);
-    const articles: BlogArticle[] = [];
-    for (const file of files.filter((f) => f.endsWith(".json") && !f.startsWith("_"))) {
-      const content = await fs.readFile(path.join(blogDir, file), "utf-8");
-      articles.push(JSON.parse(content));
-    }
-    return articles.sort(
-      (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
-    );
-  } catch {
-    return [];
-  }
+  // TODO Q2: edge-compat content loader (glob-import veya KV store)
+  return [];
 }
 
 export const metadata: Metadata = {

@@ -6,6 +6,9 @@ import { JsonLd } from "@/components/layout/JsonLd";
 import { breadcrumbSchema, SITE_URL } from "@/lib/schema";
 import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
 
+export const runtime = "edge";
+
+
 export const metadata: Metadata = {
   title: "KVKK Aydınlatma Metni — 6698 Sayılı Kanun | Trip and Tick",
   description:

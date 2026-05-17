@@ -19,6 +19,9 @@ import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
 import { B2BApplyForm } from "@/components/b2b/B2BApplyForm";
 import { Tag, Code2, Headphones, Percent, LogIn, ArrowRight } from "lucide-react";
 
+export const runtime = "edge";
+
+
 export const metadata: Metadata = {
   title: "B2B Acente Programı — Toplu Fiyat & API | Trip and Tick",
   description:

@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Link } from "@/i18n/routing";
 import { WifiOff } from "lucide-react";
 
+export const runtime = "edge";
+
+
 // Caller: public/sw.js line ~5 OFFLINE_URL constant; served when navigation fetch fails.
 // No data file I/O. Static page.
 

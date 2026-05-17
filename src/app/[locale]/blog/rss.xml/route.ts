@@ -1,6 +1,7 @@
-import fs from "fs/promises";
-import path from "path";
 import { SITE_URL } from "@/lib/schema";
+
+export const runtime = "edge";
+
 
 // RSS 2.0 feed — Trip and Tick Blog.
 // Endpoint: /blog/rss.xml
@@ -42,24 +43,8 @@ function toRfc822(iso: string): string {
 }
 
 async function loadTrArticles(): Promise<BlogArticle[]> {
-  const blogDir = path.join(process.cwd(), "src", "data", "blog");
-  try {
-    const files = await fs.readdir(blogDir);
-    const articles: BlogArticle[] = [];
-    for (const file of files.filter(
-      (f) => f.endsWith(".json") && !f.startsWith("_"),
-    )) {
-      const raw = await fs.readFile(path.join(blogDir, file), "utf-8");
-      const parsed = JSON.parse(raw) as BlogArticle;
-      if (parsed.locale === "tr") articles.push(parsed);
-    }
-    return articles.sort(
-      (a, b) =>
-        new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
-    );
-  } catch {
-    return [];
-  }
+  // TODO Q2: edge-compat content loader (glob-import veya KV)
+  return [];
 }
 
 export async function GET(): Promise<Response> {

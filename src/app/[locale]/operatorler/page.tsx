@@ -15,6 +15,9 @@ import { JsonLd } from "@/components/layout/JsonLd";
 import { OPERATORS } from "@/data/services/operators";
 import { breadcrumbSchema, SITE_URL } from "@/lib/schema";
 
+export const runtime = "edge";
+
+
 export const metadata: Metadata = {
   title: "Anlaşmalı Balon Operatörleri | Trip and Tick",
   description:

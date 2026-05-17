@@ -9,6 +9,9 @@ import type { Metadata } from "next";
 import { Star, CheckCircle2, Shield } from "lucide-react";
 import { ClientForm } from "./ClientForm";
 
+export const runtime = "edge";
+
+
 export const metadata: Metadata = {
   title: "Yorumunuzu Yazın | Trip and Tick",
   description:

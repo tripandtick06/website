@@ -8,6 +8,9 @@ import { KAPADOKYA_PILLARS } from "@/data/services/catalog";
 import { breadcrumbSchema, SITE_URL } from "@/lib/schema";
 import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
 
+export const runtime = "edge";
+
+
 export const metadata: Metadata = {
   title: "Kapadokya Rehberi 2026 — Balon, Otel, Tur, Aktiviteler | Trip and Tick",
   description:
