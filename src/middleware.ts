@@ -2,16 +2,15 @@ import { NextResponse, type NextRequest } from "next/server";
 import createIntlMiddleware from "next-intl/middleware";
 import { routing } from "@/i18n/routing";
 import { ADMIN_COOKIE_NAME, verifyAdminCookieValue } from "@/lib/admin-auth";
+import { checkRateLimit } from "@/lib/rate-limit";
 
 const intlMiddleware = createIntlMiddleware(routing);
 
-// In-memory rate limiter (Faz 2: Upstash Redis)
-const RATE_LIMIT_MAX = 10; // requests
+const RATE_LIMIT_MAX = 10; // requests / window
 const RATE_LIMIT_WINDOW_MS = 60 * 1000; // 1 dakika
 // Admin login: 5 deneme / 15 dakika / IP (brute-force koruma)
 const ADMIN_AUTH_MAX = 5;
 const ADMIN_AUTH_WINDOW_MS = 15 * 60 * 1000;
-const buckets = new Map<string, { count: number; resetAt: number }>();
 
 function getClientIp(req: NextRequest): string {
   const xff = req.headers.get("x-forwarded-for");
@@ -21,22 +20,7 @@ function getClientIp(req: NextRequest): string {
   return "unknown";
 }
 
-function rateLimit(key: string, max = RATE_LIMIT_MAX, windowMs = RATE_LIMIT_WINDOW_MS): { ok: boolean; remaining: number; resetAt: number } {
-  const now = Date.now();
-  const bucket = buckets.get(key);
-  if (!bucket || bucket.resetAt < now) {
-    const resetAt = now + windowMs;
-    buckets.set(key, { count: 1, resetAt });
-    return { ok: true, remaining: max - 1, resetAt };
-  }
-  bucket.count += 1;
-  if (bucket.count > max) {
-    return { ok: false, remaining: 0, resetAt: bucket.resetAt };
-  }
-  return { ok: true, remaining: max - bucket.count, resetAt: bucket.resetAt };
-}
-
-export function middleware(req: NextRequest) {
+export async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
   // Non-API + non-admin paths → next-intl locale routing.
@@ -70,7 +54,7 @@ export function middleware(req: NextRequest) {
   // Admin login: tek IP'den 5 deneme / 15 dakika cap.
   // Brute-force koruma (general 10/dk yetersiz attacker icin).
   if (pathname.startsWith("/api/admin/auth")) {
-    const rl = rateLimit(`${ip}:admin-auth`, ADMIN_AUTH_MAX, ADMIN_AUTH_WINDOW_MS);
+    const rl = await checkRateLimit(`${ip}:admin-auth`, ADMIN_AUTH_MAX, ADMIN_AUTH_WINDOW_MS);
     if (!rl.ok) {
       return new NextResponse(
         JSON.stringify({
@@ -104,7 +88,7 @@ export function middleware(req: NextRequest) {
     pathname.startsWith("/api/b2b");
 
   if (rateLimited) {
-    const rl = rateLimit(`${ip}:${pathname}`);
+    const rl = await checkRateLimit(`${ip}:${pathname}`, RATE_LIMIT_MAX, RATE_LIMIT_WINDOW_MS);
     if (!rl.ok) {
       return new NextResponse(
         JSON.stringify({
