@@ -8,6 +8,10 @@
     "postbuild": "node scripts/indexnow-postbuild.cjs",
     "start": "next start",
     "psi": "node scripts/psi-audit.cjs",
+    "validate:hreflang": "node scripts/validate-hreflang.cjs",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
     "lint": "next lint",
     "seo-agent": "npx tsx scripts/seo-agent.ts",
     "seo-agent:daily": "npx tsx scripts/seo-agent.ts --daily",
@@ -46,6 +50,7 @@
     "@types/node": "^20.14.0",
     "@types/react": "^18.3.0",
     "@types/react-dom": "^18.3.0",
+    "@vitest/coverage-v8": "^4.1.6",
     "autoprefixer": "^10.4.0",
     "eslint": "^8.57.0",
     "eslint-config-next": "^14.2.0",
@@ -54,6 +59,7 @@
     "tailwindcss": "^3.4.0",
     "tsx": "^4.16.0",
     "typescript": "^5.4.0",
+    "vitest": "^4.1.6",
     "wrangler": "^4.92.0"
   }
 }
