@@ -49,4 +49,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy .vercel/output/static --project-name=tripandtick --branch=master
+          # 4.x auto-creates the Pages project on first deploy; 3.90
+          # (action default) fails non-interactively when project absent.
+          wranglerVersion: "4"
+          command: pages deploy .vercel/output/static --project-name=tripandtick --branch=master --commit-dirty=true
