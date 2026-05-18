@@ -61,5 +61,28 @@
     "typescript": "^5.4.0",
     "vitest": "^4.1.6",
     "wrangler": "^4.92.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "next/core-web-vitals"
+    ],
+    "rules": {
+      "@next/next/no-img-element": "warn",
+      "react/no-unescaped-entities": "off",
+      "react-hooks/exhaustive-deps": "warn"
+    },
+    "ignorePatterns": [
+      ".next/",
+      "node_modules/",
+      "out/",
+      "build/",
+      "dist/",
+      ".vercel/",
+      ".wrangler/",
+      "coverage/",
+      "public/",
+      "scripts/**/*.cjs",
+      "scripts/**/*.mjs"
+    ]
   }
 }

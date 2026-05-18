@@ -577,7 +577,7 @@ export function BookingClient({ service }: { service: BookingService }) {
                 setDate={setDate}
                 adults={adults}
                 setAdults={setAdults}
-                children={children}
+                childPax={children}
                 setChildren={setChildren}
                 canContinue={canStep2Continue}
                 availability={availability}
@@ -591,7 +591,7 @@ export function BookingClient({ service }: { service: BookingService }) {
               <Step3Passengers
                 service={service}
                 adults={adults}
-                children={children}
+                childPax={children}
                 passengers={passengers}
                 errors={passengerErrors}
                 onUpdate={updatePassenger}
@@ -606,7 +606,7 @@ export function BookingClient({ service }: { service: BookingService }) {
                 service={service}
                 date={date}
                 adults={adults}
-                children={children}
+                childPax={children}
                 insurance={insurance}
                 setInsurance={setInsurance}
                 promoCode={promoCode}
@@ -844,7 +844,7 @@ function Step2DateAndPax(props: {
   setDate: (v: string) => void;
   adults: number;
   setAdults: (v: number) => void;
-  children: number;
+  childPax: number;
   setChildren: (v: number) => void;
   canContinue: boolean;
   availability: PublicAvailability | null;
@@ -854,7 +854,7 @@ function Step2DateAndPax(props: {
   onNext: () => void;
 }) {
   const {
-    service, date, setDate, adults, setAdults, children, setChildren,
+    service, date, setDate, adults, setAdults, childPax, setChildren,
     canContinue, availability, availabilityLoading, paxTotal, onBack, onNext,
   } = props;
 
@@ -929,7 +929,7 @@ function Step2DateAndPax(props: {
           )}
         </div>
         <Counter label="Yetişkin (12+ yaş)" value={adults} min={1} max={20} onChange={setAdults} />
-        <Counter label={`Çocuk (${service.minAge || 6}-11 yaş)`} value={children} min={0} max={10} onChange={setChildren} disabled={service.minAge >= 16} />
+        <Counter label={`Çocuk (${service.minAge || 6}-11 yaş)`} value={childPax} min={0} max={10} onChange={setChildren} disabled={service.minAge >= 16} />
         {service.minAge >= 6 && (
           <div className="border-l-4 border-amber-500 bg-amber-50 p-3 rounded text-sm text-amber-900">
             <strong>Yaş kısıtı:</strong> {service.minAge} yaş altı çocuklar bu hizmete katılamaz.
@@ -975,7 +975,7 @@ function Counter({ label, value, min, max, onChange, disabled }: {
 function Step3Passengers(props: {
   service: BookingService;
   adults: number;
-  children: number;
+  childPax: number;
   passengers: BookingPassenger[];
   errors: Record<number, Record<string, string>>;
   onUpdate: (idx: number, field: keyof BookingPassenger, value: string | number) => void;
@@ -1061,7 +1061,7 @@ function Step4Summary(props: {
   service: BookingService;
   date: string;
   adults: number;
-  children: number;
+  childPax: number;
   insurance: boolean;
   setInsurance: (v: boolean) => void;
   promoCode: string;
@@ -1086,7 +1086,7 @@ function Step4Summary(props: {
   onNext: () => void;
 }) {
   const {
-    service, date, adults, children, insurance, setInsurance,
+    service, date, adults, childPax, insurance, setInsurance,
     promoCode, setPromoCode, applyPromo, promoStatus, couponMessage, couponApplying,
     policyAccepted, setPolicyAccepted,
     totalPrice, adultsLine, childrenLine, insuranceTotal, discountAmount,
@@ -1094,7 +1094,7 @@ function Step4Summary(props: {
     canContinue, onBack, onNext,
   } = props;
 
-  const paxCount = adults + children;
+  const paxCount = adults + childPax;
 
   return (
     <div>
@@ -1103,7 +1103,7 @@ function Step4Summary(props: {
         <div className="bg-slate-50 rounded-lg p-4 space-y-2 text-sm">
           <div className="flex justify-between"><span className="text-slate-600">Hizmet</span><span className="font-medium">{service.name}</span></div>
           <div className="flex justify-between"><span className="text-slate-600">Tarih</span><span>{date ? formatDate(date) : "—"}</span></div>
-          <div className="flex justify-between"><span className="text-slate-600">Kişi sayısı</span><span>{paxCount} ({adults} yetişkin, {children} çocuk)</span></div>
+          <div className="flex justify-between"><span className="text-slate-600">Kişi sayısı</span><span>{paxCount} ({adults} yetişkin, {childPax} çocuk)</span></div>
         </div>
 
         <div className="border border-slate-200 rounded-lg p-4">
@@ -1147,7 +1147,7 @@ function Step4Summary(props: {
           <h3 className="font-bold text-slate-900 mb-3">Fiyat Dökümü</h3>
           <div className="space-y-1 text-sm">
             <div className="flex justify-between"><span>Yetişkin × {adults}</span><span>{formatPrice(adultsLine, service.currency)}</span></div>
-            {children > 0 && <div className="flex justify-between"><span>Çocuk × {children}</span><span>{formatPrice(childrenLine, service.currency)}</span></div>}
+            {childPax > 0 && <div className="flex justify-between"><span>Çocuk × {childPax}</span><span>{formatPrice(childrenLine, service.currency)}</span></div>}
             {insurance && <div className="flex justify-between"><span>Sigorta × {paxCount}</span><span>{formatPrice(insuranceTotal, service.currency)}</span></div>}
             {discountAmount > 0 && <div className="flex justify-between text-emerald-700"><span>İndirim</span><span>−{formatPrice(discountAmount, service.currency)}</span></div>}
             {referralDiscount > 0 && (
