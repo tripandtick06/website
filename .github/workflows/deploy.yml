@@ -1,0 +1,52 @@
+name: Deploy (Cloudflare Pages)
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch: {}
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Build (@cloudflare/next-on-pages) + wrangler pages deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      NEXT_TELEMETRY_DISABLED: 1
+      # Build-time public env (non-secret). Production secrets are read at
+      # request time from Cloudflare Pages "Environment variables" UI.
+      NEXT_PUBLIC_SITE_URL: https://www.tripandtick.com
+      NEXT_PUBLIC_DEFAULT_LOCALE: tr
+      # Stubs for build only — real values via Pages dashboard env vars.
+      NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL || 'https://stub.supabase.co' }}
+      NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'stub' }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY || 'stub' }}
+      ADMIN_API_TOKEN: ${{ secrets.ADMIN_API_TOKEN || 'stub-token-for-build' }}
+      GDPR_SECRET: ${{ secrets.GDPR_SECRET || 'stub-secret-for-build-only-32chars-min' }}
+      BREVO_API_KEY: ${{ secrets.BREVO_API_KEY || 'stub' }}
+      STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY || 'sk_test_stub' }}
+      STRIPE_WEBHOOK_SECRET: ${{ secrets.STRIPE_WEBHOOK_SECRET || 'whsec_stub' }}
+      NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: ${{ secrets.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY || 'pk_test_stub' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install
+        run: npm ci --no-audit --no-fund
+
+      - name: Build (next-on-pages adapter)
+        run: npm run build:cf
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy .vercel/output/static --project-name=tripandtick --branch=master
