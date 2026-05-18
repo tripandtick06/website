@@ -87,6 +87,8 @@ export function Footer() {
     { href: "/gizlilik-politikasi", label: "Gizlilik Politikası" },
     { href: "/kullanim-sartlari", label: "Kullanım Şartları" },
     { href: "/cerez-politikasi", label: "KVKK & Çerezler" },
+    { href: "/gdpr", label: "Veri Hakları (GDPR)" },
+    { href: "/impressum", label: "Impressum (DE/AT)" },
   ];
 
   return (

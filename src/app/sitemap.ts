@@ -33,6 +33,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: url("/iptal-iade-politikasi"), lastModified: now, changeFrequency: "yearly", priority: 0.3, alternates: alt("/iptal-iade-politikasi") },
     { url: url("/cerez-politikasi"), lastModified: now, changeFrequency: "yearly", priority: 0.3, alternates: alt("/cerez-politikasi") },
     { url: url("/kvkk"), lastModified: now, changeFrequency: "yearly", priority: 0.3, alternates: alt("/kvkk") },
+    { url: url("/gdpr"), lastModified: now, changeFrequency: "yearly", priority: 0.3, alternates: alt("/gdpr") },
+    { url: url("/impressum"), lastModified: now, changeFrequency: "yearly", priority: 0.3, alternates: alt("/impressum") },
   ];
 
   const balloonPages: MetadataRoute.Sitemap = BALLOON_PACKAGES.map((pkg) => ({

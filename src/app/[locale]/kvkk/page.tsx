@@ -136,6 +136,13 @@ export default function KvkkPage() {
           </p>
           <ul className="list-disc pl-6 space-y-1.5 text-slate-700 mb-4">
             <li>
+              <strong>Online (önerilen):</strong>{" "}
+              <Link href="/gdpr" className="text-accent font-semibold">
+                Veri Hakları Talep Formu
+              </Link>
+              {" "}— veri erişim (KVKK m.11/b) veya silme (m.11/e) için 24 saatlik onaylı magic-link.
+            </li>
+            <li>
               <strong>E-posta:</strong>{" "}
               <a href="mailto:info@tripandtick.com" className="text-accent font-semibold">
                 info@tripandtick.com
