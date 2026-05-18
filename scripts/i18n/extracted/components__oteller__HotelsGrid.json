@@ -1,0 +1,31 @@
+{
+  "file": "src/components/oteller/HotelsGrid.tsx",
+  "bytes": 4100,
+  "stringCount": 2,
+  "strings": [
+    {
+      "type": "jsxAttr:aria-label",
+      "tr": "Otel tipi filtresi",
+      "start": 2704,
+      "end": 2724,
+      "line": 84,
+      "col": 19,
+      "context": "div@aria-label",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxText",
+      "tr": "Bu kategoride otel bulunamadı. Lütfen başka bir filtre seçin.",
+      "rawStart": 3759,
+      "rawEnd": 3844,
+      "textStart": 3772,
+      "textEnd": 3833,
+      "line": 114,
+      "col": 40,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "\n            ",
+      "trailing": "\n          "
+    }
+  ]
+}

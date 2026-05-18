@@ -1,0 +1,129 @@
+{
+  "file": "src/app/[locale]/oteller/page.tsx",
+  "bytes": 2625,
+  "stringCount": 11,
+  "strings": [
+    {
+      "type": "metadata.title",
+      "tr": "Kapadokya Otel Rezervasyonu — Mağara Otel & Butik | Trip and Tick",
+      "start": 561,
+      "end": 628,
+      "line": 15,
+      "col": 9,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "metadata.description",
+      "tr": "Kapadokya mağara otelleri, butik konaklamalar ve aile otelleri. Göreme & Ürgüp merkezli seçenekler — en uygun fiyat, anında onay.",
+      "start": 649,
+      "end": 780,
+      "line": 17,
+      "col": 4,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "metadata.title",
+      "tr": "Kapadokya Otel Rezervasyonu",
+      "start": 912,
+      "end": 941,
+      "line": 23,
+      "col": 11,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "metadata.description",
+      "tr": "Mağara otelleri, butik & aile otelleri — Göreme & Ürgüp.",
+      "start": 960,
+      "end": 1018,
+      "line": 24,
+      "col": 17,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "metadata.alt",
+      "tr": "Kapadokya Otelleri — Trip and Tick",
+      "start": 1292,
+      "end": 1328,
+      "line": 35,
+      "col": 13,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxAttr:title",
+      "tr": "Kapadokya",
+      "start": 1465,
+      "end": 1476,
+      "line": 46,
+      "col": 14,
+      "context": "PageHero@title",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxAttr:highlight",
+      "tr": "Mağara Otelleri",
+      "start": 1495,
+      "end": 1512,
+      "line": 47,
+      "col": 18,
+      "context": "PageHero@highlight",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxAttr:description",
+      "tr": "UNESCO mirası bölgede otantik mağara odalı butik oteller. Kahvaltı, Wi-Fi, klima dahil. Göreme, Ürgüp ve Nevşehir merkezleri.",
+      "start": 1533,
+      "end": 1660,
+      "line": 48,
+      "col": 20,
+      "context": "PageHero@description",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxText",
+      "tr": "Daha fazla otel seçeneği yakında",
+      "rawStart": 2041,
+      "rawEnd": 2101,
+      "textStart": 2056,
+      "textEnd": 2088,
+      "line": 58,
+      "col": 66,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "\n              ",
+      "trailing": "\n            "
+    },
+    {
+      "type": "jsxText",
+      "tr": "50+ partner otel ile anlaşmamız var. İhtiyacınıza özel öneri için bizimle\n              iletişime geçin — bütçenize uygun en doğru otel bulalım.",
+      "rawStart": 2171,
+      "rawEnd": 2343,
+      "textStart": 2186,
+      "textEnd": 2330,
+      "line": 61,
+      "col": 64,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "\n              ",
+      "trailing": "\n            "
+    },
+    {
+      "type": "jsxText",
+      "tr": "Özel Otel Talebi Gönder",
+      "rawStart": 2419,
+      "rawEnd": 2470,
+      "textStart": 2434,
+      "textEnd": 2457,
+      "line": 65,
+      "col": 71,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "\n              ",
+      "trailing": "\n            "
+    }
+  ]
+}

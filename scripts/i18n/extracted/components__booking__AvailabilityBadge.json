@@ -1,0 +1,21 @@
+{
+  "file": "src/components/booking/AvailabilityBadge.tsx",
+  "bytes": 2216,
+  "stringCount": 1,
+  "strings": [
+    {
+      "type": "jsxText",
+      "tr": "Müsait",
+      "rawStart": 1519,
+      "rawEnd": 1541,
+      "textStart": 1528,
+      "textEnd": 1534,
+      "line": 43,
+      "col": 44,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "\n        ",
+      "trailing": "\n      "
+    }
+  ]
+}

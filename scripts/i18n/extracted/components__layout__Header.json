@@ -1,0 +1,45 @@
+{
+  "file": "src/components/layout/Header.tsx",
+  "bytes": 10189,
+  "stringCount": 3,
+  "strings": [
+    {
+      "type": "jsxText",
+      "tr": "Trip and",
+      "rawStart": 3745,
+      "rawEnd": 3767,
+      "textStart": 3758,
+      "textEnd": 3766,
+      "line": 112,
+      "col": 77,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "\n            ",
+      "trailing": " "
+    },
+    {
+      "type": "jsxAttr:title",
+      "tr": "Faz 2'de eklenecek",
+      "start": 6106,
+      "end": 6126,
+      "line": 174,
+      "col": 30,
+      "context": "button@title",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxText",
+      "tr": "Yakında",
+      "rawStart": 6508,
+      "rawEnd": 6567,
+      "textStart": 6535,
+      "textEnd": 6542,
+      "line": 178,
+      "col": 145,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "\n                          ",
+      "trailing": "\n                        "
+    }
+  ]
+}

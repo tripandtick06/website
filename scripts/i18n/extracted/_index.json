@@ -1,0 +1,326 @@
+{
+  "generatedAt": "2026-05-18T07:23:52.136Z",
+  "summary": [
+    {
+      "file": "src/app/[locale]/aktiviteler/page.tsx",
+      "strings": 10,
+      "slug": "app__[locale]__aktiviteler__page"
+    },
+    {
+      "file": "src/app/[locale]/page.tsx",
+      "strings": 0,
+      "slug": "app__[locale]__page"
+    },
+    {
+      "file": "src/app/[locale]/ara/page.tsx",
+      "strings": 2,
+      "slug": "app__[locale]__ara__page"
+    },
+    {
+      "file": "src/app/[locale]/b2b/dashboard/page.tsx",
+      "strings": 0,
+      "slug": "app__[locale]__b2b__dashboard__page"
+    },
+    {
+      "file": "src/app/[locale]/b2b/page.tsx",
+      "strings": 17,
+      "slug": "app__[locale]__b2b__page"
+    },
+    {
+      "file": "src/app/[locale]/b2b/login/page.tsx",
+      "strings": 0,
+      "slug": "app__[locale]__b2b__login__page"
+    },
+    {
+      "file": "src/app/[locale]/balonlar/page.tsx",
+      "strings": 19,
+      "slug": "app__[locale]__balonlar__page"
+    },
+    {
+      "file": "src/app/[locale]/balonlar/[slug]/page.tsx",
+      "strings": 19,
+      "slug": "app__[locale]__balonlar__[slug]__page"
+    },
+    {
+      "file": "src/app/[locale]/blog/page.tsx",
+      "strings": 15,
+      "slug": "app__[locale]__blog__page"
+    },
+    {
+      "file": "src/app/[locale]/blog/[slug]/page.tsx",
+      "strings": 8,
+      "slug": "app__[locale]__blog__[slug]__page"
+    },
+    {
+      "file": "src/app/[locale]/cerez-politikasi/page.tsx",
+      "strings": 47,
+      "slug": "app__[locale]__cerez-politikasi__page"
+    },
+    {
+      "file": "src/app/[locale]/davet/[code]/page.tsx",
+      "strings": 0,
+      "slug": "app__[locale]__davet__[code]__page"
+    },
+    {
+      "file": "src/app/[locale]/gizlilik-politikasi/page.tsx",
+      "strings": 69,
+      "slug": "app__[locale]__gizlilik-politikasi__page"
+    },
+    {
+      "file": "src/app/[locale]/hakkimizda/page.tsx",
+      "strings": 37,
+      "slug": "app__[locale]__hakkimizda__page"
+    },
+    {
+      "file": "src/app/[locale]/hesabim/page.tsx",
+      "strings": 0,
+      "slug": "app__[locale]__hesabim__page"
+    },
+    {
+      "file": "src/app/[locale]/iletisim/page.tsx",
+      "strings": 17,
+      "slug": "app__[locale]__iletisim__page"
+    },
+    {
+      "file": "src/app/[locale]/iptal-iade-politikasi/page.tsx",
+      "strings": 41,
+      "slug": "app__[locale]__iptal-iade-politikasi__page"
+    },
+    {
+      "file": "src/app/[locale]/kapadokya/page.tsx",
+      "strings": 30,
+      "slug": "app__[locale]__kapadokya__page"
+    },
+    {
+      "file": "src/app/[locale]/kullanim-sartlari/page.tsx",
+      "strings": 47,
+      "slug": "app__[locale]__kullanim-sartlari__page"
+    },
+    {
+      "file": "src/app/[locale]/kvkk/page.tsx",
+      "strings": 67,
+      "slug": "app__[locale]__kvkk__page"
+    },
+    {
+      "file": "src/app/[locale]/offline/page.tsx",
+      "strings": 7,
+      "slug": "app__[locale]__offline__page"
+    },
+    {
+      "file": "src/app/[locale]/operatorler/page.tsx",
+      "strings": 9,
+      "slug": "app__[locale]__operatorler__page"
+    },
+    {
+      "file": "src/app/[locale]/operatorler/[id]/page.tsx",
+      "strings": 21,
+      "slug": "app__[locale]__operatorler__[id]__page"
+    },
+    {
+      "file": "src/app/[locale]/oteller/page.tsx",
+      "strings": 11,
+      "slug": "app__[locale]__oteller__page"
+    },
+    {
+      "file": "src/app/[locale]/oteller/[slug]/page.tsx",
+      "strings": 7,
+      "slug": "app__[locale]__oteller__[slug]__page"
+    },
+    {
+      "file": "src/app/[locale]/paketler/page.tsx",
+      "strings": 9,
+      "slug": "app__[locale]__paketler__page"
+    },
+    {
+      "file": "src/app/[locale]/rezervasyon/basarili/page.tsx",
+      "strings": 2,
+      "slug": "app__[locale]__rezervasyon__basarili__page"
+    },
+    {
+      "file": "src/app/[locale]/rezervasyon/iptal/page.tsx",
+      "strings": 8,
+      "slug": "app__[locale]__rezervasyon__iptal__page"
+    },
+    {
+      "file": "src/app/[locale]/rezervasyon/yeniden-tarih/[token]/page.tsx",
+      "strings": 4,
+      "slug": "app__[locale]__rezervasyon__yeniden-tarih__[token]__page"
+    },
+    {
+      "file": "src/app/[locale]/rezervasyon/[slug]/page.tsx",
+      "strings": 0,
+      "slug": "app__[locale]__rezervasyon__[slug]__page"
+    },
+    {
+      "file": "src/app/[locale]/sss/page.tsx",
+      "strings": 11,
+      "slug": "app__[locale]__sss__page"
+    },
+    {
+      "file": "src/app/[locale]/transferler/page.tsx",
+      "strings": 8,
+      "slug": "app__[locale]__transferler__page"
+    },
+    {
+      "file": "src/app/[locale]/turlar/page.tsx",
+      "strings": 9,
+      "slug": "app__[locale]__turlar__page"
+    },
+    {
+      "file": "src/app/[locale]/yorum/page.tsx",
+      "strings": 10,
+      "slug": "app__[locale]__yorum__page"
+    },
+    {
+      "file": "src/components/analytics/Analytics.tsx",
+      "strings": 0,
+      "slug": "components__analytics__Analytics"
+    },
+    {
+      "file": "src/components/b2b/B2BApplyForm.tsx",
+      "strings": 11,
+      "slug": "components__b2b__B2BApplyForm"
+    },
+    {
+      "file": "src/components/booking/AvailabilityBadge.tsx",
+      "strings": 1,
+      "slug": "components__booking__AvailabilityBadge"
+    },
+    {
+      "file": "src/components/booking/AvailabilityCalendar.tsx",
+      "strings": 6,
+      "slug": "components__booking__AvailabilityCalendar"
+    },
+    {
+      "file": "src/components/booking/CookieConsent.tsx",
+      "strings": 9,
+      "slug": "components__booking__CookieConsent"
+    },
+    {
+      "file": "src/components/booking/CookieConsentMount.tsx",
+      "strings": 0,
+      "slug": "components__booking__CookieConsentMount"
+    },
+    {
+      "file": "src/components/booking/CurrencySwitcher.tsx",
+      "strings": 1,
+      "slug": "components__booking__CurrencySwitcher"
+    },
+    {
+      "file": "src/components/booking/SearchWidget.tsx",
+      "strings": 7,
+      "slug": "components__booking__SearchWidget"
+    },
+    {
+      "file": "src/components/booking/WhatsAppFAB.tsx",
+      "strings": 1,
+      "slug": "components__booking__WhatsAppFAB"
+    },
+    {
+      "file": "src/components/layout/Breadcrumb.tsx",
+      "strings": 1,
+      "slug": "components__layout__Breadcrumb"
+    },
+    {
+      "file": "src/components/layout/Footer.tsx",
+      "strings": 10,
+      "slug": "components__layout__Footer"
+    },
+    {
+      "file": "src/components/layout/Header.tsx",
+      "strings": 3,
+      "slug": "components__layout__Header"
+    },
+    {
+      "file": "src/components/layout/JsonLd.tsx",
+      "strings": 0,
+      "slug": "components__layout__JsonLd"
+    },
+    {
+      "file": "src/components/layout/PageHero.tsx",
+      "strings": 0,
+      "slug": "components__layout__PageHero"
+    },
+    {
+      "file": "src/components/layout/ServiceCard.tsx",
+      "strings": 4,
+      "slug": "components__layout__ServiceCard"
+    },
+    {
+      "file": "src/components/loading/Skeleton.tsx",
+      "strings": 0,
+      "slug": "components__loading__Skeleton"
+    },
+    {
+      "file": "src/components/marketing/NewsletterForm.tsx",
+      "strings": 3,
+      "slug": "components__marketing__NewsletterForm"
+    },
+    {
+      "file": "src/components/oteller/HotelInquiryForm.tsx",
+      "strings": 18,
+      "slug": "components__oteller__HotelInquiryForm"
+    },
+    {
+      "file": "src/components/oteller/HotelsGrid.tsx",
+      "strings": 2,
+      "slug": "components__oteller__HotelsGrid"
+    },
+    {
+      "file": "src/components/sections/CategoriesSection.tsx",
+      "strings": 0,
+      "slug": "components__sections__CategoriesSection"
+    },
+    {
+      "file": "src/components/sections/GuaranteeSection.tsx",
+      "strings": 3,
+      "slug": "components__sections__GuaranteeSection"
+    },
+    {
+      "file": "src/components/sections/HeroSection.tsx",
+      "strings": 0,
+      "slug": "components__sections__HeroSection"
+    },
+    {
+      "file": "src/components/sections/LoyaltySection.tsx",
+      "strings": 8,
+      "slug": "components__sections__LoyaltySection"
+    },
+    {
+      "file": "src/components/sections/MobileStickyCTA.tsx",
+      "strings": 0,
+      "slug": "components__sections__MobileStickyCTA"
+    },
+    {
+      "file": "src/components/sections/NewsletterSection.tsx",
+      "strings": 1,
+      "slug": "components__sections__NewsletterSection"
+    },
+    {
+      "file": "src/components/sections/PackagesSection.tsx",
+      "strings": 0,
+      "slug": "components__sections__PackagesSection"
+    },
+    {
+      "file": "src/components/sections/ReviewsSection.tsx",
+      "strings": 4,
+      "slug": "components__sections__ReviewsSection"
+    },
+    {
+      "file": "src/components/sections/StatsBar.tsx",
+      "strings": 0,
+      "slug": "components__sections__StatsBar"
+    },
+    {
+      "file": "src/components/sections/StepsSection.tsx",
+      "strings": 3,
+      "slug": "components__sections__StepsSection"
+    },
+    {
+      "file": "src/components/sw/RegisterSW.tsx",
+      "strings": 0,
+      "slug": "components__sw__RegisterSW"
+    }
+  ],
+  "totalStrings": 657
+}

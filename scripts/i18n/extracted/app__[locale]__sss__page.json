@@ -1,0 +1,129 @@
+{
+  "file": "src/app/[locale]/sss/page.tsx",
+  "bytes": 4783,
+  "stringCount": 11,
+  "strings": [
+    {
+      "type": "metadata.title",
+      "tr": "Sık Sorulan Sorular — Kapadokya Balon Turu SSS | Trip and Tick",
+      "start": 479,
+      "end": 543,
+      "line": 13,
+      "col": 9,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "metadata.description",
+      "tr": "Kapadokya balon turu fiyatı, yaş sınırı, iptal politikası, ödeme yöntemleri ve diğer sık sorulan sorulara hızlı cevaplar. AI search optimize.",
+      "start": 564,
+      "end": 707,
+      "line": 15,
+      "col": 4,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "metadata.title",
+      "tr": "Sık Sorulan Sorular",
+      "start": 831,
+      "end": 852,
+      "line": 21,
+      "col": 11,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "metadata.description",
+      "tr": "Balon turu, fiyat, yaş, iptal, ödeme — hızlı cevaplar.",
+      "start": 871,
+      "end": 927,
+      "line": 22,
+      "col": 17,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "metadata.alt",
+      "tr": "SSS — Trip and Tick",
+      "start": 1188,
+      "end": 1209,
+      "line": 33,
+      "col": 13,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxAttr:title",
+      "tr": "Sık",
+      "start": 1777,
+      "end": 1782,
+      "line": 60,
+      "col": 14,
+      "context": "PageHero@title",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxAttr:highlight",
+      "tr": "Sorulan Sorular",
+      "start": 1801,
+      "end": 1818,
+      "line": 61,
+      "col": 18,
+      "context": "PageHero@highlight",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxAttr:description",
+      "tr": "Kapadokya tatili, balon turu rezervasyonu, ödeme ve iptal politikası hakkında en sık sorulan soruların hızlı cevapları.",
+      "start": 1839,
+      "end": 1960,
+      "line": 62,
+      "col": 20,
+      "context": "PageHero@description",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxText",
+      "tr": "Cevabını bulamadın mı?",
+      "rawStart": 4077,
+      "rawEnd": 4099,
+      "textStart": 4077,
+      "textEnd": 4099,
+      "line": 110,
+      "col": 57,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "",
+      "trailing": ""
+    },
+    {
+      "type": "jsxText",
+      "tr": "Ekibimiz 7/24 WhatsApp'ta. Sorunuzu yazın, anında yanıt alın.",
+      "rawStart": 4151,
+      "rawEnd": 4240,
+      "textStart": 4166,
+      "textEnd": 4227,
+      "line": 111,
+      "col": 46,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "\n              ",
+      "trailing": "\n            "
+    },
+    {
+      "type": "jsxText",
+      "tr": "WhatsApp ile Sor",
+      "rawStart": 4441,
+      "rawEnd": 4485,
+      "textStart": 4456,
+      "textEnd": 4472,
+      "line": 119,
+      "col": 13,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "\n              ",
+      "trailing": "\n            "
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "file": "src/components/layout/ServiceCard.tsx",
+  "bytes": 5470,
+  "stringCount": 4,
+  "strings": [
+    {
+      "type": "jsxText",
+      "tr": "değerlendirme",
+      "rawStart": 3846,
+      "rawEnd": 3860,
+      "textStart": 3847,
+      "textEnd": 3860,
+      "line": 95,
+      "col": 58,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": " ",
+      "trailing": ""
+    },
+    {
+      "type": "jsxText",
+      "tr": "Bilgi Al",
+      "rawStart": 4474,
+      "rawEnd": 4518,
+      "textStart": 4493,
+      "textEnd": 4501,
+      "line": 111,
+      "col": 83,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "\n                  ",
+      "trailing": "\n                "
+    },
+    {
+      "type": "jsxText",
+      "tr": "Telefon / e-posta ile",
+      "rawStart": 4590,
+      "rawEnd": 4611,
+      "textStart": 4590,
+      "textEnd": 4611,
+      "line": 114,
+      "col": 65,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "",
+      "trailing": ""
+    },
+    {
+      "type": "jsxText",
+      "tr": "kişi başı",
+      "rawStart": 5187,
+      "rawEnd": 5196,
+      "textStart": 5187,
+      "textEnd": 5196,
+      "line": 126,
+      "col": 65,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "",
+      "trailing": ""
+    }
+  ]
+}

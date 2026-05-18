@@ -1,0 +1,21 @@
+{
+  "file": "src/components/sections/NewsletterSection.tsx",
+  "bytes": 1671,
+  "stringCount": 1,
+  "strings": [
+    {
+      "type": "jsxText",
+      "tr": "Bülten",
+      "rawStart": 1323,
+      "rawEnd": 1353,
+      "textStart": 1336,
+      "textEnd": 1342,
+      "line": 29,
+      "col": 153,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "\n            ",
+      "trailing": "\n          "
+    }
+  ]
+}

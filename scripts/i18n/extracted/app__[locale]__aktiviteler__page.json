@@ -1,0 +1,115 @@
+{
+  "file": "src/app/[locale]/aktiviteler/page.tsx",
+  "bytes": 2562,
+  "stringCount": 10,
+  "strings": [
+    {
+      "type": "metadata.title",
+      "tr": "Kapadokya Aktiviteleri — ATV, At Binme, Jeep Safari | Trip and Tick",
+      "start": 566,
+      "end": 635,
+      "line": 15,
+      "col": 9,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "metadata.description",
+      "tr": "Kapadokya'da yapılacak en iyi aktiviteler: ATV turları, at binme, jeep safari. Rehberli, sigortalı, otel transferi dahil. Anında rezervasyon.",
+      "start": 656,
+      "end": 799,
+      "line": 17,
+      "col": 4,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "metadata.title",
+      "tr": "Kapadokya Aktiviteleri",
+      "start": 939,
+      "end": 963,
+      "line": 23,
+      "col": 11,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "metadata.description",
+      "tr": "ATV, at binme, jeep safari — rehberli & sigortalı.",
+      "start": 982,
+      "end": 1034,
+      "line": 24,
+      "col": 17,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "metadata.alt",
+      "tr": "Kapadokya Aktiviteleri — Trip and Tick",
+      "start": 1293,
+      "end": 1333,
+      "line": 35,
+      "col": 13,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxAttr:title",
+      "tr": "Kapadokya",
+      "start": 1478,
+      "end": 1489,
+      "line": 46,
+      "col": 14,
+      "context": "PageHero@title",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxAttr:highlight",
+      "tr": "Macera Aktiviteleri",
+      "start": 1508,
+      "end": 1529,
+      "line": 47,
+      "col": 18,
+      "context": "PageHero@highlight",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxAttr:description",
+      "tr": "ATV turları, at binme deneyimleri ve jeep safari. Profesyonel rehberler, tam sigortalı, otel transferi dahil. €29'dan başlayan fiyatlar.",
+      "start": 1550,
+      "end": 1688,
+      "line": 48,
+      "col": 20,
+      "context": "PageHero@description",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxText",
+      "tr": "Birden fazla aktivite ister misiniz? Avantajlı paketlerimize bakın.",
+      "rawStart": 2180,
+      "rawEnd": 2275,
+      "textStart": 2195,
+      "textEnd": 2262,
+      "line": 62,
+      "col": 47,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "\n              ",
+      "trailing": "\n            "
+    },
+    {
+      "type": "jsxText",
+      "tr": "Kombo Paketleri Gör",
+      "rawStart": 2352,
+      "rawEnd": 2399,
+      "textStart": 2367,
+      "textEnd": 2386,
+      "line": 65,
+      "col": 72,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "\n              ",
+      "trailing": "\n            "
+    }
+  ]
+}

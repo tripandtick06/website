@@ -1,0 +1,63 @@
+{
+  "file": "src/components/sections/ReviewsSection.tsx",
+  "bytes": 4031,
+  "stringCount": 4,
+  "strings": [
+    {
+      "type": "jsxText",
+      "tr": "Müşteri Yorumları",
+      "rawStart": 782,
+      "rawEnd": 799,
+      "textStart": 782,
+      "textEnd": 799,
+      "line": 29,
+      "col": 40,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "",
+      "trailing": ""
+    },
+    {
+      "type": "jsxText",
+      "tr": "Trip and Tick'e güvenenlerin gerçek deneyimleri",
+      "rawStart": 1014,
+      "rawEnd": 1090,
+      "textStart": 1027,
+      "textEnd": 1079,
+      "line": 33,
+      "col": 66,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "\n            ",
+      "trailing": "\n          "
+    },
+    {
+      "type": "jsxText",
+      "tr": "Yorumunuzu Yazın",
+      "rawStart": 1420,
+      "rawEnd": 1460,
+      "textStart": 1433,
+      "textEnd": 1449,
+      "line": 43,
+      "col": 43,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "\n            ",
+      "trailing": "\n          "
+    },
+    {
+      "type": "jsxText",
+      "tr": "Trip and Tick ile yaşadığınız deneyimi paylaşın",
+      "rawStart": 1521,
+      "rawEnd": 1592,
+      "textStart": 1534,
+      "textEnd": 1581,
+      "line": 46,
+      "col": 53,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "\n            ",
+      "trailing": "\n          "
+    }
+  ]
+}

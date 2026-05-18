@@ -1,0 +1,37 @@
+{
+  "file": "src/components/marketing/NewsletterForm.tsx",
+  "bytes": 9884,
+  "stringCount": 3,
+  "strings": [
+    {
+      "type": "jsxAttr:aria-label",
+      "tr": "Bülten aboneliği formu",
+      "start": 3656,
+      "end": 3680,
+      "line": 121,
+      "col": 21,
+      "context": "form@aria-label",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxAttr:aria-label",
+      "tr": "Bülten aboneliği formu",
+      "start": 5873,
+      "end": 5897,
+      "line": 178,
+      "col": 71,
+      "context": "form@aria-label",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxAttr:aria-label",
+      "tr": "Bülten aboneliği formu",
+      "start": 7727,
+      "end": 7751,
+      "line": 230,
+      "col": 19,
+      "context": "form@aria-label",
+      "nodeType": "StringLiteral"
+    }
+  ]
+}

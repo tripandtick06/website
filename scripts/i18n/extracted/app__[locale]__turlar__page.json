@@ -1,0 +1,97 @@
+{
+  "file": "src/app/[locale]/turlar/page.tsx",
+  "bytes": 2191,
+  "stringCount": 9,
+  "strings": [
+    {
+      "type": "metadata.title",
+      "tr": "Kapadokya Gezi Turları — Kırmızı, Yeşil, Gün Batımı | Trip and Tick",
+      "start": 522,
+      "end": 591,
+      "line": 14,
+      "col": 9,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "metadata.description",
+      "tr": "Kapadokya'nın en popüler gezi turları: Kırmızı Tur (Göreme + Uçhisar), Yeşil Tur (Ihlara + Derinkuyu), gün batımı ve fotoğraf turları. Rehberli, transfer dahil.",
+      "start": 612,
+      "end": 774,
+      "line": 16,
+      "col": 4,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "metadata.title",
+      "tr": "Kapadokya Gezi Turları",
+      "start": 904,
+      "end": 928,
+      "line": 22,
+      "col": 11,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "metadata.description",
+      "tr": "Kırmızı, Yeşil, Gün Batımı turları — rehberli, transfer dahil.",
+      "start": 947,
+      "end": 1011,
+      "line": 23,
+      "col": 17,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "metadata.alt",
+      "tr": "Kapadokya Gezi Turları — Trip and Tick",
+      "start": 1274,
+      "end": 1314,
+      "line": 34,
+      "col": 13,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxAttr:tag",
+      "tr": "Gezi Turları",
+      "start": 1426,
+      "end": 1440,
+      "line": 44,
+      "col": 12,
+      "context": "PageHero@tag",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxAttr:title",
+      "tr": "Kapadokya",
+      "start": 1455,
+      "end": 1466,
+      "line": 45,
+      "col": 14,
+      "context": "PageHero@title",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxAttr:highlight",
+      "tr": "Klasik Turları",
+      "start": 1485,
+      "end": 1501,
+      "line": 46,
+      "col": 18,
+      "context": "PageHero@highlight",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxAttr:description",
+      "tr": "UNESCO Dünya Mirası bölgesinin en önemli noktalarını profesyonel rehber eşliğinde keşfedin. Kırmızı, Yeşil, gün batımı ve özel fotoğraf turları.",
+      "start": 1522,
+      "end": 1668,
+      "line": 47,
+      "col": 20,
+      "context": "PageHero@description",
+      "nodeType": "StringLiteral"
+    }
+  ]
+}

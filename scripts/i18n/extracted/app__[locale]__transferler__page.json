@@ -1,0 +1,87 @@
+{
+  "file": "src/app/[locale]/transferler/page.tsx",
+  "bytes": 2205,
+  "stringCount": 8,
+  "strings": [
+    {
+      "type": "metadata.title",
+      "tr": "Kapadokya Havalimanı Transfer — Nevşehir & Kayseri | Trip and Tick",
+      "start": 526,
+      "end": 594,
+      "line": 14,
+      "col": 9,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "metadata.description",
+      "tr": "Nevşehir (NAV) ve Kayseri (ASR) havalimanı transferleri. Özel araç, minibüs ve VIP seçenekleri. 7/24 hizmet, sabit fiyat, anında rezervasyon.",
+      "start": 615,
+      "end": 758,
+      "line": 16,
+      "col": 4,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "metadata.title",
+      "tr": "Kapadokya Havalimanı Transfer",
+      "start": 898,
+      "end": 929,
+      "line": 22,
+      "col": 11,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "metadata.description",
+      "tr": "Nevşehir (NAV) & Kayseri (ASR) — 7/24, sabit fiyat.",
+      "start": 948,
+      "end": 1001,
+      "line": 23,
+      "col": 17,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "metadata.alt",
+      "tr": "Kapadokya Havalimanı Transfer — Trip and Tick",
+      "start": 1275,
+      "end": 1322,
+      "line": 34,
+      "col": 13,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxAttr:title",
+      "tr": "Havalimanı",
+      "start": 1467,
+      "end": 1479,
+      "line": 45,
+      "col": 14,
+      "context": "PageHero@title",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxAttr:highlight",
+      "tr": "Özel Transfer",
+      "start": 1498,
+      "end": 1513,
+      "line": 46,
+      "col": 18,
+      "context": "PageHero@highlight",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxAttr:description",
+      "tr": "Nevşehir (NAV) 30-45 dk ve Kayseri (ASR) 60-75 dk transfer hizmetleri. Özel araç, minibüs, VIP seçenekleri. Sabit fiyat — sürpriz yok.",
+      "start": 1534,
+      "end": 1670,
+      "line": 47,
+      "col": 20,
+      "context": "PageHero@description",
+      "nodeType": "StringLiteral"
+    }
+  ]
+}

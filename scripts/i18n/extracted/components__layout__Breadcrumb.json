@@ -1,0 +1,21 @@
+{
+  "file": "src/components/layout/Breadcrumb.tsx",
+  "bytes": 1587,
+  "stringCount": 1,
+  "strings": [
+    {
+      "type": "jsxText",
+      "tr": "Ana Sayfa",
+      "rawStart": 719,
+      "rawEnd": 728,
+      "textStart": 719,
+      "textEnd": 728,
+      "line": 23,
+      "col": 55,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "",
+      "trailing": ""
+    }
+  ]
+}

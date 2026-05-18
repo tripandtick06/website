@@ -1,0 +1,31 @@
+{
+  "file": "src/app/[locale]/ara/page.tsx",
+  "bytes": 2728,
+  "stringCount": 2,
+  "strings": [
+    {
+      "type": "metadata.description",
+      "tr": "Trip and Tick katalogunda balon turu, otel, aktivite, gezi turu, paket ve transfer arayın. Fiyat, puan, süre ve para birimine göre filtreleyin.",
+      "start": 1051,
+      "end": 1196,
+      "line": 33,
+      "col": 6,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxText",
+      "tr": "Yükleniyor…",
+      "rawStart": 2302,
+      "rawEnd": 2313,
+      "textStart": 2302,
+      "textEnd": 2313,
+      "line": 61,
+      "col": 91,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "",
+      "trailing": ""
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "file": "src/components/sections/GuaranteeSection.tsx",
+  "bytes": 2262,
+  "stringCount": 3,
+  "strings": [
+    {
+      "type": "jsxText",
+      "tr": "Bizden Daha Ucuzunu",
+      "rawStart": 1189,
+      "rawEnd": 1230,
+      "textStart": 1200,
+      "textEnd": 1219,
+      "line": 24,
+      "col": 88,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "\n          ",
+      "trailing": "\n          "
+    },
+    {
+      "type": "jsxText",
+      "tr": "Buldunuz mu?",
+      "rawStart": 1277,
+      "rawEnd": 1289,
+      "textStart": 1277,
+      "textEnd": 1289,
+      "line": 27,
+      "col": 40,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "",
+      "trailing": ""
+    },
+    {
+      "type": "jsxText",
+      "tr": "Aynı tarih, aynı hizmet için daha düşük fiyatlı bir teklif kanıtlayın\n          — o fiyatın",
+      "rawStart": 1379,
+      "rawEnd": 1482,
+      "textStart": 1390,
+      "textEnd": 1481,
+      "line": 29,
+      "col": 68,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "\n          ",
+      "trailing": " "
+    }
+  ]
+}

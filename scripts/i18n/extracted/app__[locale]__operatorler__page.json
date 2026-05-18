@@ -1,0 +1,117 @@
+{
+  "file": "src/app/[locale]/operatorler/page.tsx",
+  "bytes": 6191,
+  "stringCount": 9,
+  "strings": [
+    {
+      "type": "metadata.title",
+      "tr": "Anlaşmalı Balon Operatörleri | Trip and Tick",
+      "start": 879,
+      "end": 925,
+      "line": 22,
+      "col": 9,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "metadata.description",
+      "tr": "Trip and Tick'in 9+ TÜRSAB lisanslı anlaşmalı balon operatörü. SHGM sertifikalı pilotlar, EASA standartları, yıllık 250.000+ yolcu kapasitesi.",
+      "start": 946,
+      "end": 1090,
+      "line": 24,
+      "col": 4,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxAttr:tag",
+      "tr": "Operatörler",
+      "start": 1488,
+      "end": 1501,
+      "line": 39,
+      "col": 12,
+      "context": "PageHero@tag",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxAttr:title",
+      "tr": "Anlaşmalı",
+      "start": 1516,
+      "end": 1527,
+      "line": 40,
+      "col": 14,
+      "context": "PageHero@title",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxText",
+      "tr": "Sektörel Standartlar",
+      "rawStart": 2110,
+      "rawEnd": 2130,
+      "textStart": 2110,
+      "textEnd": 2130,
+      "line": 50,
+      "col": 42,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "",
+      "trailing": ""
+    },
+    {
+      "type": "jsxText",
+      "tr": "SHGM Lisanslı, EASA Sertifikalı",
+      "rawStart": 2222,
+      "rawEnd": 2281,
+      "textStart": 2237,
+      "textEnd": 2268,
+      "line": 51,
+      "col": 84,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "\n              ",
+      "trailing": "\n            "
+    },
+    {
+      "type": "jsxText",
+      "tr": "Tüm operatörlerimiz EASA Part-BOP standartlarına uygun yıllık bakım\n              programı uygular, SHGM sertifikalı pilot kadrosu çalıştırır ve\n              uluslararası seyahat sigortası ile uçuş gerçekleştirir.",
+      "rawStart": 2347,
+      "rawEnd": 2589,
+      "textStart": 2362,
+      "textEnd": 2576,
+      "line": 54,
+      "col": 60,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "\n              ",
+      "trailing": "\n            "
+    },
+    {
+      "type": "jsxText",
+      "tr": "+ yıl)",
+      "rawStart": 4136,
+      "rawEnd": 4163,
+      "textStart": 4136,
+      "textEnd": 4142,
+      "line": 84,
+      "col": 75,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "",
+      "trailing": "\n                    "
+    },
+    {
+      "type": "jsxText",
+      "tr": "Detayları Gör",
+      "rawStart": 5481,
+      "rawEnd": 5534,
+      "textStart": 5502,
+      "textEnd": 5515,
+      "line": 112,
+      "col": 19,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "\n                    ",
+      "trailing": "\n                  "
+    }
+  ]
+}

@@ -1,0 +1,766 @@
+namespace,key,context,tr
+component.b2b.b2_b_apply_form,acente_lisans_no,jsx,Acente Lisans No
+component.b2b.b2_b_apply_form,basvurunuzla,jsx,Başvurunuzla
+component.b2b.b2_b_apply_form,form_aria_label_b2b_acente,form@aria-label,B2B acente başvuru formu
+component.b2b.b2_b_apply_form,input_placeholder_tursab_xxxx,input@placeholder,TÜRSAB A-XXXX veya yerel lisans
+component.b2b.b2_b_apply_form,kabul_etmis_sayilirsiniz,jsx,kabul etmiş sayılırsınız.
+component.b2b.b2_b_apply_form,kullanim_sartlarini,jsx,kullanım şartlarını
+component.b2b.b2_b_apply_form,kurumsal_posta,jsx,Kurumsal E-posta
+component.b2b.b2_b_apply_form,secin,jsx,Seçin...
+component.b2b.b2_b_apply_form,sirket_adi,jsx,Şirket Adı
+component.b2b.b2_b_apply_form,ulke,jsx,Ülke
+component.b2b.b2_b_apply_form,yetkili_ad_soyad,jsx,Yetkili Ad Soyad
+component.booking.availability_badge,musait,jsx,Müsait
+component.booking.availability_calendar,button_aria_label_onceki_ay,button@aria-label,Önceki ay
+component.booking.availability_calendar,button_aria_label_sonraki_ay,button@aria-label,Sonraki ay
+component.booking.availability_calendar,legenddot_label_gecmis_kapali,LegendDot@label,Geçmiş / Kapalı
+component.booking.availability_calendar,legenddot_label_musait,LegendDot@label,Müsait
+component.booking.availability_calendar,legenddot_label_sinirli,LegendDot@label,Sınırlı
+component.booking.availability_calendar,musait_tarihler,jsx,Müsait Tarihler
+component.booking.cookie_consent,analitik_anonim_ziyaret,jsx,• Analitik (anonim ziyaret istatistikleri) — opsiyonel
+component.booking.cookie_consent,cerez_politikamiza,jsx,Çerez Politikamıza
+component.booking.cookie_consent,div_aria_label_cerez_tercihi,div@aria-label,Çerez tercihi
+component.booking.cookie_consent,goz_atin,jsx,göz atın.
+component.booking.cookie_consent,kabul_et,jsx,Kabul Et
+component.booking.cookie_consent,pazarlama_kisisellestirilmis,jsx,• Pazarlama (kişiselleştirilmiş içerik) — opsiyonel
+component.booking.cookie_consent,performans_sayfa_hizi_olcumu,jsx,• Performans (sayfa hızı ölçümü) — opsiyonel
+component.booking.cookie_consent,site_kvkk_gdpr_kapsaminda,jsx,"Bu site KVKK ve GDPR kapsamında deneyiminizi geliştirmek için
+              çerezler kullanır. Detaylar için"
+component.booking.cookie_consent,zorunlu_cerezler_oturum,jsx,"• Zorunlu çerezler (oturum, güvenlik) — her zaman aktif"
+component.booking.currency_switcher,button_aria_label_para_birimi,button@aria-label,Para birimi
+component.booking.search,cocuk_12,jsx,Çocuk (7-12)
+component.booking.search,input_aria_label_destinasyon,input@aria-label,Destinasyon veya hizmet ara
+component.booking.search,input_placeholder_goreme_kapadokya,input@placeholder,"Göreme, Kapadokya"
+component.booking.search,onemli,jsx,Önemli:
+component.booking.search,tarih,jsx,Tarih
+component.booking.search,yas_alti_cocuklar_balon,jsx,"6 yaş altı çocuklar balon uçuşlarına katılamaz. Hamileler
+            ve ciddi kalp/sağlık sorunu olanlar binemez."
+component.booking.search,yetiskin,jsx,Yetişkin
+component.booking.whats_app_f_a_b,bize_whatsapp_tan_yazin,jsx,Bize WhatsApp'tan yazın
+component.layout.breadcrumb,ana_sayfa,jsx,Ana Sayfa
+component.layout.footer,2026_trip_tick,jsx,© 2026 Trip and Tick.
+component.layout.footer,bultene_abone_olun_ilk,jsx,"Bültene abone olun, ilk rezervasyonunuzda %5 indirim + sezon fırsatları."
+component.layout.footer,button_aria_label_dil_sec,button@aria-label,Dil seç
+component.layout.footer,button_title_faz_eklenecek,button@title,Faz 2'de eklenecek
+component.layout.footer,hosgeldin_bonusu,jsx,Hoşgeldin Bonusu
+component.layout.footer,kapadokya_nin_en_rekabetci,jsx,"Kapadokya'nın en rekabetçi fiyatlı, en güvenilir online seyahat acentası.
+              Nevşehir / Göreme, Türkiye."
+component.layout.footer,nevsehir_kapadokya_turkiye,jsx,"Nevşehir / Kapadokya, Türkiye"
+component.layout.footer,trip_tick,jsx,Trip and Tick
+component.layout.footer,turkiye,jsx,", Türkiye"
+component.layout.footer,yakinda,jsx,Yakında
+component.layout.header,button_title_faz_eklenecek,button@title,Faz 2'de eklenecek
+component.layout.header,trip,jsx,Trip and
+component.layout.header,yakinda,jsx,Yakında
+component.layout.service_card,bilgi_al,jsx,Bilgi Al
+component.layout.service_card,degerlendirme,jsx,değerlendirme
+component.layout.service_card,kisi_basi,jsx,kişi başı
+component.layout.service_card,telefon_posta,jsx,Telefon / e-posta ile
+component.marketing.newsletter_form,form_aria_label_bulten_aboneligi,form@aria-label,Bülten aboneliği formu
+component.oteller.hotel_inquiry_form,ad_soyad,jsx,Ad Soyad *
+component.oteller.hotel_inquiry_form,arayarak_musaitlik_fiyat,jsx,ile arayarak müsaitlik ve fiyat teklifi paylaşacağız.
+component.oteller.hotel_inquiry_form,butce_opsiyonel,jsx,Bütçe (opsiyonel)
+component.oteller.hotel_inquiry_form,cikis_tarihi,jsx,Çıkış Tarihi *
+component.oteller.hotel_inquiry_form,cocuk,jsx,Çocuk
+component.oteller.hotel_inquiry_form,formu_doldurun_24_saat_icinde,jsx,Formu doldurun — 24 saat içinde sizi
+component.oteller.hotel_inquiry_form,giris_tarihi,jsx,Giriş Tarihi *
+component.oteller.hotel_inquiry_form,hemen_iletisim,jsx,Hemen iletişim için:
+component.oteller.hotel_inquiry_form,input_placeholder_orn_100,input@placeholder,Örn: 100-150 EUR / gece
+component.oteller.hotel_inquiry_form,otel_bilgi_alin,jsx,Otel için bilgi alın
+component.oteller.hotel_inquiry_form,posta,jsx,E-posta *
+component.oteller.hotel_inquiry_form,talebiniz_alindi,jsx,Talebiniz Alındı
+component.oteller.hotel_inquiry_form,talep_no,jsx,Talep No:
+component.oteller.hotel_inquiry_form,telefon_posta,jsx,telefon veya e-posta
+component.oteller.hotel_inquiry_form,telefon_sizi_arayacagiz,jsx,Telefon * (sizi arayacağız)
+component.oteller.hotel_inquiry_form,tercihler_not_opsiyonel,jsx,Tercihler / Not (opsiyonel)
+component.oteller.hotel_inquiry_form,textarea_placeholder_orn_balon,textarea@placeholder,"Örn: balon manzaralı oda, jakuzili, balayı dekoru..."
+component.oteller.hotel_inquiry_form,yetiskin,jsx,Yetişkin *
+component.oteller.hotels_grid,div_aria_label_otel_tipi,div@aria-label,Otel tipi filtresi
+component.oteller.hotels_grid,kategoride_otel_bulunamadi,jsx,Bu kategoride otel bulunamadı. Lütfen başka bir filtre seçin.
+component.sections.guarantee,ayni_tarih_ayni_hizmet_daha,jsx,"Aynı tarih, aynı hizmet için daha düşük fiyatlı bir teklif kanıtlayın
+          — o fiyatın"
+component.sections.guarantee,bizden_daha_ucuzunu,jsx,Bizden Daha Ucuzunu
+component.sections.guarantee,buldunuz,jsx,Buldunuz mu?
+component.sections.loyalty,hemen_rezervasyon_yap,jsx,Hemen Rezervasyon Yap
+component.sections.loyalty,her_rezervasyon_sonraki_tatile,jsx,"Her rezervasyon, bir sonraki tatile yatirim"
+component.sections.loyalty,hosgeldin_bonusu_ilk,jsx,Hosgeldin bonusu: Ilk rezervasyonda +
+component.sections.loyalty,puan_mobil_uygulama,jsx,puan. Mobil uygulama: +
+component.sections.loyalty,puan_yorum_bonusu,jsx,"puan.
+          Yorum bonusu: +"
+component.sections.loyalty,puanlarima_bak,jsx,Puanlarima Bak
+component.sections.loyalty,sadakat_programi,jsx,Sadakat Programi
+component.sections.loyalty,trip_tick_uzerinden_yaptiginiz,jsx,"Trip and Tick uzerinden yaptiginiz her odeme puan kazandirir. Puanlarinizla indirim
+            kullanin, tier yukseltin, arkadaslarinizi davet ederek ekstra puan kazanin."
+component.sections.newsletter,bulten,jsx,Bülten
+component.sections.reviews,musteri_yorumlari,jsx,Müşteri Yorumları
+component.sections.reviews,trip_tick_guvenenlerin_gercek,jsx,Trip and Tick'e güvenenlerin gerçek deneyimleri
+component.sections.reviews,trip_tick_yasadiginiz_deneyimi,jsx,Trip and Tick ile yaşadığınız deneyimi paylaşın
+component.sections.reviews,yorumunuzu_yazin,jsx,Yorumunuzu Yazın
+component.sections.steps,hizli_kolay_guvenli_karmasik,jsx,"Hızlı, kolay ve güvenli. Karmaşık süreç yok."
+component.sections.steps,nasil_calisir,jsx,Nasıl Çalışır?
+component.sections.steps,rezervasyon_dakikada,jsx,Rezervasyon 5 Dakikada
+page.aktiviteler,birden_fazla_aktivite_ister,jsx,Birden fazla aktivite ister misiniz? Avantajlı paketlerimize bakın.
+page.aktiviteler,kombo_paketleri_gor,jsx,Kombo Paketleri Gör
+page.aktiviteler,meta_desc,metadata,"Kapadokya'da yapılacak en iyi aktiviteler: ATV turları, at binme, jeep safari. Rehberli, sigortalı, otel transferi dahil. Anında rezervasyon."
+page.aktiviteler,meta_desc_2,metadata,"ATV, at binme, jeep safari — rehberli & sigortalı."
+page.aktiviteler,meta_og_alt,metadata,Kapadokya Aktiviteleri — Trip and Tick
+page.aktiviteler,meta_title,metadata,"Kapadokya Aktiviteleri — ATV, At Binme, Jeep Safari | Trip and Tick"
+page.aktiviteler,meta_title_2,metadata,Kapadokya Aktiviteleri
+page.aktiviteler,pagehero_description_atv_turlari,PageHero@description,"ATV turları, at binme deneyimleri ve jeep safari. Profesyonel rehberler, tam sigortalı, otel transferi dahil. €29'dan başlayan fiyatlar."
+page.aktiviteler,pagehero_highlight_macera,PageHero@highlight,Macera Aktiviteleri
+page.aktiviteler,pagehero_title_kapadokya,PageHero@title,Kapadokya
+page.ara,meta_desc,metadata,"Trip and Tick katalogunda balon turu, otel, aktivite, gezi turu, paket ve transfer arayın. Fiyat, puan, süre ve para birimine göre filtreleyin."
+page.ara,yukleniyor,jsx,Yükleniyor…
+page.b2b,acente_basvuru_formu,jsx,Acente Başvuru Formu
+page.b2b,api_key,jsx,API Key:
+page.b2b,b2b_giris,jsx,B2B Giriş
+page.b2b,basvurunuzu_24_saat_icinde,jsx,"Başvurunuzu 24 saat içinde inceleyip API key ve ön onay belgesini
+              e-posta ile iletiyoruz. Lisans belgesi sonradan yüklenebilir."
+page.b2b,dashboard_giris_yapip,jsx,"Dashboard'a giriş yapıp rezervasyonlarınızı yönetin, API key
+                ve fatura raporlarınıza erişin."
+page.b2b,kapadokya_envanterinde_en_guclu,jsx,Kapadokya envanterinde en güçlü partner ağıyla acenteniz için maksimum kâr marjı.
+page.b2b,meta_desc,metadata,"Seyahat acenteleri için B2B programı: %12-18 komisyon, REST API erişimi, özel hesap yöneticisi, kredi limiti, çoklu para birimi."
+page.b2b,meta_desc_2,metadata,Toplu fiyat · REST API · %12-18 komisyon · Özel destek.
+page.b2b,meta_title,metadata,B2B Acente Programı — Toplu Fiyat & API | Trip and Tick
+page.b2b,meta_title_2,metadata,Trip and Tick B2B Acente Programı
+page.b2b,neden_trip_tick_b2b,jsx,Neden Trip and Tick B2B?
+page.b2b,pagehero_description_seyahat,PageHero@description,"Seyahat acenteleri ve tur operatörleri için özel komisyon, REST API erişimi ve kredi limiti. 50+ ülkeden 200+ partner acente."
+page.b2b,pagehero_highlight_programi,PageHero@highlight,Programı
+page.b2b,pagehero_tag_acente_programi,PageHero@tag,Acente Programı
+page.b2b,pagehero_title_b2b_acente,PageHero@title,B2B Acente
+page.b2b,zaten_acente_misiniz,jsx,Zaten acente misiniz?
+page.balonlar,40m_sigorta,jsx,40M€ sigorta
+page.balonlar,anlasmali_10_tursab_lisansli,jsx,Anlaşmalı 10 TÜRSAB Lisanslı Operatör
+page.balonlar,balon_turu_hakkinda_sik_sorulan,jsx,Balon Turu Hakkında Sık Sorulan Sorular
+page.balonlar,kisi,jsx,kişi
+page.balonlar,kisiye_ozel_teklif,jsx,Kişiye özel teklif
+page.balonlar,meta_desc,metadata,"Kapadokya balon turu €165'ten başlar. Standart, Konfor, Deluxe ve Romantik özel paketler. 9+ TÜRSAB lisanslı operatör, %100 iade garantisi, en düşük fiyat garantisi."
+page.balonlar,meta_desc_2,metadata,"€165'ten başlayan paketler. 9+ operatör, %100 iade garantisi."
+page.balonlar,meta_og_alt,metadata,Kapadokya Balon Turu — Trip and Tick
+page.balonlar,meta_title,metadata,Kapadokya Balon Turu Fiyatları 2026 — Trip and Tick
+page.balonlar,meta_title_2,metadata,Kapadokya Balon Turu Fiyatları 2026
+page.balonlar,operatorler,jsx,Operatörler
+page.balonlar,ozel_fiyat_sorunuz,jsx,Özel fiyat sorunuz
+page.balonlar,pagehero_description_tursab_lisansli,PageHero@description,"9+ TÜRSAB lisanslı operatörle anlaşmalı doğrudan acentelik. En düşük fiyat garantisi, %100 iade güvencesi, 40 milyon Euro sigorta."
+page.balonlar,pagehero_tag_balon_turlari,PageHero@tag,Balon Turları
+page.balonlar,pagehero_title_kapadokya_balon,PageHero@title,Kapadokya Balon Turu
+page.balonlar,paket,jsx,4 Paket
+page.balonlar,paket_karsilastirmasi,jsx,Paket Karşılaştırması
+page.balonlar,sadece_sivil_havacilik_genel,jsx,"Sadece Sivil Havacılık Genel Müdürlüğü lisanslı, en az 5 yıl deneyimli
+              operatörlerle çalışıyoruz. Aracı komisyonu yok — fiyat direkt operatörden."
+page.balonlar,standart_ekonomik_ucustan,jsx,"Standart ekonomik uçuştan romantik özel sepete kadar her bütçeye uygun
+              seçenekler. Tüm fiyatlara transfer, kahvaltı, sigorta, sertifika ve
+              şampanya servisi dahildir."
+page.balonlar.slug,3d_secure_odeme,jsx,3D Secure ödeme
+page.balonlar.slug,40m_ucus_sigortasi,jsx,40M€ uçuş sigortası
+page.balonlar.slug,beri,jsx,'den beri
+page.balonlar.slug,daha_ucuz_en_dusuk_fiyat,jsx,daha ucuz · En düşük fiyat garantisi
+page.balonlar.slug,dahil_degil,jsx,Dahil Değil
+page.balonlar.slug,fiyata_dahil,jsx,Fiyata Dahil
+page.balonlar.slug,kisi,jsx,kişi
+page.balonlar.slug,kisi_basi,jsx,Kişi başı
+page.balonlar.slug,meta_title,metadata,Paket Bulunamadı
+page.balonlar.slug,min_yas,jsx,Min. yaş
+page.balonlar.slug,onemli_uyarilar_saglik_kosullari,jsx,Önemli Uyarılar & Sağlık Koşulları
+page.balonlar.slug,paketteki_operatorler,jsx,Bu Paketteki Operatörler
+page.balonlar.slug,sepet,jsx,Sepet
+page.balonlar.slug,sigorta,jsx,Sigorta
+page.balonlar.slug,sik_sorulan_sorular,jsx,Sık Sorulan Sorular
+page.balonlar.slug,soru_sor_whatsapp_email,jsx,Soru sor → WhatsApp / Email
+page.balonlar.slug,sure,jsx,Süre
+page.balonlar.slug,tarih_sec_rezerve_et,jsx,Tarih Seç & Rezerve Et
+page.balonlar.slug,tarih_seciminde_gunluk_doluluk,jsx,Tarih seçiminde günlük doluluk anında kontrol edilir.
+page.blog,balon_turlari_gezi_rotalari_otel,jsx,"Balon turları, gezi rotaları, otel tavsiyeleri ve daha fazlası.
+            Kapadokya seyahatiniz için ihtiyacınız olan her şey burada."
+page.blog,blog_rehber,jsx,Blog & Rehber
+page.blog,devamini_oku,jsx,Devamını Oku
+page.blog,henuz_blog_yazisi_yok,jsx,Henüz Blog Yazısı Yok
+page.blog,kapadokya_hakkinda_her_sey,jsx,Kapadokya Hakkında Her Şey
+page.blog,kapadokya_seyahat,jsx,Kapadokya Seyahat
+page.blog,kapadokya_turkiye_nin_nevsehir,jsx,"Kapadokya, Türkiye'nin Nevşehir ilinde yer alan UNESCO Dünya Mirası listesindeki
+              eşsiz bir bölgedir. Peri bacaları, yer altı şehirleri ve sıcak hava balon turlarıyla
+              dünya genelinde tanınan Kapadokya, her yıl milyonlarca turisti ağırlamaktadır."
+page.blog,meta_desc,metadata,"Kapadokya balon turu, gezi rehberi, aktiviteler ve otel tavsiyeleri hakkında en güncel blog yazıları. Fiyatlar, ipuçları ve deneyimler."
+page.blog,meta_desc_2,metadata,"Balon turu, gezi rehberi, aktiviteler — fiyatlar ve ipuçları."
+page.blog,meta_og_alt,metadata,Trip and Tick — Blog
+page.blog,meta_title,metadata,Blog — Kapadokya Seyahat Rehberi | Trip and Tick
+page.blog,meta_title_2,metadata,Blog — Kapadokya Seyahat Rehberi
+page.blog,seo_agent_yakinda_kapadokya,jsx,"SEO Agent yakında Kapadokya seyahati hakkında faydalı blog yazıları oluşturacak.
+              Tekrar kontrol edin!"
+page.blog,trip_tick_olarak_kapadokya_daki,jsx,"Trip and Tick olarak, Kapadokya'daki en güvenilir operatörlerle çalışarak size en
+              uygun fiyatlarla unutulmaz deneyimler sunuyoruz. 9+ anlaşmalı balon operatörü, en düşük
+              fiyat garantisi ve %100 hava iptali iade politikamızla güvenle rezervasyon yapabilirsiniz."
+page.blog,tumu,jsx,Tümü (
+page.blog.slug,blog_don,jsx,Blog'a Dön
+page.blog.slug,dk_okuma,jsx,dk okuma
+page.blog.slug,en_uygun_fiyatlarla_balon_turu,jsx,"En uygun fiyatlarla balon turu, aktivite ve otel rezervasyonu yapın."
+page.blog.slug,hemen_rezervasyon_yap,jsx,Hemen Rezervasyon Yap
+page.blog.slug,ilgili_yazilar,jsx,İlgili Yazılar
+page.blog.slug,kapadokya_yi_kesfetmeye_hazir,jsx,Kapadokya'yı Keşfetmeye Hazır mısınız?
+page.blog.slug,meta_title,metadata,Yazı Bulunamadı
+page.blog.slug,trip_tick,jsx,Trip and Tick
+page.cerez_politikasi,12_ay_onay_geri_cekildiginde,jsx,12 ay; onay geri çekildiğinde anında silinir.
+page.cerez_politikasi,30_gun_24_ay_arasi,jsx,30 gün ile 24 ay arası.
+page.cerez_politikasi,analitik_ga4,jsx,Analitik (GA4):
+page.cerez_politikasi,ayarlar_cerezler_site_izinleri,jsx,Ayarlar → Çerezler ve site izinleri.
+page.cerez_politikasi,ayarlar_gizlilik_guvenlik,jsx,Ayarlar → Gizlilik ve güvenlik → Çerezler.
+page.cerez_politikasi,bazi_cerezler_ucuncu_taraf,jsx,Bazı çerezler üçüncü taraf servisleri tarafından yerleştirilir:
+page.cerez_politikasi,brevo_posta_acma_takibi,jsx,Brevo (e-posta açma takibi)
+page.cerez_politikasi,cerez_nedir,jsx,Çerez Nedir?
+page.cerez_politikasi,cerez_yonetimi,jsx,Çerez Yönetimi
+page.cerez_politikasi,cerezler_cookies_web_siteleri,jsx,"Çerezler (cookies), web siteleri ziyaret edildiğinde tarayıcınızda saklanan
+            küçük metin dosyalarıdır. Tercihleri hatırlamak, analitik veri toplamak ve
+            kullanıcı deneyimini iyileştirmek için kullanılır."
+page.cerez_politikasi,cerezleri_yonetmek_yolunuz_var,jsx,Çerezleri yönetmek için 2 yolunuz var:
+page.cerez_politikasi,cloudflare_guvenlik_performans,jsx,Cloudflare (güvenlik & performans)
+page.cerez_politikasi,degisiklikler,jsx,Değişiklikler
+page.cerez_politikasi,google_analytics_analitik,jsx,Google Analytics 4 (analitik)
+page.cerez_politikasi,google_chrome,jsx,Google Chrome:
+page.cerez_politikasi,info_tripandtick_com_adresinden,jsx,info@tripandtick.com adresinden bize ulaşın.
+page.cerez_politikasi,kalici_cerezler,jsx,Kalıcı çerezler:
+page.cerez_politikasi,kullandigimiz_cerez_kategorileri,jsx,Kullandığımız Çerez Kategorileri
+page.cerez_politikasi,maksimum_14_ay,jsx,maksimum 14 ay.
+page.cerez_politikasi,meta_desc,metadata,"Trip and Tick çerez politikası: zorunlu, analitik, fonksiyonel ve pazarlama çerezleri. Çerez yönetimi ve tarayıcı ayarları rehberi."
+page.cerez_politikasi,meta_desc_2,metadata,"Zorunlu, analitik, fonksiyonel ve pazarlama çerezleri rehberi."
+page.cerez_politikasi,meta_title,metadata,Çerez Politikası — Trip and Tick
+page.cerez_politikasi,meta_title_2,metadata,Çerez Politikası
+page.cerez_politikasi,microsoft_edge,jsx,Microsoft Edge:
+page.cerez_politikasi,mozilla_firefox,jsx,Mozilla Firefox:
+page.cerez_politikasi,onemli,jsx,Önemli:
+page.cerez_politikasi,ornekler,jsx,Örnekler:
+page.cerez_politikasi,oturum_cerezleri,jsx,Oturum çerezleri:
+page.cerez_politikasi,pagehero_description_trip_tick,PageHero@description,"Trip and Tick çerez kullanımı hakkında şeffaf bilgilendirme. Hangi çerezleri ne için kullanıyoruz, nasıl yönetebilirsiniz."
+page.cerez_politikasi,pagehero_highlight_politikasi,PageHero@highlight,Politikası
+page.cerez_politikasi,pagehero_title_cerez,PageHero@title,Çerez
+page.cerez_politikasi,politikayi_guncelledigimizde,jsx,"Bu politikayı güncellediğimizde sayfanın üst kısmında yer alan tarih
+            değişir. Önemli değişikliklerde aktif kullanıcılara e-posta gönderilir."
+page.cerez_politikasi,saklama_sureleri,jsx,Saklama Süreleri
+page.cerez_politikasi,sayfanin_altindaki_cerez,jsx,"sayfanın altındaki ""Çerez Ayarları""
+              linkine tıklayarak kategori bazında onay verin/iptal edin."
+page.cerez_politikasi,site_ici_tercih_merkezi,jsx,Site içi tercih merkezi:
+page.cerez_politikasi,sorulariniz_var,jsx,Sorularınız mı var?
+page.cerez_politikasi,stripe_odeme_guvenligi,jsx,Stripe (ödeme güvenliği)
+page.cerez_politikasi,tarayici_ayarlari,jsx,Tarayıcı ayarları:
+page.cerez_politikasi,tarayici_cerez_ayarlari_rehberi,jsx,Tarayıcı Çerez Ayarları Rehberi
+page.cerez_politikasi,tarayici_kapatildiginda_silinir,jsx,tarayıcı kapatıldığında silinir.
+page.cerez_politikasi,tarayicinizdan_tum_cerezleri,jsx,"tarayıcınızdan tüm çerezleri silebilir
+              veya engelleyebilirsiniz."
+page.cerez_politikasi,tercihler_gizlilik_cerezler,jsx,Tercihler → Gizlilik → Çerezler ve site verisi.
+page.cerez_politikasi,tercihler_gizlilik_guvenlik,jsx,Tercihler → Gizlilik ve Güvenlik.
+page.cerez_politikasi,ucuncu_taraf_cerezleri,jsx,Üçüncü Taraf Çerezleri
+page.cerez_politikasi,yururluk_tarihi_mayis_2026_son,jsx,Yürürlük tarihi: 1 Mayıs 2026 · Son güncelleme: 15 Mayıs 2026
+page.cerez_politikasi,zorunlu_cerezleri_kapatirsaniz,jsx,"Zorunlu çerezleri kapatırsanız site doğru
+              çalışmayabilir (örn. ödeme adımı, oturum süresi)."
+page.gizlilik_politikasi,10_degisiklikler,jsx,10. Değişiklikler
+page.gizlilik_politikasi,30_gun_icinde,jsx,30 gün içinde
+page.gizlilik_politikasi,ad_soyad_dogum_tarihi_yas,jsx,"ad, soyad, doğum tarihi (yaş kontrolü), uyruk."
+page.gizlilik_politikasi,asagidaki_veri_kategorilerini,jsx,Aşağıdaki veri kategorilerini topluyoruz:
+page.gizlilik_politikasi,basvuru,jsx,7. Başvuru
+page.gizlilik_politikasi,brevo_transactional_marketing,jsx,Brevo (transactional + marketing).
+page.gizlilik_politikasi,cerez_politikasi,jsx,Çerez Politikası
+page.gizlilik_politikasi,cerez_verisi_12_aya_kadar,jsx,Çerez verisi: 12 aya kadar.
+page.gizlilik_politikasi,cerezler,jsx,9. Çerezler
+page.gizlilik_politikasi,eksik_yanlis_islenmisse,jsx,Eksik/yanlış işlenmişse düzeltilmesini isteme.
+page.gizlilik_politikasi,guvenlik,jsx,8. Güvenlik
+page.gizlilik_politikasi,haklarinizi_kullanmak_info,jsx,"Haklarınızı kullanmak için info@tripandtick.com adresine kimliğinizi
+            doğrulayan belgelerle birlikte yazılı başvuru yapabilirsiniz. En geç"
+page.gizlilik_politikasi,hizmet_iyilestirme_anonim,jsx,"Hizmet iyileştirme, anonim analitik."
+page.gizlilik_politikasi,iletisim,jsx,İletişim:
+page.gizlilik_politikasi,iletisim_2,jsx,İletişim
+page.gizlilik_politikasi,ip_tarayici_cihaz_cerez_verisi,jsx,"IP, tarayıcı, cihaz, çerez verisi."
+page.gizlilik_politikasi,islem,jsx,İşlem:
+page.gizlilik_politikasi,isleme_aktarildigi_taraflara,jsx,İşleme aktarıldığı taraflara bildirilmesini isteme.
+page.gizlilik_politikasi,isleme_amacini_uygunlugunu,jsx,İşleme amacını ve uygunluğunu sorgulama.
+page.gizlilik_politikasi,isleme_amaclari,jsx,3. İşleme Amaçları
+page.gizlilik_politikasi,islenmisse_buna_iliskin_bilgi,jsx,İşlenmişse buna ilişkin bilgi talep etme.
+page.gizlilik_politikasi,kisisel_verilerinizin_islenip,jsx,Kişisel verilerinizin işlenip işlenmediğini öğrenme.
+page.gizlilik_politikasi,kullanici_haklari_kvkk_11,jsx,6. Kullanıcı Hakları (KVKK m.11)
+page.gizlilik_politikasi,kvkk_kapsaminda_asagidaki,jsx,KVKK kapsamında aşağıdaki haklara sahipsiniz:
+page.gizlilik_politikasi,meta_desc,metadata,"Trip and Tick gizlilik politikası: kişisel verilerin toplanması, kullanımı, saklanması ve kullanıcı hakları. KVKK ve GDPR uyumlu işleme."
+page.gizlilik_politikasi,meta_desc_2,metadata,KVKK ve GDPR uyumlu veri işleme politikamız.
+page.gizlilik_politikasi,meta_og_alt,metadata,Gizlilik Politikası — Trip and Tick
+page.gizlilik_politikasi,meta_title,metadata,Gizlilik Politikası — KVKK Uyumlu | Trip and Tick
+page.gizlilik_politikasi,meta_title_2,metadata,Gizlilik Politikası — KVKK Uyumlu
+page.gizlilik_politikasi,musteri_destegi_sikayet_yonetimi,jsx,Müşteri desteği ve şikayet yönetimi.
+page.gizlilik_politikasi,odeme_fatura_islemleri_vergi,jsx,Ödeme ve fatura işlemleri (vergi mevzuatı).
+page.gizlilik_politikasi,odeme_saglayicisi,jsx,Ödeme sağlayıcısı:
+page.gizlilik_politikasi,odeme_tutari_para_birimi_kart,jsx,"ödeme tutarı, para birimi. Kart bilgileri Trip and Tick'te saklanmaz — Stripe altyapısı kullanılır."
+page.gizlilik_politikasi,operatorler,jsx,Operatörler:
+page.gizlilik_politikasi,otomatik_sistemlerle_cikan,jsx,Otomatik sistemlerle çıkan sonuca itiraz etme.
+page.gizlilik_politikasi,pagehero_description_kisisel,PageHero@description,"Kişisel verilerinizi nasıl topladığımız, kullandığımız ve koruduğumuz hakkında şeffaf bilgilendirme. KVKK (6698) ve GDPR uyumlu."
+page.gizlilik_politikasi,pagehero_highlight_politikasi,PageHero@highlight,Politikası
+page.gizlilik_politikasi,pagehero_title_gizlilik,PageHero@title,Gizlilik
+page.gizlilik_politikasi,pazarlama_iletisimi_sadece_acik,jsx,Pazarlama iletişimi (sadece açık onay halinde).
+page.gizlilik_politikasi,pazarlama_izni_iptal_edilene,jsx,Pazarlama izni: iptal edilene kadar.
+page.gizlilik_politikasi,politikayi_zaman_zaman,jsx,"Bu politikayı zaman zaman güncelleyebiliriz. Önemli değişikliklerde size
+            e-posta ile bildirim yaparız. Devam eden kullanım güncellenmiş politikayı
+            kabul anlamına gelir."
+page.gizlilik_politikasi,posta_adresi_telefon_numarasi,jsx,"e-posta adresi, telefon numarası, otel adresi."
+page.gizlilik_politikasi,posta_servisi,jsx,E-posta servisi:
+page.gizlilik_politikasi,resmi_makamlar,jsx,Resmi makamlar:
+page.gizlilik_politikasi,rezervasyon_fatura_verileri_10,jsx,Rezervasyon ve fatura verileri: 10 yıl (vergi mevzuatı).
+page.gizlilik_politikasi,rezervasyon_gecmisi_tercihler,jsx,"rezervasyon geçmişi, tercihler, özel istekler."
+page.gizlilik_politikasi,rezervasyon_isleme_operatore,jsx,Rezervasyon işleme ve operatöre bildirim.
+page.gizlilik_politikasi,rezervasyon_yaptiginiz_operator,jsx,rezervasyon yaptığınız operatör (sadece o rezervasyon için gerekli minimum bilgi).
+page.gizlilik_politikasi,saklama_sureleri,jsx,5. Saklama Süreleri
+page.gizlilik_politikasi,sayfamiza_bakin,jsx,sayfamıza bakın.
+page.gizlilik_politikasi,silinmesini_yok_edilmesini,jsx,Silinmesini veya yok edilmesini isteme.
+page.gizlilik_politikasi,sitemiz_cerez_kullanir_detay,jsx,Sitemiz çerez kullanır. Detay için
+page.gizlilik_politikasi,sorulariniz,jsx,Sorularınız için:
+page.gizlilik_politikasi,sozlesmesiz_iletisim_yil,jsx,Sözleşmesiz iletişim: 2 yıl.
+page.gizlilik_politikasi,stripe_pci_dss_uyumlu,jsx,Stripe (PCI-DSS uyumlu).
+page.gizlilik_politikasi,toplanan_kisisel_veriler,jsx,2. Toplanan Kişisel Veriler
+page.gizlilik_politikasi,trip_tick_trip_tick_turizm,jsx,"Trip and Tick (Trip and Tick Turizm ve Seyahat Acentası Limited Şirketi),
+            6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında veri
+            sorumlusudur. Adresimiz: Göreme Merkez, Nevşehir 50180, Türkiye.
+            İletişim: info@tripandtick.com."
+page.gizlilik_politikasi,ucretsiz_olarak_yanitlayacagiz,jsx,ücretsiz olarak yanıtlayacağız.
+page.gizlilik_politikasi,uluslararasi_ucus_misafirleri,jsx,uluslararası uçuş misafirleri için pasaport numarası.
+page.gizlilik_politikasi,veri_paylasimi,jsx,4. Veri Paylaşımı
+page.gizlilik_politikasi,veri_sorumlusu,jsx,1. Veri Sorumlusu
+page.gizlilik_politikasi,veriler_asagidaki_taraflarla,jsx,Veriler aşağıdaki taraflarla paylaşılır:
+page.gizlilik_politikasi,veriler_https_sifreli_iletisim,jsx,"Veriler HTTPS şifreli iletişim, hash'lenmiş şifreler, role-based access ve
+            düzenli güvenlik denetimleriyle korunur. Veri ihlali durumunda Kişisel
+            Verileri Koruma Kurulu'na 72 saat içinde bildirim yapılır."
+page.gizlilik_politikasi,verileriniz_pazarlama_amaciyla,jsx,Verileriniz pazarlama amacıyla üçüncü taraflara satılmaz veya kiralanmaz.
+page.gizlilik_politikasi,yasal_talep_halinde_tursab_gelir,jsx,"yasal talep halinde TÜRSAB, Gelir İdaresi, mahkemeler."
+page.gizlilik_politikasi,yasal_yukumluluklerin_yerine,jsx,"Yasal yükümlülüklerin yerine getirilmesi (TÜRSAB, vergi)."
+page.gizlilik_politikasi,yurt_ici_disi_aktarilan,jsx,Yurt içi/dışı aktarılan tarafları bilme.
+page.gizlilik_politikasi,yururluk_tarihi_mayis_2026_son,jsx,Yürürlük tarihi: 1 Mayıs 2026 · Son güncelleme: 15 Mayıs 2026
+page.gizlilik_politikasi,zarar_olustuysa_giderilmesini,jsx,Zarar oluştuysa giderilmesini talep etme.
+page.hakkimizda,bizi_digerlerinden_ayiran_ilke,jsx,Bizi Diğerlerinden Ayıran 4 İlke
+page.hakkimizda,degerlerimiz,jsx,Değerlerimiz
+page.hakkimizda,ekibimiz_24_hizmetinizde,jsx,"Ekibimiz 7/24 hizmetinizde. WhatsApp, e-posta veya telefonla bize ulaşın."
+page.hakkimizda,en_dusuk_net_fiyat,jsx,en düşük net fiyat
+page.hakkimizda,fatura_muhasebe,jsx,Fatura / Muhasebe
+page.hakkimizda,geleneksel_acente_modeli,jsx,"Geleneksel acente modeli pazarda %25-40 komisyonla çalışır; bu, müşteriye
+              gereksiz yere yüksek fiyatla yansır. Biz ise modeli tersine çevirdik:
+              operatörle"
+page.hakkimizda,hale_getirmek_araci_komisyonunu,jsx,"hale getirmek. Aracı komisyonunu kaldırarak müşteriye
+                hak ettiği değeri sunmak; operatörlere adil ortaklık sağlamak."
+page.hakkimizda,iletisime_gec,jsx,İletişime Geç
+page.hakkimizda,ilkesiyle_calisiyor_dogru,jsx,"ilkesiyle çalışıyor, doğru
+              fiyatlandırma ile bölgenin sürdürülebilir turizmine katkı sağlıyoruz."
+page.hakkimizda,kapadokya_satilan_her_balon,jsx,"Kapadokya'da satılan her balon turunun, jeep safari biletinin ve otel
+              gecesinin gerisinde yerel ekonomi var: pilotlar, rehberler, şoförler ve
+              otel personeli. Trip and Tick olarak"
+page.hakkimizda,kapadokya_tatilini_herkes,jsx,Kapadokya tatilini herkes için
+page.hakkimizda,kurucu_ekip,jsx,Kurucu Ekip
+page.hakkimizda,kurulus,jsx,Kuruluş
+page.hakkimizda,meta_desc,metadata,"Trip and Tick: 2024'ten beri Kapadokya'da hizmet veren TÜRSAB lisanslı online seyahat acentası. 9+ operatör, 12.000+ mutlu müşteri, en düşük fiyat garantisi."
+page.hakkimizda,meta_desc_2,metadata,"2024'ten beri 12.000+ müşteri, 9+ operatör, en düşük fiyat garantisi."
+page.hakkimizda,meta_og_alt,metadata,Trip and Tick — Hakkımızda
+page.hakkimizda,meta_title,metadata,Hakkımızda — TÜRSAB Lisanslı Kapadokya Acentası | Trip and Tick
+page.hakkimizda,meta_title_2,metadata,Hakkımızda — TÜRSAB Lisanslı Kapadokya Acentası
+page.hakkimizda,misafirlerimizin_92_si,jsx,"Misafirlerimizin %92'si rezervasyondan sonra arkadaş veya aile referansı
+              ile tekrar dönmektedir. Bu güveni korumak için her detayı kontrol ediyor,
+              operatör performansını sürekli denetliyoruz. Standartların altına düşen
+              operatörlerle çalışmaya devam etmiyoruz."
+page.hakkimizda,musteriye,jsx,ve müşteriye
+page.hakkimizda,neden_trip_tick,jsx,Neden Trip and Tick?
+page.hakkimizda,olmak_kapadokya_baslayarak,jsx,"olmak. Kapadokya'dan başlayarak Pamukkale, Antalya ve
+                Karadeniz destinasyonlarına genişlemek."
+page.hakkimizda,pagehero_description_kapadokya_nin,PageHero@description,"Kapadokya'nın en güvenilir online seyahat acentası. TÜRSAB lisanslı, 9+ operatörle doğrudan anlaşmalı, 2024'ten beri 12.000+ mutlu müşteri."
+page.hakkimizda,pagehero_tag_hakkimizda,PageHero@tag,Hakkımızda
+page.hakkimizda,pagehero_title_trip_tick,PageHero@title,Trip and Tick
+page.hakkimizda,sirket_bilgileri,jsx,Şirket Bilgileri
+page.hakkimizda,sonuc_ayni_paket_25_40,jsx,". Sonuç: aynı paket, %25-40 daha ucuz."
+page.hakkimizda,sorulariniz_var,jsx,Sorularınız mı var?
+page.hakkimizda,trip_tick_2024_yilinda_kapadokya,jsx,"Trip and Tick, 2024 yılında Kapadokya'nın yerel turizm ekosisteminden gelen
+              bir ekiple kuruldu. Kurucularımız, bölgedeki balon operatörleri, otel
+              sahipleri ve transfer şirketleriyle 15+ yıllık doğrudan ilişkilere sahiptir.
+              Bu güvene dayalı ağ, aracı komisyonu eklenmeden direkt fiyatla hizmet
+              sunmamızı sağlar."
+page.hakkimizda,trip_tick_arkasindaki_ekip,jsx,Trip and Tick'in Arkasındaki Ekip
+page.hakkimizda,turk_turizm_standartlarina_uyum,jsx,"Türk turizm standartlarına uyum
+              garantisidir. 40 milyon Euro mali sorumluluk sigortası, KVKK uyumlu veri
+              politikası, 3D Secure ödeme altyapısı ve 7/24 müşteri desteği ile yurt içi
+              ve yurt dışı misafirler için aynı kaliteyi sunuyoruz."
+page.hakkimizda,turkiye,jsx,Türkiye
+page.hakkimizda,turkiye_nin_en_guvenilir_online,jsx,"Türkiye'nin en güvenilir online seyahat
+                acentası"
+page.hakkimizda,tursab_lisans_no,jsx,TÜRSAB Lisans No
+page.hakkimizda,tursab_lisansimiz,jsx,TÜRSAB lisansımız
+page.hakkimizda,uygun_fiyatli_seffaf_guvenli,jsx,"uygun fiyatlı, şeffaf ve
+                güvenli"
+page.hakkimizda,yerel_istihdama_destek,jsx,yerel istihdama destek
+page.iletisim,acil_iptal_degisiklik_24,jsx,Acil iptal/değişiklik: 7/24 WhatsApp
+page.iletisim,calisma_saatleri,jsx,Çalışma Saatleri
+page.iletisim,form_doldurun_en_gec_saat,jsx,"Form doldurun, en geç 4 saat içinde dönüş yapalım. Acil durumlar için
+                  WhatsApp kullanın."
+page.iletisim,iframe_title_trip_tick,iframe@title,"Trip and Tick — Göreme, Nevşehir konumu"
+page.iletisim,iletisim_bilgileri,jsx,İletişim Bilgileri
+page.iletisim,mesaj_gonder,jsx,Mesaj Gönder
+page.iletisim,meta_desc,metadata,"Trip and Tick ile iletişime geçin: info@tripandtick.com, +90 537 464 78 61. Göreme/Nevşehir ofisi. WhatsApp 7/24, e-posta 4 saat içinde yanıt."
+page.iletisim,meta_desc_2,metadata,"WhatsApp 7/24, e-posta 4 saat içinde yanıt, Göreme/Nevşehir ofisi."
+page.iletisim,meta_title,metadata,İletişim — Trip and Tick Kapadokya Acentası
+page.iletisim,meta_title_2,metadata,İletişim — Trip and Tick
+page.iletisim,pagehero_description_sorulariniz_ozel,PageHero@description,"Sorularınız, özel istekleriniz veya kurumsal rezervasyon için 7/24 hizmetinizdeyiz. WhatsApp, e-posta veya telefonla bize ulaşın."
+page.iletisim,pagehero_highlight_iletisime_gec,PageHero@highlight,İletişime Geç
+page.iletisim,pagehero_tag_iletisim,PageHero@tag,İletişim
+page.iletisim,telefon_09_00_22_00,jsx,Telefon: 09:00 - 22:00 (TSİ)
+page.iletisim,whatsapp_posta_24,jsx,WhatsApp & E-posta: 7/24
+page.iletisim,yol_tarifi,jsx,Yol Tarifi
+page.iptal_iade_politikasi,10_is_gunu,jsx,5-10 iş günü
+page.iptal_iade_politikasi,24_72_saat_arasi_iptal,jsx,24 ile 72 saat arası iptal:
+page.iptal_iade_politikasi,24_saatten_az_iptal,jsx,24 saatten az iptal:
+page.iptal_iade_politikasi,72_saat_daha_oncesinden_iptal,jsx,72 saat ve daha öncesinden iptal:
+page.iptal_iade_politikasi,90_537_464_78_61,jsx,+90 537 464 78 61 — anlık talep.
+page.iptal_iade_politikasi,adalet_garantisi,jsx,Adalet Garantisi
+page.iptal_iade_politikasi,alternatif_olarak_tarih,jsx,". Alternatif
+                  olarak tarih değişikliği yapılabilir; bu durumda ek ücret alınmaz."
+page.iptal_iade_politikasi,bankalarin_iade_yansima_suresi,jsx,Bankaların iade yansıma süresi 2-7 iş günü daha sürebilir.
+page.iptal_iade_politikasi,bulusma_noktasinda_belirlenen,jsx,"Buluşma noktasında belirlenen saatte hazır olmamanız durumunda iade hakkı
+              yoktur. Otelden transfer alma saatini en az 24 saat önceden onaylamanızı
+              öneririz."
+page.iptal_iade_politikasi,gec_gelme_no_show,jsx,4. Geç Gelme / No-Show
+page.iptal_iade_politikasi,hava_operator_kaynakli_iptal,jsx,2. Hava ve Operatör Kaynaklı İptal
+page.iptal_iade_politikasi,iade_hakki_yoktur_saglik_raporu,jsx,İade hakkı yoktur. (Sağlık raporu istisnası için aşağıya bakın.)
+page.iptal_iade_politikasi,iade_onaylandiktan_sonra,jsx,İade onaylandıktan sonra
+page.iptal_iade_politikasi,iade_suresi_yontemi,jsx,5. İade Süresi & Yöntemi
+page.iptal_iade_politikasi,iade_tutari,jsx,İade Tutarı
+page.iptal_iade_politikasi,iade_tutari_orijinal_odeme,jsx,İade tutarı orijinal ödeme yöntemine yapılır; başka karta aktarılamaz.
+page.iptal_iade_politikasi,ibraziyla_100_iade_yapilir,jsx,"ibrazıyla %100 iade yapılır.
+            Raporun rezervasyon tarihinden sonra düzenlenmiş olması gerekir."
+page.iptal_iade_politikasi,icinde_odeme_yapilan_karta_geri,jsx,içinde ödeme yapılan karta geri yatırılır.
+page.iptal_iade_politikasi,info_tripandtick_com,jsx,info@tripandtick.com — rezervasyon no + iptal sebebi.
+page.iptal_iade_politikasi,iptal_politikamiz_kapadokya,jsx,"İptal politikamız Kapadokya'daki en şeffaf politikalardan biridir. Hava
+              kaynaklı iptallerde komisyon kesintisi yapılmaz, %100 iade verilir. Tek
+              istisna 24 saatten az iptaldir — bu da operatör tarafının iş gücü
+              maliyetini koruma amaçlıdır."
+page.iptal_iade_politikasi,iptal_suresi_iade_tablosu,jsx,İptal Süresi & İade Tablosu
+page.iptal_iade_politikasi,iptal_talebi_nasil_yapilir,jsx,6. İptal Talebi Nasıl Yapılır?
+page.iptal_iade_politikasi,iptal_zamani,jsx,İptal Zamanı
+page.iptal_iade_politikasi,meta_desc,metadata,"Trip and Tick iptal & iade politikası: 72+ saat öncesi %100 iade, hava iptali her zaman tam iade. 5-10 iş günü içinde geri ödeme."
+page.iptal_iade_politikasi,meta_desc_2,metadata,"72+ saat öncesi %100 iade, hava iptali her zaman tam iade."
+page.iptal_iade_politikasi,meta_og_alt,metadata,İptal & İade — Trip and Tick
+page.iptal_iade_politikasi,meta_title,metadata,İptal & İade Politikası — %100 İade Garantisi | Trip and Tick
+page.iptal_iade_politikasi,meta_title_2,metadata,İptal & İade Politikası
+page.iptal_iade_politikasi,musteri_kaynakli_iptal,jsx,1. Müşteri Kaynaklı İptal
+page.iptal_iade_politikasi,odediginiz_tutarin_100_iade,jsx,Ödediğiniz tutarın %100'ü iade edilir.
+page.iptal_iade_politikasi,odediginiz_tutarin_50_si_iade,jsx,Ödediğiniz tutarın %50'si iade edilir.
+page.iptal_iade_politikasi,operator_iptali_ruzgar_25_km,jsx,"Operatör iptali (rüzgar >25 km/sa, görüş azalması, yağış, teknik
+                  arıza vb.) durumunda iptal sizden değil bizden kaynaklandığı için
+                  ödediğiniz tutarın"
+page.iptal_iade_politikasi,pagehero_description_adil_seffaf,PageHero@description,"Adil, şeffaf ve yasal mevzuata uyumlu iptal politikası. Hava kaynaklı iptallerde her zaman %100 iade garantisi."
+page.iptal_iade_politikasi,pagehero_highlight_iade_politikasi,PageHero@highlight,İade Politikası
+page.iptal_iade_politikasi,pagehero_title_iptal,PageHero@title,İptal &
+page.iptal_iade_politikasi,plan_degisikligi_kisisel,jsx,"Plan değişikliği, kişisel nedenler veya başka herhangi bir sebeple
+            rezervasyonunuzu iptal etmek istiyorsanız aşağıdaki kurallar uygulanır:"
+page.iptal_iade_politikasi,resmi_saglik_raporu,jsx,resmi sağlık raporu
+page.iptal_iade_politikasi,rezervasyon_sonrasi_ortaya,jsx,"Rezervasyon sonrası ortaya çıkan hastalık, kaza veya hamilelik gibi
+            durumlarda"
+page.iptal_iade_politikasi,saglik_raporu_istisnasi,jsx,3. Sağlık Raporu İstisnası
+page.iptal_iade_politikasi,talep_onaylanir_onaylanmaz,jsx,Talep onaylanır onaylanmaz e-posta ile bildirilir.
+page.iptal_iade_politikasi,yururluk_tarihi_mayis_2026_son,jsx,Yürürlük tarihi: 1 Mayıs 2026 · Son güncelleme: 15 Mayıs 2026
+page.kapadokya,araligidir_balon_ucus_oranlari,jsx,aralığıdır — balon uçuş oranları %85+ seviyesindedir.
+page.kapadokya,balon_disinda_atv_turlari_binme,jsx,"Balon dışında ATV turları, at binme deneyimleri, Kırmızı ve Yeşil gezi
+              turları, mağara otel konaklamaları ve yeraltı şehri ziyaretleri ile
+              Kapadokya 2-5 günlük tatil için ideal bir destinasyondur. En iyi ziyaret
+              dönemi"
+page.kapadokya,balon_turlarina_bak,jsx,Balon Turlarına Bak
+page.kapadokya,bizans_donemine_ait_kayaya_oyma,jsx,", Bizans dönemine ait kayaya oyma kiliseler ve
+              tarih öncesi yeraltı şehirleri, bölgeyi yılda 4 milyondan fazla turistin
+              ziyaret ettiği bir kültür-doğa merkezi haline getirir."
+page.kapadokya,bulunan_dunyaca_unlu_tatil,jsx,"bulunan dünyaca ünlü bir
+              tatil destinasyonudur. Milyonlarca yıl önce volkanik patlamalarla şekillenen"
+page.kapadokya,detayli_rehberler,jsx,Detaylı Rehberler
+page.kapadokya,en_dusuk_fiyat_garantisi_100,jsx,"En düşük fiyat garantisi, %100 iade güvencesi ve anında onay ile hayalinizdeki
+            tatili rezerve edin."
+page.kapadokya,eylul_ekim,jsx,Eylül-Ekim
+page.kapadokya,fazla_tursab_lisansli_operator,jsx,9'dan fazla TÜRSAB lisanslı operatör
+page.kapadokya,gun_dogumunda_yuzlerce_renkli,jsx,". Gün doğumunda yüzlerce
+              renkli balonun semayı süslediği bu deneyim,"
+page.kapadokya,kapadokya_denildiginde_akla_ilk,jsx,Kapadokya denildiğinde akla ilk gelen
+page.kapadokya,kapadokya_hakkinda_bilgi_bankasi,jsx,Kapadokya Hakkında Bilgi Bankası
+page.kapadokya,kapadokya_maceraniz_simdi,jsx,Kapadokya Maceranız Şimdi Başlasın
+page.kapadokya,meta_desc,metadata,"Kapadokya tatil rehberi: balon turu fiyatları, en iyi oteller, gezi turları, aktiviteler, fotoğraf noktaları ve ne zaman gidilir? Detaylı tüm rehber tek sayfada."
+page.kapadokya,meta_desc_2,metadata,"Balon, otel, tur, aktiviteler — tüm Kapadokya rehberi tek sayfada."
+page.kapadokya,meta_og_alt,metadata,Kapadokya Rehberi — Trip and Tick
+page.kapadokya,meta_title,metadata,"Kapadokya Rehberi 2026 — Balon, Otel, Tur, Aktiviteler | Trip and Tick"
+page.kapadokya,meta_title_2,metadata,Kapadokya Rehberi 2026
+page.kapadokya,pagehero_description_unesco_dunya,PageHero@description,"UNESCO Dünya Mirası listesinde, peri bacaları, yeraltı şehirleri ve dünyaca ünlü balon turlarıyla Türkiye'nin en büyülü destinasyonu. Tek sayfada tüm bilgiler."
+page.kapadokya,pagehero_highlight_tatil_rehberi,PageHero@highlight,Tatil Rehberi 2026
+page.kapadokya,pagehero_tag_kapadokya,PageHero@tag,Kapadokya Rehberi
+page.kapadokya,pagehero_title_kapadokya,PageHero@title,Kapadokya
+page.kapadokya,peri_bacalari,jsx,peri bacaları
+page.kapadokya,planlamadan_en_iyi_fotograf,jsx,"Planlamadan en iyi fotoğraf noktalarına kadar — Kapadokya hakkında bilmek
+              istediğiniz her şey."
+page.kapadokya,sicak_hava_balon_turlaridir,jsx,sıcak hava balon turlarıdır
+page.kapadokya,tarafindan_sunulur_standart_165,jsx,"tarafından sunulur.
+              Standart €165, Konfor €215, Deluxe €295 ve Romantik özel €580'den başlayan
+              fiyatlar — transfer, kahvaltı, sigorta, sertifika ve şampanya servisi dahil."
+page.kapadokya,turkiye_nin_ic_anadolu,jsx,", Türkiye'nin İç Anadolu bölgesinde yer alan ve"
+page.kapadokya,unesco_dunya_mirasi_listesi_nde,jsx,UNESCO Dünya Mirası Listesi'nde
+page.kapadokya,yapabilirsiniz,jsx,Ne Yapabilirsiniz?
+page.kullanim_sartlari,10_uyusmazlik_cozumu,jsx,10. Uyuşmazlık Çözümü
+page.kullanim_sartlari,11_degisiklikler,jsx,11. Değişiklikler
+page.kullanim_sartlari,6502_sayili_tuketicinin,jsx,"6502 sayılı Tüketicinin Korunması Hakkında Kanun ve Mesafeli Sözleşmeler
+            Yönetmeliği hükümleri geçerlidir. Tüketici Hakem Heyetleri ve Tüketici
+            Mahkemeleri'ne başvuru hakkınız vardır. Detaylı bilgi için"
+page.kullanim_sartlari,alici_tripandtick_com_uzerinden,jsx,"Alıcı: tripandtick.com üzerinden hizmet satın alan veya satın almayı taahhüt
+            eden gerçek/tüzel kişi (bundan sonra ""Müşteri"")."
+page.kullanim_sartlari,bulusma_saatinde_hazir_olmak,jsx,Buluşma saatinde hazır olmak; gecikme durumunda iade hakkı yoktur.
+page.kullanim_sartlari,bundan_sonra_trip_tick_adres,jsx,"(bundan sonra ""Trip and Tick""). Adres: Göreme Merkez, Nevşehir 50180. TÜRSAB
+            lisanslı."
+page.kullanim_sartlari,cocuk_indirimi_12_yas_arasi,jsx,Çocuk indirimi 7-12 yaş arası uygulanır (paket bazında değişir).
+page.kullanim_sartlari,dogru_ad_dogum_tarihi_iletisim,jsx,"Doğru ad, doğum tarihi ve iletişim bilgisi vermek."
+page.kullanim_sartlari,en_dusuk_fiyat_garantisi_daha,jsx,En düşük fiyat garantisi: daha ucuz teklif bulursanız %5 altı.
+page.kullanim_sartlari,fikri_mulkiyet,jsx,8. Fikri Mülkiyet
+page.kullanim_sartlari,fiyatlandirma_para_birimleri,jsx,3. Fiyatlandırma & Para Birimleri
+page.kullanim_sartlari,fiyatlar_eur_usd_try_cinsinden,jsx,"Fiyatlar EUR, USD veya TRY cinsinden gösterilir."
+page.kullanim_sartlari,hamilelik_ciddi_saglik_sorunu,jsx,Hamilelik veya ciddi sağlık sorunu varsa rezervasyon öncesi bildirmek.
+page.kullanim_sartlari,hizmet_kapsami,jsx,2. Hizmet Kapsamı
+page.kullanim_sartlari,iletisim,jsx,İletişim
+page.kullanim_sartlari,iptal_iade,jsx,5. İptal & İade
+page.kullanim_sartlari,iptal_iade_politikasi,jsx,İptal & İade Politikası
+page.kullanim_sartlari,iptal_politikamizin_tam_metni,jsx,İptal politikamızın tam metni için
+page.kullanim_sartlari,meta_desc,metadata,"Trip and Tick kullanım şartları ve mesafeli satış sözleşmesi: hizmet kapsamı, ödeme, iptal, sorumluluk reddi ve uyuşmazlık çözümü."
+page.kullanim_sartlari,meta_desc_2,metadata,"Hizmet kapsamı, ödeme, iptal, sorumluluk."
+page.kullanim_sartlari,meta_og_alt,metadata,Kullanım Şartları — Trip and Tick
+page.kullanim_sartlari,meta_title,metadata,Kullanım Şartları — Mesafeli Satış Sözleşmesi | Trip and Tick
+page.kullanim_sartlari,meta_title_2,metadata,Kullanım Şartları — Mesafeli Satış Sözleşmesi
+page.kullanim_sartlari,musteri_yukumlulukleri,jsx,6. Müşteri Yükümlülükleri
+page.kullanim_sartlari,odeme,jsx,4. Ödeme
+page.kullanim_sartlari,odeme_visa_mastercard_american,jsx,"Ödeme; Visa, Mastercard, American Express ve UnionPay ile yapılabilir. 3D
+            Secure aktiftir. Kart bilgileri Trip and Tick'te saklanmaz; PCI-DSS uyumlu
+            ödeme sağlayıcılarına yönlendirilir. Rezervasyon, ödeme onayından sonra
+            kesinleşir; onay e-postası ile birlikte PDF biletiniz iletilir."
+page.kullanim_sartlari,operator_guvenlik_kurallarina,jsx,Operatör güvenlik kurallarına uymak.
+page.kullanim_sartlari,pagehero_description_trip_tick,PageHero@description,Trip and Tick hizmetlerinin kullanım şartları ve mesafeli satış sözleşmesi. Lütfen rezervasyon öncesi okuyun.
+page.kullanim_sartlari,pagehero_highlight_sartlari,PageHero@highlight,Şartları
+page.kullanim_sartlari,pagehero_title_kullanim,PageHero@title,Kullanım
+page.kullanim_sartlari,satici,jsx,Satıcı:
+page.kullanim_sartlari,sayfamiza_bakin,jsx,sayfamıza bakın.
+page.kullanim_sartlari,sayfasina_bakin_ozet_72_saat,jsx,"sayfasına bakın. Özet: 72+ saat önce %100 iade, 24-72 saat %50 iade, 24 saat
+            altı iade yok. Operatör veya hava kaynaklı iptalde her zaman %100 iade veya
+            alternatif tarih."
+page.kullanim_sartlari,site_icerigi_metin_gorsel_kod,jsx,"Site içeriği (metin, görsel, kod, logo, marka) Trip and Tick'e aittir. Yazılı
+            izin olmadan kopyalanması, yeniden dağıtılması veya ticari amaçla
+            kullanılması yasaktır."
+page.kullanim_sartlari,sorulariniz,jsx,Sorularınız için:
+page.kullanim_sartlari,sorumluluk_reddi,jsx,7. Sorumluluk Reddi
+page.kullanim_sartlari,taraflar,jsx,1. Taraflar
+page.kullanim_sartlari,trip_tick_balon_turu_otel,jsx,"Trip and Tick, balon turu, otel rezervasyonu, transfer, ATV, at binme, gezi
+            turları ve kombo paketler dahil olmak üzere Kapadokya bölgesindeki turizm
+            hizmetlerini aracılık edici sıfatla satar. Hizmetler, anlaşmalı operatörler
+            tarafından fiilen sunulur; Trip and Tick rezervasyon, ödeme ve müşteri
+            desteği işlemlerini yönetir."
+page.kullanim_sartlari,trip_tick_hizmeti_fiilen_sunan,jsx,"Trip and Tick, hizmeti fiilen sunan operatörün gerçekleştirdiği uçuş,
+            transfer veya aktivite sırasında oluşan kişisel kazalardan birinci derecede
+            sorumlu değildir; ancak operatörler 40 milyon Euro mali sorumluluk sigortası
+            kapsamındadır. Hava kaynaklı veya zorunlu iptal durumunda iade koşulları
+            uygulanır."
+page.kullanim_sartlari,trip_tick_sartlari_zaman_zaman,jsx,"Trip and Tick bu şartları zaman zaman güncelleyebilir. Güncel versiyon
+            tripandtick.com/kullanim-sartlari adresinde yayımlanır; kullanıma devam etmek
+            güncel şartların kabulü anlamına gelir."
+page.kullanim_sartlari,trip_tick_turizm_seyahat,jsx,Trip and Tick Turizm ve Seyahat Acentası Limited Şirketi
+page.kullanim_sartlari,tuketici_haklari,jsx,9. Tüketici Hakları
+page.kullanim_sartlari,tum_vergiler_kdv_dahil_fiyata,jsx,Tüm vergiler (KDV dahil) fiyata dahildir.
+page.kullanim_sartlari,uyusmazlik_halinde_oncelikle,jsx,"Uyuşmazlık halinde öncelikle Trip and Tick müşteri desteğine başvuru yapın.
+            Çözüm bulunamazsa Nevşehir Tüketici Hakem Heyeti veya Nevşehir Tüketici
+            Mahkemeleri yetkilidir. Uygulanacak hukuk Türk hukukudur."
+page.kullanim_sartlari,yas_kilo_limitlerine_uymak_balon,jsx,Yaş ve kilo limitlerine uymak (balon: 6+ yaş).
+page.kullanim_sartlari,yuksek_sezon_nisan_haziran_eylul,jsx,"Yüksek sezon (Nisan-Haziran, Eylül-Ekim) ek ücret yansıyabilir."
+page.kullanim_sartlari,yururluk_tarihi_mayis_2026_son,jsx,Yürürlük tarihi: 1 Mayıs 2026 · Son güncelleme: 15 Mayıs 2026
+page.kvkk,6698_sayili_kisisel_verilerin,jsx,"6698 sayılı Kişisel Verilerin Korunması Kanunu (""KVKK"") uyarınca veri
+            sorumlusu sıfatıyla"
+page.kvkk,acik_riza_pazarlama_amacli,jsx,Açık rıza (m.5/1) — pazarlama amaçlı işleme.
+page.kvkk,anlasmali_operatorler,jsx,Anlaşmalı operatörler (rezervasyon bilgileri).
+page.kvkk,aydinlatma_metni_kvkk,jsx,"Bu aydınlatma metni KVKK uyumluluğu için hazırlanmıştır. Detaylı veri
+              işleme süreci için"
+page.kvkk,basvuru_yontemleri,jsx,7. Başvuru Yöntemleri
+page.kvkk,basvurunuz,jsx,Başvurunuz
+page.kvkk,basvurunuzun_reddedilmesi,jsx,"Başvurunuzun reddedilmesi, verilen yanıtın yetersiz bulunması veya 30 gün
+            içinde yanıt verilmemesi durumunda Kişisel Verileri Koruma Kurulu'na şikayet
+            hakkınız vardır:"
+page.kvkk,bentleri_uyarinca_yapilan,jsx,(5) ve (6) bentleri uyarınca yapılan işlemlerin aktarıldığı 3. kişilere bildirilmesini isteme.
+page.kvkk,bilgi_notu,jsx,Bilgi Notu
+page.kvkk,cerez_verisi_12_aya_kadar,jsx,Çerez verisi: 12 aya kadar.
+page.kvkk,eksik_yanlis_islenmisse,jsx,Eksik veya yanlış işlenmişse düzeltilmesini isteme.
+page.kvkk,en_gec_30_gun_icinde,jsx,en geç 30 gün içinde
+page.kvkk,gizlilik_politikasi,jsx,Gizlilik Politikası
+page.kvkk,goreme_merkez_nevsehir_50180,jsx,"Göreme Merkez, Nevşehir 50180, Türkiye"
+page.kvkk,goreme_merkez_nevsehir_50180_2,jsx,"Göreme Merkez, Nevşehir 50180 — kimlik kopyasıyla."
+page.kvkk,hizmet_kalitesinin,jsx,"Hizmet kalitesinin iyileştirilmesi, anonim analitik."
+page.kvkk,hukuka_aykiri_isleme_sebebiyle,jsx,Hukuka aykırı işleme sebebiyle zarara uğramanız halinde zararın giderilmesini talep etme.
+page.kvkk,hukuki_danismanlar_mali,jsx,Hukuki danışmanlar ve mali müşavirler.
+page.kvkk,hukuki_yukumlulugun_yerine,jsx,Hukuki yükümlülüğün yerine getirilmesi için zorunlu olması (m.5/2-ç).
+page.kvkk,isleme_amacini_amaca_uygun,jsx,İşleme amacını ve amaca uygun kullanılıp kullanılmadığını öğrenme.
+page.kvkk,isleme_hukuki_sebepleri_kvkk,jsx,3. İşleme Hukuki Sebepleri (KVKK m.5)
+page.kvkk,kisisel_veri_islenip,jsx,Kişisel veri işlenip işlenmediğini öğrenme.
+page.kvkk,kisisel_verileri_koruma_kurumu,jsx,Kişisel Verileri Koruma Kurumu:
+page.kvkk,kisisel_verilerin_aktarimi,jsx,4. Kişisel Verilerin Aktarımı
+page.kvkk,kisisel_verilerin_islenme,jsx,2. Kişisel Verilerin İşlenme Amaçları
+page.kvkk,kisisel_verileriniz_asagidaki,jsx,Kişisel verileriniz aşağıdaki amaçlarla işlenir:
+page.kvkk,kisisel_verileriniz_islenmisse,jsx,Kişisel verileriniz işlenmişse buna ilişkin bilgi talep etme.
+page.kvkk,kvkk_13_kapsaminda_haklarinizi,jsx,"KVKK m.13 kapsamında haklarınızı kullanmak için aşağıdaki yöntemlerden biriyle
+            başvurabilirsiniz:"
+page.kvkk,kvkk_ongorulen_sartlar,jsx,KVKK m.7'de öngörülen şartlar çerçevesinde silinmesini/yok edilmesini isteme.
+page.kvkk,mesafeli_satis_sozlesmesinin,jsx,Mesafeli satış sözleşmesinin kurulması ve ifası.
+page.kvkk,meta_desc,metadata,"Trip and Tick KVKK aydınlatma metni: veri sorumlusu, kişisel veri işleme amaçları, aktarım, saklama ve KVKK m.11 kapsamındaki kullanıcı hakları."
+page.kvkk,meta_desc_2,metadata,6698 Sayılı Kanun · Veri sorumlusu · Kullanıcı hakları.
+page.kvkk,meta_og_alt,metadata,KVKK — Trip and Tick
+page.kvkk,meta_title,metadata,KVKK Aydınlatma Metni — 6698 Sayılı Kanun | Trip and Tick
+page.kvkk,meta_title_2,metadata,KVKK Aydınlatma Metni
+page.kvkk,musteri_destegi_sikayet_talep,jsx,"Müşteri desteği, şikayet ve talep yönetimi."
+page.kvkk,noter_ihtarnamesi,jsx,Noter ihtarnamesi:
+page.kvkk,odeme_saglayicisi_stripe_pci_dss,jsx,Ödeme sağlayıcısı (Stripe — PCI-DSS).
+page.kvkk,olarak_kisisel_verilerin,jsx,"olarak Kişisel Verilerin Korunması Kurulu'nun ilkelerine uygun davrandığımızı
+            beyan ederiz."
+page.kvkk,operatore_rezervasyon_bildirimi,jsx,Operatöre rezervasyon bildirimi ve hizmet teslimatı.
+page.kvkk,otomatik_sistemlerle_analiz,jsx,Otomatik sistemlerle analiz edilmesi sonucu aleyhine bir sonuç çıkmasına itiraz etme.
+page.kvkk,pagehero_description_6698_sayili,PageHero@description,6698 Sayılı Kişisel Verilerin Korunması Kanunu kapsamında veri sorumlusu sıfatıyla yasal bilgilendirme.
+page.kvkk,pagehero_highlight_aydinlatma_metni,PageHero@highlight,Aydınlatma Metni
+page.kvkk,pazarlama_amacli_kayitlar_riza,jsx,Pazarlama amaçlı kayıtlar: rıza geri çekilene kadar.
+page.kvkk,pazarlama_iletisimi_yalnizca,jsx,Pazarlama iletişimi (yalnızca açık onay halinde).
+page.kvkk,posta_servisi_brevo_yurt_ici,jsx,E-posta servisi (Brevo) — yurt içi.
+page.kvkk,resmi_kayitli_yontem,jsx,resmi kayıtlı yöntem.
+page.kvkk,rezervasyon_isleme_odeme,jsx,"Rezervasyon işleme, ödeme tahsilatı, fatura düzenleme."
+page.kvkk,saklama_sureleri,jsx,5. Saklama Süreleri
+page.kvkk,sayfamiza_bakabilirsiniz,jsx,sayfamıza bakabilirsiniz.
+page.kvkk,sikayet_hakki,jsx,8. Şikayet Hakkı
+page.kvkk,sozlesme_iliskisi_devam_ettigi,jsx,Sözleşme ilişkisi devam ettiği sürece ve devamında 10 yıl.
+page.kvkk,sozlesmenin_kurulmasi_ifasi,jsx,Sözleşmenin kurulması veya ifası için zorunlu olması (m.5/2-c).
+page.kvkk,trip_tick_turizm_seyahat,jsx,Trip and Tick Turizm ve Seyahat Acentası Limited Şirketi
+page.kvkk,ucretsiz_olarak_yanitlanir,jsx,ücretsiz olarak yanıtlanır.
+page.kvkk,vergi_mevzuati_kapsamindaki,jsx,Vergi mevzuatı kapsamındaki belgeler: 5 yıl.
+page.kvkk,veri_guvenligi_dolandiricilik,jsx,"Veri güvenliği, dolandırıcılık önleme."
+page.kvkk,veri_sahibi_sifatiyla_asagidaki,jsx,Veri sahibi sıfatıyla aşağıdaki haklara sahipsiniz:
+page.kvkk,veri_sahibinin_haklari_kvkk_11,jsx,6. Veri Sahibinin Hakları (KVKK m.11)
+page.kvkk,veri_sorumlusu,jsx,1. Veri Sorumlusu
+page.kvkk,veri_sorumlusunun_mesru,jsx,"Veri sorumlusunun meşru menfaati (m.5/2-f) — analitik, güvenlik."
+page.kvkk,verileriniz_asagidaki_alici,jsx,Verileriniz aşağıdaki alıcı gruplarına KVKK m.8 ve m.9 uyarınca aktarılabilir:
+page.kvkk,yasal_saklama_suresi_sonunda,jsx,Yasal saklama süresi sonunda veriler güvenli yöntemle imha edilir.
+page.kvkk,yasal_yukumluluklerin_yerine,jsx,"Yasal yükümlülüklerin yerine getirilmesi (vergi, TÜRSAB)."
+page.kvkk,yetkili_kamu_kurumlari_yasal,jsx,Yetkili kamu kurumları (yasal talep halinde).
+page.kvkk,yurt_ici_disinda_verilerin,jsx,Yurt içi/dışında verilerin aktarıldığı 3. kişileri bilme.
+page.kvkk,yururluk_tarihi_mayis_2026_son,jsx,Yürürlük tarihi: 1 Mayıs 2026 · Son güncelleme: 15 Mayıs 2026
+page.offline,ana_sayfa,jsx,Ana Sayfa
+page.offline,anda_cevrimdisisiniz_daha_once,jsx,"Şu anda çevrimdışısınız. Daha önce ziyaret ettiğiniz sayfalar
+          önbellekten görüntülenebilir. Bağlantınızı kontrol edip tekrar
+          deneyin."
+page.offline,internet_baglantisi_yok,jsx,İnternet Bağlantısı Yok
+page.offline,meta_desc,metadata,İnternet bağlantınız bulunamadı. Daha önce ziyaret ettiğiniz sayfalar önbellekten görüntülenebilir.
+page.offline,meta_title,metadata,Çevrimdışı — İnternet Bağlantısı Yok | Trip and Tick
+page.offline,trip_tick_kapadokya_balon_turu,jsx,Trip and Tick — Kapadokya Balon Turu
+page.offline,yeniden_dene,jsx,Yeniden Dene
+page.operatorler,detaylari_gor,jsx,Detayları Gör
+page.operatorler,meta_desc,metadata,"Trip and Tick'in 9+ TÜRSAB lisanslı anlaşmalı balon operatörü. SHGM sertifikalı pilotlar, EASA standartları, yıllık 250.000+ yolcu kapasitesi."
+page.operatorler,meta_title,metadata,Anlaşmalı Balon Operatörleri | Trip and Tick
+page.operatorler,pagehero_tag_operatorler,PageHero@tag,Operatörler
+page.operatorler,pagehero_title_anlasmali,PageHero@title,Anlaşmalı
+page.operatorler,sektorel_standartlar,jsx,Sektörel Standartlar
+page.operatorler,shgm_lisansli_easa_sertifikali,jsx,"SHGM Lisanslı, EASA Sertifikalı"
+page.operatorler,tum_operatorlerimiz_easa_part,jsx,"Tüm operatörlerimiz EASA Part-BOP standartlarına uygun yıllık bakım
+              programı uygular, SHGM sertifikalı pilot kadrosu çalıştırır ve
+              uluslararası seyahat sigortası ile uçuş gerçekleştirir."
+page.operatorler,yil,jsx,+ yıl)
+page.operatorler.id,40m_eur_ucuncu_sahis_sorumluluk,jsx,40M EUR Üçüncü Şahıs Sorumluluk Sigortası
+page.operatorler.id,balon_paketleri,jsx,Balon Paketleri
+page.operatorler.id,easa_part_bop_balloon_operations,jsx,EASA Part-BOP Balloon Operations
+page.operatorler.id,hakkinda,jsx,Hakkında
+page.operatorler.id,keyvalue_label_kurulus,KeyValue@label,Kuruluş
+page.operatorler.id,keyvalue_label_pilot_kadrosu,KeyValue@label,Pilot Kadrosu
+page.operatorler.id,keyvalue_label_shgm_lisansi,KeyValue@label,SHGM Lisansı
+page.operatorler.id,kunye,jsx,Künye
+page.operatorler.id,meta_title,metadata,Operator bulunamadı | Trip and Tick
+page.operatorler.id,misafir_yorumlari,jsx,Misafir Yorumları
+page.operatorler.id,operator_lisans,jsx,Operatör · Lisans
+page.operatorler.id,operatorun_gerceklestirdigi,jsx,Bu operatörün gerçekleştirdiği
+page.operatorler.id,paket_arasindan_secim,jsx,"paket arasından
+                  seçim yapabilirsiniz."
+page.operatorler.id,paketleri_gor,jsx,Paketleri Gör
+page.operatorler.id,rezervasyon,jsx,Rezervasyon
+page.operatorler.id,shgm_ticari_hava_araci_isletme,jsx,SHGM Ticari Hava Aracı İşletme Sertifikası
+page.operatorler.id,tursab_uyeligi,jsx,TÜRSAB üyeliği
+page.operatorler.id,ucmak_trip_tick_uzerinden_tek,jsx,"ile uçmak için Trip and Tick üzerinden tek tıkla
+                rezervasyon yapabilirsiniz."
+page.operatorler.id,ucus_yapan_misafirlerden_secili,jsx,ile uçuş yapan misafirlerden seçili yorumlar.
+page.operatorler.id,uzmanlik_alanlari,jsx,Uzmanlık Alanları
+page.operatorler.id,yil,jsx,+ yıl)
+page.oteller,50_partner_otel_anlasmamiz_var,jsx,"50+ partner otel ile anlaşmamız var. İhtiyacınıza özel öneri için bizimle
+              iletişime geçin — bütçenize uygun en doğru otel bulalım."
+page.oteller,daha_fazla_otel_secenegi_yakinda,jsx,Daha fazla otel seçeneği yakında
+page.oteller,meta_desc,metadata,"Kapadokya mağara otelleri, butik konaklamalar ve aile otelleri. Göreme & Ürgüp merkezli seçenekler — en uygun fiyat, anında onay."
+page.oteller,meta_desc_2,metadata,"Mağara otelleri, butik & aile otelleri — Göreme & Ürgüp."
+page.oteller,meta_og_alt,metadata,Kapadokya Otelleri — Trip and Tick
+page.oteller,meta_title,metadata,Kapadokya Otel Rezervasyonu — Mağara Otel & Butik | Trip and Tick
+page.oteller,meta_title_2,metadata,Kapadokya Otel Rezervasyonu
+page.oteller,ozel_otel_talebi_gonder,jsx,Özel Otel Talebi Gönder
+page.oteller,pagehero_description_unesco_mirasi,PageHero@description,"UNESCO mirası bölgede otantik mağara odalı butik oteller. Kahvaltı, Wi-Fi, klima dahil. Göreme, Ürgüp ve Nevşehir merkezleri."
+page.oteller,pagehero_highlight_magara_otelleri,PageHero@highlight,Mağara Otelleri
+page.oteller,pagehero_title_kapadokya,PageHero@title,Kapadokya
+page.oteller.slug,degerlendirme,jsx,değerlendirme)
+page.oteller.slug,diger_otel_seceneklerini_gor,jsx,← Diğer otel seçeneklerini gör
+page.oteller.slug,meta_title,metadata,Otel Bulunamadı
+page.oteller.slug,otel_musaitligi_guncel_fiyat,jsx,"Otel müsaitliği ve güncel fiyat tarihe göre değişir. Yan formu doldurun — sizi 24 saat içinde
+                  arayarak"
+page.oteller.slug,otel_rezervasyonu_telefon_posta,jsx,Otel rezervasyonu telefon / e-posta ile
+page.oteller.slug,paylasacagiz_acil_iletisim,jsx,"paylaşacağız. Acil iletişim için
+                  doğrudan telefon veya WhatsApp."
+page.oteller.slug,uygun_secenekler_musaitlik,jsx,"uygun seçenekler, müsaitlik ve fiyat teklifi"
+page.paketler,meta_desc,metadata,"Kapadokya tam gün paketler, balayı, aile, macera ve evlilik teklifi paketleri. Tek rezervasyonda balon + otel + tur — avantajlı fiyat."
+page.paketler,meta_desc_2,metadata,"Balayı, aile, macera paketleri — balon + otel + tur tek rezervasyon."
+page.paketler,meta_og_alt,metadata,Kapadokya Tatil Paketleri — Trip and Tick
+page.paketler,meta_title,metadata,"Kapadokya Tatil Paketleri — Balayı, Aile, Macera | Trip and Tick"
+page.paketler,meta_title_2,metadata,Kapadokya Tatil Paketleri
+page.paketler,pagehero_description_balon_otel,PageHero@description,"Balon + otel + tur tek rezervasyonda. Balayı, aile, macera, evlilik teklifi ve kurumsal etkinlik paketleri — ayrı ayrı rezerve etmekten %20-30 daha ucuz."
+page.paketler,pagehero_highlight_kombo_paketleri,PageHero@highlight,Kombo Paketleri
+page.paketler,pagehero_tag_ozel_paketler,PageHero@tag,Özel Paketler
+page.paketler,pagehero_title_kapadokya,PageHero@title,Kapadokya
+page.rezervasyon.basarili,meta_desc,metadata,Rezervasyonunuz başarıyla tamamlandı.
+page.rezervasyon.basarili,meta_title,metadata,Rezervasyon Onaylandı | Trip and Tick
+page.rezervasyon.iptal,meta_desc,metadata,Ödeme işleminiz tamamlanmadı. Tekrar deneyebilirsiniz.
+page.rezervasyon.iptal,meta_title,metadata,Ödeme İptal Edildi | Trip and Tick
+page.rezervasyon.iptal,odeme_iptal_edildi,jsx,Ödeme İptal Edildi
+page.rezervasyon.iptal,odeme_isleminiz_tamamlanmadi,jsx,"Ödeme işleminiz tamamlanmadı, rezervasyonunuz oluşturulmadı.
+          Endişelenmeyin — kartınızdan herhangi bir ücret çekilmedi."
+page.rezervasyon.iptal,rezervasyon_bilgileriniz,jsx,"Rezervasyon bilgileriniz tarayıcınızda saklı.
+            Tekrar denediğinizde kaldığınız yerden devam edebilirsiniz."
+page.rezervasyon.iptal,sorun_yasiyorsaniz,jsx,Sorun yaşıyorsanız:
+page.rezervasyon.iptal,tekrar_dene,jsx,Tekrar Dene
+page.rezervasyon.iptal,whatsapp_destek,jsx,WhatsApp Destek
+page.rezervasyon.yeniden_tarih.token,link_gecersiz,jsx,Link Geçersiz
+page.rezervasyon.yeniden_tarih.token,meta_desc,metadata,İptal edilen rezervasyonunuz için alternatif tarih seçin veya tam iade isteyin.
+page.rezervasyon.yeniden_tarih.token,meta_title,metadata,Rezervasyon — Yeni Tarih veya İade | Trip and Tick
+page.rezervasyon.yeniden_tarih.token,whatsapp_iletisim,jsx,WhatsApp ile İletişim
+page.sss,cevabini_bulamadin,jsx,Cevabını bulamadın mı?
+page.sss,ekibimiz_24_whatsapp_ta_sorunuzu,jsx,"Ekibimiz 7/24 WhatsApp'ta. Sorunuzu yazın, anında yanıt alın."
+page.sss,meta_desc,metadata,"Kapadokya balon turu fiyatı, yaş sınırı, iptal politikası, ödeme yöntemleri ve diğer sık sorulan sorulara hızlı cevaplar. AI search optimize."
+page.sss,meta_desc_2,metadata,"Balon turu, fiyat, yaş, iptal, ödeme — hızlı cevaplar."
+page.sss,meta_og_alt,metadata,SSS — Trip and Tick
+page.sss,meta_title,metadata,Sık Sorulan Sorular — Kapadokya Balon Turu SSS | Trip and Tick
+page.sss,meta_title_2,metadata,Sık Sorulan Sorular
+page.sss,pagehero_description_kapadokya_tatili,PageHero@description,"Kapadokya tatili, balon turu rezervasyonu, ödeme ve iptal politikası hakkında en sık sorulan soruların hızlı cevapları."
+page.sss,pagehero_highlight_sorulan_sorular,PageHero@highlight,Sorulan Sorular
+page.sss,pagehero_title_sik,PageHero@title,Sık
+page.sss,whatsapp_sor,jsx,WhatsApp ile Sor
+page.transferler,meta_desc,metadata,"Nevşehir (NAV) ve Kayseri (ASR) havalimanı transferleri. Özel araç, minibüs ve VIP seçenekleri. 7/24 hizmet, sabit fiyat, anında rezervasyon."
+page.transferler,meta_desc_2,metadata,"Nevşehir (NAV) & Kayseri (ASR) — 7/24, sabit fiyat."
+page.transferler,meta_og_alt,metadata,Kapadokya Havalimanı Transfer — Trip and Tick
+page.transferler,meta_title,metadata,Kapadokya Havalimanı Transfer — Nevşehir & Kayseri | Trip and Tick
+page.transferler,meta_title_2,metadata,Kapadokya Havalimanı Transfer
+page.transferler,pagehero_description_nevsehir_nav,PageHero@description,"Nevşehir (NAV) 30-45 dk ve Kayseri (ASR) 60-75 dk transfer hizmetleri. Özel araç, minibüs, VIP seçenekleri. Sabit fiyat — sürpriz yok."
+page.transferler,pagehero_highlight_ozel_transfer,PageHero@highlight,Özel Transfer
+page.transferler,pagehero_title_havalimani,PageHero@title,Havalimanı
+page.turlar,meta_desc,metadata,"Kapadokya'nın en popüler gezi turları: Kırmızı Tur (Göreme + Uçhisar), Yeşil Tur (Ihlara + Derinkuyu), gün batımı ve fotoğraf turları. Rehberli, transfer dahil."
+page.turlar,meta_desc_2,metadata,"Kırmızı, Yeşil, Gün Batımı turları — rehberli, transfer dahil."
+page.turlar,meta_og_alt,metadata,Kapadokya Gezi Turları — Trip and Tick
+page.turlar,meta_title,metadata,"Kapadokya Gezi Turları — Kırmızı, Yeşil, Gün Batımı | Trip and Tick"
+page.turlar,meta_title_2,metadata,Kapadokya Gezi Turları
+page.turlar,pagehero_description_unesco_dunya,PageHero@description,"UNESCO Dünya Mirası bölgesinin en önemli noktalarını profesyonel rehber eşliğinde keşfedin. Kırmızı, Yeşil, gün batımı ve özel fotoğraf turları."
+page.turlar,pagehero_highlight_klasik_turlari,PageHero@highlight,Klasik Turları
+page.turlar,pagehero_tag_gezi_turlari,PageHero@tag,Gezi Turları
+page.turlar,pagehero_title_kapadokya,PageHero@title,Kapadokya
+page.yorum,deneyiminizi_paylasin,jsx,Deneyiminizi Paylaşın
+page.yorum,featurecard_text_24_saat,FeatureCard@text,24 saat içinde onay.
+page.yorum,featurecard_text_detayli_puanlama,FeatureCard@text,Detaylı puanlama.
+page.yorum,featurecard_text_gercek_musteri,FeatureCard@text,Gerçek müşteri deneyimleri.
+page.yorum,featurecard_title_dogrulanmis,FeatureCard@title,Doğrulanmış
+page.yorum,featurecard_title_yildiz,FeatureCard@title,5 Yıldız
+page.yorum,meta_desc,metadata,Trip and Tick deneyiminizi paylaşın. Yorumunuz 24 saat içinde moderatör onayından sonra yayınlanır.
+page.yorum,meta_title,metadata,Yorumunuzu Yazın | Trip and Tick
+page.yorum,musteri_yorumu,jsx,Müşteri Yorumu
+page.yorum,trip_tick_yasadiginiz_tatil,jsx,"Trip and Tick ile yaşadığınız tatil deneyimini diğer misafirlerimizle
+            paylaşın. Yorumunuz 24 saat içinde yayınlanır."

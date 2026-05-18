@@ -1,0 +1,111 @@
+{
+  "file": "src/app/[locale]/rezervasyon/iptal/page.tsx",
+  "bytes": 2637,
+  "stringCount": 8,
+  "strings": [
+    {
+      "type": "metadata.title",
+      "tr": "Ödeme İptal Edildi | Trip and Tick",
+      "start": 221,
+      "end": 257,
+      "line": 8,
+      "col": 9,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "metadata.description",
+      "tr": "Ödeme işleminiz tamamlanmadı. Tekrar deneyebilirsiniz.",
+      "start": 274,
+      "end": 330,
+      "line": 9,
+      "col": 15,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxText",
+      "tr": "Ödeme İptal Edildi",
+      "rawStart": 1033,
+      "rawEnd": 1051,
+      "textStart": 1033,
+      "textEnd": 1051,
+      "line": 23,
+      "col": 75,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "",
+      "trailing": ""
+    },
+    {
+      "type": "jsxText",
+      "tr": "Ödeme işleminiz tamamlanmadı, rezervasyonunuz oluşturulmadı.\n          Endişelenmeyin — kartınızdan herhangi bir ücret çekilmedi.",
+      "rawStart": 1100,
+      "rawEnd": 1249,
+      "textStart": 1111,
+      "textEnd": 1240,
+      "line": 24,
+      "col": 43,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "\n          ",
+      "trailing": "\n        "
+    },
+    {
+      "type": "jsxText",
+      "tr": "Rezervasyon bilgileriniz tarayıcınızda saklı.\n            Tekrar denediğinizde kaldığınız yerden devam edebilirsiniz.",
+      "rawStart": 1431,
+      "rawEnd": 1560,
+      "textStart": 1432,
+      "textEnd": 1549,
+      "line": 31,
+      "col": 35,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": " ",
+      "trailing": "\n          "
+    },
+    {
+      "type": "jsxText",
+      "tr": "Tekrar Dene",
+      "rawStart": 1901,
+      "rawEnd": 1924,
+      "textStart": 1902,
+      "textEnd": 1913,
+      "line": 41,
+      "col": 45,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": " ",
+      "trailing": "\n          "
+    },
+    {
+      "type": "jsxText",
+      "tr": "WhatsApp Destek",
+      "rawStart": 2260,
+      "rawEnd": 2287,
+      "textStart": 2261,
+      "textEnd": 2276,
+      "line": 49,
+      "col": 49,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": " ",
+      "trailing": "\n          "
+    },
+    {
+      "type": "jsxText",
+      "tr": "Sorun yaşıyorsanız:",
+      "rawStart": 2401,
+      "rawEnd": 2420,
+      "textStart": 2401,
+      "textEnd": 2420,
+      "line": 54,
+      "col": 13,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "",
+      "trailing": ""
+    }
+  ]
+}

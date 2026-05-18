@@ -95,3 +95,99 @@ console.log(`\n=== Toplam: ${totalMissing} missing / ${totalExtra} extra (8 loca
 const filled = 8 * baseKeys.size - totalMissing;
 const pct = ((filled / (8 * baseKeys.size)) * 100).toFixed(1);
 console.log(`Filled: ${filled} / ${8 * baseKeys.size} (${pct}%)`);
+
+// ----------------------------------------------------------------------
+// Coverage scan — find hardcoded TR strings in pages/components.
+// Lightweight heuristic, no Babel dep. Diacritic-based detection.
+// ----------------------------------------------------------------------
+
+const TR_DIACRITICS = /[ğüşıöçĞÜŞİÖÇ]/;
+const SCAN_ROOTS = [
+  path.join(__dirname, "..", "src", "app", "[locale]"),
+  path.join(__dirname, "..", "src", "components"),
+];
+
+function walk(dir, out) {
+  let entries;
+  try {
+    entries = fs.readdirSync(dir, { withFileTypes: true });
+  } catch {
+    return out;
+  }
+  for (const e of entries) {
+    const full = path.join(dir, e.name);
+    if (e.isDirectory()) walk(full, out);
+    else if (e.isFile() && (e.name.endsWith(".tsx") || e.name.endsWith(".ts"))) out.push(full);
+  }
+  return out;
+}
+
+function scanFile(filepath) {
+  const src = fs.readFileSync(filepath, "utf-8");
+  let scanText = src
+    .replace(/\/\*[\s\S]*?\*\//g, "")
+    .replace(/^\s*import[^;]+;\s*$/gm, "")
+    .replace(/^\s*\/\/.*$/gm, "");
+
+  let jsxTextHits = 0;
+  const jsxTextRe = />([^<{}>]+)</g;
+  let m;
+  while ((m = jsxTextRe.exec(scanText))) {
+    if (TR_DIACRITICS.test(m[1])) jsxTextHits++;
+  }
+
+  let attrHits = 0;
+  const attrRe = /\s([a-zA-Z][\w-]*)\s*=\s*"([^"]*)"/g;
+  while ((m = attrRe.exec(scanText))) {
+    const name = m[1];
+    if (/^(className|href|src|id|key|ref|htmlFor|role|type|pattern|autoComplete|dir|lang|rel|target|method|action|encType|style|as|size|variant|color|value|defaultValue|min|max|step|loading|decoding|fetchPriority|crossOrigin|referrerPolicy|sizes|srcSet|data-track|data-event|data-testid|data-key)$/.test(name)) continue;
+    if (TR_DIACRITICS.test(m[2])) attrHits++;
+  }
+
+  let literalHits = 0;
+  const literalRe = /"([^"\\]{4,}[ğüşıöçĞÜŞİÖÇ][^"\\]*)"/g;
+  while ((m = literalRe.exec(scanText))) {
+    literalHits++;
+  }
+
+  const usesNextIntl = /\b(useTranslations|getTranslations)\s*\(/.test(src);
+  const usesCustomI18n = /\buseT\s*\(/.test(src);
+
+  return { jsxTextHits, attrHits, literalHits, usesNextIntl, usesCustomI18n };
+}
+
+console.log(`\n=== i18n Coverage Scan (hardcoded TR detection) ===\n`);
+const allFiles = SCAN_ROOTS.flatMap((root) => walk(root, []));
+const rows = [];
+let totalHits = 0;
+let convertedFiles = 0;
+for (const f of allFiles) {
+  const r = scanFile(f);
+  const totalFileHits = r.jsxTextHits + r.attrHits;
+  if (totalFileHits === 0 && !r.usesNextIntl && !r.usesCustomI18n) continue;
+  if (r.usesNextIntl) convertedFiles++;
+  rows.push({
+    file: path.relative(path.join(__dirname, ".."), f).replace(/\\/g, "/"),
+    jsxText: r.jsxTextHits,
+    attr: r.attrHits,
+    literal: r.literalHits,
+    intl: r.usesNextIntl ? "next-intl" : r.usesCustomI18n ? "custom" : "-",
+  });
+  totalHits += totalFileHits;
+}
+
+rows.sort((a, b) => b.jsxText + b.attr - (a.jsxText + a.attr));
+const topN = rows.filter((r) => r.intl !== "next-intl").slice(0, 30);
+console.log(`Files scanned: ${allFiles.length}`);
+console.log(`Files using next-intl: ${convertedFiles}`);
+console.log(`Files with hardcoded TR (top 30):`);
+console.log(`  jsxText  attr  literal  intl       file`);
+for (const r of topN) {
+  console.log(
+    `  ${String(r.jsxText).padStart(7)}  ${String(r.attr).padStart(4)}  ${String(r.literal).padStart(7)}  ${r.intl.padEnd(10)} ${r.file}`
+  );
+}
+console.log(`\nTotal hardcoded TR hits (jsxText + attr): ${totalHits}`);
+const remaining = rows.filter((r) => r.intl !== "next-intl");
+const totalRemainingHits = remaining.reduce((a, b) => a + b.jsxText + b.attr, 0);
+console.log(`Files NOT yet on next-intl: ${remaining.length} (${totalRemainingHits} hits)`);

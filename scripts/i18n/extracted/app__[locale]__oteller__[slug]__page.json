@@ -1,0 +1,101 @@
+{
+  "file": "src/app/[locale]/oteller/[slug]/page.tsx",
+  "bytes": 6744,
+  "stringCount": 7,
+  "strings": [
+    {
+      "type": "metadata.title",
+      "tr": "Otel Bulunamadı",
+      "start": 1270,
+      "end": 1287,
+      "line": 32,
+      "col": 30,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxText",
+      "tr": "değerlendirme)",
+      "rawStart": 3792,
+      "rawEnd": 3828,
+      "textStart": 3793,
+      "textEnd": 3807,
+      "line": 87,
+      "col": 120,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": " ",
+      "trailing": "\n                    "
+    },
+    {
+      "type": "jsxText",
+      "tr": "Otel rezervasyonu telefon / e-posta ile",
+      "rawStart": 4784,
+      "rawEnd": 4823,
+      "textStart": 4784,
+      "textEnd": 4823,
+      "line": 108,
+      "col": 62,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "",
+      "trailing": ""
+    },
+    {
+      "type": "jsxText",
+      "tr": "Otel müsaitliği ve güncel fiyat tarihe göre değişir. Yan formu doldurun — sizi 24 saat içinde\n                  arayarak",
+      "rawStart": 4888,
+      "rawEnd": 5028,
+      "textStart": 4907,
+      "textEnd": 5027,
+      "line": 109,
+      "col": 59,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "\n                  ",
+      "trailing": " "
+    },
+    {
+      "type": "jsxText",
+      "tr": "uygun seçenekler, müsaitlik ve fiyat teklifi",
+      "rawStart": 5031,
+      "rawEnd": 5075,
+      "textStart": 5031,
+      "textEnd": 5075,
+      "line": 111,
+      "col": 30,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "",
+      "trailing": ""
+    },
+    {
+      "type": "jsxText",
+      "tr": "paylaşacağız. Acil iletişim için\n                  doğrudan telefon veya WhatsApp.",
+      "rawStart": 5079,
+      "rawEnd": 5179,
+      "textStart": 5080,
+      "textEnd": 5162,
+      "line": 111,
+      "col": 78,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": " ",
+      "trailing": "\n                "
+    },
+    {
+      "type": "jsxText",
+      "tr": "← Diğer otel seçeneklerini gör",
+      "rawStart": 6214,
+      "rawEnd": 6244,
+      "textStart": 6214,
+      "textEnd": 6244,
+      "line": 128,
+      "col": 66,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "",
+      "trailing": ""
+    }
+  ]
+}

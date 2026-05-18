@@ -1,0 +1,17 @@
+{
+  "file": "src/components/booking/CurrencySwitcher.tsx",
+  "bytes": 3628,
+  "stringCount": 1,
+  "strings": [
+    {
+      "type": "jsxAttr:aria-label",
+      "tr": "Para birimi",
+      "start": 2042,
+      "end": 2055,
+      "line": 57,
+      "col": 19,
+      "context": "button@aria-label",
+      "nodeType": "StringLiteral"
+    }
+  ]
+}

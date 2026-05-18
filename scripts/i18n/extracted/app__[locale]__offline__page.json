@@ -1,0 +1,97 @@
+{
+  "file": "src/app/[locale]/offline/page.tsx",
+  "bytes": 2117,
+  "stringCount": 7,
+  "strings": [
+    {
+      "type": "metadata.title",
+      "tr": "Çevrimdışı — İnternet Bağlantısı Yok | Trip and Tick",
+      "start": 321,
+      "end": 375,
+      "line": 12,
+      "col": 9,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "metadata.description",
+      "tr": "İnternet bağlantınız bulunamadı. Daha önce ziyaret ettiğiniz sayfalar önbellekten görüntülenebilir.",
+      "start": 396,
+      "end": 497,
+      "line": 14,
+      "col": 4,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxText",
+      "tr": "İnternet Bağlantısı Yok",
+      "rawStart": 1091,
+      "rawEnd": 1134,
+      "textStart": 1102,
+      "textEnd": 1125,
+      "line": 26,
+      "col": 76,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "\n          ",
+      "trailing": "\n        "
+    },
+    {
+      "type": "jsxText",
+      "tr": "Şu anda çevrimdışısınız. Daha önce ziyaret ettiğiniz sayfalar\n          önbellekten görüntülenebilir. Bağlantınızı kontrol edip tekrar\n          deneyin.",
+      "rawStart": 1199,
+      "rawEnd": 1372,
+      "textStart": 1210,
+      "textEnd": 1363,
+      "line": 30,
+      "col": 58,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "\n          ",
+      "trailing": "\n        "
+    },
+    {
+      "type": "jsxText",
+      "tr": "Ana Sayfa",
+      "rawStart": 1655,
+      "rawEnd": 1688,
+      "textStart": 1668,
+      "textEnd": 1677,
+      "line": 40,
+      "col": 11,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "\n            ",
+      "trailing": "\n          "
+    },
+    {
+      "type": "jsxText",
+      "tr": "Yeniden Dene",
+      "rawStart": 1912,
+      "rawEnd": 1948,
+      "textStart": 1925,
+      "textEnd": 1937,
+      "line": 46,
+      "col": 11,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "\n            ",
+      "trailing": "\n          "
+    },
+    {
+      "type": "jsxText",
+      "tr": "Trip and Tick — Kapadokya Balon Turu",
+      "rawStart": 2022,
+      "rawEnd": 2078,
+      "textStart": 2033,
+      "textEnd": 2069,
+      "line": 51,
+      "col": 53,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "\n          ",
+      "trailing": "\n        "
+    }
+  ]
+}

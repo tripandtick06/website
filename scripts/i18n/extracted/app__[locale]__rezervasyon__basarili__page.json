@@ -1,0 +1,27 @@
+{
+  "file": "src/app/[locale]/rezervasyon/basarili/page.tsx",
+  "bytes": 998,
+  "stringCount": 2,
+  "strings": [
+    {
+      "type": "metadata.title",
+      "tr": "Rezervasyon Onaylandı | Trip and Tick",
+      "start": 327,
+      "end": 366,
+      "line": 10,
+      "col": 9,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "metadata.description",
+      "tr": "Rezervasyonunuz başarıyla tamamlandı.",
+      "start": 383,
+      "end": 422,
+      "line": 11,
+      "col": 15,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "file": "src/components/booking/WhatsAppFAB.tsx",
+  "bytes": 1414,
+  "stringCount": 1,
+  "strings": [
+    {
+      "type": "jsxText",
+      "tr": "Bize WhatsApp'tan yazın",
+      "rawStart": 1346,
+      "rawEnd": 1390,
+      "textStart": 1355,
+      "textEnd": 1383,
+      "line": 35,
+      "col": 7,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "\n        ",
+      "trailing": "\n      "
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "file": "src/components/booking/SearchWidget.tsx",
+  "bytes": 7298,
+  "stringCount": 7,
+  "strings": [
+    {
+      "type": "jsxAttr:placeholder",
+      "tr": "Göreme, Kapadokya",
+      "start": 3677,
+      "end": 3696,
+      "line": 113,
+      "col": 26,
+      "context": "input@placeholder",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxAttr:aria-label",
+      "tr": "Destinasyon veya hizmet ara",
+      "start": 3767,
+      "end": 3796,
+      "line": 115,
+      "col": 25,
+      "context": "input@aria-label",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxText",
+      "tr": "Tarih",
+      "rawStart": 3995,
+      "rawEnd": 4024,
+      "textStart": 4008,
+      "textEnd": 4013,
+      "line": 122,
+      "col": 91,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "\n            ",
+      "trailing": "\n          "
+    },
+    {
+      "type": "jsxText",
+      "tr": "Yetişkin",
+      "rawStart": 4548,
+      "rawEnd": 4580,
+      "textStart": 4561,
+      "textEnd": 4569,
+      "line": 138,
+      "col": 91,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "\n            ",
+      "trailing": "\n          "
+    },
+    {
+      "type": "jsxText",
+      "tr": "Çocuk (7-12)",
+      "rawStart": 5565,
+      "rawEnd": 5601,
+      "textStart": 5578,
+      "textEnd": 5590,
+      "line": 160,
+      "col": 91,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "\n            ",
+      "trailing": "\n          "
+    },
+    {
+      "type": "jsxText",
+      "tr": "Önemli:",
+      "rawStart": 7107,
+      "rawEnd": 7114,
+      "textStart": 7107,
+      "textEnd": 7114,
+      "line": 196,
+      "col": 20,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "",
+      "trailing": ""
+    },
+    {
+      "type": "jsxText",
+      "tr": "6 yaş altı çocuklar balon uçuşlarına katılamaz. Hamileler\n            ve ciddi kalp/sağlık sorunu olanlar binemez.",
+      "rawStart": 7123,
+      "rawEnd": 7249,
+      "textStart": 7124,
+      "textEnd": 7238,
+      "line": 196,
+      "col": 36,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": " ",
+      "trailing": "\n          "
+    }
+  ]
+}

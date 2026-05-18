@@ -1,0 +1,97 @@
+{
+  "file": "src/app/[locale]/paketler/page.tsx",
+  "bytes": 2191,
+  "stringCount": 9,
+  "strings": [
+    {
+      "type": "metadata.title",
+      "tr": "Kapadokya Tatil Paketleri — Balayı, Aile, Macera | Trip and Tick",
+      "start": 525,
+      "end": 591,
+      "line": 14,
+      "col": 9,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "metadata.description",
+      "tr": "Kapadokya tam gün paketler, balayı, aile, macera ve evlilik teklifi paketleri. Tek rezervasyonda balon + otel + tur — avantajlı fiyat.",
+      "start": 612,
+      "end": 748,
+      "line": 16,
+      "col": 4,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "metadata.title",
+      "tr": "Kapadokya Tatil Paketleri",
+      "start": 882,
+      "end": 909,
+      "line": 22,
+      "col": 11,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "metadata.description",
+      "tr": "Balayı, aile, macera paketleri — balon + otel + tur tek rezervasyon.",
+      "start": 928,
+      "end": 998,
+      "line": 23,
+      "col": 17,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "metadata.alt",
+      "tr": "Kapadokya Tatil Paketleri — Trip and Tick",
+      "start": 1259,
+      "end": 1302,
+      "line": 34,
+      "col": 13,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxAttr:tag",
+      "tr": "Özel Paketler",
+      "start": 1416,
+      "end": 1431,
+      "line": 44,
+      "col": 12,
+      "context": "PageHero@tag",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxAttr:title",
+      "tr": "Kapadokya",
+      "start": 1446,
+      "end": 1457,
+      "line": 45,
+      "col": 14,
+      "context": "PageHero@title",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxAttr:highlight",
+      "tr": "Kombo Paketleri",
+      "start": 1476,
+      "end": 1493,
+      "line": 46,
+      "col": 18,
+      "context": "PageHero@highlight",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxAttr:description",
+      "tr": "Balon + otel + tur tek rezervasyonda. Balayı, aile, macera, evlilik teklifi ve kurumsal etkinlik paketleri — ayrı ayrı rezerve etmekten %20-30 daha ucuz.",
+      "start": 1514,
+      "end": 1669,
+      "line": 47,
+      "col": 20,
+      "context": "PageHero@description",
+      "nodeType": "StringLiteral"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "file": "src/app/[locale]/yorum/page.tsx",
+  "bytes": 2711,
+  "stringCount": 10,
+  "strings": [
+    {
+      "type": "metadata.title",
+      "tr": "Yorumunuzu Yazın | Trip and Tick",
+      "start": 497,
+      "end": 531,
+      "line": 16,
+      "col": 9,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "metadata.description",
+      "tr": "Trip and Tick deneyiminizi paylaşın. Yorumunuz 24 saat içinde moderatör onayından sonra yayınlanır.",
+      "start": 552,
+      "end": 653,
+      "line": 18,
+      "col": 4,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxText",
+      "tr": "Müşteri Yorumu",
+      "rawStart": 1131,
+      "rawEnd": 1169,
+      "textStart": 1144,
+      "textEnd": 1158,
+      "line": 28,
+      "col": 74,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "\n            ",
+      "trailing": "\n          "
+    },
+    {
+      "type": "jsxText",
+      "tr": "Deneyiminizi Paylaşın",
+      "rawStart": 1258,
+      "rawEnd": 1303,
+      "textStart": 1271,
+      "textEnd": 1292,
+      "line": 31,
+      "col": 82,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "\n            ",
+      "trailing": "\n          "
+    },
+    {
+      "type": "jsxText",
+      "tr": "Trip and Tick ile yaşadığınız tatil deneyimini diğer misafirlerimizle\n            paylaşın. Yorumunuz 24 saat içinde yayınlanır.",
+      "rawStart": 1366,
+      "rawEnd": 1518,
+      "textStart": 1379,
+      "textEnd": 1507,
+      "line": 34,
+      "col": 57,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "\n            ",
+      "trailing": "\n          "
+    },
+    {
+      "type": "jsxAttr:title",
+      "tr": "Doğrulanmış",
+      "start": 1711,
+      "end": 1724,
+      "line": 43,
+      "col": 18,
+      "context": "FeatureCard@title",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxAttr:text",
+      "tr": "Gerçek müşteri deneyimleri.",
+      "start": 1742,
+      "end": 1771,
+      "line": 44,
+      "col": 17,
+      "context": "FeatureCard@text",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxAttr:text",
+      "tr": "24 saat içinde onay.",
+      "start": 1921,
+      "end": 1943,
+      "line": 49,
+      "col": 17,
+      "context": "FeatureCard@text",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxAttr:title",
+      "tr": "5 Yıldız",
+      "start": 2060,
+      "end": 2070,
+      "line": 53,
+      "col": 18,
+      "context": "FeatureCard@title",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxAttr:text",
+      "tr": "Detaylı puanlama.",
+      "start": 2088,
+      "end": 2107,
+      "line": 54,
+      "col": 17,
+      "context": "FeatureCard@text",
+      "nodeType": "StringLiteral"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "file": "src/components/sections/StepsSection.tsx",
+  "bytes": 2156,
+  "stringCount": 3,
+  "strings": [
+    {
+      "type": "jsxText",
+      "tr": "Nasıl Çalışır?",
+      "rawStart": 947,
+      "rawEnd": 961,
+      "textStart": 947,
+      "textEnd": 961,
+      "line": 16,
+      "col": 40,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "",
+      "trailing": ""
+    },
+    {
+      "type": "jsxText",
+      "tr": "Rezervasyon 5 Dakikada",
+      "rawStart": 1061,
+      "rawEnd": 1107,
+      "textStart": 1074,
+      "textEnd": 1096,
+      "line": 17,
+      "col": 92,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "\n            ",
+      "trailing": "\n          "
+    },
+    {
+      "type": "jsxText",
+      "tr": "Hızlı, kolay ve güvenli. Karmaşık süreç yok.",
+      "rawStart": 1158,
+      "rawEnd": 1202,
+      "textStart": 1158,
+      "textEnd": 1202,
+      "line": 20,
+      "col": 45,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "",
+      "trailing": ""
+    }
+  ]
+}

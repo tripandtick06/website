@@ -1,0 +1,71 @@
+{
+  "file": "src/components/booking/AvailabilityCalendar.tsx",
+  "bytes": 11576,
+  "stringCount": 6,
+  "strings": [
+    {
+      "type": "jsxAttr:aria-label",
+      "tr": "Önceki ay",
+      "start": 5782,
+      "end": 5793,
+      "line": 181,
+      "col": 21,
+      "context": "button@aria-label",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxText",
+      "tr": "Müsait Tarihler",
+      "rawStart": 6058,
+      "rawEnd": 6073,
+      "textStart": 6058,
+      "textEnd": 6073,
+      "line": 187,
+      "col": 16,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "",
+      "trailing": ""
+    },
+    {
+      "type": "jsxAttr:aria-label",
+      "tr": "Sonraki ay",
+      "start": 6314,
+      "end": 6326,
+      "line": 193,
+      "col": 21,
+      "context": "button@aria-label",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxAttr:label",
+      "tr": "Müsait",
+      "start": 7187,
+      "end": 7195,
+      "line": 223,
+      "col": 71,
+      "context": "LegendDot@label",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxAttr:label",
+      "tr": "Sınırlı",
+      "start": 7266,
+      "end": 7275,
+      "line": 224,
+      "col": 67,
+      "context": "LegendDot@label",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxAttr:label",
+      "tr": "Geçmiş / Kapalı",
+      "start": 7421,
+      "end": 7438,
+      "line": 226,
+      "col": 67,
+      "context": "LegendDot@label",
+      "nodeType": "StringLiteral"
+    }
+  ]
+}

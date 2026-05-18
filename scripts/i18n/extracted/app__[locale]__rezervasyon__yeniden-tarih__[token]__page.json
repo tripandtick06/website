@@ -1,0 +1,55 @@
+{
+  "file": "src/app/[locale]/rezervasyon/yeniden-tarih/[token]/page.tsx",
+  "bytes": 3428,
+  "stringCount": 4,
+  "strings": [
+    {
+      "type": "metadata.title",
+      "tr": "Rezervasyon — Yeni Tarih veya İade | Trip and Tick",
+      "start": 617,
+      "end": 669,
+      "line": 16,
+      "col": 9,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "metadata.description",
+      "tr": "İptal edilen rezervasyonunuz için alternatif tarih seçin veya tam iade isteyin.",
+      "start": 686,
+      "end": 767,
+      "line": 17,
+      "col": 15,
+      "context": "metadata",
+      "nodeType": "StringLiteral"
+    },
+    {
+      "type": "jsxText",
+      "tr": "Link Geçersiz",
+      "rawStart": 2226,
+      "rawEnd": 2239,
+      "textStart": 2226,
+      "textEnd": 2239,
+      "line": 58,
+      "col": 64,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "",
+      "trailing": ""
+    },
+    {
+      "type": "jsxText",
+      "tr": "WhatsApp ile İletişim",
+      "rawStart": 2727,
+      "rawEnd": 2772,
+      "textStart": 2740,
+      "textEnd": 2761,
+      "line": 67,
+      "col": 11,
+      "context": "jsx",
+      "nodeType": "JSXText",
+      "leading": "\n            ",
+      "trailing": "\n          "
+    }
+  ]
+}
