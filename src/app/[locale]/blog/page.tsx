@@ -3,26 +3,10 @@ import { ArrowRight, Calendar, Tag, Search } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { SITE_URL } from "@/lib/schema";
 import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
+import { ARTICLES, type BlogArticle } from "@/data/blog";
 
-// CF Pages edge runtime — fs/promises Node-only, kullanilamaz.
-// TODO Q2: blog content edge-compat ile yeniden (Webpack glob-import veya
-// generateStaticParams + build-time JSON embed). Su an bos liste fallback.
+// CF Pages edge runtime. Content loaded via static import (build-time embed).
 export const runtime = "edge";
-
-interface BlogArticle {
-  slug: string;
-  title: string;
-  metaTitle: string;
-  metaDescription: string;
-  excerpt: string;
-  content: string;
-  category: string;
-  tags: string[];
-  targetKeyword: string;
-  locale: string;
-  publishedAt: string;
-  seoScore: number;
-}
 
 const CATEGORY_LABELS: Record<string, string> = {
   "balon-turlari": "Balon Turları",
@@ -43,8 +27,7 @@ const CATEGORY_COLORS: Record<string, string> = {
 };
 
 async function getBlogArticles(): Promise<BlogArticle[]> {
-  // TODO Q2: edge-compat content loader (glob-import veya KV store)
-  return [];
+  return ARTICLES;
 }
 
 export const metadata: Metadata = {

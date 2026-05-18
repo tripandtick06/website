@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { BALLOON_PACKAGES } from "@/data/services/balloons";
 import { KAPADOKYA_PILLARS, HOTELS } from "@/data/services/catalog";
 import { OPERATORS } from "@/data/services/operators";
+import { ARTICLES } from "@/data/blog";
 import { SITE_URL } from "@/lib/schema";
 import { generateHreflang } from "@/lib/hreflang";
 
@@ -69,8 +70,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     alternates: alt(`/blog/${p.slug}`),
   }));
 
-  // TODO Q2: blog pages edge-compat content loader (glob-import / KV)
-  const blogPages: MetadataRoute.Sitemap = [];
+  // Sessiyon-7 fix: ARTICLES static-import (Edge-safe — no fs).
+  // Locale prefix `/tr` schaal: per article publish under its native locale; hreflang covers others.
+  const blogPages: MetadataRoute.Sitemap = ARTICLES.map((a) => ({
+    url: `${SITE_URL}/${a.locale}/blog/${a.slug}`,
+    lastModified: a.publishedAt ? new Date(a.publishedAt) : now,
+    changeFrequency: "weekly",
+    priority: 0.6,
+    alternates: alt(`/blog/${a.slug}`),
+  }));
 
   // Dedupe — bazi pillar slug'lari blog JSON slug'lariyla cakisir (intentional).
   const combined = [...staticPages, ...operatorPages, ...balloonPages, ...hotelPages, ...pillarPages, ...blogPages];
