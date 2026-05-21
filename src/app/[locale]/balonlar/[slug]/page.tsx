@@ -93,6 +93,7 @@ export default function BalonDetayPage({ params }: PageParams) {
             currency: pkg.currency,
             rating: pkg.rating,
             reviewCount: pkg.reviewCount,
+            priceOnRequest: pkg.priceOnRequest,
           }),
           productSchema({
             slug: pkg.slug,
@@ -105,6 +106,7 @@ export default function BalonDetayPage({ params }: PageParams) {
             reviewCount: pkg.reviewCount,
             category: "Kapadokya Balon Turu",
             reviews: balonReviews,
+            priceOnRequest: pkg.priceOnRequest,
           }),
           faqPageSchema(balonFaqs.map((f) => ({ question: f.question, answer: f.answer }))),
         ]}

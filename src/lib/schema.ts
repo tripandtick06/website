@@ -116,6 +116,8 @@ export interface TouristTripInput {
   rating: number;
   reviewCount: number;
   image?: string;
+  /** Price hidden in UI (quote-based) — omit numeric price from Offer. */
+  priceOnRequest?: boolean;
 }
 
 export function touristTripSchema(p: TouristTripInput) {
@@ -140,8 +142,9 @@ export function touristTripSchema(p: TouristTripInput) {
     offers: {
       "@type": "Offer",
       url: `${SITE_URL}/balonlar/${p.slug}`,
-      price: p.price.toString(),
-      priceCurrency: p.currency,
+      ...(p.priceOnRequest
+        ? {}
+        : { price: p.price.toString(), priceCurrency: p.currency }),
       availability: "https://schema.org/InStock",
       validFrom: new Date().toISOString().split("T")[0],
     },
@@ -282,6 +285,8 @@ export interface ProductSchemaInput {
   category?: string;
   urlPath?: string; // default /balonlar/<slug>
   reviews?: ReviewInput[];
+  /** Price hidden in UI (quote-based) — omit numeric price from Offer. */
+  priceOnRequest?: boolean;
 }
 
 /**
@@ -307,10 +312,14 @@ export function productSchema(p: ProductSchemaInput) {
     offers: {
       "@type": "Offer",
       url,
-      price: p.price.toString(),
-      priceCurrency: p.currency,
+      ...(p.priceOnRequest
+        ? {}
+        : {
+            price: p.price.toString(),
+            priceCurrency: p.currency,
+            priceValidUntil,
+          }),
       availability: "https://schema.org/InStock",
-      priceValidUntil,
       seller: { "@id": ORG_ID },
       hasMerchantReturnPolicy: {
         "@type": "MerchantReturnPolicy",
