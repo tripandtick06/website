@@ -18,6 +18,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { ServiceCard } from "@/components/layout/ServiceCard";
 import { cn } from "@/lib/utils";
+import { useT } from "@/lib/i18n/I18nProvider";
 import type { ServiceItem } from "@/data/services/catalog";
 
 const STORAGE_KEY = "tripandtick:oteller:tierFilter";
@@ -37,6 +38,7 @@ function matches(hotel: ServiceItem, tier: TierId): boolean {
 }
 
 export function HotelsGrid({ hotels }: { hotels: ServiceItem[] }) {
+  const t = useT();
   const [type, setType] = useState<TierId>("all");
   const [hydrated, setHydrated] = useState(false);
 
@@ -81,7 +83,7 @@ export function HotelsGrid({ hotels }: { hotels: ServiceItem[] }) {
       <div
         className="flex flex-wrap items-center gap-2 mb-8"
         role="tablist"
-        aria-label="Otel tipi filtresi"
+        aria-label={t.component.oteller.hotels_grid.div_aria_label_otel_tipi}
       >
         {TIERS.map((t) => (
           <button
@@ -112,7 +114,7 @@ export function HotelsGrid({ hotels }: { hotels: ServiceItem[] }) {
       {filtered.length === 0 ? (
         <div className="text-center bg-white rounded-2xl p-8 border border-slate-200">
           <p className="text-slate-500">
-            Bu kategoride otel bulunamadı. Lütfen başka bir filtre seçin.
+            {t.component.oteller.hotels_grid.kategoride_otel_bulunamadi}
           </p>
         </div>
       ) : (

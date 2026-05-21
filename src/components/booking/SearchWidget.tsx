@@ -17,17 +17,19 @@ import {
   Users,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-
-const TABS = [
-  { id: "balloon", label: "Balon Uçuşu", icon: Wind, path: "/balonlar" },
-  { id: "hotel", label: "Otel", icon: Hotel, path: "/oteller" },
-  { id: "atv", label: "Aktiviteler", icon: MountainSnow, path: "/aktiviteler" },
-  { id: "tour", label: "Gezi Turları", icon: TreePine, path: "/turlar" },
-  { id: "package", label: "Paketler", icon: Package, path: "/paketler" },
-];
+import { useT } from "@/lib/i18n/I18nProvider";
 
 export function SearchWidget() {
+  const t = useT();
   const router = useRouter();
+
+  const TABS = [
+    { id: "balloon", label: "Balon Uçuşu", icon: Wind, path: "/balonlar" },
+    { id: "hotel", label: "Otel", icon: Hotel, path: "/oteller" },
+    { id: "atv", label: "Aktiviteler", icon: MountainSnow, path: "/aktiviteler" },
+    { id: "tour", label: "Gezi Turları", icon: TreePine, path: "/turlar" },
+    { id: "package", label: "Paketler", icon: Package, path: "/paketler" },
+  ];
   const [activeTab, setActiveTab] = useState("balloon");
   const [destination, setDestination] = useState("");
   const [date, setDate] = useState("2026-03-20");
@@ -110,9 +112,9 @@ export function SearchWidget() {
               name="destination"
               value={destination}
               onChange={(e) => setDestination(e.target.value)}
-              placeholder="Göreme, Kapadokya"
+              placeholder={t.component.booking.search.input_placeholder_goreme_kapadokya}
               className="input-field !pl-10"
-              aria-label="Destinasyon veya hizmet ara"
+              aria-label={t.component.booking.search.input_aria_label_destinasyon}
             />
           </div>
         </div>
@@ -120,7 +122,7 @@ export function SearchWidget() {
         {/* Date */}
         <div className="space-y-1.5">
           <label className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">
-            Tarih
+            {t.component.booking.search.tarih}
           </label>
           <div className="relative">
             <CalendarDays className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
@@ -136,7 +138,7 @@ export function SearchWidget() {
         {/* Adults */}
         <div className="space-y-1.5">
           <label className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">
-            Yetişkin
+            {t.component.booking.search.yetiskin}
           </label>
           <div className="flex items-center border-2 border-slate-200 rounded-xl overflow-hidden">
             <button
@@ -158,7 +160,7 @@ export function SearchWidget() {
         {/* Children */}
         <div className="space-y-1.5">
           <label className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">
-            Çocuk (7-12)
+            {t.component.booking.search.cocuk_12}
           </label>
           <div className="flex items-center border-2 border-slate-200 rounded-xl overflow-hidden">
             <button
@@ -193,8 +195,7 @@ export function SearchWidget() {
         <div className="mt-4 flex items-start gap-2.5 bg-amber-50 border border-amber-200 rounded-xl p-3.5 text-sm text-amber-800">
           <AlertTriangle className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
           <div>
-            <strong>Önemli:</strong> 6 yaş altı çocuklar balon uçuşlarına katılamaz. Hamileler
-            ve ciddi kalp/sağlık sorunu olanlar binemez.
+            <strong>{t.component.booking.search.onemli}</strong> {t.component.booking.search.yas_alti_cocuklar_balon}
           </div>
         </div>
       )}

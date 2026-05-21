@@ -1,6 +1,9 @@
+"use client";
+
 import { Link } from "@/i18n/routing";
 import { Star, Quote, PenLine } from "lucide-react";
 import { pickReviews } from "@/data/reviews";
+import { useT } from "@/lib/i18n/I18nProvider";
 
 const AVATAR_COLORS = [
   "bg-primary",
@@ -19,6 +22,7 @@ function formatDate(iso: string): string {
 }
 
 export function ReviewsSection() {
+  const t = useT();
   // Server-render'da tutarli olsun: seedKey sabit ("homepage").
   const reviews = pickReviews(6, "homepage");
 
@@ -26,12 +30,12 @@ export function ReviewsSection() {
     <section className="section-padding bg-white">
       <div className="container-main">
         <div className="text-center mb-12">
-          <span className="section-tag">Müşteri Yorumları</span>
+          <span className="section-tag">{t.component.sections.reviews.musteri_yorumlari}</span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             12.000+ Mutlu Yolcu
           </h2>
           <p className="text-slate-500 mt-2 text-sm sm:text-base">
-            Trip and Tick&apos;e güvenenlerin gerçek deneyimleri
+            {t.component.sections.reviews.trip_tick_guvenenlerin_gercek}
           </p>
         </div>
 
@@ -41,10 +45,10 @@ export function ReviewsSection() {
             className="inline-flex items-center gap-2 px-5 py-2.5 bg-amber-500 hover:bg-amber-600 text-white rounded-full text-sm font-bold transition-colors shadow-sm"
           >
             <PenLine className="w-4 h-4" />
-            Yorumunuzu Yazın
+            {t.component.sections.reviews.yorumunuzu_yazin}
           </Link>
           <p className="text-xs text-slate-400 mt-2">
-            Trip and Tick ile yaşadığınız deneyimi paylaşın
+            {t.component.sections.reviews.trip_tick_yasadiginiz_deneyimi}
           </p>
         </div>
 

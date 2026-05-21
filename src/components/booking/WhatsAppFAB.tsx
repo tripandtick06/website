@@ -2,11 +2,13 @@
 
 import { useState } from "react";
 import { MessageCircle } from "lucide-react";
+import { useT } from "@/lib/i18n/I18nProvider";
 
 const WHATSAPP_HREF =
   "https://wa.me/905374647861?text=Merhaba,%20Trip%20and%20Tick%20hakkinda%20bilgi%20almak%20istiyorum.";
 
 export function WhatsAppFAB() {
+  const t = useT();
   const [hovered, setHovered] = useState(false);
   const [focused, setFocused] = useState(false);
   const expanded = hovered || focused;
@@ -33,7 +35,7 @@ export function WhatsAppFAB() {
           (expanded ? "max-w-[260px] opacity-100" : "max-w-0 opacity-0")
         }
       >
-        Bize WhatsApp&apos;tan yazın
+        {t.component.booking.whats_app_f_a_b.bize_whatsapp_tan_yazin}
       </span>
     </a>
   );

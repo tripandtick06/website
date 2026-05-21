@@ -1,6 +1,9 @@
+"use client";
+
 import { Link } from "@/i18n/routing";
 import { Star, Clock, Check, Hotel, MountainSnow, TreePine, Package, Car, Wind } from "lucide-react";
 import { formatPrice } from "@/lib/utils";
+import { useT } from "@/lib/i18n/I18nProvider";
 import type { ServiceItem } from "@/data/services/catalog";
 
 const CATEGORY_ICON: Record<ServiceItem["category"], typeof Wind> = {
@@ -50,6 +53,7 @@ export interface ServiceCardProps {
 }
 
 export function ServiceCard({ item, ctaHref }: ServiceCardProps) {
+  const t = useT();
   const Icon = CATEGORY_ICON[item.category];
   const gradient = CATEGORY_GRADIENT[item.category];
   // Otel kategorisi info-only flow — /oteller/[slug] info page (rezervasyon yok).
@@ -92,7 +96,7 @@ export function ServiceCard({ item, ctaHref }: ServiceCardProps) {
             {item.duration}
           </span>
           <span>·</span>
-          <span>{item.reviewCount.toLocaleString("tr-TR")} değerlendirme</span>
+          <span>{item.reviewCount.toLocaleString("tr-TR")} {t.component.layout.service_card.degerlendirme}</span>
         </div>
 
         <ul className="text-xs text-slate-600 space-y-1 mb-4">
@@ -109,9 +113,9 @@ export function ServiceCard({ item, ctaHref }: ServiceCardProps) {
             {item.priceOnRequest ? (
               <>
                 <div className="text-lg font-extrabold text-primary leading-tight">
-                  Bilgi Al
+                  {t.component.layout.service_card.bilgi_al}
                 </div>
-                <div className="text-[10px] text-slate-500 mt-1">Telefon / e-posta ile</div>
+                <div className="text-[10px] text-slate-500 mt-1">{t.component.layout.service_card.telefon_posta}</div>
               </>
             ) : (
               <>
@@ -123,7 +127,7 @@ export function ServiceCard({ item, ctaHref }: ServiceCardProps) {
                 <div className="text-2xl font-extrabold text-primary leading-none">
                   {formatPrice(item.adultPrice, item.currency)}
                 </div>
-                <div className="text-[10px] text-slate-500 mt-1">kişi başı</div>
+                <div className="text-[10px] text-slate-500 mt-1">{t.component.layout.service_card.kisi_basi}</div>
               </>
             )}
           </div>

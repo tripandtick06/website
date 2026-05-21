@@ -1,5 +1,8 @@
+"use client";
+
 import { Link } from "@/i18n/routing";
 import { Home, ChevronRight } from "lucide-react";
+import { useT } from "@/lib/i18n/I18nProvider";
 
 export interface BreadcrumbItem {
   name: string;
@@ -7,6 +10,7 @@ export interface BreadcrumbItem {
 }
 
 export function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
+  const t = useT();
   return (
     <nav
       aria-label="Breadcrumb"
@@ -20,7 +24,7 @@ export function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
               className="flex items-center gap-1 hover:text-primary transition-colors"
             >
               <Home className="w-4 h-4" />
-              <span className="sr-only sm:not-sr-only">Ana Sayfa</span>
+              <span className="sr-only sm:not-sr-only">{t.component.layout.breadcrumb.ana_sayfa}</span>
             </Link>
           </li>
           {items.map((it, idx) => {

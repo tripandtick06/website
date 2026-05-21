@@ -13,7 +13,7 @@
 
 import { useState, type FormEvent } from "react";
 import { Mail, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
-import { useLocale } from "@/lib/i18n/I18nProvider";
+import { useLocale, useT } from "@/lib/i18n/I18nProvider";
 import { cn } from "@/lib/utils";
 
 export type NewsletterVariant = "inline" | "block" | "popup";
@@ -53,6 +53,7 @@ export function NewsletterForm({
   headline,
   subline,
 }: NewsletterFormProps) {
+  const t = useT();
   const { locale } = useLocale();
   const [email, setEmail] = useState("");
   const [honeypot, setHoneypot] = useState("");
@@ -118,7 +119,7 @@ export function NewsletterForm({
         <form
           onSubmit={handleSubmit}
           className="max-w-xl mx-auto flex flex-col sm:flex-row gap-2"
-          aria-label="Bülten aboneliği formu"
+          aria-label={t.component.marketing.newsletter_form.form_aria_label_bulten_aboneligi}
         >
           {/* Honeypot */}
           <input

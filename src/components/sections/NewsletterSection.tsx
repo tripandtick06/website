@@ -7,9 +7,13 @@
 // User verbatim: "Background gradient primary → accent, H2 'Hosgeldin Bonusu'
 // + 'Aboneligin %5 indirim' + NewsletterForm block variant"
 
+"use client";
+
 import { NewsletterForm } from "@/components/marketing/NewsletterForm";
+import { useT } from "@/lib/i18n/I18nProvider";
 
 export function NewsletterSection() {
+  const t = useT();
   return (
     <section
       id="newsletter"
@@ -27,7 +31,7 @@ export function NewsletterSection() {
       <div className="container-main relative z-10">
         <div className="max-w-2xl mx-auto text-center mb-6">
           <span className="inline-block bg-white/10 backdrop-blur-sm text-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">
-            Bülten
+            {t.component.sections.newsletter.bulten}
           </span>
         </div>
         <NewsletterForm

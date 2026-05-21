@@ -10,8 +10,11 @@
 // odeme yaptirmadan once bunu bilgilendirebilmemiz gerekiyor. bunun icinde
 // elden de ayarlama yapabilmemiz gerekiyor."
 
+"use client";
+
 import { CheckCircle2, AlertTriangle, XCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useT } from "@/lib/i18n/I18nProvider";
 import type { AvailabilityStatus } from "@/data/availability";
 
 export interface AvailabilityBadgeProps {
@@ -27,6 +30,7 @@ export function AvailabilityBadge({
   className,
   size = "md",
 }: AvailabilityBadgeProps) {
+  const t = useT();
   const sizeCls =
     size === "sm" ? "text-xs px-2 py-0.5 gap-1" : "text-sm px-3 py-1 gap-1.5";
   const iconCls = size === "sm" ? "w-3 h-3" : "w-4 h-4";
@@ -41,7 +45,7 @@ export function AvailabilityBadge({
         )}
       >
         <CheckCircle2 className={iconCls} />
-        Müsait
+        {t.component.booking.availability_badge.musait}
       </span>
     );
   }

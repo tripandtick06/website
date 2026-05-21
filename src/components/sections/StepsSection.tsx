@@ -1,4 +1,7 @@
+"use client";
+
 import { ListFilter, CalendarCheck, PenLine, CreditCard, MailCheck } from "lucide-react";
+import { useT } from "@/lib/i18n/I18nProvider";
 
 const STEPS = [
   { num: 1, icon: ListFilter, title: "Hizmeti Seç", desc: "Balon, tur, aktivite veya paket — ihtiyacınıza göre filtreleyin." },
@@ -9,15 +12,16 @@ const STEPS = [
 ];
 
 export function StepsSection() {
+  const t = useT();
   return (
     <section className="section-padding bg-white">
       <div className="container-main">
         <div className="text-center mb-14">
-          <span className="section-tag">Nasıl Çalışır?</span>
+          <span className="section-tag">{t.component.sections.steps.nasil_calisir}</span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Rezervasyon 5 Dakikada
+            {t.component.sections.steps.rezervasyon_dakikada}
           </h2>
-          <p className="text-slate-500 mt-3">Hızlı, kolay ve güvenli. Karmaşık süreç yok.</p>
+          <p className="text-slate-500 mt-3">{t.component.sections.steps.hizli_kolay_guvenli_karmasik}</p>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-0 max-w-5xl mx-auto relative">

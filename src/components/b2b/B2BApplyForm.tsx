@@ -11,6 +11,7 @@
 
 import { useState, type FormEvent } from "react";
 import { CheckCircle2, AlertCircle, Send } from "lucide-react";
+import { useT } from "@/lib/i18n/I18nProvider";
 
 const COUNTRIES = [
   "Türkiye",
@@ -43,6 +44,7 @@ const COUNTRIES = [
 ];
 
 export function B2BApplyForm() {
+  const t = useT();
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -102,7 +104,7 @@ export function B2BApplyForm() {
     <form
       onSubmit={handleSubmit}
       className="bg-white rounded-2xl border border-slate-200 p-7 space-y-4"
-      aria-label="B2B acente başvuru formu"
+      aria-label={t.component.b2b.b2_b_apply_form.form_aria_label_b2b_acente}
     >
       {/* Honeypot */}
       <input type="text" name="_hp" tabIndex={-1} autoComplete="off" className="hidden" />
@@ -110,7 +112,7 @@ export function B2BApplyForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label htmlFor="b2b-name" className="block text-sm font-medium text-slate-700 mb-1">
-            Yetkili Ad Soyad <span className="text-rose-500">*</span>
+            {t.component.b2b.b2_b_apply_form.yetkili_ad_soyad} <span className="text-rose-500">*</span>
           </label>
           <input
             id="b2b-name"
@@ -124,7 +126,7 @@ export function B2BApplyForm() {
         </div>
         <div>
           <label htmlFor="b2b-company" className="block text-sm font-medium text-slate-700 mb-1">
-            Şirket Adı <span className="text-rose-500">*</span>
+            {t.component.b2b.b2_b_apply_form.sirket_adi} <span className="text-rose-500">*</span>
           </label>
           <input
             id="b2b-company"
@@ -141,7 +143,7 @@ export function B2BApplyForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label htmlFor="b2b-email" className="block text-sm font-medium text-slate-700 mb-1">
-            Kurumsal E-posta <span className="text-rose-500">*</span>
+            {t.component.b2b.b2_b_apply_form.kurumsal_posta} <span className="text-rose-500">*</span>
           </label>
           <input
             id="b2b-email"
@@ -171,7 +173,7 @@ export function B2BApplyForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label htmlFor="b2b-country" className="block text-sm font-medium text-slate-700 mb-1">
-            Ülke <span className="text-rose-500">*</span>
+            {t.component.b2b.b2_b_apply_form.ulke} <span className="text-rose-500">*</span>
           </label>
           <select
             id="b2b-country"
@@ -181,7 +183,7 @@ export function B2BApplyForm() {
             className="w-full px-3 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent bg-white"
           >
             <option value="" disabled>
-              Seçin...
+              {t.component.b2b.b2_b_apply_form.secin}
             </option>
             {COUNTRIES.map((c) => (
               <option key={c} value={c}>
@@ -192,7 +194,7 @@ export function B2BApplyForm() {
         </div>
         <div>
           <label htmlFor="b2b-license" className="block text-sm font-medium text-slate-700 mb-1">
-            Acente Lisans No <span className="text-rose-500">*</span>
+            {t.component.b2b.b2_b_apply_form.acente_lisans_no} <span className="text-rose-500">*</span>
           </label>
           <input
             id="b2b-license"
@@ -201,7 +203,7 @@ export function B2BApplyForm() {
             required
             minLength={2}
             maxLength={80}
-            placeholder="TÜRSAB A-XXXX veya yerel lisans"
+            placeholder={t.component.b2b.b2_b_apply_form.input_placeholder_tursab_xxxx}
             className="w-full px-3 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
           />
         </div>
@@ -229,11 +231,11 @@ export function B2BApplyForm() {
         {submitting ? "Gönderiliyor..." : "Başvuruyu Gönder"}
       </button>
       <p className="text-xs text-slate-500 text-center">
-        Başvurunuzla{" "}
+        {t.component.b2b.b2_b_apply_form.basvurunuzla}{" "}
         <a href="/kullanim-sartlari" className="underline hover:text-slate-700">
-          kullanım şartlarını
+          {t.component.b2b.b2_b_apply_form.kullanim_sartlarini}
         </a>{" "}
-        kabul etmiş sayılırsınız.
+        {t.component.b2b.b2_b_apply_form.kabul_etmis_sayilirsiniz}
       </p>
     </form>
   );

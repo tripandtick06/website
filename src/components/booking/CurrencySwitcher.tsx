@@ -10,6 +10,7 @@
 import { useEffect, useRef, useState } from "react";
 import { ChevronDown, CircleDollarSign } from "lucide-react";
 import { useCurrency, CURRENCY_LABELS, type CurrencyCode } from "@/lib/currency";
+import { useT } from "@/lib/i18n/I18nProvider";
 import { cn } from "@/lib/utils";
 
 const ORDER: CurrencyCode[] = ["EUR", "TRY", "USD", "GBP"];
@@ -19,6 +20,7 @@ interface Props {
 }
 
 export function CurrencySwitcher({ variant = "footer" }: Props) {
+  const t = useT();
   const { currency, setCurrency, ready } = useCurrency();
   const [open, setOpen] = useState(false);
   const wrapRef = useRef<HTMLDivElement | null>(null);
@@ -54,7 +56,7 @@ export function CurrencySwitcher({ variant = "footer" }: Props) {
         className={buttonCls}
         aria-haspopup="listbox"
         aria-expanded={open}
-        aria-label="Para birimi"
+        aria-label={t.component.booking.currency_switcher.button_aria_label_para_birimi}
         disabled={!ready}
       >
         <CircleDollarSign className={variant === "header" ? "w-4 h-4" : "w-3.5 h-3.5"} />

@@ -13,6 +13,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { ChevronLeft, ChevronRight, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useT } from "@/lib/i18n/I18nProvider";
 import type { AvailabilityStatus } from "@/data/availability";
 
 interface DayData {
@@ -97,6 +98,7 @@ export function AvailabilityCalendar({
   maxDate,
   className,
 }: AvailabilityCalendarProps) {
+  const t = useT();
   const effectiveMin = minDate || tomorrowIso();
   const effectiveMax = maxDate || plusDaysIso(todayIso(), 120);
   const today = todayIso();
@@ -178,19 +180,19 @@ export function AvailabilityCalendar({
           type="button"
           onClick={goPrev}
           className="w-9 h-9 rounded-full hover:bg-slate-100 flex items-center justify-center text-slate-600 disabled:opacity-30"
-          aria-label="Önceki ay"
+          aria-label={t.component.booking.availability_calendar.button_aria_label_onceki_ay}
         >
           <ChevronLeft className="w-4 h-4" />
         </button>
         <div className="text-sm font-semibold text-slate-800 flex items-center gap-2">
           {loading && <Loader2 className="w-3.5 h-3.5 animate-spin text-amber-500" />}
-          <span>Müsait Tarihler</span>
+          <span>{t.component.booking.availability_calendar.musait_tarihler}</span>
         </div>
         <button
           type="button"
           onClick={goNext}
           className="w-9 h-9 rounded-full hover:bg-slate-100 flex items-center justify-center text-slate-600 disabled:opacity-30"
-          aria-label="Sonraki ay"
+          aria-label={t.component.booking.availability_calendar.button_aria_label_sonraki_ay}
         >
           <ChevronRight className="w-4 h-4" />
         </button>
@@ -220,10 +222,10 @@ export function AvailabilityCalendar({
       </div>
 
       <div className="px-4 pb-4 flex flex-wrap items-center gap-3 text-xs">
-        <LegendDot className="bg-emerald-100 border-emerald-300" label="Müsait" />
-        <LegendDot className="bg-amber-100 border-amber-300" label="Sınırlı" />
+        <LegendDot className="bg-emerald-100 border-emerald-300" label={t.component.booking.availability_calendar.legenddot_label_musait} />
+        <LegendDot className="bg-amber-100 border-amber-300" label={t.component.booking.availability_calendar.legenddot_label_sinirli} />
         <LegendDot className="bg-rose-100 border-rose-300" label="Dolu" />
-        <LegendDot className="bg-slate-100 border-slate-200" label="Geçmiş / Kapalı" />
+        <LegendDot className="bg-slate-100 border-slate-200" label={t.component.booking.availability_calendar.legenddot_label_gecmis_kapali} />
       </div>
     </div>
   );
