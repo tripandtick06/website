@@ -76,6 +76,7 @@ function assertParity(data) {
   const skipped = [];
   for (const ns of trNs) {
     const trKeys = Object.keys(data.tr[ns]);
+    if (trKeys.length === 0) continue; // empty namespace — nothing to merge
     let parityOk = true;
     for (const loc of LOCALES) {
       if (loc === "tr") continue;
@@ -172,60 +173,83 @@ function findLocaleBlocks(srcText) {
   return blocks;
 }
 
-function existingTopLevelKeys(srcText, block) {
-  const lines = srcText.split("\n");
-  const inner = lines.slice(block.startLine + 1, block.endLine);
-  const keys = new Set();
-  let depth = 0;
-  for (const line of inner) {
-    if (depth === 0) {
-      const m = line.match(/^    ([a-zA-Z_$][a-zA-Z0-9_$]*|"[^"]+")\s*:/);
-      if (m) keys.add(m[1].replace(/"/g, ""));
+function escRe(s) {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+// Find direct child `key` within block [start,end) at the given indent.
+// Returns { kind:"object", open, close } | { kind:"leaf", line } | null.
+// Brace counting assumes any `{`/`}` inside string values is balanced on its
+// own line (true for `{count}`-style placeholders) — same assumption as
+// findLocaleBlocks.
+function findKeyBlock(lines, start, end, indent, key) {
+  const pad = " ".repeat(indent);
+  const keyPat = `(?:${escRe(key)}|"${escRe(key)}")`;
+  const objRe = new RegExp(`^${pad}${keyPat}:\\s*\\{\\s*$`);
+  const leafRe = new RegExp(`^${pad}${keyPat}:\\s`);
+  for (let i = start; i < end && i < lines.length; i++) {
+    if (objRe.test(lines[i])) {
+      let depth = 1;
+      let j = i + 1;
+      while (j < lines.length) {
+        depth +=
+          (lines[j].match(/\{/g) || []).length -
+          (lines[j].match(/\}/g) || []).length;
+        if (depth === 0) break;
+        j++;
+      }
+      return { kind: "object", open: i, close: j };
     }
-    depth += (line.match(/\{/g) || []).length - (line.match(/\}/g) || []).length;
-    if (depth < 0) depth = 0;
+    if (leafRe.test(lines[i])) return { kind: "leaf", line: i };
   }
-  return keys;
+  return null;
 }
 
-function insertIntoBlock(srcText, block, newKeys) {
-  const lines = srcText.split("\n");
-  const insertions = [];
-  for (const [topKey, treeForTopKey] of Object.entries(newKeys)) {
-    const safeKey = /^[a-zA-Z_$][a-zA-Z0-9_$]*$/.test(topKey) ? topKey : `"${topKey}"`;
-    const inner = serializeTree(treeForTopKey, 4);
-    insertions.push(`    ${safeKey}: ${inner},`);
+function countLeaves(v) {
+  if (v && typeof v === "object" && !Array.isArray(v)) {
+    return Object.values(v).reduce((a, x) => a + countLeaves(x), 0);
   }
-  const before = lines.slice(0, block.endLine);
-  const after = lines.slice(block.endLine);
-  return [...before, ...insertions, ...after].join("\n");
+  return 1;
 }
 
-function mergeForLocale(srcText, loc, perLocaleFlat) {
+// Recursively merge `tree` into the object block [blockStart,blockEnd) whose
+// direct children sit at `indent` spaces. Mutates `lines` via splice.
+// Existing keys are preserved untouched; only missing sub-namespaces and
+// leaves are inserted (at the end of the relevant block). Returns lines added.
+function deepMerge(lines, blockStart, blockEnd, indent, tree, stats) {
+  let delta = 0;
+  const pad = " ".repeat(indent);
+  for (const key of Object.keys(tree)) {
+    const val = tree[key];
+    const isObj = val && typeof val === "object" && !Array.isArray(val);
+    const found = findKeyBlock(lines, blockStart, blockEnd + delta, indent, key);
+    if (!found) {
+      const safeKey = /^[a-zA-Z_$][a-zA-Z0-9_$]*$/.test(key) ? key : `"${key}"`;
+      const serialized = isObj
+        ? `${pad}${safeKey}: ${serializeTree(val, indent)},`
+        : `${pad}${safeKey}: "${escapeStr(String(val))}",`;
+      const newLines = serialized.split("\n");
+      lines.splice(blockEnd + delta, 0, ...newLines);
+      delta += newLines.length;
+      stats.added += countLeaves(val);
+    } else if (found.kind === "object" && isObj) {
+      delta += deepMerge(lines, found.open + 1, found.close, indent + 2, val, stats);
+    } else {
+      stats.conflicts.push(key);
+    }
+  }
+  return delta;
+}
+
+function mergeForLocale(srcText, loc, perLocaleFlat, stats) {
   const blocks = findLocaleBlocks(srcText);
   const block = blocks[loc];
   if (!block) throw new Error(`Locale block not found for ${loc}`);
-  const existing = existingTopLevelKeys(srcText, block);
-
+  const lines = srcText.split("\n");
   const fullTree = buildNestedTree(perLocaleFlat);
-  const newTopLevel = {};
-  const conflicts = [];
-  for (const k of Object.keys(fullTree)) {
-    if (existing.has(k)) {
-      conflicts.push(k);
-      continue;
-    }
-    newTopLevel[k] = fullTree[k];
-  }
-  if (Object.keys(newTopLevel).length === 0 && conflicts.length === 0) return srcText;
-  if (Object.keys(newTopLevel).length === 0) {
-    console.warn(`[${loc}] no new top-level keys (all conflict): ${conflicts.join(", ")}`);
-    return srcText;
-  }
-  if (conflicts.length > 0) {
-    console.warn(`[${loc}] conflict top-level keys (skipped, manual review): ${conflicts.join(", ")}`);
-  }
-  return insertIntoBlock(srcText, block, newTopLevel);
+  // Top-level keys inside a locale block are indented 4 spaces.
+  deepMerge(lines, block.startLine + 1, block.endLine, 4, fullTree, stats);
+  return lines.join("\n");
 }
 
 function main() {
@@ -253,10 +277,21 @@ function main() {
   }
 
   let src = fs.readFileSync(DICT_FILE, "utf-8");
+  let totalAdded = 0;
   for (const loc of LOCALES) {
     if (Object.keys(filtered[loc]).length === 0) continue;
-    src = mergeForLocale(src, loc, filtered[loc]);
+    const stats = { added: 0, conflicts: [] };
+    src = mergeForLocale(src, loc, filtered[loc], stats);
+    totalAdded += stats.added;
+    const uniqConflicts = [...new Set(stats.conflicts)];
+    console.log(
+      `[${loc}] +${stats.added} leaf` +
+        (uniqConflicts.length
+          ? ` (conflict skipped — existing leaf: ${uniqConflicts.join(", ")})`
+          : "")
+    );
   }
+  console.log(`Total leaves added across locales: ${totalAdded}`);
 
   if (args.dry) {
     const tmp = path.join(__dirname, "dictionaries.preview.ts");

@@ -21,7 +21,34 @@
     "legenddot_label_gecmis_kapali": "已过期 / 已关闭",
     "legenddot_label_musait": "可预订",
     "legenddot_label_sinirli": "名额有限",
-    "musait_tarihler": "可预订日期"
+    "musait_tarihler": "可预订日期",
+    "month_1": "一月",
+    "month_2": "二月",
+    "month_3": "三月",
+    "month_4": "四月",
+    "month_5": "五月",
+    "month_6": "六月",
+    "month_7": "七月",
+    "month_8": "八月",
+    "month_9": "九月",
+    "month_10": "十月",
+    "month_11": "十一月",
+    "month_12": "十二月",
+    "weekday_1": "周一",
+    "weekday_2": "周二",
+    "weekday_3": "周三",
+    "weekday_4": "周四",
+    "weekday_5": "周五",
+    "weekday_6": "周六",
+    "weekday_7": "周日",
+    "legenddot_label_dolu": "已满",
+    "title_kalan_koltuk": "剩余：{remaining} 个座位",
+    "title_musait": "可预订",
+    "title_son_koltuk": "最后 {remaining} 个座位",
+    "title_sinirli": "名额有限",
+    "title_dolu": "已满 — 请选择其他日期",
+    "title_gecmis_tarih": "过去的日期",
+    "title_rezervasyona_kapali": "暂不接受预订"
   },
   "component.booking.cookie_consent": {
     "analitik_anonim_ziyaret": "• 分析（匿名访问统计）— 可选",
@@ -32,7 +59,10 @@
     "pazarlama_kisisellestirilmis": "• 营销（个性化内容）— 可选",
     "performans_sayfa_hizi_olcumu": "• 性能（页面速度测量）— 可选",
     "site_kvkk_gdpr_kapsaminda": "本网站根据KVKK和GDPR使用Cookie以提升您的体验。请查看",
-    "zorunlu_cerezler_oturum": "• 必要Cookie（会话、安全）— 始终启用"
+    "zorunlu_cerezler_oturum": "• 必要Cookie（会话、安全）— 始终启用",
+    "button_gizle": "隐藏",
+    "button_detaylar": "详情",
+    "button_reddet": "拒绝"
   },
   "component.booking.currency_switcher": {
     "button_aria_label_para_birimi": "货币"
@@ -44,7 +74,15 @@
     "onemli": "重要提示：",
     "tarih": "日期",
     "yas_alti_cocuklar_balon": "6 岁以下儿童不能参加热气球飞行。孕妇\n            以及有严重心脏或健康问题的人士不能乘坐。",
-    "yetiskin": "成人"
+    "yetiskin": "成人",
+    "tab_balon_ucusu": "热气球飞行",
+    "tab_otel": "酒店",
+    "tab_aktiviteler": "活动",
+    "tab_gezi_turlari": "观光游",
+    "tab_paketler": "套餐",
+    "button_ara": "搜索",
+    "button_araniyor": "搜索中...",
+    "label_destinasyon": "目的地"
   },
   "component.booking.whats_app_f_a_b": {
     "bize_whatsapp_tan_yazin": "通过 WhatsApp 联系我们"
@@ -76,7 +114,15 @@
     "telefon_posta": "通过电话／电子邮件"
   },
   "component.marketing.newsletter_form": {
-    "form_aria_label_bulten_aboneligi": "电子简报订阅表单"
+    "form_aria_label_bulten_aboneligi": "电子简报订阅表单",
+    "copy_placeholder": "您的电子邮箱地址",
+    "copy_cta": "订阅",
+    "copy_loading": "发送中...",
+    "copy_success": "您的订阅已生效！您的欢迎奖励正在发送至您的邮箱。",
+    "copy_error_generic": "发生错误，请重试。",
+    "copy_error_invalid": "请输入有效的电子邮箱。",
+    "copy_kvkk": "您可以随时取消订阅。",
+    "aria_eposta": "电子邮箱"
   },
   "component.oteller.hotel_inquiry_form": {
     "ad_soyad": "姓名 *",
@@ -100,7 +146,11 @@
   },
   "component.oteller.hotels_grid": {
     "div_aria_label_otel_tipi": "酒店类型筛选",
-    "kategoride_otel_bulunamadi": "此类别下未找到酒店。请选择其他筛选条件。"
+    "kategoride_otel_bulunamadi": "此类别下未找到酒店。请选择其他筛选条件。",
+    "tier_tumu": "全部",
+    "tier_ucuz_ekonomik": "经济实惠",
+    "tier_orta_halli": "中档",
+    "tier_luks_premium": "豪华 / 高端"
   },
   "component.sections.guarantee": {
     "ayni_tarih_ayni_hizmet_daha": "若您能证明同一日期、同一服务有更低的报价\n          — 我们将以更低的价格提供。",
@@ -115,7 +165,13 @@
     "puan_yorum_bonusu": "积分。\n          评价奖励：+",
     "puanlarima_bak": "查看我的积分",
     "sadakat_programi": "会员忠诚计划",
-    "trip_tick_uzerinden_yaptiginiz": "您通过 Trip and Tick 进行的每笔付款都可获得积分。用积分兑换折扣、\n            提升会员等级，还可通过邀请好友赚取额外积分。"
+    "trip_tick_uzerinden_yaptiginiz": "您通过 Trip and Tick 进行的每笔付款都可获得积分。用积分兑换折扣、\n            提升会员等级，还可通过邀请好友赚取额外积分。",
+    "perk_puan_kazan_title": "赚取积分",
+    "perk_puan_kazan_desc": "每消费 €{earnRate} 赚取 {earnRate} 积分。{redemptionRate} 积分 = €1 折扣。",
+    "perk_tier_yukselis_title": "等级升级",
+    "perk_tier_yukselis_desc": "Silver {silverMin}+ · Gold {goldMin}+ · Platinum {platinumMin}+ 积分。自动折扣最高 %{maxDiscount}。",
+    "perk_referans_bonusu_title": "推荐奖励",
+    "perk_referans_bonusu_desc": "您每邀请一位好友，您可获得 +{referralBonus} 积分，您的好友也可获得 +{referralBonus} 积分。"
   },
   "component.sections.newsletter": {
     "bulten": "电子简报"

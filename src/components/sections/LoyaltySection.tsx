@@ -12,29 +12,37 @@ import { Sparkles, Crown, Gift, ChevronRight } from "lucide-react";
 import { LOYALTY_CONFIG } from "@/data/loyalty";
 import { useT } from "@/lib/i18n/I18nProvider";
 
-const PERKS = [
-  {
-    title: "Puan Kazan",
-    desc: `Her €${LOYALTY_CONFIG.earnRate} harcamada ${LOYALTY_CONFIG.earnRate} puan. ${LOYALTY_CONFIG.redemptionRate} puan = €1 indirim.`,
-    icon: Sparkles,
-    color: "bg-amber-100 text-amber-700",
-  },
-  {
-    title: "Tier Yukseliş",
-    desc: `Silver ${LOYALTY_CONFIG.tiers[1].min}+ · Gold ${LOYALTY_CONFIG.tiers[2].min}+ · Platinum ${LOYALTY_CONFIG.tiers[3].min}+ puan. Otomatik %${LOYALTY_CONFIG.tiers[3].discount}'e kadar indirim.`,
-    icon: Crown,
-    color: "bg-violet-100 text-violet-700",
-  },
-  {
-    title: "Referans Bonusu",
-    desc: `Davet ettiginiz her arkadasla siz +${LOYALTY_CONFIG.referralBonus} puan, arkadasiniz da +${LOYALTY_CONFIG.referralBonus} puan kazaniyor.`,
-    icon: Gift,
-    color: "bg-rose-100 text-rose-700",
-  },
-];
-
 export function LoyaltySection() {
   const t = useT();
+  const PERKS = [
+    {
+      title: t.component.sections.loyalty.perk_puan_kazan_title,
+      desc: t.component.sections.loyalty.perk_puan_kazan_desc
+        .replace(/\{earnRate\}/g, String(LOYALTY_CONFIG.earnRate))
+        .replace(/\{redemptionRate\}/g, String(LOYALTY_CONFIG.redemptionRate)),
+      icon: Sparkles,
+      color: "bg-amber-100 text-amber-700",
+    },
+    {
+      title: t.component.sections.loyalty.perk_tier_yukselis_title,
+      desc: t.component.sections.loyalty.perk_tier_yukselis_desc
+        .replace(/\{silverMin\}/g, String(LOYALTY_CONFIG.tiers[1].min))
+        .replace(/\{goldMin\}/g, String(LOYALTY_CONFIG.tiers[2].min))
+        .replace(/\{platinumMin\}/g, String(LOYALTY_CONFIG.tiers[3].min))
+        .replace(/\{maxDiscount\}/g, String(LOYALTY_CONFIG.tiers[3].discount)),
+      icon: Crown,
+      color: "bg-violet-100 text-violet-700",
+    },
+    {
+      title: t.component.sections.loyalty.perk_referans_bonusu_title,
+      desc: t.component.sections.loyalty.perk_referans_bonusu_desc.replace(
+        /\{referralBonus\}/g,
+        String(LOYALTY_CONFIG.referralBonus)
+      ),
+      icon: Gift,
+      color: "bg-rose-100 text-rose-700",
+    },
+  ];
   return (
     <section className="py-16 lg:py-20 bg-gradient-to-br from-amber-50 via-white to-rose-50">
       <div className="container-main">

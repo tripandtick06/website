@@ -87,14 +87,16 @@ export default function CookieConsent() {
               onClick={() => setDetails((d) => !d)}
               className="rounded-lg border border-white/20 px-4 py-2 text-sm font-medium text-white/90 hover:bg-white/10"
             >
-              {details ? "Gizle" : "Detaylar"}
+              {details
+                ? t.component.booking.cookie_consent.button_gizle
+                : t.component.booking.cookie_consent.button_detaylar}
             </button>
             <button
               type="button"
               onClick={reject}
               className="rounded-lg border border-white/20 px-4 py-2 text-sm font-medium text-white/90 hover:bg-white/10"
             >
-              Reddet
+              {t.component.booking.cookie_consent.button_reddet}
             </button>
             <button
               type="button"

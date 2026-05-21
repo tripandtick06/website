@@ -25,13 +25,6 @@ const STORAGE_KEY = "tripandtick:oteller:tierFilter";
 
 type TierId = "all" | "budget" | "mid" | "lux";
 
-const TIERS: { id: TierId; label: string }[] = [
-  { id: "all", label: "Tümü" },
-  { id: "budget", label: "Ucuz / Ekonomik" },
-  { id: "mid", label: "Orta Halli" },
-  { id: "lux", label: "Lüks / Premium" },
-];
-
 function matches(hotel: ServiceItem, tier: TierId): boolean {
   if (tier === "all") return true;
   return hotel.tier === tier;
@@ -39,6 +32,12 @@ function matches(hotel: ServiceItem, tier: TierId): boolean {
 
 export function HotelsGrid({ hotels }: { hotels: ServiceItem[] }) {
   const t = useT();
+  const TIERS: { id: TierId; label: string }[] = [
+    { id: "all", label: t.component.oteller.hotels_grid.tier_tumu },
+    { id: "budget", label: t.component.oteller.hotels_grid.tier_ucuz_ekonomik },
+    { id: "mid", label: t.component.oteller.hotels_grid.tier_orta_halli },
+    { id: "lux", label: t.component.oteller.hotels_grid.tier_luks_premium },
+  ];
   const [type, setType] = useState<TierId>("all");
   const [hydrated, setHydrated] = useState(false);
 
@@ -46,7 +45,7 @@ export function HotelsGrid({ hotels }: { hotels: ServiceItem[] }) {
   useEffect(() => {
     if (typeof window === "undefined") return;
     const saved = window.localStorage.getItem(STORAGE_KEY);
-    if (saved && TIERS.some((t) => t.id === saved)) {
+    if (saved && TIERS.some((tier) => tier.id === saved)) {
       setType(saved as TierId);
     }
     setHydrated(true);
@@ -85,27 +84,27 @@ export function HotelsGrid({ hotels }: { hotels: ServiceItem[] }) {
         role="tablist"
         aria-label={t.component.oteller.hotels_grid.div_aria_label_otel_tipi}
       >
-        {TIERS.map((t) => (
+        {TIERS.map((tier) => (
           <button
-            key={t.id}
-            onClick={() => setType(t.id)}
+            key={tier.id}
+            onClick={() => setType(tier.id)}
             role="tab"
-            aria-selected={type === t.id}
+            aria-selected={type === tier.id}
             className={cn(
               "inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold border transition-colors",
-              type === t.id
+              type === tier.id
                 ? "bg-accent border-accent text-white"
                 : "bg-white border-slate-200 text-slate-700 hover:bg-slate-50"
             )}
           >
-            <span>{t.label}</span>
+            <span>{tier.label}</span>
             <span
               className={cn(
                 "text-[10px] px-1.5 py-0.5 rounded-full font-bold",
-                type === t.id ? "bg-white/20" : "bg-slate-100 text-slate-500"
+                type === tier.id ? "bg-white/20" : "bg-slate-100 text-slate-500"
               )}
             >
-              {counts[t.id]}
+              {counts[tier.id]}
             </span>
           </button>
         ))}

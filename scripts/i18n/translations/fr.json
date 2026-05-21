@@ -21,7 +21,34 @@
     "legenddot_label_gecmis_kapali": "Passé / Fermé",
     "legenddot_label_musait": "Disponible",
     "legenddot_label_sinirli": "Limité",
-    "musait_tarihler": "Dates disponibles"
+    "musait_tarihler": "Dates disponibles",
+    "month_1": "Janvier",
+    "month_2": "Février",
+    "month_3": "Mars",
+    "month_4": "Avril",
+    "month_5": "Mai",
+    "month_6": "Juin",
+    "month_7": "Juillet",
+    "month_8": "Août",
+    "month_9": "Septembre",
+    "month_10": "Octobre",
+    "month_11": "Novembre",
+    "month_12": "Décembre",
+    "weekday_1": "Lun",
+    "weekday_2": "Mar",
+    "weekday_3": "Mer",
+    "weekday_4": "Jeu",
+    "weekday_5": "Ven",
+    "weekday_6": "Sam",
+    "weekday_7": "Dim",
+    "legenddot_label_dolu": "Complet",
+    "title_kalan_koltuk": "Restant : {remaining} places",
+    "title_musait": "Disponible",
+    "title_son_koltuk": "Dernières {remaining} places",
+    "title_sinirli": "Limité",
+    "title_dolu": "Complet — choisissez une autre date",
+    "title_gecmis_tarih": "Date passée",
+    "title_rezervasyona_kapali": "Réservation fermée"
   },
   "component.booking.cookie_consent": {
     "analitik_anonim_ziyaret": "• Analyse (statistiques de visite anonymes) — facultatif",
@@ -32,7 +59,10 @@
     "pazarlama_kisisellestirilmis": "• Marketing (contenu personnalisé) — facultatif",
     "performans_sayfa_hizi_olcumu": "• Performance (mesure de la vitesse des pages) — facultatif",
     "site_kvkk_gdpr_kapsaminda": "Ce site utilise des cookies pour améliorer votre expérience conformément au KVKK et au RGPD. Consultez",
-    "zorunlu_cerezler_oturum": "• Cookies essentiels (session, sécurité) — toujours actifs"
+    "zorunlu_cerezler_oturum": "• Cookies essentiels (session, sécurité) — toujours actifs",
+    "button_gizle": "Masquer",
+    "button_detaylar": "Détails",
+    "button_reddet": "Refuser"
   },
   "component.booking.currency_switcher": {
     "button_aria_label_para_birimi": "Devise"
@@ -44,7 +74,15 @@
     "onemli": "Important :",
     "tarih": "Date",
     "yas_alti_cocuklar_balon": "Les enfants de moins de 6 ans ne peuvent pas participer aux vols en ballon. Les femmes enceintes\n            et les personnes souffrant de problèmes cardiaques ou de santé graves ne peuvent pas voler.",
-    "yetiskin": "Adulte"
+    "yetiskin": "Adulte",
+    "tab_balon_ucusu": "Vol en montgolfière",
+    "tab_otel": "Hôtel",
+    "tab_aktiviteler": "Activités",
+    "tab_gezi_turlari": "Excursions",
+    "tab_paketler": "Forfaits",
+    "button_ara": "Rechercher",
+    "button_araniyor": "Recherche...",
+    "label_destinasyon": "Destination"
   },
   "component.booking.whats_app_f_a_b": {
     "bize_whatsapp_tan_yazin": "Écrivez-nous sur WhatsApp"
@@ -76,7 +114,15 @@
     "telefon_posta": "Par téléphone / e-mail"
   },
   "component.marketing.newsletter_form": {
-    "form_aria_label_bulten_aboneligi": "Formulaire d'abonnement à la newsletter"
+    "form_aria_label_bulten_aboneligi": "Formulaire d'abonnement à la newsletter",
+    "copy_placeholder": "Votre adresse e-mail",
+    "copy_cta": "S'abonner",
+    "copy_loading": "Envoi en cours...",
+    "copy_success": "Votre abonnement est actif ! Votre bonus de bienvenue arrive dans votre boîte mail.",
+    "copy_error_generic": "Une erreur s'est produite, veuillez réessayer.",
+    "copy_error_invalid": "Veuillez saisir une adresse e-mail valide.",
+    "copy_kvkk": "Vous pouvez vous désabonner à tout moment.",
+    "aria_eposta": "E-mail"
   },
   "component.oteller.hotel_inquiry_form": {
     "ad_soyad": "Nom complet *",
@@ -100,7 +146,11 @@
   },
   "component.oteller.hotels_grid": {
     "div_aria_label_otel_tipi": "Filtre par type d'hôtel",
-    "kategoride_otel_bulunamadi": "Aucun hôtel trouvé dans cette catégorie. Veuillez sélectionner un autre filtre."
+    "kategoride_otel_bulunamadi": "Aucun hôtel trouvé dans cette catégorie. Veuillez sélectionner un autre filtre.",
+    "tier_tumu": "Tous",
+    "tier_ucuz_ekonomik": "Économique",
+    "tier_orta_halli": "Milieu de gamme",
+    "tier_luks_premium": "Luxe / Premium"
   },
   "component.sections.guarantee": {
     "ayni_tarih_ayni_hizmet_daha": "Prouvez une offre à un prix inférieur pour la même date et le même service\n          — et nous battrons ce prix.",
@@ -115,7 +165,13 @@
     "puan_yorum_bonusu": "points.\n          Bonus d'avis : +",
     "puanlarima_bak": "Voir mes points",
     "sadakat_programi": "Programme de fidélité",
-    "trip_tick_uzerinden_yaptiginiz": "Chaque paiement effectué via Trip and Tick vous rapporte des points. Utilisez vos points pour des réductions,\n            montez de niveau et gagnez des points supplémentaires en invitant vos amis."
+    "trip_tick_uzerinden_yaptiginiz": "Chaque paiement effectué via Trip and Tick vous rapporte des points. Utilisez vos points pour des réductions,\n            montez de niveau et gagnez des points supplémentaires en invitant vos amis.",
+    "perk_puan_kazan_title": "Gagnez des points",
+    "perk_puan_kazan_desc": "Gagnez {earnRate} points pour chaque €{earnRate} dépensé. {redemptionRate} points = €1 de réduction.",
+    "perk_tier_yukselis_title": "Montée de palier",
+    "perk_tier_yukselis_desc": "Silver {silverMin}+ · Gold {goldMin}+ · Platinum {platinumMin}+ points. Réduction automatique jusqu'à %{maxDiscount}.",
+    "perk_referans_bonusu_title": "Bonus de parrainage",
+    "perk_referans_bonusu_desc": "Pour chaque ami invité, vous gagnez +{referralBonus} points et votre ami gagne aussi +{referralBonus} points."
   },
   "component.sections.newsletter": {
     "bulten": "Newsletter"

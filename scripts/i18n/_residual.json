@@ -1,0 +1,70 @@
+{
+  "component.booking.search": {
+    "tab_balon_ucusu": "Balon Uçuşu",
+    "tab_otel": "Otel",
+    "tab_aktiviteler": "Aktiviteler",
+    "tab_gezi_turlari": "Gezi Turları",
+    "tab_paketler": "Paketler",
+    "button_ara": "Ara",
+    "button_araniyor": "Aranıyor...",
+    "label_destinasyon": "Destinasyon"
+  },
+  "component.oteller.hotels_grid": {
+    "tier_tumu": "Tümü",
+    "tier_ucuz_ekonomik": "Ucuz / Ekonomik",
+    "tier_orta_halli": "Orta Halli",
+    "tier_luks_premium": "Lüks / Premium"
+  },
+  "component.sections.loyalty": {
+    "perk_puan_kazan_title": "Puan Kazan",
+    "perk_puan_kazan_desc": "Her €{earnRate} harcamada {earnRate} puan. {redemptionRate} puan = €1 indirim.",
+    "perk_tier_yukselis_title": "Tier Yükseliş",
+    "perk_tier_yukselis_desc": "Silver {silverMin}+ · Gold {goldMin}+ · Platinum {platinumMin}+ puan. Otomatik %{maxDiscount}'e kadar indirim.",
+    "perk_referans_bonusu_title": "Referans Bonusu",
+    "perk_referans_bonusu_desc": "Davet ettiğiniz her arkadaşla siz +{referralBonus} puan, arkadaşınız da +{referralBonus} puan kazanıyor."
+  },
+  "component.marketing.newsletter_form": {
+    "copy_placeholder": "E-posta adresiniz",
+    "copy_cta": "Abone Ol",
+    "copy_loading": "Gönderiliyor...",
+    "copy_success": "Aboneliğiniz aktif! Hoşgeldin bonusu e-postanıza geliyor.",
+    "copy_error_generic": "Bir hata oluştu, tekrar deneyin.",
+    "copy_error_invalid": "Geçerli bir e-posta girin.",
+    "copy_kvkk": "Aboneliği her zaman iptal edebilirsiniz.",
+    "aria_eposta": "E-posta"
+  },
+  "component.booking.availability_calendar": {
+    "month_1": "Ocak",
+    "month_2": "Şubat",
+    "month_3": "Mart",
+    "month_4": "Nisan",
+    "month_5": "Mayıs",
+    "month_6": "Haziran",
+    "month_7": "Temmuz",
+    "month_8": "Ağustos",
+    "month_9": "Eylül",
+    "month_10": "Ekim",
+    "month_11": "Kasım",
+    "month_12": "Aralık",
+    "weekday_1": "Pzt",
+    "weekday_2": "Sal",
+    "weekday_3": "Çar",
+    "weekday_4": "Per",
+    "weekday_5": "Cum",
+    "weekday_6": "Cmt",
+    "weekday_7": "Paz",
+    "legenddot_label_dolu": "Dolu",
+    "title_kalan_koltuk": "Kalan: {remaining} koltuk",
+    "title_musait": "Müsait",
+    "title_son_koltuk": "Son {remaining} koltuk",
+    "title_sinirli": "Sınırlı",
+    "title_dolu": "Dolu — başka tarih seçin",
+    "title_gecmis_tarih": "Geçmiş tarih",
+    "title_rezervasyona_kapali": "Rezervasyona kapalı"
+  },
+  "component.booking.cookie_consent": {
+    "button_gizle": "Gizle",
+    "button_detaylar": "Detaylar",
+    "button_reddet": "Reddet"
+  }
+}

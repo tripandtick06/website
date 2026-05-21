@@ -32,12 +32,6 @@ export interface AvailabilityCalendarProps {
   className?: string;
 }
 
-const MONTH_NAMES = [
-  "Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran",
-  "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık",
-];
-const WEEKDAY_HEADERS = ["Pzt", "Sal", "Çar", "Per", "Cum", "Cmt", "Paz"];
-
 function pad2(n: number): string {
   return n < 10 ? `0${n}` : String(n);
 }
@@ -224,7 +218,7 @@ export function AvailabilityCalendar({
       <div className="px-4 pb-4 flex flex-wrap items-center gap-3 text-xs">
         <LegendDot className="bg-emerald-100 border-emerald-300" label={t.component.booking.availability_calendar.legenddot_label_musait} />
         <LegendDot className="bg-amber-100 border-amber-300" label={t.component.booking.availability_calendar.legenddot_label_sinirli} />
-        <LegendDot className="bg-rose-100 border-rose-300" label="Dolu" />
+        <LegendDot className="bg-rose-100 border-rose-300" label={t.component.booking.availability_calendar.legenddot_label_dolu} />
         <LegendDot className="bg-slate-100 border-slate-200" label={t.component.booking.availability_calendar.legenddot_label_gecmis_kapali} />
       </div>
     </div>
@@ -250,6 +244,16 @@ function MonthGrid({
   maxDate: string;
   onSelect: (date: string) => void;
 }) {
+  const t = useT();
+  const cal = t.component.booking.availability_calendar;
+  const MONTH_NAMES = [
+    cal.month_1, cal.month_2, cal.month_3, cal.month_4, cal.month_5, cal.month_6,
+    cal.month_7, cal.month_8, cal.month_9, cal.month_10, cal.month_11, cal.month_12,
+  ];
+  const WEEKDAY_HEADERS = [
+    cal.weekday_1, cal.weekday_2, cal.weekday_3, cal.weekday_4,
+    cal.weekday_5, cal.weekday_6, cal.weekday_7,
+  ];
   const cells = useMemo(() => buildMonthGrid(year, month), [year, month]);
   const hasData = Object.keys(data).length > 0;
 
@@ -306,6 +310,8 @@ function CalendarCell({
   maxDate: string;
   onSelect: (date: string) => void;
 }) {
+  const t = useT();
+  const cal = t.component.booking.availability_calendar;
   if (!iso || !inMonth) {
     return <div className="aspect-square" aria-hidden />;
   }
@@ -333,16 +339,22 @@ function CalendarCell({
   if (!outOfRange) {
     if (status === "available") {
       cls = "bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border-emerald-200 cursor-pointer";
-      titleAttr = remaining !== undefined ? `Kalan: ${remaining} koltuk` : "Müsait";
+      titleAttr =
+        remaining !== undefined
+          ? cal.title_kalan_koltuk.replace("{remaining}", String(remaining))
+          : cal.title_musait;
     } else if (status === "limited") {
       cls = "bg-amber-50 hover:bg-amber-100 text-amber-900 border-amber-300 cursor-pointer";
-      titleAttr = remaining !== undefined ? `Son ${remaining} koltuk` : "Sınırlı";
+      titleAttr =
+        remaining !== undefined
+          ? cal.title_son_koltuk.replace("{remaining}", String(remaining))
+          : cal.title_sinirli;
     } else if (status === "full") {
       cls = "bg-rose-50 text-rose-700 border-rose-200 cursor-not-allowed";
-      titleAttr = "Dolu — başka tarih seçin";
+      titleAttr = cal.title_dolu;
     }
   } else {
-    titleAttr = isPast ? "Geçmiş tarih" : "Rezervasyona kapalı";
+    titleAttr = isPast ? cal.title_gecmis_tarih : cal.title_rezervasyona_kapali;
   }
 
   const disabled = outOfRange || status === "full";

@@ -42,3 +42,8 @@ next-env.d.ts
 
 # scripts logs
 scripts/logs/
+
+# i18n pipeline intermediates (regenerable)
+scripts/i18n/_chunks/
+scripts/i18n/translations/_part-*.json
+scripts/i18n/dictionaries.preview.ts

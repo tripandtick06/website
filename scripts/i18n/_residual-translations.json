@@ -1,0 +1,574 @@
+{
+  "component.booking.search": {
+    "tab_balon_ucusu": {
+      "en": "Balloon Flight",
+      "de": "Ballonfahrt",
+      "fr": "Vol en montgolfière",
+      "es": "Vuelo en globo",
+      "nl": "Ballonvaart",
+      "zh": "热气球飞行",
+      "hi": "बैलून उड़ान",
+      "ur": "غبارے کی پرواز"
+    },
+    "tab_otel": {
+      "en": "Hotel",
+      "de": "Hotel",
+      "fr": "Hôtel",
+      "es": "Hotel",
+      "nl": "Hotel",
+      "zh": "酒店",
+      "hi": "होटल",
+      "ur": "ہوٹل"
+    },
+    "tab_aktiviteler": {
+      "en": "Activities",
+      "de": "Aktivitäten",
+      "fr": "Activités",
+      "es": "Actividades",
+      "nl": "Activiteiten",
+      "zh": "活动",
+      "hi": "गतिविधियाँ",
+      "ur": "سرگرمیاں"
+    },
+    "tab_gezi_turlari": {
+      "en": "Tours",
+      "de": "Touren",
+      "fr": "Excursions",
+      "es": "Excursiones",
+      "nl": "Tours",
+      "zh": "观光游",
+      "hi": "टूर",
+      "ur": "سیر و سیاحت"
+    },
+    "tab_paketler": {
+      "en": "Packages",
+      "de": "Pakete",
+      "fr": "Forfaits",
+      "es": "Paquetes",
+      "nl": "Pakketten",
+      "zh": "套餐",
+      "hi": "पैकेज",
+      "ur": "پیکجز"
+    },
+    "button_ara": {
+      "en": "Search",
+      "de": "Suchen",
+      "fr": "Rechercher",
+      "es": "Buscar",
+      "nl": "Zoeken",
+      "zh": "搜索",
+      "hi": "खोजें",
+      "ur": "تلاش کریں"
+    },
+    "button_araniyor": {
+      "en": "Searching...",
+      "de": "Suche läuft...",
+      "fr": "Recherche...",
+      "es": "Buscando...",
+      "nl": "Zoeken...",
+      "zh": "搜索中...",
+      "hi": "खोज रहे हैं...",
+      "ur": "تلاش جاری ہے..."
+    },
+    "label_destinasyon": {
+      "en": "Destination",
+      "de": "Reiseziel",
+      "fr": "Destination",
+      "es": "Destino",
+      "nl": "Bestemming",
+      "zh": "目的地",
+      "hi": "गंतव्य",
+      "ur": "منزل"
+    }
+  },
+  "component.oteller.hotels_grid": {
+    "tier_tumu": {
+      "en": "All",
+      "de": "Alle",
+      "fr": "Tous",
+      "es": "Todos",
+      "nl": "Alle",
+      "zh": "全部",
+      "hi": "सभी",
+      "ur": "تمام"
+    },
+    "tier_ucuz_ekonomik": {
+      "en": "Budget / Economy",
+      "de": "Günstig / Economy",
+      "fr": "Économique",
+      "es": "Económico",
+      "nl": "Voordelig / Economy",
+      "zh": "经济实惠",
+      "hi": "बजट / किफायती",
+      "ur": "کم قیمت / اکانومی"
+    },
+    "tier_orta_halli": {
+      "en": "Mid-Range",
+      "de": "Mittelklasse",
+      "fr": "Milieu de gamme",
+      "es": "Gama media",
+      "nl": "Middenklasse",
+      "zh": "中档",
+      "hi": "मध्यम श्रेणी",
+      "ur": "درمیانی درجہ"
+    },
+    "tier_luks_premium": {
+      "en": "Luxury / Premium",
+      "de": "Luxus / Premium",
+      "fr": "Luxe / Premium",
+      "es": "Lujo / Premium",
+      "nl": "Luxe / Premium",
+      "zh": "豪华 / 高端",
+      "hi": "लक्जरी / प्रीमियम",
+      "ur": "لگژری / پریمیم"
+    }
+  },
+  "component.sections.loyalty": {
+    "perk_puan_kazan_title": {
+      "en": "Earn Points",
+      "de": "Punkte sammeln",
+      "fr": "Gagnez des points",
+      "es": "Gana puntos",
+      "nl": "Punten sparen",
+      "zh": "赚取积分",
+      "hi": "अंक कमाएँ",
+      "ur": "پوائنٹس کمائیں"
+    },
+    "perk_puan_kazan_desc": {
+      "en": "Earn {earnRate} points for every €{earnRate} spent. {redemptionRate} points = €1 discount.",
+      "de": "Sammeln Sie {earnRate} Punkte für jede ausgegebenen €{earnRate}. {redemptionRate} Punkte = €1 Rabatt.",
+      "fr": "Gagnez {earnRate} points pour chaque €{earnRate} dépensé. {redemptionRate} points = €1 de réduction.",
+      "es": "Gana {earnRate} puntos por cada €{earnRate} gastado. {redemptionRate} puntos = €1 de descuento.",
+      "nl": "Verdien {earnRate} punten voor elke bestede €{earnRate}. {redemptionRate} punten = €1 korting.",
+      "zh": "每消费 €{earnRate} 赚取 {earnRate} 积分。{redemptionRate} 积分 = €1 折扣。",
+      "hi": "हर €{earnRate} खर्च पर {earnRate} अंक कमाएँ। {redemptionRate} अंक = €1 छूट।",
+      "ur": "ہر €{earnRate} خرچ پر {earnRate} پوائنٹس کمائیں۔ {redemptionRate} پوائنٹس = €1 رعایت۔"
+    },
+    "perk_tier_yukselis_title": {
+      "en": "Tier Upgrade",
+      "de": "Stufenaufstieg",
+      "fr": "Montée de palier",
+      "es": "Ascenso de nivel",
+      "nl": "Niveau-upgrade",
+      "zh": "等级升级",
+      "hi": "स्तर उन्नयन",
+      "ur": "درجہ بندی میں ترقی"
+    },
+    "perk_tier_yukselis_desc": {
+      "en": "Silver {silverMin}+ · Gold {goldMin}+ · Platinum {platinumMin}+ points. Automatic discount up to %{maxDiscount}.",
+      "de": "Silver {silverMin}+ · Gold {goldMin}+ · Platinum {platinumMin}+ Punkte. Automatischer Rabatt bis zu %{maxDiscount}.",
+      "fr": "Silver {silverMin}+ · Gold {goldMin}+ · Platinum {platinumMin}+ points. Réduction automatique jusqu'à %{maxDiscount}.",
+      "es": "Silver {silverMin}+ · Gold {goldMin}+ · Platinum {platinumMin}+ puntos. Descuento automático de hasta %{maxDiscount}.",
+      "nl": "Silver {silverMin}+ · Gold {goldMin}+ · Platinum {platinumMin}+ punten. Automatische korting tot %{maxDiscount}.",
+      "zh": "Silver {silverMin}+ · Gold {goldMin}+ · Platinum {platinumMin}+ 积分。自动折扣最高 %{maxDiscount}。",
+      "hi": "Silver {silverMin}+ · Gold {goldMin}+ · Platinum {platinumMin}+ अंक। %{maxDiscount} तक स्वचालित छूट।",
+      "ur": "Silver {silverMin}+ · Gold {goldMin}+ · Platinum {platinumMin}+ پوائنٹس۔ %{maxDiscount} تک خودکار رعایت۔"
+    },
+    "perk_referans_bonusu_title": {
+      "en": "Referral Bonus",
+      "de": "Empfehlungsbonus",
+      "fr": "Bonus de parrainage",
+      "es": "Bono por recomendación",
+      "nl": "Verwijzingsbonus",
+      "zh": "推荐奖励",
+      "hi": "रेफरल बोनस",
+      "ur": "ریفرل بونس"
+    },
+    "perk_referans_bonusu_desc": {
+      "en": "For every friend you invite, you earn +{referralBonus} points and your friend earns +{referralBonus} points too.",
+      "de": "Für jeden eingeladenen Freund erhalten Sie +{referralBonus} Punkte und Ihr Freund ebenfalls +{referralBonus} Punkte.",
+      "fr": "Pour chaque ami invité, vous gagnez +{referralBonus} points et votre ami gagne aussi +{referralBonus} points.",
+      "es": "Por cada amigo que invites, ganas +{referralBonus} puntos y tu amigo gana también +{referralBonus} puntos.",
+      "nl": "Voor elke vriend die u uitnodigt, verdient u +{referralBonus} punten en uw vriend ook +{referralBonus} punten.",
+      "zh": "您每邀请一位好友，您可获得 +{referralBonus} 积分，您的好友也可获得 +{referralBonus} 积分。",
+      "hi": "आप जिस भी मित्र को आमंत्रित करते हैं, आपको +{referralBonus} अंक और आपके मित्र को भी +{referralBonus} अंक मिलते हैं।",
+      "ur": "آپ جس بھی دوست کو دعوت دیتے ہیں، آپ کو +{referralBonus} پوائنٹس اور آپ کے دوست کو بھی +{referralBonus} پوائنٹس ملتے ہیں۔"
+    }
+  },
+  "component.marketing.newsletter_form": {
+    "copy_placeholder": {
+      "en": "Your email address",
+      "de": "Ihre E-Mail-Adresse",
+      "fr": "Votre adresse e-mail",
+      "es": "Tu dirección de correo",
+      "nl": "Uw e-mailadres",
+      "zh": "您的电子邮箱地址",
+      "hi": "आपका ईमेल पता",
+      "ur": "آپ کا ای میل پتہ"
+    },
+    "copy_cta": {
+      "en": "Subscribe",
+      "de": "Abonnieren",
+      "fr": "S'abonner",
+      "es": "Suscribirse",
+      "nl": "Abonneren",
+      "zh": "订阅",
+      "hi": "सब्सक्राइब करें",
+      "ur": "سبسکرائب کریں"
+    },
+    "copy_loading": {
+      "en": "Sending...",
+      "de": "Wird gesendet...",
+      "fr": "Envoi en cours...",
+      "es": "Enviando...",
+      "nl": "Verzenden...",
+      "zh": "发送中...",
+      "hi": "भेजा जा रहा है...",
+      "ur": "بھیجا جا رہا ہے..."
+    },
+    "copy_success": {
+      "en": "Your subscription is active! Your welcome bonus is on its way to your inbox.",
+      "de": "Ihr Abonnement ist aktiv! Ihr Willkommensbonus ist auf dem Weg in Ihr Postfach.",
+      "fr": "Votre abonnement est actif ! Votre bonus de bienvenue arrive dans votre boîte mail.",
+      "es": "¡Tu suscripción está activa! Tu bono de bienvenida llegará a tu correo.",
+      "nl": "Uw abonnement is actief! Uw welkomstbonus is onderweg naar uw inbox.",
+      "zh": "您的订阅已生效！您的欢迎奖励正在发送至您的邮箱。",
+      "hi": "आपकी सदस्यता सक्रिय है! आपका स्वागत बोनस आपके इनबॉक्स में आ रहा है।",
+      "ur": "آپ کی رکنیت فعال ہے! آپ کا خوش آمدید بونس آپ کے ان باکس میں آ رہا ہے۔"
+    },
+    "copy_error_generic": {
+      "en": "An error occurred, please try again.",
+      "de": "Ein Fehler ist aufgetreten, bitte versuchen Sie es erneut.",
+      "fr": "Une erreur s'est produite, veuillez réessayer.",
+      "es": "Se produjo un error, inténtalo de nuevo.",
+      "nl": "Er is een fout opgetreden, probeer het opnieuw.",
+      "zh": "发生错误，请重试。",
+      "hi": "एक त्रुटि हुई, कृपया पुनः प्रयास करें।",
+      "ur": "ایک خرابی پیش آئی، براہ کرم دوبارہ کوشش کریں۔"
+    },
+    "copy_error_invalid": {
+      "en": "Please enter a valid email.",
+      "de": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "fr": "Veuillez saisir une adresse e-mail valide.",
+      "es": "Introduce un correo electrónico válido.",
+      "nl": "Voer een geldig e-mailadres in.",
+      "zh": "请输入有效的电子邮箱。",
+      "hi": "कृपया एक मान्य ईमेल दर्ज करें।",
+      "ur": "براہ کرم ایک درست ای میل درج کریں۔"
+    },
+    "copy_kvkk": {
+      "en": "You can unsubscribe at any time.",
+      "de": "Sie können das Abonnement jederzeit kündigen.",
+      "fr": "Vous pouvez vous désabonner à tout moment.",
+      "es": "Puedes cancelar la suscripción en cualquier momento.",
+      "nl": "U kunt zich op elk moment afmelden.",
+      "zh": "您可以随时取消订阅。",
+      "hi": "आप किसी भी समय सदस्यता रद्द कर सकते हैं।",
+      "ur": "آپ کسی بھی وقت رکنیت منسوخ کر سکتے ہیں۔"
+    },
+    "aria_eposta": {
+      "en": "Email",
+      "de": "E-Mail",
+      "fr": "E-mail",
+      "es": "Correo",
+      "nl": "E-mail",
+      "zh": "电子邮箱",
+      "hi": "ईमेल",
+      "ur": "ای میل"
+    }
+  },
+  "component.booking.availability_calendar": {
+    "month_1": {
+      "en": "January",
+      "de": "Januar",
+      "fr": "Janvier",
+      "es": "Enero",
+      "nl": "Januari",
+      "zh": "一月",
+      "hi": "जनवरी",
+      "ur": "جنوری"
+    },
+    "month_2": {
+      "en": "February",
+      "de": "Februar",
+      "fr": "Février",
+      "es": "Febrero",
+      "nl": "Februari",
+      "zh": "二月",
+      "hi": "फरवरी",
+      "ur": "فروری"
+    },
+    "month_3": {
+      "en": "March",
+      "de": "März",
+      "fr": "Mars",
+      "es": "Marzo",
+      "nl": "Maart",
+      "zh": "三月",
+      "hi": "मार्च",
+      "ur": "مارچ"
+    },
+    "month_4": {
+      "en": "April",
+      "de": "April",
+      "fr": "Avril",
+      "es": "Abril",
+      "nl": "April",
+      "zh": "四月",
+      "hi": "अप्रैल",
+      "ur": "اپریل"
+    },
+    "month_5": {
+      "en": "May",
+      "de": "Mai",
+      "fr": "Mai",
+      "es": "Mayo",
+      "nl": "Mei",
+      "zh": "五月",
+      "hi": "मई",
+      "ur": "مئی"
+    },
+    "month_6": {
+      "en": "June",
+      "de": "Juni",
+      "fr": "Juin",
+      "es": "Junio",
+      "nl": "Juni",
+      "zh": "六月",
+      "hi": "जून",
+      "ur": "جون"
+    },
+    "month_7": {
+      "en": "July",
+      "de": "Juli",
+      "fr": "Juillet",
+      "es": "Julio",
+      "nl": "Juli",
+      "zh": "七月",
+      "hi": "जुलाई",
+      "ur": "جولائی"
+    },
+    "month_8": {
+      "en": "August",
+      "de": "August",
+      "fr": "Août",
+      "es": "Agosto",
+      "nl": "Augustus",
+      "zh": "八月",
+      "hi": "अगस्त",
+      "ur": "اگست"
+    },
+    "month_9": {
+      "en": "September",
+      "de": "September",
+      "fr": "Septembre",
+      "es": "Septiembre",
+      "nl": "September",
+      "zh": "九月",
+      "hi": "सितंबर",
+      "ur": "ستمبر"
+    },
+    "month_10": {
+      "en": "October",
+      "de": "Oktober",
+      "fr": "Octobre",
+      "es": "Octubre",
+      "nl": "Oktober",
+      "zh": "十月",
+      "hi": "अक्टूबर",
+      "ur": "اکتوبر"
+    },
+    "month_11": {
+      "en": "November",
+      "de": "November",
+      "fr": "Novembre",
+      "es": "Noviembre",
+      "nl": "November",
+      "zh": "十一月",
+      "hi": "नवंबर",
+      "ur": "نومبر"
+    },
+    "month_12": {
+      "en": "December",
+      "de": "Dezember",
+      "fr": "Décembre",
+      "es": "Diciembre",
+      "nl": "December",
+      "zh": "十二月",
+      "hi": "दिसंबर",
+      "ur": "دسمبر"
+    },
+    "weekday_1": {
+      "en": "Mon",
+      "de": "Mo",
+      "fr": "Lun",
+      "es": "Lun",
+      "nl": "Ma",
+      "zh": "周一",
+      "hi": "सोम",
+      "ur": "پیر"
+    },
+    "weekday_2": {
+      "en": "Tue",
+      "de": "Di",
+      "fr": "Mar",
+      "es": "Mar",
+      "nl": "Di",
+      "zh": "周二",
+      "hi": "मंगल",
+      "ur": "منگل"
+    },
+    "weekday_3": {
+      "en": "Wed",
+      "de": "Mi",
+      "fr": "Mer",
+      "es": "Mié",
+      "nl": "Wo",
+      "zh": "周三",
+      "hi": "बुध",
+      "ur": "بدھ"
+    },
+    "weekday_4": {
+      "en": "Thu",
+      "de": "Do",
+      "fr": "Jeu",
+      "es": "Jue",
+      "nl": "Do",
+      "zh": "周四",
+      "hi": "गुरु",
+      "ur": "جمعرات"
+    },
+    "weekday_5": {
+      "en": "Fri",
+      "de": "Fr",
+      "fr": "Ven",
+      "es": "Vie",
+      "nl": "Vr",
+      "zh": "周五",
+      "hi": "शुक्र",
+      "ur": "جمعہ"
+    },
+    "weekday_6": {
+      "en": "Sat",
+      "de": "Sa",
+      "fr": "Sam",
+      "es": "Sáb",
+      "nl": "Za",
+      "zh": "周六",
+      "hi": "शनि",
+      "ur": "ہفتہ"
+    },
+    "weekday_7": {
+      "en": "Sun",
+      "de": "So",
+      "fr": "Dim",
+      "es": "Dom",
+      "nl": "Zo",
+      "zh": "周日",
+      "hi": "रवि",
+      "ur": "اتوار"
+    },
+    "legenddot_label_dolu": {
+      "en": "Full",
+      "de": "Ausgebucht",
+      "fr": "Complet",
+      "es": "Completo",
+      "nl": "Vol",
+      "zh": "已满",
+      "hi": "भरा हुआ",
+      "ur": "بھرا ہوا"
+    },
+    "title_kalan_koltuk": {
+      "en": "Remaining: {remaining} seats",
+      "de": "Verbleibend: {remaining} Plätze",
+      "fr": "Restant : {remaining} places",
+      "es": "Quedan: {remaining} plazas",
+      "nl": "Resterend: {remaining} plaatsen",
+      "zh": "剩余：{remaining} 个座位",
+      "hi": "शेष: {remaining} सीटें",
+      "ur": "باقی: {remaining} نشستیں"
+    },
+    "title_musait": {
+      "en": "Available",
+      "de": "Verfügbar",
+      "fr": "Disponible",
+      "es": "Disponible",
+      "nl": "Beschikbaar",
+      "zh": "可预订",
+      "hi": "उपलब्ध",
+      "ur": "دستیاب"
+    },
+    "title_son_koltuk": {
+      "en": "Last {remaining} seats",
+      "de": "Letzte {remaining} Plätze",
+      "fr": "Dernières {remaining} places",
+      "es": "Últimas {remaining} plazas",
+      "nl": "Laatste {remaining} plaatsen",
+      "zh": "最后 {remaining} 个座位",
+      "hi": "अंतिम {remaining} सीटें",
+      "ur": "آخری {remaining} نشستیں"
+    },
+    "title_sinirli": {
+      "en": "Limited",
+      "de": "Begrenzt",
+      "fr": "Limité",
+      "es": "Limitado",
+      "nl": "Beperkt",
+      "zh": "名额有限",
+      "hi": "सीमित",
+      "ur": "محدود"
+    },
+    "title_dolu": {
+      "en": "Full — pick another date",
+      "de": "Ausgebucht — anderes Datum wählen",
+      "fr": "Complet — choisissez une autre date",
+      "es": "Completo — elige otra fecha",
+      "nl": "Vol — kies een andere datum",
+      "zh": "已满 — 请选择其他日期",
+      "hi": "भरा हुआ — दूसरी तारीख चुनें",
+      "ur": "بھرا ہوا — کوئی اور تاریخ منتخب کریں"
+    },
+    "title_gecmis_tarih": {
+      "en": "Past date",
+      "de": "Vergangenes Datum",
+      "fr": "Date passée",
+      "es": "Fecha pasada",
+      "nl": "Datum verstreken",
+      "zh": "过去的日期",
+      "hi": "बीती हुई तारीख",
+      "ur": "گزری ہوئی تاریخ"
+    },
+    "title_rezervasyona_kapali": {
+      "en": "Closed for booking",
+      "de": "Für Buchungen geschlossen",
+      "fr": "Réservation fermée",
+      "es": "Cerrado para reservas",
+      "nl": "Gesloten voor boekingen",
+      "zh": "暂不接受预订",
+      "hi": "बुकिंग के लिए बंद",
+      "ur": "بکنگ کے لیے بند"
+    }
+  },
+  "component.booking.cookie_consent": {
+    "button_gizle": {
+      "en": "Hide",
+      "de": "Ausblenden",
+      "fr": "Masquer",
+      "es": "Ocultar",
+      "nl": "Verbergen",
+      "zh": "隐藏",
+      "hi": "छिपाएँ",
+      "ur": "چھپائیں"
+    },
+    "button_detaylar": {
+      "en": "Details",
+      "de": "Details",
+      "fr": "Détails",
+      "es": "Detalles",
+      "nl": "Details",
+      "zh": "详情",
+      "hi": "विवरण",
+      "ur": "تفصیلات"
+    },
+    "button_reddet": {
+      "en": "Decline",
+      "de": "Ablehnen",
+      "fr": "Refuser",
+      "es": "Rechazar",
+      "nl": "Weigeren",
+      "zh": "拒绝",
+      "hi": "अस्वीकार करें",
+      "ur": "مسترد کریں"
+    }
+  }
+}

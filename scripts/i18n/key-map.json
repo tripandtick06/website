@@ -256,6 +256,141 @@
           "col": 16
         }
       ]
+    },
+    "month_1": {
+      "tr": "Ocak",
+      "context": "residual",
+      "type": "manual"
+    },
+    "month_2": {
+      "tr": "Şubat",
+      "context": "residual",
+      "type": "manual"
+    },
+    "month_3": {
+      "tr": "Mart",
+      "context": "residual",
+      "type": "manual"
+    },
+    "month_4": {
+      "tr": "Nisan",
+      "context": "residual",
+      "type": "manual"
+    },
+    "month_5": {
+      "tr": "Mayıs",
+      "context": "residual",
+      "type": "manual"
+    },
+    "month_6": {
+      "tr": "Haziran",
+      "context": "residual",
+      "type": "manual"
+    },
+    "month_7": {
+      "tr": "Temmuz",
+      "context": "residual",
+      "type": "manual"
+    },
+    "month_8": {
+      "tr": "Ağustos",
+      "context": "residual",
+      "type": "manual"
+    },
+    "month_9": {
+      "tr": "Eylül",
+      "context": "residual",
+      "type": "manual"
+    },
+    "month_10": {
+      "tr": "Ekim",
+      "context": "residual",
+      "type": "manual"
+    },
+    "month_11": {
+      "tr": "Kasım",
+      "context": "residual",
+      "type": "manual"
+    },
+    "month_12": {
+      "tr": "Aralık",
+      "context": "residual",
+      "type": "manual"
+    },
+    "weekday_1": {
+      "tr": "Pzt",
+      "context": "residual",
+      "type": "manual"
+    },
+    "weekday_2": {
+      "tr": "Sal",
+      "context": "residual",
+      "type": "manual"
+    },
+    "weekday_3": {
+      "tr": "Çar",
+      "context": "residual",
+      "type": "manual"
+    },
+    "weekday_4": {
+      "tr": "Per",
+      "context": "residual",
+      "type": "manual"
+    },
+    "weekday_5": {
+      "tr": "Cum",
+      "context": "residual",
+      "type": "manual"
+    },
+    "weekday_6": {
+      "tr": "Cmt",
+      "context": "residual",
+      "type": "manual"
+    },
+    "weekday_7": {
+      "tr": "Paz",
+      "context": "residual",
+      "type": "manual"
+    },
+    "legenddot_label_dolu": {
+      "tr": "Dolu",
+      "context": "residual",
+      "type": "manual"
+    },
+    "title_kalan_koltuk": {
+      "tr": "Kalan: {remaining} koltuk",
+      "context": "residual",
+      "type": "manual"
+    },
+    "title_musait": {
+      "tr": "Müsait",
+      "context": "residual",
+      "type": "manual"
+    },
+    "title_son_koltuk": {
+      "tr": "Son {remaining} koltuk",
+      "context": "residual",
+      "type": "manual"
+    },
+    "title_sinirli": {
+      "tr": "Sınırlı",
+      "context": "residual",
+      "type": "manual"
+    },
+    "title_dolu": {
+      "tr": "Dolu — başka tarih seçin",
+      "context": "residual",
+      "type": "manual"
+    },
+    "title_gecmis_tarih": {
+      "tr": "Geçmiş tarih",
+      "context": "residual",
+      "type": "manual"
+    },
+    "title_rezervasyona_kapali": {
+      "tr": "Rezervasyona kapalı",
+      "context": "residual",
+      "type": "manual"
     }
   },
   "component.booking.cookie_consent": {
@@ -384,6 +519,21 @@
           "col": 20
         }
       ]
+    },
+    "button_gizle": {
+      "tr": "Gizle",
+      "context": "residual",
+      "type": "manual"
+    },
+    "button_detaylar": {
+      "tr": "Detaylar",
+      "context": "residual",
+      "type": "manual"
+    },
+    "button_reddet": {
+      "tr": "Reddet",
+      "context": "residual",
+      "type": "manual"
     }
   },
   "component.booking.cookie_consent_mount": {},
@@ -501,6 +651,46 @@
           "col": 91
         }
       ]
+    },
+    "tab_balon_ucusu": {
+      "tr": "Balon Uçuşu",
+      "context": "residual",
+      "type": "manual"
+    },
+    "tab_otel": {
+      "tr": "Otel",
+      "context": "residual",
+      "type": "manual"
+    },
+    "tab_aktiviteler": {
+      "tr": "Aktiviteler",
+      "context": "residual",
+      "type": "manual"
+    },
+    "tab_gezi_turlari": {
+      "tr": "Gezi Turları",
+      "context": "residual",
+      "type": "manual"
+    },
+    "tab_paketler": {
+      "tr": "Paketler",
+      "context": "residual",
+      "type": "manual"
+    },
+    "button_ara": {
+      "tr": "Ara",
+      "context": "residual",
+      "type": "manual"
+    },
+    "button_araniyor": {
+      "tr": "Aranıyor...",
+      "context": "residual",
+      "type": "manual"
+    },
+    "label_destinasyon": {
+      "tr": "Destinasyon",
+      "context": "residual",
+      "type": "manual"
     }
   },
   "component.booking.whats_app_f_a_b": {
@@ -810,6 +1000,46 @@
           "col": 19
         }
       ]
+    },
+    "copy_placeholder": {
+      "tr": "E-posta adresiniz",
+      "context": "residual",
+      "type": "manual"
+    },
+    "copy_cta": {
+      "tr": "Abone Ol",
+      "context": "residual",
+      "type": "manual"
+    },
+    "copy_loading": {
+      "tr": "Gönderiliyor...",
+      "context": "residual",
+      "type": "manual"
+    },
+    "copy_success": {
+      "tr": "Aboneliğiniz aktif! Hoşgeldin bonusu e-postanıza geliyor.",
+      "context": "residual",
+      "type": "manual"
+    },
+    "copy_error_generic": {
+      "tr": "Bir hata oluştu, tekrar deneyin.",
+      "context": "residual",
+      "type": "manual"
+    },
+    "copy_error_invalid": {
+      "tr": "Geçerli bir e-posta girin.",
+      "context": "residual",
+      "type": "manual"
+    },
+    "copy_kvkk": {
+      "tr": "Aboneliği her zaman iptal edebilirsiniz.",
+      "context": "residual",
+      "type": "manual"
+    },
+    "aria_eposta": {
+      "tr": "E-posta",
+      "context": "residual",
+      "type": "manual"
     }
   },
   "component.oteller.hotel_inquiry_form": {
@@ -1094,6 +1324,26 @@
           "col": 40
         }
       ]
+    },
+    "tier_tumu": {
+      "tr": "Tümü",
+      "context": "residual",
+      "type": "manual"
+    },
+    "tier_ucuz_ekonomik": {
+      "tr": "Ucuz / Ekonomik",
+      "context": "residual",
+      "type": "manual"
+    },
+    "tier_orta_halli": {
+      "tr": "Orta Halli",
+      "context": "residual",
+      "type": "manual"
+    },
+    "tier_luks_premium": {
+      "tr": "Lüks / Premium",
+      "context": "residual",
+      "type": "manual"
     }
   },
   "component.sections.categories": {},
@@ -1254,6 +1504,36 @@
           "col": 58
         }
       ]
+    },
+    "perk_puan_kazan_title": {
+      "tr": "Puan Kazan",
+      "context": "residual",
+      "type": "manual"
+    },
+    "perk_puan_kazan_desc": {
+      "tr": "Her €{earnRate} harcamada {earnRate} puan. {redemptionRate} puan = €1 indirim.",
+      "context": "residual",
+      "type": "manual"
+    },
+    "perk_tier_yukselis_title": {
+      "tr": "Tier Yükseliş",
+      "context": "residual",
+      "type": "manual"
+    },
+    "perk_tier_yukselis_desc": {
+      "tr": "Silver {silverMin}+ · Gold {goldMin}+ · Platinum {platinumMin}+ puan. Otomatik %{maxDiscount}'e kadar indirim.",
+      "context": "residual",
+      "type": "manual"
+    },
+    "perk_referans_bonusu_title": {
+      "tr": "Referans Bonusu",
+      "context": "residual",
+      "type": "manual"
+    },
+    "perk_referans_bonusu_desc": {
+      "tr": "Davet ettiğiniz her arkadaşla siz +{referralBonus} puan, arkadaşınız da +{referralBonus} puan kazanıyor.",
+      "context": "residual",
+      "type": "manual"
     }
   },
   "component.sections.mobile_sticky_c_t_a": {},

@@ -24,11 +24,11 @@ export function SearchWidget() {
   const router = useRouter();
 
   const TABS = [
-    { id: "balloon", label: "Balon Uçuşu", icon: Wind, path: "/balonlar" },
-    { id: "hotel", label: "Otel", icon: Hotel, path: "/oteller" },
-    { id: "atv", label: "Aktiviteler", icon: MountainSnow, path: "/aktiviteler" },
-    { id: "tour", label: "Gezi Turları", icon: TreePine, path: "/turlar" },
-    { id: "package", label: "Paketler", icon: Package, path: "/paketler" },
+    { id: "balloon", label: t.component.booking.search.tab_balon_ucusu, icon: Wind, path: "/balonlar" },
+    { id: "hotel", label: t.component.booking.search.tab_otel, icon: Hotel, path: "/oteller" },
+    { id: "atv", label: t.component.booking.search.tab_aktiviteler, icon: MountainSnow, path: "/aktiviteler" },
+    { id: "tour", label: t.component.booking.search.tab_gezi_turlari, icon: TreePine, path: "/turlar" },
+    { id: "package", label: t.component.booking.search.tab_paketler, icon: Package, path: "/paketler" },
   ];
   const [activeTab, setActiveTab] = useState("balloon");
   const [destination, setDestination] = useState("");
@@ -103,7 +103,7 @@ export function SearchWidget() {
         {/* Destination */}
         <div className="space-y-1.5">
           <label className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">
-            Destinasyon
+            {t.component.booking.search.label_destinasyon}
           </label>
           <div className="relative">
             <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
@@ -186,7 +186,9 @@ export function SearchWidget() {
           className="btn-accent flex items-center justify-center gap-2.5 !py-3 lg:col-span-1 sm:col-span-2 lg:!px-8"
         >
           <Search className="w-5 h-5" />
-          {searching ? "Aranıyor..." : "Ara"}
+          {searching
+            ? t.component.booking.search.button_araniyor
+            : t.component.booking.search.button_ara}
         </button>
       </div>
 

@@ -21,7 +21,34 @@
     "legenddot_label_gecmis_kapali": "گزرا ہوا / بند",
     "legenddot_label_musait": "دستیاب",
     "legenddot_label_sinirli": "محدود",
-    "musait_tarihler": "دستیاب تاریخیں"
+    "musait_tarihler": "دستیاب تاریخیں",
+    "month_1": "جنوری",
+    "month_2": "فروری",
+    "month_3": "مارچ",
+    "month_4": "اپریل",
+    "month_5": "مئی",
+    "month_6": "جون",
+    "month_7": "جولائی",
+    "month_8": "اگست",
+    "month_9": "ستمبر",
+    "month_10": "اکتوبر",
+    "month_11": "نومبر",
+    "month_12": "دسمبر",
+    "weekday_1": "پیر",
+    "weekday_2": "منگل",
+    "weekday_3": "بدھ",
+    "weekday_4": "جمعرات",
+    "weekday_5": "جمعہ",
+    "weekday_6": "ہفتہ",
+    "weekday_7": "اتوار",
+    "legenddot_label_dolu": "بھرا ہوا",
+    "title_kalan_koltuk": "باقی: {remaining} نشستیں",
+    "title_musait": "دستیاب",
+    "title_son_koltuk": "آخری {remaining} نشستیں",
+    "title_sinirli": "محدود",
+    "title_dolu": "بھرا ہوا — کوئی اور تاریخ منتخب کریں",
+    "title_gecmis_tarih": "گزری ہوئی تاریخ",
+    "title_rezervasyona_kapali": "بکنگ کے لیے بند"
   },
   "component.booking.cookie_consent": {
     "analitik_anonim_ziyaret": "• تجزیہ (گمنام وزٹ کے اعداد و شمار) — اختیاری",
@@ -32,7 +59,10 @@
     "pazarlama_kisisellestirilmis": "• مارکیٹنگ (ذاتی نوعیت کا مواد) — اختیاری",
     "performans_sayfa_hizi_olcumu": "• کارکردگی (صفحہ کی رفتار کی پیمائش) — اختیاری",
     "site_kvkk_gdpr_kapsaminda": "یہ سائٹ KVKK اور GDPR کے تحت آپ کے تجربے کو بہتر بنانے کے لیے کوکیز استعمال کرتی ہے۔ دیکھیں",
-    "zorunlu_cerezler_oturum": "• ضروری کوکیز (سیشن، سیکیورٹی) — ہمیشہ فعال"
+    "zorunlu_cerezler_oturum": "• ضروری کوکیز (سیشن، سیکیورٹی) — ہمیشہ فعال",
+    "button_gizle": "چھپائیں",
+    "button_detaylar": "تفصیلات",
+    "button_reddet": "مسترد کریں"
   },
   "component.booking.currency_switcher": {
     "button_aria_label_para_birimi": "کرنسی"
@@ -44,7 +74,15 @@
     "onemli": "اہم:",
     "tarih": "تاریخ",
     "yas_alti_cocuklar_balon": "6 سال سے کم عمر کے بچے بیلون پروازوں میں شریک نہیں ہو سکتے۔ حاملہ خواتین\n            اور سنگین دل یا صحت کے مسائل والے افراد پرواز نہیں کر سکتے۔",
-    "yetiskin": "بالغ"
+    "yetiskin": "بالغ",
+    "tab_balon_ucusu": "غبارے کی پرواز",
+    "tab_otel": "ہوٹل",
+    "tab_aktiviteler": "سرگرمیاں",
+    "tab_gezi_turlari": "سیر و سیاحت",
+    "tab_paketler": "پیکجز",
+    "button_ara": "تلاش کریں",
+    "button_araniyor": "تلاش جاری ہے...",
+    "label_destinasyon": "منزل"
   },
   "component.booking.whats_app_f_a_b": {
     "bize_whatsapp_tan_yazin": "ہمیں WhatsApp پر پیغام بھیجیں"
@@ -76,7 +114,15 @@
     "telefon_posta": "فون / ای میل کے ذریعے"
   },
   "component.marketing.newsletter_form": {
-    "form_aria_label_bulten_aboneligi": "نیوز لیٹر سبسکرپشن فارم"
+    "form_aria_label_bulten_aboneligi": "نیوز لیٹر سبسکرپشن فارم",
+    "copy_placeholder": "آپ کا ای میل پتہ",
+    "copy_cta": "سبسکرائب کریں",
+    "copy_loading": "بھیجا جا رہا ہے...",
+    "copy_success": "آپ کی رکنیت فعال ہے! آپ کا خوش آمدید بونس آپ کے ان باکس میں آ رہا ہے۔",
+    "copy_error_generic": "ایک خرابی پیش آئی، براہ کرم دوبارہ کوشش کریں۔",
+    "copy_error_invalid": "براہ کرم ایک درست ای میل درج کریں۔",
+    "copy_kvkk": "آپ کسی بھی وقت رکنیت منسوخ کر سکتے ہیں۔",
+    "aria_eposta": "ای میل"
   },
   "component.oteller.hotel_inquiry_form": {
     "ad_soyad": "پورا نام *",
@@ -100,7 +146,11 @@
   },
   "component.oteller.hotels_grid": {
     "div_aria_label_otel_tipi": "ہوٹل کی قسم کا فلٹر",
-    "kategoride_otel_bulunamadi": "اس زمرے میں کوئی ہوٹل نہیں ملا۔ براہ کرم کوئی اور فلٹر منتخب کریں۔"
+    "kategoride_otel_bulunamadi": "اس زمرے میں کوئی ہوٹل نہیں ملا۔ براہ کرم کوئی اور فلٹر منتخب کریں۔",
+    "tier_tumu": "تمام",
+    "tier_ucuz_ekonomik": "کم قیمت / اکانومی",
+    "tier_orta_halli": "درمیانی درجہ",
+    "tier_luks_premium": "لگژری / پریمیم"
   },
   "component.sections.guarantee": {
     "ayni_tarih_ayni_hizmet_daha": "اسی تاریخ اور اسی خدمت کے لیے کم قیمت والی پیشکش ثابت کریں\n          — اور ہم اس قیمت سے کم پیش کریں گے۔",
@@ -115,7 +165,13 @@
     "puan_yorum_bonusu": "پوائنٹس۔\n          ریویو بونس: +",
     "puanlarima_bak": "میرے پوائنٹس دیکھیں",
     "sadakat_programi": "وفاداری پروگرام",
-    "trip_tick_uzerinden_yaptiginiz": "Trip and Tick کے ذریعے آپ کی جانے والی ہر ادائیگی پر پوائنٹس ملتے ہیں۔ اپنے پوائنٹس رعایت کے لیے استعمال کریں،\n            ٹیئر بڑھائیں اور دوستوں کو مدعو کر کے اضافی پوائنٹس کمائیں۔"
+    "trip_tick_uzerinden_yaptiginiz": "Trip and Tick کے ذریعے آپ کی جانے والی ہر ادائیگی پر پوائنٹس ملتے ہیں۔ اپنے پوائنٹس رعایت کے لیے استعمال کریں،\n            ٹیئر بڑھائیں اور دوستوں کو مدعو کر کے اضافی پوائنٹس کمائیں۔",
+    "perk_puan_kazan_title": "پوائنٹس کمائیں",
+    "perk_puan_kazan_desc": "ہر €{earnRate} خرچ پر {earnRate} پوائنٹس کمائیں۔ {redemptionRate} پوائنٹس = €1 رعایت۔",
+    "perk_tier_yukselis_title": "درجہ بندی میں ترقی",
+    "perk_tier_yukselis_desc": "Silver {silverMin}+ · Gold {goldMin}+ · Platinum {platinumMin}+ پوائنٹس۔ %{maxDiscount} تک خودکار رعایت۔",
+    "perk_referans_bonusu_title": "ریفرل بونس",
+    "perk_referans_bonusu_desc": "آپ جس بھی دوست کو دعوت دیتے ہیں، آپ کو +{referralBonus} پوائنٹس اور آپ کے دوست کو بھی +{referralBonus} پوائنٹس ملتے ہیں۔"
   },
   "component.sections.newsletter": {
     "bulten": "نیوز لیٹر"

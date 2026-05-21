@@ -21,7 +21,34 @@
     "legenddot_label_gecmis_kapali": "Verstreken / Gesloten",
     "legenddot_label_musait": "Beschikbaar",
     "legenddot_label_sinirli": "Beperkt",
-    "musait_tarihler": "Beschikbare data"
+    "musait_tarihler": "Beschikbare data",
+    "month_1": "Januari",
+    "month_2": "Februari",
+    "month_3": "Maart",
+    "month_4": "April",
+    "month_5": "Mei",
+    "month_6": "Juni",
+    "month_7": "Juli",
+    "month_8": "Augustus",
+    "month_9": "September",
+    "month_10": "Oktober",
+    "month_11": "November",
+    "month_12": "December",
+    "weekday_1": "Ma",
+    "weekday_2": "Di",
+    "weekday_3": "Wo",
+    "weekday_4": "Do",
+    "weekday_5": "Vr",
+    "weekday_6": "Za",
+    "weekday_7": "Zo",
+    "legenddot_label_dolu": "Vol",
+    "title_kalan_koltuk": "Resterend: {remaining} plaatsen",
+    "title_musait": "Beschikbaar",
+    "title_son_koltuk": "Laatste {remaining} plaatsen",
+    "title_sinirli": "Beperkt",
+    "title_dolu": "Vol — kies een andere datum",
+    "title_gecmis_tarih": "Datum verstreken",
+    "title_rezervasyona_kapali": "Gesloten voor boekingen"
   },
   "component.booking.cookie_consent": {
     "analitik_anonim_ziyaret": "• Analyse (anonieme bezoekstatistieken) — optioneel",
@@ -32,7 +59,10 @@
     "pazarlama_kisisellestirilmis": "• Marketing (gepersonaliseerde inhoud) — optioneel",
     "performans_sayfa_hizi_olcumu": "• Prestaties (meting van de paginasnelheid) — optioneel",
     "site_kvkk_gdpr_kapsaminda": "Deze site gebruikt cookies om uw ervaring te verbeteren onder de KVKK en de AVG. Zie",
-    "zorunlu_cerezler_oturum": "• Essentiële cookies (sessie, beveiliging) — altijd actief"
+    "zorunlu_cerezler_oturum": "• Essentiële cookies (sessie, beveiliging) — altijd actief",
+    "button_gizle": "Verbergen",
+    "button_detaylar": "Details",
+    "button_reddet": "Weigeren"
   },
   "component.booking.currency_switcher": {
     "button_aria_label_para_birimi": "Valuta"
@@ -44,7 +74,15 @@
     "onemli": "Belangrijk:",
     "tarih": "Datum",
     "yas_alti_cocuklar_balon": "Kinderen onder de 6 jaar mogen niet deelnemen aan ballonvaarten. Zwangere vrouwen\n            en personen met ernstige hart- of gezondheidsproblemen mogen niet mee.",
-    "yetiskin": "Volwassene"
+    "yetiskin": "Volwassene",
+    "tab_balon_ucusu": "Ballonvaart",
+    "tab_otel": "Hotel",
+    "tab_aktiviteler": "Activiteiten",
+    "tab_gezi_turlari": "Tours",
+    "tab_paketler": "Pakketten",
+    "button_ara": "Zoeken",
+    "button_araniyor": "Zoeken...",
+    "label_destinasyon": "Bestemming"
   },
   "component.booking.whats_app_f_a_b": {
     "bize_whatsapp_tan_yazin": "Schrijf ons op WhatsApp"
@@ -76,7 +114,15 @@
     "telefon_posta": "Per telefoon / e-mail"
   },
   "component.marketing.newsletter_form": {
-    "form_aria_label_bulten_aboneligi": "Aanmeldformulier nieuwsbrief"
+    "form_aria_label_bulten_aboneligi": "Aanmeldformulier nieuwsbrief",
+    "copy_placeholder": "Uw e-mailadres",
+    "copy_cta": "Abonneren",
+    "copy_loading": "Verzenden...",
+    "copy_success": "Uw abonnement is actief! Uw welkomstbonus is onderweg naar uw inbox.",
+    "copy_error_generic": "Er is een fout opgetreden, probeer het opnieuw.",
+    "copy_error_invalid": "Voer een geldig e-mailadres in.",
+    "copy_kvkk": "U kunt zich op elk moment afmelden.",
+    "aria_eposta": "E-mail"
   },
   "component.oteller.hotel_inquiry_form": {
     "ad_soyad": "Volledige naam *",
@@ -100,7 +146,11 @@
   },
   "component.oteller.hotels_grid": {
     "div_aria_label_otel_tipi": "Filter op hoteltype",
-    "kategoride_otel_bulunamadi": "Geen hotels gevonden in deze categorie. Selecteer een ander filter."
+    "kategoride_otel_bulunamadi": "Geen hotels gevonden in deze categorie. Selecteer een ander filter.",
+    "tier_tumu": "Alle",
+    "tier_ucuz_ekonomik": "Voordelig / Economy",
+    "tier_orta_halli": "Middenklasse",
+    "tier_luks_premium": "Luxe / Premium"
   },
   "component.sections.guarantee": {
     "ayni_tarih_ayni_hizmet_daha": "Toon een aanbod met een lagere prijs voor dezelfde datum en dezelfde dienst\n          — en wij gaan onder die prijs.",
@@ -115,7 +165,13 @@
     "puan_yorum_bonusu": "punten.\n          Beoordelingsbonus: +",
     "puanlarima_bak": "Mijn punten bekijken",
     "sadakat_programi": "Loyaliteitsprogramma",
-    "trip_tick_uzerinden_yaptiginiz": "Elke betaling die je via Trip and Tick doet, levert punten op. Gebruik je punten voor korting,\n            stijg een niveau en verdien extra punten door je vrienden uit te nodigen."
+    "trip_tick_uzerinden_yaptiginiz": "Elke betaling die je via Trip and Tick doet, levert punten op. Gebruik je punten voor korting,\n            stijg een niveau en verdien extra punten door je vrienden uit te nodigen.",
+    "perk_puan_kazan_title": "Punten sparen",
+    "perk_puan_kazan_desc": "Verdien {earnRate} punten voor elke bestede €{earnRate}. {redemptionRate} punten = €1 korting.",
+    "perk_tier_yukselis_title": "Niveau-upgrade",
+    "perk_tier_yukselis_desc": "Silver {silverMin}+ · Gold {goldMin}+ · Platinum {platinumMin}+ punten. Automatische korting tot %{maxDiscount}.",
+    "perk_referans_bonusu_title": "Verwijzingsbonus",
+    "perk_referans_bonusu_desc": "Voor elke vriend die u uitnodigt, verdient u +{referralBonus} punten en uw vriend ook +{referralBonus} punten."
   },
   "component.sections.newsletter": {
     "bulten": "Nieuwsbrief"

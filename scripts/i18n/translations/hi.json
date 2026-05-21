@@ -21,7 +21,34 @@
     "legenddot_label_gecmis_kapali": "बीता हुआ / बंद",
     "legenddot_label_musait": "उपलब्ध",
     "legenddot_label_sinirli": "सीमित",
-    "musait_tarihler": "उपलब्ध तिथियाँ"
+    "musait_tarihler": "उपलब्ध तिथियाँ",
+    "month_1": "जनवरी",
+    "month_2": "फरवरी",
+    "month_3": "मार्च",
+    "month_4": "अप्रैल",
+    "month_5": "मई",
+    "month_6": "जून",
+    "month_7": "जुलाई",
+    "month_8": "अगस्त",
+    "month_9": "सितंबर",
+    "month_10": "अक्टूबर",
+    "month_11": "नवंबर",
+    "month_12": "दिसंबर",
+    "weekday_1": "सोम",
+    "weekday_2": "मंगल",
+    "weekday_3": "बुध",
+    "weekday_4": "गुरु",
+    "weekday_5": "शुक्र",
+    "weekday_6": "शनि",
+    "weekday_7": "रवि",
+    "legenddot_label_dolu": "भरा हुआ",
+    "title_kalan_koltuk": "शेष: {remaining} सीटें",
+    "title_musait": "उपलब्ध",
+    "title_son_koltuk": "अंतिम {remaining} सीटें",
+    "title_sinirli": "सीमित",
+    "title_dolu": "भरा हुआ — दूसरी तारीख चुनें",
+    "title_gecmis_tarih": "बीती हुई तारीख",
+    "title_rezervasyona_kapali": "बुकिंग के लिए बंद"
   },
   "component.booking.cookie_consent": {
     "analitik_anonim_ziyaret": "• विश्लेषण (गुमनाम विज़िट आँकड़े) — वैकल्पिक",
@@ -32,7 +59,10 @@
     "pazarlama_kisisellestirilmis": "• मार्केटिंग (वैयक्तिकृत सामग्री) — वैकल्पिक",
     "performans_sayfa_hizi_olcumu": "• प्रदर्शन (पृष्ठ गति माप) — वैकल्पिक",
     "site_kvkk_gdpr_kapsaminda": "यह साइट KVKK और GDPR के अंतर्गत आपके अनुभव को बेहतर बनाने के लिए कुकीज़ का उपयोग करती है। देखें",
-    "zorunlu_cerezler_oturum": "• आवश्यक कुकीज़ (सत्र, सुरक्षा) — हमेशा सक्रिय"
+    "zorunlu_cerezler_oturum": "• आवश्यक कुकीज़ (सत्र, सुरक्षा) — हमेशा सक्रिय",
+    "button_gizle": "छिपाएँ",
+    "button_detaylar": "विवरण",
+    "button_reddet": "अस्वीकार करें"
   },
   "component.booking.currency_switcher": {
     "button_aria_label_para_birimi": "मुद्रा"
@@ -44,7 +74,15 @@
     "onemli": "महत्वपूर्ण:",
     "tarih": "तारीख",
     "yas_alti_cocuklar_balon": "6 वर्ष से कम उम्र के बच्चे बैलून उड़ानों में भाग नहीं ले सकते। गर्भवती महिलाएं\n            और गंभीर हृदय या स्वास्थ्य समस्याओं वाले लोग उड़ान नहीं भर सकते।",
-    "yetiskin": "वयस्क"
+    "yetiskin": "वयस्क",
+    "tab_balon_ucusu": "बैलून उड़ान",
+    "tab_otel": "होटल",
+    "tab_aktiviteler": "गतिविधियाँ",
+    "tab_gezi_turlari": "टूर",
+    "tab_paketler": "पैकेज",
+    "button_ara": "खोजें",
+    "button_araniyor": "खोज रहे हैं...",
+    "label_destinasyon": "गंतव्य"
   },
   "component.booking.whats_app_f_a_b": {
     "bize_whatsapp_tan_yazin": "हमें WhatsApp पर संदेश भेजें"
@@ -76,7 +114,15 @@
     "telefon_posta": "फ़ोन / ई-मेल द्वारा"
   },
   "component.marketing.newsletter_form": {
-    "form_aria_label_bulten_aboneligi": "न्यूज़लेटर सदस्यता फ़ॉर्म"
+    "form_aria_label_bulten_aboneligi": "न्यूज़लेटर सदस्यता फ़ॉर्म",
+    "copy_placeholder": "आपका ईमेल पता",
+    "copy_cta": "सब्सक्राइब करें",
+    "copy_loading": "भेजा जा रहा है...",
+    "copy_success": "आपकी सदस्यता सक्रिय है! आपका स्वागत बोनस आपके इनबॉक्स में आ रहा है।",
+    "copy_error_generic": "एक त्रुटि हुई, कृपया पुनः प्रयास करें।",
+    "copy_error_invalid": "कृपया एक मान्य ईमेल दर्ज करें।",
+    "copy_kvkk": "आप किसी भी समय सदस्यता रद्द कर सकते हैं।",
+    "aria_eposta": "ईमेल"
   },
   "component.oteller.hotel_inquiry_form": {
     "ad_soyad": "पूरा नाम *",
@@ -100,7 +146,11 @@
   },
   "component.oteller.hotels_grid": {
     "div_aria_label_otel_tipi": "होटल प्रकार फ़िल्टर",
-    "kategoride_otel_bulunamadi": "इस श्रेणी में कोई होटल नहीं मिला। कृपया कोई अन्य फ़िल्टर चुनें।"
+    "kategoride_otel_bulunamadi": "इस श्रेणी में कोई होटल नहीं मिला। कृपया कोई अन्य फ़िल्टर चुनें।",
+    "tier_tumu": "सभी",
+    "tier_ucuz_ekonomik": "बजट / किफायती",
+    "tier_orta_halli": "मध्यम श्रेणी",
+    "tier_luks_premium": "लक्जरी / प्रीमियम"
   },
   "component.sections.guarantee": {
     "ayni_tarih_ayni_hizmet_daha": "उसी तारीख और उसी सेवा के लिए कम कीमत वाला प्रस्ताव साबित करें\n          — और हम उस कीमत से कम देंगे।",
@@ -115,7 +165,13 @@
     "puan_yorum_bonusu": "अंक।\n          समीक्षा बोनस: +",
     "puanlarima_bak": "मेरे अंक देखें",
     "sadakat_programi": "लॉयल्टी प्रोग्राम",
-    "trip_tick_uzerinden_yaptiginiz": "Trip and Tick के माध्यम से किया गया हर भुगतान आपको अंक दिलाता है। अपने अंकों का उपयोग छूट के लिए करें,\n            टियर बढ़ाएँ और अपने दोस्तों को आमंत्रित करके अतिरिक्त अंक कमाएँ।"
+    "trip_tick_uzerinden_yaptiginiz": "Trip and Tick के माध्यम से किया गया हर भुगतान आपको अंक दिलाता है। अपने अंकों का उपयोग छूट के लिए करें,\n            टियर बढ़ाएँ और अपने दोस्तों को आमंत्रित करके अतिरिक्त अंक कमाएँ।",
+    "perk_puan_kazan_title": "अंक कमाएँ",
+    "perk_puan_kazan_desc": "हर €{earnRate} खर्च पर {earnRate} अंक कमाएँ। {redemptionRate} अंक = €1 छूट।",
+    "perk_tier_yukselis_title": "स्तर उन्नयन",
+    "perk_tier_yukselis_desc": "Silver {silverMin}+ · Gold {goldMin}+ · Platinum {platinumMin}+ अंक। %{maxDiscount} तक स्वचालित छूट।",
+    "perk_referans_bonusu_title": "रेफरल बोनस",
+    "perk_referans_bonusu_desc": "आप जिस भी मित्र को आमंत्रित करते हैं, आपको +{referralBonus} अंक और आपके मित्र को भी +{referralBonus} अंक मिलते हैं।"
   },
   "component.sections.newsletter": {
     "bulten": "न्यूज़लेटर"

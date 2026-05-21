@@ -32,16 +32,6 @@ type FormState =
   | { status: "success"; message: string }
   | { status: "error"; message: string };
 
-const COPY = {
-  placeholder: "E-posta adresiniz",
-  cta: "Abone Ol",
-  loading: "Gönderiliyor...",
-  success: "Aboneliğiniz aktif! Hoşgeldin bonusu e-postanıza geliyor.",
-  errorGeneric: "Bir hata oluştu, tekrar deneyin.",
-  errorInvalid: "Geçerli bir e-posta girin.",
-  kvkk: "Aboneliği her zaman iptal edebilirsiniz.",
-};
-
 function isValidEmail(email: string): boolean {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
 }
@@ -54,6 +44,15 @@ export function NewsletterForm({
   subline,
 }: NewsletterFormProps) {
   const t = useT();
+  const COPY = {
+    placeholder: t.component.marketing.newsletter_form.copy_placeholder,
+    cta: t.component.marketing.newsletter_form.copy_cta,
+    loading: t.component.marketing.newsletter_form.copy_loading,
+    success: t.component.marketing.newsletter_form.copy_success,
+    errorGeneric: t.component.marketing.newsletter_form.copy_error_generic,
+    errorInvalid: t.component.marketing.newsletter_form.copy_error_invalid,
+    kvkk: t.component.marketing.newsletter_form.copy_kvkk,
+  };
   const { locale } = useLocale();
   const [email, setEmail] = useState("");
   const [honeypot, setHoneypot] = useState("");
@@ -142,7 +141,7 @@ export function NewsletterForm({
               placeholder={COPY.placeholder}
               disabled={state.status === "loading"}
               className="w-full pl-10 pr-4 py-3 rounded-xl bg-white text-slate-900 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-white/40 disabled:opacity-60"
-              aria-label="E-posta"
+              aria-label={t.component.marketing.newsletter_form.aria_eposta}
             />
           </label>
           <button
@@ -176,7 +175,7 @@ export function NewsletterForm({
           <h3 className="text-xl font-extrabold text-slate-900 mb-1">{headline}</h3>
         )}
         {subline && <p className="text-sm text-slate-600 mb-4">{subline}</p>}
-        <form onSubmit={handleSubmit} className="space-y-3" aria-label="Bülten aboneliği formu">
+        <form onSubmit={handleSubmit} className="space-y-3" aria-label={t.component.marketing.newsletter_form.form_aria_label_bulten_aboneligi}>
           <input
             type="text"
             name="_hp"
@@ -228,7 +227,7 @@ export function NewsletterForm({
       <form
         onSubmit={handleSubmit}
         className="flex flex-col sm:flex-row gap-2"
-        aria-label="Bülten aboneliği formu"
+        aria-label={t.component.marketing.newsletter_form.form_aria_label_bulten_aboneligi}
       >
         <input
           type="text"
