@@ -197,7 +197,10 @@
     "meta_title_2": "卡帕多奇亚活动",
     "pagehero_description_atv_turlari": "ATV越野车之旅、骑马体验和吉普车越野。专业导游、全程保险、含酒店接送。价格低至 €29 起。",
     "pagehero_highlight_macera": "探险活动",
-    "pagehero_title_kapadokya": "卡帕多奇亚"
+    "pagehero_title_kapadokya": "卡帕多奇亚",
+    "pagehero_tag_aktiviteler": "活动",
+    "breadcrumb_aktiviteler": "活动",
+    "og_image_subtitle": "ATV · 骑马 · 吉普车越野 — 低至€29"
   },
   "page.ara": {
     "meta_desc": "在 Trip and Tick 目录中搜索热气球之旅、酒店、活动、观光游、套餐和接送服务。可按价格、评分、时长和货币筛选。",
@@ -219,7 +222,16 @@
     "pagehero_highlight_programi": "计划",
     "pagehero_tag_acente_programi": "旅行社计划",
     "pagehero_title_b2b_acente": "B2B 旅行社",
-    "zaten_acente_misiniz": "已是合作旅行社？"
+    "zaten_acente_misiniz": "已是合作旅行社？",
+    "breadcrumb_b2b": "B2B",
+    "benefit_toplu_fiyat_title": "批量价格",
+    "benefit_toplu_fiyat_desc": "覆盖所有热气球、游览、酒店和接送服务的竞争性净价。基于销量的额外折扣。",
+    "benefit_rest_api_title": "REST API 接入",
+    "benefit_rest_api_desc": "可用性查询、预订创建、取消 — 通过 JSON API 集成到您的系统。",
+    "benefit_hesap_yoneticisi_title": "专属客户经理",
+    "benefit_hesap_yoneticisi_desc": "土耳其语 + 英语 + 德语支持。7×24小时 WhatsApp + 优先邮件回复。",
+    "benefit_komisyon_title": "%12-18 佣金",
+    "benefit_komisyon_desc": "基于销量和季节的动态佣金。每月自动对账报告。"
   },
   "page.balonlar": {
     "40m_sigorta": "4000万欧元保险",
@@ -240,7 +252,13 @@
     "paket": "4个套餐",
     "paket_karsilastirmasi": "套餐对比",
     "sadece_sivil_havacilik_genel": "我们仅与持有民用航空总局许可证、至少拥有5年经验的运营商合作。\n              无中介佣金 — 价格直接来自运营商。",
-    "standart_ekonomik_ucustan": "从标准经济飞行到浪漫私人吊篮，满足各种预算的选择。\n              所有价格均包含接送、早餐、保险、证书和\n              香槟服务。"
+    "standart_ekonomik_ucustan": "从标准经济飞行到浪漫私人吊篮，满足各种预算的选择。\n              所有价格均包含接送、早餐、保险、证书和\n              香槟服务。",
+    "detay_iletisim": "详情与联系",
+    "detay_rezerve": "详情与预订",
+    "kisi_basi_yetiskin": "每人 / 成人",
+    "kisi_basi_dinamik": "每人（7天内每日变动）",
+    "sss_tag": "常见问题",
+    "lisans_prefix": "许可证"
   },
   "page.balonlar.slug": {
     "3d_secure_odeme": "3D Secure付款",
@@ -261,7 +279,11 @@
     "soru_sor_whatsapp_email": "提问 → WhatsApp / 电子邮件",
     "sure": "时长",
     "tarih_sec_rezerve_et": "选择日期并预订",
-    "tarih_seciminde_gunluk_doluluk": "选择日期时将即时查询每日空位情况。"
+    "tarih_seciminde_gunluk_doluluk": "选择日期时将即时查询每日空位情况。",
+    "balon_turlari": "热气球之旅",
+    "iade_operator_iptali": "%100 退款 — 运营商取消",
+    "ozel_fiyat": "特别价格",
+    "lisans_prefix": "许可证"
   },
   "page.blog": {
     "balon_turlari_gezi_rotalari_otel": "热气球之旅、游览路线、酒店推荐以及更多内容。\n            您的卡帕多奇亚之旅所需的一切尽在这里。",
@@ -278,7 +300,13 @@
     "meta_title_2": "博客 — 卡帕多奇亚旅行指南",
     "seo_agent_yakinda_kapadokya": "SEO Agent 即将发布有关卡帕多奇亚旅行的实用博客文章。\n              请稍后再来查看！",
     "trip_tick_olarak_kapadokya_daki": "在 Trip and Tick，我们与卡帕多奇亚最值得信赖的运营商合作，\n              以最优惠的价格为您带来难忘的体验。凭借 9 家以上的合作热气球运营商、最低\n              价格保证以及 100% 天气取消退款政策，您可以放心预订。",
-    "tumu": "全部 ("
+    "tumu": "全部 (",
+    "category_balon_turlari": "热气球之旅",
+    "category_kapadokya_rehber": "卡帕多奇亚旅游指南",
+    "category_aktiviteler": "活动",
+    "category_konaklama": "住宿",
+    "category_ulasim": "交通",
+    "category_genel": "综合"
   },
   "page.blog.slug": {
     "blog_don": "返回博客",
@@ -336,7 +364,18 @@
     "tercihler_gizlilik_guvenlik": "首选项 → 隐私与安全。",
     "ucuncu_taraf_cerezleri": "第三方 Cookie",
     "yururluk_tarihi_mayis_2026_son": "生效日期：2026 年 5 月 1 日 · 最后更新：2026 年 5 月 15 日",
-    "zorunlu_cerezleri_kapatirsaniz": "如果您关闭必要 Cookie，网站可能无法\n              正常运作（例如支付步骤、会话时长）。"
+    "zorunlu_cerezleri_kapatirsaniz": "如果您关闭必要 Cookie，网站可能无法\n              正常运作（例如支付步骤、会话时长）。",
+    "tag_yasal": "法律",
+    "breadcrumb_cerez_politikasi": "Cookie 政策",
+    "cookie_type_zorunlu_title": "必要 Cookie",
+    "cookie_type_zorunlu_desc": "网站基本功能所必需。会话管理、安全、购物车 — 无法禁用。",
+    "cookie_type_analitik_title": "分析 Cookie",
+    "cookie_type_analitik_desc": "匿名统计网站使用情况（Google Analytics 4）。哪些页面受欢迎，用户在哪个环节离开。",
+    "cookie_type_fonksiyonel_title": "功能 Cookie",
+    "cookie_type_fonksiyonel_desc": "用于记住语言选择、货币和最近搜索等偏好设置。",
+    "cookie_type_pazarlama_title": "营销 Cookie",
+    "cookie_type_pazarlama_desc": "社交媒体集成和广告个性化（仅在同意时激活）。",
+    "pazarlama_label": "营销："
   },
   "page.gizlilik_politikasi": {
     "10_degisiklikler": "10. 变更",
@@ -407,7 +446,13 @@
     "yasal_yukumluluklerin_yerine": "履行法律义务（TÜRSAB、税务）。",
     "yurt_ici_disi_aktarilan": "了解数据在境内/境外转移给的相关方。",
     "yururluk_tarihi_mayis_2026_son": "生效日期：2026 年 5 月 1 日 · 最后更新：2026 年 5 月 15 日",
-    "zarar_olustuysa_giderilmesini": "如造成损害，要求获得赔偿。"
+    "zarar_olustuysa_giderilmesini": "如造成损害，要求获得赔偿。",
+    "tag_yasal": "法律",
+    "breadcrumb_gizlilik_politikasi": "隐私政策",
+    "kimlik_label": "身份：",
+    "pasaport_label": "护照：",
+    "finansal_label": "财务：",
+    "teknik_label": "技术："
   },
   "page.hakkimizda": {
     "bizi_digerlerinden_ayiran_ilke": "让我们与众不同的 4 项原则",
@@ -446,7 +491,27 @@
     "tursab_lisans_no": "TÜRSAB 许可证号",
     "tursab_lisansimiz": "我们的 TÜRSAB 许可证",
     "uygun_fiyatli_seffaf_guvenli": "实惠、透明且\n                安全",
-    "yerel_istihdama_destek": "支持本地就业"
+    "yerel_istihdama_destek": "支持本地就业",
+    "stat_label_mutlu_musteri": "满意客户",
+    "stat_label_musteri_puani": "客户评分",
+    "stat_label_lisansli_operator": "持证运营商",
+    "stat_label_iade_garantisi": "退款保证",
+    "hikayemiz": "我们的故事",
+    "value_title_musteri_once": "客户第一",
+    "value_desc_musteri_once": "每一次预订对于一个家庭或一对情侣来说都是难忘的时刻。我们将这份责任放在首位。",
+    "value_title_guven": "信任",
+    "value_desc_guven": "TÜRSAB 许可证、40M€ 保险、3D Secure 支付、KVKK 合规 — 透明是我们的核心价值。",
+    "value_title_seffaflik": "透明度",
+    "value_desc_seffaflik": "无隐藏费用。价格为最终价格 — 含税、接送和早餐。退订政策明确。",
+    "value_title_en_iyi_fiyat": "最优价格",
+    "value_desc_en_iyi_fiyat": "直接与运营商签约 — 无中间商。最优价格保证：如您找到更低价格，我们将低出 %5。",
+    "adres": "地址",
+    "telefon": "电话",
+    "eposta": "邮件",
+    "misyonumuz": "我们的使命",
+    "vizyonumuz": "我们的愿景",
+    "vizyonumuz_2027": "2027年前",
+    "yuzde_10_15_ortaklik_komisyonu": "%10-15 合作佣金"
   },
   "page.iletisim": {
     "acil_iptal_degisiklik_24": "紧急取消/变更：WhatsApp 全天候服务",
@@ -464,7 +529,17 @@
     "pagehero_tag_iletisim": "联系方式",
     "telefon_09_00_22_00": "电话：09:00 - 22:00（GMT+3）",
     "whatsapp_posta_24": "WhatsApp 与电子邮件：全天候",
-    "yol_tarifi": "路线指引"
+    "yol_tarifi": "路线指引",
+    "pagehero_title_bizimle": "联系我们",
+    "breadcrumb_iletisim": "联系方式",
+    "contact_label_eposta": "邮件",
+    "contact_note_eposta": "4小时内回复（工作时间）",
+    "contact_label_telefon": "电话",
+    "contact_note_telefon": "土耳其语/英语支持",
+    "contact_label_whatsapp": "WhatsApp",
+    "contact_note_whatsapp": "7×24小时即时消息",
+    "contact_label_ofis": "办公室",
+    "contact_note_ofis": "土耳其"
   },
   "page.iptal_iade_politikasi": {
     "10_is_gunu": "5-10 个工作日",
@@ -507,7 +582,22 @@
     "rezervasyon_sonrasi_ortaya": "对于预订后出现的疾病、事故或怀孕等情况，",
     "saglik_raporu_istisnasi": "3. 医疗报告例外情况",
     "talep_onaylanir_onaylanmaz": "申请一经批准，将立即通过电子邮件通知您。",
-    "yururluk_tarihi_mayis_2026_son": "生效日期：2026 年 5 月 1 日 · 最近更新：2026 年 5 月 15 日"
+    "yururluk_tarihi_mayis_2026_son": "生效日期：2026 年 5 月 1 日 · 最近更新：2026 年 5 月 15 日",
+    "policy_row_time_72plus": "提前72小时以上",
+    "policy_row_refund_72plus": "%100 退款",
+    "policy_row_time_24_72": "提前24-72小时",
+    "policy_row_refund_24_72": "%50 退款",
+    "policy_row_time_24_less": "不足24小时",
+    "policy_row_refund_24_less": "不退款",
+    "policy_row_time_operator": "运营商/天气取消",
+    "policy_row_refund_operator": "%100 退款或备选日期",
+    "policy_row_time_saglik": "医疗证明",
+    "policy_row_refund_saglik": "%100 退款",
+    "pagehero_tag_yasal": "法律",
+    "breadcrumb_iptal_iade": "取消与退款",
+    "eposta_label": "邮件：",
+    "whatsapp_label": "WhatsApp：",
+    "yuzde_100_iade_garantisi": "%100 退款保证"
   },
   "page.kapadokya": {
     "araligidir_balon_ucus_oranlari": "— 热气球飞行率达85%以上。",
@@ -538,7 +628,19 @@
     "tarafindan_sunulur_standart_165": "提供。标准套餐起价165欧元、舒适套餐215欧元、豪华套餐295欧元，浪漫私人之旅580欧元起 — 含接送、早餐、保险、证书和香槟服务。",
     "turkiye_nin_ic_anadolu": "，位于土耳其中安纳托利亚地区，并",
     "unesco_dunya_mirasi_listesi_nde": "列入联合国教科文组织世界遗产名录",
-    "yapabilirsiniz": "您可以做什么？"
+    "yapabilirsiniz": "您可以做什么？",
+    "cat_title_balon": "热气球之旅",
+    "cat_desc_balon": "套餐低至€165，9+ 运营商",
+    "cat_title_aktiviteler": "活动",
+    "cat_desc_aktiviteler": "ATV、骑马、吉普车越野 — 低至€29",
+    "cat_title_gezi_turlari": "观光游览",
+    "cat_desc_gezi_turlari": "红色、绿色、日落游览",
+    "cat_title_kombo": "组合套餐",
+    "cat_desc_kombo": "热气球 + 酒店 + 游览超值套餐",
+    "nisan_haziran": "四月至六月",
+    "ve": "和",
+    "kategoriler": "分类",
+    "kapadokya_title": "卡帕多奇亚"
   },
   "page.kullanim_sartlari": {
     "10_uyusmazlik_cozumu": "10. 争议解决",
@@ -587,7 +689,10 @@
     "uyusmazlik_halinde_oncelikle": "如发生争议，请先联系 Trip and Tick 客户支持。\n            如无法解决，由 Nevşehir 消费者仲裁委员会或 Nevşehir 消费者\n            法院管辖。适用法律为土耳其法律。",
     "yas_kilo_limitlerine_uymak_balon": "遵守年龄和体重限制（热气球：6 岁以上）。",
     "yuksek_sezon_nisan_haziran_eylul": "旺季（4-6 月、9-10 月）可能收取附加费用。",
-    "yururluk_tarihi_mayis_2026_son": "生效日期：2026 年 5 月 1 日 · 最后更新：2026 年 5 月 15 日"
+    "yururluk_tarihi_mayis_2026_son": "生效日期：2026 年 5 月 1 日 · 最后更新：2026 年 5 月 15 日",
+    "breadcrumb_name": "使用条款",
+    "kvkk_link_text": "KVKK",
+    "eposta_info": "info@tripandtick.com"
   },
   "page.kvkk": {
     "6698_sayili_kisisel_verilerin": "根据第 6698 号《个人数据保护法》（\"KVKK\"），我们以数据控制者身份\n            声明",
@@ -656,7 +761,17 @@
     "yasal_yukumluluklerin_yerine": "履行法律义务（税务、TÜRSAB）。",
     "yetkili_kamu_kurumlari_yasal": "有权公共机构（依法定请求）。",
     "yurt_ici_disinda_verilerin": "了解数据转移至的境内或境外第三方。",
-    "yururluk_tarihi_mayis_2026_son": "生效日期：2026 年 5 月 1 日 · 最后更新：2026 年 5 月 15 日"
+    "yururluk_tarihi_mayis_2026_son": "生效日期：2026 年 5 月 1 日 · 最后更新：2026 年 5 月 15 日",
+    "adres_label": "地址：",
+    "eposta_label": "邮件：",
+    "telefon_label": "电话：",
+    "eposta_info": "info@tripandtick.com",
+    "telefon_no": "+90 537 464 78 61",
+    "online_onerilir_label": "在线（推荐）：",
+    "veri_haklari_talep_formu": "数据权利申请表",
+    "magic_link_aciklama": "— 数据访问（KVKK m.11/b）或删除（m.11/e）的24小时有效 magic-link。",
+    "posta_label": "邮政：",
+    "kvkk_gov_url_text": "www.kvkk.gov.tr"
   },
   "page.offline": {
     "ana_sayfa": "首页",
@@ -676,7 +791,15 @@
     "sektorel_standartlar": "行业标准",
     "shgm_lisansli_easa_sertifikali": "SHGM 许可，EASA 认证",
     "tum_operatorlerimiz_easa_part": "我们所有的运营商均执行符合 EASA Part-BOP 标准的\n              年度维护计划，聘用 SHGM 认证飞行员，并\n              在配备国际旅行保险的情况下执行飞行。",
-    "yil": "+ 年）"
+    "yil": "+ 年）",
+    "breadcrumb_name": "运营商",
+    "pagehero_highlight_balon_operatoru": "{count}+ 热气球运营商",
+    "pagehero_description_dynamic": "Trip and Tick 与 {count}+ 家持有 TÜRSAB 和 SHGM 执照的优质热气球运营商签有直接代理协议。平均评分 {rating}★，拥有 {reviews}+ 条已验证的评价。",
+    "lisans_prefix": "许可证",
+    "yorum_suffix": "条评价",
+    "balon_suffix": "架气球",
+    "pilot_suffix": "名飞行员",
+    "jsonld_item_list_name": "Trip and Tick 合作热气球运营商"
   },
   "page.operatorler.id": {
     "40m_eur_ucuncu_sahis_sorumluluk": "4000万欧元第三方责任保险",
@@ -699,7 +822,16 @@
     "ucmak_trip_tick_uzerinden_tek": "您可以通过 Trip and Tick 一键预订\n                与之共同飞行。",
     "ucus_yapan_misafirlerden_secili": "来自曾搭乘飞行的宾客的精选评价。",
     "uzmanlik_alanlari": "专长领域",
-    "yil": "+ 年）"
+    "yil": "+ 年）",
+    "yorum": "条评价",
+    "balon_kelimesi": "气球",
+    "pilot_kelimesi": "飞行员",
+    "keyvalue_label_filo": "机队",
+    "keyvalue_label_adres": "地址",
+    "keyvalue_label_telefon": "电话",
+    "keyvalue_label_web": "网站",
+    "keyvalue_label_diller": "语言",
+    "sertifikalar": "认证"
   },
   "page.oteller": {
     "50_partner_otel_anlasmamiz_var": "我们与50多家合作酒店达成协议。请联系我们获取量身定制的推荐 — 我们将为您的预算找到最合适的酒店。",
@@ -712,7 +844,10 @@
     "ozel_otel_talebi_gonder": "发送定制酒店需求",
     "pagehero_description_unesco_mirasi": "联合国教科文组织遗产地区内地道的洞穴客房精品酒店。含早餐、Wi-Fi和空调。以格雷梅、于尔居普和内夫谢希尔为中心。",
     "pagehero_highlight_magara_otelleri": "洞穴酒店",
-    "pagehero_title_kapadokya": "卡帕多奇亚"
+    "pagehero_title_kapadokya": "卡帕多奇亚",
+    "pagehero_tag_oteller": "酒店",
+    "breadcrumb_name": "酒店",
+    "jsonld_item_list_name": "卡帕多奇亚酒店"
   },
   "page.oteller.slug": {
     "degerlendirme": "条评价）",
@@ -721,7 +856,15 @@
     "otel_musaitligi_guncel_fiyat": "酒店空房情况和当前价格因日期而异。请填写旁边的表格 —— 我们将在 24 小时内致电您并",
     "otel_rezervasyonu_telefon_posta": "通过电话/电子邮件预订酒店",
     "paylasacagiz_acil_iletisim": "与您分享。如有紧急事宜，\n                  请直接通过电话或 WhatsApp 联系我们。",
-    "uygun_secenekler_musaitlik": "合适的选择、空房情况及报价"
+    "uygun_secenekler_musaitlik": "合适的选择、空房情况及报价",
+    "olanaklar": "设施",
+    "tier_ucuz_ekonomik": "经济型 / 实惠",
+    "tier_orta_halli": "中档",
+    "tier_luks_premium": "豪华 / 尊享",
+    "tier_standart": "标准",
+    "eposta_buton": "邮件",
+    "whatsapp": "WhatsApp",
+    "oteller_breadcrumb": "酒店"
   },
   "page.paketler": {
     "meta_desc": "卡帕多奇亚全天套餐、蜜月、家庭、探险和求婚套餐。一次预订即享热气球 + 酒店 + 旅游 — 价格优惠。",
@@ -732,7 +875,9 @@
     "pagehero_description_balon_otel": "一次预订即享热气球 + 酒店 + 旅游。蜜月、家庭、探险、求婚和企业活动套餐 — 比分开预订便宜 20-30%。",
     "pagehero_highlight_kombo_paketleri": "组合套餐",
     "pagehero_tag_ozel_paketler": "特别套餐",
-    "pagehero_title_kapadokya": "卡帕多奇亚"
+    "pagehero_title_kapadokya": "卡帕多奇亚",
+    "breadcrumb_paketler": "套餐",
+    "og_image_subtitle": "蜜月 · 家庭 · 冒险 · 求婚"
   },
   "page.rezervasyon.basarili": {
     "meta_desc": "您的预订已成功完成。",
@@ -746,13 +891,16 @@
     "rezervasyon_bilgileriniz": "您的预订信息已保存在浏览器中。\n            重试时您可以从上次中断的地方继续。",
     "sorun_yasiyorsaniz": "如遇到问题：",
     "tekrar_dene": "重试",
-    "whatsapp_destek": "WhatsApp 支持"
+    "whatsapp_destek": "WhatsApp 支持",
+    "bilgi_etiketi": "提示："
   },
   "page.rezervasyon.yeniden_tarih.token": {
     "link_gecersiz": "链接无效",
     "meta_desc": "为您已取消的预订选择替代日期，或申请全额退款。",
     "meta_title": "预订 — 新日期或退款 | Trip and Tick",
-    "whatsapp_iletisim": "通过 WhatsApp 联系"
+    "whatsapp_iletisim": "通过 WhatsApp 联系",
+    "link_dogrulanamadi": "链接无法验证。请使用您邮件中的原始链接。",
+    "link_suresi_dolmus": "此链接已过期。请联系客服。"
   },
   "page.sss": {
     "cevabini_bulamadin": "没有找到您的答案？",
@@ -765,7 +913,13 @@
     "pagehero_description_kapadokya_tatili": "关于卡帕多奇亚假期、热气球之旅预订、支付和取消政策最常见问题的快速解答。",
     "pagehero_highlight_sorulan_sorular": "常见问题",
     "pagehero_title_sik": "热门",
-    "whatsapp_sor": "通过 WhatsApp 提问"
+    "whatsapp_sor": "通过 WhatsApp 提问",
+    "category_balon": "热气球之旅",
+    "category_rezervasyon": "预订",
+    "category_odeme": "付款",
+    "category_iptal": "取消与退款",
+    "category_genel": "综合",
+    "meta_og_image_subtitle": "热气球之旅 · 价格 · 取消 · 付款 — 快速解答"
   },
   "page.transferler": {
     "meta_desc": "内夫谢希尔（NAV）和开塞利（ASR）机场接送。私人轿车、小巴和VIP选择。全天候服务，固定价格，即时预订。",
@@ -775,7 +929,9 @@
     "meta_title_2": "卡帕多奇亚机场接送",
     "pagehero_description_nevsehir_nav": "内夫谢希尔（NAV）30–45分钟和开塞利（ASR）60–75分钟接送服务。私人轿车、小巴和VIP选择。固定价格 — 绝无意外。",
     "pagehero_highlight_ozel_transfer": "私人接送",
-    "pagehero_title_havalimani": "机场"
+    "pagehero_title_havalimani": "机场",
+    "pagehero_tag_transferler": "接送服务",
+    "breadcrumb_name": "接送服务"
   },
   "page.turlar": {
     "meta_desc": "卡帕多奇亚最受欢迎的观光之旅：红线游（格雷梅 + 乌奇希萨尔）、绿线游（伊赫拉拉 + 代林库尤）、日落及摄影之旅。配备导游，含接送。",
@@ -786,7 +942,9 @@
     "pagehero_description_unesco_dunya": "在专业导游的陪同下，探索这片联合国教科文组织世界遗产地区最重要的景点。红线、绿线、日落及专属摄影之旅。",
     "pagehero_highlight_klasik_turlari": "经典之旅",
     "pagehero_tag_gezi_turlari": "观光之旅",
-    "pagehero_title_kapadokya": "卡帕多奇亚"
+    "pagehero_title_kapadokya": "卡帕多奇亚",
+    "breadcrumb_gezi_turlari": "观光游览",
+    "og_image_subtitle": "红色 · 绿色 · 日落 · 摄影游览"
   },
   "page.yorum": {
     "deneyiminizi_paylasin": "分享您的体验",
@@ -798,6 +956,13 @@
     "meta_desc": "分享您的 Trip and Tick 体验。您的评论将在 24 小时内经审核员批准后发布。",
     "meta_title": "撰写您的评论 | Trip and Tick",
     "musteri_yorumu": "客户评论",
-    "trip_tick_yasadiginiz_tatil": "与我们的其他宾客分享您在 Trip and Tick 度过的假期体验。\n            您的评论将在 24 小时内发布。"
+    "trip_tick_yasadiginiz_tatil": "与我们的其他宾客分享您在 Trip and Tick 度过的假期体验。\n            您的评论将在 24 小时内发布。",
+    "featurecard_title_moderasyon": "内容审核"
+  },
+  "page.rezervasyon.slug": {
+    "loading": "加载中...",
+    "meta_desc_template": "{name} 在线预订。{desc}",
+    "meta_title_not_found": "未找到预订 | Trip and Tick",
+    "meta_title_template": "预订 | {name} - Trip and Tick"
   }
 }

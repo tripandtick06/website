@@ -197,7 +197,10 @@
     "meta_title_2": "Cappadocia Activities",
     "pagehero_description_atv_turlari": "ATV tours, horse riding experiences and jeep safari. Professional guides, fully insured, hotel transfer included. Prices from €29.",
     "pagehero_highlight_macera": "Adventure Activities",
-    "pagehero_title_kapadokya": "Cappadocia"
+    "pagehero_title_kapadokya": "Cappadocia",
+    "pagehero_tag_aktiviteler": "Activities",
+    "breadcrumb_aktiviteler": "Activities",
+    "og_image_subtitle": "ATV · Horse Riding · Jeep Safari — from €29"
   },
   "page.ara": {
     "meta_desc": "Search balloon tours, hotels, activities, sightseeing tours, packages and transfers in the Trip and Tick catalogue. Filter by price, rating, duration and currency.",
@@ -219,7 +222,16 @@
     "pagehero_highlight_programi": "Programme",
     "pagehero_tag_acente_programi": "Agency Programme",
     "pagehero_title_b2b_acente": "B2B Agency",
-    "zaten_acente_misiniz": "Already an agency?"
+    "zaten_acente_misiniz": "Already an agency?",
+    "breadcrumb_b2b": "B2B",
+    "benefit_toplu_fiyat_title": "Bulk Pricing",
+    "benefit_toplu_fiyat_desc": "Competitive net prices across all balloon, tour, hotel, and transfer inventory. Volume-based additional discounts.",
+    "benefit_rest_api_title": "REST API Access",
+    "benefit_rest_api_desc": "Availability queries, booking creation, cancellation — integrate with your system via JSON API.",
+    "benefit_hesap_yoneticisi_title": "Dedicated Account Manager",
+    "benefit_hesap_yoneticisi_desc": "Turkish + English + German support. 24/7 WhatsApp + priority email response.",
+    "benefit_komisyon_title": "%12-18 Commission",
+    "benefit_komisyon_desc": "Dynamic commission based on volume + season. Monthly automatic reconciliation report."
   },
   "page.balonlar": {
     "40m_sigorta": "€40M insurance",
@@ -240,7 +252,13 @@
     "paket": "4 Packages",
     "paket_karsilastirmasi": "Package Comparison",
     "sadece_sivil_havacilik_genel": "We work only with operators licensed by the Directorate General of Civil Aviation and with at least 5 years of experience.\n              No middleman commission — the price comes directly from the operator.",
-    "standart_ekonomik_ucustan": "Options to suit every budget, from a standard economy flight to a romantic private basket.\n              All prices include transfer, breakfast, insurance, certificate and\n              champagne service."
+    "standart_ekonomik_ucustan": "Options to suit every budget, from a standard economy flight to a romantic private basket.\n              All prices include transfer, breakfast, insurance, certificate and\n              champagne service.",
+    "detay_iletisim": "Details & Contact",
+    "detay_rezerve": "Details & Book",
+    "kisi_basi_yetiskin": "per person / adult",
+    "kisi_basi_dinamik": "per person (changes daily within 7 days)",
+    "sss_tag": "FAQ",
+    "lisans_prefix": "License"
   },
   "page.balonlar.slug": {
     "3d_secure_odeme": "3D Secure payment",
@@ -261,7 +279,11 @@
     "soru_sor_whatsapp_email": "Ask a question → WhatsApp / Email",
     "sure": "Duration",
     "tarih_sec_rezerve_et": "Select Date & Book",
-    "tarih_seciminde_gunluk_doluluk": "Daily availability is checked instantly when you select a date."
+    "tarih_seciminde_gunluk_doluluk": "Daily availability is checked instantly when you select a date.",
+    "balon_turlari": "Balloon Tours",
+    "iade_operator_iptali": "%100 refund — operator cancellation",
+    "ozel_fiyat": "Special Price",
+    "lisans_prefix": "License"
   },
   "page.blog": {
     "balon_turlari_gezi_rotalari_otel": "Balloon tours, travel routes, hotel recommendations and much more.\n            Everything you need for your Cappadocia trip is right here.",
@@ -278,7 +300,13 @@
     "meta_title_2": "Blog — Cappadocia Travel Guide",
     "seo_agent_yakinda_kapadokya": "SEO Agent will soon create helpful blog posts about travelling in Cappadocia.\n              Check back again!",
     "trip_tick_olarak_kapadokya_daki": "At Trip and Tick, we work with the most trusted operators in Cappadocia to bring you\n              unforgettable experiences at the best prices. With 9+ partner balloon operators, a lowest\n              price guarantee and our 100% weather cancellation refund policy, you can book with confidence.",
-    "tumu": "All ("
+    "tumu": "All (",
+    "category_balon_turlari": "Balloon Tours",
+    "category_kapadokya_rehber": "Cappadocia Guide",
+    "category_aktiviteler": "Activities",
+    "category_konaklama": "Accommodation",
+    "category_ulasim": "Transportation",
+    "category_genel": "General"
   },
   "page.blog.slug": {
     "blog_don": "Back to Blog",
@@ -336,7 +364,18 @@
     "tercihler_gizlilik_guvenlik": "Preferences → Privacy and Security.",
     "ucuncu_taraf_cerezleri": "Third-Party Cookies",
     "yururluk_tarihi_mayis_2026_son": "Effective date: 1 May 2026 · Last updated: 15 May 2026",
-    "zorunlu_cerezleri_kapatirsaniz": "If you disable strictly necessary cookies, the site may not\n              work correctly (e.g. the payment step, session duration)."
+    "zorunlu_cerezleri_kapatirsaniz": "If you disable strictly necessary cookies, the site may not\n              work correctly (e.g. the payment step, session duration).",
+    "tag_yasal": "Legal",
+    "breadcrumb_cerez_politikasi": "Cookie Policy",
+    "cookie_type_zorunlu_title": "Essential Cookies",
+    "cookie_type_zorunlu_desc": "Required for the site's basic functionality. Session management, security, cart — these cannot be disabled.",
+    "cookie_type_analitik_title": "Analytics Cookies",
+    "cookie_type_analitik_desc": "Anonymously measures site usage (Google Analytics 4). Which pages are popular, at what point users leave.",
+    "cookie_type_fonksiyonel_title": "Functional Cookies",
+    "cookie_type_fonksiyonel_desc": "Used to remember preferences such as language selection, currency, and recent searches.",
+    "cookie_type_pazarlama_title": "Marketing Cookies",
+    "cookie_type_pazarlama_desc": "Social media integration and ad personalisation (active only with consent).",
+    "pazarlama_label": "Marketing:"
   },
   "page.gizlilik_politikasi": {
     "10_degisiklikler": "10. Changes",
@@ -407,7 +446,13 @@
     "yasal_yukumluluklerin_yerine": "Fulfilment of legal obligations (TÜRSAB, tax).",
     "yurt_ici_disi_aktarilan": "Know the parties to whom data is transferred domestically or abroad.",
     "yururluk_tarihi_mayis_2026_son": "Effective date: 1 May 2026 · Last updated: 15 May 2026",
-    "zarar_olustuysa_giderilmesini": "Request compensation if damage has occurred."
+    "zarar_olustuysa_giderilmesini": "Request compensation if damage has occurred.",
+    "tag_yasal": "Legal",
+    "breadcrumb_gizlilik_politikasi": "Privacy Policy",
+    "kimlik_label": "Identity:",
+    "pasaport_label": "Passport:",
+    "finansal_label": "Financial:",
+    "teknik_label": "Technical:"
   },
   "page.hakkimizda": {
     "bizi_digerlerinden_ayiran_ilke": "4 Principles That Set Us Apart",
@@ -446,7 +491,27 @@
     "tursab_lisans_no": "TÜRSAB Licence No",
     "tursab_lisansimiz": "our TÜRSAB licence",
     "uygun_fiyatli_seffaf_guvenli": "affordable, transparent and\n                safe",
-    "yerel_istihdama_destek": "support for local employment"
+    "yerel_istihdama_destek": "support for local employment",
+    "stat_label_mutlu_musteri": "Happy Customers",
+    "stat_label_musteri_puani": "Customer Rating",
+    "stat_label_lisansli_operator": "Licensed Operators",
+    "stat_label_iade_garantisi": "Refund Guarantee",
+    "hikayemiz": "Our Story",
+    "value_title_musteri_once": "Customer First",
+    "value_desc_musteri_once": "Every reservation is an unforgettable moment for a family or a couple. We put this responsibility first.",
+    "value_title_guven": "Trust",
+    "value_desc_guven": "TÜRSAB licence, 40M€ insurance, 3D Secure payments, KVKK compliance — transparency is our core value.",
+    "value_title_seffaflik": "Transparency",
+    "value_desc_seffaflik": "No hidden fees. Prices are final — tax, transfer, and breakfast included. Cancellation policy is clear.",
+    "value_title_en_iyi_fiyat": "Best Price",
+    "value_desc_en_iyi_fiyat": "Direct operator agreements — no middlemen. Best price guarantee: if you find lower, we'll beat it by %5.",
+    "adres": "Address",
+    "telefon": "Phone",
+    "eposta": "Email",
+    "misyonumuz": "Our Mission",
+    "vizyonumuz": "Our Vision",
+    "vizyonumuz_2027": "By 2027",
+    "yuzde_10_15_ortaklik_komisyonu": "%10-15 partnership commission"
   },
   "page.iletisim": {
     "acil_iptal_degisiklik_24": "Urgent cancellation/change: 24/7 WhatsApp",
@@ -464,7 +529,17 @@
     "pagehero_tag_iletisim": "Contact",
     "telefon_09_00_22_00": "Phone: 09:00 - 22:00 (GMT+3)",
     "whatsapp_posta_24": "WhatsApp & Email: 24/7",
-    "yol_tarifi": "Directions"
+    "yol_tarifi": "Directions",
+    "pagehero_title_bizimle": "With Us",
+    "breadcrumb_iletisim": "Contact",
+    "contact_label_eposta": "Email",
+    "contact_note_eposta": "Reply within 4 hours (business hours)",
+    "contact_label_telefon": "Phone",
+    "contact_note_telefon": "TR/EN support",
+    "contact_label_whatsapp": "WhatsApp",
+    "contact_note_whatsapp": "24/7 instant messaging",
+    "contact_label_ofis": "Office",
+    "contact_note_ofis": "Türkiye"
   },
   "page.iptal_iade_politikasi": {
     "10_is_gunu": "5-10 business days",
@@ -507,7 +582,22 @@
     "rezervasyon_sonrasi_ortaya": "In cases such as illness, accident or pregnancy arising after the booking,",
     "saglik_raporu_istisnasi": "3. Medical Report Exception",
     "talep_onaylanir_onaylanmaz": "You will be notified by email as soon as the request is approved.",
-    "yururluk_tarihi_mayis_2026_son": "Effective date: 1 May 2026 · Last updated: 15 May 2026"
+    "yururluk_tarihi_mayis_2026_son": "Effective date: 1 May 2026 · Last updated: 15 May 2026",
+    "policy_row_time_72plus": "72+ hours in advance",
+    "policy_row_refund_72plus": "%100 refund",
+    "policy_row_time_24_72": "24-72 hours in advance",
+    "policy_row_refund_24_72": "%50 refund",
+    "policy_row_time_24_less": "Less than 24 hours",
+    "policy_row_refund_24_less": "No refund",
+    "policy_row_time_operator": "Operator/weather cancellation",
+    "policy_row_refund_operator": "%100 refund or alternative date",
+    "policy_row_time_saglik": "Medical report",
+    "policy_row_refund_saglik": "%100 refund",
+    "pagehero_tag_yasal": "Legal",
+    "breadcrumb_iptal_iade": "Cancellation & Refund",
+    "eposta_label": "Email:",
+    "whatsapp_label": "WhatsApp:",
+    "yuzde_100_iade_garantisi": "%100 Refund Guarantee"
   },
   "page.kapadokya": {
     "araligidir_balon_ucus_oranlari": "season — balloon flight rates reach 85%+.",
@@ -538,7 +628,19 @@
     "tarafindan_sunulur_standart_165": "is offered. Prices start from €165 for Standard, €215 for Comfort, €295 for Deluxe and €580 for the Romantic private tour — transfer, breakfast, insurance, certificate and champagne service included.",
     "turkiye_nin_ic_anadolu": ", located in Türkiye's Central Anatolia region and",
     "unesco_dunya_mirasi_listesi_nde": "on the UNESCO World Heritage List",
-    "yapabilirsiniz": "What Can You Do?"
+    "yapabilirsiniz": "What Can You Do?",
+    "cat_title_balon": "Balloon Tours",
+    "cat_desc_balon": "Packages from €165, 9+ operators",
+    "cat_title_aktiviteler": "Activities",
+    "cat_desc_aktiviteler": "ATV, horse riding, jeep safari — from €29",
+    "cat_title_gezi_turlari": "Sightseeing Tours",
+    "cat_desc_gezi_turlari": "Red, Green, sunset tours",
+    "cat_title_kombo": "Combo Packages",
+    "cat_desc_kombo": "Balloon + hotel + tour value packages",
+    "nisan_haziran": "April-June",
+    "ve": "and",
+    "kategoriler": "Categories",
+    "kapadokya_title": "Cappadocia"
   },
   "page.kullanim_sartlari": {
     "10_uyusmazlik_cozumu": "10. Dispute Resolution",
@@ -587,7 +689,10 @@
     "uyusmazlik_halinde_oncelikle": "In case of a dispute, first contact Trip and Tick customer support.\n            If no resolution is found, the Nevşehir Consumer Arbitration Committee or Nevşehir Consumer\n            Courts have jurisdiction. The applicable law is Turkish law.",
     "yas_kilo_limitlerine_uymak_balon": "Complying with age and weight limits (balloon: ages 6+).",
     "yuksek_sezon_nisan_haziran_eylul": "A surcharge may apply during high season (April-June, September-October).",
-    "yururluk_tarihi_mayis_2026_son": "Effective date: 1 May 2026 · Last updated: 15 May 2026"
+    "yururluk_tarihi_mayis_2026_son": "Effective date: 1 May 2026 · Last updated: 15 May 2026",
+    "breadcrumb_name": "Terms of Use",
+    "kvkk_link_text": "KVKK",
+    "eposta_info": "info@tripandtick.com"
   },
   "page.kvkk": {
     "6698_sayili_kisisel_verilerin": "In accordance with Personal Data Protection Law No. 6698 (\"KVKK\"), in our capacity\n            as data controller",
@@ -656,7 +761,17 @@
     "yasal_yukumluluklerin_yerine": "Fulfilment of legal obligations (tax, TÜRSAB).",
     "yetkili_kamu_kurumlari_yasal": "Authorised public institutions (upon legal request).",
     "yurt_ici_disinda_verilerin": "Know the third parties, domestic or abroad, to whom the data is transferred.",
-    "yururluk_tarihi_mayis_2026_son": "Effective date: 1 May 2026 · Last updated: 15 May 2026"
+    "yururluk_tarihi_mayis_2026_son": "Effective date: 1 May 2026 · Last updated: 15 May 2026",
+    "adres_label": "Address:",
+    "eposta_label": "Email:",
+    "telefon_label": "Phone:",
+    "eposta_info": "info@tripandtick.com",
+    "telefon_no": "+90 537 464 78 61",
+    "online_onerilir_label": "Online (recommended):",
+    "veri_haklari_talep_formu": "Data Rights Request Form",
+    "magic_link_aciklama": "— 24-hour approved magic-link for data access (KVKK m.11/b) or deletion (m.11/e).",
+    "posta_label": "Post:",
+    "kvkk_gov_url_text": "www.kvkk.gov.tr"
   },
   "page.offline": {
     "ana_sayfa": "Home",
@@ -676,7 +791,15 @@
     "sektorel_standartlar": "Industry Standards",
     "shgm_lisansli_easa_sertifikali": "SHGM Licensed, EASA Certified",
     "tum_operatorlerimiz_easa_part": "All our operators follow an annual maintenance programme compliant with\n              EASA Part-BOP standards, employ SHGM-certified pilots and\n              operate flights with international travel insurance.",
-    "yil": "+ years)"
+    "yil": "+ years)",
+    "breadcrumb_name": "Operators",
+    "pagehero_highlight_balon_operatoru": "{count}+ Balloon Operators",
+    "pagehero_description_dynamic": "Trip and Tick has direct agency agreements with {count}+ premium balloon operators licensed by TÜRSAB and SHGM. Average {rating}★ with {reviews}+ verified reviews.",
+    "lisans_prefix": "License",
+    "yorum_suffix": "reviews",
+    "balon_suffix": "balloons",
+    "pilot_suffix": "pilots",
+    "jsonld_item_list_name": "Trip and Tick Partner Balloon Operators"
   },
   "page.operatorler.id": {
     "40m_eur_ucuncu_sahis_sorumluluk": "€40M Third-Party Liability Insurance",
@@ -699,7 +822,16 @@
     "ucmak_trip_tick_uzerinden_tek": "you can book in a single click via Trip and Tick\n                to fly with.",
     "ucus_yapan_misafirlerden_secili": "selected reviews from guests who have flown with.",
     "uzmanlik_alanlari": "Areas of Expertise",
-    "yil": "+ years)"
+    "yil": "+ years)",
+    "yorum": "reviews",
+    "balon_kelimesi": "balloon",
+    "pilot_kelimesi": "pilot",
+    "keyvalue_label_filo": "Fleet",
+    "keyvalue_label_adres": "Address",
+    "keyvalue_label_telefon": "Phone",
+    "keyvalue_label_web": "Website",
+    "keyvalue_label_diller": "Languages",
+    "sertifikalar": "Certifications"
   },
   "page.oteller": {
     "50_partner_otel_anlasmamiz_var": "We have agreements with 50+ partner hotels. Get in touch with us for a recommendation tailored to your needs — we will find the right hotel for your budget.",
@@ -712,7 +844,10 @@
     "ozel_otel_talebi_gonder": "Send a Custom Hotel Request",
     "pagehero_description_unesco_mirasi": "Authentic cave-room boutique hotels in the UNESCO heritage region. Breakfast, Wi-Fi and air conditioning included. Centred on Göreme, Ürgüp and Nevşehir.",
     "pagehero_highlight_magara_otelleri": "Cave Hotels",
-    "pagehero_title_kapadokya": "Cappadocia"
+    "pagehero_title_kapadokya": "Cappadocia",
+    "pagehero_tag_oteller": "Hotels",
+    "breadcrumb_name": "Hotels",
+    "jsonld_item_list_name": "Cappadocia Hotels"
   },
   "page.oteller.slug": {
     "degerlendirme": "reviews)",
@@ -721,7 +856,15 @@
     "otel_musaitligi_guncel_fiyat": "Hotel availability and current prices vary by date. Fill in the form alongside — we will call you within 24 hours and",
     "otel_rezervasyonu_telefon_posta": "Hotel booking by phone / email",
     "paylasacagiz_acil_iletisim": "share with you. For urgent enquiries,\n                  contact us directly by phone or WhatsApp.",
-    "uygun_secenekler_musaitlik": "suitable options, availability and a price quote"
+    "uygun_secenekler_musaitlik": "suitable options, availability and a price quote",
+    "olanaklar": "Amenities",
+    "tier_ucuz_ekonomik": "Budget / Economy",
+    "tier_orta_halli": "Mid-Range",
+    "tier_luks_premium": "Luxury / Premium",
+    "tier_standart": "Standard",
+    "eposta_buton": "Email",
+    "whatsapp": "WhatsApp",
+    "oteller_breadcrumb": "Hotels"
   },
   "page.paketler": {
     "meta_desc": "Cappadocia full-day packages, honeymoon, family, adventure and marriage proposal packages. Balloon + hotel + tour in a single booking — at an advantageous price.",
@@ -732,7 +875,9 @@
     "pagehero_description_balon_otel": "Balloon + hotel + tour in a single booking. Honeymoon, family, adventure, marriage proposal and corporate event packages — 20-30% cheaper than booking separately.",
     "pagehero_highlight_kombo_paketleri": "Combo Packages",
     "pagehero_tag_ozel_paketler": "Special Packages",
-    "pagehero_title_kapadokya": "Cappadocia"
+    "pagehero_title_kapadokya": "Cappadocia",
+    "breadcrumb_paketler": "Packages",
+    "og_image_subtitle": "Honeymoon · Family · Adventure · Marriage Proposal"
   },
   "page.rezervasyon.basarili": {
     "meta_desc": "Your booking has been completed successfully.",
@@ -746,13 +891,16 @@
     "rezervasyon_bilgileriniz": "Your booking details are saved in your browser.\n            When you try again you can continue where you left off.",
     "sorun_yasiyorsaniz": "If you are experiencing problems:",
     "tekrar_dene": "Try Again",
-    "whatsapp_destek": "WhatsApp Support"
+    "whatsapp_destek": "WhatsApp Support",
+    "bilgi_etiketi": "Info:"
   },
   "page.rezervasyon.yeniden_tarih.token": {
     "link_gecersiz": "Invalid Link",
     "meta_desc": "Choose an alternative date for your cancelled booking or request a full refund.",
     "meta_title": "Booking — New Date or Refund | Trip and Tick",
-    "whatsapp_iletisim": "Contact via WhatsApp"
+    "whatsapp_iletisim": "Contact via WhatsApp",
+    "link_dogrulanamadi": "Link could not be verified. Please use the original link from your email.",
+    "link_suresi_dolmus": "This link has expired. Please contact customer service."
   },
   "page.sss": {
     "cevabini_bulamadin": "Couldn't find your answer?",
@@ -765,7 +913,13 @@
     "pagehero_description_kapadokya_tatili": "Quick answers to the most frequently asked questions about a Cappadocia holiday, balloon tour bookings, payment and the cancellation policy.",
     "pagehero_highlight_sorulan_sorular": "Asked Questions",
     "pagehero_title_sik": "Frequently",
-    "whatsapp_sor": "Ask via WhatsApp"
+    "whatsapp_sor": "Ask via WhatsApp",
+    "category_balon": "Balloon Tour",
+    "category_rezervasyon": "Reservation",
+    "category_odeme": "Payment",
+    "category_iptal": "Cancellation & Refund",
+    "category_genel": "General",
+    "meta_og_image_subtitle": "Balloon Tour · Price · Cancellation · Payment — Quick Answers"
   },
   "page.transferler": {
     "meta_desc": "Nevşehir (NAV) and Kayseri (ASR) airport transfers. Private car, minibus and VIP options. 24/7 service, fixed price, instant booking.",
@@ -775,7 +929,9 @@
     "meta_title_2": "Cappadocia Airport Transfer",
     "pagehero_description_nevsehir_nav": "Nevşehir (NAV) 30–45 min and Kayseri (ASR) 60–75 min transfer services. Private car, minibus and VIP options. Fixed price — no surprises.",
     "pagehero_highlight_ozel_transfer": "Private Transfer",
-    "pagehero_title_havalimani": "Airport"
+    "pagehero_title_havalimani": "Airport",
+    "pagehero_tag_transferler": "Transfers",
+    "breadcrumb_name": "Transfers"
   },
   "page.turlar": {
     "meta_desc": "Cappadocia's most popular sightseeing tours: Red Tour (Göreme + Uçhisar), Green Tour (Ihlara + Derinkuyu), sunset and photography tours. Guided, transfer included.",
@@ -786,7 +942,9 @@
     "pagehero_description_unesco_dunya": "Discover the most important highlights of this UNESCO World Heritage region with a professional guide. Red, Green, sunset and exclusive photography tours.",
     "pagehero_highlight_klasik_turlari": "Classic Tours",
     "pagehero_tag_gezi_turlari": "Sightseeing Tours",
-    "pagehero_title_kapadokya": "Cappadocia"
+    "pagehero_title_kapadokya": "Cappadocia",
+    "breadcrumb_gezi_turlari": "Sightseeing Tours",
+    "og_image_subtitle": "Red · Green · Sunset · Photography Tours"
   },
   "page.yorum": {
     "deneyiminizi_paylasin": "Share Your Experience",
@@ -798,6 +956,13 @@
     "meta_desc": "Share your Trip and Tick experience. Your review is published after moderator approval within 24 hours.",
     "meta_title": "Write Your Review | Trip and Tick",
     "musteri_yorumu": "Customer Review",
-    "trip_tick_yasadiginiz_tatil": "Share the holiday experience you had with Trip and Tick with our other guests.\n            Your review is published within 24 hours."
+    "trip_tick_yasadiginiz_tatil": "Share the holiday experience you had with Trip and Tick with our other guests.\n            Your review is published within 24 hours.",
+    "featurecard_title_moderasyon": "Moderation"
+  },
+  "page.rezervasyon.slug": {
+    "loading": "Loading...",
+    "meta_desc_template": "Online booking for {name}. {desc}",
+    "meta_title_not_found": "Booking Not Found | Trip and Tick",
+    "meta_title_template": "Booking | {name} - Trip and Tick"
   }
 }

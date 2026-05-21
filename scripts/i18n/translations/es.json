@@ -197,7 +197,10 @@
     "meta_title_2": "Actividades en Capadocia",
     "pagehero_description_atv_turlari": "Tours en quad, experiencias de paseos a caballo y safari en jeep. Guías profesionales, totalmente asegurado, traslado del hotel incluido. Precios desde 29 €.",
     "pagehero_highlight_macera": "Actividades de aventura",
-    "pagehero_title_kapadokya": "Capadocia"
+    "pagehero_title_kapadokya": "Capadocia",
+    "pagehero_tag_aktiviteler": "Actividades",
+    "breadcrumb_aktiviteler": "Actividades",
+    "og_image_subtitle": "ATV · Equitación · Jeep Safari — desde €29"
   },
   "page.ara": {
     "meta_desc": "Busque vuelos en globo, hoteles, actividades, tours turísticos, paquetes y traslados en el catálogo de Trip and Tick. Filtre por precio, valoración, duración y moneda.",
@@ -219,7 +222,16 @@
     "pagehero_highlight_programi": "Programa",
     "pagehero_tag_acente_programi": "Programa de Agencias",
     "pagehero_title_b2b_acente": "Agencia B2B",
-    "zaten_acente_misiniz": "¿Ya eres una agencia?"
+    "zaten_acente_misiniz": "¿Ya eres una agencia?",
+    "breadcrumb_b2b": "B2B",
+    "benefit_toplu_fiyat_title": "Precio por volumen",
+    "benefit_toplu_fiyat_desc": "Precios netos competitivos en todo el inventario de globos, tours, hoteles y traslados. Descuentos adicionales por volumen.",
+    "benefit_rest_api_title": "Acceso REST API",
+    "benefit_rest_api_desc": "Consultas de disponibilidad, creación de reservas, cancelación — integre con su sistema vía JSON API.",
+    "benefit_hesap_yoneticisi_title": "Gestor de cuenta dedicado",
+    "benefit_hesap_yoneticisi_desc": "Soporte en turco + inglés + alemán. WhatsApp 24/7 + respuesta por correo prioritaria.",
+    "benefit_komisyon_title": "%12-18 de comisión",
+    "benefit_komisyon_desc": "Comisión dinámica basada en volumen + temporada. Informe de conciliación mensual automático."
   },
   "page.balonlar": {
     "40m_sigorta": "Seguro de 40 M€",
@@ -240,7 +252,13 @@
     "paket": "4 paquetes",
     "paket_karsilastirmasi": "Comparación de paquetes",
     "sadece_sivil_havacilik_genel": "Trabajamos únicamente con operadores con licencia de la Dirección General de Aviación Civil y con al menos 5 años de experiencia.\n              Sin comisión de intermediarios: el precio viene directamente del operador.",
-    "standart_ekonomik_ucustan": "Opciones para todos los presupuestos, desde un vuelo económico estándar hasta una cesta privada romántica.\n              Todos los precios incluyen traslado, desayuno, seguro, certificado y\n              servicio de champán."
+    "standart_ekonomik_ucustan": "Opciones para todos los presupuestos, desde un vuelo económico estándar hasta una cesta privada romántica.\n              Todos los precios incluyen traslado, desayuno, seguro, certificado y\n              servicio de champán.",
+    "detay_iletisim": "Detalles & Contacto",
+    "detay_rezerve": "Detalles & Reservar",
+    "kisi_basi_yetiskin": "por persona / adulto",
+    "kisi_basi_dinamik": "por persona (cambia diariamente en los 7 días)",
+    "sss_tag": "FAQ",
+    "lisans_prefix": "Licencia"
   },
   "page.balonlar.slug": {
     "3d_secure_odeme": "Pago 3D Secure",
@@ -261,7 +279,11 @@
     "soru_sor_whatsapp_email": "Hacer una pregunta → WhatsApp / Correo electrónico",
     "sure": "Duración",
     "tarih_sec_rezerve_et": "Elegir Fecha y Reservar",
-    "tarih_seciminde_gunluk_doluluk": "La disponibilidad diaria se comprueba al instante al seleccionar una fecha."
+    "tarih_seciminde_gunluk_doluluk": "La disponibilidad diaria se comprueba al instante al seleccionar una fecha.",
+    "balon_turlari": "Paseos en globo",
+    "iade_operator_iptali": "%100 reembolso — cancelación del operador",
+    "ozel_fiyat": "Precio especial",
+    "lisans_prefix": "Licencia"
   },
   "page.blog": {
     "balon_turlari_gezi_rotalari_otel": "Tours en globo, rutas de viaje, recomendaciones de hoteles y mucho más.\n            Todo lo que necesitas para tu viaje a Capadocia está aquí.",
@@ -278,7 +300,13 @@
     "meta_title_2": "Blog — Guía de viaje a Capadocia",
     "seo_agent_yakinda_kapadokya": "SEO Agent pronto creará entradas de blog útiles sobre viajar a Capadocia.\n              ¡Vuelve a consultarnos!",
     "trip_tick_olarak_kapadokya_daki": "En Trip and Tick trabajamos con los operadores más fiables de Capadocia para ofrecerte\n              experiencias inolvidables a los mejores precios. Con más de 9 operadores de globos asociados, una garantía\n              del precio más bajo y nuestra política de reembolso del 100 % por cancelación meteorológica, puedes reservar con total confianza.",
-    "tumu": "Todos ("
+    "tumu": "Todos (",
+    "category_balon_turlari": "Paseos en globo",
+    "category_kapadokya_rehber": "Guía de Capadocia",
+    "category_aktiviteler": "Actividades",
+    "category_konaklama": "Alojamiento",
+    "category_ulasim": "Transporte",
+    "category_genel": "General"
   },
   "page.blog.slug": {
     "blog_don": "Volver al blog",
@@ -336,7 +364,18 @@
     "tercihler_gizlilik_guvenlik": "Preferencias → Privacidad y seguridad.",
     "ucuncu_taraf_cerezleri": "Cookies de terceros",
     "yururluk_tarihi_mayis_2026_son": "Fecha de entrada en vigor: 1 de mayo de 2026 · Última actualización: 15 de mayo de 2026",
-    "zorunlu_cerezleri_kapatirsaniz": "Si desactivas las cookies estrictamente necesarias, el sitio puede no\n              funcionar correctamente (p. ej., el paso de pago, la duración de la sesión)."
+    "zorunlu_cerezleri_kapatirsaniz": "Si desactivas las cookies estrictamente necesarias, el sitio puede no\n              funcionar correctamente (p. ej., el paso de pago, la duración de la sesión).",
+    "tag_yasal": "Legal",
+    "breadcrumb_cerez_politikasi": "Política de cookies",
+    "cookie_type_zorunlu_title": "Cookies esenciales",
+    "cookie_type_zorunlu_desc": "Necesarias para la funcionalidad básica del sitio. Gestión de sesiones, seguridad, carrito — no se pueden desactivar.",
+    "cookie_type_analitik_title": "Cookies analíticas",
+    "cookie_type_analitik_desc": "Mide de forma anónima el uso del sitio (Google Analytics 4). Qué páginas son populares, en qué punto abandonan los usuarios.",
+    "cookie_type_fonksiyonel_title": "Cookies funcionales",
+    "cookie_type_fonksiyonel_desc": "Se utilizan para recordar preferencias como la selección de idioma, la moneda y las últimas búsquedas.",
+    "cookie_type_pazarlama_title": "Cookies de marketing",
+    "cookie_type_pazarlama_desc": "Integración de redes sociales y personalización de anuncios (activo solo con consentimiento).",
+    "pazarlama_label": "Marketing:"
   },
   "page.gizlilik_politikasi": {
     "10_degisiklikler": "10. Cambios",
@@ -407,7 +446,13 @@
     "yasal_yukumluluklerin_yerine": "Cumplimiento de las obligaciones legales (TÜRSAB, fiscalidad).",
     "yurt_ici_disi_aktarilan": "Conocer las partes a las que se transfieren los datos a nivel nacional o internacional.",
     "yururluk_tarihi_mayis_2026_son": "Fecha de entrada en vigor: 1 de mayo de 2026 · Última actualización: 15 de mayo de 2026",
-    "zarar_olustuysa_giderilmesini": "Solicitar una indemnización si se ha producido un daño."
+    "zarar_olustuysa_giderilmesini": "Solicitar una indemnización si se ha producido un daño.",
+    "tag_yasal": "Legal",
+    "breadcrumb_gizlilik_politikasi": "Política de privacidad",
+    "kimlik_label": "Identidad:",
+    "pasaport_label": "Pasaporte:",
+    "finansal_label": "Financiero:",
+    "teknik_label": "Técnico:"
   },
   "page.hakkimizda": {
     "bizi_digerlerinden_ayiran_ilke": "4 principios que nos diferencian",
@@ -446,7 +491,27 @@
     "tursab_lisans_no": "N.º de licencia TÜRSAB",
     "tursab_lisansimiz": "nuestra licencia TÜRSAB",
     "uygun_fiyatli_seffaf_guvenli": "asequible, transparente y\n                seguro",
-    "yerel_istihdama_destek": "apoyo al empleo local"
+    "yerel_istihdama_destek": "apoyo al empleo local",
+    "stat_label_mutlu_musteri": "Clientes satisfechos",
+    "stat_label_musteri_puani": "Puntuación del cliente",
+    "stat_label_lisansli_operator": "Operadores con licencia",
+    "stat_label_iade_garantisi": "Garantía de reembolso",
+    "hikayemiz": "Nuestra historia",
+    "value_title_musteri_once": "El cliente primero",
+    "value_desc_musteri_once": "Cada reserva es un momento inolvidable para una familia o pareja. Ponemos esta responsabilidad en primer lugar.",
+    "value_title_guven": "Confianza",
+    "value_desc_guven": "Licencia TÜRSAB, seguro de 40M€, pagos 3D Secure, cumplimiento de KVKK — la transparencia es nuestro valor central.",
+    "value_title_seffaflik": "Transparencia",
+    "value_desc_seffaflik": "Sin cargos ocultos. Los precios son finales — impuestos, traslado y desayuno incluidos. Política de cancelación clara.",
+    "value_title_en_iyi_fiyat": "Mejor precio",
+    "value_desc_en_iyi_fiyat": "Acuerdos directos con operadores — sin intermediarios. Garantía de mejor precio: si encuentras uno más barato, lo superamos en un %5.",
+    "adres": "Dirección",
+    "telefon": "Teléfono",
+    "eposta": "Correo",
+    "misyonumuz": "Nuestra misión",
+    "vizyonumuz": "Nuestra visión",
+    "vizyonumuz_2027": "Para 2027",
+    "yuzde_10_15_ortaklik_komisyonu": "%10-15 de comisión de asociación"
   },
   "page.iletisim": {
     "acil_iptal_degisiklik_24": "Cancelación/cambio urgente: WhatsApp 24/7",
@@ -464,7 +529,17 @@
     "pagehero_tag_iletisim": "Contacto",
     "telefon_09_00_22_00": "Teléfono: 09:00 - 22:00 (GMT+3)",
     "whatsapp_posta_24": "WhatsApp y correo electrónico: 24/7",
-    "yol_tarifi": "Cómo llegar"
+    "yol_tarifi": "Cómo llegar",
+    "pagehero_title_bizimle": "Con nosotros",
+    "breadcrumb_iletisim": "Contacto",
+    "contact_label_eposta": "Correo",
+    "contact_note_eposta": "Respuesta en 4 horas (horario laboral)",
+    "contact_label_telefon": "Teléfono",
+    "contact_note_telefon": "Soporte TR/EN",
+    "contact_label_whatsapp": "WhatsApp",
+    "contact_note_whatsapp": "Mensajes instantáneos 24/7",
+    "contact_label_ofis": "Oficina",
+    "contact_note_ofis": "Turquía"
   },
   "page.iptal_iade_politikasi": {
     "10_is_gunu": "5-10 días hábiles",
@@ -507,7 +582,22 @@
     "rezervasyon_sonrasi_ortaya": "En casos como enfermedad, accidente o embarazo que surjan después de la reserva,",
     "saglik_raporu_istisnasi": "3. Excepción por informe médico",
     "talep_onaylanir_onaylanmaz": "Se le notificará por correo electrónico en cuanto se apruebe la solicitud.",
-    "yururluk_tarihi_mayis_2026_son": "Fecha de entrada en vigor: 1 de mayo de 2026 · Última actualización: 15 de mayo de 2026"
+    "yururluk_tarihi_mayis_2026_son": "Fecha de entrada en vigor: 1 de mayo de 2026 · Última actualización: 15 de mayo de 2026",
+    "policy_row_time_72plus": "Con 72+ horas de antelación",
+    "policy_row_refund_72plus": "%100 de reembolso",
+    "policy_row_time_24_72": "Con 24-72 horas de antelación",
+    "policy_row_refund_24_72": "%50 de reembolso",
+    "policy_row_time_24_less": "Menos de 24 horas",
+    "policy_row_refund_24_less": "Sin reembolso",
+    "policy_row_time_operator": "Cancelación por operador/tiempo",
+    "policy_row_refund_operator": "%100 reembolso o fecha alternativa",
+    "policy_row_time_saglik": "Informe médico",
+    "policy_row_refund_saglik": "%100 de reembolso",
+    "pagehero_tag_yasal": "Legal",
+    "breadcrumb_iptal_iade": "Cancelación & Reembolso",
+    "eposta_label": "Correo:",
+    "whatsapp_label": "WhatsApp:",
+    "yuzde_100_iade_garantisi": "Garantía de reembolso del %100"
   },
   "page.kapadokya": {
     "araligidir_balon_ucus_oranlari": "— las tasas de vuelos en globo alcanzan más del 85 %.",
@@ -538,7 +628,19 @@
     "tarafindan_sunulur_standart_165": "se ofrece. Los precios comienzan en 165 € para Estándar, 215 € para Confort, 295 € para Deluxe y 580 € para el tour privado Romántico — traslado, desayuno, seguro, certificado y servicio de champán incluidos.",
     "turkiye_nin_ic_anadolu": ", ubicada en la región de Anatolia Central de Türkiye y",
     "unesco_dunya_mirasi_listesi_nde": "en la Lista del Patrimonio Mundial de la UNESCO",
-    "yapabilirsiniz": "¿Qué Puede Hacer?"
+    "yapabilirsiniz": "¿Qué Puede Hacer?",
+    "cat_title_balon": "Paseos en globo",
+    "cat_desc_balon": "Paquetes desde €165, 9+ operadores",
+    "cat_title_aktiviteler": "Actividades",
+    "cat_desc_aktiviteler": "ATV, equitación, jeep safari — desde €29",
+    "cat_title_gezi_turlari": "Excursiones turísticas",
+    "cat_desc_gezi_turlari": "Tours Rojo, Verde, atardecer",
+    "cat_title_kombo": "Paquetes combinados",
+    "cat_desc_kombo": "Paquetes con globo + hotel + tour",
+    "nisan_haziran": "Abril-Junio",
+    "ve": "y",
+    "kategoriler": "Categorías",
+    "kapadokya_title": "Capadocia"
   },
   "page.kullanim_sartlari": {
     "10_uyusmazlik_cozumu": "10. Resolución de disputas",
@@ -587,7 +689,10 @@
     "uyusmazlik_halinde_oncelikle": "En caso de disputa, contacta primero con el servicio de atención al cliente de Trip and Tick.\n            Si no se encuentra una solución, son competentes la Comisión de Arbitraje de Consumo de Nevşehir o los Tribunales de Consumo\n            de Nevşehir. La ley aplicable es la ley turca.",
     "yas_kilo_limitlerine_uymak_balon": "Cumplir los límites de edad y peso (globo: a partir de 6 años).",
     "yuksek_sezon_nisan_haziran_eylul": "Puede aplicarse un recargo en temporada alta (abril-junio, septiembre-octubre).",
-    "yururluk_tarihi_mayis_2026_son": "Fecha de entrada en vigor: 1 de mayo de 2026 · Última actualización: 15 de mayo de 2026"
+    "yururluk_tarihi_mayis_2026_son": "Fecha de entrada en vigor: 1 de mayo de 2026 · Última actualización: 15 de mayo de 2026",
+    "breadcrumb_name": "Términos de uso",
+    "kvkk_link_text": "KVKK",
+    "eposta_info": "info@tripandtick.com"
   },
   "page.kvkk": {
     "6698_sayili_kisisel_verilerin": "De conformidad con la Ley n.º 6698 de Protección de Datos Personales (\"KVKK\"), en nuestra\n            condición de responsable del tratamiento",
@@ -656,7 +761,17 @@
     "yasal_yukumluluklerin_yerine": "Cumplimiento de las obligaciones legales (impuestos, TÜRSAB).",
     "yetkili_kamu_kurumlari_yasal": "Instituciones públicas competentes (previa solicitud legal).",
     "yurt_ici_disinda_verilerin": "Conocer los terceros, nacionales o extranjeros, a los que se transfieren los datos.",
-    "yururluk_tarihi_mayis_2026_son": "Fecha de entrada en vigor: 1 de mayo de 2026 · Última actualización: 15 de mayo de 2026"
+    "yururluk_tarihi_mayis_2026_son": "Fecha de entrada en vigor: 1 de mayo de 2026 · Última actualización: 15 de mayo de 2026",
+    "adres_label": "Dirección:",
+    "eposta_label": "Correo:",
+    "telefon_label": "Teléfono:",
+    "eposta_info": "info@tripandtick.com",
+    "telefon_no": "+90 537 464 78 61",
+    "online_onerilir_label": "Online (recomendado):",
+    "veri_haklari_talep_formu": "Formulario de solicitud de derechos de datos",
+    "magic_link_aciklama": "— magic-link aprobado de 24 horas para acceso a datos (KVKK m.11/b) o eliminación (m.11/e).",
+    "posta_label": "Correo postal:",
+    "kvkk_gov_url_text": "www.kvkk.gov.tr"
   },
   "page.offline": {
     "ana_sayfa": "Inicio",
@@ -676,7 +791,15 @@
     "sektorel_standartlar": "Estándares del sector",
     "shgm_lisansli_easa_sertifikali": "Con licencia SHGM, certificados por EASA",
     "tum_operatorlerimiz_easa_part": "Todos nuestros operadores aplican un programa de mantenimiento anual conforme a las\n              normas EASA Part-BOP, emplean pilotos certificados por la SHGM y\n              realizan los vuelos con seguro de viaje internacional.",
-    "yil": "+ años)"
+    "yil": "+ años)",
+    "breadcrumb_name": "Operadores",
+    "pagehero_highlight_balon_operatoru": "{count}+ Operadores de globo",
+    "pagehero_description_dynamic": "Trip and Tick tiene acuerdos directos con {count}+ operadores de globo premium con licencia de TÜRSAB y SHGM. Promedio de {rating}★ con {reviews}+ opiniones verificadas.",
+    "lisans_prefix": "Licencia",
+    "yorum_suffix": "opiniones",
+    "balon_suffix": "globos",
+    "pilot_suffix": "pilotos",
+    "jsonld_item_list_name": "Operadores de globo asociados de Trip and Tick"
   },
   "page.operatorler.id": {
     "40m_eur_ucuncu_sahis_sorumluluk": "Seguro de responsabilidad civil frente a terceros de 40 M€",
@@ -699,7 +822,16 @@
     "ucmak_trip_tick_uzerinden_tek": "puedes reservar con un solo clic a través de Trip and Tick\n                para volar con.",
     "ucus_yapan_misafirlerden_secili": "opiniones seleccionadas de huéspedes que han volado con.",
     "uzmanlik_alanlari": "Áreas de especialización",
-    "yil": "+ años)"
+    "yil": "+ años)",
+    "yorum": "opiniones",
+    "balon_kelimesi": "globo",
+    "pilot_kelimesi": "piloto",
+    "keyvalue_label_filo": "Flota",
+    "keyvalue_label_adres": "Dirección",
+    "keyvalue_label_telefon": "Teléfono",
+    "keyvalue_label_web": "Sitio web",
+    "keyvalue_label_diller": "Idiomas",
+    "sertifikalar": "Certificaciones"
   },
   "page.oteller": {
     "50_partner_otel_anlasmamiz_var": "Tenemos acuerdos con más de 50 hoteles asociados. Póngase en contacto con nosotros para obtener una recomendación adaptada a sus necesidades — encontraremos el hotel ideal para su presupuesto.",
@@ -712,7 +844,10 @@
     "ozel_otel_talebi_gonder": "Enviar Solicitud de Hotel Personalizada",
     "pagehero_description_unesco_mirasi": "Auténticos hoteles boutique con habitaciones cueva en la región patrimonio de la UNESCO. Desayuno, Wi-Fi y aire acondicionado incluidos. Centrados en Göreme, Ürgüp y Nevşehir.",
     "pagehero_highlight_magara_otelleri": "Hoteles Cueva",
-    "pagehero_title_kapadokya": "Capadocia"
+    "pagehero_title_kapadokya": "Capadocia",
+    "pagehero_tag_oteller": "Hoteles",
+    "breadcrumb_name": "Hoteles",
+    "jsonld_item_list_name": "Hoteles en Capadocia"
   },
   "page.oteller.slug": {
     "degerlendirme": "reseñas)",
@@ -721,7 +856,15 @@
     "otel_musaitligi_guncel_fiyat": "La disponibilidad de hoteles y los precios actuales varían según la fecha. Rellena el formulario adjunto — te llamaremos en un plazo de 24 horas y",
     "otel_rezervasyonu_telefon_posta": "Reserva de hotel por teléfono / correo electrónico",
     "paylasacagiz_acil_iletisim": "te lo compartiremos. Para consultas urgentes,\n                  contáctanos directamente por teléfono o WhatsApp.",
-    "uygun_secenekler_musaitlik": "opciones adecuadas, disponibilidad y un presupuesto"
+    "uygun_secenekler_musaitlik": "opciones adecuadas, disponibilidad y un presupuesto",
+    "olanaklar": "Instalaciones",
+    "tier_ucuz_ekonomik": "Económico / Presupuesto",
+    "tier_orta_halli": "Precio medio",
+    "tier_luks_premium": "Lujo / Premium",
+    "tier_standart": "Estándar",
+    "eposta_buton": "Correo",
+    "whatsapp": "WhatsApp",
+    "oteller_breadcrumb": "Hoteles"
   },
   "page.paketler": {
     "meta_desc": "Paquetes de día completo en Capadocia, luna de miel, familia, aventura y pedida de mano. Globo + hotel + tour en una sola reserva — a precio ventajoso.",
@@ -732,7 +875,9 @@
     "pagehero_description_balon_otel": "Globo + hotel + tour en una sola reserva. Paquetes de luna de miel, familia, aventura, pedida de mano y evento corporativo — un 20-30 % más baratos que reservar por separado.",
     "pagehero_highlight_kombo_paketleri": "Paquetes combinados",
     "pagehero_tag_ozel_paketler": "Paquetes especiales",
-    "pagehero_title_kapadokya": "Capadocia"
+    "pagehero_title_kapadokya": "Capadocia",
+    "breadcrumb_paketler": "Paquetes",
+    "og_image_subtitle": "Luna de miel · Familia · Aventura · Propuesta de matrimonio"
   },
   "page.rezervasyon.basarili": {
     "meta_desc": "Su reserva se ha completado con éxito.",
@@ -746,13 +891,16 @@
     "rezervasyon_bilgileriniz": "Los datos de tu reserva están guardados en tu navegador.\n            Cuando vuelvas a intentarlo, podrás continuar donde lo dejaste.",
     "sorun_yasiyorsaniz": "Si tienes problemas:",
     "tekrar_dene": "Volver a intentar",
-    "whatsapp_destek": "Soporte por WhatsApp"
+    "whatsapp_destek": "Soporte por WhatsApp",
+    "bilgi_etiketi": "Info:"
   },
   "page.rezervasyon.yeniden_tarih.token": {
     "link_gecersiz": "Enlace no válido",
     "meta_desc": "Elija una fecha alternativa para su reserva cancelada o solicite un reembolso completo.",
     "meta_title": "Reserva — Nueva fecha o reembolso | Trip and Tick",
-    "whatsapp_iletisim": "Contactar por WhatsApp"
+    "whatsapp_iletisim": "Contactar por WhatsApp",
+    "link_dogrulanamadi": "No se pudo verificar el enlace. Por favor, usa el enlace original de tu correo.",
+    "link_suresi_dolmus": "Este enlace ha caducado. Por favor, contacta con el servicio de atención al cliente."
   },
   "page.sss": {
     "cevabini_bulamadin": "¿No encuentra su respuesta?",
@@ -765,7 +913,13 @@
     "pagehero_description_kapadokya_tatili": "Respuestas rápidas a las preguntas más frecuentes sobre las vacaciones en Capadocia, la reserva de vuelos en globo, el pago y la política de cancelación.",
     "pagehero_highlight_sorulan_sorular": "preguntas frecuentes",
     "pagehero_title_sik": "Las",
-    "whatsapp_sor": "Preguntar por WhatsApp"
+    "whatsapp_sor": "Preguntar por WhatsApp",
+    "category_balon": "Paseo en globo",
+    "category_rezervasyon": "Reserva",
+    "category_odeme": "Pago",
+    "category_iptal": "Cancelación & Reembolso",
+    "category_genel": "General",
+    "meta_og_image_subtitle": "Paseo en globo · Precio · Cancelación · Pago — Respuestas rápidas"
   },
   "page.transferler": {
     "meta_desc": "Traslados al aeropuerto de Nevşehir (NAV) y Kayseri (ASR). Coche privado, minibús y opciones VIP. Servicio 24/7, precio fijo, reserva instantánea.",
@@ -775,7 +929,9 @@
     "meta_title_2": "Traslado al Aeropuerto de Capadocia",
     "pagehero_description_nevsehir_nav": "Servicios de traslado Nevşehir (NAV) 30–45 min y Kayseri (ASR) 60–75 min. Coche privado, minibús y opciones VIP. Precio fijo — sin sorpresas.",
     "pagehero_highlight_ozel_transfer": "Traslado Privado",
-    "pagehero_title_havalimani": "Aeropuerto"
+    "pagehero_title_havalimani": "Aeropuerto",
+    "pagehero_tag_transferler": "Traslados",
+    "breadcrumb_name": "Traslados"
   },
   "page.turlar": {
     "meta_desc": "Los tours turísticos más populares de Capadocia: Tour Rojo (Göreme + Uçhisar), Tour Verde (Ihlara + Derinkuyu), tours al atardecer y de fotografía. Con guía, traslado incluido.",
@@ -786,7 +942,9 @@
     "pagehero_description_unesco_dunya": "Descubre los puntos más importantes de esta región Patrimonio de la Humanidad de la UNESCO acompañado de un guía profesional. Tours Rojo, Verde, al atardecer y de fotografía exclusivos.",
     "pagehero_highlight_klasik_turlari": "Tours clásicos",
     "pagehero_tag_gezi_turlari": "Tours turísticos",
-    "pagehero_title_kapadokya": "Capadocia"
+    "pagehero_title_kapadokya": "Capadocia",
+    "breadcrumb_gezi_turlari": "Excursiones turísticas",
+    "og_image_subtitle": "Rojo · Verde · Atardecer · Tours fotográficos"
   },
   "page.yorum": {
     "deneyiminizi_paylasin": "Comparte tu experiencia",
@@ -798,6 +956,13 @@
     "meta_desc": "Comparte tu experiencia con Trip and Tick. Tu reseña se publica tras la aprobación de un moderador en 24 horas.",
     "meta_title": "Escribe tu reseña | Trip and Tick",
     "musteri_yorumu": "Reseña de cliente",
-    "trip_tick_yasadiginiz_tatil": "Comparte la experiencia de vacaciones que viviste con Trip and Tick con nuestros demás huéspedes.\n            Tu reseña se publica en 24 horas."
+    "trip_tick_yasadiginiz_tatil": "Comparte la experiencia de vacaciones que viviste con Trip and Tick con nuestros demás huéspedes.\n            Tu reseña se publica en 24 horas.",
+    "featurecard_title_moderasyon": "Moderación"
+  },
+  "page.rezervasyon.slug": {
+    "loading": "Cargando...",
+    "meta_desc_template": "Reserva online para {name}. {desc}",
+    "meta_title_not_found": "Reserva no encontrada | Trip and Tick",
+    "meta_title_template": "Reserva | {name} - Trip and Tick"
   }
 }

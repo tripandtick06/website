@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DICTIONARIES, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { BasariliClient } from "./BasariliClient";
 
 export const runtime = "edge";
@@ -6,11 +7,19 @@ export const runtime = "edge";
 // Server-component meta + client-component CTA buttons (PDF/iCal/Hesabim).
 // User verbatim: "en uzunundan basla, en son benim mudahelem gereken seyleri yap"
 
-export const metadata: Metadata = {
-  title: "Rezervasyon Onaylandı | Trip and Tick",
-  description: "Rezervasyonunuz başarıyla tamamlandı.",
-  robots: { index: false, follow: false },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
+  const d = DICTIONARIES[loc].page.rezervasyon.basarili;
+  return {
+    title: d.meta_title,
+    description: d.meta_desc,
+    robots: { index: false, follow: false },
+  };
+}
 
 export default function SuccessPage({
   searchParams,

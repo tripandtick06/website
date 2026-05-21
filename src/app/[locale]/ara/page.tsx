@@ -7,8 +7,7 @@
 // User verbatim: "URL state: filters URL query'ye sync"
 
 import type { Metadata } from "next";
-import { Suspense } from "react";
-import { SearchClient } from "./SearchClient";
+import { AraContent } from "./AraContent";
 
 export const runtime = "edge";
 
@@ -57,19 +56,15 @@ export default function AraPage({ searchParams }: PageProps) {
   const initialCurrency = (searchParams?.currency ?? "any").trim();
   const initialSort = (searchParams?.sort ?? "popularity").trim();
   return (
-    <main className="min-h-screen bg-slate-50">
-      <Suspense fallback={<div className="container-main py-16 text-center text-slate-500">Yükleniyor…</div>}>
-        <SearchClient
-          initialQuery={initialQ}
-          initialCategory={initialCategory}
-          initialPriceMin={initialPriceMin}
-          initialPriceMax={initialPriceMax}
-          initialRatingMin={initialRatingMin}
-          initialDuration={initialDuration}
-          initialCurrency={initialCurrency}
-          initialSort={initialSort}
-        />
-      </Suspense>
-    </main>
+    <AraContent
+      initialQ={initialQ}
+      initialCategory={initialCategory}
+      initialPriceMin={initialPriceMin}
+      initialPriceMax={initialPriceMax}
+      initialRatingMin={initialRatingMin}
+      initialDuration={initialDuration}
+      initialCurrency={initialCurrency}
+      initialSort={initialSort}
+    />
   );
 }

@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import { BALLOON_PACKAGES, getBalloonPackageBySlug } from "@/data/services/balloons";
 import { ACTIVITIES, TOURS, HOTELS, PACKAGES, TRANSFERS, type ServiceItem } from "@/data/services/catalog";
+import { DICTIONARIES, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { BookingClient, type BookingService } from "./BookingClient";
 
 type Params = { locale: string; slug: string };
@@ -55,13 +56,15 @@ function findService(slug: string): BookingService | null {
 }
 
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
+  const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
+  const d = DICTIONARIES[loc].page.rezervasyon.slug;
   const service = findService(params.slug);
   if (!service) {
-    return { title: "Rezervasyon Bulunamadi | Trip and Tick" };
+    return { title: d.meta_title_not_found };
   }
   return {
-    title: `Rezervasyon | ${service.name} - Trip and Tick`,
-    description: `${service.name} icin online rezervasyon. ${service.shortDescription}`,
+    title: d.meta_title_template.replace("{name}", service.name),
+    description: d.meta_desc_template.replace("{name}", service.name).replace("{desc}", service.shortDescription),
     robots: { index: false, follow: true },
   };
 }
@@ -75,10 +78,12 @@ export function generateStaticParams() {
 }
 
 export default function RezervasyonSlugPage({ params }: { params: Params }) {
+  const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
+  const d = DICTIONARIES[loc].page.rezervasyon.slug;
   const service = findService(params.slug);
   if (!service) notFound();
   return (
-    <Suspense fallback={<div className="container-main py-16 text-center text-slate-500">Yukleniyor...</div>}>
+    <Suspense fallback={<div className="container-main py-16 text-center text-slate-500">{d.loading}</div>}>
       <BookingClient service={service} />
     </Suspense>
   );

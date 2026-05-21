@@ -1798,6 +1798,21 @@
           "col": 14
         }
       ]
+    },
+    "pagehero_tag_aktiviteler": {
+      "tr": "Aktiviteler",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "breadcrumb_aktiviteler": {
+      "tr": "Aktiviteler",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "og_image_subtitle": {
+      "tr": "ATV · At Binme · Jeep Safari — €29'dan",
+      "context": "batch-cd",
+      "type": "manual"
     }
   },
   "page.ara": {
@@ -2061,6 +2076,51 @@
           "col": 58
         }
       ]
+    },
+    "breadcrumb_b2b": {
+      "tr": "B2B",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "benefit_toplu_fiyat_title": {
+      "tr": "Toplu Fiyat",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "benefit_toplu_fiyat_desc": {
+      "tr": "Tüm balon, tur, otel ve transfer envanterinde rekabetçi net fiyat. Volüm bazlı ek indirim.",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "benefit_rest_api_title": {
+      "tr": "REST API Erişimi",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "benefit_rest_api_desc": {
+      "tr": "Müsaitlik sorgu, rezervasyon oluşturma, iptal — JSON API ile sisteminize entegre.",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "benefit_hesap_yoneticisi_title": {
+      "tr": "Özel Hesap Yöneticisi",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "benefit_hesap_yoneticisi_desc": {
+      "tr": "Türkçe + İngilizce + Almanca destek. 7/24 WhatsApp + öncelikli e-posta yanıt.",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "benefit_komisyon_title": {
+      "tr": "%12-18 Komisyon",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "benefit_komisyon_desc": {
+      "tr": "Volüm + sezon bazlı dinamik komisyon. Aylık otomatik mutabakat raporu.",
+      "context": "batch-cd",
+      "type": "manual"
     }
   },
   "page.b2b.dashboard": {},
@@ -2331,6 +2391,36 @@
           "col": 60
         }
       ]
+    },
+    "detay_iletisim": {
+      "tr": "Detay & İletişim",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "detay_rezerve": {
+      "tr": "Detay & Rezerve",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "kisi_basi_yetiskin": {
+      "tr": "kişi başı / yetişkin",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "kisi_basi_dinamik": {
+      "tr": "kişi başı (7 gün içi günlük değişir)",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "sss_tag": {
+      "tr": "SSS",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "lisans_prefix": {
+      "tr": "Lisans",
+      "context": "batch-cd",
+      "type": "manual"
     }
   },
   "page.balonlar.slug": {
@@ -2599,6 +2689,26 @@
           "col": 71
         }
       ]
+    },
+    "balon_turlari": {
+      "tr": "Balon Turları",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "iade_operator_iptali": {
+      "tr": "%100 iade — operatör iptali",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "ozel_fiyat": {
+      "tr": "Özel Fiyat",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "lisans_prefix": {
+      "tr": "Lisans",
+      "context": "batch-cd",
+      "type": "manual"
     }
   },
   "page.blog": {
@@ -2811,6 +2921,36 @@
           "col": 112
         }
       ]
+    },
+    "category_balon_turlari": {
+      "tr": "Balon Turları",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "category_kapadokya_rehber": {
+      "tr": "Kapadokya Rehberi",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "category_aktiviteler": {
+      "tr": "Aktiviteler",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "category_konaklama": {
+      "tr": "Konaklama",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "category_ulasim": {
+      "tr": "Ulaşım",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "category_genel": {
+      "tr": "Genel",
+      "context": "batch-cd",
+      "type": "manual"
     }
   },
   "page.blog.slug": {
@@ -3578,6 +3718,61 @@
           "col": 38
         }
       ]
+    },
+    "tag_yasal": {
+      "tr": "Yasal",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "breadcrumb_cerez_politikasi": {
+      "tr": "Çerez Politikası",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "cookie_type_zorunlu_title": {
+      "tr": "Zorunlu Çerezler",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "cookie_type_zorunlu_desc": {
+      "tr": "Sitenin temel işlevselliği için gereklidir. Oturum yönetimi, güvenlik, sepet — bunlar kapatılamaz.",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "cookie_type_analitik_title": {
+      "tr": "Analitik Çerezler",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "cookie_type_analitik_desc": {
+      "tr": "Site kullanımını anonim ölçer (Google Analytics 4). Hangi sayfalar popüler, hangi noktada kullanıcı ayrılıyor.",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "cookie_type_fonksiyonel_title": {
+      "tr": "Fonksiyonel Çerezler",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "cookie_type_fonksiyonel_desc": {
+      "tr": "Dil seçimi, para birimi, son arama gibi tercihleri hatırlamak için.",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "cookie_type_pazarlama_title": {
+      "tr": "Pazarlama Çerezler",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "cookie_type_pazarlama_desc": {
+      "tr": "Sosyal medya entegrasyonu ve reklam kişiselleştirmesi (sadece onay halinde aktif olur).",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "pazarlama_label": {
+      "tr": "Pazarlama:",
+      "context": "batch-cd",
+      "type": "manual"
     }
   },
   "page.davet.code": {},
@@ -4547,6 +4742,36 @@
           "col": 16
         }
       ]
+    },
+    "tag_yasal": {
+      "tr": "Yasal",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "breadcrumb_gizlilik_politikasi": {
+      "tr": "Gizlilik Politikası",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "kimlik_label": {
+      "tr": "Kimlik:",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "pasaport_label": {
+      "tr": "Pasaport:",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "finansal_label": {
+      "tr": "Finansal:",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "teknik_label": {
+      "tr": "Teknik:",
+      "context": "batch-cd",
+      "type": "manual"
     }
   },
   "page.hakkimizda": {
@@ -5067,6 +5292,106 @@
           "col": 22
         }
       ]
+    },
+    "stat_label_mutlu_musteri": {
+      "tr": "Mutlu Müşteri",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "stat_label_musteri_puani": {
+      "tr": "Müşteri Puanı",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "stat_label_lisansli_operator": {
+      "tr": "Lisanslı Operatör",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "stat_label_iade_garantisi": {
+      "tr": "İade Garantisi",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "hikayemiz": {
+      "tr": "Hikayemiz",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "value_title_musteri_once": {
+      "tr": "Müşteri Önce",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "value_desc_musteri_once": {
+      "tr": "Her rezervasyon bir aile veya çift için unutulmaz bir an. Bu sorumluluğu en başa koyuyoruz.",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "value_title_guven": {
+      "tr": "Güven",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "value_desc_guven": {
+      "tr": "TÜRSAB lisansı, 40M€ sigorta, 3D Secure ödeme, KVKK uyumu — şeffaflık temel değerimiz.",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "value_title_seffaflik": {
+      "tr": "Şeffaflık",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "value_desc_seffaflik": {
+      "tr": "Gizli ücret yok. Fiyatlar son rakam — vergi, transfer, kahvaltı dahil. İptal politikası net.",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "value_title_en_iyi_fiyat": {
+      "tr": "En İyi Fiyat",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "value_desc_en_iyi_fiyat": {
+      "tr": "Doğrudan operatör anlaşmaları — aracı yok. En düşük fiyat garantisi: bulursanız %5 altı.",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "adres": {
+      "tr": "Adres",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "telefon": {
+      "tr": "Telefon",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "eposta": {
+      "tr": "E-posta",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "misyonumuz": {
+      "tr": "Misyonumuz",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "vizyonumuz": {
+      "tr": "Vizyonumuz",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "vizyonumuz_2027": {
+      "tr": "2027'ye kadar",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "yuzde_10_15_ortaklik_komisyonu": {
+      "tr": "%10-15 ortaklık komisyonu",
+      "context": "batch-cd",
+      "type": "manual"
     }
   },
   "page.hesabim": {},
@@ -5302,6 +5627,56 @@
           "col": 46
         }
       ]
+    },
+    "pagehero_title_bizimle": {
+      "tr": "Bizimle",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "breadcrumb_iletisim": {
+      "tr": "İletişim",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "contact_label_eposta": {
+      "tr": "E-posta",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "contact_note_eposta": {
+      "tr": "4 saat içinde yanıt (mesai saati)",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "contact_label_telefon": {
+      "tr": "Telefon",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "contact_note_telefon": {
+      "tr": "TR/EN destek",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "contact_label_whatsapp": {
+      "tr": "WhatsApp",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "contact_note_whatsapp": {
+      "tr": "7/24 anlık mesaj",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "contact_label_ofis": {
+      "tr": "Ofis",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "contact_note_ofis": {
+      "tr": "Türkiye",
+      "context": "batch-cd",
+      "type": "manual"
     }
   },
   "page.iptal_iade_politikasi": {
@@ -5878,6 +6253,81 @@
           "col": 53
         }
       ]
+    },
+    "policy_row_time_72plus": {
+      "tr": "72+ saat önce",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "policy_row_refund_72plus": {
+      "tr": "%100 iade",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "policy_row_time_24_72": {
+      "tr": "24-72 saat önce",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "policy_row_refund_24_72": {
+      "tr": "%50 iade",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "policy_row_time_24_less": {
+      "tr": "24 saatten az",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "policy_row_refund_24_less": {
+      "tr": "İade yok",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "policy_row_time_operator": {
+      "tr": "Operatör/hava iptali",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "policy_row_refund_operator": {
+      "tr": "%100 iade veya alt. tarih",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "policy_row_time_saglik": {
+      "tr": "Sağlık raporu",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "policy_row_refund_saglik": {
+      "tr": "%100 iade",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "pagehero_tag_yasal": {
+      "tr": "Yasal",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "breadcrumb_iptal_iade": {
+      "tr": "İptal & İade",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "eposta_label": {
+      "tr": "E-posta:",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "whatsapp_label": {
+      "tr": "WhatsApp:",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "yuzde_100_iade_garantisi": {
+      "tr": "%100 İade Garantisi",
+      "context": "batch-cd",
+      "type": "manual"
     }
   },
   "page.kapadokya": {
@@ -6293,6 +6743,66 @@
           "col": 84
         }
       ]
+    },
+    "cat_title_balon": {
+      "tr": "Balon Turları",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "cat_desc_balon": {
+      "tr": "€165'ten başlayan paketler, 9+ operatör",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "cat_title_aktiviteler": {
+      "tr": "Aktiviteler",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "cat_desc_aktiviteler": {
+      "tr": "ATV, at binme, jeep safari — €29'dan",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "cat_title_gezi_turlari": {
+      "tr": "Gezi Turları",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "cat_desc_gezi_turlari": {
+      "tr": "Kırmızı, Yeşil, gün batımı turları",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "cat_title_kombo": {
+      "tr": "Kombo Paketler",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "cat_desc_kombo": {
+      "tr": "Balon + otel + tur avantajlı paketler",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "nisan_haziran": {
+      "tr": "Nisan-Haziran",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "ve": {
+      "tr": "ve",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "kategoriler": {
+      "tr": "Kategoriler",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "kapadokya_title": {
+      "tr": "Kapadokya",
+      "context": "batch-cd",
+      "type": "manual"
     }
   },
   "page.kullanim_sartlari": {
@@ -6953,6 +7463,21 @@
           "col": 53
         }
       ]
+    },
+    "breadcrumb_name": {
+      "tr": "Kullanım Şartları",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "kvkk_link_text": {
+      "tr": "KVKK",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "eposta_info": {
+      "tr": "info@tripandtick.com",
+      "context": "batch-cd",
+      "type": "manual"
     }
   },
   "page.kvkk": {
@@ -7893,6 +8418,56 @@
           "col": 53
         }
       ]
+    },
+    "adres_label": {
+      "tr": "Adres:",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "eposta_label": {
+      "tr": "E-posta:",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "telefon_label": {
+      "tr": "Telefon:",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "eposta_info": {
+      "tr": "info@tripandtick.com",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "telefon_no": {
+      "tr": "+90 537 464 78 61",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "online_onerilir_label": {
+      "tr": "Online (önerilen):",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "veri_haklari_talep_formu": {
+      "tr": "Veri Hakları Talep Formu",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "magic_link_aciklama": {
+      "tr": "— veri erişim (KVKK m.11/b) veya silme (m.11/e) için 24 saatlik onaylı magic-link.",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "posta_label": {
+      "tr": "Posta:",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "kvkk_gov_url_text": {
+      "tr": "www.kvkk.gov.tr",
+      "context": "batch-cd",
+      "type": "manual"
     }
   },
   "page.offline": {
@@ -8121,6 +8696,46 @@
           "col": 75
         }
       ]
+    },
+    "breadcrumb_name": {
+      "tr": "Operatörler",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "pagehero_highlight_balon_operatoru": {
+      "tr": "{count}+ Balon Operatörü",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "pagehero_description_dynamic": {
+      "tr": "Trip and Tick, TÜRSAB ve SHGM lisanslı {count}+ premium balon operatörüyle doğrudan acentelik anlaşmasına sahiptir. Ortalama {rating}★ ile {reviews}+ doğrulanmış yorum.",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "lisans_prefix": {
+      "tr": "Lisans",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "yorum_suffix": {
+      "tr": "yorum",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "balon_suffix": {
+      "tr": "balon",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "pilot_suffix": {
+      "tr": "pilot",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "jsonld_item_list_name": {
+      "tr": "Trip and Tick Anlaşmalı Balon Operatörleri",
+      "context": "batch-cd",
+      "type": "manual"
     }
   },
   "page.operatorler.id": {
@@ -8417,6 +9032,51 @@
           "col": 77
         }
       ]
+    },
+    "yorum": {
+      "tr": "yorum",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "balon_kelimesi": {
+      "tr": "balon",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "pilot_kelimesi": {
+      "tr": "pilot",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "keyvalue_label_filo": {
+      "tr": "Filo",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "keyvalue_label_adres": {
+      "tr": "Adres",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "keyvalue_label_telefon": {
+      "tr": "Telefon",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "keyvalue_label_web": {
+      "tr": "Web",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "keyvalue_label_diller": {
+      "tr": "Diller",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "sertifikalar": {
+      "tr": "Sertifikalar",
+      "context": "batch-cd",
+      "type": "manual"
     }
   },
   "page.oteller": {
@@ -8573,6 +9233,21 @@
           "col": 14
         }
       ]
+    },
+    "pagehero_tag_oteller": {
+      "tr": "Oteller",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "breadcrumb_name": {
+      "tr": "Oteller",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "jsonld_item_list_name": {
+      "tr": "Kapadokya Otelleri",
+      "context": "batch-cd",
+      "type": "manual"
     }
   },
   "page.oteller.slug": {
@@ -8673,6 +9348,46 @@
           "col": 30
         }
       ]
+    },
+    "olanaklar": {
+      "tr": "Olanaklar",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "tier_ucuz_ekonomik": {
+      "tr": "Ucuz / Ekonomik",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "tier_orta_halli": {
+      "tr": "Orta Halli",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "tier_luks_premium": {
+      "tr": "Lüks / Premium",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "tier_standart": {
+      "tr": "Standart",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "eposta_buton": {
+      "tr": "E-posta",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "whatsapp": {
+      "tr": "WhatsApp",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "oteller_breadcrumb": {
+      "tr": "Oteller",
+      "context": "batch-cd",
+      "type": "manual"
     }
   },
   "page.paketler": {
@@ -8801,6 +9516,16 @@
           "col": 14
         }
       ]
+    },
+    "breadcrumb_paketler": {
+      "tr": "Paketler",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "og_image_subtitle": {
+      "tr": "Balayı · Aile · Macera · Evlilik Teklifi",
+      "context": "batch-cd",
+      "type": "manual"
     }
   },
   "page.rezervasyon.basarili": {
@@ -8945,9 +9670,35 @@
           "col": 49
         }
       ]
+    },
+    "bilgi_etiketi": {
+      "tr": "Bilgi:",
+      "context": "batch-cd",
+      "type": "manual"
     }
   },
-  "page.rezervasyon.slug": {},
+  "page.rezervasyon.slug": {
+    "loading": {
+      "tr": "Yükleniyor...",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "meta_desc_template": {
+      "tr": "{name} için online rezervasyon. {desc}",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "meta_title_not_found": {
+      "tr": "Rezervasyon Bulunamadı | Trip and Tick",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "meta_title_template": {
+      "tr": "Rezervasyon | {name} - Trip and Tick",
+      "context": "batch-cd",
+      "type": "manual"
+    }
+  },
   "page.rezervasyon.yeniden_tarih.token": {
     "link_gecersiz": {
       "tr": "Link Geçersiz",
@@ -9004,6 +9755,16 @@
           "col": 11
         }
       ]
+    },
+    "link_dogrulanamadi": {
+      "tr": "Link doğrulanamadı. Lütfen e-postanızdaki orijinal linki kullanın.",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "link_suresi_dolmus": {
+      "tr": "Bu link süresi dolmuş. Lütfen müşteri hizmetleri ile iletişime geçin.",
+      "context": "batch-cd",
+      "type": "manual"
     }
   },
   "page.sss": {
@@ -9160,6 +9921,36 @@
           "col": 13
         }
       ]
+    },
+    "category_balon": {
+      "tr": "Balon Turu",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "category_rezervasyon": {
+      "tr": "Rezervasyon",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "category_odeme": {
+      "tr": "Ödeme",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "category_iptal": {
+      "tr": "İptal & İade",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "category_genel": {
+      "tr": "Genel",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "meta_og_image_subtitle": {
+      "tr": "Balon Turu · Fiyat · İptal · Ödeme — Hızlı Cevaplar",
+      "context": "batch-cd",
+      "type": "manual"
     }
   },
   "page.transferler": {
@@ -9274,6 +10065,16 @@
           "col": 14
         }
       ]
+    },
+    "pagehero_tag_transferler": {
+      "tr": "Transferler",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "breadcrumb_name": {
+      "tr": "Transferler",
+      "context": "batch-cd",
+      "type": "manual"
     }
   },
   "page.turlar": {
@@ -9402,6 +10203,16 @@
           "col": 14
         }
       ]
+    },
+    "breadcrumb_gezi_turlari": {
+      "tr": "Gezi Turları",
+      "context": "batch-cd",
+      "type": "manual"
+    },
+    "og_image_subtitle": {
+      "tr": "Kırmızı · Yeşil · Gün Batımı · Fotoğraf Turları",
+      "context": "batch-cd",
+      "type": "manual"
     }
   },
   "page.yorum": {
@@ -9544,6 +10355,11 @@
           "col": 57
         }
       ]
+    },
+    "featurecard_title_moderasyon": {
+      "tr": "Moderasyon",
+      "context": "batch-cd",
+      "type": "manual"
     }
   }
 }

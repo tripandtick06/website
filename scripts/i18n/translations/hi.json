@@ -197,7 +197,10 @@
     "meta_title_2": "कप्पाडोकिया गतिविधियाँ",
     "pagehero_description_atv_turlari": "एटीवी टूर, घुड़सवारी अनुभव और जीप सफ़ारी। पेशेवर गाइड, पूर्ण बीमित, होटल ट्रांसफर शामिल। कीमतें €29 से शुरू।",
     "pagehero_highlight_macera": "रोमांचक गतिविधियाँ",
-    "pagehero_title_kapadokya": "कप्पाडोकिया"
+    "pagehero_title_kapadokya": "कप्पाडोकिया",
+    "pagehero_tag_aktiviteler": "गतिविधियाँ",
+    "breadcrumb_aktiviteler": "गतिविधियाँ",
+    "og_image_subtitle": "ATV · घुड़सवारी · जीप सफारी — €29 से"
   },
   "page.ara": {
     "meta_desc": "Trip and Tick कैटलॉग में बैलून टूर, होटल, गतिविधियाँ, दर्शनीय स्थल टूर, पैकेज और ट्रांसफ़र खोजें। मूल्य, रेटिंग, अवधि और मुद्रा के अनुसार फ़िल्टर करें।",
@@ -219,7 +222,16 @@
     "pagehero_highlight_programi": "कार्यक्रम",
     "pagehero_tag_acente_programi": "एजेंसी कार्यक्रम",
     "pagehero_title_b2b_acente": "B2B एजेंसी",
-    "zaten_acente_misiniz": "पहले से एजेंसी हैं?"
+    "zaten_acente_misiniz": "पहले से एजेंसी हैं?",
+    "breadcrumb_b2b": "B2B",
+    "benefit_toplu_fiyat_title": "थोक मूल्य",
+    "benefit_toplu_fiyat_desc": "सभी गुब्बारा, टूर, होटल और ट्रांसफर इन्वेंट्री पर प्रतिस्पर्धी नेट मूल्य। वॉल्यूम-आधारित अतिरिक्त छूट।",
+    "benefit_rest_api_title": "REST API एक्सेस",
+    "benefit_rest_api_desc": "उपलब्धता क्वेरी, बुकिंग निर्माण, रद्दीकरण — JSON API के माध्यम से अपने सिस्टम से एकीकृत करें।",
+    "benefit_hesap_yoneticisi_title": "समर्पित खाता प्रबंधक",
+    "benefit_hesap_yoneticisi_desc": "तुर्की + अंग्रेजी + जर्मन समर्थन। 24/7 WhatsApp + प्राथमिकता ईमेल प्रतिक्रिया।",
+    "benefit_komisyon_title": "%12-18 कमीशन",
+    "benefit_komisyon_desc": "वॉल्यूम + सीजन आधारित डायनामिक कमीशन। मासिक स्वचालित मिलान रिपोर्ट।"
   },
   "page.balonlar": {
     "40m_sigorta": "€40M बीमा",
@@ -240,7 +252,13 @@
     "paket": "4 पैकेज",
     "paket_karsilastirmasi": "पैकेज तुलना",
     "sadece_sivil_havacilik_genel": "हम केवल नागरिक उड्डयन महानिदेशालय से लाइसेंस प्राप्त और कम से कम 5 वर्ष के अनुभव वाले ऑपरेटरों के साथ काम करते हैं।\n              कोई मध्यस्थ कमीशन नहीं — कीमत सीधे ऑपरेटर से।",
-    "standart_ekonomik_ucustan": "स्टैंडर्ड किफ़ायती उड़ान से लेकर रोमांटिक निजी टोकरी तक, हर बजट के अनुकूल विकल्प।\n              सभी कीमतों में ट्रांसफ़र, नाश्ता, बीमा, प्रमाणपत्र और\n              शैम्पेन सेवा शामिल है।"
+    "standart_ekonomik_ucustan": "स्टैंडर्ड किफ़ायती उड़ान से लेकर रोमांटिक निजी टोकरी तक, हर बजट के अनुकूल विकल्प।\n              सभी कीमतों में ट्रांसफ़र, नाश्ता, बीमा, प्रमाणपत्र और\n              शैम्पेन सेवा शामिल है।",
+    "detay_iletisim": "विवरण और संपर्क",
+    "detay_rezerve": "विवरण और बुकिंग",
+    "kisi_basi_yetiskin": "प्रति व्यक्ति / वयस्क",
+    "kisi_basi_dinamik": "प्रति व्यक्ति (7 दिनों के भीतर दैनिक बदलता है)",
+    "sss_tag": "अक्सर पूछे जाने वाले सवाल",
+    "lisans_prefix": "लाइसेंस"
   },
   "page.balonlar.slug": {
     "3d_secure_odeme": "3D Secure भुगतान",
@@ -261,7 +279,11 @@
     "soru_sor_whatsapp_email": "प्रश्न पूछें → WhatsApp / ईमेल",
     "sure": "अवधि",
     "tarih_sec_rezerve_et": "तारीख चुनें और बुक करें",
-    "tarih_seciminde_gunluk_doluluk": "तारीख चुनते समय दैनिक उपलब्धता तुरंत जाँची जाती है।"
+    "tarih_seciminde_gunluk_doluluk": "तारीख चुनते समय दैनिक उपलब्धता तुरंत जाँची जाती है।",
+    "balon_turlari": "गुब्बारा भ्रमण",
+    "iade_operator_iptali": "%100 वापसी — ऑपरेटर रद्दीकरण",
+    "ozel_fiyat": "विशेष मूल्य",
+    "lisans_prefix": "लाइसेंस"
   },
   "page.blog": {
     "balon_turlari_gezi_rotalari_otel": "बैलून टूर, यात्रा मार्ग, होटल सुझाव और बहुत कुछ।\n            आपकी कप्पाडोकिया यात्रा के लिए ज़रूरी हर चीज़ यहाँ मौजूद है।",
@@ -278,7 +300,13 @@
     "meta_title_2": "ब्लॉग — कप्पाडोकिया यात्रा गाइड",
     "seo_agent_yakinda_kapadokya": "SEO Agent जल्द ही कप्पाडोकिया की यात्रा के बारे में उपयोगी ब्लॉग पोस्ट तैयार करेगा।\n              कृपया दोबारा देखें!",
     "trip_tick_olarak_kapadokya_daki": "Trip and Tick में हम कप्पाडोकिया के सबसे भरोसेमंद ऑपरेटरों के साथ काम करते हैं ताकि आपको\n              बेहतरीन कीमतों पर अविस्मरणीय अनुभव दे सकें। 9+ साझेदार बैलून ऑपरेटरों, सबसे कम\n              कीमत की गारंटी और हमारी 100% मौसम रद्दीकरण रिफंड नीति के साथ आप निश्चिंत होकर बुकिंग कर सकते हैं।",
-    "tumu": "सभी ("
+    "tumu": "सभी (",
+    "category_balon_turlari": "गुब्बारा भ्रमण",
+    "category_kapadokya_rehber": "कप्पाडोसिया गाइड",
+    "category_aktiviteler": "गतिविधियाँ",
+    "category_konaklama": "आवास",
+    "category_ulasim": "परिवहन",
+    "category_genel": "सामान्य"
   },
   "page.blog.slug": {
     "blog_don": "ब्लॉग पर वापस जाएँ",
@@ -336,7 +364,18 @@
     "tercihler_gizlilik_guvenlik": "प्राथमिकताएँ → गोपनीयता और सुरक्षा।",
     "ucuncu_taraf_cerezleri": "तृतीय-पक्ष कुकीज़",
     "yururluk_tarihi_mayis_2026_son": "प्रभावी तिथि: 1 मई 2026 · अंतिम अद्यतन: 15 मई 2026",
-    "zorunlu_cerezleri_kapatirsaniz": "यदि आप अनिवार्य कुकीज़ बंद कर देते हैं तो साइट सही ढंग से\n              काम नहीं कर सकती (उदा. भुगतान चरण, सत्र अवधि)।"
+    "zorunlu_cerezleri_kapatirsaniz": "यदि आप अनिवार्य कुकीज़ बंद कर देते हैं तो साइट सही ढंग से\n              काम नहीं कर सकती (उदा. भुगतान चरण, सत्र अवधि)।",
+    "tag_yasal": "कानूनी",
+    "breadcrumb_cerez_politikasi": "कुकी नीति",
+    "cookie_type_zorunlu_title": "आवश्यक कुकीज़",
+    "cookie_type_zorunlu_desc": "साइट की बुनियादी कार्यक्षमता के लिए आवश्यक। सत्र प्रबंधन, सुरक्षा, कार्ट — इन्हें बंद नहीं किया जा सकता।",
+    "cookie_type_analitik_title": "विश्लेषण कुकीज़",
+    "cookie_type_analitik_desc": "साइट उपयोग को गुमनाम रूप से मापता है (Google Analytics 4)। कौन से पृष्ठ लोकप्रिय हैं, किस बिंदु पर उपयोगकर्ता छोड़ते हैं।",
+    "cookie_type_fonksiyonel_title": "कार्यात्मक कुकीज़",
+    "cookie_type_fonksiyonel_desc": "भाषा चयन, मुद्रा और हाल की खोज जैसी प्राथमिकताओं को याद रखने के लिए उपयोग किया जाता है।",
+    "cookie_type_pazarlama_title": "मार्केटिंग कुकीज़",
+    "cookie_type_pazarlama_desc": "सोशल मीडिया एकीकरण और विज्ञापन वैयक्तिकरण (केवल सहमति पर सक्रिय)।",
+    "pazarlama_label": "मार्केटिंग:"
   },
   "page.gizlilik_politikasi": {
     "10_degisiklikler": "10. परिवर्तन",
@@ -407,7 +446,13 @@
     "yasal_yukumluluklerin_yerine": "कानूनी दायित्वों का पालन (TÜRSAB, कर)।",
     "yurt_ici_disi_aktarilan": "उन पक्षों को जानना जिन्हें डेटा देश के भीतर/बाहर स्थानांतरित किया जाता है।",
     "yururluk_tarihi_mayis_2026_son": "प्रभावी तिथि: 1 मई 2026 · अंतिम अद्यतन: 15 मई 2026",
-    "zarar_olustuysa_giderilmesini": "क्षति होने पर मुआवज़े का अनुरोध करना।"
+    "zarar_olustuysa_giderilmesini": "क्षति होने पर मुआवज़े का अनुरोध करना।",
+    "tag_yasal": "कानूनी",
+    "breadcrumb_gizlilik_politikasi": "गोपनीयता नीति",
+    "kimlik_label": "पहचान:",
+    "pasaport_label": "पासपोर्ट:",
+    "finansal_label": "वित्तीय:",
+    "teknik_label": "तकनीकी:"
   },
   "page.hakkimizda": {
     "bizi_digerlerinden_ayiran_ilke": "वे 4 सिद्धांत जो हमें अलग बनाते हैं",
@@ -446,7 +491,27 @@
     "tursab_lisans_no": "TÜRSAB लाइसेंस संख्या",
     "tursab_lisansimiz": "हमारा TÜRSAB लाइसेंस",
     "uygun_fiyatli_seffaf_guvenli": "किफ़ायती, पारदर्शी और\n                सुरक्षित",
-    "yerel_istihdama_destek": "स्थानीय रोज़गार को समर्थन"
+    "yerel_istihdama_destek": "स्थानीय रोज़गार को समर्थन",
+    "stat_label_mutlu_musteri": "खुश ग्राहक",
+    "stat_label_musteri_puani": "ग्राहक रेटिंग",
+    "stat_label_lisansli_operator": "लाइसेंस प्राप्त ऑपरेटर",
+    "stat_label_iade_garantisi": "वापसी गारंटी",
+    "hikayemiz": "हमारी कहानी",
+    "value_title_musteri_once": "ग्राहक पहले",
+    "value_desc_musteri_once": "हर आरक्षण एक परिवार या जोड़े के लिए एक अविस्मरणीय पल है। हम इस जिम्मेदारी को सबसे आगे रखते हैं।",
+    "value_title_guven": "विश्वास",
+    "value_desc_guven": "TÜRSAB लाइसेंस, 40M€ बीमा, 3D Secure भुगतान, KVKK अनुपालन — पारदर्शिता हमारा मुख्य मूल्य है।",
+    "value_title_seffaflik": "पारदर्शिता",
+    "value_desc_seffaflik": "कोई छुपा शुल्क नहीं। कीमतें अंतिम हैं — कर, ट्रांसफर और नाश्ता शामिल। रद्दीकरण नीति स्पष्ट है।",
+    "value_title_en_iyi_fiyat": "सर्वोत्तम मूल्य",
+    "value_desc_en_iyi_fiyat": "सीधे ऑपरेटर समझौते — कोई बिचौलिया नहीं। सर्वोत्तम मूल्य गारंटी: अगर आप कम कीमत पाते हैं, हम उससे %5 नीचे जाएंगे।",
+    "adres": "पता",
+    "telefon": "फ़ोन",
+    "eposta": "ईमेल",
+    "misyonumuz": "हमारा मिशन",
+    "vizyonumuz": "हमारा विज़न",
+    "vizyonumuz_2027": "2027 तक",
+    "yuzde_10_15_ortaklik_komisyonu": "%10-15 साझेदारी कमीशन"
   },
   "page.iletisim": {
     "acil_iptal_degisiklik_24": "तत्काल रद्दीकरण/परिवर्तन: WhatsApp 24/7",
@@ -464,7 +529,17 @@
     "pagehero_tag_iletisim": "संपर्क",
     "telefon_09_00_22_00": "फ़ोन: 09:00 - 22:00 (GMT+3)",
     "whatsapp_posta_24": "WhatsApp और ईमेल: 24/7",
-    "yol_tarifi": "दिशा-निर्देश"
+    "yol_tarifi": "दिशा-निर्देश",
+    "pagehero_title_bizimle": "हमारे साथ",
+    "breadcrumb_iletisim": "संपर्क",
+    "contact_label_eposta": "ईमेल",
+    "contact_note_eposta": "4 घंटे में जवाब (कार्य समय)",
+    "contact_label_telefon": "फ़ोन",
+    "contact_note_telefon": "TR/EN सहायता",
+    "contact_label_whatsapp": "WhatsApp",
+    "contact_note_whatsapp": "24/7 त्वरित संदेश",
+    "contact_label_ofis": "कार्यालय",
+    "contact_note_ofis": "तुर्किये"
   },
   "page.iptal_iade_politikasi": {
     "10_is_gunu": "5-10 कार्य दिवस",
@@ -507,7 +582,22 @@
     "rezervasyon_sonrasi_ortaya": "बुकिंग के बाद उत्पन्न होने वाली बीमारी, दुर्घटना या गर्भावस्था जैसी स्थितियों में,",
     "saglik_raporu_istisnasi": "3. मेडिकल रिपोर्ट अपवाद",
     "talep_onaylanir_onaylanmaz": "अनुरोध स्वीकृत होते ही आपको ईमेल द्वारा सूचित किया जाएगा।",
-    "yururluk_tarihi_mayis_2026_son": "प्रभावी तिथि: 1 मई 2026 · अंतिम अद्यतन: 15 मई 2026"
+    "yururluk_tarihi_mayis_2026_son": "प्रभावी तिथि: 1 मई 2026 · अंतिम अद्यतन: 15 मई 2026",
+    "policy_row_time_72plus": "72+ घंटे पहले",
+    "policy_row_refund_72plus": "%100 वापसी",
+    "policy_row_time_24_72": "24-72 घंटे पहले",
+    "policy_row_refund_24_72": "%50 वापसी",
+    "policy_row_time_24_less": "24 घंटे से कम",
+    "policy_row_refund_24_less": "कोई वापसी नहीं",
+    "policy_row_time_operator": "ऑपरेटर/मौसम रद्दीकरण",
+    "policy_row_refund_operator": "%100 वापसी या वैकल्पिक तारीख",
+    "policy_row_time_saglik": "चिकित्सा रिपोर्ट",
+    "policy_row_refund_saglik": "%100 वापसी",
+    "pagehero_tag_yasal": "कानूनी",
+    "breadcrumb_iptal_iade": "रद्दीकरण और वापसी",
+    "eposta_label": "ईमेल:",
+    "whatsapp_label": "WhatsApp:",
+    "yuzde_100_iade_garantisi": "%100 वापसी गारंटी"
   },
   "page.kapadokya": {
     "araligidir_balon_ucus_oranlari": "— गुब्बारा उड़ान दर 85%+ के स्तर पर रहती है।",
@@ -538,7 +628,19 @@
     "tarafindan_sunulur_standart_165": "द्वारा प्रदान किया जाता है। कीमतें स्टैंडर्ड €165, कम्फर्ट €215, डीलक्स €295 और रोमांटिक निजी टूर €580 से शुरू होती हैं — स्थानांतरण, नाश्ता, बीमा, प्रमाणपत्र और शैम्पेन सेवा शामिल।",
     "turkiye_nin_ic_anadolu": ", तुर्किये के मध्य अनातोलिया क्षेत्र में स्थित और",
     "unesco_dunya_mirasi_listesi_nde": "यूनेस्को विश्व धरोहर सूची में",
-    "yapabilirsiniz": "आप क्या कर सकते हैं?"
+    "yapabilirsiniz": "आप क्या कर सकते हैं?",
+    "cat_title_balon": "गुब्बारा भ्रमण",
+    "cat_desc_balon": "€165 से शुरू पैकेज, 9+ ऑपरेटर",
+    "cat_title_aktiviteler": "गतिविधियाँ",
+    "cat_desc_aktiviteler": "ATV, घुड़सवारी, जीप सफारी — €29 से",
+    "cat_title_gezi_turlari": "दर्शनीय स्थल भ्रमण",
+    "cat_desc_gezi_turlari": "लाल, हरा, सूर्यास्त भ्रमण",
+    "cat_title_kombo": "कॉम्बो पैकेज",
+    "cat_desc_kombo": "गुब्बारा + होटल + टूर किफायती पैकेज",
+    "nisan_haziran": "अप्रैल-जून",
+    "ve": "और",
+    "kategoriler": "श्रेणियाँ",
+    "kapadokya_title": "कप्पाडोसिया"
   },
   "page.kullanim_sartlari": {
     "10_uyusmazlik_cozumu": "10. विवाद समाधान",
@@ -587,7 +689,10 @@
     "uyusmazlik_halinde_oncelikle": "विवाद की स्थिति में सबसे पहले Trip and Tick ग्राहक सहायता से संपर्क करें।\n            यदि समाधान नहीं मिलता है, तो Nevşehir उपभोक्ता मध्यस्थता समिति या Nevşehir उपभोक्ता\n            न्यायालय अधिकार-क्षेत्र रखते हैं। लागू कानून तुर्की कानून है।",
     "yas_kilo_limitlerine_uymak_balon": "आयु और वजन सीमाओं का पालन करना (बैलून: 6+ वर्ष)।",
     "yuksek_sezon_nisan_haziran_eylul": "उच्च मौसम (अप्रैल-जून, सितंबर-अक्टूबर) में अतिरिक्त शुल्क लागू हो सकता है।",
-    "yururluk_tarihi_mayis_2026_son": "प्रभावी तिथि: 1 मई 2026 · अंतिम अद्यतन: 15 मई 2026"
+    "yururluk_tarihi_mayis_2026_son": "प्रभावी तिथि: 1 मई 2026 · अंतिम अद्यतन: 15 मई 2026",
+    "breadcrumb_name": "उपयोग की शर्तें",
+    "kvkk_link_text": "KVKK",
+    "eposta_info": "info@tripandtick.com"
   },
   "page.kvkk": {
     "6698_sayili_kisisel_verilerin": "व्यक्तिगत डेटा संरक्षण कानून संख्या 6698 (\"KVKK\") के अनुसार, डेटा नियंत्रक की हैसियत से\n            हम घोषणा करते हैं",
@@ -656,7 +761,17 @@
     "yasal_yukumluluklerin_yerine": "कानूनी दायित्वों का निर्वहन (कर, TÜRSAB)।",
     "yetkili_kamu_kurumlari_yasal": "सक्षम सार्वजनिक संस्थान (कानूनी अनुरोध की स्थिति में)।",
     "yurt_ici_disinda_verilerin": "उन घरेलू या विदेशी तीसरे पक्षों को जानना जिन्हें डेटा स्थानांतरित किया जाता है।",
-    "yururluk_tarihi_mayis_2026_son": "प्रभावी तिथि: 1 मई 2026 · अंतिम अद्यतन: 15 मई 2026"
+    "yururluk_tarihi_mayis_2026_son": "प्रभावी तिथि: 1 मई 2026 · अंतिम अद्यतन: 15 मई 2026",
+    "adres_label": "पता:",
+    "eposta_label": "ईमेल:",
+    "telefon_label": "फ़ोन:",
+    "eposta_info": "info@tripandtick.com",
+    "telefon_no": "+90 537 464 78 61",
+    "online_onerilir_label": "ऑनलाइन (अनुशंसित):",
+    "veri_haklari_talep_formu": "डेटा अधिकार अनुरोध फॉर्म",
+    "magic_link_aciklama": "— डेटा एक्सेस (KVKK m.11/b) या हटाने (m.11/e) के लिए 24 घंटे का अनुमोदित magic-link।",
+    "posta_label": "डाक:",
+    "kvkk_gov_url_text": "www.kvkk.gov.tr"
   },
   "page.offline": {
     "ana_sayfa": "होम",
@@ -676,7 +791,15 @@
     "sektorel_standartlar": "उद्योग मानक",
     "shgm_lisansli_easa_sertifikali": "SHGM लाइसेंस प्राप्त, EASA प्रमाणित",
     "tum_operatorlerimiz_easa_part": "हमारे सभी ऑपरेटर EASA Part-BOP मानकों के अनुरूप वार्षिक रखरखाव\n              कार्यक्रम लागू करते हैं, SHGM-प्रमाणित पायलट दल नियुक्त करते हैं और\n              अंतर्राष्ट्रीय यात्रा बीमा के साथ उड़ानें संचालित करते हैं।",
-    "yil": "+ वर्ष)"
+    "yil": "+ वर्ष)",
+    "breadcrumb_name": "ऑपरेटर",
+    "pagehero_highlight_balon_operatoru": "{count}+ गुब्बारा ऑपरेटर",
+    "pagehero_description_dynamic": "Trip and Tick के पास TÜRSAB और SHGM से लाइसेंस प्राप्त {count}+ प्रीमियम गुब्बारा ऑपरेटरों के साथ सीधे एजेंसी समझौते हैं। औसत {rating}★ के साथ {reviews}+ सत्यापित समीक्षाएं।",
+    "lisans_prefix": "लाइसेंस",
+    "yorum_suffix": "समीक्षाएं",
+    "balon_suffix": "गुब्बारे",
+    "pilot_suffix": "पायलट",
+    "jsonld_item_list_name": "Trip and Tick साझेदार गुब्बारा ऑपरेटर"
   },
   "page.operatorler.id": {
     "40m_eur_ucuncu_sahis_sorumluluk": "€40M तृतीय-पक्ष देयता बीमा",
@@ -699,7 +822,16 @@
     "ucmak_trip_tick_uzerinden_tek": "के साथ उड़ान भरने के लिए आप Trip and Tick के माध्यम से एक क्लिक में\n                बुकिंग कर सकते हैं।",
     "ucus_yapan_misafirlerden_secili": "के साथ उड़ान भरने वाले अतिथियों की चयनित समीक्षाएं।",
     "uzmanlik_alanlari": "विशेषज्ञता के क्षेत्र",
-    "yil": "+ वर्ष)"
+    "yil": "+ वर्ष)",
+    "yorum": "समीक्षाएं",
+    "balon_kelimesi": "गुब्बारा",
+    "pilot_kelimesi": "पायलट",
+    "keyvalue_label_filo": "बेड़ा",
+    "keyvalue_label_adres": "पता",
+    "keyvalue_label_telefon": "फ़ोन",
+    "keyvalue_label_web": "वेबसाइट",
+    "keyvalue_label_diller": "भाषाएं",
+    "sertifikalar": "प्रमाणपत्र"
   },
   "page.oteller": {
     "50_partner_otel_anlasmamiz_var": "हमारे 50+ साझेदार होटलों के साथ समझौते हैं। अपनी आवश्यकता के अनुरूप अनुशंसा के लिए हमसे संपर्क करें — हम आपके बजट के लिए सबसे उपयुक्त होटल खोजेंगे।",
@@ -712,7 +844,10 @@
     "ozel_otel_talebi_gonder": "विशेष होटल अनुरोध भेजें",
     "pagehero_description_unesco_mirasi": "यूनेस्को धरोहर क्षेत्र में प्रामाणिक गुफा कमरों वाले बुटीक होटल। नाश्ता, Wi-Fi और एयर कंडीशनिंग शामिल। गोरेमे, उर्गुप और नेवशेहिर केंद्रित।",
     "pagehero_highlight_magara_otelleri": "गुफा होटल",
-    "pagehero_title_kapadokya": "कप्पाडोकिया"
+    "pagehero_title_kapadokya": "कप्पाडोकिया",
+    "pagehero_tag_oteller": "होटल",
+    "breadcrumb_name": "होटल",
+    "jsonld_item_list_name": "कप्पाडोसिया होटल"
   },
   "page.oteller.slug": {
     "degerlendirme": "समीक्षाएँ)",
@@ -721,7 +856,15 @@
     "otel_musaitligi_guncel_fiyat": "होटल की उपलब्धता और वर्तमान कीमतें तिथि के अनुसार बदलती हैं। साथ में दिया गया फॉर्म भरें — हम 24 घंटे के भीतर आपको कॉल करेंगे और",
     "otel_rezervasyonu_telefon_posta": "फोन / ईमेल द्वारा होटल बुकिंग",
     "paylasacagiz_acil_iletisim": "आपके साथ साझा करेंगे। तत्काल पूछताछ के लिए\n                  सीधे फोन या WhatsApp पर संपर्क करें।",
-    "uygun_secenekler_musaitlik": "उपयुक्त विकल्प, उपलब्धता और मूल्य प्रस्ताव"
+    "uygun_secenekler_musaitlik": "उपयुक्त विकल्प, उपलब्धता और मूल्य प्रस्ताव",
+    "olanaklar": "सुविधाएं",
+    "tier_ucuz_ekonomik": "बजट / किफायती",
+    "tier_orta_halli": "मध्यम श्रेणी",
+    "tier_luks_premium": "लग्जरी / प्रीमियम",
+    "tier_standart": "मानक",
+    "eposta_buton": "ईमेल",
+    "whatsapp": "WhatsApp",
+    "oteller_breadcrumb": "होटल"
   },
   "page.paketler": {
     "meta_desc": "कप्पाडोकिया पूरे दिन के पैकेज, हनीमून, परिवार, साहसिक और विवाह प्रस्ताव पैकेज। एक ही बुकिंग में बैलून + होटल + टूर — लाभप्रद मूल्य पर।",
@@ -732,7 +875,9 @@
     "pagehero_description_balon_otel": "एक ही बुकिंग में बैलून + होटल + टूर। हनीमून, परिवार, साहसिक, विवाह प्रस्ताव और कॉर्पोरेट इवेंट पैकेज — अलग-अलग बुकिंग की तुलना में 20-30% सस्ता।",
     "pagehero_highlight_kombo_paketleri": "कॉम्बो पैकेज",
     "pagehero_tag_ozel_paketler": "विशेष पैकेज",
-    "pagehero_title_kapadokya": "कप्पाडोकिया"
+    "pagehero_title_kapadokya": "कप्पाडोकिया",
+    "breadcrumb_paketler": "पैकेज",
+    "og_image_subtitle": "हनीमून · परिवार · रोमांच · विवाह प्रस्ताव"
   },
   "page.rezervasyon.basarili": {
     "meta_desc": "आपकी बुकिंग सफलतापूर्वक पूरी हो गई है।",
@@ -746,13 +891,16 @@
     "rezervasyon_bilgileriniz": "आपकी बुकिंग जानकारी आपके ब्राउज़र में सहेजी गई है।\n            पुनः प्रयास करने पर आप वहीं से जारी रख सकते हैं जहां छोड़ा था।",
     "sorun_yasiyorsaniz": "यदि आपको समस्या आ रही है:",
     "tekrar_dene": "पुनः प्रयास करें",
-    "whatsapp_destek": "WhatsApp सहायता"
+    "whatsapp_destek": "WhatsApp सहायता",
+    "bilgi_etiketi": "जानकारी:"
   },
   "page.rezervasyon.yeniden_tarih.token": {
     "link_gecersiz": "अमान्य लिंक",
     "meta_desc": "अपनी रद्द की गई बुकिंग के लिए वैकल्पिक तारीख चुनें या पूर्ण रिफंड का अनुरोध करें।",
     "meta_title": "बुकिंग — नई तारीख या रिफंड | Trip and Tick",
-    "whatsapp_iletisim": "WhatsApp के माध्यम से संपर्क करें"
+    "whatsapp_iletisim": "WhatsApp के माध्यम से संपर्क करें",
+    "link_dogrulanamadi": "लिंक सत्यापित नहीं किया जा सका। कृपया अपने ईमेल के मूल लिंक का उपयोग करें।",
+    "link_suresi_dolmus": "यह लिंक समाप्त हो गया है। कृपया ग्राहक सेवा से संपर्क करें।"
   },
   "page.sss": {
     "cevabini_bulamadin": "अपना उत्तर नहीं मिला?",
@@ -765,7 +913,13 @@
     "pagehero_description_kapadokya_tatili": "कप्पाडोकिया छुट्टी, बैलून टूर बुकिंग, भुगतान और रद्दीकरण नीति के बारे में सबसे अधिक पूछे जाने वाले प्रश्नों के त्वरित उत्तर।",
     "pagehero_highlight_sorulan_sorular": "पूछे जाने वाले प्रश्न",
     "pagehero_title_sik": "अक्सर",
-    "whatsapp_sor": "WhatsApp से पूछें"
+    "whatsapp_sor": "WhatsApp से पूछें",
+    "category_balon": "गुब्बारा भ्रमण",
+    "category_rezervasyon": "आरक्षण",
+    "category_odeme": "भुगतान",
+    "category_iptal": "रद्दीकरण और वापसी",
+    "category_genel": "सामान्य",
+    "meta_og_image_subtitle": "गुब्बारा भ्रमण · मूल्य · रद्दीकरण · भुगतान — त्वरित उत्तर"
   },
   "page.transferler": {
     "meta_desc": "नेवशेहिर (NAV) और कायसेरी (ASR) हवाई अड्डा स्थानांतरण। निजी कार, मिनीबस और VIP विकल्प। 24/7 सेवा, निश्चित मूल्य, तत्काल बुकिंग।",
@@ -775,7 +929,9 @@
     "meta_title_2": "कप्पाडोकिया हवाई अड्डा स्थानांतरण",
     "pagehero_description_nevsehir_nav": "नेवशेहिर (NAV) 30–45 मिनट और कायसेरी (ASR) 60–75 मिनट स्थानांतरण सेवाएँ। निजी कार, मिनीबस और VIP विकल्प। निश्चित मूल्य — कोई आश्चर्य नहीं।",
     "pagehero_highlight_ozel_transfer": "निजी स्थानांतरण",
-    "pagehero_title_havalimani": "हवाई अड्डा"
+    "pagehero_title_havalimani": "हवाई अड्डा",
+    "pagehero_tag_transferler": "ट्रांसफर",
+    "breadcrumb_name": "ट्रांसफर"
   },
   "page.turlar": {
     "meta_desc": "कप्पाडोकिया के सबसे लोकप्रिय भ्रमण टूर: रेड टूर (गोरेमे + उचिसार), ग्रीन टूर (इहलारा + देरिनकुयु), सूर्यास्त और फ़ोटोग्राफ़ी टूर। गाइड सहित, ट्रांसफ़र शामिल।",
@@ -786,7 +942,9 @@
     "pagehero_description_unesco_dunya": "एक पेशेवर गाइड के साथ इस यूनेस्को विश्व धरोहर क्षेत्र के सबसे महत्वपूर्ण स्थलों की खोज करें। रेड, ग्रीन, सूर्यास्त और विशेष फ़ोटोग्राफ़ी टूर।",
     "pagehero_highlight_klasik_turlari": "क्लासिक टूर",
     "pagehero_tag_gezi_turlari": "भ्रमण टूर",
-    "pagehero_title_kapadokya": "कप्पाडोकिया"
+    "pagehero_title_kapadokya": "कप्पाडोकिया",
+    "breadcrumb_gezi_turlari": "दर्शनीय स्थल भ्रमण",
+    "og_image_subtitle": "लाल · हरा · सूर्यास्त · फोटोग्राफी टूर"
   },
   "page.yorum": {
     "deneyiminizi_paylasin": "अपना अनुभव साझा करें",
@@ -798,6 +956,13 @@
     "meta_desc": "अपना Trip and Tick अनुभव साझा करें। आपकी समीक्षा मॉडरेटर अनुमोदन के बाद 24 घंटे के भीतर प्रकाशित होती है।",
     "meta_title": "अपनी समीक्षा लिखें | Trip and Tick",
     "musteri_yorumu": "ग्राहक समीक्षा",
-    "trip_tick_yasadiginiz_tatil": "Trip and Tick के साथ बिताए अपने छुट्टी के अनुभव को हमारे अन्य अतिथियों के साथ साझा करें।\n            आपकी समीक्षा 24 घंटे के भीतर प्रकाशित होती है।"
+    "trip_tick_yasadiginiz_tatil": "Trip and Tick के साथ बिताए अपने छुट्टी के अनुभव को हमारे अन्य अतिथियों के साथ साझा करें।\n            आपकी समीक्षा 24 घंटे के भीतर प्रकाशित होती है।",
+    "featurecard_title_moderasyon": "मॉडरेशन"
+  },
+  "page.rezervasyon.slug": {
+    "loading": "लोड हो रहा है...",
+    "meta_desc_template": "{name} के लिए ऑनलाइन बुकिंग। {desc}",
+    "meta_title_not_found": "बुकिंग नहीं मिली | Trip and Tick",
+    "meta_title_template": "बुकिंग | {name} - Trip and Tick"
   }
 }

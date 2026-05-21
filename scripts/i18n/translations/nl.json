@@ -197,7 +197,10 @@
     "meta_title_2": "Activiteiten in Cappadocië",
     "pagehero_description_atv_turlari": "ATV-tours, paardrijervaringen en jeepsafari. Professionele gidsen, volledig verzekerd, hoteltransfer inbegrepen. Prijzen vanaf € 29.",
     "pagehero_highlight_macera": "Avontuurlijke activiteiten",
-    "pagehero_title_kapadokya": "Cappadocië"
+    "pagehero_title_kapadokya": "Cappadocië",
+    "pagehero_tag_aktiviteler": "Activiteiten",
+    "breadcrumb_aktiviteler": "Activiteiten",
+    "og_image_subtitle": "ATV · Paardrijden · Jeep Safari — vanaf €29"
   },
   "page.ara": {
     "meta_desc": "Zoek ballonvaarten, hotels, activiteiten, sightseeingtours, pakketten en transfers in de Trip and Tick-catalogus. Filter op prijs, beoordeling, duur en valuta.",
@@ -219,7 +222,16 @@
     "pagehero_highlight_programi": "Programma",
     "pagehero_tag_acente_programi": "Reisbureauprogramma",
     "pagehero_title_b2b_acente": "B2B-reisbureau",
-    "zaten_acente_misiniz": "Al een reisbureau?"
+    "zaten_acente_misiniz": "Al een reisbureau?",
+    "breadcrumb_b2b": "B2B",
+    "benefit_toplu_fiyat_title": "Bulkprijs",
+    "benefit_toplu_fiyat_desc": "Concurrerende nettoprijzen voor het gehele aanbod van ballonnen, tours, hotels en transfers. Volumekortingen.",
+    "benefit_rest_api_title": "REST API Toegang",
+    "benefit_rest_api_desc": "Beschikbaarheidsvragen, boekingen aanmaken, annulering — integreer met uw systeem via JSON API.",
+    "benefit_hesap_yoneticisi_title": "Vaste accountmanager",
+    "benefit_hesap_yoneticisi_desc": "Turkse + Engelse + Duitse ondersteuning. 24/7 WhatsApp + prioritaire e-mailreactie.",
+    "benefit_komisyon_title": "%12-18 Commissie",
+    "benefit_komisyon_desc": "Dynamische commissie op basis van volume + seizoen. Maandelijkse automatische afstemmingsrapportage."
   },
   "page.balonlar": {
     "40m_sigorta": "€40 mln verzekering",
@@ -240,7 +252,13 @@
     "paket": "4 pakketten",
     "paket_karsilastirmasi": "Pakketvergelijking",
     "sadece_sivil_havacilik_genel": "We werken uitsluitend met operators die gelicentieerd zijn door het Directoraat-generaal Burgerluchtvaart en minstens 5 jaar ervaring hebben.\n              Geen tussenpersooncommissie — de prijs komt rechtstreeks van de operator.",
-    "standart_ekonomik_ucustan": "Opties voor elk budget, van een standaard economyvlucht tot een romantische privémand.\n              Alle prijzen zijn inclusief transfer, ontbijt, verzekering, certificaat en\n              champagneservice."
+    "standart_ekonomik_ucustan": "Opties voor elk budget, van een standaard economyvlucht tot een romantische privémand.\n              Alle prijzen zijn inclusief transfer, ontbijt, verzekering, certificaat en\n              champagneservice.",
+    "detay_iletisim": "Details & Contact",
+    "detay_rezerve": "Details & Boeken",
+    "kisi_basi_yetiskin": "per persoon / volwassene",
+    "kisi_basi_dinamik": "per persoon (dagelijks wisselend binnen 7 dagen)",
+    "sss_tag": "FAQ",
+    "lisans_prefix": "Licentie"
   },
   "page.balonlar.slug": {
     "3d_secure_odeme": "3D Secure-betaling",
@@ -261,7 +279,11 @@
     "soru_sor_whatsapp_email": "Stel een vraag → WhatsApp / E-mail",
     "sure": "Duur",
     "tarih_sec_rezerve_et": "Datum Kiezen & Boeken",
-    "tarih_seciminde_gunluk_doluluk": "De dagelijkse beschikbaarheid wordt direct gecontroleerd bij het kiezen van een datum."
+    "tarih_seciminde_gunluk_doluluk": "De dagelijkse beschikbaarheid wordt direct gecontroleerd bij het kiezen van een datum.",
+    "balon_turlari": "Ballonvaarten",
+    "iade_operator_iptali": "%100 terugbetaling — annulering door operator",
+    "ozel_fiyat": "Speciale prijs",
+    "lisans_prefix": "Licentie"
   },
   "page.blog": {
     "balon_turlari_gezi_rotalari_otel": "Ballonvaarten, reisroutes, hotelaanbevelingen en nog veel meer.\n            Alles wat u nodig hebt voor uw reis naar Cappadocië vindt u hier.",
@@ -278,7 +300,13 @@
     "meta_title_2": "Blog — Reisgids voor Cappadocië",
     "seo_agent_yakinda_kapadokya": "SEO Agent maakt binnenkort handige blogberichten over reizen in Cappadocië.\n              Kom snel weer terug!",
     "trip_tick_olarak_kapadokya_daki": "Bij Trip and Tick werken we samen met de meest betrouwbare operators in Cappadocië om u\n              onvergetelijke ervaringen tegen de beste prijzen te bieden. Met 9+ aangesloten ballonoperators, een laagste-\n              prijsgarantie en ons restitutiebeleid van 100% bij annulering wegens weersomstandigheden kunt u met vertrouwen boeken.",
-    "tumu": "Alle ("
+    "tumu": "Alle (",
+    "category_balon_turlari": "Ballonvaarten",
+    "category_kapadokya_rehber": "Reisgids Cappadocië",
+    "category_aktiviteler": "Activiteiten",
+    "category_konaklama": "Accommodatie",
+    "category_ulasim": "Vervoer",
+    "category_genel": "Algemeen"
   },
   "page.blog.slug": {
     "blog_don": "Terug naar blog",
@@ -336,7 +364,18 @@
     "tercihler_gizlilik_guvenlik": "Voorkeuren → Privacy en beveiliging.",
     "ucuncu_taraf_cerezleri": "Cookies van derden",
     "yururluk_tarihi_mayis_2026_son": "Ingangsdatum: 1 mei 2026 · Laatst bijgewerkt: 15 mei 2026",
-    "zorunlu_cerezleri_kapatirsaniz": "Als u strikt noodzakelijke cookies uitschakelt, werkt de site mogelijk niet\n              correct (bijv. de betaalstap, de sessieduur)."
+    "zorunlu_cerezleri_kapatirsaniz": "Als u strikt noodzakelijke cookies uitschakelt, werkt de site mogelijk niet\n              correct (bijv. de betaalstap, de sessieduur).",
+    "tag_yasal": "Juridisch",
+    "breadcrumb_cerez_politikasi": "Cookiebeleid",
+    "cookie_type_zorunlu_title": "Essentiële cookies",
+    "cookie_type_zorunlu_desc": "Vereist voor de basisfunctionaliteit van de site. Sessiebeheer, beveiliging, winkelwagen — deze kunnen niet worden uitgeschakeld.",
+    "cookie_type_analitik_title": "Analytische cookies",
+    "cookie_type_analitik_desc": "Meet anoniem het sitegebruik (Google Analytics 4). Welke pagina's populair zijn, op welk punt gebruikers afhaken.",
+    "cookie_type_fonksiyonel_title": "Functionele cookies",
+    "cookie_type_fonksiyonel_desc": "Worden gebruikt om voorkeuren zoals taalinstelling, valuta en recente zoekopdrachten te onthouden.",
+    "cookie_type_pazarlama_title": "Marketingcookies",
+    "cookie_type_pazarlama_desc": "Sociale media-integratie en advertentiepersonalisatie (alleen actief met toestemming).",
+    "pazarlama_label": "Marketing:"
   },
   "page.gizlilik_politikasi": {
     "10_degisiklikler": "10. Wijzigingen",
@@ -407,7 +446,13 @@
     "yasal_yukumluluklerin_yerine": "Naleving van wettelijke verplichtingen (TÜRSAB, belasting).",
     "yurt_ici_disi_aktarilan": "De partijen kennen aan wie gegevens binnen- of buitenland worden doorgegeven.",
     "yururluk_tarihi_mayis_2026_son": "Ingangsdatum: 1 mei 2026 · Laatst bijgewerkt: 15 mei 2026",
-    "zarar_olustuysa_giderilmesini": "Schadevergoeding verzoeken als er schade is ontstaan."
+    "zarar_olustuysa_giderilmesini": "Schadevergoeding verzoeken als er schade is ontstaan.",
+    "tag_yasal": "Juridisch",
+    "breadcrumb_gizlilik_politikasi": "Privacybeleid",
+    "kimlik_label": "Identiteit:",
+    "pasaport_label": "Paspoort:",
+    "finansal_label": "Financieel:",
+    "teknik_label": "Technisch:"
   },
   "page.hakkimizda": {
     "bizi_digerlerinden_ayiran_ilke": "4 principes die ons onderscheiden",
@@ -446,7 +491,27 @@
     "tursab_lisans_no": "TÜRSAB-licentienr.",
     "tursab_lisansimiz": "onze TÜRSAB-licentie",
     "uygun_fiyatli_seffaf_guvenli": "betaalbaar, transparant en\n                veilig",
-    "yerel_istihdama_destek": "steun voor lokale werkgelegenheid"
+    "yerel_istihdama_destek": "steun voor lokale werkgelegenheid",
+    "stat_label_mutlu_musteri": "Tevreden klanten",
+    "stat_label_musteri_puani": "Klantbeoordeling",
+    "stat_label_lisansli_operator": "Gecertificeerde operators",
+    "stat_label_iade_garantisi": "Terugbetalingsgarantie",
+    "hikayemiz": "Ons verhaal",
+    "value_title_musteri_once": "Klant eerst",
+    "value_desc_musteri_once": "Elke boeking is een onvergetelijk moment voor een gezin of een koppel. We stellen deze verantwoordelijkheid voorop.",
+    "value_title_guven": "Vertrouwen",
+    "value_desc_guven": "TÜRSAB-licentie, 40M€ verzekering, 3D Secure betalingen, KVKK-naleving — transparantie is onze kernwaarde.",
+    "value_title_seffaflik": "Transparantie",
+    "value_desc_seffaflik": "Geen verborgen kosten. Prijzen zijn definitief — belasting, transfer en ontbijt inbegrepen. Annuleringsbeleid is duidelijk.",
+    "value_title_en_iyi_fiyat": "Beste prijs",
+    "value_desc_en_iyi_fiyat": "Directe operatorovereenkomsten — geen tussenpersonen. Beste prijsgarantie: als u goedkoper vindt, gaan wij %5 lager.",
+    "adres": "Adres",
+    "telefon": "Telefoon",
+    "eposta": "E-mail",
+    "misyonumuz": "Onze missie",
+    "vizyonumuz": "Onze visie",
+    "vizyonumuz_2027": "Tegen 2027",
+    "yuzde_10_15_ortaklik_komisyonu": "%10-15 partnercommissie"
   },
   "page.iletisim": {
     "acil_iptal_degisiklik_24": "Dringende annulering/wijziging: WhatsApp 24/7",
@@ -464,7 +529,17 @@
     "pagehero_tag_iletisim": "Contact",
     "telefon_09_00_22_00": "Telefoon: 09:00 - 22:00 (GMT+3)",
     "whatsapp_posta_24": "WhatsApp & e-mail: 24/7",
-    "yol_tarifi": "Routebeschrijving"
+    "yol_tarifi": "Routebeschrijving",
+    "pagehero_title_bizimle": "Met ons",
+    "breadcrumb_iletisim": "Contact",
+    "contact_label_eposta": "E-mail",
+    "contact_note_eposta": "Antwoord binnen 4 uur (kantooruren)",
+    "contact_label_telefon": "Telefoon",
+    "contact_note_telefon": "TR/EN ondersteuning",
+    "contact_label_whatsapp": "WhatsApp",
+    "contact_note_whatsapp": "24/7 direct berichten",
+    "contact_label_ofis": "Kantoor",
+    "contact_note_ofis": "Turkije"
   },
   "page.iptal_iade_politikasi": {
     "10_is_gunu": "5-10 werkdagen",
@@ -507,7 +582,22 @@
     "rezervasyon_sonrasi_ortaya": "In gevallen zoals ziekte, ongeval of zwangerschap die zich na de boeking voordoen,",
     "saglik_raporu_istisnasi": "3. Uitzondering met medische verklaring",
     "talep_onaylanir_onaylanmaz": "U wordt per e-mail op de hoogte gesteld zodra de aanvraag is goedgekeurd.",
-    "yururluk_tarihi_mayis_2026_son": "Ingangsdatum: 1 mei 2026 · Laatst bijgewerkt: 15 mei 2026"
+    "yururluk_tarihi_mayis_2026_son": "Ingangsdatum: 1 mei 2026 · Laatst bijgewerkt: 15 mei 2026",
+    "policy_row_time_72plus": "72+ uur van tevoren",
+    "policy_row_refund_72plus": "%100 terugbetaling",
+    "policy_row_time_24_72": "24-72 uur van tevoren",
+    "policy_row_refund_24_72": "%50 terugbetaling",
+    "policy_row_time_24_less": "Minder dan 24 uur",
+    "policy_row_refund_24_less": "Geen terugbetaling",
+    "policy_row_time_operator": "Annulering door operator/weer",
+    "policy_row_refund_operator": "%100 terugbetaling of alternatieve datum",
+    "policy_row_time_saglik": "Medisch rapport",
+    "policy_row_refund_saglik": "%100 terugbetaling",
+    "pagehero_tag_yasal": "Juridisch",
+    "breadcrumb_iptal_iade": "Annulering & Terugbetaling",
+    "eposta_label": "E-mail:",
+    "whatsapp_label": "WhatsApp:",
+    "yuzde_100_iade_garantisi": "%100 Terugbetalingsgarantie"
   },
   "page.kapadokya": {
     "araligidir_balon_ucus_oranlari": "— de ballonvluchtpercentages liggen op 85%+.",
@@ -538,7 +628,19 @@
     "tarafindan_sunulur_standart_165": "wordt aangeboden. De prijzen beginnen bij € 165 voor Standaard, € 215 voor Comfort, € 295 voor Deluxe en € 580 voor de Romantische privétour — transfer, ontbijt, verzekering, certificaat en champagneservice inbegrepen.",
     "turkiye_nin_ic_anadolu": ", gelegen in de regio Centraal-Anatolië van Türkiye en",
     "unesco_dunya_mirasi_listesi_nde": "op de UNESCO-Werelderfgoedlijst",
-    "yapabilirsiniz": "Wat Kunt U Doen?"
+    "yapabilirsiniz": "Wat Kunt U Doen?",
+    "cat_title_balon": "Ballonvaarten",
+    "cat_desc_balon": "Pakketten vanaf €165, 9+ operators",
+    "cat_title_aktiviteler": "Activiteiten",
+    "cat_desc_aktiviteler": "ATV, paardrijden, jeep safari — vanaf €29",
+    "cat_title_gezi_turlari": "Sightseeingtours",
+    "cat_desc_gezi_turlari": "Rode, Groene, zonsondergangtours",
+    "cat_title_kombo": "Combopakketten",
+    "cat_desc_kombo": "Voordelige pakketten ballon + hotel + tour",
+    "nisan_haziran": "April-Juni",
+    "ve": "en",
+    "kategoriler": "Categorieën",
+    "kapadokya_title": "Cappadocië"
   },
   "page.kullanim_sartlari": {
     "10_uyusmazlik_cozumu": "10. Geschillenbeslechting",
@@ -587,7 +689,10 @@
     "uyusmazlik_halinde_oncelikle": "Neem bij een geschil eerst contact op met de klantenservice van Trip and Tick.\n            Als er geen oplossing wordt gevonden, zijn de Consumentenarbitragecommissie van Nevşehir of de Consumentenrechtbanken\n            van Nevşehir bevoegd. Het toepasselijke recht is het Turkse recht.",
     "yas_kilo_limitlerine_uymak_balon": "Het naleven van de leeftijds- en gewichtslimieten (ballon: 6+ jaar).",
     "yuksek_sezon_nisan_haziran_eylul": "In het hoogseizoen (april-juni, september-oktober) kan een toeslag van toepassing zijn.",
-    "yururluk_tarihi_mayis_2026_son": "Ingangsdatum: 1 mei 2026 · Laatst bijgewerkt: 15 mei 2026"
+    "yururluk_tarihi_mayis_2026_son": "Ingangsdatum: 1 mei 2026 · Laatst bijgewerkt: 15 mei 2026",
+    "breadcrumb_name": "Gebruiksvoorwaarden",
+    "kvkk_link_text": "KVKK",
+    "eposta_info": "info@tripandtick.com"
   },
   "page.kvkk": {
     "6698_sayili_kisisel_verilerin": "In overeenstemming met Wet nr. 6698 inzake de Bescherming van Persoonsgegevens (\"KVKK\") verklaren\n            wij in onze hoedanigheid als verwerkingsverantwoordelijke",
@@ -656,7 +761,17 @@
     "yasal_yukumluluklerin_yerine": "Nakoming van wettelijke verplichtingen (belasting, TÜRSAB).",
     "yetkili_kamu_kurumlari_yasal": "Bevoegde overheidsinstanties (op wettelijk verzoek).",
     "yurt_ici_disinda_verilerin": "De binnenlandse of buitenlandse derden kennen aan wie de gegevens worden doorgegeven.",
-    "yururluk_tarihi_mayis_2026_son": "Ingangsdatum: 1 mei 2026 · Laatst bijgewerkt: 15 mei 2026"
+    "yururluk_tarihi_mayis_2026_son": "Ingangsdatum: 1 mei 2026 · Laatst bijgewerkt: 15 mei 2026",
+    "adres_label": "Adres:",
+    "eposta_label": "E-mail:",
+    "telefon_label": "Telefoon:",
+    "eposta_info": "info@tripandtick.com",
+    "telefon_no": "+90 537 464 78 61",
+    "online_onerilir_label": "Online (aanbevolen):",
+    "veri_haklari_talep_formu": "Aanvraagformulier gegevensrechten",
+    "magic_link_aciklama": "— 24-uur goedgekeurde magic-link voor gegevenstoegang (KVKK m.11/b) of verwijdering (m.11/e).",
+    "posta_label": "Post:",
+    "kvkk_gov_url_text": "www.kvkk.gov.tr"
   },
   "page.offline": {
     "ana_sayfa": "Startpagina",
@@ -676,7 +791,15 @@
     "sektorel_standartlar": "Branchenormen",
     "shgm_lisansli_easa_sertifikali": "SHGM-gelicentieerd, EASA-gecertificeerd",
     "tum_operatorlerimiz_easa_part": "Al onze operators voeren een jaarlijks onderhoudsprogramma uit dat voldoet aan de\n              EASA Part-BOP-normen, zetten SHGM-gecertificeerde piloten in en\n              voeren vluchten uit met internationale reisverzekering.",
-    "yil": "+ jaar)"
+    "yil": "+ jaar)",
+    "breadcrumb_name": "Operators",
+    "pagehero_highlight_balon_operatoru": "{count}+ Ballonoperators",
+    "pagehero_description_dynamic": "Trip and Tick heeft directe agentuurovereenkomsten met {count}+ premium ballonoperators met een TÜRSAB- en SHGM-licentie. Gemiddeld {rating}★ met {reviews}+ geverifieerde beoordelingen.",
+    "lisans_prefix": "Licentie",
+    "yorum_suffix": "beoordelingen",
+    "balon_suffix": "ballonnen",
+    "pilot_suffix": "piloten",
+    "jsonld_item_list_name": "Trip and Tick gecontracteerde ballonoperators"
   },
   "page.operatorler.id": {
     "40m_eur_ucuncu_sahis_sorumluluk": "€40 mln aansprakelijkheidsverzekering jegens derden",
@@ -699,7 +822,16 @@
     "ucmak_trip_tick_uzerinden_tek": "kun je in één klik boeken via Trip and Tick\n                om te vliegen met.",
     "ucus_yapan_misafirlerden_secili": "geselecteerde beoordelingen van gasten die hebben gevlogen met.",
     "uzmanlik_alanlari": "Expertisegebieden",
-    "yil": "+ jaar)"
+    "yil": "+ jaar)",
+    "yorum": "beoordelingen",
+    "balon_kelimesi": "ballon",
+    "pilot_kelimesi": "piloot",
+    "keyvalue_label_filo": "Vloot",
+    "keyvalue_label_adres": "Adres",
+    "keyvalue_label_telefon": "Telefoon",
+    "keyvalue_label_web": "Website",
+    "keyvalue_label_diller": "Talen",
+    "sertifikalar": "Certificaten"
   },
   "page.oteller": {
     "50_partner_otel_anlasmamiz_var": "Wij hebben afspraken met meer dan 50 partnerhotels. Neem contact met ons op voor een aanbeveling op maat — wij vinden het juiste hotel voor uw budget.",
@@ -712,7 +844,10 @@
     "ozel_otel_talebi_gonder": "Aangepaste Hotelaanvraag Versturen",
     "pagehero_description_unesco_mirasi": "Authentieke boutiquehotels met grotkamers in de UNESCO-erfgoedregio. Ontbijt, wifi en airconditioning inbegrepen. Rond Göreme, Ürgüp en Nevşehir.",
     "pagehero_highlight_magara_otelleri": "Grothotels",
-    "pagehero_title_kapadokya": "Cappadocië"
+    "pagehero_title_kapadokya": "Cappadocië",
+    "pagehero_tag_oteller": "Hotels",
+    "breadcrumb_name": "Hotels",
+    "jsonld_item_list_name": "Hotels in Cappadocië"
   },
   "page.oteller.slug": {
     "degerlendirme": "beoordelingen)",
@@ -721,7 +856,15 @@
     "otel_musaitligi_guncel_fiyat": "Beschikbaarheid van hotels en actuele prijzen variëren per datum. Vul het formulier hiernaast in — wij bellen u binnen 24 uur en",
     "otel_rezervasyonu_telefon_posta": "Hotelboeking per telefoon / e-mail",
     "paylasacagiz_acil_iletisim": "delen het met u. Voor dringende vragen\n                  neemt u rechtstreeks contact op via telefoon of WhatsApp.",
-    "uygun_secenekler_musaitlik": "geschikte opties, beschikbaarheid en een prijsopgave"
+    "uygun_secenekler_musaitlik": "geschikte opties, beschikbaarheid en een prijsopgave",
+    "olanaklar": "Faciliteiten",
+    "tier_ucuz_ekonomik": "Budget / Economisch",
+    "tier_orta_halli": "Middensegment",
+    "tier_luks_premium": "Luxe / Premium",
+    "tier_standart": "Standaard",
+    "eposta_buton": "E-mail",
+    "whatsapp": "WhatsApp",
+    "oteller_breadcrumb": "Hotels"
   },
   "page.paketler": {
     "meta_desc": "Cappadocië volledige-dagpakketten, huwelijksreis-, gezins-, avontuur- en huwelijksaanzoekpakketten. Ballon + hotel + tour in één boeking — tegen een voordelige prijs.",
@@ -732,7 +875,9 @@
     "pagehero_description_balon_otel": "Ballon + hotel + tour in één boeking. Huwelijksreis-, gezins-, avontuur-, huwelijksaanzoek- en bedrijfsevenementpakketten — 20-30 % goedkoper dan apart boeken.",
     "pagehero_highlight_kombo_paketleri": "Combopakketten",
     "pagehero_tag_ozel_paketler": "Speciale pakketten",
-    "pagehero_title_kapadokya": "Cappadocië"
+    "pagehero_title_kapadokya": "Cappadocië",
+    "breadcrumb_paketler": "Pakketten",
+    "og_image_subtitle": "Huwelijksreis · Familie · Avontuur · Huwelijksaanzoek"
   },
   "page.rezervasyon.basarili": {
     "meta_desc": "Uw boeking is succesvol voltooid.",
@@ -746,13 +891,16 @@
     "rezervasyon_bilgileriniz": "Uw boekingsgegevens zijn opgeslagen in uw browser.\n            Wanneer u het opnieuw probeert, kunt u verdergaan waar u was gebleven.",
     "sorun_yasiyorsaniz": "Als u problemen ondervindt:",
     "tekrar_dene": "Opnieuw proberen",
-    "whatsapp_destek": "WhatsApp-ondersteuning"
+    "whatsapp_destek": "WhatsApp-ondersteuning",
+    "bilgi_etiketi": "Info:"
   },
   "page.rezervasyon.yeniden_tarih.token": {
     "link_gecersiz": "Ongeldige link",
     "meta_desc": "Kies een alternatieve datum voor uw geannuleerde boeking of vraag een volledige terugbetaling aan.",
     "meta_title": "Boeking — Nieuwe datum of terugbetaling | Trip and Tick",
-    "whatsapp_iletisim": "Contact via WhatsApp"
+    "whatsapp_iletisim": "Contact via WhatsApp",
+    "link_dogrulanamadi": "Link kon niet worden geverifieerd. Gebruik alstublieft de originele link uit uw e-mail.",
+    "link_suresi_dolmus": "Deze link is verlopen. Neem contact op met de klantenservice."
   },
   "page.sss": {
     "cevabini_bulamadin": "Niet het antwoord gevonden?",
@@ -765,7 +913,13 @@
     "pagehero_description_kapadokya_tatili": "Snelle antwoorden op de meest gestelde vragen over een vakantie in Cappadocië, het boeken van ballonvaarten, betaling en het annuleringsbeleid.",
     "pagehero_highlight_sorulan_sorular": "gestelde vragen",
     "pagehero_title_sik": "Veel",
-    "whatsapp_sor": "Vraag stellen via WhatsApp"
+    "whatsapp_sor": "Vraag stellen via WhatsApp",
+    "category_balon": "Ballonvaart",
+    "category_rezervasyon": "Reservering",
+    "category_odeme": "Betaling",
+    "category_iptal": "Annulering & Terugbetaling",
+    "category_genel": "Algemeen",
+    "meta_og_image_subtitle": "Ballonvaart · Prijs · Annulering · Betaling — Snelle antwoorden"
   },
   "page.transferler": {
     "meta_desc": "Luchthaventransfers Nevşehir (NAV) en Kayseri (ASR). Privéauto, minibus en VIP-opties. 24/7-service, vaste prijs, directe boeking.",
@@ -775,7 +929,9 @@
     "meta_title_2": "Luchthaventransfer Cappadocië",
     "pagehero_description_nevsehir_nav": "Transferdiensten Nevşehir (NAV) 30–45 min en Kayseri (ASR) 60–75 min. Privéauto, minibus en VIP-opties. Vaste prijs — geen verrassingen.",
     "pagehero_highlight_ozel_transfer": "Privétransfer",
-    "pagehero_title_havalimani": "Luchthaven"
+    "pagehero_title_havalimani": "Luchthaven",
+    "pagehero_tag_transferler": "Transfers",
+    "breadcrumb_name": "Transfers"
   },
   "page.turlar": {
     "meta_desc": "De populairste sightseeingtours van Cappadocië: Rode Tour (Göreme + Uçhisar), Groene Tour (Ihlara + Derinkuyu), zonsondergang- en fototours. Met gids, transfer inbegrepen.",
@@ -786,7 +942,9 @@
     "pagehero_description_unesco_dunya": "Ontdek de belangrijkste hoogtepunten van deze UNESCO-werelderfgoedregio met een professionele gids. Rode, Groene, zonsondergang- en exclusieve fototours.",
     "pagehero_highlight_klasik_turlari": "Klassieke tours",
     "pagehero_tag_gezi_turlari": "Sightseeingtours",
-    "pagehero_title_kapadokya": "Cappadocië"
+    "pagehero_title_kapadokya": "Cappadocië",
+    "breadcrumb_gezi_turlari": "Sightseeingtours",
+    "og_image_subtitle": "Rood · Groen · Zonsondergang · Fototours"
   },
   "page.yorum": {
     "deneyiminizi_paylasin": "Deel uw ervaring",
@@ -798,6 +956,13 @@
     "meta_desc": "Deel uw Trip and Tick-ervaring. Uw beoordeling wordt na goedkeuring door een moderator binnen 24 uur gepubliceerd.",
     "meta_title": "Schrijf uw beoordeling | Trip and Tick",
     "musteri_yorumu": "Klantbeoordeling",
-    "trip_tick_yasadiginiz_tatil": "Deel de vakantie-ervaring die u met Trip and Tick had met onze andere gasten.\n            Uw beoordeling wordt binnen 24 uur gepubliceerd."
+    "trip_tick_yasadiginiz_tatil": "Deel de vakantie-ervaring die u met Trip and Tick had met onze andere gasten.\n            Uw beoordeling wordt binnen 24 uur gepubliceerd.",
+    "featurecard_title_moderasyon": "Moderatie"
+  },
+  "page.rezervasyon.slug": {
+    "loading": "Laden...",
+    "meta_desc_template": "Online boeking voor {name}. {desc}",
+    "meta_title_not_found": "Boeking niet gevonden | Trip and Tick",
+    "meta_title_template": "Boeking | {name} - Trip and Tick"
   }
 }

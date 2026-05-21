@@ -8,15 +8,24 @@ import { notFound } from "next/navigation";
 import { verifyRescheduleToken } from "@/lib/reschedule-token";
 import { getBookingById } from "@/lib/db/bookings";
 import { listOverrides } from "@/lib/db/service-overrides";
+import { DICTIONARIES, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { YenidenTarihClient } from "./YenidenTarihClient";
 
 export const runtime = "edge";
 
-export const metadata: Metadata = {
-  title: "Rezervasyon — Yeni Tarih veya İade | Trip and Tick",
-  description: "İptal edilen rezervasyonunuz için alternatif tarih seçin veya tam iade isteyin.",
-  robots: { index: false, follow: false },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string; token: string };
+}): Promise<Metadata> {
+  const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
+  const d = DICTIONARIES[loc].page.rezervasyon.yeniden_tarih.token;
+  return {
+    title: d.meta_title,
+    description: d.meta_desc,
+    robots: { index: false, follow: false },
+  };
+}
 
 const ALT_LOOKAHEAD_DAYS = 14;
 const MAX_ALTERNATIVES = 7;
@@ -49,23 +58,24 @@ export default async function YenidenTarihPage({
 }: {
   params: { locale: string; token: string };
 }) {
+  const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
+  const d = DICTIONARIES[loc].page.rezervasyon.yeniden_tarih.token;
+
   const verify = await verifyRescheduleToken(params.token);
   if (!verify.valid || !verify.payload) {
     return (
       <main className="min-h-screen bg-slate-50 flex items-center justify-center p-6">
         <div className="max-w-md bg-white rounded-2xl shadow-sm p-8 text-center">
           <div className="text-5xl mb-3">⛔</div>
-          <h1 className="text-xl font-bold text-slate-900 mb-2">Link Geçersiz</h1>
+          <h1 className="text-xl font-bold text-slate-900 mb-2">{d.link_gecersiz}</h1>
           <p className="text-sm text-slate-600 mb-4">
-            {verify.error === "expired"
-              ? "Bu link süresi dolmuş. Lütfen müşteri hizmetleri ile iletişime geçin."
-              : "Link doğrulanamadı. Lütfen e-postanızdaki orijinal linki kullanın."}
+            {verify.error === "expired" ? d.link_suresi_dolmus : d.link_dogrulanamadi}
           </p>
           <a
             href="https://wa.me/905374647861"
             className="inline-block bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-lg font-semibold text-sm"
           >
-            WhatsApp ile İletişim
+            {d.whatsapp_iletisim}
           </a>
         </div>
       </main>

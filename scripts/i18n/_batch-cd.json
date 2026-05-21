@@ -1,0 +1,215 @@
+{
+  "page.aktiviteler": {
+    "pagehero_tag_aktiviteler": "Aktiviteler",
+    "breadcrumb_aktiviteler": "Aktiviteler",
+    "og_image_subtitle": "ATV · At Binme · Jeep Safari — €29'dan"
+  },
+  "page.paketler": {
+    "breadcrumb_paketler": "Paketler",
+    "og_image_subtitle": "Balayı · Aile · Macera · Evlilik Teklifi"
+  },
+  "page.turlar": {
+    "breadcrumb_gezi_turlari": "Gezi Turları",
+    "og_image_subtitle": "Kırmızı · Yeşil · Gün Batımı · Fotoğraf Turları"
+  },
+  "page.transferler": {
+    "pagehero_tag_transferler": "Transferler",
+    "breadcrumb_name": "Transferler"
+  },
+  "page.oteller": {
+    "pagehero_tag_oteller": "Oteller",
+    "breadcrumb_name": "Oteller",
+    "jsonld_item_list_name": "Kapadokya Otelleri"
+  },
+  "page.operatorler": {
+    "breadcrumb_name": "Operatörler",
+    "pagehero_highlight_balon_operatoru": "{count}+ Balon Operatörü",
+    "pagehero_description_dynamic": "Trip and Tick, TÜRSAB ve SHGM lisanslı {count}+ premium balon operatörüyle doğrudan acentelik anlaşmasına sahiptir. Ortalama {rating}★ ile {reviews}+ doğrulanmış yorum.",
+    "lisans_prefix": "Lisans",
+    "yorum_suffix": "yorum",
+    "balon_suffix": "balon",
+    "pilot_suffix": "pilot",
+    "jsonld_item_list_name": "Trip and Tick Anlaşmalı Balon Operatörleri"
+  },
+  "page.rezervasyon.iptal": {
+    "bilgi_etiketi": "Bilgi:"
+  },
+  "page.balonlar": {
+    "detay_iletisim": "Detay & İletişim",
+    "detay_rezerve": "Detay & Rezerve",
+    "kisi_basi_yetiskin": "kişi başı / yetişkin",
+    "kisi_basi_dinamik": "kişi başı (7 gün içi günlük değişir)",
+    "sss_tag": "SSS",
+    "lisans_prefix": "Lisans"
+  },
+  "page.balonlar.slug": {
+    "balon_turlari": "Balon Turları",
+    "iade_operator_iptali": "%100 iade — operatör iptali",
+    "ozel_fiyat": "Özel Fiyat",
+    "lisans_prefix": "Lisans"
+  },
+  "page.operatorler.id": {
+    "yorum": "yorum",
+    "balon_kelimesi": "balon",
+    "pilot_kelimesi": "pilot",
+    "keyvalue_label_filo": "Filo",
+    "keyvalue_label_adres": "Adres",
+    "keyvalue_label_telefon": "Telefon",
+    "keyvalue_label_web": "Web",
+    "keyvalue_label_diller": "Diller",
+    "sertifikalar": "Sertifikalar"
+  },
+  "page.oteller.slug": {
+    "olanaklar": "Olanaklar",
+    "tier_ucuz_ekonomik": "Ucuz / Ekonomik",
+    "tier_orta_halli": "Orta Halli",
+    "tier_luks_premium": "Lüks / Premium",
+    "tier_standart": "Standart",
+    "eposta_buton": "E-posta",
+    "whatsapp": "WhatsApp",
+    "oteller_breadcrumb": "Oteller"
+  },
+  "page.blog": {
+    "category_balon_turlari": "Balon Turları",
+    "category_kapadokya_rehber": "Kapadokya Rehberi",
+    "category_aktiviteler": "Aktiviteler",
+    "category_konaklama": "Konaklama",
+    "category_ulasim": "Ulaşım",
+    "category_genel": "Genel"
+  },
+  "page.sss": {
+    "category_balon": "Balon Turu",
+    "category_rezervasyon": "Rezervasyon",
+    "category_odeme": "Ödeme",
+    "category_iptal": "İptal & İade",
+    "category_genel": "Genel",
+    "meta_og_image_subtitle": "Balon Turu · Fiyat · İptal · Ödeme — Hızlı Cevaplar"
+  },
+  "page.yorum": {
+    "featurecard_title_moderasyon": "Moderasyon"
+  },
+  "page.iletisim": {
+    "pagehero_title_bizimle": "Bizimle",
+    "breadcrumb_iletisim": "İletişim",
+    "contact_label_eposta": "E-posta",
+    "contact_note_eposta": "4 saat içinde yanıt (mesai saati)",
+    "contact_label_telefon": "Telefon",
+    "contact_note_telefon": "TR/EN destek",
+    "contact_label_whatsapp": "WhatsApp",
+    "contact_note_whatsapp": "7/24 anlık mesaj",
+    "contact_label_ofis": "Ofis",
+    "contact_note_ofis": "Türkiye"
+  },
+  "page.b2b": {
+    "breadcrumb_b2b": "B2B",
+    "benefit_toplu_fiyat_title": "Toplu Fiyat",
+    "benefit_toplu_fiyat_desc": "Tüm balon, tur, otel ve transfer envanterinde rekabetçi net fiyat. Volüm bazlı ek indirim.",
+    "benefit_rest_api_title": "REST API Erişimi",
+    "benefit_rest_api_desc": "Müsaitlik sorgu, rezervasyon oluşturma, iptal — JSON API ile sisteminize entegre.",
+    "benefit_hesap_yoneticisi_title": "Özel Hesap Yöneticisi",
+    "benefit_hesap_yoneticisi_desc": "Türkçe + İngilizce + Almanca destek. 7/24 WhatsApp + öncelikli e-posta yanıt.",
+    "benefit_komisyon_title": "%12-18 Komisyon",
+    "benefit_komisyon_desc": "Volüm + sezon bazlı dinamik komisyon. Aylık otomatik mutabakat raporu."
+  },
+  "page.rezervasyon.slug": {
+    "loading": "Yükleniyor...",
+    "meta_desc_template": "{name} için online rezervasyon. {desc}",
+    "meta_title_not_found": "Rezervasyon Bulunamadı | Trip and Tick",
+    "meta_title_template": "Rezervasyon | {name} - Trip and Tick"
+  },
+  "page.rezervasyon.yeniden_tarih.token": {
+    "link_dogrulanamadi": "Link doğrulanamadı. Lütfen e-postanızdaki orijinal linki kullanın.",
+    "link_suresi_dolmus": "Bu link süresi dolmuş. Lütfen müşteri hizmetleri ile iletişime geçin."
+  },
+  "page.gizlilik_politikasi": {
+    "tag_yasal": "Yasal",
+    "breadcrumb_gizlilik_politikasi": "Gizlilik Politikası",
+    "kimlik_label": "Kimlik:",
+    "pasaport_label": "Pasaport:",
+    "finansal_label": "Finansal:",
+    "teknik_label": "Teknik:"
+  },
+  "page.cerez_politikasi": {
+    "tag_yasal": "Yasal",
+    "breadcrumb_cerez_politikasi": "Çerez Politikası",
+    "cookie_type_zorunlu_title": "Zorunlu Çerezler",
+    "cookie_type_zorunlu_desc": "Sitenin temel işlevselliği için gereklidir. Oturum yönetimi, güvenlik, sepet — bunlar kapatılamaz.",
+    "cookie_type_analitik_title": "Analitik Çerezler",
+    "cookie_type_analitik_desc": "Site kullanımını anonim ölçer (Google Analytics 4). Hangi sayfalar popüler, hangi noktada kullanıcı ayrılıyor.",
+    "cookie_type_fonksiyonel_title": "Fonksiyonel Çerezler",
+    "cookie_type_fonksiyonel_desc": "Dil seçimi, para birimi, son arama gibi tercihleri hatırlamak için.",
+    "cookie_type_pazarlama_title": "Pazarlama Çerezler",
+    "cookie_type_pazarlama_desc": "Sosyal medya entegrasyonu ve reklam kişiselleştirmesi (sadece onay halinde aktif olur).",
+    "pazarlama_label": "Pazarlama:"
+  },
+  "page.kvkk": {
+    "adres_label": "Adres:",
+    "eposta_label": "E-posta:",
+    "telefon_label": "Telefon:",
+    "eposta_info": "info@tripandtick.com",
+    "telefon_no": "+90 537 464 78 61",
+    "online_onerilir_label": "Online (önerilen):",
+    "veri_haklari_talep_formu": "Veri Hakları Talep Formu",
+    "magic_link_aciklama": "— veri erişim (KVKK m.11/b) veya silme (m.11/e) için 24 saatlik onaylı magic-link.",
+    "posta_label": "Posta:",
+    "kvkk_gov_url_text": "www.kvkk.gov.tr"
+  },
+  "page.kullanim_sartlari": {
+    "breadcrumb_name": "Kullanım Şartları",
+    "kvkk_link_text": "KVKK",
+    "eposta_info": "info@tripandtick.com"
+  },
+  "page.iptal_iade_politikasi": {
+    "policy_row_time_72plus": "72+ saat önce",
+    "policy_row_refund_72plus": "%100 iade",
+    "policy_row_time_24_72": "24-72 saat önce",
+    "policy_row_refund_24_72": "%50 iade",
+    "policy_row_time_24_less": "24 saatten az",
+    "policy_row_refund_24_less": "İade yok",
+    "policy_row_time_operator": "Operatör/hava iptali",
+    "policy_row_refund_operator": "%100 iade veya alt. tarih",
+    "policy_row_time_saglik": "Sağlık raporu",
+    "policy_row_refund_saglik": "%100 iade",
+    "pagehero_tag_yasal": "Yasal",
+    "breadcrumb_iptal_iade": "İptal & İade",
+    "eposta_label": "E-posta:",
+    "whatsapp_label": "WhatsApp:",
+    "yuzde_100_iade_garantisi": "%100 İade Garantisi"
+  },
+  "page.hakkimizda": {
+    "stat_label_mutlu_musteri": "Mutlu Müşteri",
+    "stat_label_musteri_puani": "Müşteri Puanı",
+    "stat_label_lisansli_operator": "Lisanslı Operatör",
+    "stat_label_iade_garantisi": "İade Garantisi",
+    "hikayemiz": "Hikayemiz",
+    "value_title_musteri_once": "Müşteri Önce",
+    "value_desc_musteri_once": "Her rezervasyon bir aile veya çift için unutulmaz bir an. Bu sorumluluğu en başa koyuyoruz.",
+    "value_title_guven": "Güven",
+    "value_desc_guven": "TÜRSAB lisansı, 40M€ sigorta, 3D Secure ödeme, KVKK uyumu — şeffaflık temel değerimiz.",
+    "value_title_seffaflik": "Şeffaflık",
+    "value_desc_seffaflik": "Gizli ücret yok. Fiyatlar son rakam — vergi, transfer, kahvaltı dahil. İptal politikası net.",
+    "value_title_en_iyi_fiyat": "En İyi Fiyat",
+    "value_desc_en_iyi_fiyat": "Doğrudan operatör anlaşmaları — aracı yok. En düşük fiyat garantisi: bulursanız %5 altı.",
+    "adres": "Adres",
+    "telefon": "Telefon",
+    "eposta": "E-posta",
+    "misyonumuz": "Misyonumuz",
+    "vizyonumuz": "Vizyonumuz",
+    "vizyonumuz_2027": "2027'ye kadar",
+    "yuzde_10_15_ortaklik_komisyonu": "%10-15 ortaklık komisyonu"
+  },
+  "page.kapadokya": {
+    "cat_title_balon": "Balon Turları",
+    "cat_desc_balon": "€165'ten başlayan paketler, 9+ operatör",
+    "cat_title_aktiviteler": "Aktiviteler",
+    "cat_desc_aktiviteler": "ATV, at binme, jeep safari — €29'dan",
+    "cat_title_gezi_turlari": "Gezi Turları",
+    "cat_desc_gezi_turlari": "Kırmızı, Yeşil, gün batımı turları",
+    "cat_title_kombo": "Kombo Paketler",
+    "cat_desc_kombo": "Balon + otel + tur avantajlı paketler",
+    "nisan_haziran": "Nisan-Haziran",
+    "ve": "ve",
+    "kategoriler": "Kategoriler",
+    "kapadokya_title": "Kapadokya"
+  }
+}

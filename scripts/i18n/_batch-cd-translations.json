@@ -1,0 +1,1682 @@
+{
+  "page.aktiviteler": {
+    "pagehero_tag_aktiviteler": {
+      "en": "Activities",
+      "de": "Aktivitäten",
+      "fr": "Activités",
+      "es": "Actividades",
+      "nl": "Activiteiten",
+      "zh": "活动",
+      "hi": "गतिविधियाँ",
+      "ur": "سرگرمیاں"
+    },
+    "breadcrumb_aktiviteler": {
+      "en": "Activities",
+      "de": "Aktivitäten",
+      "fr": "Activités",
+      "es": "Actividades",
+      "nl": "Activiteiten",
+      "zh": "活动",
+      "hi": "गतिविधियाँ",
+      "ur": "سرگرمیاں"
+    },
+    "og_image_subtitle": {
+      "en": "ATV · Horse Riding · Jeep Safari — from €29",
+      "de": "ATV · Reiten · Jeep Safari — ab €29",
+      "fr": "ATV · Équitation · Jeep Safari — à partir de €29",
+      "es": "ATV · Equitación · Jeep Safari — desde €29",
+      "nl": "ATV · Paardrijden · Jeep Safari — vanaf €29",
+      "zh": "ATV · 骑马 · 吉普车越野 — 低至€29",
+      "hi": "ATV · घुड़सवारी · जीप सफारी — €29 से",
+      "ur": "ATV · گھڑ سواری · جیپ سفاری — €29 سے"
+    }
+  },
+  "page.paketler": {
+    "breadcrumb_paketler": {
+      "en": "Packages",
+      "de": "Pakete",
+      "fr": "Forfaits",
+      "es": "Paquetes",
+      "nl": "Pakketten",
+      "zh": "套餐",
+      "hi": "पैकेज",
+      "ur": "پیکجز"
+    },
+    "og_image_subtitle": {
+      "en": "Honeymoon · Family · Adventure · Marriage Proposal",
+      "de": "Hochzeitsreise · Familie · Abenteuer · Heiratsantrag",
+      "fr": "Lune de miel · Famille · Aventure · Demande en mariage",
+      "es": "Luna de miel · Familia · Aventura · Propuesta de matrimonio",
+      "nl": "Huwelijksreis · Familie · Avontuur · Huwelijksaanzoek",
+      "zh": "蜜月 · 家庭 · 冒险 · 求婚",
+      "hi": "हनीमून · परिवार · रोमांच · विवाह प्रस्ताव",
+      "ur": "ہنی مون · خاندان · مہم جوئی · شادی کی تجویز"
+    }
+  },
+  "page.turlar": {
+    "breadcrumb_gezi_turlari": {
+      "en": "Sightseeing Tours",
+      "de": "Besichtigungstouren",
+      "fr": "Visites touristiques",
+      "es": "Excursiones turísticas",
+      "nl": "Sightseeingtours",
+      "zh": "观光游览",
+      "hi": "दर्शनीय स्थल भ्रमण",
+      "ur": "سیاحتی دورے"
+    },
+    "og_image_subtitle": {
+      "en": "Red · Green · Sunset · Photography Tours",
+      "de": "Rot · Grün · Sonnenuntergang · Fotoexkursionen",
+      "fr": "Rouge · Vert · Coucher de soleil · Visites photo",
+      "es": "Rojo · Verde · Atardecer · Tours fotográficos",
+      "nl": "Rood · Groen · Zonsondergang · Fototours",
+      "zh": "红色 · 绿色 · 日落 · 摄影游览",
+      "hi": "लाल · हरा · सूर्यास्त · फोटोग्राफी टूर",
+      "ur": "سرخ · سبز · غروب آفتاب · فوٹوگرافی ٹورز"
+    }
+  },
+  "page.transferler": {
+    "pagehero_tag_transferler": {
+      "en": "Transfers",
+      "de": "Transfers",
+      "fr": "Transferts",
+      "es": "Traslados",
+      "nl": "Transfers",
+      "zh": "接送服务",
+      "hi": "ट्रांसफर",
+      "ur": "ٹرانسفر"
+    },
+    "breadcrumb_name": {
+      "en": "Transfers",
+      "de": "Transfers",
+      "fr": "Transferts",
+      "es": "Traslados",
+      "nl": "Transfers",
+      "zh": "接送服务",
+      "hi": "ट्रांसफर",
+      "ur": "ٹرانسفر"
+    }
+  },
+  "page.oteller": {
+    "pagehero_tag_oteller": {
+      "en": "Hotels",
+      "de": "Hotels",
+      "fr": "Hôtels",
+      "es": "Hoteles",
+      "nl": "Hotels",
+      "zh": "酒店",
+      "hi": "होटल",
+      "ur": "ہوٹل"
+    },
+    "breadcrumb_name": {
+      "en": "Hotels",
+      "de": "Hotels",
+      "fr": "Hôtels",
+      "es": "Hoteles",
+      "nl": "Hotels",
+      "zh": "酒店",
+      "hi": "होटल",
+      "ur": "ہوٹل"
+    },
+    "jsonld_item_list_name": {
+      "en": "Cappadocia Hotels",
+      "de": "Hotels in Kappadokien",
+      "fr": "Hôtels en Cappadoce",
+      "es": "Hoteles en Capadocia",
+      "nl": "Hotels in Cappadocië",
+      "zh": "卡帕多奇亚酒店",
+      "hi": "कप्पाडोसिया होटल",
+      "ur": "کپاڈوشیا ہوٹل"
+    }
+  },
+  "page.operatorler": {
+    "breadcrumb_name": {
+      "en": "Operators",
+      "de": "Betreiber",
+      "fr": "Opérateurs",
+      "es": "Operadores",
+      "nl": "Operators",
+      "zh": "运营商",
+      "hi": "ऑपरेटर",
+      "ur": "آپریٹرز"
+    },
+    "pagehero_highlight_balon_operatoru": {
+      "en": "{count}+ Balloon Operators",
+      "de": "{count}+ Ballonbetreiber",
+      "fr": "{count}+ Opérateurs de montgolfière",
+      "es": "{count}+ Operadores de globo",
+      "nl": "{count}+ Ballonoperators",
+      "zh": "{count}+ 热气球运营商",
+      "hi": "{count}+ गुब्बारा ऑपरेटर",
+      "ur": "{count}+ غبارہ آپریٹرز"
+    },
+    "pagehero_description_dynamic": {
+      "en": "Trip and Tick has direct agency agreements with {count}+ premium balloon operators licensed by TÜRSAB and SHGM. Average {rating}★ with {reviews}+ verified reviews.",
+      "de": "Trip and Tick hat direkte Agenturverträge mit {count}+ Premium-Ballonbetreibern, die von TÜRSAB und SHGM lizenziert sind. Durchschnittlich {rating}★ bei {reviews}+ verifizierten Bewertungen.",
+      "fr": "Trip and Tick dispose d'accords directs avec {count}+ opérateurs de montgolfière premium agréés par TÜRSAB et SHGM. Moyenne de {rating}★ avec {reviews}+ avis vérifiés.",
+      "es": "Trip and Tick tiene acuerdos directos con {count}+ operadores de globo premium con licencia de TÜRSAB y SHGM. Promedio de {rating}★ con {reviews}+ opiniones verificadas.",
+      "nl": "Trip and Tick heeft directe agentuurovereenkomsten met {count}+ premium ballonoperators met een TÜRSAB- en SHGM-licentie. Gemiddeld {rating}★ met {reviews}+ geverifieerde beoordelingen.",
+      "zh": "Trip and Tick 与 {count}+ 家持有 TÜRSAB 和 SHGM 执照的优质热气球运营商签有直接代理协议。平均评分 {rating}★，拥有 {reviews}+ 条已验证的评价。",
+      "hi": "Trip and Tick के पास TÜRSAB और SHGM से लाइसेंस प्राप्त {count}+ प्रीमियम गुब्बारा ऑपरेटरों के साथ सीधे एजेंसी समझौते हैं। औसत {rating}★ के साथ {reviews}+ सत्यापित समीक्षाएं।",
+      "ur": "Trip and Tick کے TÜRSAB اور SHGM سے لائسنس یافتہ {count}+ پریمیم غبارہ آپریٹرز کے ساتھ براہ راست ایجنسی معاہدے ہیں۔ {reviews}+ تصدیق شدہ جائزوں کے ساتھ اوسط {rating}★۔"
+    },
+    "lisans_prefix": {
+      "en": "License",
+      "de": "Lizenz",
+      "fr": "Licence",
+      "es": "Licencia",
+      "nl": "Licentie",
+      "zh": "许可证",
+      "hi": "लाइसेंस",
+      "ur": "لائسنس"
+    },
+    "yorum_suffix": {
+      "en": "reviews",
+      "de": "Bewertungen",
+      "fr": "avis",
+      "es": "opiniones",
+      "nl": "beoordelingen",
+      "zh": "条评价",
+      "hi": "समीक्षाएं",
+      "ur": "جائزے"
+    },
+    "balon_suffix": {
+      "en": "balloons",
+      "de": "Ballone",
+      "fr": "montgolfières",
+      "es": "globos",
+      "nl": "ballonnen",
+      "zh": "架气球",
+      "hi": "गुब्बारे",
+      "ur": "غبارے"
+    },
+    "pilot_suffix": {
+      "en": "pilots",
+      "de": "Piloten",
+      "fr": "pilotes",
+      "es": "pilotos",
+      "nl": "piloten",
+      "zh": "名飞行员",
+      "hi": "पायलट",
+      "ur": "پائلٹ"
+    },
+    "jsonld_item_list_name": {
+      "en": "Trip and Tick Partner Balloon Operators",
+      "de": "Trip and Tick Vertragsballonbetreiber",
+      "fr": "Opérateurs de montgolfière partenaires de Trip and Tick",
+      "es": "Operadores de globo asociados de Trip and Tick",
+      "nl": "Trip and Tick gecontracteerde ballonoperators",
+      "zh": "Trip and Tick 合作热气球运营商",
+      "hi": "Trip and Tick साझेदार गुब्बारा ऑपरेटर",
+      "ur": "Trip and Tick معاہدہ شدہ غبارہ آپریٹرز"
+    }
+  },
+  "page.rezervasyon.iptal": {
+    "bilgi_etiketi": {
+      "en": "Info:",
+      "de": "Info:",
+      "fr": "Info :",
+      "es": "Info:",
+      "nl": "Info:",
+      "zh": "提示：",
+      "hi": "जानकारी:",
+      "ur": "معلومات:"
+    }
+  },
+  "page.balonlar": {
+    "detay_iletisim": {
+      "en": "Details & Contact",
+      "de": "Details & Kontakt",
+      "fr": "Détails & Contact",
+      "es": "Detalles & Contacto",
+      "nl": "Details & Contact",
+      "zh": "详情与联系",
+      "hi": "विवरण और संपर्क",
+      "ur": "تفصیلات اور رابطہ"
+    },
+    "detay_rezerve": {
+      "en": "Details & Book",
+      "de": "Details & Buchen",
+      "fr": "Détails & Réserver",
+      "es": "Detalles & Reservar",
+      "nl": "Details & Boeken",
+      "zh": "详情与预订",
+      "hi": "विवरण और बुकिंग",
+      "ur": "تفصیلات اور بکنگ"
+    },
+    "kisi_basi_yetiskin": {
+      "en": "per person / adult",
+      "de": "pro Person / Erwachsener",
+      "fr": "par personne / adulte",
+      "es": "por persona / adulto",
+      "nl": "per persoon / volwassene",
+      "zh": "每人 / 成人",
+      "hi": "प्रति व्यक्ति / वयस्क",
+      "ur": "فی شخص / بالغ"
+    },
+    "kisi_basi_dinamik": {
+      "en": "per person (changes daily within 7 days)",
+      "de": "pro Person (ändert sich täglich innerhalb von 7 Tagen)",
+      "fr": "par personne (varie chaque jour dans les 7 jours)",
+      "es": "por persona (cambia diariamente en los 7 días)",
+      "nl": "per persoon (dagelijks wisselend binnen 7 dagen)",
+      "zh": "每人（7天内每日变动）",
+      "hi": "प्रति व्यक्ति (7 दिनों के भीतर दैनिक बदलता है)",
+      "ur": "فی شخص (7 دنوں میں روزانہ بدلتا ہے)"
+    },
+    "sss_tag": {
+      "en": "FAQ",
+      "de": "FAQ",
+      "fr": "FAQ",
+      "es": "FAQ",
+      "nl": "FAQ",
+      "zh": "常见问题",
+      "hi": "अक्सर पूछे जाने वाले सवाल",
+      "ur": "اکثر پوچھے جانے والے سوالات"
+    },
+    "lisans_prefix": {
+      "en": "License",
+      "de": "Lizenz",
+      "fr": "Licence",
+      "es": "Licencia",
+      "nl": "Licentie",
+      "zh": "许可证",
+      "hi": "लाइसेंस",
+      "ur": "لائسنس"
+    }
+  },
+  "page.balonlar.slug": {
+    "balon_turlari": {
+      "en": "Balloon Tours",
+      "de": "Ballonfahrten",
+      "fr": "Vols en montgolfière",
+      "es": "Paseos en globo",
+      "nl": "Ballonvaarten",
+      "zh": "热气球之旅",
+      "hi": "गुब्बारा भ्रमण",
+      "ur": "غبارہ سیر"
+    },
+    "iade_operator_iptali": {
+      "en": "%100 refund — operator cancellation",
+      "de": "%100 Erstattung — Betreiberabsage",
+      "fr": "%100 remboursé — annulation opérateur",
+      "es": "%100 reembolso — cancelación del operador",
+      "nl": "%100 terugbetaling — annulering door operator",
+      "zh": "%100 退款 — 运营商取消",
+      "hi": "%100 वापसी — ऑपरेटर रद्दीकरण",
+      "ur": "%100 واپسی — آپریٹر منسوخی"
+    },
+    "ozel_fiyat": {
+      "en": "Special Price",
+      "de": "Sonderpreis",
+      "fr": "Prix spécial",
+      "es": "Precio especial",
+      "nl": "Speciale prijs",
+      "zh": "特别价格",
+      "hi": "विशेष मूल्य",
+      "ur": "خصوصی قیمت"
+    },
+    "lisans_prefix": {
+      "en": "License",
+      "de": "Lizenz",
+      "fr": "Licence",
+      "es": "Licencia",
+      "nl": "Licentie",
+      "zh": "许可证",
+      "hi": "लाइसेंस",
+      "ur": "لائسنس"
+    }
+  },
+  "page.operatorler.id": {
+    "yorum": {
+      "en": "reviews",
+      "de": "Bewertungen",
+      "fr": "avis",
+      "es": "opiniones",
+      "nl": "beoordelingen",
+      "zh": "条评价",
+      "hi": "समीक्षाएं",
+      "ur": "جائزے"
+    },
+    "balon_kelimesi": {
+      "en": "balloon",
+      "de": "Ballon",
+      "fr": "montgolfière",
+      "es": "globo",
+      "nl": "ballon",
+      "zh": "气球",
+      "hi": "गुब्बारा",
+      "ur": "غبارہ"
+    },
+    "pilot_kelimesi": {
+      "en": "pilot",
+      "de": "Pilot",
+      "fr": "pilote",
+      "es": "piloto",
+      "nl": "piloot",
+      "zh": "飞行员",
+      "hi": "पायलट",
+      "ur": "پائلٹ"
+    },
+    "keyvalue_label_filo": {
+      "en": "Fleet",
+      "de": "Flotte",
+      "fr": "Flotte",
+      "es": "Flota",
+      "nl": "Vloot",
+      "zh": "机队",
+      "hi": "बेड़ा",
+      "ur": "بیڑا"
+    },
+    "keyvalue_label_adres": {
+      "en": "Address",
+      "de": "Adresse",
+      "fr": "Adresse",
+      "es": "Dirección",
+      "nl": "Adres",
+      "zh": "地址",
+      "hi": "पता",
+      "ur": "پتہ"
+    },
+    "keyvalue_label_telefon": {
+      "en": "Phone",
+      "de": "Telefon",
+      "fr": "Téléphone",
+      "es": "Teléfono",
+      "nl": "Telefoon",
+      "zh": "电话",
+      "hi": "फ़ोन",
+      "ur": "فون"
+    },
+    "keyvalue_label_web": {
+      "en": "Website",
+      "de": "Website",
+      "fr": "Site web",
+      "es": "Sitio web",
+      "nl": "Website",
+      "zh": "网站",
+      "hi": "वेबसाइट",
+      "ur": "ویب سائٹ"
+    },
+    "keyvalue_label_diller": {
+      "en": "Languages",
+      "de": "Sprachen",
+      "fr": "Langues",
+      "es": "Idiomas",
+      "nl": "Talen",
+      "zh": "语言",
+      "hi": "भाषाएं",
+      "ur": "زبانیں"
+    },
+    "sertifikalar": {
+      "en": "Certifications",
+      "de": "Zertifikate",
+      "fr": "Certifications",
+      "es": "Certificaciones",
+      "nl": "Certificaten",
+      "zh": "认证",
+      "hi": "प्रमाणपत्र",
+      "ur": "سرٹیفیکیشنز"
+    }
+  },
+  "page.oteller.slug": {
+    "olanaklar": {
+      "en": "Amenities",
+      "de": "Ausstattung",
+      "fr": "Équipements",
+      "es": "Instalaciones",
+      "nl": "Faciliteiten",
+      "zh": "设施",
+      "hi": "सुविधाएं",
+      "ur": "سہولیات"
+    },
+    "tier_ucuz_ekonomik": {
+      "en": "Budget / Economy",
+      "de": "Budget / Economy",
+      "fr": "Économique / Budget",
+      "es": "Económico / Presupuesto",
+      "nl": "Budget / Economisch",
+      "zh": "经济型 / 实惠",
+      "hi": "बजट / किफायती",
+      "ur": "بجٹ / اکانومی"
+    },
+    "tier_orta_halli": {
+      "en": "Mid-Range",
+      "de": "Mittelklasse",
+      "fr": "Milieu de gamme",
+      "es": "Precio medio",
+      "nl": "Middensegment",
+      "zh": "中档",
+      "hi": "मध्यम श्रेणी",
+      "ur": "درمیانی درجہ"
+    },
+    "tier_luks_premium": {
+      "en": "Luxury / Premium",
+      "de": "Luxus / Premium",
+      "fr": "Luxe / Premium",
+      "es": "Lujo / Premium",
+      "nl": "Luxe / Premium",
+      "zh": "豪华 / 尊享",
+      "hi": "लग्जरी / प्रीमियम",
+      "ur": "لگژری / پریمیم"
+    },
+    "tier_standart": {
+      "en": "Standard",
+      "de": "Standard",
+      "fr": "Standard",
+      "es": "Estándar",
+      "nl": "Standaard",
+      "zh": "标准",
+      "hi": "मानक",
+      "ur": "معیاری"
+    },
+    "eposta_buton": {
+      "en": "Email",
+      "de": "E-Mail",
+      "fr": "E-mail",
+      "es": "Correo",
+      "nl": "E-mail",
+      "zh": "邮件",
+      "hi": "ईमेल",
+      "ur": "ای میل"
+    },
+    "whatsapp": {
+      "en": "WhatsApp",
+      "de": "WhatsApp",
+      "fr": "WhatsApp",
+      "es": "WhatsApp",
+      "nl": "WhatsApp",
+      "zh": "WhatsApp",
+      "hi": "WhatsApp",
+      "ur": "WhatsApp"
+    },
+    "oteller_breadcrumb": {
+      "en": "Hotels",
+      "de": "Hotels",
+      "fr": "Hôtels",
+      "es": "Hoteles",
+      "nl": "Hotels",
+      "zh": "酒店",
+      "hi": "होटल",
+      "ur": "ہوٹل"
+    }
+  },
+  "page.blog": {
+    "category_balon_turlari": {
+      "en": "Balloon Tours",
+      "de": "Ballonfahrten",
+      "fr": "Vols en montgolfière",
+      "es": "Paseos en globo",
+      "nl": "Ballonvaarten",
+      "zh": "热气球之旅",
+      "hi": "गुब्बारा भ्रमण",
+      "ur": "غبارہ سیر"
+    },
+    "category_kapadokya_rehber": {
+      "en": "Cappadocia Guide",
+      "de": "Kappadokien-Reiseführer",
+      "fr": "Guide de la Cappadoce",
+      "es": "Guía de Capadocia",
+      "nl": "Reisgids Cappadocië",
+      "zh": "卡帕多奇亚旅游指南",
+      "hi": "कप्पाडोसिया गाइड",
+      "ur": "کپاڈوشیا گائیڈ"
+    },
+    "category_aktiviteler": {
+      "en": "Activities",
+      "de": "Aktivitäten",
+      "fr": "Activités",
+      "es": "Actividades",
+      "nl": "Activiteiten",
+      "zh": "活动",
+      "hi": "गतिविधियाँ",
+      "ur": "سرگرمیاں"
+    },
+    "category_konaklama": {
+      "en": "Accommodation",
+      "de": "Unterkunft",
+      "fr": "Hébergement",
+      "es": "Alojamiento",
+      "nl": "Accommodatie",
+      "zh": "住宿",
+      "hi": "आवास",
+      "ur": "رہائش"
+    },
+    "category_ulasim": {
+      "en": "Transportation",
+      "de": "Transport",
+      "fr": "Transport",
+      "es": "Transporte",
+      "nl": "Vervoer",
+      "zh": "交通",
+      "hi": "परिवहन",
+      "ur": "نقل و حمل"
+    },
+    "category_genel": {
+      "en": "General",
+      "de": "Allgemein",
+      "fr": "Général",
+      "es": "General",
+      "nl": "Algemeen",
+      "zh": "综合",
+      "hi": "सामान्य",
+      "ur": "عام"
+    }
+  },
+  "page.sss": {
+    "category_balon": {
+      "en": "Balloon Tour",
+      "de": "Ballonfahrt",
+      "fr": "Vol en montgolfière",
+      "es": "Paseo en globo",
+      "nl": "Ballonvaart",
+      "zh": "热气球之旅",
+      "hi": "गुब्बारा भ्रमण",
+      "ur": "غبارہ سیر"
+    },
+    "category_rezervasyon": {
+      "en": "Reservation",
+      "de": "Reservierung",
+      "fr": "Réservation",
+      "es": "Reserva",
+      "nl": "Reservering",
+      "zh": "预订",
+      "hi": "आरक्षण",
+      "ur": "ریزرویشن"
+    },
+    "category_odeme": {
+      "en": "Payment",
+      "de": "Zahlung",
+      "fr": "Paiement",
+      "es": "Pago",
+      "nl": "Betaling",
+      "zh": "付款",
+      "hi": "भुगतान",
+      "ur": "ادائیگی"
+    },
+    "category_iptal": {
+      "en": "Cancellation & Refund",
+      "de": "Stornierung & Erstattung",
+      "fr": "Annulation & Remboursement",
+      "es": "Cancelación & Reembolso",
+      "nl": "Annulering & Terugbetaling",
+      "zh": "取消与退款",
+      "hi": "रद्दीकरण और वापसी",
+      "ur": "منسوخی اور واپسی"
+    },
+    "category_genel": {
+      "en": "General",
+      "de": "Allgemein",
+      "fr": "Général",
+      "es": "General",
+      "nl": "Algemeen",
+      "zh": "综合",
+      "hi": "सामान्य",
+      "ur": "عام"
+    },
+    "meta_og_image_subtitle": {
+      "en": "Balloon Tour · Price · Cancellation · Payment — Quick Answers",
+      "de": "Ballonfahrt · Preis · Stornierung · Zahlung — Schnelle Antworten",
+      "fr": "Vol en montgolfière · Prix · Annulation · Paiement — Réponses rapides",
+      "es": "Paseo en globo · Precio · Cancelación · Pago — Respuestas rápidas",
+      "nl": "Ballonvaart · Prijs · Annulering · Betaling — Snelle antwoorden",
+      "zh": "热气球之旅 · 价格 · 取消 · 付款 — 快速解答",
+      "hi": "गुब्बारा भ्रमण · मूल्य · रद्दीकरण · भुगतान — त्वरित उत्तर",
+      "ur": "غبارہ سیر · قیمت · منسوخی · ادائیگی — فوری جوابات"
+    }
+  },
+  "page.yorum": {
+    "featurecard_title_moderasyon": {
+      "en": "Moderation",
+      "de": "Moderation",
+      "fr": "Modération",
+      "es": "Moderación",
+      "nl": "Moderatie",
+      "zh": "内容审核",
+      "hi": "मॉडरेशन",
+      "ur": "اعتدال"
+    }
+  },
+  "page.iletisim": {
+    "pagehero_title_bizimle": {
+      "en": "With Us",
+      "de": "Mit uns",
+      "fr": "Avec nous",
+      "es": "Con nosotros",
+      "nl": "Met ons",
+      "zh": "联系我们",
+      "hi": "हमारे साथ",
+      "ur": "ہمارے ساتھ"
+    },
+    "breadcrumb_iletisim": {
+      "en": "Contact",
+      "de": "Kontakt",
+      "fr": "Contact",
+      "es": "Contacto",
+      "nl": "Contact",
+      "zh": "联系方式",
+      "hi": "संपर्क",
+      "ur": "رابطہ"
+    },
+    "contact_label_eposta": {
+      "en": "Email",
+      "de": "E-Mail",
+      "fr": "E-mail",
+      "es": "Correo",
+      "nl": "E-mail",
+      "zh": "邮件",
+      "hi": "ईमेल",
+      "ur": "ای میل"
+    },
+    "contact_note_eposta": {
+      "en": "Reply within 4 hours (business hours)",
+      "de": "Antwort innerhalb von 4 Stunden (Geschäftszeiten)",
+      "fr": "Réponse sous 4 heures (heures ouvrables)",
+      "es": "Respuesta en 4 horas (horario laboral)",
+      "nl": "Antwoord binnen 4 uur (kantooruren)",
+      "zh": "4小时内回复（工作时间）",
+      "hi": "4 घंटे में जवाब (कार्य समय)",
+      "ur": "4 گھنٹے میں جواب (کاروباری اوقات)"
+    },
+    "contact_label_telefon": {
+      "en": "Phone",
+      "de": "Telefon",
+      "fr": "Téléphone",
+      "es": "Teléfono",
+      "nl": "Telefoon",
+      "zh": "电话",
+      "hi": "फ़ोन",
+      "ur": "فون"
+    },
+    "contact_note_telefon": {
+      "en": "TR/EN support",
+      "de": "TR/EN Support",
+      "fr": "Support TR/EN",
+      "es": "Soporte TR/EN",
+      "nl": "TR/EN ondersteuning",
+      "zh": "土耳其语/英语支持",
+      "hi": "TR/EN सहायता",
+      "ur": "TR/EN سپورٹ"
+    },
+    "contact_label_whatsapp": {
+      "en": "WhatsApp",
+      "de": "WhatsApp",
+      "fr": "WhatsApp",
+      "es": "WhatsApp",
+      "nl": "WhatsApp",
+      "zh": "WhatsApp",
+      "hi": "WhatsApp",
+      "ur": "WhatsApp"
+    },
+    "contact_note_whatsapp": {
+      "en": "24/7 instant messaging",
+      "de": "24/7 Sofortnachrichten",
+      "fr": "Messagerie instantanée 24h/24, 7j/7",
+      "es": "Mensajes instantáneos 24/7",
+      "nl": "24/7 direct berichten",
+      "zh": "7×24小时即时消息",
+      "hi": "24/7 त्वरित संदेश",
+      "ur": "24/7 فوری پیغام"
+    },
+    "contact_label_ofis": {
+      "en": "Office",
+      "de": "Büro",
+      "fr": "Bureau",
+      "es": "Oficina",
+      "nl": "Kantoor",
+      "zh": "办公室",
+      "hi": "कार्यालय",
+      "ur": "دفتر"
+    },
+    "contact_note_ofis": {
+      "en": "Türkiye",
+      "de": "Türkei",
+      "fr": "Turquie",
+      "es": "Turquía",
+      "nl": "Turkije",
+      "zh": "土耳其",
+      "hi": "तुर्किये",
+      "ur": "ترکیہ"
+    }
+  },
+  "page.b2b": {
+    "breadcrumb_b2b": {
+      "en": "B2B",
+      "de": "B2B",
+      "fr": "B2B",
+      "es": "B2B",
+      "nl": "B2B",
+      "zh": "B2B",
+      "hi": "B2B",
+      "ur": "B2B"
+    },
+    "benefit_toplu_fiyat_title": {
+      "en": "Bulk Pricing",
+      "de": "Mengenrabatt",
+      "fr": "Tarif de groupe",
+      "es": "Precio por volumen",
+      "nl": "Bulkprijs",
+      "zh": "批量价格",
+      "hi": "थोक मूल्य",
+      "ur": "بلک قیمت"
+    },
+    "benefit_toplu_fiyat_desc": {
+      "en": "Competitive net prices across all balloon, tour, hotel, and transfer inventory. Volume-based additional discounts.",
+      "de": "Wettbewerbsfähige Nettopreise für das gesamte Ballon-, Tour-, Hotel- und Transferangebot. Volumenbasierte Zusatzrabatte.",
+      "fr": "Prix nets compétitifs sur tout l'inventaire ballons, circuits, hôtels et transferts. Remises supplémentaires selon le volume.",
+      "es": "Precios netos competitivos en todo el inventario de globos, tours, hoteles y traslados. Descuentos adicionales por volumen.",
+      "nl": "Concurrerende nettoprijzen voor het gehele aanbod van ballonnen, tours, hotels en transfers. Volumekortingen.",
+      "zh": "覆盖所有热气球、游览、酒店和接送服务的竞争性净价。基于销量的额外折扣。",
+      "hi": "सभी गुब्बारा, टूर, होटल और ट्रांसफर इन्वेंट्री पर प्रतिस्पर्धी नेट मूल्य। वॉल्यूम-आधारित अतिरिक्त छूट।",
+      "ur": "تمام غبارہ، ٹور، ہوٹل اور ٹرانسفر انوینٹری پر مسابقتی خالص قیمتیں۔ حجم کی بنیاد پر اضافی رعایت۔"
+    },
+    "benefit_rest_api_title": {
+      "en": "REST API Access",
+      "de": "REST API Zugang",
+      "fr": "Accès REST API",
+      "es": "Acceso REST API",
+      "nl": "REST API Toegang",
+      "zh": "REST API 接入",
+      "hi": "REST API एक्सेस",
+      "ur": "REST API رسائی"
+    },
+    "benefit_rest_api_desc": {
+      "en": "Availability queries, booking creation, cancellation — integrate with your system via JSON API.",
+      "de": "Verfügbarkeitsabfragen, Buchungserstellung, Stornierung — integrieren Sie Ihr System über JSON API.",
+      "fr": "Requêtes de disponibilité, création de réservation, annulation — intégrez à votre système via JSON API.",
+      "es": "Consultas de disponibilidad, creación de reservas, cancelación — integre con su sistema vía JSON API.",
+      "nl": "Beschikbaarheidsvragen, boekingen aanmaken, annulering — integreer met uw systeem via JSON API.",
+      "zh": "可用性查询、预订创建、取消 — 通过 JSON API 集成到您的系统。",
+      "hi": "उपलब्धता क्वेरी, बुकिंग निर्माण, रद्दीकरण — JSON API के माध्यम से अपने सिस्टम से एकीकृत करें।",
+      "ur": "دستیابی کا سوال، بکنگ بنانا، منسوخی — JSON API کے ذریعے اپنے سسٹم سے انٹیگریٹ کریں۔"
+    },
+    "benefit_hesap_yoneticisi_title": {
+      "en": "Dedicated Account Manager",
+      "de": "Dedizierter Account-Manager",
+      "fr": "Chargé de compte dédié",
+      "es": "Gestor de cuenta dedicado",
+      "nl": "Vaste accountmanager",
+      "zh": "专属客户经理",
+      "hi": "समर्पित खाता प्रबंधक",
+      "ur": "مخصوص اکاؤنٹ مینیجر"
+    },
+    "benefit_hesap_yoneticisi_desc": {
+      "en": "Turkish + English + German support. 24/7 WhatsApp + priority email response.",
+      "de": "Türkisch + Englisch + Deutsch Support. 24/7 WhatsApp + bevorzugte E-Mail-Antwort.",
+      "fr": "Support en turc + anglais + allemand. WhatsApp 24h/24 7j/7 + réponse e-mail prioritaire.",
+      "es": "Soporte en turco + inglés + alemán. WhatsApp 24/7 + respuesta por correo prioritaria.",
+      "nl": "Turkse + Engelse + Duitse ondersteuning. 24/7 WhatsApp + prioritaire e-mailreactie.",
+      "zh": "土耳其语 + 英语 + 德语支持。7×24小时 WhatsApp + 优先邮件回复。",
+      "hi": "तुर्की + अंग्रेजी + जर्मन समर्थन। 24/7 WhatsApp + प्राथमिकता ईमेल प्रतिक्रिया।",
+      "ur": "ترکی + انگریزی + جرمن سپورٹ۔ 24/7 WhatsApp + ترجیحی ای میل جواب۔"
+    },
+    "benefit_komisyon_title": {
+      "en": "%12-18 Commission",
+      "de": "%12-18 Provision",
+      "fr": "%12-18 de commission",
+      "es": "%12-18 de comisión",
+      "nl": "%12-18 Commissie",
+      "zh": "%12-18 佣金",
+      "hi": "%12-18 कमीशन",
+      "ur": "%12-18 کمیشن"
+    },
+    "benefit_komisyon_desc": {
+      "en": "Dynamic commission based on volume + season. Monthly automatic reconciliation report.",
+      "de": "Dynamische Provision basierend auf Volumen + Saison. Monatlicher automatischer Abstimmungsbericht.",
+      "fr": "Commission dynamique selon le volume + la saison. Rapport de rapprochement mensuel automatique.",
+      "es": "Comisión dinámica basada en volumen + temporada. Informe de conciliación mensual automático.",
+      "nl": "Dynamische commissie op basis van volume + seizoen. Maandelijkse automatische afstemmingsrapportage.",
+      "zh": "基于销量和季节的动态佣金。每月自动对账报告。",
+      "hi": "वॉल्यूम + सीजन आधारित डायनामिक कमीशन। मासिक स्वचालित मिलान रिपोर्ट।",
+      "ur": "حجم + موسم پر مبنی متحرک کمیشن۔ ماہانہ خودکار مصالحت رپورٹ۔"
+    }
+  },
+  "page.rezervasyon.slug": {
+    "loading": {
+      "en": "Loading...",
+      "de": "Lädt...",
+      "fr": "Chargement...",
+      "es": "Cargando...",
+      "nl": "Laden...",
+      "zh": "加载中...",
+      "hi": "लोड हो रहा है...",
+      "ur": "لوڈ ہو رہا ہے..."
+    },
+    "meta_desc_template": {
+      "en": "Online booking for {name}. {desc}",
+      "de": "Online-Buchung für {name}. {desc}",
+      "fr": "Réservation en ligne pour {name}. {desc}",
+      "es": "Reserva online para {name}. {desc}",
+      "nl": "Online boeking voor {name}. {desc}",
+      "zh": "{name} 在线预订。{desc}",
+      "hi": "{name} के लिए ऑनलाइन बुकिंग। {desc}",
+      "ur": "{name} کے لیے آن لائن بکنگ۔ {desc}"
+    },
+    "meta_title_not_found": {
+      "en": "Booking Not Found | Trip and Tick",
+      "de": "Buchung nicht gefunden | Trip and Tick",
+      "fr": "Réservation introuvable | Trip and Tick",
+      "es": "Reserva no encontrada | Trip and Tick",
+      "nl": "Boeking niet gevonden | Trip and Tick",
+      "zh": "未找到预订 | Trip and Tick",
+      "hi": "बुकिंग नहीं मिली | Trip and Tick",
+      "ur": "بکنگ نہیں ملی | Trip and Tick"
+    },
+    "meta_title_template": {
+      "en": "Booking | {name} - Trip and Tick",
+      "de": "Buchung | {name} - Trip and Tick",
+      "fr": "Réservation | {name} - Trip and Tick",
+      "es": "Reserva | {name} - Trip and Tick",
+      "nl": "Boeking | {name} - Trip and Tick",
+      "zh": "预订 | {name} - Trip and Tick",
+      "hi": "बुकिंग | {name} - Trip and Tick",
+      "ur": "بکنگ | {name} - Trip and Tick"
+    }
+  },
+  "page.rezervasyon.yeniden_tarih.token": {
+    "link_dogrulanamadi": {
+      "en": "Link could not be verified. Please use the original link from your email.",
+      "de": "Link konnte nicht verifiziert werden. Bitte verwenden Sie den Originallink aus Ihrer E-Mail.",
+      "fr": "Le lien n'a pas pu être vérifié. Veuillez utiliser le lien original de votre e-mail.",
+      "es": "No se pudo verificar el enlace. Por favor, usa el enlace original de tu correo.",
+      "nl": "Link kon niet worden geverifieerd. Gebruik alstublieft de originele link uit uw e-mail.",
+      "zh": "链接无法验证。请使用您邮件中的原始链接。",
+      "hi": "लिंक सत्यापित नहीं किया जा सका। कृपया अपने ईमेल के मूल लिंक का उपयोग करें।",
+      "ur": "لنک تصدیق نہیں ہو سکا۔ براہ کرم اپنے ای میل کا اصل لنک استعمال کریں۔"
+    },
+    "link_suresi_dolmus": {
+      "en": "This link has expired. Please contact customer service.",
+      "de": "Dieser Link ist abgelaufen. Bitte wenden Sie sich an den Kundendienst.",
+      "fr": "Ce lien a expiré. Veuillez contacter le service client.",
+      "es": "Este enlace ha caducado. Por favor, contacta con el servicio de atención al cliente.",
+      "nl": "Deze link is verlopen. Neem contact op met de klantenservice.",
+      "zh": "此链接已过期。请联系客服。",
+      "hi": "यह लिंक समाप्त हो गया है। कृपया ग्राहक सेवा से संपर्क करें।",
+      "ur": "یہ لنک میعاد ختم ہو گیا ہے۔ براہ کرم کسٹمر سروس سے رابطہ کریں۔"
+    }
+  },
+  "page.gizlilik_politikasi": {
+    "tag_yasal": {
+      "en": "Legal",
+      "de": "Rechtlich",
+      "fr": "Légal",
+      "es": "Legal",
+      "nl": "Juridisch",
+      "zh": "法律",
+      "hi": "कानूनी",
+      "ur": "قانونی"
+    },
+    "breadcrumb_gizlilik_politikasi": {
+      "en": "Privacy Policy",
+      "de": "Datenschutzrichtlinie",
+      "fr": "Politique de confidentialité",
+      "es": "Política de privacidad",
+      "nl": "Privacybeleid",
+      "zh": "隐私政策",
+      "hi": "गोपनीयता नीति",
+      "ur": "رازداری کی پالیسی"
+    },
+    "kimlik_label": {
+      "en": "Identity:",
+      "de": "Identität:",
+      "fr": "Identité :",
+      "es": "Identidad:",
+      "nl": "Identiteit:",
+      "zh": "身份：",
+      "hi": "पहचान:",
+      "ur": "شناخت:"
+    },
+    "pasaport_label": {
+      "en": "Passport:",
+      "de": "Reisepass:",
+      "fr": "Passeport :",
+      "es": "Pasaporte:",
+      "nl": "Paspoort:",
+      "zh": "护照：",
+      "hi": "पासपोर्ट:",
+      "ur": "پاسپورٹ:"
+    },
+    "finansal_label": {
+      "en": "Financial:",
+      "de": "Finanziell:",
+      "fr": "Financier :",
+      "es": "Financiero:",
+      "nl": "Financieel:",
+      "zh": "财务：",
+      "hi": "वित्तीय:",
+      "ur": "مالی:"
+    },
+    "teknik_label": {
+      "en": "Technical:",
+      "de": "Technisch:",
+      "fr": "Technique :",
+      "es": "Técnico:",
+      "nl": "Technisch:",
+      "zh": "技术：",
+      "hi": "तकनीकी:",
+      "ur": "تکنیکی:"
+    }
+  },
+  "page.cerez_politikasi": {
+    "tag_yasal": {
+      "en": "Legal",
+      "de": "Rechtlich",
+      "fr": "Légal",
+      "es": "Legal",
+      "nl": "Juridisch",
+      "zh": "法律",
+      "hi": "कानूनी",
+      "ur": "قانونی"
+    },
+    "breadcrumb_cerez_politikasi": {
+      "en": "Cookie Policy",
+      "de": "Cookie-Richtlinie",
+      "fr": "Politique des cookies",
+      "es": "Política de cookies",
+      "nl": "Cookiebeleid",
+      "zh": "Cookie 政策",
+      "hi": "कुकी नीति",
+      "ur": "کوکی پالیسی"
+    },
+    "cookie_type_zorunlu_title": {
+      "en": "Essential Cookies",
+      "de": "Notwendige Cookies",
+      "fr": "Cookies essentiels",
+      "es": "Cookies esenciales",
+      "nl": "Essentiële cookies",
+      "zh": "必要 Cookie",
+      "hi": "आवश्यक कुकीज़",
+      "ur": "ضروری کوکیز"
+    },
+    "cookie_type_zorunlu_desc": {
+      "en": "Required for the site's basic functionality. Session management, security, cart — these cannot be disabled.",
+      "de": "Notwendig für die grundlegende Funktionalität der Website. Sitzungsverwaltung, Sicherheit, Warenkorb — diese können nicht deaktiviert werden.",
+      "fr": "Nécessaires au fonctionnement de base du site. Gestion des sessions, sécurité, panier — ils ne peuvent pas être désactivés.",
+      "es": "Necesarias para la funcionalidad básica del sitio. Gestión de sesiones, seguridad, carrito — no se pueden desactivar.",
+      "nl": "Vereist voor de basisfunctionaliteit van de site. Sessiebeheer, beveiliging, winkelwagen — deze kunnen niet worden uitgeschakeld.",
+      "zh": "网站基本功能所必需。会话管理、安全、购物车 — 无法禁用。",
+      "hi": "साइट की बुनियादी कार्यक्षमता के लिए आवश्यक। सत्र प्रबंधन, सुरक्षा, कार्ट — इन्हें बंद नहीं किया जा सकता।",
+      "ur": "سائٹ کی بنیادی فعالیت کے لیے ضروری۔ سیشن مینجمنٹ، سیکیورٹی، کارٹ — انہیں بند نہیں کیا جا سکتا۔"
+    },
+    "cookie_type_analitik_title": {
+      "en": "Analytics Cookies",
+      "de": "Analyse-Cookies",
+      "fr": "Cookies analytiques",
+      "es": "Cookies analíticas",
+      "nl": "Analytische cookies",
+      "zh": "分析 Cookie",
+      "hi": "विश्लेषण कुकीज़",
+      "ur": "تجزیاتی کوکیز"
+    },
+    "cookie_type_analitik_desc": {
+      "en": "Anonymously measures site usage (Google Analytics 4). Which pages are popular, at what point users leave.",
+      "de": "Misst die Websitenutzung anonym (Google Analytics 4). Welche Seiten beliebt sind und an welchem Punkt Nutzer abspringen.",
+      "fr": "Mesure anonymement l'utilisation du site (Google Analytics 4). Quelles pages sont populaires, à quel moment les utilisateurs partent.",
+      "es": "Mide de forma anónima el uso del sitio (Google Analytics 4). Qué páginas son populares, en qué punto abandonan los usuarios.",
+      "nl": "Meet anoniem het sitegebruik (Google Analytics 4). Welke pagina's populair zijn, op welk punt gebruikers afhaken.",
+      "zh": "匿名统计网站使用情况（Google Analytics 4）。哪些页面受欢迎，用户在哪个环节离开。",
+      "hi": "साइट उपयोग को गुमनाम रूप से मापता है (Google Analytics 4)। कौन से पृष्ठ लोकप्रिय हैं, किस बिंदु पर उपयोगकर्ता छोड़ते हैं।",
+      "ur": "سائٹ کے استعمال کو گمنام طریقے سے ماپتا ہے (Google Analytics 4)۔ کون سے صفحات مقبول ہیں، کس مقام پر صارف چھوڑتے ہیں۔"
+    },
+    "cookie_type_fonksiyonel_title": {
+      "en": "Functional Cookies",
+      "de": "Funktionale Cookies",
+      "fr": "Cookies fonctionnels",
+      "es": "Cookies funcionales",
+      "nl": "Functionele cookies",
+      "zh": "功能 Cookie",
+      "hi": "कार्यात्मक कुकीज़",
+      "ur": "فعال کوکیز"
+    },
+    "cookie_type_fonksiyonel_desc": {
+      "en": "Used to remember preferences such as language selection, currency, and recent searches.",
+      "de": "Werden verwendet, um Präferenzen wie Sprachauswahl, Währung und letzte Suchen zu speichern.",
+      "fr": "Utilisés pour mémoriser les préférences telles que la sélection de la langue, la devise et les dernières recherches.",
+      "es": "Se utilizan para recordar preferencias como la selección de idioma, la moneda y las últimas búsquedas.",
+      "nl": "Worden gebruikt om voorkeuren zoals taalinstelling, valuta en recente zoekopdrachten te onthouden.",
+      "zh": "用于记住语言选择、货币和最近搜索等偏好设置。",
+      "hi": "भाषा चयन, मुद्रा और हाल की खोज जैसी प्राथमिकताओं को याद रखने के लिए उपयोग किया जाता है।",
+      "ur": "زبان کا انتخاب، کرنسی اور حالیہ تلاش جیسی ترجیحات یاد رکھنے کے لیے استعمال ہوتی ہیں۔"
+    },
+    "cookie_type_pazarlama_title": {
+      "en": "Marketing Cookies",
+      "de": "Marketing-Cookies",
+      "fr": "Cookies marketing",
+      "es": "Cookies de marketing",
+      "nl": "Marketingcookies",
+      "zh": "营销 Cookie",
+      "hi": "मार्केटिंग कुकीज़",
+      "ur": "مارکیٹنگ کوکیز"
+    },
+    "cookie_type_pazarlama_desc": {
+      "en": "Social media integration and ad personalisation (active only with consent).",
+      "de": "Social-Media-Integration und Anzeigenpersonalisierung (nur mit Zustimmung aktiv).",
+      "fr": "Intégration des réseaux sociaux et personnalisation des publicités (actif uniquement avec consentement).",
+      "es": "Integración de redes sociales y personalización de anuncios (activo solo con consentimiento).",
+      "nl": "Sociale media-integratie en advertentiepersonalisatie (alleen actief met toestemming).",
+      "zh": "社交媒体集成和广告个性化（仅在同意时激活）。",
+      "hi": "सोशल मीडिया एकीकरण और विज्ञापन वैयक्तिकरण (केवल सहमति पर सक्रिय)।",
+      "ur": "سوشل میڈیا انٹیگریشن اور اشتہار کی ذاتی سازی (صرف رضامندی پر فعال)۔"
+    },
+    "pazarlama_label": {
+      "en": "Marketing:",
+      "de": "Marketing:",
+      "fr": "Marketing :",
+      "es": "Marketing:",
+      "nl": "Marketing:",
+      "zh": "营销：",
+      "hi": "मार्केटिंग:",
+      "ur": "مارکیٹنگ:"
+    }
+  },
+  "page.kvkk": {
+    "adres_label": {
+      "en": "Address:",
+      "de": "Adresse:",
+      "fr": "Adresse :",
+      "es": "Dirección:",
+      "nl": "Adres:",
+      "zh": "地址：",
+      "hi": "पता:",
+      "ur": "پتہ:"
+    },
+    "eposta_label": {
+      "en": "Email:",
+      "de": "E-Mail:",
+      "fr": "E-mail :",
+      "es": "Correo:",
+      "nl": "E-mail:",
+      "zh": "邮件：",
+      "hi": "ईमेल:",
+      "ur": "ای میل:"
+    },
+    "telefon_label": {
+      "en": "Phone:",
+      "de": "Telefon:",
+      "fr": "Téléphone :",
+      "es": "Teléfono:",
+      "nl": "Telefoon:",
+      "zh": "电话：",
+      "hi": "फ़ोन:",
+      "ur": "فون:"
+    },
+    "eposta_info": {
+      "en": "info@tripandtick.com",
+      "de": "info@tripandtick.com",
+      "fr": "info@tripandtick.com",
+      "es": "info@tripandtick.com",
+      "nl": "info@tripandtick.com",
+      "zh": "info@tripandtick.com",
+      "hi": "info@tripandtick.com",
+      "ur": "info@tripandtick.com"
+    },
+    "telefon_no": {
+      "en": "+90 537 464 78 61",
+      "de": "+90 537 464 78 61",
+      "fr": "+90 537 464 78 61",
+      "es": "+90 537 464 78 61",
+      "nl": "+90 537 464 78 61",
+      "zh": "+90 537 464 78 61",
+      "hi": "+90 537 464 78 61",
+      "ur": "+90 537 464 78 61"
+    },
+    "online_onerilir_label": {
+      "en": "Online (recommended):",
+      "de": "Online (empfohlen):",
+      "fr": "En ligne (recommandé) :",
+      "es": "Online (recomendado):",
+      "nl": "Online (aanbevolen):",
+      "zh": "在线（推荐）：",
+      "hi": "ऑनलाइन (अनुशंसित):",
+      "ur": "آن لائن (تجویز کردہ):"
+    },
+    "veri_haklari_talep_formu": {
+      "en": "Data Rights Request Form",
+      "de": "Antrag auf Datenrechte",
+      "fr": "Formulaire de demande de droits sur les données",
+      "es": "Formulario de solicitud de derechos de datos",
+      "nl": "Aanvraagformulier gegevensrechten",
+      "zh": "数据权利申请表",
+      "hi": "डेटा अधिकार अनुरोध फॉर्म",
+      "ur": "ڈیٹا حقوق درخواست فارم"
+    },
+    "magic_link_aciklama": {
+      "en": "— 24-hour approved magic-link for data access (KVKK m.11/b) or deletion (m.11/e).",
+      "de": "— 24-stündiger genehmigter magic-link für Datenzugriff (KVKK m.11/b) oder Löschung (m.11/e).",
+      "fr": "— magic-link approuvé valable 24 heures pour l'accès aux données (KVKK m.11/b) ou la suppression (m.11/e).",
+      "es": "— magic-link aprobado de 24 horas para acceso a datos (KVKK m.11/b) o eliminación (m.11/e).",
+      "nl": "— 24-uur goedgekeurde magic-link voor gegevenstoegang (KVKK m.11/b) of verwijdering (m.11/e).",
+      "zh": "— 数据访问（KVKK m.11/b）或删除（m.11/e）的24小时有效 magic-link。",
+      "hi": "— डेटा एक्सेस (KVKK m.11/b) या हटाने (m.11/e) के लिए 24 घंटे का अनुमोदित magic-link।",
+      "ur": "— ڈیٹا تک رسائی (KVKK m.11/b) یا حذف (m.11/e) کے لیے 24 گھنٹے کا منظور شدہ magic-link۔"
+    },
+    "posta_label": {
+      "en": "Post:",
+      "de": "Post:",
+      "fr": "Courrier :",
+      "es": "Correo postal:",
+      "nl": "Post:",
+      "zh": "邮政：",
+      "hi": "डाक:",
+      "ur": "ڈاک:"
+    },
+    "kvkk_gov_url_text": {
+      "en": "www.kvkk.gov.tr",
+      "de": "www.kvkk.gov.tr",
+      "fr": "www.kvkk.gov.tr",
+      "es": "www.kvkk.gov.tr",
+      "nl": "www.kvkk.gov.tr",
+      "zh": "www.kvkk.gov.tr",
+      "hi": "www.kvkk.gov.tr",
+      "ur": "www.kvkk.gov.tr"
+    }
+  },
+  "page.kullanim_sartlari": {
+    "breadcrumb_name": {
+      "en": "Terms of Use",
+      "de": "Nutzungsbedingungen",
+      "fr": "Conditions d'utilisation",
+      "es": "Términos de uso",
+      "nl": "Gebruiksvoorwaarden",
+      "zh": "使用条款",
+      "hi": "उपयोग की शर्तें",
+      "ur": "استعمال کی شرائط"
+    },
+    "kvkk_link_text": {
+      "en": "KVKK",
+      "de": "KVKK",
+      "fr": "KVKK",
+      "es": "KVKK",
+      "nl": "KVKK",
+      "zh": "KVKK",
+      "hi": "KVKK",
+      "ur": "KVKK"
+    },
+    "eposta_info": {
+      "en": "info@tripandtick.com",
+      "de": "info@tripandtick.com",
+      "fr": "info@tripandtick.com",
+      "es": "info@tripandtick.com",
+      "nl": "info@tripandtick.com",
+      "zh": "info@tripandtick.com",
+      "hi": "info@tripandtick.com",
+      "ur": "info@tripandtick.com"
+    }
+  },
+  "page.iptal_iade_politikasi": {
+    "policy_row_time_72plus": {
+      "en": "72+ hours in advance",
+      "de": "72+ Stunden im Voraus",
+      "fr": "72+ heures à l'avance",
+      "es": "Con 72+ horas de antelación",
+      "nl": "72+ uur van tevoren",
+      "zh": "提前72小时以上",
+      "hi": "72+ घंटे पहले",
+      "ur": "72+ گھنٹے پہلے"
+    },
+    "policy_row_refund_72plus": {
+      "en": "%100 refund",
+      "de": "%100 Erstattung",
+      "fr": "%100 remboursé",
+      "es": "%100 de reembolso",
+      "nl": "%100 terugbetaling",
+      "zh": "%100 退款",
+      "hi": "%100 वापसी",
+      "ur": "%100 واپسی"
+    },
+    "policy_row_time_24_72": {
+      "en": "24-72 hours in advance",
+      "de": "24-72 Stunden im Voraus",
+      "fr": "24-72 heures à l'avance",
+      "es": "Con 24-72 horas de antelación",
+      "nl": "24-72 uur van tevoren",
+      "zh": "提前24-72小时",
+      "hi": "24-72 घंटे पहले",
+      "ur": "24-72 گھنٹے پہلے"
+    },
+    "policy_row_refund_24_72": {
+      "en": "%50 refund",
+      "de": "%50 Erstattung",
+      "fr": "%50 remboursé",
+      "es": "%50 de reembolso",
+      "nl": "%50 terugbetaling",
+      "zh": "%50 退款",
+      "hi": "%50 वापसी",
+      "ur": "%50 واپسی"
+    },
+    "policy_row_time_24_less": {
+      "en": "Less than 24 hours",
+      "de": "Weniger als 24 Stunden",
+      "fr": "Moins de 24 heures",
+      "es": "Menos de 24 horas",
+      "nl": "Minder dan 24 uur",
+      "zh": "不足24小时",
+      "hi": "24 घंटे से कम",
+      "ur": "24 گھنٹے سے کم"
+    },
+    "policy_row_refund_24_less": {
+      "en": "No refund",
+      "de": "Keine Erstattung",
+      "fr": "Aucun remboursement",
+      "es": "Sin reembolso",
+      "nl": "Geen terugbetaling",
+      "zh": "不退款",
+      "hi": "कोई वापसी नहीं",
+      "ur": "کوئی واپسی نہیں"
+    },
+    "policy_row_time_operator": {
+      "en": "Operator/weather cancellation",
+      "de": "Betreiber-/Wetterannullierung",
+      "fr": "Annulation opérateur/météo",
+      "es": "Cancelación por operador/tiempo",
+      "nl": "Annulering door operator/weer",
+      "zh": "运营商/天气取消",
+      "hi": "ऑपरेटर/मौसम रद्दीकरण",
+      "ur": "آپریٹر/موسم منسوخی"
+    },
+    "policy_row_refund_operator": {
+      "en": "%100 refund or alternative date",
+      "de": "%100 Erstattung oder Alternativtermin",
+      "fr": "%100 remboursé ou date alternative",
+      "es": "%100 reembolso o fecha alternativa",
+      "nl": "%100 terugbetaling of alternatieve datum",
+      "zh": "%100 退款或备选日期",
+      "hi": "%100 वापसी या वैकल्पिक तारीख",
+      "ur": "%100 واپسی یا متبادل تاریخ"
+    },
+    "policy_row_time_saglik": {
+      "en": "Medical report",
+      "de": "Ärztliches Attest",
+      "fr": "Rapport médical",
+      "es": "Informe médico",
+      "nl": "Medisch rapport",
+      "zh": "医疗证明",
+      "hi": "चिकित्सा रिपोर्ट",
+      "ur": "طبی رپورٹ"
+    },
+    "policy_row_refund_saglik": {
+      "en": "%100 refund",
+      "de": "%100 Erstattung",
+      "fr": "%100 remboursé",
+      "es": "%100 de reembolso",
+      "nl": "%100 terugbetaling",
+      "zh": "%100 退款",
+      "hi": "%100 वापसी",
+      "ur": "%100 واپسی"
+    },
+    "pagehero_tag_yasal": {
+      "en": "Legal",
+      "de": "Rechtlich",
+      "fr": "Légal",
+      "es": "Legal",
+      "nl": "Juridisch",
+      "zh": "法律",
+      "hi": "कानूनी",
+      "ur": "قانونی"
+    },
+    "breadcrumb_iptal_iade": {
+      "en": "Cancellation & Refund",
+      "de": "Stornierung & Erstattung",
+      "fr": "Annulation & Remboursement",
+      "es": "Cancelación & Reembolso",
+      "nl": "Annulering & Terugbetaling",
+      "zh": "取消与退款",
+      "hi": "रद्दीकरण और वापसी",
+      "ur": "منسوخی اور واپسی"
+    },
+    "eposta_label": {
+      "en": "Email:",
+      "de": "E-Mail:",
+      "fr": "E-mail :",
+      "es": "Correo:",
+      "nl": "E-mail:",
+      "zh": "邮件：",
+      "hi": "ईमेल:",
+      "ur": "ای میل:"
+    },
+    "whatsapp_label": {
+      "en": "WhatsApp:",
+      "de": "WhatsApp:",
+      "fr": "WhatsApp :",
+      "es": "WhatsApp:",
+      "nl": "WhatsApp:",
+      "zh": "WhatsApp：",
+      "hi": "WhatsApp:",
+      "ur": "WhatsApp:"
+    },
+    "yuzde_100_iade_garantisi": {
+      "en": "%100 Refund Guarantee",
+      "de": "%100 Rückgabegarantie",
+      "fr": "Garantie de remboursement à %100",
+      "es": "Garantía de reembolso del %100",
+      "nl": "%100 Terugbetalingsgarantie",
+      "zh": "%100 退款保证",
+      "hi": "%100 वापसी गारंटी",
+      "ur": "%100 واپسی گارنٹی"
+    }
+  },
+  "page.hakkimizda": {
+    "stat_label_mutlu_musteri": {
+      "en": "Happy Customers",
+      "de": "Zufriedene Kunden",
+      "fr": "Clients satisfaits",
+      "es": "Clientes satisfechos",
+      "nl": "Tevreden klanten",
+      "zh": "满意客户",
+      "hi": "खुश ग्राहक",
+      "ur": "خوش صارفین"
+    },
+    "stat_label_musteri_puani": {
+      "en": "Customer Rating",
+      "de": "Kundenbewertung",
+      "fr": "Note client",
+      "es": "Puntuación del cliente",
+      "nl": "Klantbeoordeling",
+      "zh": "客户评分",
+      "hi": "ग्राहक रेटिंग",
+      "ur": "گاہک ریٹنگ"
+    },
+    "stat_label_lisansli_operator": {
+      "en": "Licensed Operators",
+      "de": "Lizenzierte Betreiber",
+      "fr": "Opérateurs agréés",
+      "es": "Operadores con licencia",
+      "nl": "Gecertificeerde operators",
+      "zh": "持证运营商",
+      "hi": "लाइसेंस प्राप्त ऑपरेटर",
+      "ur": "لائسنس یافتہ آپریٹرز"
+    },
+    "stat_label_iade_garantisi": {
+      "en": "Refund Guarantee",
+      "de": "Rückgabegarantie",
+      "fr": "Garantie de remboursement",
+      "es": "Garantía de reembolso",
+      "nl": "Terugbetalingsgarantie",
+      "zh": "退款保证",
+      "hi": "वापसी गारंटी",
+      "ur": "واپسی گارنٹی"
+    },
+    "hikayemiz": {
+      "en": "Our Story",
+      "de": "Unsere Geschichte",
+      "fr": "Notre histoire",
+      "es": "Nuestra historia",
+      "nl": "Ons verhaal",
+      "zh": "我们的故事",
+      "hi": "हमारी कहानी",
+      "ur": "ہماری کہانی"
+    },
+    "value_title_musteri_once": {
+      "en": "Customer First",
+      "de": "Kunde zuerst",
+      "fr": "Le client avant tout",
+      "es": "El cliente primero",
+      "nl": "Klant eerst",
+      "zh": "客户第一",
+      "hi": "ग्राहक पहले",
+      "ur": "گاہک پہلے"
+    },
+    "value_desc_musteri_once": {
+      "en": "Every reservation is an unforgettable moment for a family or a couple. We put this responsibility first.",
+      "de": "Jede Buchung ist ein unvergesslicher Moment für eine Familie oder ein Pärchen. Diese Verantwortung stellen wir an erste Stelle.",
+      "fr": "Chaque réservation est un moment inoubliable pour une famille ou un couple. Nous plaçons cette responsabilité au premier rang.",
+      "es": "Cada reserva es un momento inolvidable para una familia o pareja. Ponemos esta responsabilidad en primer lugar.",
+      "nl": "Elke boeking is een onvergetelijk moment voor een gezin of een koppel. We stellen deze verantwoordelijkheid voorop.",
+      "zh": "每一次预订对于一个家庭或一对情侣来说都是难忘的时刻。我们将这份责任放在首位。",
+      "hi": "हर आरक्षण एक परिवार या जोड़े के लिए एक अविस्मरणीय पल है। हम इस जिम्मेदारी को सबसे आगे रखते हैं।",
+      "ur": "ہر بکنگ کسی خاندان یا جوڑے کے لیے ایک ناقابل فراموش لمحہ ہے۔ ہم اس ذمہ داری کو سب سے آگے رکھتے ہیں۔"
+    },
+    "value_title_guven": {
+      "en": "Trust",
+      "de": "Vertrauen",
+      "fr": "Confiance",
+      "es": "Confianza",
+      "nl": "Vertrouwen",
+      "zh": "信任",
+      "hi": "विश्वास",
+      "ur": "اعتماد"
+    },
+    "value_desc_guven": {
+      "en": "TÜRSAB licence, 40M€ insurance, 3D Secure payments, KVKK compliance — transparency is our core value.",
+      "de": "TÜRSAB-Lizenz, 40M€ Versicherung, 3D Secure Zahlungen, KVKK-Konformität — Transparenz ist unser Kernwert.",
+      "fr": "Licence TÜRSAB, assurance 40M€, paiements 3D Secure, conformité KVKK — la transparence est notre valeur fondamentale.",
+      "es": "Licencia TÜRSAB, seguro de 40M€, pagos 3D Secure, cumplimiento de KVKK — la transparencia es nuestro valor central.",
+      "nl": "TÜRSAB-licentie, 40M€ verzekering, 3D Secure betalingen, KVKK-naleving — transparantie is onze kernwaarde.",
+      "zh": "TÜRSAB 许可证、40M€ 保险、3D Secure 支付、KVKK 合规 — 透明是我们的核心价值。",
+      "hi": "TÜRSAB लाइसेंस, 40M€ बीमा, 3D Secure भुगतान, KVKK अनुपालन — पारदर्शिता हमारा मुख्य मूल्य है।",
+      "ur": "TÜRSAB لائسنس، 40M€ انشورنس، 3D Secure ادائیگی، KVKK تعمیل — شفافیت ہماری بنیادی قدر ہے۔"
+    },
+    "value_title_seffaflik": {
+      "en": "Transparency",
+      "de": "Transparenz",
+      "fr": "Transparence",
+      "es": "Transparencia",
+      "nl": "Transparantie",
+      "zh": "透明度",
+      "hi": "पारदर्शिता",
+      "ur": "شفافیت"
+    },
+    "value_desc_seffaflik": {
+      "en": "No hidden fees. Prices are final — tax, transfer, and breakfast included. Cancellation policy is clear.",
+      "de": "Keine versteckten Gebühren. Preise sind Endpreise — Steuer, Transfer und Frühstück inklusive. Stornierungsrichtlinie ist klar.",
+      "fr": "Pas de frais cachés. Les prix sont définitifs — taxes, transfert et petit-déjeuner inclus. Politique d'annulation claire.",
+      "es": "Sin cargos ocultos. Los precios son finales — impuestos, traslado y desayuno incluidos. Política de cancelación clara.",
+      "nl": "Geen verborgen kosten. Prijzen zijn definitief — belasting, transfer en ontbijt inbegrepen. Annuleringsbeleid is duidelijk.",
+      "zh": "无隐藏费用。价格为最终价格 — 含税、接送和早餐。退订政策明确。",
+      "hi": "कोई छुपा शुल्क नहीं। कीमतें अंतिम हैं — कर, ट्रांसफर और नाश्ता शामिल। रद्दीकरण नीति स्पष्ट है।",
+      "ur": "کوئی پوشیدہ فیس نہیں۔ قیمتیں حتمی ہیں — ٹیکس، ٹرانسفر اور ناشتہ شامل ہے۔ منسوخی پالیسی واضح ہے۔"
+    },
+    "value_title_en_iyi_fiyat": {
+      "en": "Best Price",
+      "de": "Bester Preis",
+      "fr": "Meilleur prix",
+      "es": "Mejor precio",
+      "nl": "Beste prijs",
+      "zh": "最优价格",
+      "hi": "सर्वोत्तम मूल्य",
+      "ur": "بہترین قیمت"
+    },
+    "value_desc_en_iyi_fiyat": {
+      "en": "Direct operator agreements — no middlemen. Best price guarantee: if you find lower, we'll beat it by %5.",
+      "de": "Direkte Betreiberverträge — kein Mittelsmann. Bestpreisgarantie: Wenn Sie einen günstigeren Preis finden, unterbieten wir ihn um %5.",
+      "fr": "Accords directs avec les opérateurs — sans intermédiaire. Garantie meilleur prix : si vous trouvez moins cher, nous faisons %5 de moins.",
+      "es": "Acuerdos directos con operadores — sin intermediarios. Garantía de mejor precio: si encuentras uno más barato, lo superamos en un %5.",
+      "nl": "Directe operatorovereenkomsten — geen tussenpersonen. Beste prijsgarantie: als u goedkoper vindt, gaan wij %5 lager.",
+      "zh": "直接与运营商签约 — 无中间商。最优价格保证：如您找到更低价格，我们将低出 %5。",
+      "hi": "सीधे ऑपरेटर समझौते — कोई बिचौलिया नहीं। सर्वोत्तम मूल्य गारंटी: अगर आप कम कीमत पाते हैं, हम उससे %5 नीचे जाएंगे।",
+      "ur": "براہ راست آپریٹر معاہدے — کوئی بیچوان نہیں۔ بہترین قیمت کی گارنٹی: اگر آپ کم قیمت پائیں، ہم %5 کم کریں گے۔"
+    },
+    "adres": {
+      "en": "Address",
+      "de": "Adresse",
+      "fr": "Adresse",
+      "es": "Dirección",
+      "nl": "Adres",
+      "zh": "地址",
+      "hi": "पता",
+      "ur": "پتہ"
+    },
+    "telefon": {
+      "en": "Phone",
+      "de": "Telefon",
+      "fr": "Téléphone",
+      "es": "Teléfono",
+      "nl": "Telefoon",
+      "zh": "电话",
+      "hi": "फ़ोन",
+      "ur": "فون"
+    },
+    "eposta": {
+      "en": "Email",
+      "de": "E-Mail",
+      "fr": "E-mail",
+      "es": "Correo",
+      "nl": "E-mail",
+      "zh": "邮件",
+      "hi": "ईमेल",
+      "ur": "ای میل"
+    },
+    "misyonumuz": {
+      "en": "Our Mission",
+      "de": "Unsere Mission",
+      "fr": "Notre mission",
+      "es": "Nuestra misión",
+      "nl": "Onze missie",
+      "zh": "我们的使命",
+      "hi": "हमारा मिशन",
+      "ur": "ہمارا مشن"
+    },
+    "vizyonumuz": {
+      "en": "Our Vision",
+      "de": "Unsere Vision",
+      "fr": "Notre vision",
+      "es": "Nuestra visión",
+      "nl": "Onze visie",
+      "zh": "我们的愿景",
+      "hi": "हमारा विज़न",
+      "ur": "ہمارا وژن"
+    },
+    "vizyonumuz_2027": {
+      "en": "By 2027",
+      "de": "Bis 2027",
+      "fr": "D'ici 2027",
+      "es": "Para 2027",
+      "nl": "Tegen 2027",
+      "zh": "2027年前",
+      "hi": "2027 तक",
+      "ur": "2027 تک"
+    },
+    "yuzde_10_15_ortaklik_komisyonu": {
+      "en": "%10-15 partnership commission",
+      "de": "%10-15 Partnerschaftsprovision",
+      "fr": "%10-15 de commission partenariat",
+      "es": "%10-15 de comisión de asociación",
+      "nl": "%10-15 partnercommissie",
+      "zh": "%10-15 合作佣金",
+      "hi": "%10-15 साझेदारी कमीशन",
+      "ur": "%10-15 شراکت داری کمیشن"
+    }
+  },
+  "page.kapadokya": {
+    "cat_title_balon": {
+      "en": "Balloon Tours",
+      "de": "Ballonfahrten",
+      "fr": "Vols en montgolfière",
+      "es": "Paseos en globo",
+      "nl": "Ballonvaarten",
+      "zh": "热气球之旅",
+      "hi": "गुब्बारा भ्रमण",
+      "ur": "غبارہ سیر"
+    },
+    "cat_desc_balon": {
+      "en": "Packages from €165, 9+ operators",
+      "de": "Pakete ab €165, 9+ Betreiber",
+      "fr": "Forfaits à partir de €165, 9+ opérateurs",
+      "es": "Paquetes desde €165, 9+ operadores",
+      "nl": "Pakketten vanaf €165, 9+ operators",
+      "zh": "套餐低至€165，9+ 运营商",
+      "hi": "€165 से शुरू पैकेज, 9+ ऑपरेटर",
+      "ur": "€165 سے شروع پیکجز، 9+ آپریٹرز"
+    },
+    "cat_title_aktiviteler": {
+      "en": "Activities",
+      "de": "Aktivitäten",
+      "fr": "Activités",
+      "es": "Actividades",
+      "nl": "Activiteiten",
+      "zh": "活动",
+      "hi": "गतिविधियाँ",
+      "ur": "سرگرمیاں"
+    },
+    "cat_desc_aktiviteler": {
+      "en": "ATV, horse riding, jeep safari — from €29",
+      "de": "ATV, Reiten, Jeep Safari — ab €29",
+      "fr": "ATV, équitation, jeep safari — à partir de €29",
+      "es": "ATV, equitación, jeep safari — desde €29",
+      "nl": "ATV, paardrijden, jeep safari — vanaf €29",
+      "zh": "ATV、骑马、吉普车越野 — 低至€29",
+      "hi": "ATV, घुड़सवारी, जीप सफारी — €29 से",
+      "ur": "ATV، گھڑ سواری، جیپ سفاری — €29 سے"
+    },
+    "cat_title_gezi_turlari": {
+      "en": "Sightseeing Tours",
+      "de": "Besichtigungstouren",
+      "fr": "Visites touristiques",
+      "es": "Excursiones turísticas",
+      "nl": "Sightseeingtours",
+      "zh": "观光游览",
+      "hi": "दर्शनीय स्थल भ्रमण",
+      "ur": "سیاحتی دورے"
+    },
+    "cat_desc_gezi_turlari": {
+      "en": "Red, Green, sunset tours",
+      "de": "Rote, Grüne, Sonnenuntergangstouren",
+      "fr": "Tours Rouge, Vert, coucher de soleil",
+      "es": "Tours Rojo, Verde, atardecer",
+      "nl": "Rode, Groene, zonsondergangtours",
+      "zh": "红色、绿色、日落游览",
+      "hi": "लाल, हरा, सूर्यास्त भ्रमण",
+      "ur": "سرخ، سبز، غروب آفتاب دورے"
+    },
+    "cat_title_kombo": {
+      "en": "Combo Packages",
+      "de": "Kombipakete",
+      "fr": "Forfaits combinés",
+      "es": "Paquetes combinados",
+      "nl": "Combopakketten",
+      "zh": "组合套餐",
+      "hi": "कॉम्बो पैकेज",
+      "ur": "کومبو پیکجز"
+    },
+    "cat_desc_kombo": {
+      "en": "Balloon + hotel + tour value packages",
+      "de": "Ballon + Hotel + Tour Vorteilspakete",
+      "fr": "Forfaits avantageux ballon + hôtel + circuit",
+      "es": "Paquetes con globo + hotel + tour",
+      "nl": "Voordelige pakketten ballon + hotel + tour",
+      "zh": "热气球 + 酒店 + 游览超值套餐",
+      "hi": "गुब्बारा + होटल + टूर किफायती पैकेज",
+      "ur": "غبارہ + ہوٹل + ٹور فائدہ مند پیکجز"
+    },
+    "nisan_haziran": {
+      "en": "April-June",
+      "de": "April-Juni",
+      "fr": "Avril-Juin",
+      "es": "Abril-Junio",
+      "nl": "April-Juni",
+      "zh": "四月至六月",
+      "hi": "अप्रैल-जून",
+      "ur": "اپریل-جون"
+    },
+    "ve": {
+      "en": "and",
+      "de": "und",
+      "fr": "et",
+      "es": "y",
+      "nl": "en",
+      "zh": "和",
+      "hi": "और",
+      "ur": "اور"
+    },
+    "kategoriler": {
+      "en": "Categories",
+      "de": "Kategorien",
+      "fr": "Catégories",
+      "es": "Categorías",
+      "nl": "Categorieën",
+      "zh": "分类",
+      "hi": "श्रेणियाँ",
+      "ur": "زمرے"
+    },
+    "kapadokya_title": {
+      "en": "Cappadocia",
+      "de": "Kappadokien",
+      "fr": "Cappadoce",
+      "es": "Capadocia",
+      "nl": "Cappadocië",
+      "zh": "卡帕多奇亚",
+      "hi": "कप्पाडोसिया",
+      "ur": "کپاڈوشیا"
+    }
+  }
+}
