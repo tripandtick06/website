@@ -171,12 +171,12 @@ export function Header() {
                         key={lang.code}
                         type="button"
                         disabled
-                        title="Faz 2'de eklenecek"
+                        title={t.component.layout.footer.lang_yakinda_title}
                         className="w-full text-left px-4 py-2 text-sm font-medium text-slate-400 opacity-50 cursor-not-allowed flex items-center justify-between"
                       >
                         <span>{lang.label}</span>
                         <span className="text-[10px] font-semibold uppercase tracking-wide bg-slate-100 text-slate-500 px-2 py-0.5 rounded-full">
-                          Yakında
+                          {t.component.layout.footer.lang_yakinda_badge}
                         </span>
                       </button>
                     );
