@@ -4,6 +4,7 @@ import { GdprForm } from "./GdprForm";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { PageHero } from "@/components/layout/PageHero";
 import { useT } from "@/lib/i18n/I18nProvider";
+import { tNodes } from "@/lib/i18n/trans";
 
 export function GdprContent() {
   const t = useT();
@@ -24,7 +25,9 @@ export function GdprContent() {
           <div className="card p-6 sm:p-8">
             <h2 className="text-2xl font-bold text-slate-900 mb-4">{d.h2_talep_formu}</h2>
             <p className="text-slate-600 mb-6">
-              {d.talep_formu_description_prefix}<strong>{d.talep_formu_24_saat}</strong>{d.talep_formu_description_suffix}
+              {tNodes(d.talep_formu_description, {
+                saat: <strong>{d.talep_formu_24_saat}</strong>,
+              })}
             </p>
             <GdprForm />
           </div>
@@ -37,11 +40,13 @@ export function GdprContent() {
               <li>{d.li_sadakat_puan}</li>
             </ul>
             <p className="text-xs text-slate-500">
-              {d.stripe_note_prefix}{" "}
-              <a href="mailto:hello@tripandtick.com" className="text-primary underline">
-                hello@tripandtick.com
-              </a>{" "}
-              {d.stripe_note_suffix}
+              {tNodes(d.stripe_note, {
+                mail: (
+                  <a href="mailto:hello@tripandtick.com" className="text-primary underline">
+                    hello@tripandtick.com
+                  </a>
+                ),
+              })}
             </p>
 
             <h3 className="text-lg font-semibold text-slate-900 mt-6">{d.h3_silme_ne_olur}</h3>
@@ -53,10 +58,13 @@ export function GdprContent() {
             </ul>
 
             <p className="text-xs text-slate-500 mt-4">
-              {d.kvkk_sorumlu_prefix}{" "}
-              <a href="mailto:hello@tripandtick.com" className="text-primary underline">
-                hello@tripandtick.com
-              </a>
+              {tNodes(d.kvkk_sorumlu, {
+                mail: (
+                  <a href="mailto:hello@tripandtick.com" className="text-primary underline">
+                    hello@tripandtick.com
+                  </a>
+                ),
+              })}
             </p>
           </div>
         </div>

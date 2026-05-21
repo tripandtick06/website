@@ -7,6 +7,7 @@
 import { useState } from "react";
 import { AlertTriangle, CheckCircle2, CalendarDays, RefreshCcw } from "lucide-react";
 import { useT } from "@/lib/i18n/I18nProvider";
+import { tNodes } from "@/lib/i18n/trans";
 
 interface Props {
   token: string;
@@ -99,10 +100,10 @@ export function YenidenTarihClient(props: Props) {
             <>
               <h1 className="text-2xl font-bold text-slate-900 mb-2">{ns.success_reschedule_title}</h1>
               <p className="text-slate-600 mb-4">
-                <strong>{props.serviceName}</strong>{" "}
-                {ns.success_reschedule_body_prefix}{" "}
-                <strong>{formatDateTr(result.newDate)}</strong>{" "}
-                {ns.success_reschedule_body_suffix}
+                {tNodes(ns.success_reschedule_body, {
+                  service: <strong>{props.serviceName}</strong>,
+                  date: <strong>{formatDateTr(result.newDate)}</strong>,
+                })}
               </p>
             </>
           ) : (
@@ -211,10 +212,14 @@ export function YenidenTarihClient(props: Props) {
         )}
 
         <p className="text-xs text-slate-500 text-center mt-6">
-          {ns.label_booking_id}: <code className="font-mono">{props.bookingId}</code> · {ns.help_prefix}{" "}
-          <a href="https://wa.me/905374647861" className="text-amber-600 hover:underline">
-            WhatsApp +90 537 464 78 61
-          </a>
+          {ns.label_booking_id}: <code className="font-mono">{props.bookingId}</code> ·{" "}
+          {tNodes(ns.help_text, {
+            wa: (
+              <a href="https://wa.me/905374647861" className="text-amber-600 hover:underline">
+                WhatsApp +90 537 464 78 61
+              </a>
+            ),
+          })}
         </p>
       </div>
     </main>

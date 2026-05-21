@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useT } from "@/lib/i18n/I18nProvider";
+import { tNodes } from "@/lib/i18n/trans";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useLocale } from "next-intl";
 import { Link } from "@/i18n/routing";
@@ -930,8 +931,17 @@ function Step2DateAndPax(props: {
         <Counter label={t.component.booking.booking_client.counter_child.replace("{min}", String(service.minAge || 6))} value={childPax} min={0} max={10} onChange={setChildren} disabled={service.minAge >= 16} />
         {service.minAge >= 6 && (
           <div className="border-l-4 border-amber-500 bg-amber-50 p-3 rounded text-sm text-amber-900">
-            <strong>{t.component.booking.booking_client.step2_age_restriction_title}</strong> {t.component.booking.booking_client.step2_age_restriction_desc.replace("{minAge}", String(service.minAge))}
-            {" "}<Link href="/sss" className="underline">{t.component.booking.booking_client.step2_age_restriction_faq_link}</Link> {t.component.booking.booking_client.step2_age_restriction_faq_suffix}
+            <strong>{t.component.booking.booking_client.step2_age_restriction_title}</strong>{" "}
+            {tNodes(
+              t.component.booking.booking_client.step2_age_restriction_desc.replace("{minAge}", String(service.minAge)),
+              {
+                faq: (
+                  <Link href="/sss" className="underline">
+                    {t.component.booking.booking_client.step2_age_restriction_faq_link}
+                  </Link>
+                ),
+              }
+            )}
           </div>
         )}
       </div>
@@ -1190,7 +1200,18 @@ function Step4Summary(props: {
           <label className="flex items-start gap-2 mt-3 cursor-pointer">
             <input type="checkbox" checked={policyAccepted} onChange={(e) => setPolicyAccepted(e.target.checked)} className="mt-1 w-4 h-4" />
             <span className="text-xs">
-              <Link href="/yasal/kvkk" className="underline">{t.component.booking.booking_client.step4_policy_kvkk}</Link>, <Link href="/yasal/kullanim-kosullari" className="underline">{t.component.booking.booking_client.step4_policy_terms}</Link> {t.component.booking.booking_client.step4_policy_accept}
+              {tNodes(t.component.booking.booking_client.step4_policy_consent, {
+                kvkk: (
+                  <Link href="/yasal/kvkk" className="underline">
+                    {t.component.booking.booking_client.step4_policy_kvkk}
+                  </Link>
+                ),
+                terms: (
+                  <Link href="/yasal/kullanim-kosullari" className="underline">
+                    {t.component.booking.booking_client.step4_policy_terms}
+                  </Link>
+                ),
+              })}
             </span>
           </label>
         </div>

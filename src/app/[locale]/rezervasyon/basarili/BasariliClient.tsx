@@ -10,6 +10,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "@/i18n/routing";
 import { useT } from "@/lib/i18n/I18nProvider";
+import { tNodes } from "@/lib/i18n/trans";
 import { AlertTriangle, CalendarPlus, CheckCircle2, FileText, Home, Mail, UserCircle } from "lucide-react";
 import { loadDraft, generateBookingCode, clearDraft } from "@/lib/booking-storage";
 
@@ -199,8 +200,14 @@ export function BasariliClient(props: Props) {
         </div>
 
         <p className="text-xs text-slate-400 mt-8">
-          {ns.contact_prefix} <a href="mailto:hello@tripandtick.com" className="underline">hello@tripandtick.com</a> {ns.contact_or}{" "}
-          <a href="https://wa.me/905374647861" className="underline" target="_blank" rel="noreferrer">WhatsApp</a>.
+          {tNodes(ns.contact_line, {
+            mail: <a href="mailto:hello@tripandtick.com" className="underline">hello@tripandtick.com</a>,
+            wa: (
+              <a href="https://wa.me/905374647861" className="underline" target="_blank" rel="noreferrer">
+                WhatsApp
+              </a>
+            ),
+          })}
         </p>
       </div>
     </main>

@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { Link } from "@/i18n/routing";
 import { AlertTriangle, RotateCw, Home } from "lucide-react";
 import { useT } from "@/lib/i18n/I18nProvider";
+import { tNodes } from "@/lib/i18n/trans";
 
 export default function GlobalError({
   error,
@@ -54,10 +55,13 @@ export default function GlobalError({
           </Link>
         </div>
         <p className="text-xs text-slate-500 mt-8">
-          {d.contact_prefix}{" "}
-          <a href="mailto:info@tripandtick.com" className="text-accent font-semibold">
-            info@tripandtick.com
-          </a>
+          {tNodes(d.contact_line, {
+            mail: (
+              <a href="mailto:info@tripandtick.com" className="text-accent font-semibold">
+                info@tripandtick.com
+              </a>
+            ),
+          })}
         </p>
       </div>
     </div>

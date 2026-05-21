@@ -15,6 +15,7 @@ import { cn } from "@/lib/utils";
 import { BALLOON_PACKAGES } from "@/data/services/balloons";
 import { ACTIVITIES, TOURS } from "@/data/services/catalog";
 import { useT } from "@/lib/i18n/I18nProvider";
+import { tNodes } from "@/lib/i18n/trans";
 
 interface ServiceOption {
   slug: string;
@@ -119,7 +120,9 @@ export function ClientForm() {
           {t.component.yorum.review_form.success_title}
         </h2>
         <p className="text-slate-600 mb-2">
-          {t.component.yorum.review_form.success_body_prefix} <strong>{t.component.yorum.review_form.success_body_hours}</strong> {t.component.yorum.review_form.success_body_suffix}
+          {tNodes(t.component.yorum.review_form.success_body, {
+            hours: <strong>{t.component.yorum.review_form.success_body_hours}</strong>,
+          })}
         </p>
         {reviewId && (
           <p className="text-xs text-slate-400 mt-2">
