@@ -8,7 +8,12 @@ import { BALLOON_PACKAGES } from "@/data/services/balloons";
 import { OPERATORS } from "@/data/services/operators";
 import { FAQ_ITEMS } from "@/data/faq";
 import { formatPrice } from "@/lib/utils";
-import { breadcrumbSchema, faqPageSchema, SITE_URL } from "@/lib/schema";
+import {
+  breadcrumbSchema,
+  faqPageSchema,
+  itemListSchema,
+  SITE_URL,
+} from "@/lib/schema";
 import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
 
 export const runtime = "edge";
@@ -223,6 +228,13 @@ export default function BalonlarPage() {
       <JsonLd
         data={[
           breadcrumbSchema([{ name: "Balon Turları", href: "/balonlar" }]),
+          itemListSchema(
+            BALLOON_PACKAGES.map((pkg) => ({
+              name: pkg.name,
+              urlPath: `/balonlar/${pkg.slug}`,
+            })),
+            "Kapadokya Balon Turu Paketleri"
+          ),
           faqPageSchema(balonFaqs.map((f) => ({ question: f.question, answer: f.answer }))),
         ]}
       />

@@ -12,7 +12,7 @@ import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { HotelInquiryForm } from "@/components/oteller/HotelInquiryForm";
 import { HOTELS } from "@/data/services/catalog";
-import { breadcrumbSchema, SITE_URL } from "@/lib/schema";
+import { breadcrumbSchema, lodgingSchema, SITE_URL } from "@/lib/schema";
 import { generateHreflang } from "@/lib/hreflang";
 import { Star, MapPin, Check, Phone, MessageSquare, Mail } from "lucide-react";
 
@@ -137,10 +137,27 @@ export default function HotelDetailPage({ params }: PageParams) {
       </article>
 
       <JsonLd
-        data={breadcrumbSchema([
-          { name: "Oteller", href: "/oteller" },
-          { name: hotel.name, href: `/oteller/${hotel.slug}` },
-        ])}
+        data={[
+          breadcrumbSchema([
+            { name: "Oteller", href: "/oteller" },
+            { name: hotel.name, href: `/oteller/${hotel.slug}` },
+          ]),
+          lodgingSchema({
+            slug: hotel.slug,
+            name: hotel.name,
+            description: hotel.shortDescription,
+            rating: hotel.rating,
+            reviewCount: hotel.reviewCount,
+            region: hotel.region,
+            amenities,
+            priceRange:
+              hotel.tier === "lux"
+                ? "€€€"
+                : hotel.tier === "mid"
+                  ? "€€"
+                  : "€",
+          }),
+        ]}
       />
     </>
   );

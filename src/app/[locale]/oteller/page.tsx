@@ -4,7 +4,7 @@ import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { PageHero } from "@/components/layout/PageHero";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { HOTELS } from "@/data/services/catalog";
-import { breadcrumbSchema, SITE_URL } from "@/lib/schema";
+import { breadcrumbSchema, itemListSchema, SITE_URL } from "@/lib/schema";
 import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
 import { HotelsGrid } from "@/components/oteller/HotelsGrid";
 
@@ -69,7 +69,18 @@ export default function OtellerPage() {
         </div>
       </section>
 
-      <JsonLd data={breadcrumbSchema([{ name: "Oteller", href: "/oteller" }])} />
+      <JsonLd
+        data={[
+          breadcrumbSchema([{ name: "Oteller", href: "/oteller" }]),
+          itemListSchema(
+            HOTELS.map((h) => ({
+              name: h.name,
+              urlPath: `/oteller/${h.slug}`,
+            })),
+            "Kapadokya Otelleri"
+          ),
+        ]}
+      />
     </>
   );
 }

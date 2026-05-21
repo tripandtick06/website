@@ -20,11 +20,13 @@ import { JsonLd } from "@/components/layout/JsonLd";
 import { BALLOON_PACKAGES, getBalloonPackageBySlug } from "@/data/services/balloons";
 import { OPERATORS } from "@/data/services/operators";
 import { FAQ_ITEMS } from "@/data/faq";
+import { REVIEWS } from "@/data/reviews";
 import { formatPrice } from "@/lib/utils";
 import {
   breadcrumbSchema,
   touristTripSchema,
   faqPageSchema,
+  productSchema,
   SITE_URL,
 } from "@/lib/schema";
 import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
@@ -73,6 +75,17 @@ export default function BalonDetayPage({ params }: PageParams) {
 
   const operators = OPERATORS.filter((op) => pkg.operatorIds.includes(op.id));
   const balonFaqs = FAQ_ITEMS.filter((f) => f.category === "balon");
+  const balonReviews = REVIEWS.filter(
+    (r) => r.service === "Balon" && r.rating >= 4
+  )
+    .slice(0, 5)
+    .map((r) => ({
+      author: r.name,
+      rating: r.rating,
+      text: r.textEn ?? r.text,
+      date: r.date,
+      itemName: pkg.name,
+    }));
 
   return (
     <>
@@ -298,6 +311,18 @@ export default function BalonDetayPage({ params }: PageParams) {
             currency: pkg.currency,
             rating: pkg.rating,
             reviewCount: pkg.reviewCount,
+          }),
+          productSchema({
+            slug: pkg.slug,
+            name: pkg.name,
+            description: pkg.shortDescription,
+            image: pkg.images[0],
+            price: pkg.adultPrice,
+            currency: pkg.currency,
+            rating: pkg.rating,
+            reviewCount: pkg.reviewCount,
+            category: "Kapadokya Balon Turu",
+            reviews: balonReviews,
           }),
           faqPageSchema(balonFaqs.map((f) => ({ question: f.question, answer: f.answer }))),
         ]}
