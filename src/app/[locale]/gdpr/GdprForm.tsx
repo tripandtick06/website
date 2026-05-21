@@ -2,11 +2,13 @@
 
 import { useState, FormEvent } from "react";
 import { Download, Trash2, Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
+import { useT } from "@/lib/i18n/I18nProvider";
 
 type Status = "idle" | "loading" | "success" | "error";
 type Action = "export" | "delete";
 
 export function GdprForm() {
+  const t = useT();
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
   const [action, setAction] = useState<Action>("export");
@@ -17,27 +19,27 @@ export function GdprForm() {
     const data = new FormData(form);
     if (data.get("_hp")) {
       setStatus("error");
-      setMessage("İstek doğrulanamadı.");
+      setMessage(t.component.gdpr.gdpr_form.error_validation);
       return;
     }
     const email = String(data.get("email") || "").trim();
     if (!email) {
       setStatus("error");
-      setMessage("E-posta adresi gerekli.");
+      setMessage(t.component.gdpr.gdpr_form.error_email_required);
       return;
     }
 
     setStatus("loading");
     try {
       const controller = new AbortController();
-      const t = setTimeout(() => controller.abort(), 30000);
+      const timer = setTimeout(() => controller.abort(), 30000);
       const res = await fetch("/api/gdpr/request", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, action }),
         signal: controller.signal,
       });
-      clearTimeout(t);
+      clearTimeout(timer);
       const json = (await res.json().catch(() => ({}))) as {
         ok?: boolean;
         message?: string;
@@ -45,21 +47,21 @@ export function GdprForm() {
       };
       if (!res.ok) {
         setStatus("error");
-        setMessage(json.error || "İstek gönderilemedi. Lütfen tekrar deneyin.");
+        setMessage(json.error || t.component.gdpr.gdpr_form.error_send);
         return;
       }
       setStatus("success");
       setMessage(
         json.message ||
-          "Onaylı bağ posta kutunuza gönderildi. 24 saat içinde bağa tıklayarak işlemi tamamlayın."
+          t.component.gdpr.gdpr_form.success_message
       );
       form.reset();
     } catch (err) {
       setStatus("error");
       setMessage(
         err instanceof Error && err.name === "AbortError"
-          ? "İstek zaman aşımına uğradı. Lütfen tekrar deneyin."
-          : "Bağlantı hatası. Lütfen tekrar deneyin."
+          ? t.component.gdpr.gdpr_form.error_timeout
+          : t.component.gdpr.gdpr_form.error_connection
       );
     }
   }
@@ -77,7 +79,7 @@ export function GdprForm() {
 
       <div>
         <label htmlFor="gdpr-email" className="block text-sm font-semibold text-slate-700 mb-1.5">
-          E-posta adresiniz *
+          {t.component.gdpr.gdpr_form.label_email}
         </label>
         <input
           id="gdpr-email"
@@ -89,12 +91,12 @@ export function GdprForm() {
           placeholder="ornek@email.com"
         />
         <p className="text-xs text-slate-500 mt-1">
-          Rezervasyonlarınızda kullandığınız e-posta adresi olmalıdır.
+          {t.component.gdpr.gdpr_form.email_hint}
         </p>
       </div>
 
       <fieldset>
-        <legend className="block text-sm font-semibold text-slate-700 mb-2">İşlem</legend>
+        <legend className="block text-sm font-semibold text-slate-700 mb-2">{t.component.gdpr.gdpr_form.legend_action}</legend>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <label
             className={`flex items-start gap-3 p-4 border rounded-lg cursor-pointer transition ${
@@ -113,10 +115,10 @@ export function GdprForm() {
             />
             <div>
               <div className="flex items-center gap-2 font-semibold text-slate-900">
-                <Download className="w-4 h-4" /> Verilerimi indir
+                <Download className="w-4 h-4" /> {t.component.gdpr.gdpr_form.action_export_title}
               </div>
               <p className="text-xs text-slate-600 mt-1">
-                GDPR Madde 15 — JSON dosyası olarak tüm kişisel verilerinizi alın.
+                {t.component.gdpr.gdpr_form.action_export_desc}
               </p>
             </div>
           </label>
@@ -138,10 +140,10 @@ export function GdprForm() {
             />
             <div>
               <div className="flex items-center gap-2 font-semibold text-slate-900">
-                <Trash2 className="w-4 h-4 text-red-600" /> Verilerimi sil
+                <Trash2 className="w-4 h-4 text-red-600" /> {t.component.gdpr.gdpr_form.action_delete_title}
               </div>
               <p className="text-xs text-slate-600 mt-1">
-                GDPR Madde 17 — Hesabınızı silin ve rezervasyon yolcu bilgilerini anonimleştirin.
+                {t.component.gdpr.gdpr_form.action_delete_desc}
               </p>
             </div>
           </label>
@@ -155,11 +157,11 @@ export function GdprForm() {
       >
         {status === "loading" ? (
           <>
-            <Loader2 className="w-4 h-4 animate-spin" /> Gönderiliyor...
+            <Loader2 className="w-4 h-4 animate-spin" /> {t.component.gdpr.gdpr_form.submitting}
           </>
         ) : (
           <>
-            <Send className="w-4 h-4" /> Onaylı bağ gönder
+            <Send className="w-4 h-4" /> {t.component.gdpr.gdpr_form.submit_button}
           </>
         )}
       </button>

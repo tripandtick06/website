@@ -1,0 +1,1234 @@
+{
+  "component.booking.booking_client": {
+    "nationality_other": {
+      "en": "Other",
+      "de": "Sonstiges",
+      "fr": "Autre",
+      "es": "Otro",
+      "nl": "Anders",
+      "zh": "其他",
+      "hi": "अन्य",
+      "ur": "دیگر"
+    },
+    "coupon_applied": {
+      "en": "Coupon applied.",
+      "de": "Gutschein angewendet.",
+      "fr": "Coupon appliqué.",
+      "es": "Cupón aplicado.",
+      "nl": "Coupon toegepast.",
+      "zh": "优惠券已应用。",
+      "hi": "कूपन लागू हुआ।",
+      "ur": "کوپن لاگو ہو گیا۔"
+    },
+    "coupon_applied_local": {
+      "en": "Coupon applied (local).",
+      "de": "Gutschein angewendet (lokal).",
+      "fr": "Coupon appliqué (local).",
+      "es": "Cupón aplicado (local).",
+      "nl": "Coupon toegepast (lokaal).",
+      "zh": "优惠券已应用（本地）。",
+      "hi": "कूपन लागू हुआ (स्थानीय)।",
+      "ur": "کوپن لاگو ہو گیا (مقامی)۔"
+    },
+    "coupon_invalid": {
+      "en": "Invalid coupon.",
+      "de": "Ungültiger Gutschein.",
+      "fr": "Coupon invalide.",
+      "es": "Cupón no válido.",
+      "nl": "Ongeldige coupon.",
+      "zh": "优惠券无效。",
+      "hi": "कूपन अमान्य है।",
+      "ur": "کوپن غلط ہے۔"
+    },
+    "coupon_verify_failed": {
+      "en": "Coupon could not be verified.",
+      "de": "Gutschein konnte nicht verifiziert werden.",
+      "fr": "Impossible de vérifier le coupon.",
+      "es": "No se pudo verificar el cupón.",
+      "nl": "Coupon kon niet worden geverifieerd.",
+      "zh": "优惠券验证失败。",
+      "hi": "कूपन सत्यापित नहीं हो सका।",
+      "ur": "کوپن کی تصدیق نہیں ہو سکی۔"
+    },
+    "error_date_full": {
+      "en": "This date is fully booked. Please select another date.",
+      "de": "Dieses Datum ist ausgebucht. Bitte wählen Sie ein anderes Datum.",
+      "fr": "Cette date est complète. Veuillez choisir une autre date.",
+      "es": "Esta fecha está completa. Por favor, selecciona otra fecha.",
+      "nl": "Deze datum is volgeboekt. Kies een andere datum.",
+      "zh": "此日期已满。请选择其他日期。",
+      "hi": "यह तारीख पूरी तरह बुक है। कृपया कोई अन्य तारीख चुनें।",
+      "ur": "یہ تاریخ مکمل طور پر بُک ہے۔ براہ کرم دوسری تاریخ منتخب کریں۔"
+    },
+    "error_not_enough_seats": {
+      "en": "Not enough seats on this date ({count} remaining).",
+      "de": "Nicht genügend Plätze an diesem Datum ({count} verbleibend).",
+      "fr": "Pas assez de places pour cette date ({count} restantes).",
+      "es": "No hay suficientes asientos en esta fecha ({count} disponibles).",
+      "nl": "Niet genoeg plaatsen op deze datum ({count} resterend).",
+      "zh": "此日期座位不足（剩余 {count} 个）。",
+      "hi": "इस तारीख पर पर्याप्त सीटें नहीं हैं ({count} शेष)।",
+      "ur": "اس تاریخ پر کافی نشستیں نہیں ہیں ({count} باقی)۔"
+    },
+    "error_payment_start": {
+      "en": "Payment could not be initiated ({status})",
+      "de": "Zahlung konnte nicht gestartet werden ({status})",
+      "fr": "Le paiement n'a pas pu être initié ({status})",
+      "es": "No se pudo iniciar el pago ({status})",
+      "nl": "Betaling kon niet worden gestart ({status})",
+      "zh": "无法发起付款（{status}）",
+      "hi": "भुगतान शुरू नहीं हो सका ({status})",
+      "ur": "ادائیگی شروع نہیں ہو سکی ({status})"
+    },
+    "error_payment_url": {
+      "en": "Payment URL could not be retrieved",
+      "de": "Zahlungs-URL konnte nicht abgerufen werden",
+      "fr": "L'URL de paiement n'a pas pu être récupérée",
+      "es": "No se pudo obtener la URL de pago",
+      "nl": "Betaal-URL kon niet worden opgehaald",
+      "zh": "无法获取付款链接",
+      "hi": "भुगतान URL प्राप्त नहीं हो सका",
+      "ur": "ادائیگی کا URL حاصل نہیں ہو سکا"
+    },
+    "error_unknown": {
+      "en": "Unknown error",
+      "de": "Unbekannter Fehler",
+      "fr": "Erreur inconnue",
+      "es": "Error desconocido",
+      "nl": "Onbekende fout",
+      "zh": "未知错误",
+      "hi": "अज्ञात त्रुटि",
+      "ur": "نامعلوم خرابی"
+    },
+    "error_passenger_email_missing": {
+      "en": "Passenger email not found",
+      "de": "Passagier-E-Mail nicht gefunden",
+      "fr": "E-mail passager introuvable",
+      "es": "Correo del pasajero no encontrado",
+      "nl": "E-mail van passagier niet gevonden",
+      "zh": "未找到乘客邮箱",
+      "hi": "यात्री का ईमेल नहीं मिला",
+      "ur": "مسافر کا ای میل نہیں ملا"
+    },
+    "passenger_default_name": {
+      "en": "Passenger",
+      "de": "Passagier",
+      "fr": "Passager",
+      "es": "Pasajero",
+      "nl": "Passagier",
+      "zh": "乘客",
+      "hi": "यात्री",
+      "ur": "مسافر"
+    },
+    "error_mail_failed": {
+      "en": "Email could not be sent ({status})",
+      "de": "E-Mail konnte nicht gesendet werden ({status})",
+      "fr": "L'e-mail n'a pas pu être envoyé ({status})",
+      "es": "No se pudo enviar el correo ({status})",
+      "nl": "E-mail kon niet worden verzonden ({status})",
+      "zh": "邮件发送失败（{status}）",
+      "hi": "ईमेल नहीं भेजा जा सका ({status})",
+      "ur": "ای میل نہیں بھیجا جا سکا ({status})"
+    },
+    "error_email_provider_unavailable": {
+      "en": "The email provider is temporarily unavailable. Please try again in a moment.",
+      "de": "Der E-Mail-Anbieter ist vorübergehend nicht verfügbar. Bitte versuchen Sie es gleich erneut.",
+      "fr": "Le fournisseur d'e-mail est temporairement indisponible. Veuillez réessayer dans un moment.",
+      "es": "El proveedor de correo no está disponible temporalmente. Inténtalo de nuevo en un momento.",
+      "nl": "De e-mailprovider is tijdelijk niet beschikbaar. Probeer het over een moment opnieuw.",
+      "zh": "邮件服务商暂时不可用，请稍后再试。",
+      "hi": "ईमेल प्रदाता अस्थायी रूप से अनुपलब्ध है। कृपया थोड़ी देर बाद पुनः प्रयास करें।",
+      "ur": "ای میل فراہم کنندہ عارضی طور پر دستیاب نہیں ہے۔ براہ کرم تھوڑی دیر بعد دوبارہ کوشش کریں۔"
+    },
+    "breadcrumb_home": {
+      "en": "Home",
+      "de": "Startseite",
+      "fr": "Accueil",
+      "es": "Inicio",
+      "nl": "Home",
+      "zh": "首页",
+      "hi": "होम",
+      "ur": "ہوم"
+    },
+    "breadcrumb_reservation": {
+      "en": "Reservation",
+      "de": "Reservierung",
+      "fr": "Réservation",
+      "es": "Reserva",
+      "nl": "Reservering",
+      "zh": "预订",
+      "hi": "आरक्षण",
+      "ur": "ریزرویشن"
+    },
+    "category_balloon_tours": {
+      "en": "Balloon Tours",
+      "de": "Ballonfahrten",
+      "fr": "Vols en montgolfière",
+      "es": "Tours en globo",
+      "nl": "Ballonvaarten",
+      "zh": "热气球之旅",
+      "hi": "बैलून टूर",
+      "ur": "غبارے کی سیر"
+    },
+    "category_services": {
+      "en": "Services",
+      "de": "Dienstleistungen",
+      "fr": "Services",
+      "es": "Servicios",
+      "nl": "Diensten",
+      "zh": "服务",
+      "hi": "सेवाएं",
+      "ur": "خدمات"
+    },
+    "page_title": {
+      "en": "Online Booking",
+      "de": "Online-Buchung",
+      "fr": "Réservation en ligne",
+      "es": "Reserva online",
+      "nl": "Online boeking",
+      "zh": "在线预订",
+      "hi": "ऑनलाइन बुकिंग",
+      "ur": "آن لائن بکنگ"
+    },
+    "sidebar_title": {
+      "en": "Booking Summary",
+      "de": "Buchungsübersicht",
+      "fr": "Récapitulatif de réservation",
+      "es": "Resumen de reserva",
+      "nl": "Boekingsoverzicht",
+      "zh": "预订摘要",
+      "hi": "बुकिंग सारांश",
+      "ur": "بکنگ کا خلاصہ"
+    },
+    "sidebar_service": {
+      "en": "Service",
+      "de": "Service",
+      "fr": "Service",
+      "es": "Servicio",
+      "nl": "Service",
+      "zh": "服务",
+      "hi": "सेवा",
+      "ur": "سروس"
+    },
+    "sidebar_duration": {
+      "en": "Duration",
+      "de": "Dauer",
+      "fr": "Durée",
+      "es": "Duración",
+      "nl": "Duur",
+      "zh": "时长",
+      "hi": "अवधि",
+      "ur": "مدت"
+    },
+    "sidebar_date": {
+      "en": "Date",
+      "de": "Datum",
+      "fr": "Date",
+      "es": "Fecha",
+      "nl": "Datum",
+      "zh": "日期",
+      "hi": "तारीख",
+      "ur": "تاریخ"
+    },
+    "sidebar_adult": {
+      "en": "Adult",
+      "de": "Erwachsener",
+      "fr": "Adulte",
+      "es": "Adulto",
+      "nl": "Volwassene",
+      "zh": "成人",
+      "hi": "वयस्क",
+      "ur": "بالغ"
+    },
+    "sidebar_child": {
+      "en": "Child",
+      "de": "Kind",
+      "fr": "Enfant",
+      "es": "Niño",
+      "nl": "Kind",
+      "zh": "儿童",
+      "hi": "बच्चा",
+      "ur": "بچہ"
+    },
+    "sidebar_price_override": {
+      "en": "Current price for this date (catalog: {catalog})",
+      "de": "Aktueller Preis für dieses Datum (Katalog: {catalog})",
+      "fr": "Prix actuel pour cette date (catalogue : {catalog})",
+      "es": "Precio actual para esta fecha (catálogo: {catalog})",
+      "nl": "Huidige prijs voor deze datum (catalogus: {catalog})",
+      "zh": "此日期当前价格（目录：{catalog}）",
+      "hi": "इस तारीख का वर्तमान मूल्य (कैटलॉग: {catalog})",
+      "ur": "اس تاریخ کے لیے موجودہ قیمت (کیٹلاگ: {catalog})"
+    },
+    "sidebar_date_cancelled": {
+      "en": "This date has been cancelled.",
+      "de": "Dieses Datum wurde storniert.",
+      "fr": "Cette date a été annulée.",
+      "es": "Esta fecha ha sido cancelada.",
+      "nl": "Deze datum is geannuleerd.",
+      "zh": "此日期已取消。",
+      "hi": "यह तारीख रद्द हो गई है।",
+      "ur": "یہ تاریخ منسوخ کر دی گئی ہے۔"
+    },
+    "sidebar_date_delayed": {
+      "en": "This date has a {minutes} min delay.",
+      "de": "Dieses Datum hat eine Verzögerung von {minutes} Min.",
+      "fr": "Cette date a un retard de {minutes} min.",
+      "es": "Esta fecha tiene un retraso de {minutes} min.",
+      "nl": "Deze datum heeft een vertraging van {minutes} min.",
+      "zh": "此日期延误 {minutes} 分钟。",
+      "hi": "इस तारीख में {minutes} मिनट की देरी है।",
+      "ur": "اس تاریخ میں {minutes} منٹ کی تاخیر ہے۔"
+    },
+    "sidebar_insurance": {
+      "en": "Insurance",
+      "de": "Versicherung",
+      "fr": "Assurance",
+      "es": "Seguro",
+      "nl": "Verzekering",
+      "zh": "保险",
+      "hi": "बीमा",
+      "ur": "انشورنس"
+    },
+    "sidebar_discount": {
+      "en": "Discount",
+      "de": "Rabatt",
+      "fr": "Remise",
+      "es": "Descuento",
+      "nl": "Korting",
+      "zh": "折扣",
+      "hi": "छूट",
+      "ur": "رعایت"
+    },
+    "sidebar_referral": {
+      "en": "Referral (%{pct})",
+      "de": "Empfehlung (%{pct})",
+      "fr": "Parrainage (%{pct})",
+      "es": "Referido (%{pct})",
+      "nl": "Verwijzing (%{pct})",
+      "zh": "推荐优惠（%{pct}）",
+      "hi": "रेफरल (%{pct})",
+      "ur": "ریفرل (%{pct})"
+    },
+    "sidebar_total": {
+      "en": "Total",
+      "de": "Gesamt",
+      "fr": "Total",
+      "es": "Total",
+      "nl": "Totaal",
+      "zh": "合计",
+      "hi": "कुल",
+      "ur": "کل"
+    },
+    "sidebar_market_advantage": {
+      "en": "{amount} below market price.",
+      "de": "{amount} günstiger als der Marktpreis.",
+      "fr": "{amount} en dessous du prix du marché.",
+      "es": "{amount} por debajo del precio de mercado.",
+      "nl": "{amount} onder de marktprijs.",
+      "zh": "比市场价低 {amount}。",
+      "hi": "बाजार मूल्य से {amount} कम।",
+      "ur": "بازار قیمت سے {amount} کم۔"
+    },
+    "sidebar_guarantee_weather": {
+      "en": "✓ 100% refund on weather cancellation",
+      "de": "✓ 100 % Erstattung bei Wetterausfall",
+      "fr": "✓ Remboursement 100 % en cas d'annulation météo",
+      "es": "✓ Reembolso del 100 % por cancelación por clima",
+      "nl": "✓ 100% terugbetaling bij annulering wegens weer",
+      "zh": "✓ 因天气取消可全额退款",
+      "hi": "✓ मौसम रद्दीकरण पर 100% वापसी",
+      "ur": "✓ موسم کی منسوخی پر 100% رقم واپس"
+    },
+    "sidebar_guarantee_cancel": {
+      "en": "✓ Free cancellation up to 48 hours in advance",
+      "de": "✓ Kostenlose Stornierung bis 48 Stunden vorher",
+      "fr": "✓ Annulation gratuite jusqu'à 48 heures à l'avance",
+      "es": "✓ Cancelación gratuita hasta 48 horas antes",
+      "nl": "✓ Gratis annulering tot 48 uur van tevoren",
+      "zh": "✓ 提前 48 小时可免费取消",
+      "hi": "✓ 48 घंटे पहले तक मुफ्त रद्दीकरण",
+      "ur": "✓ 48 گھنٹے پہلے تک مفت منسوخی"
+    },
+    "sidebar_guarantee_ssl": {
+      "en": "✓ SSL-secured payment (Stripe)",
+      "de": "✓ SSL-gesicherte Zahlung (Stripe)",
+      "fr": "✓ Paiement sécurisé SSL (Stripe)",
+      "es": "✓ Pago protegido con SSL (Stripe)",
+      "nl": "✓ SSL-beveiligde betaling (Stripe)",
+      "zh": "✓ SSL 加密支付（Stripe）",
+      "hi": "✓ SSL-सुरक्षित भुगतान (Stripe)",
+      "ur": "✓ SSL محفوظ ادائیگی (Stripe)"
+    },
+    "step_package": {
+      "en": "Package",
+      "de": "Paket",
+      "fr": "Forfait",
+      "es": "Paquete",
+      "nl": "Pakket",
+      "zh": "套餐",
+      "hi": "पैकेज",
+      "ur": "پیکیج"
+    },
+    "step_date": {
+      "en": "Date",
+      "de": "Datum",
+      "fr": "Date",
+      "es": "Fecha",
+      "nl": "Datum",
+      "zh": "日期",
+      "hi": "तारीख",
+      "ur": "تاریخ"
+    },
+    "step_passengers": {
+      "en": "Passengers",
+      "de": "Passagiere",
+      "fr": "Passagers",
+      "es": "Pasajeros",
+      "nl": "Passagiers",
+      "zh": "乘客",
+      "hi": "यात्री",
+      "ur": "مسافر"
+    },
+    "step_summary": {
+      "en": "Summary",
+      "de": "Zusammenfassung",
+      "fr": "Récapitulatif",
+      "es": "Resumen",
+      "nl": "Overzicht",
+      "zh": "摘要",
+      "hi": "सारांश",
+      "ur": "خلاصہ"
+    },
+    "step_payment": {
+      "en": "Payment",
+      "de": "Zahlung",
+      "fr": "Paiement",
+      "es": "Pago",
+      "nl": "Betaling",
+      "zh": "付款",
+      "hi": "भुगतान",
+      "ur": "ادائیگی"
+    },
+    "step_confirmation": {
+      "en": "Confirmation",
+      "de": "Bestätigung",
+      "fr": "Confirmation",
+      "es": "Confirmación",
+      "nl": "Bevestiging",
+      "zh": "确认",
+      "hi": "पुष्टि",
+      "ur": "تصدیق"
+    },
+    "btn_continue": {
+      "en": "Continue",
+      "de": "Weiter",
+      "fr": "Continuer",
+      "es": "Continuar",
+      "nl": "Doorgaan",
+      "zh": "继续",
+      "hi": "जारी रखें",
+      "ur": "جاری رکھیں"
+    },
+    "btn_back": {
+      "en": "Back",
+      "de": "Zurück",
+      "fr": "Retour",
+      "es": "Atrás",
+      "nl": "Terug",
+      "zh": "返回",
+      "hi": "वापस",
+      "ur": "واپس"
+    },
+    "step1_title": {
+      "en": "1. Package Summary",
+      "de": "1. Paketübersicht",
+      "fr": "1. Récapitulatif du forfait",
+      "es": "1. Resumen del paquete",
+      "nl": "1. Pakketoverzicht",
+      "zh": "1. 套餐摘要",
+      "hi": "1. पैकेज सारांश",
+      "ur": "1. پیکیج خلاصہ"
+    },
+    "step1_includes_title": {
+      "en": "What's Included",
+      "de": "Inbegriffen",
+      "fr": "Ce qui est inclus",
+      "es": "Qué incluye",
+      "nl": "Inbegrepen",
+      "zh": "包含内容",
+      "hi": "क्या शामिल है",
+      "ur": "کیا شامل ہے"
+    },
+    "step1_warnings_title": {
+      "en": "Important Notices",
+      "de": "Wichtige Hinweise",
+      "fr": "Avertissements importants",
+      "es": "Avisos importantes",
+      "nl": "Belangrijke mededelingen",
+      "zh": "重要提示",
+      "hi": "महत्वपूर्ण सूचनाएं",
+      "ur": "اہم اطلاعات"
+    },
+    "step2_title": {
+      "en": "2. Date & Number of Guests",
+      "de": "2. Datum & Personenanzahl",
+      "fr": "2. Date et nombre de personnes",
+      "es": "2. Fecha y número de personas",
+      "nl": "2. Datum & aantal personen",
+      "zh": "2. 日期与人数",
+      "hi": "2. तारीख और यात्रियों की संख्या",
+      "ur": "2. تاریخ اور مسافروں کی تعداد"
+    },
+    "step2_flight_date_label": {
+      "en": "Flight Date",
+      "de": "Flugdatum",
+      "fr": "Date de vol",
+      "es": "Fecha de vuelo",
+      "nl": "Vliegdatum",
+      "zh": "飞行日期",
+      "hi": "उड़ान की तारीख",
+      "ur": "پرواز کی تاریخ"
+    },
+    "step2_date_selected": {
+      "en": "Selected date: {date}",
+      "de": "Gewähltes Datum: {date}",
+      "fr": "Date sélectionnée : {date}",
+      "es": "Fecha seleccionada: {date}",
+      "nl": "Geselecteerde datum: {date}",
+      "zh": "已选日期：{date}",
+      "hi": "चयनित तारीख: {date}",
+      "ur": "منتخب تاریخ: {date}"
+    },
+    "step2_date_hint": {
+      "en": "Green = available, yellow = limited, red = full. Earliest booking is tomorrow.",
+      "de": "Grün = verfügbar, gelb = begrenzt, rot = ausgebucht. Frühestmögliche Buchung ist morgen.",
+      "fr": "Vert = disponible, jaune = limité, rouge = complet. La réservation la plus tôt est demain.",
+      "es": "Verde = disponible, amarillo = limitado, rojo = completo. La reserva más temprana es mañana.",
+      "nl": "Groen = beschikbaar, geel = beperkt, rood = vol. Vroegste boeking is morgen.",
+      "zh": "绿色=可预订，黄色=有限，红色=已满。最早可预订明天。",
+      "hi": "हरा = उपलब्ध, पीला = सीमित, लाल = भरा हुआ। सबसे जल्दी कल के लिए बुकिंग कर सकते हैं।",
+      "ur": "سبز = دستیاب، پیلا = محدود، سرخ = مکمل۔ جلد ترین کل کے لیے بکنگ ممکن ہے۔"
+    },
+    "step2_checking_availability": {
+      "en": "Checking availability...",
+      "de": "Verfügbarkeit wird geprüft...",
+      "fr": "Vérification de la disponibilité...",
+      "es": "Comprobando disponibilidad...",
+      "nl": "Beschikbaarheid controleren...",
+      "zh": "正在检查可用性……",
+      "hi": "उपलब्धता जांची जा रही है...",
+      "ur": "دستیابی جانچی جا رہی ہے..."
+    },
+    "step2_date_full_title": {
+      "en": "This date is fully booked.",
+      "de": "Dieses Datum ist ausgebucht.",
+      "fr": "Cette date est complète.",
+      "es": "Esta fecha está completa.",
+      "nl": "Deze datum is volgeboekt.",
+      "zh": "此日期已满。",
+      "hi": "यह तारीख पूरी तरह बुक है।",
+      "ur": "یہ تاریخ مکمل بُک ہے۔"
+    },
+    "step2_date_full_desc": {
+      "en": "Please select another date.",
+      "de": "Bitte wählen Sie ein anderes Datum.",
+      "fr": "Veuillez choisir une autre date.",
+      "es": "Por favor, selecciona otra fecha.",
+      "nl": "Kies een andere datum.",
+      "zh": "请选择其他日期。",
+      "hi": "कृपया कोई अन्य तारीख चुनें।",
+      "ur": "براہ کرم دوسری تاریخ منتخب کریں۔"
+    },
+    "step2_not_enough_seats_title": {
+      "en": "Not enough seats",
+      "de": "Nicht genügend Plätze",
+      "fr": "Pas assez de places",
+      "es": "No hay suficientes asientos",
+      "nl": "Niet genoeg plaatsen",
+      "zh": "座位不足",
+      "hi": "पर्याप्त सीटें नहीं",
+      "ur": "کافی نشستیں نہیں"
+    },
+    "step2_not_enough_seats_desc": {
+      "en": "only {remaining} seats left on this date, you are {paxTotal} people. Reduce guests or choose another date.",
+      "de": "Nur noch {remaining} Plätze an diesem Datum, Sie sind {paxTotal} Personen. Personenanzahl reduzieren oder anderes Datum wählen.",
+      "fr": "seulement {remaining} places restantes à cette date, vous êtes {paxTotal} personnes. Réduisez le nombre ou choisissez une autre date.",
+      "es": "solo quedan {remaining} asientos en esta fecha, son {paxTotal} personas. Reduce el número o elige otra fecha.",
+      "nl": "slechts {remaining} plaatsen beschikbaar op deze datum, u bent met {paxTotal} personen. Verlaag het aantal of kies een andere datum.",
+      "zh": "此日期仅剩 {remaining} 个座位，您共 {paxTotal} 人。请减少人数或选择其他日期。",
+      "hi": "इस तारीख पर केवल {remaining} सीटें बची हैं, आप {paxTotal} लोग हैं। यात्री कम करें या दूसरी तारीख चुनें।",
+      "ur": "اس تاریخ پر صرف {remaining} نشستیں باقی ہیں، آپ {paxTotal} افراد ہیں۔ تعداد کم کریں یا دوسری تاریخ منتخب کریں۔"
+    },
+    "step2_limited_seats": {
+      "en": "Only {remaining} seats left!",
+      "de": "Nur noch {remaining} Plätze verfügbar!",
+      "fr": "Plus que {remaining} places !",
+      "es": "¡Solo quedan {remaining} asientos!",
+      "nl": "Nog maar {remaining} plaatsen beschikbaar!",
+      "zh": "仅剩 {remaining} 个座位！",
+      "hi": "केवल {remaining} सीटें बची हैं!",
+      "ur": "صرف {remaining} نشستیں باقی ہیں!"
+    },
+    "step2_limited_seats_hint": {
+      "en": "Quick booking recommended.",
+      "de": "Schnelle Buchung empfohlen.",
+      "fr": "Réservation rapide recommandée.",
+      "es": "Se recomienda reservar pronto.",
+      "nl": "Snel boeken aanbevolen.",
+      "zh": "建议尽快预订。",
+      "hi": "जल्दी बुकिंग की सलाह दी जाती है।",
+      "ur": "جلد بکنگ کی سفارش کی جاتی ہے۔"
+    },
+    "counter_adult": {
+      "en": "Adult (12+ years)",
+      "de": "Erwachsener (12+ Jahre)",
+      "fr": "Adulte (12+ ans)",
+      "es": "Adulto (12+ años)",
+      "nl": "Volwassene (12+ jaar)",
+      "zh": "成人（12岁及以上）",
+      "hi": "वयस्क (12+ वर्ष)",
+      "ur": "بالغ (12+ سال)"
+    },
+    "counter_child": {
+      "en": "Child ({min}–11 years)",
+      "de": "Kind ({min}–11 Jahre)",
+      "fr": "Enfant ({min}–11 ans)",
+      "es": "Niño ({min}–11 años)",
+      "nl": "Kind ({min}–11 jaar)",
+      "zh": "儿童（{min}–11岁）",
+      "hi": "बच्चा ({min}–11 वर्ष)",
+      "ur": "بچہ ({min}–11 سال)"
+    },
+    "step2_age_restriction_title": {
+      "en": "Age restriction:",
+      "de": "Altersbeschränkung:",
+      "fr": "Restriction d'âge :",
+      "es": "Restricción de edad:",
+      "nl": "Leeftijdsbeperking:",
+      "zh": "年龄限制：",
+      "hi": "आयु प्रतिबंध:",
+      "ur": "عمر کی پابندی:"
+    },
+    "step2_age_restriction_desc": {
+      "en": "Children under {minAge} years cannot participate in this service. Pregnant women and those with serious health conditions may not board. For detailed conditions,",
+      "de": "Kinder unter {minAge} Jahren können an diesem Service nicht teilnehmen. Schwangere und Personen mit ernsthaften Gesundheitsproblemen dürfen nicht einsteigen. Für ausführliche Bedingungen,",
+      "fr": "Les enfants de moins de {minAge} ans ne peuvent pas participer à ce service. Les femmes enceintes et les personnes ayant de graves problèmes de santé ne peuvent pas embarquer. Pour les conditions détaillées,",
+      "es": "Los niños menores de {minAge} años no pueden participar en este servicio. Las embarazadas y personas con problemas graves de salud no pueden embarcar. Para condiciones detalladas,",
+      "nl": "Kinderen jonger dan {minAge} jaar kunnen niet deelnemen aan deze service. Zwangere vrouwen en personen met ernstige gezondheidsproblemen mogen niet aan boord. Voor gedetailleerde voorwaarden,",
+      "zh": "未满 {minAge} 岁的儿童不能参加本服务。孕妇及有严重健康问题的人员不得乘坐。详细条件请",
+      "hi": "{minAge} वर्ष से कम उम्र के बच्चे इस सेवा में भाग नहीं ले सकते। गर्भवती महिलाएं और गंभीर स्वास्थ्य समस्या वाले व्यक्ति नहीं चढ़ सकते। विस्तृत शर्तों के लिए,",
+      "ur": "{minAge} سال سے کم عمر بچے اس سروس میں حصہ نہیں لے سکتے۔ حاملہ خواتین اور سنگین صحت مسائل والے افراد سوار نہیں ہو سکتے۔ تفصیلی شرائط کے لیے,"
+    },
+    "step2_age_restriction_faq_link": {
+      "en": "FAQ",
+      "de": "FAQ",
+      "fr": "FAQ",
+      "es": "FAQ",
+      "nl": "FAQ",
+      "zh": "常见问题",
+      "hi": "अक्सर पूछे जाने वाले सवाल",
+      "ur": "اکثر پوچھے گئے سوالات"
+    },
+    "step2_age_restriction_faq_suffix": {
+      "en": "page.",
+      "de": "Seite.",
+      "fr": "page.",
+      "es": "página.",
+      "nl": "pagina.",
+      "zh": "页面。",
+      "hi": "पृष्ठ।",
+      "ur": "صفحہ۔"
+    },
+    "step3_title": {
+      "en": "3. Passenger Details",
+      "de": "3. Passagierdetails",
+      "fr": "3. Détails des passagers",
+      "es": "3. Datos de pasajeros",
+      "nl": "3. Passagiersgegevens",
+      "zh": "3. 乘客信息",
+      "hi": "3. यात्री विवरण",
+      "ur": "3. مسافر کی تفصیلات"
+    },
+    "step3_subtitle": {
+      "en": "Contact details are required for the group leader. Hotel name is important for accommodation transfer.",
+      "de": "Kontaktdaten sind für den Gruppenleiter erforderlich. Der Hotelname ist wichtig für den Unterkunftstransfer.",
+      "fr": "Les coordonnées sont obligatoires pour le chef de groupe. Le nom de l'hôtel est important pour le transfert hébergement.",
+      "es": "Los datos de contacto son obligatorios para el líder del grupo. El nombre del hotel es importante para el traslado al alojamiento.",
+      "nl": "Contactgegevens zijn verplicht voor de groepsleider. De hotelnaam is belangrijk voor accommodatietransfer.",
+      "zh": "联系信息为团队负责人必填。酒店名称对住宿接送非常重要。",
+      "hi": "संपर्क जानकारी समूह नेता के लिए अनिवार्य है। आवास स्थानांतरण के लिए होटल का नाम महत्वपूर्ण है।",
+      "ur": "گروپ لیڈر کے لیے رابطے کی معلومات ضروری ہے۔ رہائش ٹرانسفر کے لیے ہوٹل کا نام اہم ہے۔"
+    },
+    "step3_group_leader": {
+      "en": "👤 Group Leader",
+      "de": "👤 Gruppenleiter",
+      "fr": "👤 Chef de groupe",
+      "es": "👤 Líder del grupo",
+      "nl": "👤 Groepsleider",
+      "zh": "👤 团队负责人",
+      "hi": "👤 समूह नेता",
+      "ur": "👤 گروپ لیڈر"
+    },
+    "step3_adult_label": {
+      "en": "Adult",
+      "de": "Erwachsener",
+      "fr": "Adulte",
+      "es": "Adulto",
+      "nl": "Volwassene",
+      "zh": "成人",
+      "hi": "वयस्क",
+      "ur": "بالغ"
+    },
+    "step3_child_label": {
+      "en": "Child",
+      "de": "Kind",
+      "fr": "Enfant",
+      "es": "Niño",
+      "nl": "Kind",
+      "zh": "儿童",
+      "hi": "बच्चा",
+      "ur": "بچہ"
+    },
+    "field_full_name": {
+      "en": "Full Name",
+      "de": "Vollständiger Name",
+      "fr": "Nom complet",
+      "es": "Nombre completo",
+      "nl": "Volledige naam",
+      "zh": "姓名",
+      "hi": "पूरा नाम",
+      "ur": "پورا نام"
+    },
+    "field_nationality": {
+      "en": "Nationality",
+      "de": "Nationalität",
+      "fr": "Nationalité",
+      "es": "Nacionalidad",
+      "nl": "Nationaliteit",
+      "zh": "国籍",
+      "hi": "राष्ट्रीयता",
+      "ur": "قومیت"
+    },
+    "field_email": {
+      "en": "Email",
+      "de": "E-Mail",
+      "fr": "E-mail",
+      "es": "Correo electrónico",
+      "nl": "E-mail",
+      "zh": "电子邮箱",
+      "hi": "ईमेल",
+      "ur": "ای میل"
+    },
+    "field_phone": {
+      "en": "Phone",
+      "de": "Telefon",
+      "fr": "Téléphone",
+      "es": "Teléfono",
+      "nl": "Telefoon",
+      "zh": "电话",
+      "hi": "फ़ोन",
+      "ur": "فون"
+    },
+    "field_age": {
+      "en": "Age",
+      "de": "Alter",
+      "fr": "Âge",
+      "es": "Edad",
+      "nl": "Leeftijd",
+      "zh": "年龄",
+      "hi": "उम्र",
+      "ur": "عمر"
+    },
+    "field_accommodation": {
+      "en": "Accommodation (hotel name + Cappadocia)",
+      "de": "Unterkunft (Hotelname + Kappadokien)",
+      "fr": "Hébergement (nom de l'hôtel + Cappadoce)",
+      "es": "Alojamiento (nombre del hotel + Capadocia)",
+      "nl": "Accommodatie (hotelnaam + Cappadocië)",
+      "zh": "住宿（酒店名称 + 卡帕多西亚）",
+      "hi": "आवास (होटल का नाम + कप्पादोकिया)",
+      "ur": "رہائش (ہوٹل کا نام + کیپاڈوشیا)"
+    },
+    "field_accommodation_placeholder": {
+      "en": "E.g.: Sultan Cave Suites - Göreme",
+      "de": "Z. B.: Sultan Cave Suites - Göreme",
+      "fr": "Ex. : Sultan Cave Suites - Göreme",
+      "es": "Ej.: Sultan Cave Suites - Göreme",
+      "nl": "Bijv.: Sultan Cave Suites - Göreme",
+      "zh": "例如：Sultan Cave Suites - Göreme",
+      "hi": "उदा.: Sultan Cave Suites - Göreme",
+      "ur": "مثال: Sultan Cave Suites - Göreme"
+    },
+    "passenger_error_full_name": {
+      "en": "Full name is required",
+      "de": "Vollständiger Name ist erforderlich",
+      "fr": "Le nom complet est obligatoire",
+      "es": "El nombre completo es obligatorio",
+      "nl": "Volledige naam is verplicht",
+      "zh": "姓名为必填项",
+      "hi": "पूरा नाम अनिवार्य है",
+      "ur": "پورا نام ضروری ہے"
+    },
+    "passenger_error_email": {
+      "en": "Enter a valid email",
+      "de": "Gültige E-Mail-Adresse eingeben",
+      "fr": "Saisissez un e-mail valide",
+      "es": "Introduce un correo válido",
+      "nl": "Voer een geldig e-mailadres in",
+      "zh": "请输入有效的邮箱地址",
+      "hi": "एक वैध ईमेल दर्ज करें",
+      "ur": "درست ای میل درج کریں"
+    },
+    "passenger_error_phone": {
+      "en": "Phone is required",
+      "de": "Telefonnummer ist erforderlich",
+      "fr": "Le téléphone est obligatoire",
+      "es": "El teléfono es obligatorio",
+      "nl": "Telefoon is verplicht",
+      "zh": "电话为必填项",
+      "hi": "फ़ोन अनिवार्य है",
+      "ur": "فون نمبر ضروری ہے"
+    },
+    "step4_title": {
+      "en": "4. Summary & Extras",
+      "de": "4. Zusammenfassung & Extras",
+      "fr": "4. Récapitulatif & extras",
+      "es": "4. Resumen y extras",
+      "nl": "4. Overzicht & extra's",
+      "zh": "4. 摘要与附加项",
+      "hi": "4. सारांश और अतिरिक्त",
+      "ur": "4. خلاصہ اور اضافی"
+    },
+    "step4_pax_count": {
+      "en": "Number of guests",
+      "de": "Personenanzahl",
+      "fr": "Nombre de personnes",
+      "es": "Número de personas",
+      "nl": "Aantal personen",
+      "zh": "人数",
+      "hi": "मेहमानों की संख्या",
+      "ur": "مسافروں کی تعداد"
+    },
+    "step4_adults_suffix": {
+      "en": "adult",
+      "de": "Erwachsener",
+      "fr": "adulte",
+      "es": "adulto",
+      "nl": "volwassene",
+      "zh": "成人",
+      "hi": "वयस्क",
+      "ur": "بالغ"
+    },
+    "step4_children_suffix": {
+      "en": "child",
+      "de": "Kind",
+      "fr": "enfant",
+      "es": "niño",
+      "nl": "kind",
+      "zh": "儿童",
+      "hi": "बच्चा",
+      "ur": "بچہ"
+    },
+    "step4_insurance_title": {
+      "en": "Travel Insurance (+€{price} per person)",
+      "de": "Reiseversicherung (+€{price} pro Person)",
+      "fr": "Assurance voyage (+€{price} par personne)",
+      "es": "Seguro de viaje (+€{price} por persona)",
+      "nl": "Reisverzekering (+€{price} per persoon)",
+      "zh": "旅行保险（每人 +€{price}）",
+      "hi": "यात्रा बीमा (प्रति व्यक्ति +€{price})",
+      "ur": "سفری انشورنس (فی شخص +€{price})"
+    },
+    "step4_insurance_desc": {
+      "en": "Cancellation protection, medical coverage, baggage loss. Total €{total} for {count} people.",
+      "de": "Stornoschutz, medizinische Absicherung, Gepäckverlust. Gesamt €{total} für {count} Personen.",
+      "fr": "Protection annulation, couverture médicale, perte de bagages. Total €{total} pour {count} personnes.",
+      "es": "Protección por cancelación, cobertura médica, pérdida de equipaje. Total €{total} para {count} personas.",
+      "nl": "Annuleringsbescherming, medische dekking, bagageverlies. Totaal €{total} voor {count} personen.",
+      "zh": "取消保障、医疗保险、行李丢失。{count} 人共计 €{total}。",
+      "hi": "रद्दीकरण सुरक्षा, चिकित्सा कवर, सामान हानि। {count} लोगों के लिए कुल €{total}।",
+      "ur": "منسوخی تحفظ، طبی کوریج، سامان کا نقصان۔ {count} افراد کے لیے کل €{total}۔"
+    },
+    "step4_promo_title": {
+      "en": "Promo Code",
+      "de": "Aktionscode",
+      "fr": "Code promo",
+      "es": "Código promocional",
+      "nl": "Promotiecode",
+      "zh": "优惠码",
+      "hi": "प्रोमो कोड",
+      "ur": "پروموشن کوڈ"
+    },
+    "step4_promo_verifying": {
+      "en": "Verifying...",
+      "de": "Wird überprüft...",
+      "fr": "Vérification...",
+      "es": "Verificando...",
+      "nl": "Verifiëren...",
+      "zh": "验证中……",
+      "hi": "सत्यापित हो रहा है...",
+      "ur": "تصدیق ہو رہی ہے..."
+    },
+    "step4_promo_apply": {
+      "en": "Apply",
+      "de": "Anwenden",
+      "fr": "Appliquer",
+      "es": "Aplicar",
+      "nl": "Toepassen",
+      "zh": "应用",
+      "hi": "लागू करें",
+      "ur": "لاگو کریں"
+    },
+    "step4_promo_valid": {
+      "en": "Code valid — discount applied.",
+      "de": "Code gültig — Rabatt angewendet.",
+      "fr": "Code valide — remise appliquée.",
+      "es": "Código válido — descuento aplicado.",
+      "nl": "Code geldig — korting toegepast.",
+      "zh": "代码有效——折扣已应用。",
+      "hi": "कोड मान्य है — छूट लागू हुई।",
+      "ur": "کوڈ درست ہے — رعایت لاگو ہوئی۔"
+    },
+    "step4_price_breakdown_title": {
+      "en": "Price Breakdown",
+      "de": "Preisaufschlüsselung",
+      "fr": "Détail des prix",
+      "es": "Desglose de precios",
+      "nl": "Prijsoverzicht",
+      "zh": "价格明细",
+      "hi": "मूल्य विवरण",
+      "ur": "قیمت کی تفصیل"
+    },
+    "step4_adults_row": {
+      "en": "Adult × {count}",
+      "de": "Erwachsener × {count}",
+      "fr": "Adulte × {count}",
+      "es": "Adulto × {count}",
+      "nl": "Volwassene × {count}",
+      "zh": "成人 × {count}",
+      "hi": "वयस्क × {count}",
+      "ur": "بالغ × {count}"
+    },
+    "step4_children_row": {
+      "en": "Child × {count}",
+      "de": "Kind × {count}",
+      "fr": "Enfant × {count}",
+      "es": "Niño × {count}",
+      "nl": "Kind × {count}",
+      "zh": "儿童 × {count}",
+      "hi": "बच्चा × {count}",
+      "ur": "بچہ × {count}"
+    },
+    "step4_insurance_row": {
+      "en": "Insurance × {count}",
+      "de": "Versicherung × {count}",
+      "fr": "Assurance × {count}",
+      "es": "Seguro × {count}",
+      "nl": "Verzekering × {count}",
+      "zh": "保险 × {count}",
+      "hi": "बीमा × {count}",
+      "ur": "انشورنس × {count}"
+    },
+    "step4_referral_row": {
+      "en": "Referral %{pct}",
+      "de": "Empfehlung %{pct}",
+      "fr": "Parrainage %{pct}",
+      "es": "Referido %{pct}",
+      "nl": "Verwijzing %{pct}",
+      "zh": "推荐优惠 %{pct}",
+      "hi": "रेफरल %{pct}",
+      "ur": "ریفرل %{pct}"
+    },
+    "step4_cancel_policy_title": {
+      "en": "Cancellation Policy",
+      "de": "Stornierungsrichtlinie",
+      "fr": "Politique d'annulation",
+      "es": "Política de cancelación",
+      "nl": "Annuleringsbeleid",
+      "zh": "取消政策",
+      "hi": "रद्दीकरण नीति",
+      "ur": "منسوخی پالیسی"
+    },
+    "step4_cancel_policy_weather": {
+      "en": "100% refund if operator cancels due to weather.",
+      "de": "100 % Erstattung bei Wetterausfall durch den Anbieter.",
+      "fr": "Remboursement 100 % en cas d'annulation opérateur pour météo.",
+      "es": "Reembolso del 100 % si el operador cancela por clima.",
+      "nl": "100% terugbetaling bij annulering door de operator wegens weer.",
+      "zh": "若运营商因天气取消，全额退款。",
+      "hi": "मौसम के कारण ऑपरेटर द्वारा रद्द करने पर 100% वापसी।",
+      "ur": "موسم کی وجہ سے آپریٹر کی منسوخی پر 100% رقم واپس۔"
+    },
+    "step4_cancel_policy_48h": {
+      "en": "Free cancellation up to 48 hours in advance.",
+      "de": "Kostenlose Stornierung bis 48 Stunden vorher.",
+      "fr": "Annulation gratuite jusqu'à 48 heures à l'avance.",
+      "es": "Cancelación gratuita hasta 48 horas antes.",
+      "nl": "Gratis annulering tot 48 uur van tevoren.",
+      "zh": "提前 48 小时可免费取消。",
+      "hi": "48 घंटे पहले तक मुफ्त रद्दीकरण।",
+      "ur": "48 گھنٹے پہلے تک مفت منسوخی۔"
+    },
+    "step4_cancel_policy_24_48h": {
+      "en": "50% refund for cancellations within 24–48 hours.",
+      "de": "50 % Erstattung bei Stornierung 24–48 Stunden vorher.",
+      "fr": "Remboursement de 50 % pour les annulations entre 24 et 48 heures.",
+      "es": "Reembolso del 50 % para cancelaciones con 24-48 horas de antelación.",
+      "nl": "50% terugbetaling bij annulering 24–48 uur van tevoren.",
+      "zh": "提前 24–48 小时取消可退款 50%。",
+      "hi": "24–48 घंटे में रद्द करने पर 50% वापसी।",
+      "ur": "24–48 گھنٹے کے اندر منسوخی پر 50% رقم واپس۔"
+    },
+    "step4_cancel_policy_under_24h": {
+      "en": "No refund for cancellations within 24 hours.",
+      "de": "Keine Erstattung bei Stornierung weniger als 24 Stunden vorher.",
+      "fr": "Aucun remboursement pour les annulations moins de 24 heures à l'avance.",
+      "es": "Sin reembolso para cancelaciones con menos de 24 horas de antelación.",
+      "nl": "Geen terugbetaling bij annulering minder dan 24 uur van tevoren.",
+      "zh": "不足 24 小时取消，不予退款。",
+      "hi": "24 घंटे से कम समय में रद्द करने पर कोई वापसी नहीं।",
+      "ur": "24 گھنٹے سے کم وقت میں منسوخی پر رقم واپس نہیں ہوگی۔"
+    },
+    "step4_policy_kvkk": {
+      "en": "KVKK",
+      "de": "KVKK",
+      "fr": "KVKK",
+      "es": "KVKK",
+      "nl": "KVKK",
+      "zh": "KVKK",
+      "hi": "KVKK",
+      "ur": "KVKK"
+    },
+    "step4_policy_terms": {
+      "en": "Terms of Use",
+      "de": "Nutzungsbedingungen",
+      "fr": "Conditions d'utilisation",
+      "es": "Términos de uso",
+      "nl": "Gebruiksvoorwaarden",
+      "zh": "使用条款",
+      "hi": "उपयोग की शर्तें",
+      "ur": "استعمال کی شرائط"
+    },
+    "step4_policy_accept": {
+      "en": "and cancellation policy read and accepted.",
+      "de": "und Stornierungsrichtlinie gelesen und akzeptiert.",
+      "fr": "et politique d'annulation lues et acceptées.",
+      "es": "y política de cancelación leídas y aceptadas.",
+      "nl": "en annuleringsbeleid gelezen en geaccepteerd.",
+      "zh": "及取消政策已阅读并同意。",
+      "hi": "और रद्दीकरण नीति पढ़ी और स्वीकार की।",
+      "ur": "اور منسوخی پالیسی پڑھ لی اور قبول کی۔"
+    },
+    "step5_title": {
+      "en": "5. Secure Payment",
+      "de": "5. Sichere Zahlung",
+      "fr": "5. Paiement sécurisé",
+      "es": "5. Pago seguro",
+      "nl": "5. Veilige betaling",
+      "zh": "5. 安全付款",
+      "hi": "5. सुरक्षित भुगतान",
+      "ur": "5. محفوظ ادائیگی"
+    },
+    "step5_card_payment_title": {
+      "en": "Pay by card (Stripe)",
+      "de": "Mit Karte bezahlen (Stripe)",
+      "fr": "Payer par carte (Stripe)",
+      "es": "Pagar con tarjeta (Stripe)",
+      "nl": "Betalen per kaart (Stripe)",
+      "zh": "刷卡支付（Stripe）",
+      "hi": "कार्ड से भुगतान करें (Stripe)",
+      "ur": "کارڈ سے ادائیگی کریں (Stripe)"
+    },
+    "step5_card_payment_desc": {
+      "en": "VISA · Mastercard · AmEx · Apple Pay · Google Pay · 3D Secure supported. EUR / USD / TRY all cards.",
+      "de": "VISA · Mastercard · AmEx · Apple Pay · Google Pay · 3D Secure unterstützt. EUR / USD / TRY alle Karten.",
+      "fr": "VISA · Mastercard · AmEx · Apple Pay · Google Pay · 3D Secure pris en charge. EUR / USD / TRY toutes cartes.",
+      "es": "VISA · Mastercard · AmEx · Apple Pay · Google Pay · 3D Secure aceptados. EUR / USD / TRY todas las tarjetas.",
+      "nl": "VISA · Mastercard · AmEx · Apple Pay · Google Pay · 3D Secure ondersteund. EUR / USD / TRY alle kaarten.",
+      "zh": "支持 VISA · Mastercard · AmEx · Apple Pay · Google Pay · 3D Secure。EUR / USD / TRY 全部接受。",
+      "hi": "VISA · Mastercard · AmEx · Apple Pay · Google Pay · 3D Secure समर्थित। EUR / USD / TRY सभी कार्ड।",
+      "ur": "VISA · Mastercard · AmEx · Apple Pay · Google Pay · 3D Secure سپورٹڈ۔ EUR / USD / TRY تمام کارڈ۔"
+    },
+    "step5_ssl_desc": {
+      "en": "Payment is processed via Stripe with SSL 256-bit encryption.",
+      "de": "Die Zahlung erfolgt über Stripe mit SSL-256-Bit-Verschlüsselung.",
+      "fr": "Le paiement est traité via Stripe avec un chiffrement SSL 256 bits.",
+      "es": "El pago se procesa mediante Stripe con cifrado SSL de 256 bits.",
+      "nl": "Betaling verloopt via Stripe met SSL 256-bit versleuteling.",
+      "zh": "付款通过 Stripe 以 SSL 256位加密处理。",
+      "hi": "भुगतान Stripe के माध्यम से SSL 256-बिट एन्क्रिप्शन से किया जाता है।",
+      "ur": "ادائیگی Stripe کے ذریعے SSL 256-bit انکرپشن سے ہوتی ہے۔"
+    },
+    "step5_card_not_stored": {
+      "en": "Card details are not shared with Trip and Tick.",
+      "de": "Kartendaten werden nicht an Trip and Tick weitergegeben.",
+      "fr": "Les données de carte ne sont pas transmises à Trip and Tick.",
+      "es": "Los datos de la tarjeta no se comparten con Trip and Tick.",
+      "nl": "Kaartgegevens worden niet gedeeld met Trip and Tick.",
+      "zh": "卡片信息不会传递给 Trip and Tick。",
+      "hi": "कार्ड विवरण Trip and Tick को नहीं दिया जाता।",
+      "ur": "کارڈ کی معلومات Trip and Tick کو نہیں بھیجی جاتی۔"
+    },
+    "step5_error_prefix": {
+      "en": "Error:",
+      "de": "Fehler:",
+      "fr": "Erreur :",
+      "es": "Error:",
+      "nl": "Fout:",
+      "zh": "错误：",
+      "hi": "त्रुटि:",
+      "ur": "خرابی:"
+    },
+    "step5_redirecting": {
+      "en": "Redirecting...",
+      "de": "Weiterleitung...",
+      "fr": "Redirection...",
+      "es": "Redirigiendo...",
+      "nl": "Omleiden...",
+      "zh": "正在跳转……",
+      "hi": "पुनर्निर्देशित हो रहा है...",
+      "ur": "ری ڈائریکٹ ہو رہا ہے..."
+    },
+    "step5_pay_button": {
+      "en": "Pay Securely",
+      "de": "Sicher bezahlen",
+      "fr": "Payer en sécurité",
+      "es": "Pagar de forma segura",
+      "nl": "Veilig betalen",
+      "zh": "安全支付",
+      "hi": "सुरक्षित भुगतान करें",
+      "ur": "محفوظ ادائیگی کریں"
+    },
+    "step6_email_sending": {
+      "en": "Sending your email...",
+      "de": "E-Mail wird gesendet...",
+      "fr": "Envoi de votre e-mail...",
+      "es": "Enviando tu correo...",
+      "nl": "E-mail wordt verzonden...",
+      "zh": "正在发送邮件……",
+      "hi": "आपका ईमेल भेजा जा रहा है...",
+      "ur": "آپ کا ای میل بھیجا جا رہا ہے..."
+    },
+    "step6_email_sent": {
+      "en": "✓ Your ticket has been sent to your email. If not received, check your spam folder.",
+      "de": "✓ Ihr Ticket wurde per E-Mail gesendet. Nicht erhalten? Prüfen Sie den Spam-Ordner.",
+      "fr": "✓ Votre billet a été envoyé par e-mail. Sans réponse, vérifiez les spams.",
+      "es": "✓ Tu billete ha sido enviado a tu correo. Si no lo recibiste, revisa la carpeta de spam.",
+      "nl": "✓ Uw ticket is naar uw e-mail gestuurd. Niet ontvangen? Controleer uw spammap.",
+      "zh": "✓ 您的票已发送至邮箱。未收到请检查垃圾邮件文件夹。",
+      "hi": "✓ आपका टिकट आपके ईमेल पर भेज दिया गया है। नहीं मिला तो स्पैम फ़ोल्डर देखें।",
+      "ur": "✓ آپ کا ٹکٹ آپ کے ای میل پر بھیج دیا گیا ہے۔ نہ ملے تو اسپیم فولڈر چیک کریں۔"
+    },
+    "step6_email_failed_title": {
+      "en": "Email could not be sent",
+      "de": "E-Mail konnte nicht gesendet werden",
+      "fr": "L'e-mail n'a pas pu être envoyé",
+      "es": "No se pudo enviar el correo",
+      "nl": "E-mail kon niet worden verzonden",
+      "zh": "邮件发送失败",
+      "hi": "ईमेल नहीं भेजा जा सका",
+      "ur": "ای میل نہیں بھیجا جا سکا"
+    },
+    "step6_resend": {
+      "en": "Resend",
+      "de": "Erneut senden",
+      "fr": "Renvoyer",
+      "es": "Reenviar",
+      "nl": "Opnieuw verzenden",
+      "zh": "重新发送",
+      "hi": "फिर से भेजें",
+      "ur": "دوبارہ بھیجیں"
+    },
+    "step6_confirmed_title": {
+      "en": "Your Booking is Confirmed!",
+      "de": "Ihre Buchung ist bestätigt!",
+      "fr": "Votre réservation est confirmée !",
+      "es": "¡Tu reserva está confirmada!",
+      "nl": "Uw boeking is bevestigd!",
+      "zh": "您的预订已确认！",
+      "hi": "आपकी बुकिंग की पुष्टि हो गई!",
+      "ur": "آپ کی بکنگ تصدیق ہو گئی!"
+    },
+    "step6_confirmed_desc": {
+      "en": "Note your booking code — a confirmation email is on its way.",
+      "de": "Notieren Sie Ihren Buchungscode — eine Bestätigungs-E-Mail ist unterwegs.",
+      "fr": "Notez votre code de réservation — un e-mail de confirmation est en route.",
+      "es": "Anota tu código de reserva — el correo de confirmación está en camino.",
+      "nl": "Noteer uw boekingscode — een bevestigingsmail is onderweg.",
+      "zh": "请记下您的预订码——确认邮件正在发送中。",
+      "hi": "अपना बुकिंग कोड नोट करें — पुष्टि ईमेल भेजा जा रहा है।",
+      "ur": "اپنا بکنگ کوڈ نوٹ کریں — تصدیقی ای میل راستے میں ہے۔"
+    },
+    "step6_booking_code_label": {
+      "en": "Booking Code",
+      "de": "Buchungscode",
+      "fr": "Code de réservation",
+      "es": "Código de reserva",
+      "nl": "Boekingscode",
+      "zh": "预订码",
+      "hi": "बुकिंग कोड",
+      "ur": "بکنگ کوڈ"
+    },
+    "step6_pax_label": {
+      "en": "Person",
+      "de": "Person",
+      "fr": "Personne",
+      "es": "Persona",
+      "nl": "Persoon",
+      "zh": "人数",
+      "hi": "व्यक्ति",
+      "ur": "فرد"
+    },
+    "step6_add_to_calendar": {
+      "en": "Add to Calendar (.ics)",
+      "de": "Zum Kalender hinzufügen (.ics)",
+      "fr": "Ajouter au calendrier (.ics)",
+      "es": "Añadir al calendario (.ics)",
+      "nl": "Toevoegen aan agenda (.ics)",
+      "zh": "添加到日历（.ics）",
+      "hi": "कैलेंडर में जोड़ें (.ics)",
+      "ur": "کیلنڈر میں شامل کریں (.ics)"
+    },
+    "step6_download_pdf": {
+      "en": "Ticket PDF",
+      "de": "Ticket PDF",
+      "fr": "Billet PDF",
+      "es": "Billete PDF",
+      "nl": "Ticket PDF",
+      "zh": "票据 PDF",
+      "hi": "टिकट PDF",
+      "ur": "ٹکٹ PDF"
+    },
+    "step6_share": {
+      "en": "Share",
+      "de": "Teilen",
+      "fr": "Partager",
+      "es": "Compartir",
+      "nl": "Delen",
+      "zh": "分享",
+      "hi": "शेयर करें",
+      "ur": "شیئر کریں"
+    },
+    "step6_link_copied": {
+      "en": "Link copied!",
+      "de": "Link kopiert!",
+      "fr": "Lien copié !",
+      "es": "¡Enlace copiado!",
+      "nl": "Link gekopieerd!",
+      "zh": "链接已复制！",
+      "hi": "लिंक कॉपी हो गया!",
+      "ur": "لنک کاپی ہو گیا!"
+    },
+    "step6_new_reservation": {
+      "en": "Make a new reservation →",
+      "de": "Neue Reservierung vornehmen →",
+      "fr": "Faire une nouvelle réservation →",
+      "es": "Hacer una nueva reserva →",
+      "nl": "Nieuwe reservering maken →",
+      "zh": "进行新预订 →",
+      "hi": "नया आरक्षण करें →",
+      "ur": "نئی ریزرویشن کریں →"
+    }
+  }
+}

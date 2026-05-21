@@ -37,8 +37,8 @@ export function NewsletterSection() {
         <NewsletterForm
           variant="block"
           source="homepage_section"
-          headline="Hoşgeldin Bonusu"
-          subline="Bültenimize abone olun, ilk rezervasyonunuzda %5 indirim kazanın. Sezon fırsatları doğrudan e-postanıza."
+          headline={t.component.sections.newsletter.hosgeldin_bonusu}
+          subline={t.component.sections.newsletter.subline_abonelik}
         />
       </div>
     </section>

@@ -101,6 +101,7 @@ export function PackagesSection() {
   const t = useT();
   const marketLabel = t.packages_section.market_price;
   const reserveLabel = t.packages_section.reserve;
+  const ps = t.component.sections.packages;
 
   return (
     <section className="section-padding bg-white">
@@ -123,20 +124,20 @@ export function PackagesSection() {
             badgeColor="accent"
             title={t.packages_section.standart_title}
             meta={[
-              { icon: <Clock className="w-4 h-4" />, text: "60+ dk" },
-              { icon: <Users className="w-4 h-4" />, text: "16-20 kişi" },
+              { icon: <Clock className="w-4 h-4" />, text: ps.standart_meta_sure },
+              { icon: <Users className="w-4 h-4" />, text: ps.standart_meta_kisi },
               { icon: <Star className="w-4 h-4" />, text: "4.9" },
             ]}
             includes={[
-              "Otelden transfer dahil",
-              "Hafif kahvaltı dahil",
-              "40M€ sigorta dahil",
-              "Sertifika & madalya",
-              "Şampanya ile kutlama",
+              ps.standart_include_transfer,
+              ps.standart_include_kahvalti,
+              ps.standart_include_sigorta,
+              ps.standart_include_sertifika,
+              ps.standart_include_sampanya,
             ]}
             marketPrice={200}
             price={165}
-            unit="kişi başı"
+            unit={ps.unit_kisi_basi}
             gradient="bg-gradient-to-br from-primary to-accent"
             icon={<Wind className="w-24 h-24 text-white" />}
           />
@@ -148,20 +149,20 @@ export function PackagesSection() {
             badgeColor="warning"
             title={t.packages_section.balayi_title}
             meta={[
-              { icon: <Wind className="w-4 h-4" />, text: "Özel balon" },
-              { icon: <Clock className="w-4 h-4" />, text: "2 gece otel" },
+              { icon: <Wind className="w-4 h-4" />, text: ps.balayi_meta_balon },
+              { icon: <Clock className="w-4 h-4" />, text: ps.balayi_meta_otel },
               { icon: <Star className="w-4 h-4" />, text: "5.0" },
             ]}
             includes={[
-              "Özel deluxe balon uçuşu",
-              "Mağara otel (2 gece)",
-              "VIP transfer",
-              "Sürpriz çiçek & dekor",
-              "Özel fotoğraf çekimi",
+              ps.balayi_include_delux_ucus,
+              ps.balayi_include_magara_otel,
+              ps.balayi_include_vip_transfer,
+              ps.balayi_include_cicek_dekor,
+              ps.balayi_include_fotograf,
             ]}
             marketPrice={680}
             price={560}
-            unit="2 kişi toplam"
+            unit={ps.unit_2_kisi_toplam}
             gradient="bg-gradient-to-br from-[#4A1A8B] to-accent"
             icon={<Heart className="w-24 h-24 text-white" />}
           />
@@ -173,20 +174,20 @@ export function PackagesSection() {
             badgeColor="success"
             title={t.packages_section.macera_title}
             meta={[
-              { icon: <Wind className="w-4 h-4" />, text: "Balon" },
-              { icon: <Zap className="w-4 h-4" />, text: "ATV" },
+              { icon: <Wind className="w-4 h-4" />, text: ps.macera_meta_balon },
+              { icon: <Zap className="w-4 h-4" />, text: ps.macera_meta_atv },
               { icon: <Star className="w-4 h-4" />, text: "4.8" },
             ]}
             includes={[
-              "Standart balon uçuşu",
-              "2 saatlik ATV turu",
-              "1 saatlik at binme",
-              "Tüm transferler dahil",
-              "Rehber eşliği",
+              ps.macera_include_standart_ucus,
+              ps.macera_include_atv_turu,
+              ps.macera_include_at_binme,
+              ps.macera_include_transferler,
+              ps.macera_include_rehber,
             ]}
             marketPrice={280}
             price={229}
-            unit="kişi başı"
+            unit={ps.unit_kisi_basi}
             gradient="bg-gradient-to-br from-[#1A6B2B] to-[#4BBE6A]"
             icon={<Zap className="w-24 h-24 text-white" />}
           />

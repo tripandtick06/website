@@ -1,0 +1,804 @@
+{
+  "page.gdpr": {
+    "meta_title": {
+      "en": "Manage Your Data (GDPR/KVKK) — Trip and Tick",
+      "de": "Ihre Daten verwalten (GDPR/KVKK) — Trip and Tick",
+      "fr": "Gérez vos données (GDPR/KVKK) — Trip and Tick",
+      "es": "Gestiona tus datos (GDPR/KVKK) — Trip and Tick",
+      "nl": "Beheer uw gegevens (GDPR/KVKK) — Trip and Tick",
+      "zh": "管理您的数据（GDPR/KVKK）— Trip and Tick",
+      "hi": "अपना डेटा प्रबंधित करें (GDPR/KVKK) — Trip and Tick",
+      "ur": "اپنا ڈیٹا منظم کریں (GDPR/KVKK) — Trip and Tick"
+    },
+    "meta_desc": {
+      "en": "Access your personal data (GDPR Article 15) or request deletion (GDPR Article 17). Secure processing via a 24-hour verified magic-link.",
+      "de": "Greifen Sie auf Ihre personenbezogenen Daten zu (GDPR Madde 15) oder beantragen Sie deren Löschung (GDPR Madde 17). Sichere Verarbeitung per 24-Stunden-magic-link.",
+      "fr": "Accédez à vos données personnelles (GDPR Madde 15) ou demandez leur suppression (GDPR Madde 17). Traitement sécurisé via un magic-link valide 24 heures.",
+      "es": "Accede a tus datos personales (GDPR Madde 15) o solicita su eliminación (GDPR Madde 17). Proceso seguro mediante magic-link verificado de 24 horas.",
+      "nl": "Toegang tot uw persoonsgegevens (GDPR Madde 15) of verzoek om verwijdering (GDPR Madde 17). Veilige verwerking via een 24-uurs geverifieerde magic-link.",
+      "zh": "访问您的个人数据（GDPR Madde 15）或请求删除（GDPR Madde 17）。通过24小时验证magic-link安全处理。",
+      "hi": "अपने व्यक्तिगत डेटा तक पहुँचें (GDPR Madde 15) या हटाने का अनुरोध करें (GDPR Madde 17)। 24 घंटे के सत्यापित magic-link के माध्यम से सुरक्षित प्रक्रिया।",
+      "ur": "اپنا ذاتی ڈیٹا دیکھیں (GDPR Madde 15) یا حذف کروائیں (GDPR Madde 17)۔ 24 گھنٹے کے تصدیق شدہ magic-link کے ذریعے محفوظ عمل۔"
+    },
+    "pagehero_tag": {
+      "en": "Data Rights",
+      "de": "Datenrechte",
+      "fr": "Droits sur les données",
+      "es": "Derechos sobre los datos",
+      "nl": "Gegevensrechten",
+      "zh": "数据权利",
+      "hi": "डेटा अधिकार",
+      "ur": "ڈیٹا کے حقوق"
+    },
+    "pagehero_title": {
+      "en": "Manage Your Data",
+      "de": "Ihre Daten verwalten",
+      "fr": "Gérez vos données",
+      "es": "Gestiona tus datos",
+      "nl": "Beheer uw gegevens",
+      "zh": "管理您的数据",
+      "hi": "अपना डेटा प्रबंधित करें",
+      "ur": "اپنا ڈیٹا منظم کریں"
+    },
+    "pagehero_description": {
+      "en": "Exercise your rights under GDPR Article 15 (access) and Article 17 (erasure). We will send a 24-hour verified link to your registered email address.",
+      "de": "Nutzen Sie Ihre Rechte gemäß GDPR Madde 15 (Auskunft) und GDPR Madde 17 (Löschung). Wir senden Ihnen einen 24-Stunden-Link an Ihre registrierte E-Mail-Adresse.",
+      "fr": "Exercez vos droits selon GDPR Madde 15 (accès) et GDPR Madde 17 (effacement). Nous enverrons un lien vérifié de 24 heures à votre adresse e-mail enregistrée.",
+      "es": "Ejerce tus derechos conforme a GDPR Madde 15 (acceso) y GDPR Madde 17 (supresión). Enviaremos un enlace verificado de 24 horas a tu dirección de correo registrada.",
+      "nl": "Maak gebruik van uw rechten onder GDPR Madde 15 (toegang) en GDPR Madde 17 (verwijdering). Wij sturen een geverifieerde link van 24 uur naar uw geregistreerde e-mailadres.",
+      "zh": "行使您在GDPR Madde 15（访问权）和GDPR Madde 17（删除权）下的权利。我们将向您注册的电子邮件发送24小时验证链接。",
+      "hi": "GDPR Madde 15 (पहुँच) और GDPR Madde 17 (हटाना) के तहत अपने अधिकारों का उपयोग करें। हम आपके पंजीकृत ईमेल पर 24 घंटे का सत्यापित लिंक भेजेंगे।",
+      "ur": "GDPR Madde 15 (رسائی) اور GDPR Madde 17 (حذف) کے تحت اپنے حقوق استعمال کریں۔ ہم آپ کے رجسٹرڈ ای میل پر 24 گھنٹے کا تصدیق شدہ لنک بھیجیں گے۔"
+    },
+    "breadcrumb_name": {
+      "en": "Data Rights (GDPR/KVKK)",
+      "de": "Datenrechte (GDPR/KVKK)",
+      "fr": "Droits sur les données (GDPR/KVKK)",
+      "es": "Derechos sobre datos (GDPR/KVKK)",
+      "nl": "Gegevensrechten (GDPR/KVKK)",
+      "zh": "数据权利（GDPR/KVKK）",
+      "hi": "डेटा अधिकार (GDPR/KVKK)",
+      "ur": "ڈیٹا کے حقوق (GDPR/KVKK)"
+    },
+    "h2_talep_formu": {
+      "en": "Request Form",
+      "de": "Antragsformular",
+      "fr": "Formulaire de demande",
+      "es": "Formulario de solicitud",
+      "nl": "Aanvraagformulier",
+      "zh": "申请表",
+      "hi": "अनुरोध फॉर्म",
+      "ur": "درخواست فارم"
+    },
+    "talep_formu_description_prefix": {
+      "en": "Enter your email address in the form below and select the action you wish to take. A verified link will be sent to your inbox. The link is valid for",
+      "de": "Geben Sie Ihre E-Mail-Adresse in das Formular ein und wählen Sie die gewünschte Aktion. Ein verifizierter Link wird an Ihr Postfach gesendet. Der Link ist",
+      "fr": "Saisissez votre adresse e-mail dans le formulaire ci-dessous et sélectionnez l'action souhaitée. Un lien vérifié sera envoyé à votre boîte de réception. Le lien est valable",
+      "es": "Introduce tu dirección de correo en el formulario y selecciona la acción deseada. Se enviará un enlace verificado a tu bandeja de entrada. El enlace es válido durante",
+      "nl": "Voer uw e-mailadres in het onderstaande formulier in en selecteer de gewenste actie. Een geverifieerde link wordt naar uw inbox gestuurd. De link is geldig voor",
+      "zh": "在下方表单中输入您的电子邮件地址并选择所需操作。验证链接将发送至您的收件箱。链接有效期为",
+      "hi": "नीचे दिए गए फॉर्म में अपना ईमेल पता दर्ज करें और वांछित कार्रवाई चुनें। एक सत्यापित लिंक आपके इनबॉक्स में भेजा जाएगा। लिंक",
+      "ur": "نیچے دیے گئے فارم میں اپنا ای میل پتہ درج کریں اور مطلوبہ کارروائی منتخب کریں۔ ایک تصدیق شدہ لنک آپ کے ان باکس میں بھیجا جائے گا۔ لنک"
+    },
+    "talep_formu_24_saat": {
+      "en": "24 hours",
+      "de": "24 Stunden",
+      "fr": "24 heures",
+      "es": "24 horas",
+      "nl": "24 uur",
+      "zh": "24小时",
+      "hi": "24 घंटे",
+      "ur": "24 گھنٹے"
+    },
+    "talep_formu_description_suffix": {
+      "en": "valid.",
+      "de": "gültig.",
+      "fr": "valable.",
+      "es": "válido.",
+      "nl": "geldig.",
+      "zh": "有效。",
+      "hi": "वैध है।",
+      "ur": "درست ہے۔"
+    },
+    "h3_neyi_indirebilirim": {
+      "en": "What can I download?",
+      "de": "Was kann ich herunterladen?",
+      "fr": "Que puis-je télécharger?",
+      "es": "¿Qué puedo descargar?",
+      "nl": "Wat kan ik downloaden?",
+      "zh": "我可以下载什么？",
+      "hi": "मैं क्या डाउनलोड कर सकता हूँ?",
+      "ur": "میں کیا ڈاؤن لوڈ کر سکتا ہوں؟"
+    },
+    "li_musteri_profil": {
+      "en": "Your customer profile information (name, email, phone, language preference).",
+      "de": "Ihre Kundenprofilinformationen (Name, E-Mail, Telefon, Spracheinstellung).",
+      "fr": "Vos informations de profil client (nom, e-mail, téléphone, préférence de langue).",
+      "es": "Tu información de perfil de cliente (nombre, correo, teléfono, preferencia de idioma).",
+      "nl": "Uw klantprofielinformatie (naam, e-mail, telefoon, taalvoorkeur).",
+      "zh": "您的客户档案信息（姓名、电子邮件、电话、语言偏好）。",
+      "hi": "आपकी ग्राहक प्रोफ़ाइल जानकारी (नाम, ईमेल, फ़ोन, भाषा प्राथमिकता)।",
+      "ur": "آپ کی کسٹمر پروفائل معلومات (نام، ای میل، فون، زبان کی ترجیح)۔"
+    },
+    "li_rezervasyon_kayitlari": {
+      "en": "All your booking records (date, package, price, passenger details).",
+      "de": "Alle Ihre Buchungsdatensätze (Datum, Paket, Preis, Passagierdetails).",
+      "fr": "Tous vos dossiers de réservation (date, forfait, prix, détails passagers).",
+      "es": "Todos tus registros de reserva (fecha, paquete, precio, datos de pasajeros).",
+      "nl": "Al uw boekingsgegevens (datum, pakket, prijs, passagiersdetails).",
+      "zh": "您的所有预订记录（日期、套餐、价格、乘客详情）。",
+      "hi": "आपके सभी बुकिंग रिकॉर्ड (तिथि, पैकेज, मूल्य, यात्री विवरण)।",
+      "ur": "آپ کے تمام بکنگ ریکارڈ (تاریخ، پیکیج، قیمت، مسافر تفصیلات)۔"
+    },
+    "li_sadakat_puan": {
+      "en": "Your loyalty points history (if applicable).",
+      "de": "Ihr Treuepunkteverlauf (falls vorhanden).",
+      "fr": "Votre historique de points de fidélité (le cas échéant).",
+      "es": "Tu historial de puntos de fidelidad (si aplica).",
+      "nl": "Uw loyaliteitspuntengeschiedenis (indien van toepassing).",
+      "zh": "您的忠诚积分历史（如有）。",
+      "hi": "आपका लॉयल्टी पॉइंट इतिहास (यदि लागू हो)।",
+      "ur": "آپ کی وفاداری پوائنٹس کی تاریخ (اگر قابل اطلاق ہو)۔"
+    },
+    "stripe_note_prefix": {
+      "en": "Stripe payment records are stored in Stripe's infrastructure for financial audit purposes; provided upon request via",
+      "de": "Stripe-Zahlungsdatensätze werden in der Stripe-Infrastruktur für Finanzprüfzwecke gespeichert; auf Anfrage bereitgestellt über",
+      "fr": "Les enregistrements de paiement Stripe sont conservés dans l'infrastructure Stripe à des fins d'audit financier ; fournis sur demande via",
+      "es": "Los registros de pago de Stripe se almacenan en la infraestructura de Stripe con fines de auditoría financiera; se proporcionan previa solicitud mediante",
+      "nl": "Stripe-betalingsgegevens worden opgeslagen in Stripe's infrastructuur voor financiële auditdoeleinden; op verzoek verstrekt via",
+      "zh": "Stripe支付记录存储于Stripe基础设施中用于财务审计；可根据要求通过",
+      "hi": "Stripe भुगतान रिकॉर्ड वित्तीय ऑडिट उद्देश्यों के लिए Stripe के बुनियादी ढांचे में संग्रहीत हैं; अनुरोध पर प्रदान किए जाते हैं",
+      "ur": "Stripe ادائیگی کے ریکارڈ مالیاتی آڈٹ مقاصد کے لیے Stripe کے بنیادی ڈھانچے میں محفوظ ہیں؛ درخواست پر فراہم کیے جاتے ہیں"
+    },
+    "stripe_note_suffix": {
+      "en": "provided.",
+      "de": "bereitgestellt.",
+      "fr": "fourni.",
+      "es": "proporcionados.",
+      "nl": "verstrekt.",
+      "zh": "提供。",
+      "hi": "प्रदान किए जाते हैं।",
+      "ur": "فراہم کیے جاتے ہیں۔"
+    },
+    "h3_silme_ne_olur": {
+      "en": "What happens when I request deletion?",
+      "de": "Was passiert, wenn ich die Löschung beantrage?",
+      "fr": "Que se passe-t-il lorsque je demande la suppression?",
+      "es": "¿Qué ocurre cuando solicito la eliminación?",
+      "nl": "Wat gebeurt er als ik verwijdering aanvraag?",
+      "zh": "当我请求删除时会发生什么？",
+      "hi": "जब मैं हटाने का अनुरोध करता हूँ तो क्या होता है?",
+      "ur": "جب میں حذف کی درخواست کرتا ہوں تو کیا ہوتا ہے؟"
+    },
+    "li_profil_silinir": {
+      "en": "Your customer profile is deleted.",
+      "de": "Ihr Kundenprofil wird gelöscht.",
+      "fr": "Votre profil client est supprimé.",
+      "es": "Tu perfil de cliente es eliminado.",
+      "nl": "Uw klantprofiel wordt verwijderd.",
+      "zh": "您的客户档案将被删除。",
+      "hi": "आपकी ग्राहक प्रोफ़ाइल हटा दी जाती है।",
+      "ur": "آپ کی کسٹمر پروفائل حذف کر دی جاتی ہے۔"
+    },
+    "li_rezervasyon_anonimlestirilir": {
+      "en": "Booking passenger details (name, email, phone) are anonymised.",
+      "de": "Buchungspassagierdetails (Name, E-Mail, Telefon) werden anonymisiert.",
+      "fr": "Les détails des passagers de réservation (nom, e-mail, téléphone) sont anonymisés.",
+      "es": "Los datos de pasajeros de la reserva (nombre, correo, teléfono) son anonimizados.",
+      "nl": "Boekingspassagiersgegevens (naam, e-mail, telefoon) worden geanonimiseerd.",
+      "zh": "预订乘客详情（姓名、电子邮件、电话）将被匿名化。",
+      "hi": "बुकिंग यात्री विवरण (नाम, ईमेल, फ़ोन) अनामीकृत किए जाते हैं।",
+      "ur": "بکنگ مسافر کی تفصیلات (نام، ای میل، فون) گمنام کر دی جاتی ہیں۔"
+    },
+    "li_newsletter_iptal": {
+      "en": "Your newsletter subscription is cancelled (Brevo).",
+      "de": "Ihr Newsletter-Abonnement wird gekündigt (Brevo).",
+      "fr": "Votre abonnement à la newsletter est annulé (Brevo).",
+      "es": "Tu suscripción al boletín es cancelada (Brevo).",
+      "nl": "Uw nieuwsbriefabonnement wordt opgezegd (Brevo).",
+      "zh": "您的新闻通讯订阅将被取消（Brevo）。",
+      "hi": "आपकी न्यूज़लेटर सदस्यता रद्द कर दी जाती है (Brevo)।",
+      "ur": "آپ کی نیوز لیٹر سبسکرپشن منسوخ کر دی جاتی ہے (Brevo)۔"
+    },
+    "li_fatura_saklanir": {
+      "en": "Invoice records are retained for 10 years as required by tax law (213 VUK); deleted upon expiry on request.",
+      "de": "Rechnungsunterlagen werden gemäß Steuerrecht (213 VUK) 10 Jahre aufbewahrt; auf Anfrage nach Ablauf gelöscht.",
+      "fr": "Les factures sont conservées 10 ans conformément à la législation fiscale (213 VUK) ; supprimées à l'expiration sur demande.",
+      "es": "Los registros de facturas se conservan 10 años según la legislación fiscal (213 VUK); eliminados al vencimiento previa solicitud.",
+      "nl": "Factuurgegevens worden 10 jaar bewaard conform belastingwetgeving (213 VUK); na afloop verwijderd op verzoek.",
+      "zh": "根据税法（213 VUK）要求，发票记录保留10年；到期后可根据要求删除。",
+      "hi": "कर कानून (213 VUK) के अनुसार चालान रिकॉर्ड 10 वर्षों तक रखे जाते हैं; समाप्ति पर अनुरोध पर हटाए जाते हैं।",
+      "ur": "ٹیکس قانون (213 VUK) کے مطابق انوائس ریکارڈ 10 سال تک محفوظ رکھے جاتے ہیں؛ میعاد ختم ہونے پر درخواست پر حذف کیے جاتے ہیں۔"
+    },
+    "kvkk_sorumlu_prefix": {
+      "en": "KVKK Data Controller: Trip and Tick · Nevşehir/Kapadokya · Contact:",
+      "de": "KVKK Datenschutzverantwortlicher: Trip and Tick · Nevşehir/Kapadokya · Kontakt:",
+      "fr": "Responsable du traitement KVKK : Trip and Tick · Nevşehir/Kapadokya · Contact :",
+      "es": "Responsable de datos KVKK: Trip and Tick · Nevşehir/Kapadokya · Contacto:",
+      "nl": "KVKK Verwerkingsverantwoordelijke: Trip and Tick · Nevşehir/Kapadokya · Contact:",
+      "zh": "KVKK 数据控制者：Trip and Tick · Nevşehir/Kapadokya · 联系：",
+      "hi": "KVKK डेटा नियंत्रक: Trip and Tick · Nevşehir/Kapadokya · संपर्क:",
+      "ur": "KVKK ڈیٹا کنٹرولر: Trip and Tick · Nevşehir/Kapadokya · رابطہ:"
+    }
+  },
+  "component.sections.packages": {
+    "standart_meta_sure": {
+      "en": "60+ min",
+      "de": "60+ Min.",
+      "fr": "60+ min",
+      "es": "60+ min",
+      "nl": "60+ min",
+      "zh": "60+分钟",
+      "hi": "60+ मिनट",
+      "ur": "60+ منٹ"
+    },
+    "standart_meta_kisi": {
+      "en": "16–20 people",
+      "de": "16–20 Personen",
+      "fr": "16–20 personnes",
+      "es": "16–20 personas",
+      "nl": "16–20 personen",
+      "zh": "16–20人",
+      "hi": "16–20 लोग",
+      "ur": "16–20 افراد"
+    },
+    "standart_include_transfer": {
+      "en": "Hotel transfer included",
+      "de": "Hoteltransfer inklusive",
+      "fr": "Transfert hôtel inclus",
+      "es": "Traslado al hotel incluido",
+      "nl": "Hoteltransfer inbegrepen",
+      "zh": "含酒店接送",
+      "hi": "होटल ट्रांसफर शामिल",
+      "ur": "ہوٹل ٹرانسفر شامل"
+    },
+    "standart_include_kahvalti": {
+      "en": "Light breakfast included",
+      "de": "Leichtes Frühstück inklusive",
+      "fr": "Petit-déjeuner léger inclus",
+      "es": "Desayuno ligero incluido",
+      "nl": "Licht ontbijt inbegrepen",
+      "zh": "含轻食早餐",
+      "hi": "हल्का नाश्ता शामिल",
+      "ur": "ہلکا ناشتہ شامل"
+    },
+    "standart_include_sigorta": {
+      "en": "40M€ insurance included",
+      "de": "40M€ Versicherung inklusive",
+      "fr": "Assurance 40M€ incluse",
+      "es": "Seguro de 40M€ incluido",
+      "nl": "40M€ verzekering inbegrepen",
+      "zh": "含4000万€保险",
+      "hi": "40M€ बीमा शामिल",
+      "ur": "40M€ انشورنس شامل"
+    },
+    "standart_include_sertifika": {
+      "en": "Certificate & medal",
+      "de": "Zertifikat & Medaille",
+      "fr": "Certificat & médaille",
+      "es": "Certificado & medalla",
+      "nl": "Certificaat & medaille",
+      "zh": "证书 & 奖章",
+      "hi": "प्रमाणपत्र & पदक",
+      "ur": "سرٹیفکیٹ & تمغہ"
+    },
+    "standart_include_sampanya": {
+      "en": "Champagne celebration",
+      "de": "Champagner-Feier",
+      "fr": "Célébration au champagne",
+      "es": "Celebración con champán",
+      "nl": "Champagneviering",
+      "zh": "香槟庆典",
+      "hi": "शैम्पेन उत्सव",
+      "ur": "شیمپین جشن"
+    },
+    "unit_kisi_basi": {
+      "en": "per person",
+      "de": "pro Person",
+      "fr": "par personne",
+      "es": "por persona",
+      "nl": "per persoon",
+      "zh": "每人",
+      "hi": "प्रति व्यक्ति",
+      "ur": "فی شخص"
+    },
+    "balayi_meta_balon": {
+      "en": "Private balloon",
+      "de": "Privatballon",
+      "fr": "Ballon privatif",
+      "es": "Globo privado",
+      "nl": "Privéballon",
+      "zh": "私人热气球",
+      "hi": "निजी गुब्बारा",
+      "ur": "نجی غبارہ"
+    },
+    "balayi_meta_otel": {
+      "en": "2 nights hotel",
+      "de": "2 Nächte Hotel",
+      "fr": "2 nuits d'hôtel",
+      "es": "2 noches de hotel",
+      "nl": "2 nachten hotel",
+      "zh": "2晚酒店",
+      "hi": "2 रातें होटल",
+      "ur": "2 راتیں ہوٹل"
+    },
+    "balayi_include_delux_ucus": {
+      "en": "Private deluxe balloon flight",
+      "de": "Privater Deluxe-Ballonflug",
+      "fr": "Vol en ballon deluxe privé",
+      "es": "Vuelo en globo deluxe privado",
+      "nl": "Privé deluxe ballonvlucht",
+      "zh": "私人豪华热气球飞行",
+      "hi": "निजी डीलक्स गुब्बारा उड़ान",
+      "ur": "نجی ڈیلکس غبارہ پرواز"
+    },
+    "balayi_include_magara_otel": {
+      "en": "Cave hotel (2 nights)",
+      "de": "Höhlenhotel (2 Nächte)",
+      "fr": "Hôtel troglodyte (2 nuits)",
+      "es": "Hotel cueva (2 noches)",
+      "nl": "Grot hotel (2 nachten)",
+      "zh": "洞穴酒店（2晚）",
+      "hi": "गुफा होटल (2 रातें)",
+      "ur": "غار ہوٹل (2 راتیں)"
+    },
+    "balayi_include_vip_transfer": {
+      "en": "VIP transfer",
+      "de": "VIP-Transfer",
+      "fr": "Transfert VIP",
+      "es": "Traslado VIP",
+      "nl": "VIP-transfer",
+      "zh": "VIP接送",
+      "hi": "VIP ट्रांसफर",
+      "ur": "VIP ٹرانسفر"
+    },
+    "balayi_include_cicek_dekor": {
+      "en": "Surprise flowers & decoration",
+      "de": "Überraschungsblumen & Dekoration",
+      "fr": "Fleurs surprises & décoration",
+      "es": "Flores sorpresa & decoración",
+      "nl": "Verrassingsboemen & decoratie",
+      "zh": "惊喜鲜花 & 装饰",
+      "hi": "सरप्राइज़ फूल & सजावट",
+      "ur": "سرپرائز پھول & سجاوٹ"
+    },
+    "balayi_include_fotograf": {
+      "en": "Private photo shoot",
+      "de": "Privates Fotoshooting",
+      "fr": "Séance photo privée",
+      "es": "Sesión de fotos privada",
+      "nl": "Privé fotoshoot",
+      "zh": "私人摄影",
+      "hi": "निजी फोटो शूट",
+      "ur": "نجی فوٹو شوٹ"
+    },
+    "unit_2_kisi_toplam": {
+      "en": "2 people total",
+      "de": "2 Personen gesamt",
+      "fr": "2 personnes au total",
+      "es": "2 personas en total",
+      "nl": "2 personen totaal",
+      "zh": "共2人",
+      "hi": "कुल 2 लोग",
+      "ur": "کل 2 افراد"
+    },
+    "macera_meta_balon": {
+      "en": "Balloon",
+      "de": "Ballon",
+      "fr": "Ballon",
+      "es": "Globo",
+      "nl": "Ballon",
+      "zh": "热气球",
+      "hi": "गुब्बारा",
+      "ur": "غبارہ"
+    },
+    "macera_meta_atv": {
+      "en": "ATV",
+      "de": "ATV",
+      "fr": "ATV",
+      "es": "ATV",
+      "nl": "ATV",
+      "zh": "ATV",
+      "hi": "ATV",
+      "ur": "ATV"
+    },
+    "macera_include_standart_ucus": {
+      "en": "Standard balloon flight",
+      "de": "Standard-Ballonflug",
+      "fr": "Vol en ballon standard",
+      "es": "Vuelo en globo estándar",
+      "nl": "Standaard ballonvlucht",
+      "zh": "标准热气球飞行",
+      "hi": "मानक गुब्बारा उड़ान",
+      "ur": "معیاری غبارہ پرواز"
+    },
+    "macera_include_atv_turu": {
+      "en": "2-hour ATV tour",
+      "de": "2-stündige ATV-Tour",
+      "fr": "Tour en ATV de 2 heures",
+      "es": "Tour en ATV de 2 horas",
+      "nl": "2-uur ATV-tour",
+      "zh": "2小时ATV游览",
+      "hi": "2 घंटे की ATV टूर",
+      "ur": "2 گھنٹے ATV ٹور"
+    },
+    "macera_include_at_binme": {
+      "en": "1-hour horse riding",
+      "de": "1-stündiges Reiten",
+      "fr": "1 heure d'équitation",
+      "es": "1 hora de equitación",
+      "nl": "1 uur paardrijden",
+      "zh": "1小时骑马",
+      "hi": "1 घंटे की घुड़सवारी",
+      "ur": "1 گھنٹے گھڑ سواری"
+    },
+    "macera_include_transferler": {
+      "en": "All transfers included",
+      "de": "Alle Transfers inklusive",
+      "fr": "Tous les transferts inclus",
+      "es": "Todos los traslados incluidos",
+      "nl": "Alle transfers inbegrepen",
+      "zh": "含全部接送",
+      "hi": "सभी ट्रांसफर शामिल",
+      "ur": "تمام ٹرانسفر شامل"
+    },
+    "macera_include_rehber": {
+      "en": "Guide accompaniment",
+      "de": "Reiseführerbegleitung",
+      "fr": "Accompagnement guide",
+      "es": "Acompañamiento de guía",
+      "nl": "Gidsbegeleiding",
+      "zh": "导游陪同",
+      "hi": "गाइड की सहयोगिता",
+      "ur": "گائیڈ کی رفاقت"
+    }
+  },
+  "component.sections.guarantee": {
+    "sub_tam_iade": {
+      "en": "Operator cancellation = full refund",
+      "de": "Stornierung durch Betreiber = volle Rückerstattung",
+      "fr": "Annulation opérateur = remboursement intégral",
+      "es": "Cancelación del operador = reembolso total",
+      "nl": "Annulering door operator = volledige terugbetaling",
+      "zh": "运营商取消 = 全额退款",
+      "hi": "ऑपरेटर रद्दीकरण = पूर्ण धनवापसी",
+      "ur": "آپریٹر منسوخی = مکمل واپسی"
+    },
+    "sub_pci_dss": {
+      "en": "PCI-DSS compliant infrastructure",
+      "de": "PCI-DSS-konforme Infrastruktur",
+      "fr": "Infrastructure conforme PCI-DSS",
+      "es": "Infraestructura con certificación PCI-DSS",
+      "nl": "PCI-DSS-conforme infrastructuur",
+      "zh": "PCI-DSS合规基础设施",
+      "hi": "PCI-DSS अनुपालन बुनियादी ढांचा",
+      "ur": "PCI-DSS مطابق انفراسٹرکچر"
+    },
+    "en_dusuk_fiyat": {
+      "en": "Lowest Price",
+      "de": "Niedrigster Preis",
+      "fr": "Prix le plus bas",
+      "es": "Precio más bajo",
+      "nl": "Laagste prijs",
+      "zh": "最低价格",
+      "hi": "सबसे कम कीमत",
+      "ur": "سب سے کم قیمت"
+    },
+    "sub_fiyat_farki": {
+      "en": "We cover the price difference",
+      "de": "Wir übernehmen den Preisunterschied",
+      "fr": "Nous prenons en charge la différence de prix",
+      "es": "Cubrimos la diferencia de precio",
+      "nl": "Wij dekken het prijsverschil",
+      "zh": "我们补偿差价",
+      "hi": "हम मूल्य अंतर वहन करते हैं",
+      "ur": "ہم قیمت کا فرق ادا کریں گے"
+    },
+    "sub_tum_ucuslarda": {
+      "en": "Included on all flights",
+      "de": "Bei allen Flügen inklusive",
+      "fr": "Inclus sur tous les vols",
+      "es": "Incluido en todos los vuelos",
+      "nl": "Inbegrepen op alle vluchten",
+      "zh": "所有航班均包含",
+      "hi": "सभी उड़ानों में शामिल",
+      "ur": "تمام پروازوں میں شامل"
+    },
+    "sub_kendi_dilinizde": {
+      "en": "Service in your own language",
+      "de": "Service in Ihrer eigenen Sprache",
+      "fr": "Service dans votre propre langue",
+      "es": "Servicio en tu propio idioma",
+      "nl": "Service in uw eigen taal",
+      "zh": "用您的母语提供服务",
+      "hi": "आपकी अपनी भाषा में सेवा",
+      "ur": "آپ کی اپنی زبان میں خدمت"
+    },
+    "headline_ucuzunu": {
+      "en": "Found It Cheaper",
+      "de": "Günstiger gefunden",
+      "fr": "Trouvé moins cher",
+      "es": "¿Lo encontraste más barato",
+      "nl": "Goedkoper gevonden",
+      "zh": "发现更便宜",
+      "hi": "सस्ता मिला",
+      "ur": "سستا ملا"
+    },
+    "headline_buldunuz_mu": {
+      "en": "Elsewhere?",
+      "de": "Woanders?",
+      "fr": "Ailleurs?",
+      "es": "en otro lugar?",
+      "nl": "Ergens anders?",
+      "zh": "的地方？",
+      "hi": "कहीं और?",
+      "ur": "کہیں اور؟"
+    },
+    "subtext_teklif": {
+      "en": "Show us a lower-priced offer for the same date and service —",
+      "de": "Zeigen Sie uns ein günstigeres Angebot für dasselbe Datum und denselben Service —",
+      "fr": "Montrez-nous une offre moins chère pour la même date et le même service —",
+      "es": "Muéstranos una oferta más barata para la misma fecha y servicio —",
+      "nl": "Toon ons een goedkoper aanbod voor dezelfde datum en dienst —",
+      "zh": "为同一日期和服务找到更低价格的报价，展示给我们——",
+      "hi": "उसी तारीख और सेवा के लिए कम कीमत का प्रस्ताव दिखाएं —",
+      "ur": "اسی تاریخ اور خدمت کے لیے کم قیمت کی پیشکش دکھائیں —"
+    },
+    "subtext_yuzde_5": {
+      "en": "%5 below",
+      "de": "%5 darunter",
+      "fr": "%5 en dessous",
+      "es": "%5 por debajo",
+      "nl": "%5 eronder",
+      "zh": "%5以下",
+      "hi": "%5 नीचे",
+      "ur": "%5 سے نیچے"
+    },
+    "subtext_ineriz": {
+      "en": "we'll match it.",
+      "de": "gehen wir mit.",
+      "fr": "nous nous alignons.",
+      "es": "igualamos el precio.",
+      "nl": "gaan wij mee.",
+      "zh": "我们将匹配该价格。",
+      "hi": "हम उसे मैच करेंगे।",
+      "ur": "ہم اسے میچ کریں گے۔"
+    }
+  },
+  "component.sections.newsletter": {
+    "hosgeldin_bonusu": {
+      "en": "Welcome Bonus",
+      "de": "Willkommensbonus",
+      "fr": "Bonus de bienvenue",
+      "es": "Bono de bienvenida",
+      "nl": "Welkomstbonus",
+      "zh": "欢迎奖励",
+      "hi": "स्वागत बोनस",
+      "ur": "خوش آمدید بونس"
+    },
+    "subline_abonelik": {
+      "en": "Subscribe to our newsletter and earn 5% off your first booking. Season deals delivered straight to your inbox.",
+      "de": "Abonnieren Sie unseren Newsletter und erhalten Sie 5% Rabatt auf Ihre erste Buchung. Saisonangebote direkt in Ihr Postfach.",
+      "fr": "Abonnez-vous à notre newsletter et bénéficiez de 5% de réduction sur votre première réservation. Les offres de saison directement dans votre boîte mail.",
+      "es": "Suscríbete a nuestro boletín y obtén un 5% de descuento en tu primera reserva. Ofertas de temporada directamente a tu correo.",
+      "nl": "Abonneer op onze nieuwsbrief en ontvang 5% korting op uw eerste boeking. Seizoensaanbiedingen direct in uw inbox.",
+      "zh": "订阅我们的新闻通讯，首次预订享受5%折扣。季节优惠直接发送到您的收件箱。",
+      "hi": "हमारे न्यूज़लेटर की सदस्यता लें और अपनी पहली बुकिंग पर 5% छूट पाएं। सीज़न ऑफर सीधे आपके इनबॉक्स में।",
+      "ur": "ہمارے نیوز لیٹر کو سبسکرائب کریں اور پہلی بکنگ پر %5 چھوٹ حاصل کریں۔ سیزن کی پیشکشیں براہ راست آپ کے ان باکس میں۔"
+    }
+  },
+  "component.layout.footer": {
+    "service_transfer": {
+      "en": "Transfer",
+      "de": "Transfer",
+      "fr": "Transfert",
+      "es": "Traslado",
+      "nl": "Transfer",
+      "zh": "接送",
+      "hi": "ट्रांसफर",
+      "ur": "ٹرانسفر"
+    },
+    "company_operatorler": {
+      "en": "Operators",
+      "de": "Betreiber",
+      "fr": "Opérateurs",
+      "es": "Operadores",
+      "nl": "Operators",
+      "zh": "运营商",
+      "hi": "ऑपरेटर",
+      "ur": "آپریٹرز"
+    },
+    "company_yorum_yaz": {
+      "en": "Write a Review",
+      "de": "Bewertung schreiben",
+      "fr": "Écrire un avis",
+      "es": "Escribir una reseña",
+      "nl": "Recensie schrijven",
+      "zh": "写评价",
+      "hi": "समीक्षा लिखें",
+      "ur": "جائزہ لکھیں"
+    },
+    "company_rezervasyonum": {
+      "en": "My Booking",
+      "de": "Meine Buchung",
+      "fr": "Ma réservation",
+      "es": "Mi reserva",
+      "nl": "Mijn boeking",
+      "zh": "我的预订",
+      "hi": "मेरी बुकिंग",
+      "ur": "میری بکنگ"
+    },
+    "company_b2b_acente": {
+      "en": "B2B Agency",
+      "de": "B2B-Agentur",
+      "fr": "Agence B2B",
+      "es": "Agencia B2B",
+      "nl": "B2B-bureau",
+      "zh": "B2B代理",
+      "hi": "B2B एजेंसी",
+      "ur": "B2B ایجنسی"
+    },
+    "legal_iptal_iade": {
+      "en": "Cancellation & Refund",
+      "de": "Stornierung & Rückerstattung",
+      "fr": "Annulation & Remboursement",
+      "es": "Cancelación & Reembolso",
+      "nl": "Annulering & Terugbetaling",
+      "zh": "取消 & 退款",
+      "hi": "रद्दीकरण & धनवापसी",
+      "ur": "منسوخی & واپسی"
+    },
+    "legal_gizlilik_politikasi": {
+      "en": "Privacy Policy",
+      "de": "Datenschutzrichtlinie",
+      "fr": "Politique de confidentialité",
+      "es": "Política de privacidad",
+      "nl": "Privacybeleid",
+      "zh": "隐私政策",
+      "hi": "गोपनीयता नीति",
+      "ur": "رازداری کی پالیسی"
+    },
+    "legal_kullanim_sartlari": {
+      "en": "Terms of Use",
+      "de": "Nutzungsbedingungen",
+      "fr": "Conditions d'utilisation",
+      "es": "Términos de uso",
+      "nl": "Gebruiksvoorwaarden",
+      "zh": "使用条款",
+      "hi": "उपयोग की शर्तें",
+      "ur": "استعمال کی شرائط"
+    },
+    "legal_kvkk_cerezler": {
+      "en": "KVKK & Cookies",
+      "de": "KVKK & Cookies",
+      "fr": "KVKK & Cookies",
+      "es": "KVKK & Cookies",
+      "nl": "KVKK & Cookies",
+      "zh": "KVKK & Cookie",
+      "hi": "KVKK & कुकीज़",
+      "ur": "KVKK & کوکیز"
+    },
+    "legal_veri_haklari_gdpr": {
+      "en": "Data Rights (GDPR)",
+      "de": "Datenrechte (GDPR)",
+      "fr": "Droits sur les données (GDPR)",
+      "es": "Derechos de datos (GDPR)",
+      "nl": "Gegevensrechten (GDPR)",
+      "zh": "数据权利（GDPR）",
+      "hi": "डेटा अधिकार (GDPR)",
+      "ur": "ڈیٹا کے حقوق (GDPR)"
+    },
+    "legal_impressum": {
+      "en": "Impressum (DE/AT)",
+      "de": "Impressum (DE/AT)",
+      "fr": "Impressum (DE/AT)",
+      "es": "Impressum (DE/AT)",
+      "nl": "Impressum (DE/AT)",
+      "zh": "Impressum (DE/AT)",
+      "hi": "Impressum (DE/AT)",
+      "ur": "Impressum (DE/AT)"
+    },
+    "newsletter_hosgeldin_bonusu": {
+      "en": "Welcome Bonus",
+      "de": "Willkommensbonus",
+      "fr": "Bonus de bienvenue",
+      "es": "Bono de bienvenida",
+      "nl": "Welkomstbonus",
+      "zh": "欢迎奖励",
+      "hi": "स्वागत बोनस",
+      "ur": "خوش آمدید بونس"
+    },
+    "newsletter_subline": {
+      "en": "Subscribe to the newsletter, get 5% off your first booking + season deals.",
+      "de": "Newsletter abonnieren, 5% Rabatt auf die erste Buchung + Saisonangebote.",
+      "fr": "Abonnez-vous à la newsletter, -5% sur la première réservation + offres de saison.",
+      "es": "Suscríbete al boletín, 5% de descuento en la primera reserva + ofertas de temporada.",
+      "nl": "Abonneer op de nieuwsbrief, 5% korting op de eerste boeking + seizoensaanbiedingen.",
+      "zh": "订阅新闻通讯，首次预订享5%折扣 + 季节优惠。",
+      "hi": "न्यूज़लेटर सदस्यता लें, पहली बुकिंग पर 5% छूट + सीज़न ऑफर।",
+      "ur": "نیوز لیٹر سبسکرائب کریں، پہلی بکنگ پر %5 چھوٹ + سیزن آفرز۔"
+    },
+    "brand_description": {
+      "en": "Kapadokya's most competitive and trusted online travel agency. Nevşehir / Göreme, Türkiye.",
+      "de": "Kapadokyas wettbewerbsfähigstes und vertrauenswürdigstes Online-Reisebüro. Nevşehir / Göreme, Türkiye.",
+      "fr": "L'agence de voyage en ligne la plus compétitive et fiable de Kapadokya. Nevşehir / Göreme, Türkiye.",
+      "es": "La agencia de viajes online más competitiva y confiable de Kapadokya. Nevşehir / Göreme, Türkiye.",
+      "nl": "Kapadokya's meest concurrerende en betrouwbare online reisbureau. Nevşehir / Göreme, Türkiye.",
+      "zh": "Kapadokya最具竞争力、最值得信赖的在线旅行社。Nevşehir / Göreme, Türkiye。",
+      "hi": "Kapadokya की सबसे प्रतिस्पर्धी और विश्वसनीय ऑनलाइन ट्रैवल एजेंसी। Nevşehir / Göreme, Türkiye।",
+      "ur": "Kapadokya کی سب سے مسابقتی اور قابل اعتماد آن لائن ٹریول ایجنسی۔ Nevşehir / Göreme, Türkiye۔"
+    },
+    "lang_sec_aria_label": {
+      "en": "Select language",
+      "de": "Sprache auswählen",
+      "fr": "Choisir la langue",
+      "es": "Seleccionar idioma",
+      "nl": "Taal selecteren",
+      "zh": "选择语言",
+      "hi": "भाषा चुनें",
+      "ur": "زبان منتخب کریں"
+    },
+    "lang_yakinda_title": {
+      "en": "To be added in Phase 2",
+      "de": "In Phase 2 hinzugefügt",
+      "fr": "Ajouté en phase 2",
+      "es": "Se añadirá en la fase 2",
+      "nl": "Toe te voegen in fase 2",
+      "zh": "将在第2阶段添加",
+      "hi": "चरण 2 में जोड़ा जाएगा",
+      "ur": "مرحلہ 2 میں شامل کیا جائے گا"
+    },
+    "lang_yakinda_badge": {
+      "en": "Coming soon",
+      "de": "Demnächst",
+      "fr": "Bientôt disponible",
+      "es": "Próximamente",
+      "nl": "Binnenkort",
+      "zh": "即将推出",
+      "hi": "जल्द आ रहा है",
+      "ur": "جلد آ رہا ہے"
+    },
+    "bottom_location": {
+      "en": "Nevşehir / Kapadokya, Türkiye",
+      "de": "Nevşehir / Kapadokya, Türkiye",
+      "fr": "Nevşehir / Kapadokya, Türkiye",
+      "es": "Nevşehir / Kapadokya, Türkiye",
+      "nl": "Nevşehir / Kapadokya, Türkiye",
+      "zh": "Nevşehir / Kapadokya, Türkiye",
+      "hi": "Nevşehir / Kapadokya, Türkiye",
+      "ur": "Nevşehir / Kapadokya, Türkiye"
+    },
+    "country_turkiye": {
+      "en": "Türkiye",
+      "de": "Türkiye",
+      "fr": "Türkiye",
+      "es": "Türkiye",
+      "nl": "Türkiye",
+      "zh": "Türkiye",
+      "hi": "Türkiye",
+      "ur": "Türkiye"
+    }
+  },
+  "page.kvkk": {
+    "pagehero_tag_yasal": {
+      "en": "Legal",
+      "de": "Rechtlich",
+      "fr": "Légal",
+      "es": "Legal",
+      "nl": "Juridisch",
+      "zh": "法律",
+      "hi": "कानूनी",
+      "ur": "قانونی"
+    },
+    "pagehero_title_kvkk": {
+      "en": "KVKK",
+      "de": "KVKK",
+      "fr": "KVKK",
+      "es": "KVKK",
+      "nl": "KVKK",
+      "zh": "KVKK",
+      "hi": "KVKK",
+      "ur": "KVKK"
+    }
+  }
+}

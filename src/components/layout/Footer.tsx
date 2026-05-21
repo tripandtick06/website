@@ -62,33 +62,35 @@ export function Footer() {
     return () => document.removeEventListener("mousedown", handler);
   }, [langOpen]);
 
+  const f = t.component.layout.footer;
+
   const FOOTER_SERVICES = [
     { href: "/balonlar", label: t.nav.balloons },
     { href: "/oteller", label: t.nav.hotels },
     { href: "/aktiviteler", label: t.nav.activities },
     { href: "/turlar", label: t.nav.tours },
     { href: "/paketler", label: t.nav.packages },
-    { href: "/transferler", label: "Transfer" },
+    { href: "/transferler", label: f.service_transfer },
   ];
 
   const FOOTER_COMPANY = [
     { href: "/hakkimizda", label: t.nav.about },
-    { href: "/operatorler", label: "Operatörler" },
-    { href: "/yorum", label: "Yorum Yaz" },
+    { href: "/operatorler", label: f.company_operatorler },
+    { href: "/yorum", label: f.company_yorum_yaz },
     { href: "/blog", label: t.nav.blog },
     { href: "/iletisim", label: t.nav.contact },
     { href: "/sss", label: t.nav.faq },
-    { href: "/hesabim", label: "Rezervasyonum" },
-    { href: "/b2b", label: "B2B Acente" },
+    { href: "/hesabim", label: f.company_rezervasyonum },
+    { href: "/b2b", label: f.company_b2b_acente },
   ];
 
   const FOOTER_LEGAL = [
-    { href: "/iptal-iade-politikasi", label: "İptal & İade" },
-    { href: "/gizlilik-politikasi", label: "Gizlilik Politikası" },
-    { href: "/kullanim-sartlari", label: "Kullanım Şartları" },
-    { href: "/cerez-politikasi", label: "KVKK & Çerezler" },
-    { href: "/gdpr", label: "Veri Hakları (GDPR)" },
-    { href: "/impressum", label: "Impressum (DE/AT)" },
+    { href: "/iptal-iade-politikasi", label: f.legal_iptal_iade },
+    { href: "/gizlilik-politikasi", label: f.legal_gizlilik_politikasi },
+    { href: "/kullanim-sartlari", label: f.legal_kullanim_sartlari },
+    { href: "/cerez-politikasi", label: f.legal_kvkk_cerezler },
+    { href: "/gdpr", label: f.legal_veri_haklari_gdpr },
+    { href: "/impressum", label: f.legal_impressum },
   ];
 
   return (
@@ -119,9 +121,9 @@ export function Footer() {
       <div className="border-b border-slate-800">
         <div className="container-main py-8 grid gap-6 sm:grid-cols-[1fr_2fr] items-center">
           <div>
-            <h5 className="text-white font-bold text-base mb-1">Hoşgeldin Bonusu</h5>
+            <h5 className="text-white font-bold text-base mb-1">{f.newsletter_hosgeldin_bonusu}</h5>
             <p className="text-xs text-slate-400 leading-relaxed">
-              Bültene abone olun, ilk rezervasyonunuzda %5 indirim + sezon fırsatları.
+              {f.newsletter_subline}
             </p>
           </div>
           <NewsletterForm variant="inline" source="footer" />
@@ -142,8 +144,7 @@ export function Footer() {
               </span>
             </div>
             <p className="text-sm leading-relaxed mb-5">
-              Kapadokya&apos;nın en rekabetçi fiyatlı, en güvenilir online seyahat acentası.
-              Nevşehir / Göreme, Türkiye.
+              {f.brand_description}
             </p>
             <div className="space-y-2 text-sm">
               <a
@@ -168,7 +169,7 @@ export function Footer() {
               </a>
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4" /> {COMPANY.address.locality},{" "}
-                {COMPANY.address.region}, Türkiye
+                {COMPANY.address.region}, {f.country_turkiye}
               </div>
             </div>
             <div className="flex flex-wrap items-center gap-3 mt-5">
@@ -204,7 +205,7 @@ export function Footer() {
                   className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/[0.06] border border-white/10 text-slate-300 text-xs font-bold hover:bg-white/[0.12] hover:text-white transition-all"
                   aria-haspopup="listbox"
                   aria-expanded={langOpen}
-                  aria-label="Dil seç"
+                  aria-label={f.lang_sec_aria_label}
                 >
                   <Globe className="w-3.5 h-3.5" />
                   {locale.toUpperCase()}
@@ -223,12 +224,12 @@ export function Footer() {
                             key={lang.code}
                             type="button"
                             disabled
-                            title="Faz 2'de eklenecek"
+                            title={f.lang_yakinda_title}
                             className="w-full text-left px-4 py-2 text-sm font-medium text-slate-400 opacity-50 cursor-not-allowed flex items-center justify-between"
                           >
                             <span>{lang.label}</span>
                             <span className="text-[10px] font-semibold uppercase tracking-wide bg-slate-100 text-slate-500 px-2 py-0.5 rounded-full">
-                              Yakında
+                              {f.lang_yakinda_badge}
                             </span>
                           </button>
                         );
@@ -311,7 +312,7 @@ export function Footer() {
       <div className="border-t border-slate-800">
         <div className="container-main py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
           <span>© 2026 Trip and Tick. {t.footer.rights}</span>
-          <span className="text-slate-500">Nevşehir / Kapadokya, Türkiye</span>
+          <span className="text-slate-500">{f.bottom_location}</span>
         </div>
       </div>
     </footer>

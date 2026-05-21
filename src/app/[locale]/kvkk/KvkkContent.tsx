@@ -5,17 +5,6 @@ import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { PageHero } from "@/components/layout/PageHero";
 import { useT } from "@/lib/i18n/I18nProvider";
 
-// NEW KEYS (not yet in dict — pending harvest):
-// page.kvkk.adres_label = "Adres:"
-// page.kvkk.eposta_label = "E-posta:"
-// page.kvkk.telefon_label = "Telefon:"
-// page.kvkk.eposta_info = "info@tripandtick.com"
-// page.kvkk.telefon_no = "+90 537 464 78 61"
-// page.kvkk.online_onerilir_label = "Online (önerilen):"
-// page.kvkk.veri_haklari_talep_formu = "Veri Hakları Talep Formu"
-// page.kvkk.magic_link_aciklama = "— veri erişim (KVKK m.11/b) veya silme (m.11/e) için 24 saatlik onaylı magic-link."
-// page.kvkk.posta_label = "Posta:"
-// page.kvkk.kvkk_gov_url_text = "www.kvkk.gov.tr"
 
 export function KvkkContent() {
   const t = useT();
@@ -24,8 +13,8 @@ export function KvkkContent() {
   return (
     <>
       <PageHero
-        tag="Yasal"
-        title="KVKK"
+        tag={d.pagehero_tag_yasal}
+        title={d.pagehero_title_kvkk}
         highlight={d.pagehero_highlight_aydinlatma_metni}
         description={d.pagehero_description_6698_sayili}
       />
@@ -45,10 +34,9 @@ export function KvkkContent() {
             {d.olarak_kisisel_verilerin}
           </p>
           <p className="text-slate-700 mb-4">
-            {/* NEW: adres_label, eposta_label, telefon_label, eposta_info, telefon_no */}
-            <strong>Adres:</strong> {d.goreme_merkez_nevsehir_50180}<br />
-            <strong>E-posta:</strong> info@tripandtick.com<br />
-            <strong>Telefon:</strong> +90 537 464 78 61
+            <strong>{d.adres_label}</strong> {d.goreme_merkez_nevsehir_50180}<br />
+            <strong>{d.eposta_label}</strong> {d.eposta_info}<br />
+            <strong>{d.telefon_label}</strong> {d.telefon_no}
           </p>
 
           <h2 className="text-2xl font-extrabold mt-8 mb-3">
@@ -121,22 +109,19 @@ export function KvkkContent() {
           </p>
           <ul className="list-disc pl-6 space-y-1.5 text-slate-700 mb-4">
             <li>
-              {/* NEW: online_onerilir_label, veri_haklari_talep_formu, magic_link_aciklama */}
-              <strong>Online (önerilen):</strong>{" "}
+              <strong>{d.online_onerilir_label}</strong>{" "}
               <Link href="/gdpr" className="text-accent font-semibold">
-                Veri Hakları Talep Formu
+                {d.veri_haklari_talep_formu}
               </Link>
-              {" "}— veri erişim (KVKK m.11/b) veya silme (m.11/e) için 24 saatlik onaylı magic-link.
+              {" "}{d.magic_link_aciklama}
             </li>
             <li>
-              {/* NEW: eposta_label, eposta_info */}
-              <strong>E-posta:</strong>{" "}
+              <strong>{d.eposta_label}</strong>{" "}
               <a href="mailto:info@tripandtick.com" className="text-accent font-semibold">
-                info@tripandtick.com
+                {d.eposta_info}
               </a>
             </li>
-            {/* NEW: posta_label */}
-            <li><strong>Posta:</strong> {d.goreme_merkez_nevsehir_50180_2}</li>
+            <li><strong>{d.posta_label}</strong> {d.goreme_merkez_nevsehir_50180_2}</li>
             <li><strong>{d.noter_ihtarnamesi}</strong> {d.resmi_kayitli_yontem}</li>
           </ul>
           <p className="text-slate-700 mb-4">
@@ -149,14 +134,13 @@ export function KvkkContent() {
           </p>
           <p className="text-slate-700 mb-4">
             <strong>{d.kisisel_verileri_koruma_kurumu}</strong>{" "}
-            {/* NEW: kvkk_gov_url_text */}
             <a
               href="https://www.kvkk.gov.tr"
               target="_blank"
               rel="noopener noreferrer"
               className="text-accent font-semibold"
             >
-              www.kvkk.gov.tr
+              {d.kvkk_gov_url_text}
             </a>
           </p>
 

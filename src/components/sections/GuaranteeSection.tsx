@@ -5,14 +5,14 @@ import { useT } from "@/lib/i18n/I18nProvider";
 
 export function GuaranteeSection() {
   const t = useT();
+  const g = t.component.sections.guarantee;
 
-  // Faz 1: 4 keys mapped from dictionary; "En Düşük Fiyat" card keeps TR copy.
   const GUARANTEES = [
-    { icon: ShieldCheck, title: t.trust.refund, sub: "Operatör iptali = tam iade" },
-    { icon: Lock, title: t.trust.secure, sub: "PCI-DSS uyumlu altyapı" },
-    { icon: BadgeDollarSign, title: "En Düşük Fiyat", sub: "Fiyat farkını biz karşılarız" },
-    { icon: Award, title: t.trust.insurance, sub: "Tüm uçuşlarda dahil" },
-    { icon: Globe, title: t.trust.languages, sub: "Kendi dilinizde hizmet" },
+    { icon: ShieldCheck, title: t.trust.refund, sub: g.sub_tam_iade },
+    { icon: Lock, title: t.trust.secure, sub: g.sub_pci_dss },
+    { icon: BadgeDollarSign, title: g.en_dusuk_fiyat, sub: g.sub_fiyat_farki },
+    { icon: Award, title: t.trust.insurance, sub: g.sub_tum_ucuslarda },
+    { icon: Globe, title: t.trust.languages, sub: g.sub_kendi_dilinizde },
   ];
 
   return (
@@ -22,13 +22,14 @@ export function GuaranteeSection() {
 
       <div className="container-main relative text-center">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight mb-4">
-          Bizden Daha Ucuzunu
+          {g.headline_ucuzunu}
           <br />
-          <span className="text-accent">Buldunuz mu?</span>
+          <span className="text-accent">{g.headline_buldunuz_mu}</span>
         </h2>
         <p className="text-white/65 text-lg max-w-xl mx-auto mb-12">
-          Aynı tarih, aynı hizmet için daha düşük fiyatlı bir teklif kanıtlayın
-          — o fiyatın <strong className="text-white">%5 altına</strong> ineriz.
+          {g.subtext_teklif}{" "}
+          <strong className="text-white">{g.subtext_yuzde_5}</strong>{" "}
+          {g.subtext_ineriz}
         </p>
 
         <div className="flex flex-wrap justify-center gap-4">

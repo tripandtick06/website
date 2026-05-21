@@ -9,6 +9,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "@/i18n/routing";
+import { useT } from "@/lib/i18n/I18nProvider";
 import { AlertTriangle, CalendarPlus, CheckCircle2, FileText, Home, Mail, UserCircle } from "lucide-react";
 import { loadDraft, generateBookingCode, clearDraft } from "@/lib/booking-storage";
 
@@ -54,6 +55,8 @@ function appendBooking(b: StoredBooking) {
 }
 
 export function BasariliClient(props: Props) {
+  const t = useT();
+  const ns = t.component.rezervasyon.success_client;
   const { isDemo, slug: slugUrl, total: totalUrl, currency: currencyUrl, bookingIdFromUrl } = props;
   const [booking, setBooking] = useState<StoredBooking | null>(null);
 
@@ -64,10 +67,10 @@ export function BasariliClient(props: Props) {
 
     const next: StoredBooking = {
       bookingId: code,
-      customerName: leadPax?.fullName ?? "Musafir",
+      customerName: leadPax?.fullName ?? ns.default_customer_name,
       customerEmail: leadPax?.email ?? "",
       customerPhone: leadPax?.phone ?? "",
-      serviceName: draft?.serviceName ?? "Kapadokya Balon Turu",
+      serviceName: draft?.serviceName ?? ns.default_service_name,
       serviceSlug: draft?.serviceSlug ?? slugUrl ?? "kapadokya-balon-turu",
       date: draft?.date ?? new Date(Date.now() + 86400000).toISOString().slice(0, 10),
       adults: draft?.adults ?? 2,
@@ -124,16 +127,15 @@ export function BasariliClient(props: Props) {
           <div className="bg-rose-50 border-2 border-rose-300 rounded-2xl p-4 mb-6 text-left flex items-start gap-3">
             <AlertTriangle className="w-6 h-6 text-rose-600 flex-shrink-0 mt-0.5" />
             <div>
-              <p className="font-bold text-rose-900 text-sm">TEST / DEMO MODU — Gerçek ödeme yapılmadı</p>
+              <p className="font-bold text-rose-900 text-sm">{ns.demo_badge}</p>
               <p className="text-xs text-rose-800 mt-1">
-                Bu sayfa demo amaçlıdır. Hiçbir tutar tahsil edilmedi, rezervasyon operatöre iletilmedi.
-                Gerçek rezervasyon için lütfen bizimle iletişime geçin:{" "}
+                {ns.demo_description}{" "}
                 <a href="tel:+905374647861" className="font-semibold underline">+90 537 464 78 61</a>
                 {" / "}
                 <a href="https://wa.me/905374647861" className="font-semibold underline" target="_blank" rel="noreferrer">WhatsApp</a>.
               </p>
               <p className="text-[10px] text-rose-700 mt-2">
-                Admin: Stripe env-var Cloudflare Pages dashboard'unda set edilmemis.
+                {ns.demo_admin_note}
               </p>
             </div>
           </div>
@@ -143,21 +145,19 @@ export function BasariliClient(props: Props) {
         </div>
 
         <h1 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-3">
-          {isDemo ? "Demo Tamamlandı" : "Tesekkurler!"}
+          {isDemo ? ns.heading_demo : ns.heading_success}
         </h1>
         <p className="text-lg text-slate-600 mb-1">
-          {isDemo ? "Test akışı bitti — gerçek rezervasyon oluşmadı." : "Rezervasyonunuz basariyla olusturuldu."}
+          {isDemo ? ns.subheading_demo : ns.subheading_success}
         </p>
         <p className="text-sm text-slate-500 mb-8">
-          {isDemo
-            ? "Demo modunda — gercek odeme yapilmadi, Stripe henuz yapilandirilmamis."
-            : "Odeme alindi ve bilgilendirme e-postasi gonderildi."}
+          {isDemo ? ns.note_demo : ns.note_success}
         </p>
 
         <div className="bg-amber-50 border-2 border-amber-200 rounded-2xl p-6 mb-8">
-          <p className="text-sm text-slate-600 mb-2">Rezervasyon Kodu</p>
+          <p className="text-sm text-slate-600 mb-2">{ns.booking_code_label}</p>
           <p className="text-3xl lg:text-4xl font-bold text-amber-700 tracking-wider font-mono">{code}</p>
-          <p className="text-xs text-slate-500 mt-3">Bu kodu kaydedin — operator onayi icin gereklidir.</p>
+          <p className="text-xs text-slate-500 mt-3">{ns.booking_code_hint}</p>
         </div>
 
         <div className="grid sm:grid-cols-3 gap-3 mb-6">
@@ -167,39 +167,39 @@ export function BasariliClient(props: Props) {
             rel="noreferrer"
             className="inline-flex items-center justify-center gap-2 bg-primary text-white px-5 py-3 rounded-lg font-semibold hover:bg-primary-dark transition-colors text-sm"
           >
-            <FileText className="w-4 h-4" /> PDF Fatura
+            <FileText className="w-4 h-4" /> {ns.cta_pdf}
           </a>
           <a
             href={icalHref}
             className="inline-flex items-center justify-center gap-2 bg-slate-100 text-slate-800 px-5 py-3 rounded-lg font-semibold hover:bg-slate-200 transition-colors text-sm"
           >
-            <CalendarPlus className="w-4 h-4" /> Takvime Ekle
+            <CalendarPlus className="w-4 h-4" /> {ns.cta_ical}
           </a>
           <Link
             href={`/hesabim?code=${encodeURIComponent(code)}`}
             className="inline-flex items-center justify-center gap-2 bg-amber-500 text-white px-5 py-3 rounded-lg font-semibold hover:bg-amber-600 transition-colors text-sm"
           >
-            <UserCircle className="w-4 h-4" /> Rezervasyonumu Gor
+            <UserCircle className="w-4 h-4" /> {ns.cta_my_booking}
           </Link>
         </div>
 
         <div className="grid sm:grid-cols-3 gap-3 text-left mb-8">
-          <InfoCard icon={Mail} title="E-posta Onayi" body="Detaylar e-postaniza iletildi. Spam klasorunu kontrol edin." />
-          <InfoCard icon={CalendarPlus} title="Ucus Hatirlatmasi" body="Ucus gunu 24 saat once SMS ve e-posta ile hatirlatilir." />
-          <InfoCard icon={CheckCircle2} title="Operator Onayi" body="Operator dogrulamasi 2 saat icinde yapilir." />
+          <InfoCard icon={Mail} title={ns.info_email_title} body={ns.info_email_body} />
+          <InfoCard icon={CalendarPlus} title={ns.info_reminder_title} body={ns.info_reminder_body} />
+          <InfoCard icon={CheckCircle2} title={ns.info_operator_title} body={ns.info_operator_body} />
         </div>
 
         <div className="flex flex-wrap gap-3 justify-center">
           <Link href="/" className="inline-flex items-center gap-2 border border-slate-300 hover:bg-slate-50 px-6 py-3 rounded-lg font-medium text-slate-700">
-            <Home className="w-4 h-4" /> Ana Sayfa
+            <Home className="w-4 h-4" /> {ns.nav_home}
           </Link>
           <Link href="/balonlar" className="inline-flex items-center gap-2 border border-slate-300 hover:bg-slate-50 px-6 py-3 rounded-lg font-medium text-slate-700">
-            Tekrar Rezervasyon
+            {ns.nav_rebook}
           </Link>
         </div>
 
         <p className="text-xs text-slate-400 mt-8">
-          Sorulariniz icin <a href="mailto:hello@tripandtick.com" className="underline">hello@tripandtick.com</a> veya{" "}
+          {ns.contact_prefix} <a href="mailto:hello@tripandtick.com" className="underline">hello@tripandtick.com</a> {ns.contact_or}{" "}
           <a href="https://wa.me/905374647861" className="underline" target="_blank" rel="noreferrer">WhatsApp</a>.
         </p>
       </div>

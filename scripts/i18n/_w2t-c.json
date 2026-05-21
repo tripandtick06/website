@@ -1,0 +1,1148 @@
+{
+  "component.ara.search_client": {
+    "heading_search": {
+      "en": "Search",
+      "de": "Suche",
+      "fr": "Recherche",
+      "es": "Búsqueda",
+      "nl": "Zoeken",
+      "zh": "搜索",
+      "hi": "खोज",
+      "ur": "تلاش"
+    },
+    "heading_search_prefix": {
+      "en": "Search:",
+      "de": "Suche:",
+      "fr": "Recherche :",
+      "es": "Búsqueda:",
+      "nl": "Zoeken:",
+      "zh": "搜索：",
+      "hi": "खोज:",
+      "ur": "تلاش:"
+    },
+    "results_count": {
+      "en": "{count} results found.",
+      "de": "{count} Ergebnisse gefunden.",
+      "fr": "{count} résultats trouvés.",
+      "es": "{count} resultados encontrados.",
+      "nl": "{count} resultaten gevonden.",
+      "zh": "找到 {count} 个结果。",
+      "hi": "{count} परिणाम मिले।",
+      "ur": "{count} نتائج ملے۔"
+    },
+    "results_empty_hint": {
+      "en": "Search for balloon tours, hotels, activities, packages or transfers.",
+      "de": "Suchen Sie nach Ballontouren, Hotels, Aktivitäten, Paketen oder Transfers.",
+      "fr": "Recherchez des tours en montgolfière, hôtels, activités, forfaits ou transferts.",
+      "es": "Busca tours en globo, hoteles, actividades, paquetes o traslados.",
+      "nl": "Zoek naar ballonvaarten, hotels, activiteiten, pakketten of transfers.",
+      "zh": "搜索热气球旅游、酒店、活动、套餐或接送服务。",
+      "hi": "बैलून टूर, होटल, गतिविधि, पैकेज या ट्रांसफर खोजें।",
+      "ur": "غبارے کے دورے، ہوٹل، سرگرمیاں، پیکج یا ٹرانسفر تلاش کریں۔"
+    },
+    "search_placeholder": {
+      "en": "E.g.: balloon, deluxe, atv, cave hotel, red tour…",
+      "de": "Z.B.: Ballon, Deluxe, ATV, Höhlenhotel, Rote Tour…",
+      "fr": "Ex. : montgolfière, deluxe, atv, hôtel grotte, circuit rouge…",
+      "es": "Ej.: globo, deluxe, atv, hotel cueva, tour rojo…",
+      "nl": "Bijv.: ballon, deluxe, atv, grot hotel, rode tour…",
+      "zh": "例如：热气球、豪华、ATV、洞穴酒店、红色之旅…",
+      "hi": "उदा.: बैलून, डीलक्स, ATV, गुफा होटल, लाल टूर…",
+      "ur": "مثلاً: غبارہ، ڈیلکس، ATV، غار ہوٹل، سرخ دورہ…"
+    },
+    "search_aria_label": {
+      "en": "Search box",
+      "de": "Suchfeld",
+      "fr": "Champ de recherche",
+      "es": "Cuadro de búsqueda",
+      "nl": "Zoekvak",
+      "zh": "搜索框",
+      "hi": "खोज बॉक्स",
+      "ur": "تلاش خانہ"
+    },
+    "clear_search_aria_label": {
+      "en": "Clear search",
+      "de": "Suche löschen",
+      "fr": "Effacer la recherche",
+      "es": "Borrar búsqueda",
+      "nl": "Zoekopdracht wissen",
+      "zh": "清除搜索",
+      "hi": "खोज साफ़ करें",
+      "ur": "تلاش صاف کریں"
+    },
+    "recent_searches_heading": {
+      "en": "Recent Searches",
+      "de": "Letzte Suchen",
+      "fr": "Recherches récentes",
+      "es": "Búsquedas recientes",
+      "nl": "Recente zoekopdrachten",
+      "zh": "最近搜索",
+      "hi": "हाल की खोजें",
+      "ur": "حالیہ تلاشیں"
+    },
+    "recent_searches_clear": {
+      "en": "Clear",
+      "de": "Löschen",
+      "fr": "Effacer",
+      "es": "Borrar",
+      "nl": "Wissen",
+      "zh": "清除",
+      "hi": "साफ़ करें",
+      "ur": "صاف کریں"
+    },
+    "filters_button": {
+      "en": "Filters",
+      "de": "Filter",
+      "fr": "Filtres",
+      "es": "Filtros",
+      "nl": "Filters",
+      "zh": "筛选",
+      "hi": "फ़िल्टर",
+      "ur": "فلٹرز"
+    },
+    "filters_active_badge": {
+      "en": "active",
+      "de": "aktiv",
+      "fr": "actif",
+      "es": "activo",
+      "nl": "actief",
+      "zh": "已启用",
+      "hi": "सक्रिय",
+      "ur": "فعال"
+    },
+    "sort_label": {
+      "en": "Sort:",
+      "de": "Sortieren:",
+      "fr": "Trier :",
+      "es": "Ordenar:",
+      "nl": "Sorteren:",
+      "zh": "排序：",
+      "hi": "क्रमबद्ध:",
+      "ur": "ترتیب:"
+    },
+    "sort_popularity": {
+      "en": "Most Popular",
+      "de": "Beliebteste",
+      "fr": "Les plus populaires",
+      "es": "Más Popular",
+      "nl": "Meest populair",
+      "zh": "最受欢迎",
+      "hi": "सबसे लोकप्रिय",
+      "ur": "سب سے مقبول"
+    },
+    "sort_price_asc": {
+      "en": "Lowest Price",
+      "de": "Günstigste",
+      "fr": "Prix croissant",
+      "es": "Más Barato",
+      "nl": "Laagste prijs",
+      "zh": "最低价格",
+      "hi": "सबसे सस्ता",
+      "ur": "سب سے سستا"
+    },
+    "sort_price_desc": {
+      "en": "Highest Price",
+      "de": "Teuerste",
+      "fr": "Prix décroissant",
+      "es": "Más Caro",
+      "nl": "Hoogste prijs",
+      "zh": "最高价格",
+      "hi": "सबसे महंगा",
+      "ur": "سب سے مہنگا"
+    },
+    "sort_rating_desc": {
+      "en": "Top Rated",
+      "de": "Beste Bewertung",
+      "fr": "Mieux noté",
+      "es": "Mejor Valorado",
+      "nl": "Hoogst beoordeeld",
+      "zh": "评分最高",
+      "hi": "उच्चतम रेटिंग",
+      "ur": "بہترین درجہ بندی"
+    },
+    "sort_newest": {
+      "en": "Newest",
+      "de": "Neueste",
+      "fr": "Plus récent",
+      "es": "Más Nuevo",
+      "nl": "Nieuwste",
+      "zh": "最新",
+      "hi": "नवीनतम",
+      "ur": "تازہ ترین"
+    },
+    "clear_filters": {
+      "en": "Clear Filters",
+      "de": "Filter zurücksetzen",
+      "fr": "Réinitialiser les filtres",
+      "es": "Borrar filtros",
+      "nl": "Filters wissen",
+      "zh": "清除筛选",
+      "hi": "फ़िल्टर साफ़ करें",
+      "ur": "فلٹرز صاف کریں"
+    },
+    "filter_price_heading": {
+      "en": "Price Range",
+      "de": "Preisbereich",
+      "fr": "Fourchette de prix",
+      "es": "Rango de precio",
+      "nl": "Prijsbereik",
+      "zh": "价格区间",
+      "hi": "मूल्य सीमा",
+      "ur": "قیمت کی حد"
+    },
+    "filter_price_custom": {
+      "en": "Custom:",
+      "de": "Benutzerdefiniert:",
+      "fr": "Personnalisé :",
+      "es": "Personalizado:",
+      "nl": "Aangepast:",
+      "zh": "自定义：",
+      "hi": "कस्टम:",
+      "ur": "حسب ضرورت:"
+    },
+    "filter_price_min_placeholder": {
+      "en": "Min €",
+      "de": "Min €",
+      "fr": "Min €",
+      "es": "Mín €",
+      "nl": "Min €",
+      "zh": "最低 €",
+      "hi": "न्यूनतम €",
+      "ur": "کم از کم €"
+    },
+    "filter_price_max_placeholder": {
+      "en": "Max €",
+      "de": "Max €",
+      "fr": "Max €",
+      "es": "Máx €",
+      "nl": "Max €",
+      "zh": "最高 €",
+      "hi": "अधिकतम €",
+      "ur": "زیادہ سے زیادہ €"
+    },
+    "filter_rating_heading": {
+      "en": "Minimum Rating",
+      "de": "Mindestbewertung",
+      "fr": "Note minimale",
+      "es": "Puntuación mínima",
+      "nl": "Minimale beoordeling",
+      "zh": "最低评分",
+      "hi": "न्यूनतम रेटिंग",
+      "ur": "کم از کم درجہ بندی"
+    },
+    "filter_duration_heading": {
+      "en": "Duration",
+      "de": "Dauer",
+      "fr": "Durée",
+      "es": "Duración",
+      "nl": "Duur",
+      "zh": "时长",
+      "hi": "अवधि",
+      "ur": "مدت"
+    },
+    "filter_currency_heading": {
+      "en": "Currency",
+      "de": "Währung",
+      "fr": "Devise",
+      "es": "Moneda",
+      "nl": "Valuta",
+      "zh": "货币",
+      "hi": "मुद्रा",
+      "ur": "کرنسی"
+    },
+    "price_chip_any": {
+      "en": "All",
+      "de": "Alle",
+      "fr": "Tous",
+      "es": "Todos",
+      "nl": "Alle",
+      "zh": "全部",
+      "hi": "सभी",
+      "ur": "سب"
+    },
+    "price_chip_0_50": {
+      "en": "€0-50",
+      "de": "€0-50",
+      "fr": "€0-50",
+      "es": "€0-50",
+      "nl": "€0-50",
+      "zh": "€0-50",
+      "hi": "€0-50",
+      "ur": "€0-50"
+    },
+    "price_chip_50_150": {
+      "en": "€50-150",
+      "de": "€50-150",
+      "fr": "€50-150",
+      "es": "€50-150",
+      "nl": "€50-150",
+      "zh": "€50-150",
+      "hi": "€50-150",
+      "ur": "€50-150"
+    },
+    "price_chip_150_300": {
+      "en": "€150-300",
+      "de": "€150-300",
+      "fr": "€150-300",
+      "es": "€150-300",
+      "nl": "€150-300",
+      "zh": "€150-300",
+      "hi": "€150-300",
+      "ur": "€150-300"
+    },
+    "price_chip_300_plus": {
+      "en": "€300+",
+      "de": "€300+",
+      "fr": "€300+",
+      "es": "€300+",
+      "nl": "€300+",
+      "zh": "€300+",
+      "hi": "€300+",
+      "ur": "€300+"
+    },
+    "rating_chip_any": {
+      "en": "All",
+      "de": "Alle",
+      "fr": "Tous",
+      "es": "Todos",
+      "nl": "Alle",
+      "zh": "全部",
+      "hi": "सभी",
+      "ur": "سب"
+    },
+    "rating_chip_3": {
+      "en": "3+ ★",
+      "de": "3+ ★",
+      "fr": "3+ ★",
+      "es": "3+ ★",
+      "nl": "3+ ★",
+      "zh": "3+ ★",
+      "hi": "3+ ★",
+      "ur": "3+ ★"
+    },
+    "rating_chip_4": {
+      "en": "4+ ★",
+      "de": "4+ ★",
+      "fr": "4+ ★",
+      "es": "4+ ★",
+      "nl": "4+ ★",
+      "zh": "4+ ★",
+      "hi": "4+ ★",
+      "ur": "4+ ★"
+    },
+    "rating_chip_4_5": {
+      "en": "4.5+ ★",
+      "de": "4.5+ ★",
+      "fr": "4.5+ ★",
+      "es": "4.5+ ★",
+      "nl": "4.5+ ★",
+      "zh": "4.5+ ★",
+      "hi": "4.5+ ★",
+      "ur": "4.5+ ★"
+    },
+    "duration_chip_any": {
+      "en": "All Durations",
+      "de": "Alle Dauern",
+      "fr": "Toutes durées",
+      "es": "Todas las duraciones",
+      "nl": "Alle duur",
+      "zh": "所有时长",
+      "hi": "सभी अवधि",
+      "ur": "تمام مدتیں"
+    },
+    "duration_chip_lt2h": {
+      "en": "< 2 hours",
+      "de": "< 2 Stunden",
+      "fr": "< 2 heures",
+      "es": "< 2 horas",
+      "nl": "< 2 uur",
+      "zh": "< 2小时",
+      "hi": "< 2 घंटे",
+      "ur": "< 2 گھنٹے"
+    },
+    "duration_chip_2to4h": {
+      "en": "2-4 hours",
+      "de": "2-4 Stunden",
+      "fr": "2-4 heures",
+      "es": "2-4 horas",
+      "nl": "2-4 uur",
+      "zh": "2-4小时",
+      "hi": "2-4 घंटे",
+      "ur": "2-4 گھنٹے"
+    },
+    "duration_chip_half_day": {
+      "en": "Half day",
+      "de": "Halber Tag",
+      "fr": "Demi-journée",
+      "es": "Medio día",
+      "nl": "Halve dag",
+      "zh": "半天",
+      "hi": "आधा दिन",
+      "ur": "آدھا دن"
+    },
+    "duration_chip_full_day": {
+      "en": "Full day",
+      "de": "Ganztägig",
+      "fr": "Journée entière",
+      "es": "Día completo",
+      "nl": "Hele dag",
+      "zh": "全天",
+      "hi": "पूरा दिन",
+      "ur": "پورا دن"
+    },
+    "duration_chip_multi_day": {
+      "en": "Multi-day",
+      "de": "Mehrtägig",
+      "fr": "Plusieurs jours",
+      "es": "Varios días",
+      "nl": "Meerdere dagen",
+      "zh": "多天",
+      "hi": "बहु-दिवसीय",
+      "ur": "کئی دن"
+    },
+    "currency_chip_any": {
+      "en": "All Currencies",
+      "de": "Alle Währungen",
+      "fr": "Toutes devises",
+      "es": "Todas las monedas",
+      "nl": "Alle valuta",
+      "zh": "所有货币",
+      "hi": "सभी मुद्राएं",
+      "ur": "تمام کرنسیاں"
+    },
+    "currency_chip_eur": {
+      "en": "EUR €",
+      "de": "EUR €",
+      "fr": "EUR €",
+      "es": "EUR €",
+      "nl": "EUR €",
+      "zh": "EUR €",
+      "hi": "EUR €",
+      "ur": "EUR €"
+    },
+    "currency_chip_try": {
+      "en": "TRY ₺",
+      "de": "TRY ₺",
+      "fr": "TRY ₺",
+      "es": "TRY ₺",
+      "nl": "TRY ₺",
+      "zh": "TRY ₺",
+      "hi": "TRY ₺",
+      "ur": "TRY ₺"
+    },
+    "currency_chip_usd": {
+      "en": "USD $",
+      "de": "USD $",
+      "fr": "USD $",
+      "es": "USD $",
+      "nl": "USD $",
+      "zh": "USD $",
+      "hi": "USD $",
+      "ur": "USD $"
+    },
+    "category_tab_all": {
+      "en": "All",
+      "de": "Alle",
+      "fr": "Tout",
+      "es": "Todos",
+      "nl": "Alle",
+      "zh": "全部",
+      "hi": "सभी",
+      "ur": "سب"
+    },
+    "category_tab_balloon": {
+      "en": "Balloon",
+      "de": "Ballon",
+      "fr": "Montgolfière",
+      "es": "Globo",
+      "nl": "Ballon",
+      "zh": "热气球",
+      "hi": "बैलून",
+      "ur": "غبارہ"
+    },
+    "category_tab_package": {
+      "en": "Package",
+      "de": "Paket",
+      "fr": "Forfait",
+      "es": "Paquete",
+      "nl": "Pakket",
+      "zh": "套餐",
+      "hi": "पैकेज",
+      "ur": "پیکج"
+    },
+    "category_tab_tour": {
+      "en": "Tour",
+      "de": "Tour",
+      "fr": "Circuit",
+      "es": "Tour",
+      "nl": "Tour",
+      "zh": "旅游",
+      "hi": "टूर",
+      "ur": "دورہ"
+    },
+    "category_tab_activity": {
+      "en": "Activity",
+      "de": "Aktivität",
+      "fr": "Activité",
+      "es": "Actividad",
+      "nl": "Activiteit",
+      "zh": "活动",
+      "hi": "गतिविधि",
+      "ur": "سرگرمی"
+    },
+    "category_tab_hotel": {
+      "en": "Hotel",
+      "de": "Hotel",
+      "fr": "Hôtel",
+      "es": "Hotel",
+      "nl": "Hotel",
+      "zh": "酒店",
+      "hi": "होटल",
+      "ur": "ہوٹل"
+    },
+    "category_tab_transfer": {
+      "en": "Transfer",
+      "de": "Transfer",
+      "fr": "Transfert",
+      "es": "Traslado",
+      "nl": "Transfer",
+      "zh": "接送",
+      "hi": "ट्रांसफर",
+      "ur": "ٹرانسفر"
+    },
+    "category_tab_pillar": {
+      "en": "Guide",
+      "de": "Ratgeber",
+      "fr": "Guide",
+      "es": "Guía",
+      "nl": "Gids",
+      "zh": "攻略",
+      "hi": "गाइड",
+      "ur": "رہنما"
+    },
+    "category_label_balloon": {
+      "en": "Balloon",
+      "de": "Ballon",
+      "fr": "Montgolfière",
+      "es": "Globo",
+      "nl": "Ballon",
+      "zh": "热气球",
+      "hi": "बैलून",
+      "ur": "غبارہ"
+    },
+    "category_label_activity": {
+      "en": "Activity",
+      "de": "Aktivität",
+      "fr": "Activité",
+      "es": "Actividad",
+      "nl": "Activiteit",
+      "zh": "活动",
+      "hi": "गतिविधि",
+      "ur": "سرگرمی"
+    },
+    "category_label_tour": {
+      "en": "Tour",
+      "de": "Tour",
+      "fr": "Circuit",
+      "es": "Tour",
+      "nl": "Tour",
+      "zh": "旅游",
+      "hi": "टूर",
+      "ur": "دورہ"
+    },
+    "category_label_hotel": {
+      "en": "Hotel",
+      "de": "Hotel",
+      "fr": "Hôtel",
+      "es": "Hotel",
+      "nl": "Hotel",
+      "zh": "酒店",
+      "hi": "होटल",
+      "ur": "ہوٹل"
+    },
+    "category_label_package": {
+      "en": "Package",
+      "de": "Paket",
+      "fr": "Forfait",
+      "es": "Paquete",
+      "nl": "Pakket",
+      "zh": "套餐",
+      "hi": "पैकेज",
+      "ur": "پیکج"
+    },
+    "category_label_transfer": {
+      "en": "Transfer",
+      "de": "Transfer",
+      "fr": "Transfert",
+      "es": "Traslado",
+      "nl": "Transfer",
+      "zh": "接送",
+      "hi": "ट्रांसफर",
+      "ur": "ٹرانسفر"
+    },
+    "category_label_pillar": {
+      "en": "Guide",
+      "de": "Ratgeber",
+      "fr": "Guide",
+      "es": "Guía",
+      "nl": "Gids",
+      "zh": "攻略",
+      "hi": "गाइड",
+      "ur": "رہنما"
+    },
+    "no_results_heading": {
+      "en": "No results found",
+      "de": "Keine Ergebnisse gefunden",
+      "fr": "Aucun résultat trouvé",
+      "es": "No se encontraron resultados",
+      "nl": "Geen resultaten gevonden",
+      "zh": "未找到结果",
+      "hi": "कोई परिणाम नहीं मिला",
+      "ur": "کوئی نتیجہ نہیں ملا"
+    },
+    "no_results_with_filters": {
+      "en": "No results match your filters. Try different filters or keywords.",
+      "de": "Keine Ergebnisse für Ihre Filter. Versuchen Sie andere Filter oder Begriffe.",
+      "fr": "Aucun résultat pour vos filtres. Essayez d'autres filtres ou mots-clés.",
+      "es": "Sin resultados con estos filtros. Prueba otros filtros o palabras clave.",
+      "nl": "Geen resultaten voor uw filters. Probeer andere filters of trefwoorden.",
+      "zh": "没有符合筛选条件的结果，请尝试不同的筛选或关键词。",
+      "hi": "आपके फ़िल्टर से कोई परिणाम नहीं। भिन्न फ़िल्टर या शब्द आज़माएं।",
+      "ur": "آپ کے فلٹرز سے کوئی نتیجہ نہیں۔ مختلف فلٹر یا الفاظ آزمائیں۔"
+    },
+    "no_results_empty_query": {
+      "en": "Enter a keyword to start searching.",
+      "de": "Geben Sie ein Stichwort ein, um zu suchen.",
+      "fr": "Saisissez un mot-clé pour commencer la recherche.",
+      "es": "Escribe una palabra clave para comenzar a buscar.",
+      "nl": "Voer een trefwoord in om te zoeken.",
+      "zh": "输入关键词开始搜索。",
+      "hi": "खोज शुरू करने के लिए एक शब्द दर्ज करें।",
+      "ur": "تلاش شروع کرنے کے لیے کوئی لفظ درج کریں۔"
+    },
+    "suggestions_heading": {
+      "en": "Suggested",
+      "de": "Vorgeschlagen",
+      "fr": "Suggestions",
+      "es": "Sugerencias",
+      "nl": "Aanbevolen",
+      "zh": "推荐",
+      "hi": "सुझाव",
+      "ur": "تجاویز"
+    }
+  },
+  "component.rezervasyon.reschedule_client": {
+    "error_select_date": {
+      "en": "Please select an alternative date.",
+      "de": "Bitte wählen Sie ein alternatives Datum.",
+      "fr": "Veuillez sélectionner une date alternative.",
+      "es": "Por favor, seleccione una fecha alternativa.",
+      "nl": "Selecteer een alternatieve datum.",
+      "zh": "请选择备选日期。",
+      "hi": "कृपया वैकल्पिक तिथि चुनें।",
+      "ur": "براہ کرم متبادل تاریخ منتخب کریں۔"
+    },
+    "confirm_refund": {
+      "en": "Are you sure you want a full refund? This action cannot be undone.",
+      "de": "Sind Sie sicher, dass Sie eine vollständige Rückerstattung möchten? Diese Aktion kann nicht rückgängig gemacht werden.",
+      "fr": "Êtes-vous sûr de vouloir un remboursement complet ? Cette action est irréversible.",
+      "es": "¿Está seguro de que desea el reembolso completo? Esta acción no se puede deshacer.",
+      "nl": "Weet u zeker dat u volledige terugbetaling wilt? Deze actie kan niet worden teruggedraaid.",
+      "zh": "您确定要全额退款吗？此操作无法撤销。",
+      "hi": "क्या आप सुनिश्चित हैं कि आप पूर्ण धनवापसी चाहते हैं? यह क्रिया वापस नहीं हो सकती।",
+      "ur": "کیا آپ مکمل واپسی چاہتے ہیں؟ یہ عمل واپس نہیں ہو سکتا۔"
+    },
+    "error_generic": {
+      "en": "An error occurred.",
+      "de": "Ein Fehler ist aufgetreten.",
+      "fr": "Une erreur s'est produite.",
+      "es": "Ha ocurrido un error.",
+      "nl": "Er is een fout opgetreden.",
+      "zh": "发生了错误。",
+      "hi": "एक त्रुटि हुई।",
+      "ur": "ایک خرابی پیش آئی۔"
+    },
+    "success_reschedule_title": {
+      "en": "Your New Date is Confirmed",
+      "de": "Ihr neues Datum wurde bestätigt",
+      "fr": "Votre nouvelle date est confirmée",
+      "es": "Su nueva fecha está confirmada",
+      "nl": "Uw nieuwe datum is bevestigd",
+      "zh": "您的新日期已确认",
+      "hi": "आपकी नई तिथि की पुष्टि हो गई",
+      "ur": "آپ کی نئی تاریخ کی تصدیق ہو گئی"
+    },
+    "success_reschedule_body_prefix": {
+      "en": "your reservation has been moved to",
+      "de": "Ihre Reservierung wurde verschoben auf",
+      "fr": "votre réservation a été déplacée au",
+      "es": "su reserva ha sido trasladada al",
+      "nl": "uw reservering is verplaatst naar",
+      "zh": "您的预订已移至",
+      "hi": "आपकी बुकिंग स्थानांतरित की गई है",
+      "ur": "آپ کی بکنگ منتقل کر دی گئی ہے"
+    },
+    "success_reschedule_body_suffix": {
+      "en": "date.",
+      "de": "Datum.",
+      "fr": "date.",
+      "es": "fecha.",
+      "nl": "datum.",
+      "zh": "。",
+      "hi": "तिथि को।",
+      "ur": "تاریخ کو۔"
+    },
+    "success_refund_title": {
+      "en": "Your Refund Request is Received",
+      "de": "Ihre Rückerstattungsanfrage wurde erhalten",
+      "fr": "Votre demande de remboursement a été reçue",
+      "es": "Su solicitud de reembolso ha sido recibida",
+      "nl": "Uw terugbetalingsverzoek is ontvangen",
+      "zh": "您的退款申请已收到",
+      "hi": "आपका धनवापसी अनुरोध प्राप्त हुआ",
+      "ur": "آپ کی واپسی کی درخواست موصول ہوئی"
+    },
+    "success_refund_body": {
+      "en": "the refund will be credited to your card within 5 business days.",
+      "de": "die Rückerstattung wird innerhalb von 5 Werktagen auf Ihrer Karte gutgeschrieben.",
+      "fr": "le remboursement sera crédité sur votre carte dans les 5 jours ouvrables.",
+      "es": "el reembolso se acreditará en su tarjeta en 5 días hábiles.",
+      "nl": "de terugbetaling wordt binnen 5 werkdagen op uw kaart bijgeschreven.",
+      "zh": "退款将在5个工作日内退回您的银行卡。",
+      "hi": "धनवापसी 5 कार्य दिवसों के भीतर आपके कार्ड में जमा होगी।",
+      "ur": "واپسی 5 کاروباری دنوں میں آپ کے کارڈ پر جمع ہو گی۔"
+    },
+    "success_confirmation_email": {
+      "en": "A confirmation email has been sent to your registered address.",
+      "de": "Eine Bestätigungs-E-Mail wurde an Ihre registrierte Adresse gesendet.",
+      "fr": "Un e-mail de confirmation a été envoyé à votre adresse enregistrée.",
+      "es": "Se ha enviado un correo de confirmación a su dirección registrada.",
+      "nl": "Er is een bevestigingsmail verzonden naar uw geregistreerde adres.",
+      "zh": "确认邮件已发送至您的注册邮箱。",
+      "hi": "पुष्टि ईमेल आपके पंजीकृत पते पर भेजा गया है।",
+      "ur": "تصدیقی ای میل آپ کے رجسٹرڈ پتے پر بھیج دی گئی ہے۔"
+    },
+    "label_booking_id": {
+      "en": "Booking",
+      "de": "Buchung",
+      "fr": "Réservation",
+      "es": "Reserva",
+      "nl": "Boeking",
+      "zh": "预订",
+      "hi": "बुकिंग",
+      "ur": "بکنگ"
+    },
+    "cancelled_heading": {
+      "en": "Your Reservation has been Cancelled",
+      "de": "Ihre Reservierung wurde storniert",
+      "fr": "Votre réservation a été annulée",
+      "es": "Su reserva ha sido cancelada",
+      "nl": "Uw reservering is geannuleerd",
+      "zh": "您的预订已取消",
+      "hi": "आपकी बुकिंग रद्द कर दी गई है",
+      "ur": "آپ کی بکنگ منسوخ کر دی گئی ہے"
+    },
+    "cancelled_greeting": {
+      "en": "Hello {customerName},",
+      "de": "Hallo {customerName},",
+      "fr": "Bonjour {customerName},",
+      "es": "Hola {customerName},",
+      "nl": "Hallo {customerName},",
+      "zh": "您好 {customerName}，",
+      "hi": "नमस्ते {customerName},",
+      "ur": "السلام علیکم {customerName}،"
+    },
+    "cancelled_body_middle": {
+      "en": "on",
+      "de": "am",
+      "fr": "du",
+      "es": "del",
+      "nl": "op",
+      "zh": "的",
+      "hi": "को",
+      "ur": "کو"
+    },
+    "cancelled_body_suffix": {
+      "en": "your service had to be cancelled. Please choose your preferred solution below.",
+      "de": "Ihr Dienst musste leider storniert werden. Bitte wählen Sie unten Ihre bevorzugte Lösung.",
+      "fr": "votre service a dû être annulé. Veuillez choisir votre solution préférée ci-dessous.",
+      "es": "su servicio tuvo que ser cancelado. Elija su solución preferida a continuación.",
+      "nl": "uw dienst moest helaas worden geannuleerd. Kies hieronder uw voorkeur.",
+      "zh": "您的服务不得不被取消。请在下方选择您的首选解决方案。",
+      "hi": "आपकी सेवा रद्द करनी पड़ी। नीचे अपना पसंदीदा समाधान चुनें।",
+      "ur": "آپ کی سروس منسوخ کرنی پڑی۔ براہ کرم نیچے اپنا پسندیدہ حل منتخب کریں۔"
+    },
+    "option1_heading": {
+      "en": "Option 1 — Alternative Date",
+      "de": "Option 1 — Alternatives Datum",
+      "fr": "Option 1 — Date alternative",
+      "es": "Opción 1 — Fecha alternativa",
+      "nl": "Optie 1 — Alternatieve datum",
+      "zh": "选项 1 — 备选日期",
+      "hi": "विकल्प 1 — वैकल्पिक तिथि",
+      "ur": "آپشن 1 — متبادل تاریخ"
+    },
+    "option1_recommended_badge": {
+      "en": "Recommended",
+      "de": "Empfohlen",
+      "fr": "Recommandé",
+      "es": "Recomendado",
+      "nl": "Aanbevolen",
+      "zh": "推荐",
+      "hi": "अनुशंसित",
+      "ur": "تجویز کردہ"
+    },
+    "option1_subtitle": {
+      "en": "Next available dates for the same service:",
+      "de": "Nächste verfügbare Termine für denselben Service:",
+      "fr": "Prochaines dates disponibles pour le même service :",
+      "es": "Próximas fechas disponibles para el mismo servicio:",
+      "nl": "Volgende beschikbare datums voor dezelfde service:",
+      "zh": "同一服务的下一个可用日期：",
+      "hi": "इसी सेवा के लिए अगली उपलब्ध तिथियां:",
+      "ur": "اسی سروس کے لیے اگلی دستیاب تاریخیں:"
+    },
+    "option1_no_dates": {
+      "en": "No available slots in the near future. Please contact us via WhatsApp.",
+      "de": "In naher Zukunft keine verfügbaren Slots. Bitte kontaktieren Sie uns über WhatsApp.",
+      "fr": "Aucun créneau disponible prochainement. Contactez-nous via WhatsApp.",
+      "es": "No hay espacios disponibles próximamente. Por favor contáctenos por WhatsApp.",
+      "nl": "Geen beschikbare slots in de nabije toekomst. Neem contact op via WhatsApp.",
+      "zh": "近期没有可用时段。请通过 WhatsApp 与我们联系。",
+      "hi": "निकट भविष्य में कोई उपलब्ध स्लॉट नहीं। WhatsApp से संपर्क करें।",
+      "ur": "قریبی مستقبل میں کوئی سلاٹ دستیاب نہیں۔ براہ کرم WhatsApp پر رابطہ کریں۔"
+    },
+    "button_confirming": {
+      "en": "Confirming…",
+      "de": "Wird bestätigt…",
+      "fr": "Confirmation…",
+      "es": "Confirmando…",
+      "nl": "Bevestigen…",
+      "zh": "确认中…",
+      "hi": "पुष्टि हो रही है…",
+      "ur": "تصدیق ہو رہی ہے…"
+    },
+    "button_reschedule": {
+      "en": "Move to selected date",
+      "de": "Zum gewählten Datum verschieben",
+      "fr": "Déplacer à la date sélectionnée",
+      "es": "Mover a la fecha seleccionada",
+      "nl": "Verplaatsen naar geselecteerde datum",
+      "zh": "移至所选日期",
+      "hi": "चयनित तिथि पर ले जाएं",
+      "ur": "منتخب تاریخ پر منتقل کریں"
+    },
+    "option2_heading": {
+      "en": "Option 2 — Full Refund",
+      "de": "Option 2 — Vollständige Rückerstattung",
+      "fr": "Option 2 — Remboursement complet",
+      "es": "Opción 2 — Reembolso completo",
+      "nl": "Optie 2 — Volledige terugbetaling",
+      "zh": "选项 2 — 全额退款",
+      "hi": "विकल्प 2 — पूर्ण धनवापसी",
+      "ur": "آپشن 2 — مکمل واپسی"
+    },
+    "option2_body": {
+      "en": "the full amount will be refunded to your card within 5 business days.",
+      "de": "der gesamte Betrag wird innerhalb von 5 Werktagen auf Ihre Karte erstattet.",
+      "fr": "le montant total sera remboursé sur votre carte dans les 5 jours ouvrables.",
+      "es": "el importe total se reembolsará en su tarjeta en 5 días hábiles.",
+      "nl": "het volledige bedrag wordt binnen 5 werkdagen op uw kaart teruggestort.",
+      "zh": "全额将在5个工作日内退回您的银行卡。",
+      "hi": "पूरी राशि 5 कार्य दिवसों के भीतर आपके कार्ड में वापस आ जाएगी।",
+      "ur": "پوری رقم 5 کاروباری دنوں میں آپ کے کارڈ پر واپس ہو گی۔"
+    },
+    "button_processing": {
+      "en": "Processing…",
+      "de": "Wird verarbeitet…",
+      "fr": "Traitement…",
+      "es": "Procesando…",
+      "nl": "Verwerken…",
+      "zh": "处理中…",
+      "hi": "प्रसंस्करण…",
+      "ur": "پروسیسنگ…"
+    },
+    "button_request_refund": {
+      "en": "Request full refund",
+      "de": "Vollständige Rückerstattung beantragen",
+      "fr": "Demander le remboursement complet",
+      "es": "Solicitar reembolso completo",
+      "nl": "Volledige terugbetaling aanvragen",
+      "zh": "申请全额退款",
+      "hi": "पूर्ण धनवापसी का अनुरोध करें",
+      "ur": "مکمل واپسی کی درخواست کریں"
+    },
+    "help_prefix": {
+      "en": "For help",
+      "de": "Für Hilfe",
+      "fr": "Pour obtenir de l'aide",
+      "es": "Para ayuda",
+      "nl": "Voor hulp",
+      "zh": "如需帮助",
+      "hi": "सहायता के लिए",
+      "ur": "مدد کے لیے"
+    }
+  },
+  "component.rezervasyon.success_client": {
+    "default_customer_name": {
+      "en": "Guest",
+      "de": "Gast",
+      "fr": "Invité",
+      "es": "Huésped",
+      "nl": "Gast",
+      "zh": "访客",
+      "hi": "अतिथि",
+      "ur": "مہمان"
+    },
+    "default_service_name": {
+      "en": "Cappadocia Balloon Tour",
+      "de": "Kappadokien Ballonfahrt",
+      "fr": "Vol en montgolfière en Cappadoce",
+      "es": "Tour en Globo por Capadocia",
+      "nl": "Cappadocië Ballonvaart",
+      "zh": "卡帕多奇亚热气球之旅",
+      "hi": "कप्पाडोसिया बैलून टूर",
+      "ur": "کیپاڈوشیا غبارہ دورہ"
+    },
+    "demo_badge": {
+      "en": "TEST / DEMO MODE — No real payment was made",
+      "de": "TEST / DEMO-MODUS — Keine echte Zahlung erfolgt",
+      "fr": "TEST / MODE DÉMO — Aucun paiement réel effectué",
+      "es": "TEST / MODO DEMO — No se realizó ningún pago real",
+      "nl": "TEST / DEMO MODUS — Geen echte betaling verricht",
+      "zh": "测试/演示模式 — 未进行真实付款",
+      "hi": "परीक्षण / डेमो मोड — कोई वास्तविक भुगतान नहीं हुआ",
+      "ur": "ٹیسٹ / ڈیمو موڈ — کوئی حقیقی ادائیگی نہیں ہوئی"
+    },
+    "demo_description": {
+      "en": "This page is for demo purposes. No amount was charged, and the booking was not sent to the operator. For a real booking, please contact us:",
+      "de": "Diese Seite dient nur zu Demozwecken. Es wurde kein Betrag abgebucht, und die Buchung wurde nicht an den Betreiber übermittelt. Für eine echte Buchung kontaktieren Sie uns bitte:",
+      "fr": "Cette page est à titre de démonstration uniquement. Aucun montant n'a été débité et la réservation n'a pas été transmise à l'opérateur. Pour une réservation réelle, veuillez nous contacter :",
+      "es": "Esta página es solo para demostración. No se cargó ningún importe y la reserva no fue enviada al operador. Para una reserva real, contáctenos:",
+      "nl": "Deze pagina is alleen voor demonstratiedoeleinden. Er werd geen bedrag in rekening gebracht en de boeking werd niet doorgestuurd naar de operator. Voor een echte boeking, neem contact met ons op:",
+      "zh": "此页面仅供演示。未扣任何金额，预订未发送给运营商。如需真实预订，请联系我们：",
+      "hi": "यह पृष्ठ केवल डेमो के लिए है। कोई राशि नहीं काटी गई और बुकिंग ऑपरेटर को नहीं भेजी गई। वास्तविक बुकिंग के लिए हमसे संपर्क करें:",
+      "ur": "یہ صفحہ صرف ڈیمو کے لیے ہے۔ کوئی رقم نہیں کاٹی گئی اور بکنگ آپریٹر کو نہیں بھیجی گئی۔ حقیقی بکنگ کے لیے ہم سے رابطہ کریں:"
+    },
+    "demo_admin_note": {
+      "en": "Admin: Stripe env-var not set in Cloudflare Pages dashboard.",
+      "de": "Admin: Stripe Umgebungsvariable nicht im Cloudflare Pages Dashboard gesetzt.",
+      "fr": "Admin : La variable d'environnement Stripe n'est pas définie dans le tableau de bord Cloudflare Pages.",
+      "es": "Admin: Variable de entorno de Stripe no configurada en el panel de Cloudflare Pages.",
+      "nl": "Admin: Stripe env-var niet ingesteld in Cloudflare Pages dashboard.",
+      "zh": "管理员：Stripe 环境变量未在 Cloudflare Pages 控制面板中设置。",
+      "hi": "एडमिन: Cloudflare Pages डैशबोर्ड में Stripe env-var सेट नहीं है।",
+      "ur": "ایڈمن: Cloudflare Pages ڈیش بورڈ میں Stripe env-var سیٹ نہیں ہے۔"
+    },
+    "heading_demo": {
+      "en": "Demo Complete",
+      "de": "Demo abgeschlossen",
+      "fr": "Démo terminée",
+      "es": "Demo completada",
+      "nl": "Demo voltooid",
+      "zh": "演示完成",
+      "hi": "डेमो पूर्ण",
+      "ur": "ڈیمو مکمل"
+    },
+    "heading_success": {
+      "en": "Thank You!",
+      "de": "Vielen Dank!",
+      "fr": "Merci !",
+      "es": "¡Gracias!",
+      "nl": "Bedankt!",
+      "zh": "谢谢！",
+      "hi": "धन्यवाद!",
+      "ur": "شکریہ!"
+    },
+    "subheading_demo": {
+      "en": "Test flow complete — no real booking was created.",
+      "de": "Testablauf abgeschlossen — keine echte Buchung erstellt.",
+      "fr": "Flux de test terminé — aucune réservation réelle créée.",
+      "es": "Flujo de prueba completado — no se creó ninguna reserva real.",
+      "nl": "Teststroom voltooid — geen echte boeking aangemaakt.",
+      "zh": "测试流程完成 — 未创建真实预订。",
+      "hi": "परीक्षण प्रवाह पूर्ण — कोई वास्तविक बुकिंग नहीं बनाई गई।",
+      "ur": "ٹیسٹ فلو مکمل — کوئی حقیقی بکنگ نہیں بنائی گئی۔"
+    },
+    "subheading_success": {
+      "en": "Your booking has been successfully created.",
+      "de": "Ihre Buchung wurde erfolgreich erstellt.",
+      "fr": "Votre réservation a été créée avec succès.",
+      "es": "Su reserva se ha creado correctamente.",
+      "nl": "Uw boeking is succesvol aangemaakt.",
+      "zh": "您的预订已成功创建。",
+      "hi": "आपकी बुकिंग सफलतापूर्वक बनाई गई।",
+      "ur": "آپ کی بکنگ کامیابی سے بنائی گئی۔"
+    },
+    "note_demo": {
+      "en": "Demo mode — no real payment made, Stripe not yet configured.",
+      "de": "Demo-Modus — keine echte Zahlung, Stripe noch nicht konfiguriert.",
+      "fr": "Mode démo — aucun paiement réel, Stripe pas encore configuré.",
+      "es": "Modo demo — sin pago real, Stripe aún no configurado.",
+      "nl": "Demo modus — geen echte betaling, Stripe nog niet geconfigureerd.",
+      "zh": "演示模式 — 未进行真实付款，Stripe 尚未配置。",
+      "hi": "डेमो मोड — कोई वास्तविक भुगतान नहीं, Stripe अभी कॉन्फ़िगर नहीं हुआ।",
+      "ur": "ڈیمو موڈ — کوئی حقیقی ادائیگی نہیں، Stripe ابھی ترتیب نہیں دی گئی۔"
+    },
+    "note_success": {
+      "en": "Payment received and confirmation email sent.",
+      "de": "Zahlung eingegangen und Bestätigungs-E-Mail gesendet.",
+      "fr": "Paiement reçu et e-mail de confirmation envoyé.",
+      "es": "Pago recibido y correo de confirmación enviado.",
+      "nl": "Betaling ontvangen en bevestigingsmail verzonden.",
+      "zh": "付款已收到，确认邮件已发送。",
+      "hi": "भुगतान प्राप्त हुआ और पुष्टि ईमेल भेजा गया।",
+      "ur": "ادائیگی موصول ہوئی اور تصدیقی ای میل بھیج دی گئی۔"
+    },
+    "booking_code_label": {
+      "en": "Booking Code",
+      "de": "Buchungscode",
+      "fr": "Code de réservation",
+      "es": "Código de reserva",
+      "nl": "Boekingscode",
+      "zh": "预订编号",
+      "hi": "बुकिंग कोड",
+      "ur": "بکنگ کوڈ"
+    },
+    "booking_code_hint": {
+      "en": "Save this code — it is required for operator confirmation.",
+      "de": "Notieren Sie diesen Code — er wird für die Betätigerbestätigung benötigt.",
+      "fr": "Conservez ce code — il est nécessaire pour la confirmation opérateur.",
+      "es": "Guarde este código — es necesario para la confirmación del operador.",
+      "nl": "Bewaar deze code — deze is vereist voor bevestiging door de operator.",
+      "zh": "请保存此编号 — 运营商确认时需要。",
+      "hi": "यह कोड सेव करें — ऑपरेटर पुष्टि के लिए आवश्यक है।",
+      "ur": "یہ کوڈ محفوظ کریں — آپریٹر کی تصدیق کے لیے ضروری ہے۔"
+    },
+    "cta_pdf": {
+      "en": "PDF Invoice",
+      "de": "PDF-Rechnung",
+      "fr": "Facture PDF",
+      "es": "Factura PDF",
+      "nl": "PDF Factuur",
+      "zh": "PDF 发票",
+      "hi": "PDF चालान",
+      "ur": "PDF انوائس"
+    },
+    "cta_ical": {
+      "en": "Add to Calendar",
+      "de": "Zum Kalender hinzufügen",
+      "fr": "Ajouter au calendrier",
+      "es": "Añadir al calendario",
+      "nl": "Toevoegen aan agenda",
+      "zh": "添加到日历",
+      "hi": "कैलेंडर में जोड़ें",
+      "ur": "کیلنڈر میں شامل کریں"
+    },
+    "cta_my_booking": {
+      "en": "View My Booking",
+      "de": "Meine Buchung anzeigen",
+      "fr": "Voir ma réservation",
+      "es": "Ver mi reserva",
+      "nl": "Mijn boeking bekijken",
+      "zh": "查看我的预订",
+      "hi": "मेरी बुकिंग देखें",
+      "ur": "میری بکنگ دیکھیں"
+    },
+    "info_email_title": {
+      "en": "Email Confirmation",
+      "de": "E-Mail-Bestätigung",
+      "fr": "Confirmation par e-mail",
+      "es": "Confirmación por correo",
+      "nl": "E-mailbevestiging",
+      "zh": "邮件确认",
+      "hi": "ईमेल पुष्टि",
+      "ur": "ای میل تصدیق"
+    },
+    "info_email_body": {
+      "en": "Details have been sent to your email. Check your spam folder.",
+      "de": "Details wurden an Ihre E-Mail gesendet. Überprüfen Sie Ihren Spam-Ordner.",
+      "fr": "Les détails ont été envoyés à votre e-mail. Vérifiez vos spams.",
+      "es": "Los detalles han sido enviados a su correo. Revise su carpeta de spam.",
+      "nl": "Details zijn verzonden naar uw e-mail. Controleer uw spammap.",
+      "zh": "详情已发至您的邮箱，请检查垃圾邮件文件夹。",
+      "hi": "विवरण आपके ईमेल पर भेजा गया है। स्पैम फ़ोल्डर देखें।",
+      "ur": "تفصیلات آپ کے ای میل پر بھیج دی گئی ہیں۔ اسپام فولڈر چیک کریں۔"
+    },
+    "info_reminder_title": {
+      "en": "Flight Reminder",
+      "de": "Flugerinnerung",
+      "fr": "Rappel de vol",
+      "es": "Recordatorio de vuelo",
+      "nl": "Vluchtherinnerig",
+      "zh": "飞行提醒",
+      "hi": "उड़ान अनुस्मारक",
+      "ur": "پرواز یاد دہانی"
+    },
+    "info_reminder_body": {
+      "en": "You will be reminded by SMS and email 24 hours before the flight.",
+      "de": "Sie werden 24 Stunden vor dem Flug per SMS und E-Mail erinnert.",
+      "fr": "Vous serez rappelé par SMS et e-mail 24 heures avant le vol.",
+      "es": "Se le recordará por SMS y correo 24 horas antes del vuelo.",
+      "nl": "U ontvangt 24 uur voor de vlucht een herinnering per SMS en e-mail.",
+      "zh": "飞行前24小时将通过短信和邮件提醒您。",
+      "hi": "उड़ान से 24 घंटे पहले SMS और ईमेल से याद दिलाया जाएगा।",
+      "ur": "پرواز سے 24 گھنٹے پہلے SMS اور ای میل سے یاددہانی ملے گی۔"
+    },
+    "info_operator_title": {
+      "en": "Operator Confirmation",
+      "de": "Betreiberbestätigung",
+      "fr": "Confirmation opérateur",
+      "es": "Confirmación del operador",
+      "nl": "Operatorbevestiging",
+      "zh": "运营商确认",
+      "hi": "ऑपरेटर पुष्टि",
+      "ur": "آپریٹر تصدیق"
+    },
+    "info_operator_body": {
+      "en": "Operator verification will be done within 2 hours.",
+      "de": "Die Betreiber-Verifizierung erfolgt innerhalb von 2 Stunden.",
+      "fr": "La vérification de l'opérateur sera effectuée dans les 2 heures.",
+      "es": "La verificación del operador se realizará en 2 horas.",
+      "nl": "Operatorverificatie wordt binnen 2 uur uitgevoerd.",
+      "zh": "运营商将在2小时内完成核实。",
+      "hi": "ऑपरेटर सत्यापन 2 घंटे के भीतर किया जाएगा।",
+      "ur": "آپریٹر کی تصدیق 2 گھنٹے میں ہو گی۔"
+    },
+    "nav_home": {
+      "en": "Home",
+      "de": "Startseite",
+      "fr": "Accueil",
+      "es": "Inicio",
+      "nl": "Home",
+      "zh": "首页",
+      "hi": "होम",
+      "ur": "ہوم"
+    },
+    "nav_rebook": {
+      "en": "Book Again",
+      "de": "Erneut buchen",
+      "fr": "Réserver à nouveau",
+      "es": "Reservar de nuevo",
+      "nl": "Opnieuw boeken",
+      "zh": "再次预订",
+      "hi": "फिर से बुक करें",
+      "ur": "دوبارہ بکنگ کریں"
+    },
+    "contact_prefix": {
+      "en": "For questions",
+      "de": "Für Fragen",
+      "fr": "Pour toute question",
+      "es": "Para preguntas",
+      "nl": "Voor vragen",
+      "zh": "如有疑问",
+      "hi": "सवालों के लिए",
+      "ur": "سوالات کے لیے"
+    },
+    "contact_or": {
+      "en": "or",
+      "de": "oder",
+      "fr": "ou",
+      "es": "o",
+      "nl": "of",
+      "zh": "或",
+      "hi": "या",
+      "ur": "یا"
+    }
+  }
+}

@@ -2,10 +2,12 @@
 
 import { useState, FormEvent } from "react";
 import { Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
+import { useT } from "@/lib/i18n/I18nProvider";
 
 type Status = "idle" | "loading" | "success" | "error";
 
 export function ContactForm() {
+  const t = useT();
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
 
@@ -15,7 +17,7 @@ export function ContactForm() {
     const data = new FormData(form);
     if (data.get("_hp")) {
       setStatus("error");
-      setMessage("İstek doğrulanamadı.");
+      setMessage(t.component.iletisim.contact_form.error_validation);
       return;
     }
 
@@ -26,13 +28,13 @@ export function ContactForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(Object.fromEntries(data.entries())),
       });
-      if (!res.ok) throw new Error("Sunucu hatası");
+      if (!res.ok) throw new Error(t.component.iletisim.contact_form.error_server);
       setStatus("success");
-      setMessage("Mesajınız iletildi. En geç 4 saat içinde dönüş yapacağız.");
+      setMessage(t.component.iletisim.contact_form.success_message);
       form.reset();
     } catch {
       setStatus("error");
-      setMessage("Mesaj iletilemedi. Lütfen tekrar deneyin veya WhatsApp kullanın.");
+      setMessage(t.component.iletisim.contact_form.error_send);
     }
   }
 
@@ -50,13 +52,13 @@ export function ContactForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label htmlFor="name" className="block text-sm font-semibold text-slate-700 mb-1.5">
-            Ad Soyad *
+            {t.component.iletisim.contact_form.label_name}
           </label>
-          <input id="name" name="name" type="text" required className="input-field" placeholder="Adınız Soyadınız" />
+          <input id="name" name="name" type="text" required className="input-field" placeholder={t.component.iletisim.contact_form.placeholder_name} />
         </div>
         <div>
           <label htmlFor="email" className="block text-sm font-semibold text-slate-700 mb-1.5">
-            E-posta *
+            {t.component.iletisim.contact_form.label_email}
           </label>
           <input id="email" name="email" type="email" required className="input-field" placeholder="ornek@email.com" />
         </div>
@@ -65,40 +67,40 @@ export function ContactForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label htmlFor="phone" className="block text-sm font-semibold text-slate-700 mb-1.5">
-            Telefon
+            {t.component.iletisim.contact_form.label_phone}
           </label>
           <input id="phone" name="phone" type="tel" className="input-field" placeholder="+90 5XX XXX XX XX" />
         </div>
         <div>
           <label htmlFor="subject" className="block text-sm font-semibold text-slate-700 mb-1.5">
-            Konu *
+            {t.component.iletisim.contact_form.label_subject}
           </label>
           <select id="subject" name="subject" required className="input-field">
-            <option value="">Seçiniz...</option>
-            <option value="rezervasyon">Rezervasyon</option>
-            <option value="bilgi">Bilgi Talebi</option>
-            <option value="iptal">İptal/İade</option>
-            <option value="kurumsal">Kurumsal</option>
-            <option value="diger">Diğer</option>
+            <option value="">{t.component.iletisim.contact_form.subject_placeholder}</option>
+            <option value="rezervasyon">{t.component.iletisim.contact_form.subject_reservation}</option>
+            <option value="bilgi">{t.component.iletisim.contact_form.subject_info}</option>
+            <option value="iptal">{t.component.iletisim.contact_form.subject_cancel}</option>
+            <option value="kurumsal">{t.component.iletisim.contact_form.subject_corporate}</option>
+            <option value="diger">{t.component.iletisim.contact_form.subject_other}</option>
           </select>
         </div>
       </div>
 
       <div>
         <label htmlFor="message" className="block text-sm font-semibold text-slate-700 mb-1.5">
-          Mesajınız *
+          {t.component.iletisim.contact_form.label_message}
         </label>
-        <textarea id="message" name="message" required rows={5} className="input-field resize-none" placeholder="Mesajınızı buraya yazın..." />
+        <textarea id="message" name="message" required rows={5} className="input-field resize-none" placeholder={t.component.iletisim.contact_form.placeholder_message} />
       </div>
 
       <button type="submit" disabled={status === "loading"} className="btn-accent w-full flex items-center justify-center gap-2 disabled:opacity-60">
         {status === "loading" ? (
           <>
-            <Loader2 className="w-4 h-4 animate-spin" /> Gönderiliyor...
+            <Loader2 className="w-4 h-4 animate-spin" /> {t.component.iletisim.contact_form.submitting}
           </>
         ) : (
           <>
-            <Send className="w-4 h-4" /> Mesaj Gönder
+            <Send className="w-4 h-4" /> {t.component.iletisim.contact_form.submit_button}
           </>
         )}
       </button>
@@ -117,8 +119,7 @@ export function ContactForm() {
       )}
 
       <p className="text-xs text-slate-500">
-        Mesajınız KVKK uyumlu işlenir. Sadece talebinize cevap için kullanılır, üçüncü
-        taraflara aktarılmaz.
+        {t.component.iletisim.contact_form.kvkk_notice}
       </p>
     </form>
   );

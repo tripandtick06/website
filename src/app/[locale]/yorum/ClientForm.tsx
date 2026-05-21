@@ -14,18 +14,13 @@ import { Star, Loader2, CheckCircle2, AlertTriangle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { BALLOON_PACKAGES } from "@/data/services/balloons";
 import { ACTIVITIES, TOURS } from "@/data/services/catalog";
+import { useT } from "@/lib/i18n/I18nProvider";
 
 interface ServiceOption {
   slug: string;
   name: string;
   category: string;
 }
-
-const SERVICE_OPTIONS: ServiceOption[] = [
-  ...BALLOON_PACKAGES.map((p) => ({ slug: p.slug, name: p.name, category: "Balon" })),
-  ...ACTIVITIES.map((a) => ({ slug: a.slug, name: a.name, category: "Aktivite" })),
-  ...TOURS.map((t) => ({ slug: t.slug, name: t.name, category: "Tur" })),
-];
 
 const LANGUAGES = [
   { code: "tr", label: "Türkçe" },
@@ -39,6 +34,7 @@ const LANGUAGES = [
 type Status = "idle" | "submitting" | "success" | "error";
 
 export function ClientForm() {
+  const t = useT();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -53,9 +49,15 @@ export function ClientForm() {
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [reviewId, setReviewId] = useState<string | null>(null);
 
+  const SERVICE_OPTIONS: ServiceOption[] = [
+    ...BALLOON_PACKAGES.map((p) => ({ slug: p.slug, name: p.name, category: t.component.yorum.review_form.category_balloon })),
+    ...ACTIVITIES.map((a) => ({ slug: a.slug, name: a.name, category: t.component.yorum.review_form.category_activity })),
+    ...TOURS.map((tour) => ({ slug: tour.slug, name: tour.name, category: t.component.yorum.review_form.category_tour })),
+  ];
+
   const selectedService = useMemo(
     () => SERVICE_OPTIONS.find((s) => s.slug === serviceSlug),
-    [serviceSlug]
+    [serviceSlug, SERVICE_OPTIONS]
   );
 
   const messageLen = message.length;
@@ -93,14 +95,14 @@ export function ClientForm() {
       });
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
-        throw new Error(data?.error ?? `Hata (${res.status})`);
+        throw new Error(data?.error ?? t.component.yorum.review_form.error_status.replace("{status}", String(res.status)));
       }
       const data = (await res.json()) as { reviewId: string };
       setReviewId(data.reviewId);
       setStatus("success");
     } catch (err) {
       setStatus("error");
-      setErrorMsg(err instanceof Error ? err.message : "Bilinmeyen hata");
+      setErrorMsg(err instanceof Error ? err.message : t.component.yorum.review_form.error_unknown);
     }
   }
 
@@ -111,15 +113,14 @@ export function ClientForm() {
           <CheckCircle2 className="w-10 h-10 text-emerald-600" />
         </div>
         <h2 className="text-2xl font-bold text-slate-900 mb-2">
-          Yorumunuz Alındı!
+          {t.component.yorum.review_form.success_title}
         </h2>
         <p className="text-slate-600 mb-2">
-          Teşekkür ederiz. Yorumunuz <strong>24 saat içinde</strong> moderatör
-          onayından sonra yayınlanacak.
+          {t.component.yorum.review_form.success_body_prefix} <strong>{t.component.yorum.review_form.success_body_hours}</strong> {t.component.yorum.review_form.success_body_suffix}
         </p>
         {reviewId && (
           <p className="text-xs text-slate-400 mt-2">
-            Referans no: <code>{reviewId}</code>
+            {t.component.yorum.review_form.reference_no} <code>{reviewId}</code>
           </p>
         )}
         <button
@@ -137,7 +138,7 @@ export function ClientForm() {
           }}
           className="mt-6 inline-flex items-center gap-2 px-5 py-2 bg-amber-500 hover:bg-amber-600 text-white rounded-lg font-semibold text-sm"
         >
-          Yeni Yorum Yaz
+          {t.component.yorum.review_form.new_review_button}
         </button>
       </div>
     );
@@ -152,7 +153,7 @@ export function ClientForm() {
       className="bg-white rounded-2xl shadow-sm p-6 sm:p-8 space-y-5"
     >
       <div className="grid sm:grid-cols-2 gap-4">
-        <FormField label="Ad Soyad *">
+        <FormField label={t.component.yorum.review_form.label_name}>
           <input
             type="text"
             value={name}
@@ -161,10 +162,10 @@ export function ClientForm() {
             minLength={2}
             maxLength={80}
             className={inputCls}
-            placeholder="Örn: Ayşe Kaya"
+            placeholder={t.component.yorum.review_form.placeholder_name}
           />
         </FormField>
-        <FormField label="E-posta *">
+        <FormField label={t.component.yorum.review_form.label_email}>
           <input
             type="email"
             value={email}
@@ -177,7 +178,7 @@ export function ClientForm() {
       </div>
 
       <div className="grid sm:grid-cols-2 gap-4">
-        <FormField label="Telefon (opsiyonel)">
+        <FormField label={t.component.yorum.review_form.label_phone}>
           <input
             type="tel"
             value={phone}
@@ -186,7 +187,7 @@ export function ClientForm() {
             placeholder="+90 5xx ..."
           />
         </FormField>
-        <FormField label="Dil">
+        <FormField label={t.component.yorum.review_form.label_language}>
           <select
             value={language}
             onChange={(e) => setLanguage(e.target.value)}
@@ -201,30 +202,30 @@ export function ClientForm() {
         </FormField>
       </div>
 
-      <FormField label="Hangi hizmeti aldınız? *">
+      <FormField label={t.component.yorum.review_form.label_service}>
         <select
           value={serviceSlug}
           onChange={(e) => setServiceSlug(e.target.value)}
           required
           className={inputCls}
         >
-          <option value="">Hizmet seçin</option>
-          <optgroup label="Balon Turları">
-            {SERVICE_OPTIONS.filter((s) => s.category === "Balon").map((s) => (
+          <option value="">{t.component.yorum.review_form.service_placeholder}</option>
+          <optgroup label={t.component.yorum.review_form.optgroup_balloon}>
+            {SERVICE_OPTIONS.filter((s) => s.category === t.component.yorum.review_form.category_balloon).map((s) => (
               <option key={s.slug} value={s.slug}>
                 {s.name}
               </option>
             ))}
           </optgroup>
-          <optgroup label="Aktiviteler">
-            {SERVICE_OPTIONS.filter((s) => s.category === "Aktivite").map((s) => (
+          <optgroup label={t.component.yorum.review_form.optgroup_activity}>
+            {SERVICE_OPTIONS.filter((s) => s.category === t.component.yorum.review_form.category_activity).map((s) => (
               <option key={s.slug} value={s.slug}>
                 {s.name}
               </option>
             ))}
           </optgroup>
-          <optgroup label="Turlar">
-            {SERVICE_OPTIONS.filter((s) => s.category === "Tur").map((s) => (
+          <optgroup label={t.component.yorum.review_form.optgroup_tour}>
+            {SERVICE_OPTIONS.filter((s) => s.category === t.component.yorum.review_form.category_tour).map((s) => (
               <option key={s.slug} value={s.slug}>
                 {s.name}
               </option>
@@ -233,14 +234,14 @@ export function ClientForm() {
         </select>
       </FormField>
 
-      <FormField label="Puanınız *">
+      <FormField label={t.component.yorum.review_form.label_rating}>
         <div className="flex items-center gap-1">
           {[1, 2, 3, 4, 5].map((n) => (
             <button
               key={n}
               type="button"
               onClick={() => setRating(n)}
-              aria-label={`${n} yıldız`}
+              aria-label={t.component.yorum.review_form.aria_star.replace("{n}", String(n))}
               className="p-1"
             >
               <Star
@@ -259,7 +260,7 @@ export function ClientForm() {
         </div>
       </FormField>
 
-      <FormField label="Başlık *">
+      <FormField label={t.component.yorum.review_form.label_title}>
         <input
           type="text"
           value={title}
@@ -268,14 +269,14 @@ export function ClientForm() {
           minLength={5}
           maxLength={120}
           className={inputCls}
-          placeholder="Örn: Kapadokya'da unutulmaz bir deneyim"
+          placeholder={t.component.yorum.review_form.placeholder_title}
         />
         {title.length > 0 && !titleOk && (
-          <p className="text-xs text-rose-500 mt-1">En az 5 karakter olmalı.</p>
+          <p className="text-xs text-rose-500 mt-1">{t.component.yorum.review_form.error_title_min}</p>
         )}
       </FormField>
 
-      <FormField label={`Yorumunuz * (${messageLen}/2000)`}>
+      <FormField label={t.component.yorum.review_form.label_message.replace("{count}", String(messageLen))}>
         <textarea
           value={message}
           onChange={(e) => setMessage(e.target.value)}
@@ -284,13 +285,13 @@ export function ClientForm() {
           minLength={50}
           maxLength={2000}
           className={cn(inputCls, "resize-y")}
-          placeholder="Deneyiminizi detaylıca anlatın (en az 50 karakter)..."
+          placeholder={t.component.yorum.review_form.placeholder_message}
         />
         {message.length > 0 && !messageOk && (
           <p className="text-xs text-rose-500 mt-1">
             {messageLen < 50
-              ? `En az 50 karakter olmalı (${50 - messageLen} eksik).`
-              : "Maksimum 2000 karakter."}
+              ? t.component.yorum.review_form.error_message_min.replace("{remaining}", String(50 - messageLen))
+              : t.component.yorum.review_form.error_message_max}
           </p>
         )}
       </FormField>
@@ -307,8 +308,7 @@ export function ClientForm() {
           <a href="/kvkk" className="text-amber-600 underline" target="_blank">
             KVKK
           </a>{" "}
-          aydınlatma metnini okudum, yorum/iletişim bilgilerimin işlenmesine onay
-          veriyorum.
+          {t.component.yorum.review_form.kvkk_consent}
         </span>
       </label>
 
@@ -326,7 +326,7 @@ export function ClientForm() {
         <div className="border-l-4 border-rose-500 bg-rose-50 p-3 rounded text-sm text-rose-800 flex items-start gap-2">
           <AlertTriangle className="w-4 h-4 mt-0.5 flex-shrink-0" />
           <div>
-            <strong>Gönderilemedi:</strong> {errorMsg ?? "Bilinmeyen hata"}
+            <strong>{t.component.yorum.review_form.error_send_failed}</strong> {errorMsg ?? t.component.yorum.review_form.error_unknown}
           </div>
         </div>
       )}
@@ -339,10 +339,10 @@ export function ClientForm() {
         >
           {status === "submitting" ? (
             <>
-              <Loader2 className="w-4 h-4 animate-spin" /> Gönderiliyor...
+              <Loader2 className="w-4 h-4 animate-spin" /> {t.component.yorum.review_form.submitting}
             </>
           ) : (
-            "Yorumu Gönder"
+            t.component.yorum.review_form.submit_button
           )}
         </button>
       </div>

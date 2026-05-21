@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { Link } from "@/i18n/routing";
 import { AlertTriangle, RotateCw, Home } from "lucide-react";
+import { useT } from "@/lib/i18n/I18nProvider";
 
 export default function GlobalError({
   error,
@@ -11,6 +12,9 @@ export default function GlobalError({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
+  const t = useT();
+  const d = t.component.layout.error;
+
   useEffect(() => {
     if (process.env.NODE_ENV !== "production") {
 
@@ -25,14 +29,14 @@ export default function GlobalError({
           <AlertTriangle className="w-10 h-10 text-danger" />
         </div>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-3">
-          Bir hata oluştu
+          {d.title}
         </h1>
         <p className="text-slate-600 leading-relaxed mb-2 max-w-md mx-auto">
-          Sayfa yüklenirken beklenmedik bir sorun oluştu. Tekrar denemek ister misiniz?
+          {d.description}
         </p>
         {error.digest && (
           <p className="text-xs text-slate-400 mb-6 font-mono">
-            Hata kodu: {error.digest}
+            {d.error_code_prefix} {error.digest}
           </p>
         )}
         <div className="flex flex-col sm:flex-row gap-3 justify-center mt-6">
@@ -40,17 +44,17 @@ export default function GlobalError({
             onClick={reset}
             className="btn-accent inline-flex items-center justify-center gap-2"
           >
-            <RotateCw className="w-4 h-4" /> Tekrar Dene
+            <RotateCw className="w-4 h-4" /> {d.btn_retry}
           </button>
           <Link
             href="/"
             className="inline-flex items-center justify-center gap-2 bg-white border border-slate-200 px-6 py-3 rounded-xl font-semibold text-slate-700 hover:bg-slate-100 transition-all"
           >
-            <Home className="w-4 h-4" /> Ana Sayfa
+            <Home className="w-4 h-4" /> {d.btn_home}
           </Link>
         </div>
         <p className="text-xs text-slate-500 mt-8">
-          Sorun devam ederse:{" "}
+          {d.contact_prefix}{" "}
           <a href="mailto:info@tripandtick.com" className="text-accent font-semibold">
             info@tripandtick.com
           </a>

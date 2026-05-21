@@ -1,0 +1,760 @@
+{
+  "component.yorum.review_form": {
+    "category_balloon": {
+      "en": "Balloon",
+      "de": "Ballon",
+      "fr": "Montgolfière",
+      "es": "Globo",
+      "nl": "Ballon",
+      "zh": "热气球",
+      "hi": "गुब्बारा",
+      "ur": "غبارہ"
+    },
+    "category_activity": {
+      "en": "Activity",
+      "de": "Aktivität",
+      "fr": "Activité",
+      "es": "Actividad",
+      "nl": "Activiteit",
+      "zh": "活动",
+      "hi": "गतिविधि",
+      "ur": "سرگرمی"
+    },
+    "category_tour": {
+      "en": "Tour",
+      "de": "Tour",
+      "fr": "Visite",
+      "es": "Tour",
+      "nl": "Tour",
+      "zh": "游览",
+      "hi": "टूर",
+      "ur": "ٹور"
+    },
+    "label_name": {
+      "en": "Full Name *",
+      "de": "Vor- und Nachname *",
+      "fr": "Nom complet *",
+      "es": "Nombre completo *",
+      "nl": "Volledige naam *",
+      "zh": "姓名 *",
+      "hi": "पूरा नाम *",
+      "ur": "پورا نام *"
+    },
+    "label_email": {
+      "en": "Email *",
+      "de": "E-Mail *",
+      "fr": "E-mail *",
+      "es": "Correo electrónico *",
+      "nl": "E-mail *",
+      "zh": "电子邮件 *",
+      "hi": "ईमेल *",
+      "ur": "ای میل *"
+    },
+    "label_phone": {
+      "en": "Phone (optional)",
+      "de": "Telefon (optional)",
+      "fr": "Téléphone (optionnel)",
+      "es": "Teléfono (opcional)",
+      "nl": "Telefoon (optioneel)",
+      "zh": "电话（可选）",
+      "hi": "फ़ोन (opsiyonel)",
+      "ur": "فون (opsiyonel)"
+    },
+    "label_language": {
+      "en": "Language",
+      "de": "Sprache",
+      "fr": "Langue",
+      "es": "Idioma",
+      "nl": "Taal",
+      "zh": "语言",
+      "hi": "भाषा",
+      "ur": "زبان"
+    },
+    "label_service": {
+      "en": "Which service did you use? *",
+      "de": "Welchen Service haben Sie genutzt? *",
+      "fr": "Quel service avez-vous utilisé ? *",
+      "es": "¿Qué servicio utilizó? *",
+      "nl": "Welke service heeft u gebruikt? *",
+      "zh": "您使用了哪项服务？*",
+      "hi": "आपने कौन सी सेवा ली? *",
+      "ur": "آپ نے کون سی سروس لی؟ *"
+    },
+    "label_rating": {
+      "en": "Your Rating *",
+      "de": "Ihre Bewertung *",
+      "fr": "Votre note *",
+      "es": "Su puntuación *",
+      "nl": "Uw beoordeling *",
+      "zh": "您的评分 *",
+      "hi": "आपकी रेटिंग *",
+      "ur": "آپ کی ریٹنگ *"
+    },
+    "label_title": {
+      "en": "Title *",
+      "de": "Titel *",
+      "fr": "Titre *",
+      "es": "Título *",
+      "nl": "Titel *",
+      "zh": "标题 *",
+      "hi": "शीर्षक *",
+      "ur": "عنوان *"
+    },
+    "label_message": {
+      "en": "Your Review * ({count}/2000)",
+      "de": "Ihre Rezension * ({count}/2000)",
+      "fr": "Votre avis * ({count}/2000)",
+      "es": "Su reseña * ({count}/2000)",
+      "nl": "Uw recensie * ({count}/2000)",
+      "zh": "您的评论 * ({count}/2000)",
+      "hi": "आपकी समीक्षा * ({count}/2000)",
+      "ur": "آپ کا جائزہ * ({count}/2000)"
+    },
+    "placeholder_name": {
+      "en": "e.g. Jane Smith",
+      "de": "z.B. Maria Müller",
+      "fr": "ex. Marie Dupont",
+      "es": "ej. María García",
+      "nl": "bijv. Jan de Vries",
+      "zh": "例如：张伟",
+      "hi": "जैसे: रमेश कुमार",
+      "ur": "مثلاً: احمد علی"
+    },
+    "placeholder_title": {
+      "en": "e.g. An unforgettable experience in Cappadocia",
+      "de": "z.B. Ein unvergessliches Erlebnis in Kappadokien",
+      "fr": "ex. Une expérience inoubliable en Cappadoce",
+      "es": "ej. Una experiencia inolvidable en Capadocia",
+      "nl": "bijv. Een onvergetelijke ervaring in Cappadocië",
+      "zh": "例如：卡帕多奇亚难忘的体验",
+      "hi": "जैसे: कप्पादोकिया में अविस्मरणीय अनुभव",
+      "ur": "مثلاً: کاپاڈوکیا میں ناقابل فراموش تجربہ"
+    },
+    "placeholder_message": {
+      "en": "Tell us about your experience in detail (at least 50 characters)...",
+      "de": "Erzählen Sie uns ausführlich von Ihrer Erfahrung (mind. 50 Zeichen)...",
+      "fr": "Décrivez votre expérience en détail (au moins 50 caractères)...",
+      "es": "Cuéntenos su experiencia en detalle (mínimo 50 caracteres)...",
+      "nl": "Vertel ons uitgebreid over uw ervaring (minimaal 50 tekens)...",
+      "zh": "请详细描述您的体验（至少50个字符）...",
+      "hi": "अपने अनुभव को विस्तार से बताएं (कम से कम 50 अक्षर)...",
+      "ur": "اپنے تجربے کو تفصیل سے بیان کریں (کم از کم 50 حروف)..."
+    },
+    "service_placeholder": {
+      "en": "Select a service",
+      "de": "Service auswählen",
+      "fr": "Choisissez un service",
+      "es": "Seleccione un servicio",
+      "nl": "Selecteer een service",
+      "zh": "选择服务",
+      "hi": "सेवा चुनें",
+      "ur": "سروس منتخب کریں"
+    },
+    "optgroup_balloon": {
+      "en": "Balloon Tours",
+      "de": "Ballontouren",
+      "fr": "Tours en montgolfière",
+      "es": "Tours en globo",
+      "nl": "Ballonreizen",
+      "zh": "热气球游览",
+      "hi": "गुब्बारा टूर",
+      "ur": "غبارہ ٹور"
+    },
+    "optgroup_activity": {
+      "en": "Activities",
+      "de": "Aktivitäten",
+      "fr": "Activités",
+      "es": "Actividades",
+      "nl": "Activiteiten",
+      "zh": "活动",
+      "hi": "गतिविधियाँ",
+      "ur": "سرگرمیاں"
+    },
+    "optgroup_tour": {
+      "en": "Tours",
+      "de": "Touren",
+      "fr": "Visites",
+      "es": "Tours",
+      "nl": "Tours",
+      "zh": "游览项目",
+      "hi": "टूर",
+      "ur": "ٹور"
+    },
+    "aria_star": {
+      "en": "{n} star",
+      "de": "{n} Stern",
+      "fr": "{n} étoile",
+      "es": "{n} estrella",
+      "nl": "{n} ster",
+      "zh": "{n} 星",
+      "hi": "{n} सितारा",
+      "ur": "{n} ستارہ"
+    },
+    "kvkk_consent": {
+      "en": "I have read the privacy notice and consent to the processing of my review and contact details.",
+      "de": "Ich habe die Datenschutzerklärung gelesen und stimme der Verarbeitung meiner Bewertungs- und Kontaktdaten zu.",
+      "fr": "J'ai lu la notice de confidentialité et j'accepte le traitement de mon avis et de mes coordonnées.",
+      "es": "He leído el aviso de privacidad y consiento el tratamiento de mis datos de reseña y contacto.",
+      "nl": "Ik heb de privacyverklaring gelezen en ga akkoord met de verwerking van mijn recensie en contactgegevens.",
+      "zh": "我已阅读隐私声明，并同意处理我的评论及联系信息。",
+      "hi": "मैंने गोपनीयता नोटिस पढ़ा है और अपनी समीक्षा व संपर्क विवरण प्रसंस्करण के लिए सहमति देता/देती हूँ।",
+      "ur": "میں نے رازداری کا نوٹس پڑھ لیا ہے اور اپنے جائزے اور رابطہ معلومات کی پروسیسنگ کی منظوری دیتا/دیتی ہوں۔"
+    },
+    "success_title": {
+      "en": "Review Received!",
+      "de": "Rezension erhalten!",
+      "fr": "Avis reçu !",
+      "es": "¡Reseña recibida!",
+      "nl": "Recensie ontvangen!",
+      "zh": "评论已收到！",
+      "hi": "समीक्षा प्राप्त हुई!",
+      "ur": "جائزہ موصول ہو گیا!"
+    },
+    "success_body_prefix": {
+      "en": "Thank you. Your review will be published",
+      "de": "Vielen Dank. Ihre Rezension wird veröffentlicht",
+      "fr": "Merci. Votre avis sera publié",
+      "es": "Gracias. Su reseña se publicará",
+      "nl": "Dank u. Uw recensie wordt gepubliceerd",
+      "zh": "感谢您。您的评论将在",
+      "hi": "धन्यवाद। आपकी समीक्षा प्रकाशित की जाएगी",
+      "ur": "شکریہ۔ آپ کا جائزہ شائع کیا جائے گا"
+    },
+    "success_body_hours": {
+      "en": "within 24 hours",
+      "de": "innerhalb von 24 Stunden",
+      "fr": "dans les 24 heures",
+      "es": "en 24 horas",
+      "nl": "binnen 24 uur",
+      "zh": "24小时内",
+      "hi": "24 घंटे के भीतर",
+      "ur": "24 گھنٹوں کے اندر"
+    },
+    "success_body_suffix": {
+      "en": "after moderator approval.",
+      "de": "nach Moderatorenprüfung.",
+      "fr": "après approbation du modérateur.",
+      "es": "tras la aprobación del moderador.",
+      "nl": "na goedkeuring door de moderator.",
+      "zh": "经审核员批准后。",
+      "hi": "मॉडरेटर की मंजूरी के बाद।",
+      "ur": "ماڈریٹر کی منظوری کے بعد۔"
+    },
+    "reference_no": {
+      "en": "Reference no:",
+      "de": "Referenznummer:",
+      "fr": "N° de référence :",
+      "es": "N.º de referencia:",
+      "nl": "Referentienummer:",
+      "zh": "参考编号：",
+      "hi": "संदर्भ संख्या:",
+      "ur": "حوالہ نمبر:"
+    },
+    "new_review_button": {
+      "en": "Write a New Review",
+      "de": "Neue Rezension schreiben",
+      "fr": "Rédiger un nouvel avis",
+      "es": "Escribir una nueva reseña",
+      "nl": "Nieuwe recensie schrijven",
+      "zh": "撰写新评论",
+      "hi": "नई समीक्षा लिखें",
+      "ur": "نیا جائزہ لکھیں"
+    },
+    "error_status": {
+      "en": "Error ({status})",
+      "de": "Fehler ({status})",
+      "fr": "Erreur ({status})",
+      "es": "Error ({status})",
+      "nl": "Fout ({status})",
+      "zh": "错误（{status}）",
+      "hi": "त्रुटि ({status})",
+      "ur": "خطا ({status})"
+    },
+    "error_unknown": {
+      "en": "Unknown error",
+      "de": "Unbekannter Fehler",
+      "fr": "Erreur inconnue",
+      "es": "Error desconocido",
+      "nl": "Onbekende fout",
+      "zh": "未知错误",
+      "hi": "अज्ञात त्रुटि",
+      "ur": "نامعلوم خطا"
+    },
+    "error_send_failed": {
+      "en": "Could not send:",
+      "de": "Senden fehlgeschlagen:",
+      "fr": "Envoi échoué :",
+      "es": "No se pudo enviar:",
+      "nl": "Verzenden mislukt:",
+      "zh": "发送失败：",
+      "hi": "भेजा नहीं जा सका:",
+      "ur": "بھیجنا ناکام رہا:"
+    },
+    "error_title_min": {
+      "en": "Must be at least 5 characters.",
+      "de": "Mindestens 5 Zeichen erforderlich.",
+      "fr": "Au moins 5 caractères requis.",
+      "es": "Mínimo 5 caracteres.",
+      "nl": "Minimaal 5 tekens vereist.",
+      "zh": "至少需要5个字符。",
+      "hi": "कम से कम 5 अक्षर होने चाहिए।",
+      "ur": "کم از کم 5 حروف ہونے چاہئیں۔"
+    },
+    "error_message_min": {
+      "en": "At least 50 characters required ({remaining} missing).",
+      "de": "Mindestens 50 Zeichen erforderlich ({remaining} fehlen).",
+      "fr": "Au moins 50 caractères requis ({remaining} manquants).",
+      "es": "Mínimo 50 caracteres ({remaining} faltan).",
+      "nl": "Minimaal 50 tekens vereist ({remaining} ontbreken).",
+      "zh": "至少需要50个字符（还差{remaining}个）。",
+      "hi": "कम से कम 50 अक्षर आवश्यक ({remaining} कम हैं)।",
+      "ur": "کم از کم 50 حروف درکار ہیں ({remaining} باقی ہیں)۔"
+    },
+    "error_message_max": {
+      "en": "Maximum 2000 characters.",
+      "de": "Maximal 2000 Zeichen.",
+      "fr": "Maximum 2000 caractères.",
+      "es": "Máximo 2000 caracteres.",
+      "nl": "Maximaal 2000 tekens.",
+      "zh": "最多2000个字符。",
+      "hi": "अधिकतम 2000 अक्षर।",
+      "ur": "زیادہ سے زیادہ 2000 حروف۔"
+    },
+    "submitting": {
+      "en": "Submitting...",
+      "de": "Wird gesendet...",
+      "fr": "Envoi en cours...",
+      "es": "Enviando...",
+      "nl": "Verzenden...",
+      "zh": "提交中...",
+      "hi": "सबमिट हो रहा है...",
+      "ur": "جمع کرایا جا رہا ہے..."
+    },
+    "submit_button": {
+      "en": "Submit Review",
+      "de": "Rezension absenden",
+      "fr": "Envoyer l'avis",
+      "es": "Enviar reseña",
+      "nl": "Recensie verzenden",
+      "zh": "提交评论",
+      "hi": "समीक्षा भेजें",
+      "ur": "جائزہ جمع کریں"
+    }
+  },
+  "component.iletisim.contact_form": {
+    "label_name": {
+      "en": "Full Name *",
+      "de": "Vor- und Nachname *",
+      "fr": "Nom complet *",
+      "es": "Nombre completo *",
+      "nl": "Volledige naam *",
+      "zh": "姓名 *",
+      "hi": "पूरा नाम *",
+      "ur": "پورا نام *"
+    },
+    "label_email": {
+      "en": "Email *",
+      "de": "E-Mail *",
+      "fr": "E-mail *",
+      "es": "Correo electrónico *",
+      "nl": "E-mail *",
+      "zh": "电子邮件 *",
+      "hi": "ईमेल *",
+      "ur": "ای میل *"
+    },
+    "label_phone": {
+      "en": "Phone",
+      "de": "Telefon",
+      "fr": "Téléphone",
+      "es": "Teléfono",
+      "nl": "Telefoon",
+      "zh": "电话",
+      "hi": "फ़ोन",
+      "ur": "فون"
+    },
+    "label_subject": {
+      "en": "Subject *",
+      "de": "Betreff *",
+      "fr": "Objet *",
+      "es": "Asunto *",
+      "nl": "Onderwerp *",
+      "zh": "主题 *",
+      "hi": "विषय *",
+      "ur": "موضوع *"
+    },
+    "label_message": {
+      "en": "Your Message *",
+      "de": "Ihre Nachricht *",
+      "fr": "Votre message *",
+      "es": "Su mensaje *",
+      "nl": "Uw bericht *",
+      "zh": "您的留言 *",
+      "hi": "आपका संदेश *",
+      "ur": "آپ کا پیغام *"
+    },
+    "placeholder_name": {
+      "en": "Your Full Name",
+      "de": "Ihr vollständiger Name",
+      "fr": "Votre nom complet",
+      "es": "Su nombre completo",
+      "nl": "Uw volledige naam",
+      "zh": "您的姓名",
+      "hi": "आपका पूरा नाम",
+      "ur": "آپ کا پورا نام"
+    },
+    "placeholder_message": {
+      "en": "Write your message here...",
+      "de": "Schreiben Sie Ihre Nachricht hier...",
+      "fr": "Écrivez votre message ici...",
+      "es": "Escriba su mensaje aquí...",
+      "nl": "Schrijf uw bericht hier...",
+      "zh": "在此输入您的留言...",
+      "hi": "यहाँ अपना संदेश लिखें...",
+      "ur": "یہاں اپنا پیغام لکھیں..."
+    },
+    "subject_placeholder": {
+      "en": "Select...",
+      "de": "Auswählen...",
+      "fr": "Sélectionnez...",
+      "es": "Seleccione...",
+      "nl": "Selecteer...",
+      "zh": "请选择...",
+      "hi": "चुनें...",
+      "ur": "منتخب کریں..."
+    },
+    "subject_reservation": {
+      "en": "Reservation",
+      "de": "Reservierung",
+      "fr": "Réservation",
+      "es": "Reserva",
+      "nl": "Reservering",
+      "zh": "预订",
+      "hi": "आरक्षण",
+      "ur": "ریزرویشن"
+    },
+    "subject_info": {
+      "en": "Information Request",
+      "de": "Informationsanfrage",
+      "fr": "Demande d'information",
+      "es": "Solicitud de información",
+      "nl": "Informatieverzoek",
+      "zh": "信息咨询",
+      "hi": "जानकारी अनुरोध",
+      "ur": "معلومات کی درخواست"
+    },
+    "subject_cancel": {
+      "en": "Cancellation / Refund",
+      "de": "Stornierung / Rückerstattung",
+      "fr": "Annulation / Remboursement",
+      "es": "Cancelación / Reembolso",
+      "nl": "Annulering / Terugbetaling",
+      "zh": "取消 / 退款",
+      "hi": "रद्दीकरण / धनवापसी",
+      "ur": "منسوخی / رقم واپسی"
+    },
+    "subject_corporate": {
+      "en": "Corporate",
+      "de": "Firmenkunden",
+      "fr": "Entreprise",
+      "es": "Corporativo",
+      "nl": "Zakelijk",
+      "zh": "企业合作",
+      "hi": "कॉर्पोरेट",
+      "ur": "کارپوریٹ"
+    },
+    "subject_other": {
+      "en": "Other",
+      "de": "Sonstiges",
+      "fr": "Autre",
+      "es": "Otro",
+      "nl": "Overig",
+      "zh": "其他",
+      "hi": "अन्य",
+      "ur": "دیگر"
+    },
+    "submitting": {
+      "en": "Submitting...",
+      "de": "Wird gesendet...",
+      "fr": "Envoi en cours...",
+      "es": "Enviando...",
+      "nl": "Verzenden...",
+      "zh": "提交中...",
+      "hi": "सबमिट हो रहा है...",
+      "ur": "جمع کرایا جا رہا ہے..."
+    },
+    "submit_button": {
+      "en": "Send Message",
+      "de": "Nachricht senden",
+      "fr": "Envoyer le message",
+      "es": "Enviar mensaje",
+      "nl": "Bericht verzenden",
+      "zh": "发送消息",
+      "hi": "संदेश भेजें",
+      "ur": "پیغام بھیجیں"
+    },
+    "error_validation": {
+      "en": "Request could not be verified.",
+      "de": "Anfrage konnte nicht verifiziert werden.",
+      "fr": "La demande n'a pas pu être vérifiée.",
+      "es": "No se pudo verificar la solicitud.",
+      "nl": "Verzoek kon niet worden geverifieerd.",
+      "zh": "请求无法验证。",
+      "hi": "अनुरोध सत्यापित नहीं हो सका।",
+      "ur": "درخواست کی تصدیق نہیں ہو سکی۔"
+    },
+    "error_server": {
+      "en": "Server error",
+      "de": "Serverfehler",
+      "fr": "Erreur serveur",
+      "es": "Error del servidor",
+      "nl": "Serverfout",
+      "zh": "服务器错误",
+      "hi": "सर्वर त्रुटि",
+      "ur": "سرور کی خرابی"
+    },
+    "error_send": {
+      "en": "Message could not be delivered. Please try again or use WhatsApp.",
+      "de": "Nachricht konnte nicht zugestellt werden. Bitte erneut versuchen oder WhatsApp nutzen.",
+      "fr": "Le message n'a pas pu être envoyé. Réessayez ou utilisez WhatsApp.",
+      "es": "El mensaje no pudo enviarse. Inténtelo de nuevo o use WhatsApp.",
+      "nl": "Bericht kon niet worden verzonden. Probeer opnieuw of gebruik WhatsApp.",
+      "zh": "消息无法发送。请重试或使用WhatsApp。",
+      "hi": "संदेश नहीं पहुँचाया जा सका। कृपया पुनः प्रयास करें या WhatsApp का उपयोग करें।",
+      "ur": "پیغام نہیں بھیجا جا سکا۔ دوبارہ کوشش کریں یا WhatsApp استعمال کریں۔"
+    },
+    "success_message": {
+      "en": "Your message has been sent. We will get back to you within 4 hours.",
+      "de": "Ihre Nachricht wurde gesendet. Wir melden uns innerhalb von 4 Stunden.",
+      "fr": "Votre message a été envoyé. Nous vous répondrons dans les 4 heures.",
+      "es": "Su mensaje ha sido enviado. Le responderemos en un máximo de 4 horas.",
+      "nl": "Uw bericht is verzonden. We reageren binnen 4 uur.",
+      "zh": "您的消息已发送。我们将在4小时内回复您。",
+      "hi": "आपका संदेश भेज दिया गया है। हम 4 घंटे के भीतर जवाब देंगे।",
+      "ur": "آپ کا پیغام بھیج دیا گیا ہے۔ ہم 4 گھنٹوں کے اندر جواب دیں گے۔"
+    },
+    "kvkk_notice": {
+      "en": "Your message is processed in compliance with KVKK. Used solely to respond to your request, not shared with third parties.",
+      "de": "Ihre Nachricht wird KVKK-konform verarbeitet. Nur zur Beantwortung Ihrer Anfrage, nicht an Dritte weitergegeben.",
+      "fr": "Votre message est traité conformément au KVKK. Utilisé uniquement pour répondre à votre demande, non partagé avec des tiers.",
+      "es": "Su mensaje se procesa en conformidad con KVKK. Solo para responder a su solicitud, no se comparte con terceros.",
+      "nl": "Uw bericht wordt verwerkt conform KVKK. Alleen gebruikt om op uw verzoek te reageren, niet gedeeld met derden.",
+      "zh": "您的消息依据KVKK合规处理。仅用于回复您的请求，不与第三方共享。",
+      "hi": "आपका संदेश KVKK के अनुसार संसाधित किया जाता है। केवल आपके अनुरोध के जवाब के लिए उपयोग किया जाता है, तीसरे पक्ष को नहीं दिया जाता।",
+      "ur": "آپ کا پیغام KVKK کے مطابق پروسیس کیا جاتا ہے۔ صرف آپ کی درخواست کے جواب کے لیے استعمال ہوتا ہے، تیسرے فریق کو نہیں دیا جاتا۔"
+    }
+  },
+  "component.gdpr.gdpr_form": {
+    "label_email": {
+      "en": "Your email address *",
+      "de": "Ihre E-Mail-Adresse *",
+      "fr": "Votre adresse e-mail *",
+      "es": "Su dirección de correo electrónico *",
+      "nl": "Uw e-mailadres *",
+      "zh": "您的电子邮件地址 *",
+      "hi": "आपका ईमेल पता *",
+      "ur": "آپ کا ای میل پتہ *"
+    },
+    "email_hint": {
+      "en": "Must be the email address used for your reservations.",
+      "de": "Muss die E-Mail-Adresse sein, die Sie für Ihre Reservierungen verwendet haben.",
+      "fr": "Doit être l'adresse e-mail utilisée pour vos réservations.",
+      "es": "Debe ser el correo electrónico usado en sus reservas.",
+      "nl": "Moet het e-mailadres zijn dat u voor uw reserveringen heeft gebruikt.",
+      "zh": "必须是您预订时使用的电子邮件地址。",
+      "hi": "यह आपके आरक्षण में उपयोग किया गया ईमेल पता होना चाहिए।",
+      "ur": "یہ وہی ای میل پتہ ہونا چاہیے جو آپ نے ریزرویشن کے لیے استعمال کیا تھا۔"
+    },
+    "legend_action": {
+      "en": "Action",
+      "de": "Aktion",
+      "fr": "Action",
+      "es": "Acción",
+      "nl": "Actie",
+      "zh": "操作",
+      "hi": "कार्रवाई",
+      "ur": "عمل"
+    },
+    "action_export_title": {
+      "en": "Download my data",
+      "de": "Meine Daten herunterladen",
+      "fr": "Télécharger mes données",
+      "es": "Descargar mis datos",
+      "nl": "Mijn gegevens downloaden",
+      "zh": "下载我的数据",
+      "hi": "मेरा डेटा डाउनलोड करें",
+      "ur": "میرا ڈیٹا ڈاؤن لوڈ کریں"
+    },
+    "action_export_desc": {
+      "en": "GDPR Madde 15 — Receive all your personal data as a JSON file.",
+      "de": "GDPR Madde 15 — Erhalten Sie alle Ihre persönlichen Daten als JSON-Datei.",
+      "fr": "GDPR Madde 15 — Recevez toutes vos données personnelles sous forme de fichier JSON.",
+      "es": "GDPR Madde 15 — Reciba todos sus datos personales como archivo JSON.",
+      "nl": "GDPR Madde 15 — Ontvang al uw persoonlijke gegevens als JSON-bestand.",
+      "zh": "GDPR Madde 15 — 以JSON文件形式获取您的所有个人数据。",
+      "hi": "GDPR Madde 15 — अपना सारा व्यक्तिगत डेटा JSON फ़ाइल के रूप में प्राप्त करें।",
+      "ur": "GDPR Madde 15 — اپنا تمام ذاتی ڈیٹا JSON فائل کے طور پر حاصل کریں۔"
+    },
+    "action_delete_title": {
+      "en": "Delete my data",
+      "de": "Meine Daten löschen",
+      "fr": "Supprimer mes données",
+      "es": "Eliminar mis datos",
+      "nl": "Mijn gegevens verwijderen",
+      "zh": "删除我的数据",
+      "hi": "मेरा डेटा हटाएं",
+      "ur": "میرا ڈیٹا حذف کریں"
+    },
+    "action_delete_desc": {
+      "en": "GDPR Madde 17 — Delete your account and anonymize reservation passenger details.",
+      "de": "GDPR Madde 17 — Konto löschen und Reservierungspassagierdaten anonymisieren.",
+      "fr": "GDPR Madde 17 — Supprimer votre compte et anonymiser les données passagers de vos réservations.",
+      "es": "GDPR Madde 17 — Elimine su cuenta y anonimice los datos de pasajeros de sus reservas.",
+      "nl": "GDPR Madde 17 — Verwijder uw account en anonimiseer passagiersgegevens van reserveringen.",
+      "zh": "GDPR Madde 17 — 删除您的账户并匿名化预订乘客信息。",
+      "hi": "GDPR Madde 17 — अपना खाता हटाएं और आरक्षण यात्री विवरण अज्ञात करें।",
+      "ur": "GDPR Madde 17 — اپنا اکاؤنٹ حذف کریں اور ریزرویشن مسافر کی تفصیلات گمنام کریں۔"
+    },
+    "submitting": {
+      "en": "Submitting...",
+      "de": "Wird gesendet...",
+      "fr": "Envoi en cours...",
+      "es": "Enviando...",
+      "nl": "Verzenden...",
+      "zh": "提交中...",
+      "hi": "सबमिट हो रहा है...",
+      "ur": "جمع کرایا جا رہا ہے..."
+    },
+    "submit_button": {
+      "en": "Send verified link",
+      "de": "Verifizierten Link senden",
+      "fr": "Envoyer le lien vérifié",
+      "es": "Enviar enlace verificado",
+      "nl": "Geverifieerde link verzenden",
+      "zh": "发送验证链接",
+      "hi": "सत्यापित लिंक भेजें",
+      "ur": "تصدیق شدہ لنک بھیجیں"
+    },
+    "error_validation": {
+      "en": "Request could not be verified.",
+      "de": "Anfrage konnte nicht verifiziert werden.",
+      "fr": "La demande n'a pas pu être vérifiée.",
+      "es": "No se pudo verificar la solicitud.",
+      "nl": "Verzoek kon niet worden geverifieerd.",
+      "zh": "请求无法验证。",
+      "hi": "अनुरोध सत्यापित नहीं हो सका।",
+      "ur": "درخواست کی تصدیق نہیں ہو سکی۔"
+    },
+    "error_email_required": {
+      "en": "Email address is required.",
+      "de": "E-Mail-Adresse ist erforderlich.",
+      "fr": "L'adresse e-mail est requise.",
+      "es": "El correo electrónico es obligatorio.",
+      "nl": "E-mailadres is vereist.",
+      "zh": "电子邮件地址为必填项。",
+      "hi": "ईमेल पता आवश्यक है।",
+      "ur": "ای میل پتہ ضروری ہے۔"
+    },
+    "error_send": {
+      "en": "Request could not be sent. Please try again.",
+      "de": "Anfrage konnte nicht gesendet werden. Bitte erneut versuchen.",
+      "fr": "La demande n'a pas pu être envoyée. Veuillez réessayer.",
+      "es": "No se pudo enviar la solicitud. Inténtelo de nuevo.",
+      "nl": "Verzoek kon niet worden verzonden. Probeer het opnieuw.",
+      "zh": "请求无法发送。请重试。",
+      "hi": "अनुरोध नहीं भेजा जा सका। कृपया पुनः प्रयास करें।",
+      "ur": "درخواست نہیں بھیجی جا سکی۔ براہ کرم دوبارہ کوشش کریں۔"
+    },
+    "error_timeout": {
+      "en": "Request timed out. Please try again.",
+      "de": "Anfrage abgelaufen. Bitte erneut versuchen.",
+      "fr": "La demande a expiré. Veuillez réessayer.",
+      "es": "La solicitud expiró. Inténtelo de nuevo.",
+      "nl": "Verzoek verlopen. Probeer het opnieuw.",
+      "zh": "请求超时。请重试。",
+      "hi": "अनुरोध का समय समाप्त हो गया। कृपया पुनः प्रयास करें।",
+      "ur": "درخواست کا وقت ختم ہو گیا۔ براہ کرم دوبارہ کوشش کریں۔"
+    },
+    "error_connection": {
+      "en": "Connection error. Please try again.",
+      "de": "Verbindungsfehler. Bitte erneut versuchen.",
+      "fr": "Erreur de connexion. Veuillez réessayer.",
+      "es": "Error de conexión. Inténtelo de nuevo.",
+      "nl": "Verbindingsfout. Probeer het opnieuw.",
+      "zh": "连接错误。请重试。",
+      "hi": "कनेक्शन त्रुटि। कृपया पुनः प्रयास करें।",
+      "ur": "کنکشن کی خرابی۔ براہ کرم دوبارہ کوشش کریں۔"
+    },
+    "success_message": {
+      "en": "A verified link has been sent to your inbox. Click the link within 24 hours to complete the process.",
+      "de": "Ein verifizierter Link wurde an Ihren Posteingang gesendet. Klicken Sie innerhalb von 24 Stunden auf den Link.",
+      "fr": "Un lien vérifié a été envoyé dans votre boîte de réception. Cliquez sur le lien dans les 24 heures pour terminer.",
+      "es": "Se ha enviado un enlace verificado a su bandeja de entrada. Haga clic en el enlace en 24 horas para completar el proceso.",
+      "nl": "Een geverifieerde link is naar uw inbox gestuurd. Klik binnen 24 uur op de link om het proces te voltooien.",
+      "zh": "已向您的收件箱发送验证链接。请在24小时内点击链接完成操作。",
+      "hi": "आपके इनबॉक्स में एक सत्यापित लिंक भेजा गया है। 24 घंटे के भीतर लिंक पर क्लिक करके प्रक्रिया पूरी करें।",
+      "ur": "آپ کے ان باکس میں ایک تصدیق شدہ لنک بھیجا گیا ہے۔ عمل مکمل کرنے کے لیے 24 گھنٹوں کے اندر لنک پر کلک کریں۔"
+    }
+  },
+  "component.layout.error": {
+    "title": {
+      "en": "An error occurred",
+      "de": "Ein Fehler ist aufgetreten",
+      "fr": "Une erreur s'est produite",
+      "es": "Se ha producido un error",
+      "nl": "Er is een fout opgetreden",
+      "zh": "发生了错误",
+      "hi": "एक त्रुटि हुई",
+      "ur": "ایک خرابی پیش آئی"
+    },
+    "description": {
+      "en": "An unexpected problem occurred while loading the page. Would you like to try again?",
+      "de": "Beim Laden der Seite ist ein unerwartetes Problem aufgetreten. Möchten Sie es erneut versuchen?",
+      "fr": "Un problème inattendu s'est produit lors du chargement de la page. Voulez-vous réessayer ?",
+      "es": "Se ha producido un problema inesperado al cargar la página. ¿Desea intentarlo de nuevo?",
+      "nl": "Er deed zich een onverwacht probleem voor bij het laden van de pagina. Wilt u het opnieuw proberen?",
+      "zh": "页面加载时发生意外问题。是否重试？",
+      "hi": "पृष्ठ लोड करते समय एक अप्रत्याशित समस्या आई। क्या आप पुनः प्रयास करना चाहेंगे?",
+      "ur": "صفحہ لوڈ کرتے وقت ایک غیر متوقع مسئلہ پیش آیا۔ کیا آپ دوبارہ کوشش کرنا چاہیں گے؟"
+    },
+    "error_code_prefix": {
+      "en": "Error code:",
+      "de": "Fehlercode:",
+      "fr": "Code d'erreur :",
+      "es": "Código de error:",
+      "nl": "Foutcode:",
+      "zh": "错误代码：",
+      "hi": "त्रुटि कोड:",
+      "ur": "خطا کوڈ:"
+    },
+    "btn_retry": {
+      "en": "Try Again",
+      "de": "Erneut versuchen",
+      "fr": "Réessayer",
+      "es": "Reintentar",
+      "nl": "Opnieuw proberen",
+      "zh": "重试",
+      "hi": "पुनः प्रयास करें",
+      "ur": "دوبارہ کوشش کریں"
+    },
+    "btn_home": {
+      "en": "Home",
+      "de": "Startseite",
+      "fr": "Accueil",
+      "es": "Inicio",
+      "nl": "Startpagina",
+      "zh": "首页",
+      "hi": "होम",
+      "ur": "ہوم"
+    },
+    "contact_prefix": {
+      "en": "If the problem persists:",
+      "de": "Wenn das Problem weiterhin besteht:",
+      "fr": "Si le problème persiste :",
+      "es": "Si el problema persiste:",
+      "nl": "Als het probleem aanhoudt:",
+      "zh": "如果问题持续：",
+      "hi": "यदि समस्या बनी रहे:",
+      "ur": "اگر مسئلہ برقرار رہے:"
+    }
+  }
+}

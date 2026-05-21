@@ -6,6 +6,7 @@
 
 import { useState } from "react";
 import { AlertTriangle, CheckCircle2, CalendarDays, RefreshCcw } from "lucide-react";
+import { useT } from "@/lib/i18n/I18nProvider";
 
 interface Props {
   token: string;
@@ -39,6 +40,9 @@ function formatCurrency(amount: number, currency: string): string {
 }
 
 export function YenidenTarihClient(props: Props) {
+  const t = useT();
+  const ns = t.component.rezervasyon.reschedule_client;
+
   const [selectedDate, setSelectedDate] = useState<string>(props.alternativeDates[0] ?? "");
   const [busy, setBusy] = useState(false);
   const [result, setResult] = useState<
@@ -50,10 +54,10 @@ export function YenidenTarihClient(props: Props) {
 
   async function submit(action: "reschedule" | "refund") {
     if (action === "reschedule" && !selectedDate) {
-      setError("Lütfen alternatif tarih seçin.");
+      setError(ns.error_select_date);
       return;
     }
-    if (action === "refund" && !confirm("Tam iade istediğinize emin misiniz? Bu işlem geri alınamaz.")) {
+    if (action === "refund" && !confirm(ns.confirm_refund)) {
       return;
     }
     setBusy(true);
@@ -80,7 +84,7 @@ export function YenidenTarihClient(props: Props) {
         });
       }
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Bir hata oluştu.");
+      setError(err instanceof Error ? err.message : ns.error_generic);
     } finally {
       setBusy(false);
     }
@@ -93,23 +97,25 @@ export function YenidenTarihClient(props: Props) {
           <CheckCircle2 className="w-16 h-16 text-emerald-500 mx-auto mb-4" />
           {result.kind === "reschedule" ? (
             <>
-              <h1 className="text-2xl font-bold text-slate-900 mb-2">Yeni Tarihiniz Onaylandı</h1>
+              <h1 className="text-2xl font-bold text-slate-900 mb-2">{ns.success_reschedule_title}</h1>
               <p className="text-slate-600 mb-4">
-                <strong>{props.serviceName}</strong> rezervasyonunuz{" "}
-                <strong>{formatDateTr(result.newDate)}</strong> tarihine taşındı.
+                <strong>{props.serviceName}</strong>{" "}
+                {ns.success_reschedule_body_prefix}{" "}
+                <strong>{formatDateTr(result.newDate)}</strong>{" "}
+                {ns.success_reschedule_body_suffix}
               </p>
             </>
           ) : (
             <>
-              <h1 className="text-2xl font-bold text-slate-900 mb-2">İade Talebiniz Alındı</h1>
+              <h1 className="text-2xl font-bold text-slate-900 mb-2">{ns.success_refund_title}</h1>
               <p className="text-slate-600 mb-4">
-                <strong>{formatCurrency(result.amount, result.currency)}</strong> iadesi 5 iş günü
-                içinde kartınıza yansıyacaktır.
+                <strong>{formatCurrency(result.amount, result.currency)}</strong>{" "}
+                {ns.success_refund_body}
               </p>
             </>
           )}
-          <p className="text-xs text-slate-500">Onay e-postası kayıtlı adresinize gönderildi.</p>
-          <p className="text-xs text-slate-500 mt-1">Rezervasyon: <code className="font-mono">{props.bookingId}</code></p>
+          <p className="text-xs text-slate-500">{ns.success_confirmation_email}</p>
+          <p className="text-xs text-slate-500 mt-1">{ns.label_booking_id}: <code className="font-mono">{props.bookingId}</code></p>
         </div>
       </main>
     );
@@ -121,11 +127,13 @@ export function YenidenTarihClient(props: Props) {
         <div className="bg-rose-50 border-l-4 border-rose-500 rounded-lg p-4 mb-6 flex gap-3">
           <AlertTriangle className="w-6 h-6 text-rose-600 flex-shrink-0 mt-0.5" />
           <div>
-            <h1 className="font-bold text-rose-900 text-lg">Rezervasyonunuz iptal edildi</h1>
+            <h1 className="font-bold text-rose-900 text-lg">{ns.cancelled_heading}</h1>
             <p className="text-sm text-rose-700 mt-1">
-              Merhaba <strong>{props.customerName}</strong>, <strong>{formatDateTr(props.originalDate)}</strong>{" "}
-              tarihindeki <strong>{props.serviceName}</strong> hizmetiniz iptal edilmek zorunda kalındı.
-              Aşağıdan tercih ettiğiniz çözümü seçin.
+              {ns.cancelled_greeting.replace("{customerName}", props.customerName)}{" "}
+              <strong>{formatDateTr(props.originalDate)}</strong>{" "}
+              {ns.cancelled_body_middle}{" "}
+              <strong>{props.serviceName}</strong>{" "}
+              {ns.cancelled_body_suffix}
             </p>
           </div>
         </div>
@@ -133,17 +141,17 @@ export function YenidenTarihClient(props: Props) {
         <section className="bg-white rounded-2xl shadow-sm p-6 mb-5">
           <div className="flex items-center gap-2 mb-3">
             <CalendarDays className="w-5 h-5 text-amber-600" />
-            <h2 className="font-bold text-slate-900">Seçenek 1 — Alternatif Tarih</h2>
+            <h2 className="font-bold text-slate-900">{ns.option1_heading}</h2>
             <span className="ml-auto text-[10px] uppercase tracking-wider bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded font-bold">
-              Önerilen
+              {ns.option1_recommended_badge}
             </span>
           </div>
           <p className="text-sm text-slate-600 mb-4">
-            Aynı hizmet için sonraki uygun tarihler:
+            {ns.option1_subtitle}
           </p>
           {props.alternativeDates.length === 0 ? (
             <div className="text-sm text-amber-700 bg-amber-50 rounded p-3">
-              Yakın tarihlerde uygun slot bulunamadı. Lütfen WhatsApp ile iletişime geçin.
+              {ns.option1_no_dates}
             </div>
           ) : (
             <div className="space-y-2 mb-4">
@@ -174,25 +182,25 @@ export function YenidenTarihClient(props: Props) {
             disabled={busy || props.alternativeDates.length === 0 || !selectedDate}
             className="w-full bg-amber-500 hover:bg-amber-600 disabled:opacity-50 text-white py-3 rounded-lg font-bold text-sm"
           >
-            {busy ? "Onaylanıyor..." : "Seçili tarihe taşı"}
+            {busy ? ns.button_confirming : ns.button_reschedule}
           </button>
         </section>
 
         <section className="bg-white rounded-2xl shadow-sm p-6">
           <div className="flex items-center gap-2 mb-3">
             <RefreshCcw className="w-5 h-5 text-slate-600" />
-            <h2 className="font-bold text-slate-900">Seçenek 2 — Tam İade</h2>
+            <h2 className="font-bold text-slate-900">{ns.option2_heading}</h2>
           </div>
           <p className="text-sm text-slate-600 mb-4">
-            <strong>{formatCurrency(props.refundAmount, props.currency)}</strong> tutarın tamamı
-            kartınıza 5 iş günü içinde iade edilir.
+            <strong>{formatCurrency(props.refundAmount, props.currency)}</strong>{" "}
+            {ns.option2_body}
           </p>
           <button
             onClick={() => submit("refund")}
             disabled={busy}
             className="w-full bg-slate-700 hover:bg-slate-800 disabled:opacity-50 text-white py-3 rounded-lg font-bold text-sm"
           >
-            {busy ? "İşleniyor..." : "Tam iade iste"}
+            {busy ? ns.button_processing : ns.button_request_refund}
           </button>
         </section>
 
@@ -203,7 +211,7 @@ export function YenidenTarihClient(props: Props) {
         )}
 
         <p className="text-xs text-slate-500 text-center mt-6">
-          Rezervasyon: <code className="font-mono">{props.bookingId}</code> · Yardım için{" "}
+          {ns.label_booking_id}: <code className="font-mono">{props.bookingId}</code> · {ns.help_prefix}{" "}
           <a href="https://wa.me/905374647861" className="text-amber-600 hover:underline">
             WhatsApp +90 537 464 78 61
           </a>

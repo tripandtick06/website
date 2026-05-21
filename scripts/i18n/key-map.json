@@ -865,6 +865,101 @@
           "col": 149
         }
       ]
+    },
+    "service_transfer": {
+      "tr": "Transfer",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "company_operatorler": {
+      "tr": "Operatörler",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "company_yorum_yaz": {
+      "tr": "Yorum Yaz",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "company_rezervasyonum": {
+      "tr": "Rezervasyonum",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "company_b2b_acente": {
+      "tr": "B2B Acente",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "legal_iptal_iade": {
+      "tr": "İptal & İade",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "legal_gizlilik_politikasi": {
+      "tr": "Gizlilik Politikası",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "legal_kullanim_sartlari": {
+      "tr": "Kullanım Şartları",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "legal_kvkk_cerezler": {
+      "tr": "KVKK & Çerezler",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "legal_veri_haklari_gdpr": {
+      "tr": "Veri Hakları (GDPR)",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "legal_impressum": {
+      "tr": "Impressum (DE/AT)",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "newsletter_hosgeldin_bonusu": {
+      "tr": "Hoşgeldin Bonusu",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "newsletter_subline": {
+      "tr": "Bültene abone olun, ilk rezervasyonunuzda %5 indirim + sezon fırsatları.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "brand_description": {
+      "tr": "Kapadokya'nın en rekabetçi fiyatlı, en güvenilir online seyahat acentası. Nevşehir / Göreme, Türkiye.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "lang_sec_aria_label": {
+      "tr": "Dil seç",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "lang_yakinda_title": {
+      "tr": "Faz 2'de eklenecek",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "lang_yakinda_badge": {
+      "tr": "Yakında",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "bottom_location": {
+      "tr": "Nevşehir / Kapadokya, Türkiye",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "country_turkiye": {
+      "tr": "Türkiye",
+      "context": "batch-wave2",
+      "type": "manual"
     }
   },
   "component.layout.header": {
@@ -1389,6 +1484,61 @@
           "col": 40
         }
       ]
+    },
+    "sub_tam_iade": {
+      "tr": "Operatör iptali = tam iade",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "sub_pci_dss": {
+      "tr": "PCI-DSS uyumlu altyapı",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "en_dusuk_fiyat": {
+      "tr": "En Düşük Fiyat",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "sub_fiyat_farki": {
+      "tr": "Fiyat farkını biz karşılarız",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "sub_tum_ucuslarda": {
+      "tr": "Tüm uçuşlarda dahil",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "sub_kendi_dilinizde": {
+      "tr": "Kendi dilinizde hizmet",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "headline_ucuzunu": {
+      "tr": "Bizden Daha Ucuzunu",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "headline_buldunuz_mu": {
+      "tr": "Buldunuz mu?",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "subtext_teklif": {
+      "tr": "Aynı tarih, aynı hizmet için daha düşük fiyatlı bir teklif kanıtlayın —",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "subtext_yuzde_5": {
+      "tr": "%5 altına",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "subtext_ineriz": {
+      "tr": "ineriz.",
+      "context": "batch-wave2",
+      "type": "manual"
     }
   },
   "component.sections.hero": {},
@@ -1551,9 +1701,135 @@
           "col": 153
         }
       ]
+    },
+    "hosgeldin_bonusu": {
+      "tr": "Hoşgeldin Bonusu",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "subline_abonelik": {
+      "tr": "Bültenimize abone olun, ilk rezervasyonunuzda %5 indirim kazanın. Sezon fırsatları doğrudan e-postanıza.",
+      "context": "batch-wave2",
+      "type": "manual"
     }
   },
-  "component.sections.packages": {},
+  "component.sections.packages": {
+    "standart_meta_sure": {
+      "tr": "60+ dk",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "standart_meta_kisi": {
+      "tr": "16-20 kişi",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "standart_include_transfer": {
+      "tr": "Otelden transfer dahil",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "standart_include_kahvalti": {
+      "tr": "Hafif kahvaltı dahil",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "standart_include_sigorta": {
+      "tr": "40M€ sigorta dahil",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "standart_include_sertifika": {
+      "tr": "Sertifika & madalya",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "standart_include_sampanya": {
+      "tr": "Şampanya ile kutlama",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "unit_kisi_basi": {
+      "tr": "kişi başı",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "balayi_meta_balon": {
+      "tr": "Özel balon",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "balayi_meta_otel": {
+      "tr": "2 gece otel",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "balayi_include_delux_ucus": {
+      "tr": "Özel deluxe balon uçuşu",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "balayi_include_magara_otel": {
+      "tr": "Mağara otel (2 gece)",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "balayi_include_vip_transfer": {
+      "tr": "VIP transfer",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "balayi_include_cicek_dekor": {
+      "tr": "Sürpriz çiçek & dekor",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "balayi_include_fotograf": {
+      "tr": "Özel fotoğraf çekimi",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "unit_2_kisi_toplam": {
+      "tr": "2 kişi toplam",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "macera_meta_balon": {
+      "tr": "Balon",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "macera_meta_atv": {
+      "tr": "ATV",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "macera_include_standart_ucus": {
+      "tr": "Standart balon uçuşu",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "macera_include_atv_turu": {
+      "tr": "2 saatlik ATV turu",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "macera_include_at_binme": {
+      "tr": "1 saatlik at binme",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "macera_include_transferler": {
+      "tr": "Tüm transferler dahil",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "macera_include_rehber": {
+      "tr": "Rehber eşliği",
+      "context": "batch-wave2",
+      "type": "manual"
+    }
+  },
   "component.sections.reviews": {
     "musteri_yorumlari": {
       "tr": "Müşteri Yorumları",
@@ -8468,6 +8744,16 @@
       "tr": "www.kvkk.gov.tr",
       "context": "batch-cd",
       "type": "manual"
+    },
+    "pagehero_tag_yasal": {
+      "tr": "Yasal",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "pagehero_title_kvkk": {
+      "tr": "KVKK",
+      "context": "batch-wave2",
+      "type": "manual"
     }
   },
   "page.offline": {
@@ -10359,6 +10645,2011 @@
     "featurecard_title_moderasyon": {
       "tr": "Moderasyon",
       "context": "batch-cd",
+      "type": "manual"
+    }
+  },
+  "component.booking.booking_client": {
+    "nationality_other": {
+      "tr": "Diğer",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "coupon_applied": {
+      "tr": "Kupon uygulandı.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "coupon_applied_local": {
+      "tr": "Kupon uygulandı (lokal).",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "coupon_invalid": {
+      "tr": "Kupon geçersiz.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "coupon_verify_failed": {
+      "tr": "Kupon doğrulanamadı.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "error_date_full": {
+      "tr": "Bu tarih dolu. Lütfen başka bir tarih seçin.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "error_not_enough_seats": {
+      "tr": "Bu tarihte yeterli koltuk yok ({count} kaldı).",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "error_payment_start": {
+      "tr": "Ödeme başlatılamadı ({status})",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "error_payment_url": {
+      "tr": "Ödeme URL'i alınamadı",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "error_unknown": {
+      "tr": "Bilinmeyen hata",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "error_passenger_email_missing": {
+      "tr": "Yolcu e-postası bulunamadı",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "passenger_default_name": {
+      "tr": "Yolcu",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "error_mail_failed": {
+      "tr": "Mail gönderilemedi ({status})",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "error_email_provider_unavailable": {
+      "tr": "E-posta sağlayıcısı geçici olarak yanıt vermiyor. Lütfen birazdan tekrar deneyin.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "breadcrumb_home": {
+      "tr": "Ana Sayfa",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "breadcrumb_reservation": {
+      "tr": "Rezervasyon",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "category_balloon_tours": {
+      "tr": "Balon Turları",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "category_services": {
+      "tr": "Hizmetler",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "page_title": {
+      "tr": "Online Rezervasyon",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "sidebar_title": {
+      "tr": "Rezervasyon Özeti",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "sidebar_service": {
+      "tr": "Hizmet",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "sidebar_duration": {
+      "tr": "Süre",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "sidebar_date": {
+      "tr": "Tarih",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "sidebar_adult": {
+      "tr": "Yetişkin",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "sidebar_child": {
+      "tr": "Çocuk",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "sidebar_price_override": {
+      "tr": "Bu tarih için güncel fiyat (katalog: {catalog})",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "sidebar_date_cancelled": {
+      "tr": "Bu tarih iptal edildi.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "sidebar_date_delayed": {
+      "tr": "Bu tarihte {minutes} dk rotar.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "sidebar_insurance": {
+      "tr": "Sigorta",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "sidebar_discount": {
+      "tr": "İndirim",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "sidebar_referral": {
+      "tr": "Referans (%{pct})",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "sidebar_total": {
+      "tr": "Toplam",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "sidebar_market_advantage": {
+      "tr": "Piyasa fiyatından {amount} avantajlı.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "sidebar_guarantee_weather": {
+      "tr": "✓ Hava iptalinde %100 iade",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "sidebar_guarantee_cancel": {
+      "tr": "✓ 48 saat öncesine kadar ücretsiz iptal",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "sidebar_guarantee_ssl": {
+      "tr": "✓ SSL korumalı ödeme (Stripe)",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step_package": {
+      "tr": "Paket",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step_date": {
+      "tr": "Tarih",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step_passengers": {
+      "tr": "Yolcular",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step_summary": {
+      "tr": "Özet",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step_payment": {
+      "tr": "Ödeme",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step_confirmation": {
+      "tr": "Onay",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "btn_continue": {
+      "tr": "Devam Et",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "btn_back": {
+      "tr": "Geri",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step1_title": {
+      "tr": "1. Paket Özeti",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step1_includes_title": {
+      "tr": "Dahil Olanlar",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step1_warnings_title": {
+      "tr": "Önemli Uyarılar",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step2_title": {
+      "tr": "2. Tarih ve Kişi Sayısı",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step2_flight_date_label": {
+      "tr": "Uçuş Tarihi",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step2_date_selected": {
+      "tr": "Seçili tarih: {date}",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step2_date_hint": {
+      "tr": "Yeşil = müsait, sarı = sınırlı, kırmızı = dolu. En erken yarın için rezervasyon yapabilirsiniz.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step2_checking_availability": {
+      "tr": "Doluluk kontrol ediliyor...",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step2_date_full_title": {
+      "tr": "Bu tarih dolu.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step2_date_full_desc": {
+      "tr": "Lütfen başka bir tarih seçin.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step2_not_enough_seats_title": {
+      "tr": "Yeterli koltuk yok",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step2_not_enough_seats_desc": {
+      "tr": "bu tarihte sadece {remaining} koltuk kaldı, siz {paxTotal} kişisiniz. Kişi sayısını azaltın veya başka tarih seçin.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step2_limited_seats": {
+      "tr": "Sadece {remaining} koltuk kaldı!",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step2_limited_seats_hint": {
+      "tr": "Hızlı rezervasyon önerilir.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "counter_adult": {
+      "tr": "Yetişkin (12+ yaş)",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "counter_child": {
+      "tr": "Çocuk ({min}-11 yaş)",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step2_age_restriction_title": {
+      "tr": "Yaş kısıtı:",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step2_age_restriction_desc": {
+      "tr": "{minAge} yaş altı çocuklar bu hizmete katılamaz. Hamileler ve ciddi sağlık sorunu olanlar binemez. Detaylı koşullar için",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step2_age_restriction_faq_link": {
+      "tr": "SSS",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step2_age_restriction_faq_suffix": {
+      "tr": "sayfasına bakın.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step3_title": {
+      "tr": "3. Yolcu Bilgileri",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step3_subtitle": {
+      "tr": "İletişim bilgileri grup lideri için zorunlu. Konaklama transferi için otel adı önemli.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step3_group_leader": {
+      "tr": "👤 Grup Lideri",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step3_adult_label": {
+      "tr": "Yetişkin",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step3_child_label": {
+      "tr": "Çocuk",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "field_full_name": {
+      "tr": "Ad Soyad",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "field_nationality": {
+      "tr": "Uyruk",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "field_email": {
+      "tr": "E-posta",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "field_phone": {
+      "tr": "Telefon",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "field_age": {
+      "tr": "Yaş",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "field_accommodation": {
+      "tr": "Konaklama (otel adı + Kapadokya)",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "field_accommodation_placeholder": {
+      "tr": "Örn: Sultan Cave Suites - Göreme",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "passenger_error_full_name": {
+      "tr": "Ad soyad zorunlu",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "passenger_error_email": {
+      "tr": "Geçerli bir e-posta girin",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "passenger_error_phone": {
+      "tr": "Telefon zorunlu",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step4_title": {
+      "tr": "4. Özet ve Ekstralar",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step4_pax_count": {
+      "tr": "Kişi sayısı",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step4_adults_suffix": {
+      "tr": "yetişkin",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step4_children_suffix": {
+      "tr": "çocuk",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step4_insurance_title": {
+      "tr": "Seyahat Sigortası (+€{price} kişi başı)",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step4_insurance_desc": {
+      "tr": "İptal koruması, medikal kapsam, bagaj kaybı. {count} kişi için toplam €{total}.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step4_promo_title": {
+      "tr": "Promosyon Kodu",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step4_promo_verifying": {
+      "tr": "Doğrulanıyor...",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step4_promo_apply": {
+      "tr": "Uygula",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step4_promo_valid": {
+      "tr": "Kod geçerli — indirim uygulandı.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step4_price_breakdown_title": {
+      "tr": "Fiyat Dökümü",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step4_adults_row": {
+      "tr": "Yetişkin × {count}",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step4_children_row": {
+      "tr": "Çocuk × {count}",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step4_insurance_row": {
+      "tr": "Sigorta × {count}",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step4_referral_row": {
+      "tr": "Referans %{pct}",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step4_cancel_policy_title": {
+      "tr": "İptal Politikası",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step4_cancel_policy_weather": {
+      "tr": "Hava durumu nedeniyle operatör iptalinde %100 iade.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step4_cancel_policy_48h": {
+      "tr": "48 saat öncesine kadar ücretsiz iptal.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step4_cancel_policy_24_48h": {
+      "tr": "24-48 saat içinde iptalde %50 iade.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step4_cancel_policy_under_24h": {
+      "tr": "24 saatten az iptalde iade yapılmaz.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step4_policy_kvkk": {
+      "tr": "KVKK",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step4_policy_terms": {
+      "tr": "Kullanım Koşulları",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step4_policy_accept": {
+      "tr": "ve iptal politikasını okudum, kabul ediyorum.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step5_title": {
+      "tr": "5. Güvenli Ödeme",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step5_card_payment_title": {
+      "tr": "Kart ile ödeme (Stripe)",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step5_card_payment_desc": {
+      "tr": "VISA · Mastercard · AmEx · Apple Pay · Google Pay · 3D Secure destekli. EUR / USD / TRY tüm kartlar.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step5_ssl_desc": {
+      "tr": "Ödeme Stripe ile SSL 256-bit şifreli yapılır.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step5_card_not_stored": {
+      "tr": "Kart bilgileri Trip and Tick'e iletilmez.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step5_error_prefix": {
+      "tr": "Hata:",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step5_redirecting": {
+      "tr": "Yönlendiriliyor...",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step5_pay_button": {
+      "tr": "Güvenli Öde",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step6_email_sending": {
+      "tr": "E-postanız gönderiliyor...",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step6_email_sent": {
+      "tr": "✓ Bilet e-postanıza gönderildi. Gelmediyse spam klasörünü kontrol edin.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step6_email_failed_title": {
+      "tr": "E-posta gönderilemedi",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step6_resend": {
+      "tr": "Tekrar Gönder",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step6_confirmed_title": {
+      "tr": "Rezervasyonunuz Onaylandı!",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step6_confirmed_desc": {
+      "tr": "Rezervasyon kodunuzu not edin — onay e-postası da yola çıktı.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step6_booking_code_label": {
+      "tr": "Rezervasyon Kodu",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step6_pax_label": {
+      "tr": "Kişi",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step6_add_to_calendar": {
+      "tr": "Takvime Ekle (.ics)",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step6_download_pdf": {
+      "tr": "Bilet PDF",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step6_share": {
+      "tr": "Paylaş",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step6_link_copied": {
+      "tr": "Link kopyalandı!",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "step6_new_reservation": {
+      "tr": "Yeni bir rezervasyon yap →",
+      "context": "batch-wave2",
+      "type": "manual"
+    }
+  },
+  "component.yorum.review_form": {
+    "category_balloon": {
+      "tr": "Balon",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "category_activity": {
+      "tr": "Aktivite",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "category_tour": {
+      "tr": "Tur",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "label_name": {
+      "tr": "Ad Soyad *",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "label_email": {
+      "tr": "E-posta *",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "label_phone": {
+      "tr": "Telefon (opsiyonel)",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "label_language": {
+      "tr": "Dil",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "label_service": {
+      "tr": "Hangi hizmeti aldınız? *",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "label_rating": {
+      "tr": "Puanınız *",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "label_title": {
+      "tr": "Başlık *",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "label_message": {
+      "tr": "Yorumunuz * ({count}/2000)",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "placeholder_name": {
+      "tr": "Örn: Ayşe Kaya",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "placeholder_title": {
+      "tr": "Örn: Kapadokya'da unutulmaz bir deneyim",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "placeholder_message": {
+      "tr": "Deneyiminizi detaylıca anlatın (en az 50 karakter)...",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "service_placeholder": {
+      "tr": "Hizmet seçin",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "optgroup_balloon": {
+      "tr": "Balon Turları",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "optgroup_activity": {
+      "tr": "Aktiviteler",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "optgroup_tour": {
+      "tr": "Turlar",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "aria_star": {
+      "tr": "{n} yıldız",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "kvkk_consent": {
+      "tr": "aydınlatma metnini okudum, yorum/iletişim bilgilerimin işlenmesine onay veriyorum.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "success_title": {
+      "tr": "Yorumunuz Alındı!",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "success_body_prefix": {
+      "tr": "Teşekkür ederiz. Yorumunuz",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "success_body_hours": {
+      "tr": "24 saat içinde",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "success_body_suffix": {
+      "tr": "moderatör onayından sonra yayınlanacak.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "reference_no": {
+      "tr": "Referans no:",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "new_review_button": {
+      "tr": "Yeni Yorum Yaz",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "error_status": {
+      "tr": "Hata ({status})",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "error_unknown": {
+      "tr": "Bilinmeyen hata",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "error_send_failed": {
+      "tr": "Gönderilemedi:",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "error_title_min": {
+      "tr": "En az 5 karakter olmalı.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "error_message_min": {
+      "tr": "En az 50 karakter olmalı ({remaining} eksik).",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "error_message_max": {
+      "tr": "Maksimum 2000 karakter.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "submitting": {
+      "tr": "Gönderiliyor...",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "submit_button": {
+      "tr": "Yorumu Gönder",
+      "context": "batch-wave2",
+      "type": "manual"
+    }
+  },
+  "component.iletisim.contact_form": {
+    "label_name": {
+      "tr": "Ad Soyad *",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "label_email": {
+      "tr": "E-posta *",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "label_phone": {
+      "tr": "Telefon",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "label_subject": {
+      "tr": "Konu *",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "label_message": {
+      "tr": "Mesajınız *",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "placeholder_name": {
+      "tr": "Adınız Soyadınız",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "placeholder_message": {
+      "tr": "Mesajınızı buraya yazın...",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "subject_placeholder": {
+      "tr": "Seçiniz...",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "subject_reservation": {
+      "tr": "Rezervasyon",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "subject_info": {
+      "tr": "Bilgi Talebi",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "subject_cancel": {
+      "tr": "İptal/İade",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "subject_corporate": {
+      "tr": "Kurumsal",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "subject_other": {
+      "tr": "Diğer",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "submitting": {
+      "tr": "Gönderiliyor...",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "submit_button": {
+      "tr": "Mesaj Gönder",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "error_validation": {
+      "tr": "İstek doğrulanamadı.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "error_server": {
+      "tr": "Sunucu hatası",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "error_send": {
+      "tr": "Mesaj iletilemedi. Lütfen tekrar deneyin veya WhatsApp kullanın.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "success_message": {
+      "tr": "Mesajınız iletildi. En geç 4 saat içinde dönüş yapacağız.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "kvkk_notice": {
+      "tr": "Mesajınız KVKK uyumlu işlenir. Sadece talebinize cevap için kullanılır, üçüncü taraflara aktarılmaz.",
+      "context": "batch-wave2",
+      "type": "manual"
+    }
+  },
+  "component.gdpr.gdpr_form": {
+    "label_email": {
+      "tr": "E-posta adresiniz *",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "email_hint": {
+      "tr": "Rezervasyonlarınızda kullandığınız e-posta adresi olmalıdır.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "legend_action": {
+      "tr": "İşlem",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "action_export_title": {
+      "tr": "Verilerimi indir",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "action_export_desc": {
+      "tr": "GDPR Madde 15 — JSON dosyası olarak tüm kişisel verilerinizi alın.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "action_delete_title": {
+      "tr": "Verilerimi sil",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "action_delete_desc": {
+      "tr": "GDPR Madde 17 — Hesabınızı silin ve rezervasyon yolcu bilgilerini anonimleştirin.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "submitting": {
+      "tr": "Gönderiliyor...",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "submit_button": {
+      "tr": "Onaylı bağ gönder",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "error_validation": {
+      "tr": "İstek doğrulanamadı.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "error_email_required": {
+      "tr": "E-posta adresi gerekli.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "error_send": {
+      "tr": "İstek gönderilemedi. Lütfen tekrar deneyin.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "error_timeout": {
+      "tr": "İstek zaman aşımına uğradı. Lütfen tekrar deneyin.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "error_connection": {
+      "tr": "Bağlantı hatası. Lütfen tekrar deneyin.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "success_message": {
+      "tr": "Onaylı bağ posta kutunuza gönderildi. 24 saat içinde bağa tıklayarak işlemi tamamlayın.",
+      "context": "batch-wave2",
+      "type": "manual"
+    }
+  },
+  "component.ara.search_client": {
+    "heading_search": {
+      "tr": "Arama",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "heading_search_prefix": {
+      "tr": "Arama:",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "results_count": {
+      "tr": "{count} sonuç bulundu.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "results_empty_hint": {
+      "tr": "Balon turu, otel, aktivite, paket veya transfer arayın.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "search_placeholder": {
+      "tr": "Örn: balon, deluxe, atv, mağara otel, kırmızı tur…",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "search_aria_label": {
+      "tr": "Arama kutusu",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "clear_search_aria_label": {
+      "tr": "Aramayı temizle",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "recent_searches_heading": {
+      "tr": "Son Aramalar",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "recent_searches_clear": {
+      "tr": "Temizle",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "filters_button": {
+      "tr": "Filtreler",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "filters_active_badge": {
+      "tr": "aktif",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "sort_label": {
+      "tr": "Sırala:",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "sort_popularity": {
+      "tr": "En Popüler",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "sort_price_asc": {
+      "tr": "En Ucuz",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "sort_price_desc": {
+      "tr": "En Pahalı",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "sort_rating_desc": {
+      "tr": "En Yüksek Puan",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "sort_newest": {
+      "tr": "En Yeni",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "clear_filters": {
+      "tr": "Filtreleri Temizle",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "filter_price_heading": {
+      "tr": "Fiyat Aralığı",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "filter_price_custom": {
+      "tr": "Özel:",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "filter_price_min_placeholder": {
+      "tr": "Min €",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "filter_price_max_placeholder": {
+      "tr": "Max €",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "filter_rating_heading": {
+      "tr": "Minimum Puan",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "filter_duration_heading": {
+      "tr": "Süre",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "filter_currency_heading": {
+      "tr": "Para Birimi",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "price_chip_any": {
+      "tr": "Tümü",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "price_chip_0_50": {
+      "tr": "€0-50",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "price_chip_50_150": {
+      "tr": "€50-150",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "price_chip_150_300": {
+      "tr": "€150-300",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "price_chip_300_plus": {
+      "tr": "€300+",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "rating_chip_any": {
+      "tr": "Tümü",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "rating_chip_3": {
+      "tr": "3+ ★",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "rating_chip_4": {
+      "tr": "4+ ★",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "rating_chip_4_5": {
+      "tr": "4.5+ ★",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "duration_chip_any": {
+      "tr": "Tüm Süreler",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "duration_chip_lt2h": {
+      "tr": "< 2 saat",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "duration_chip_2to4h": {
+      "tr": "2-4 saat",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "duration_chip_half_day": {
+      "tr": "Yarım gün",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "duration_chip_full_day": {
+      "tr": "Tam gün",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "duration_chip_multi_day": {
+      "tr": "Çok günlü",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "currency_chip_any": {
+      "tr": "Tüm Para",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "currency_chip_eur": {
+      "tr": "EUR €",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "currency_chip_try": {
+      "tr": "TRY ₺",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "currency_chip_usd": {
+      "tr": "USD $",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "category_tab_all": {
+      "tr": "Tümü",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "category_tab_balloon": {
+      "tr": "Balon",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "category_tab_package": {
+      "tr": "Paket",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "category_tab_tour": {
+      "tr": "Tur",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "category_tab_activity": {
+      "tr": "Aktivite",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "category_tab_hotel": {
+      "tr": "Otel",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "category_tab_transfer": {
+      "tr": "Transfer",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "category_tab_pillar": {
+      "tr": "Rehber",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "category_label_balloon": {
+      "tr": "Balon",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "category_label_activity": {
+      "tr": "Aktivite",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "category_label_tour": {
+      "tr": "Tur",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "category_label_hotel": {
+      "tr": "Otel",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "category_label_package": {
+      "tr": "Paket",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "category_label_transfer": {
+      "tr": "Transfer",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "category_label_pillar": {
+      "tr": "Rehber",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "no_results_heading": {
+      "tr": "Sonuç bulunamadı",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "no_results_with_filters": {
+      "tr": "Filtrelerinize uygun sonuç yok. Farklı bir filtre veya kelime deneyin.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "no_results_empty_query": {
+      "tr": "Aramaya başlamak için bir kelime girin.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "suggestions_heading": {
+      "tr": "Önerilenler",
+      "context": "batch-wave2",
+      "type": "manual"
+    }
+  },
+  "component.rezervasyon.reschedule_client": {
+    "error_select_date": {
+      "tr": "Lütfen alternatif tarih seçin.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "confirm_refund": {
+      "tr": "Tam iade istediğinize emin misiniz? Bu işlem geri alınamaz.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "error_generic": {
+      "tr": "Bir hata oluştu.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "success_reschedule_title": {
+      "tr": "Yeni Tarihiniz Onaylandı",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "success_reschedule_body_prefix": {
+      "tr": "rezervasyonunuz",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "success_reschedule_body_suffix": {
+      "tr": "tarihine taşındı.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "success_refund_title": {
+      "tr": "İade Talebiniz Alındı",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "success_refund_body": {
+      "tr": "iadesi 5 iş günü içinde kartınıza yansıyacaktır.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "success_confirmation_email": {
+      "tr": "Onay e-postası kayıtlı adresinize gönderildi.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "label_booking_id": {
+      "tr": "Rezervasyon",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "cancelled_heading": {
+      "tr": "Rezervasyonunuz iptal edildi",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "cancelled_greeting": {
+      "tr": "Merhaba {customerName},",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "cancelled_body_middle": {
+      "tr": "tarihindeki",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "cancelled_body_suffix": {
+      "tr": "hizmetiniz iptal edilmek zorunda kalındı. Aşağıdan tercih ettiğiniz çözümü seçin.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "option1_heading": {
+      "tr": "Seçenek 1 — Alternatif Tarih",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "option1_recommended_badge": {
+      "tr": "Önerilen",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "option1_subtitle": {
+      "tr": "Aynı hizmet için sonraki uygun tarihler:",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "option1_no_dates": {
+      "tr": "Yakın tarihlerde uygun slot bulunamadı. Lütfen WhatsApp ile iletişime geçin.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "button_confirming": {
+      "tr": "Onaylanıyor...",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "button_reschedule": {
+      "tr": "Seçili tarihe taşı",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "option2_heading": {
+      "tr": "Seçenek 2 — Tam İade",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "option2_body": {
+      "tr": "tutarın tamamı kartınıza 5 iş günü içinde iade edilir.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "button_processing": {
+      "tr": "İşleniyor...",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "button_request_refund": {
+      "tr": "Tam iade iste",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "help_prefix": {
+      "tr": "Yardım için",
+      "context": "batch-wave2",
+      "type": "manual"
+    }
+  },
+  "component.rezervasyon.success_client": {
+    "default_customer_name": {
+      "tr": "Misafir",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "default_service_name": {
+      "tr": "Kapadokya Balon Turu",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "demo_badge": {
+      "tr": "TEST / DEMO MODU — Gerçek ödeme yapılmadı",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "demo_description": {
+      "tr": "Bu sayfa demo amaçlıdır. Hiçbir tutar tahsil edilmedi, rezervasyon operatöre iletilmedi. Gerçek rezervasyon için lütfen bizimle iletişime geçin:",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "demo_admin_note": {
+      "tr": "Admin: Stripe env-var Cloudflare Pages dashboard'unda set edilmemiş.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "heading_demo": {
+      "tr": "Demo Tamamlandı",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "heading_success": {
+      "tr": "Teşekkürler!",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "subheading_demo": {
+      "tr": "Test akışı bitti — gerçek rezervasyon oluşmadı.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "subheading_success": {
+      "tr": "Rezervasyonunuz başarıyla oluşturuldu.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "note_demo": {
+      "tr": "Demo modunda — gerçek ödeme yapılmadı, Stripe henüz yapılandırılmamış.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "note_success": {
+      "tr": "Ödeme alındı ve bilgilendirme e-postası gönderildi.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "booking_code_label": {
+      "tr": "Rezervasyon Kodu",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "booking_code_hint": {
+      "tr": "Bu kodu kaydedin — operatör onayı için gereklidir.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "cta_pdf": {
+      "tr": "PDF Fatura",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "cta_ical": {
+      "tr": "Takvime Ekle",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "cta_my_booking": {
+      "tr": "Rezervasyonumu Gör",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "info_email_title": {
+      "tr": "E-posta Onayı",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "info_email_body": {
+      "tr": "Detaylar e-postanıza iletildi. Spam klasörünü kontrol edin.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "info_reminder_title": {
+      "tr": "Uçuş Hatırlatması",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "info_reminder_body": {
+      "tr": "Uçuş günü 24 saat önce SMS ve e-posta ile hatırlatılır.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "info_operator_title": {
+      "tr": "Operatör Onayı",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "info_operator_body": {
+      "tr": "Operatör doğrulaması 2 saat içinde yapılır.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "nav_home": {
+      "tr": "Ana Sayfa",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "nav_rebook": {
+      "tr": "Tekrar Rezervasyon",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "contact_prefix": {
+      "tr": "Sorularınız için",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "contact_or": {
+      "tr": "veya",
+      "context": "batch-wave2",
+      "type": "manual"
+    }
+  },
+  "page.gdpr": {
+    "meta_title": {
+      "tr": "Verilerinizi Yönetin (GDPR/KVKK) — Trip and Tick",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "meta_desc": {
+      "tr": "Kişisel verilerinize erişin (GDPR Madde 15) veya silinmesini talep edin (GDPR Madde 17). 24 saatlik onaylı magic-link ile güvenli işlem.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "pagehero_tag": {
+      "tr": "Veri Hakları",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "pagehero_title": {
+      "tr": "Verilerinizi Yönetin",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "pagehero_description": {
+      "tr": "GDPR Madde 15 (erişim) ve Madde 17 (silme) haklarınızı kullanın. Kayıtlı e-posta adresinize 24 saatlik onaylı bağ göndereceğiz.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "breadcrumb_name": {
+      "tr": "Veri Hakları (GDPR/KVKK)",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "h2_talep_formu": {
+      "tr": "Talep Formu",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "talep_formu_description_prefix": {
+      "tr": "Aşağıdaki forma e-posta adresinizi girin ve yapmak istediğiniz işlemi seçin. Onaylı bağ posta kutunuza gönderilecek. Bağ",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "talep_formu_24_saat": {
+      "tr": "24 saat",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "talep_formu_description_suffix": {
+      "tr": "geçerlidir.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "h3_neyi_indirebilirim": {
+      "tr": "Neyi indirebilirim?",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "li_musteri_profil": {
+      "tr": "Müşteri profil bilgileriniz (ad, e-posta, telefon, dil tercihi).",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "li_rezervasyon_kayitlari": {
+      "tr": "Tüm rezervasyon kayıtlarınız (tarih, paket, fiyat, yolcu detayları).",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "li_sadakat_puan": {
+      "tr": "Sadakat puan geçmişiniz (varsa).",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "stripe_note_prefix": {
+      "tr": "Stripe ödeme kayıtları finansal kanıt zinciri için Stripe altyapısında saklanır; talep üzerine",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "stripe_note_suffix": {
+      "tr": "ile sağlanır.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "h3_silme_ne_olur": {
+      "tr": "Silme talep ettiğimde ne olur?",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "li_profil_silinir": {
+      "tr": "Müşteri profiliniz silinir.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "li_rezervasyon_anonimlestirilir": {
+      "tr": "Rezervasyon yolcu bilgileri (ad, e-posta, telefon) anonimleştirilir.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "li_newsletter_iptal": {
+      "tr": "Newsletter aboneliğiniz iptal edilir (Brevo).",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "li_fatura_saklanir": {
+      "tr": "Vergi mevzuatı (213 VUK) gereği fatura kayıtları 10 yıl saklanır; talep üzerine süre sonunda silinir.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "kvkk_sorumlu_prefix": {
+      "tr": "KVKK Veri Sorumlusu: Trip and Tick · Nevşehir/Kapadokya · İletişim:",
+      "context": "batch-wave2",
+      "type": "manual"
+    }
+  },
+  "component.layout.error": {
+    "title": {
+      "tr": "Bir hata oluştu",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "description": {
+      "tr": "Sayfa yüklenirken beklenmedik bir sorun oluştu. Tekrar denemek ister misiniz?",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "error_code_prefix": {
+      "tr": "Hata kodu:",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "btn_retry": {
+      "tr": "Tekrar Dene",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "btn_home": {
+      "tr": "Ana Sayfa",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "contact_prefix": {
+      "tr": "Sorun devam ederse:",
+      "context": "batch-wave2",
+      "type": "manual"
+    }
+  },
+  "page.impressum": {
+    "meta_title": {
+      "tr": "Impressum — Trip and Tick",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "meta_desc": {
+      "tr": "Anbieterkennzeichnung gemäß § 5 TMG (DE) und § 18 Abs. 2 MStV. Vertreten durch Trip and Tick Turizm ve Seyahat Acentası Limited Şirketi, Göreme/Nevşehir, Türkei.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "meta_og_desc": {
+      "tr": "Anbieterkennzeichnung § 5 TMG · § 18 MStV · EU-Streitschlichtung.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "pagehero_tag": {
+      "tr": "Rechtliches / Yasal",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "pagehero_title": {
+      "tr": "Impressum",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "pagehero_description": {
+      "tr": "Anbieterkennzeichnung gemäß § 5 TMG (Deutschland) und § 18 Abs. 2 MStV. Für österreichische Besucher: Offenlegung gemäß § 25 Mediengesetz.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "breadcrumb_name": {
+      "tr": "Impressum",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "stand_date": {
+      "tr": "Stand: 18. Mai 2026",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "english_summary": {
+      "tr": "English summary: This Impressum is provided as a courtesy to visitors from Germany and Austria. The operator is a Turkish travel agency; full contact details below.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "h2_anbieter": {
+      "tr": "1. Anbieter / Diensteanbieter",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "company_name_full": {
+      "tr": "Trip and Tick Turizm ve Seyahat Acentası Limited Şirketi",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "company_name_en": {
+      "tr": "Trip and Tick Tourism and Travel Agency Ltd.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "label_anschrift": {
+      "tr": "Anschrift",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "address": {
+      "tr": "Göreme Merkez, Nevşehir 50180, Türkei",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "label_telefon": {
+      "tr": "Telefon",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "label_email": {
+      "tr": "E-Mail",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "label_internet": {
+      "tr": "Internet",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "h2_vertreten": {
+      "tr": "2. Vertreten durch",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "geschaeftsfuehrer_label": {
+      "tr": "Geschäftsführer:",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "geschaeftsfuehrer_value": {
+      "tr": "siehe Handelsregistereintrag (Ticaret Sicil Gazetesi, Nevşehir)",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "h2_register": {
+      "tr": "3. Registereintrag",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "label_handelsregister": {
+      "tr": "Handelsregister",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "handelsregister_value": {
+      "tr": "Türkisches Handelsregister Nevşehir (Türkiye Ticaret Sicili — Nevşehir)",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "label_reisebuero_lizenz": {
+      "tr": "Reisebüro-Lizenz",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "reisebuero_lizenz_value": {
+      "tr": "TÜRSAB (Verband der türkischen Reisebüros)",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "label_ust_id": {
+      "tr": "Umsatzsteuer-IdNr.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "ust_id_value": {
+      "tr": "Türkische Steuernummer (Vergi Kimlik No.) — auf Anfrage",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "h2_verantwortlich": {
+      "tr": "4. Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "verantwortlich_company": {
+      "tr": "Trip and Tick Turizm ve Seyahat Acentası Limited Şirketi",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "verantwortlich_address": {
+      "tr": "Göreme Merkez, Nevşehir 50180, Türkei",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "h2_aufsicht": {
+      "tr": "5. Aufsichtsbehörden",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "tursab_description": {
+      "tr": "(Türkische Reisebüro-Verband) —",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "kvkk_description": {
+      "tr": "(Türkische Datenschutzbehörde) —",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "eu_verbraucher_text": {
+      "tr": "Verbraucher aus der EU: zuständige Behörden in Ihrem Heimatstaat — für Deutschland z. B. die Schlichtungsstelle für den öffentlichen Personenverkehr (söp).",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "h2_eu_streit": {
+      "tr": "6. EU-Streitschlichtung",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "eu_kommission_text": {
+      "tr": "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "email_unter_punkt_1": {
+      "tr": "Unsere E-Mail-Adresse finden Sie oben unter Punkt 1.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "h2_verbraucher_streit": {
+      "tr": "7. Verbraucherstreitbeilegung / Universalschlichtungsstelle",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "verbraucher_streit_text_prefix": {
+      "tr": "Wir sind ",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "verbraucher_streit_nicht": {
+      "tr": "nicht",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "verbraucher_streit_text_suffix": {
+      "tr": " bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen. Streitigkeiten zwischen Kunde und Trip and Tick werden direkt per E-Mail oder über die türkischen Schiedsstellen (TÜRSAB Tahkim Kurulu) beigelegt.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "h2_offenlegung": {
+      "tr": "8. Offenlegung (Österreich, § 25 MedienG)",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "label_medieninhaber": {
+      "tr": "Medieninhaber",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "medieninhaber_value": {
+      "tr": "Trip and Tick Turizm ve Seyahat Acentası Limited Şirketi, Göreme Merkez, Nevşehir 50180, Türkei.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "label_unternehmensgegenstand": {
+      "tr": "Unternehmensgegenstand",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "unternehmensgegenstand_value": {
+      "tr": "Online-Vermittlung von Reise-, Heißluftballonflug- und Hoteldienstleistungen in Kappadokien.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "label_grundlegende_richtung": {
+      "tr": "Grundlegende Richtung",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "grundlegende_richtung_value": {
+      "tr": "Vermittlung touristischer Leistungen unter Wahrung der Verbraucherrechte gemäß GDPR/KVKK.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "h2_haftung": {
+      "tr": "9. Haftungsausschluss",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "h3_haftung_inhalte": {
+      "tr": "Haftung für Inhalte",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "haftung_inhalte_text": {
+      "tr": "Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "h3_haftung_links": {
+      "tr": "Haftung für Links",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "haftung_links_text": {
+      "tr": "Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "h3_urheberrecht": {
+      "tr": "Urheberrecht",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "urheberrecht_text": {
+      "tr": "Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem türkischen Urheberrecht (Fikir ve Sanat Eserleri Kanunu, Nr. 5846) sowie dem internationalen Urheberrechtsschutz. Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "h2_datenschutz": {
+      "tr": "10. Datenschutz & Verbraucherrechte",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "datenschutz_text_prefix": {
+      "tr": "Informationen zur Verarbeitung personenbezogener Daten finden Sie in unserer",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "datenschutz_link_text": {
+      "tr": "Datenschutzerklärung",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "datenschutz_text_middle": {
+      "tr": ". GDPR-Anträge (Art. 15 Auskunft / Art. 17 Löschung) können Sie über unser",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "gdpr_link_text": {
+      "tr": "Datenrechte-Formular",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "datenschutz_text_suffix": {
+      "tr": "stellen — mit 24-stündigem Magic-Link-Verfahren.",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "footer_note_prefix": {
+      "tr": "Stand: 18. Mai 2026. Inhaltliche Änderungen vorbehalten. Bei Fragen zur Rechtmäßigkeit unseres Angebots wenden Sie sich an",
+      "context": "batch-wave2",
+      "type": "manual"
+    },
+    "footer_note_suffix": {
+      "tr": ".",
+      "context": "batch-wave2",
       "type": "manual"
     }
   }

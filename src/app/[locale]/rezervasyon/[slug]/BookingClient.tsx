@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useT } from "@/lib/i18n/I18nProvider";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useLocale } from "next-intl";
 import { Link } from "@/i18n/routing";
@@ -76,32 +77,14 @@ export interface BookingService {
   image: string | null;
 }
 
-const NATIONALITIES = [
-  { code: "TR", label: "Türkiye" },
-  { code: "EN", label: "United Kingdom" },
-  { code: "US", label: "United States" },
-  { code: "DE", label: "Deutschland" },
-  { code: "FR", label: "France" },
-  { code: "ES", label: "España" },
-  { code: "NL", label: "Nederland" },
-  { code: "ZH", label: "中国" },
-  { code: "HI", label: "भारत" },
-  { code: "OTHER", label: "Diğer" },
-];
+// NATIONALITIES ve STEP_LABELS module-level'dan kaldırıldı; t'ye erişim gerektirdiğinden
+// component/function gövdelerine taşındı (bkz. BookingClient ve ProgressBar).
 
-const STEP_LABELS = [
-  { id: 1, label: "Paket", icon: Tag },
-  { id: 2, label: "Tarih", icon: Calendar },
-  { id: 3, label: "Yolcular", icon: Users },
-  { id: 4, label: "Özet", icon: ShieldCheck },
-  { id: 5, label: "Ödeme", icon: CreditCard },
-  { id: 6, label: "Onay", icon: CheckCircle2 },
-] as const;
-
+// passengerSchema: Zod mesajları statik string — i18n key raporlanmıştır (şüpheli durum).
 const passengerSchema = z.object({
-  fullName: z.string().min(2, "Ad-soyad zorunlu"),
-  email: z.string().email("Geçerli e-posta girin"),
-  phone: z.string().min(7, "Telefon zorunlu"),
+  fullName: z.string().min(2, "passenger_error_full_name"),
+  email: z.string().email("passenger_error_email"),
+  phone: z.string().min(7, "passenger_error_phone"),
   nationality: z.string().min(2),
   age: z.number().int().min(0).max(120).optional(),
   accommodation: z.string().optional(),
@@ -125,6 +108,7 @@ function makeEmptyPassenger(): BookingPassenger {
 }
 
 export function BookingClient({ service }: { service: BookingService }) {
+  const t = useT();
   const router = useRouter();
   const searchParams = useSearchParams();
   const locale = useLocale();
@@ -342,23 +326,23 @@ export function BookingClient({ service }: { service: BookingService }) {
       const data = await res.json();
       if (data.valid) {
         setPromoStatus("valid");
-        setCouponMessage(data.message ?? "Kupon uygulandı.");
+        setCouponMessage(data.message ?? t.component.booking.booking_client.coupon_applied);
       } else if (isValidPromoCode(code)) {
         // Faz 1 fallback: client'taki hardcoded WELCOME10/EMERCE5 listesi geçerli ise yine kabul.
         setPromoStatus("valid");
-        setCouponMessage("Kupon uygulandı (lokal).");
+        setCouponMessage(t.component.booking.booking_client.coupon_applied_local);
       } else {
         setPromoStatus("invalid");
-        setCouponMessage(data.message ?? "Kupon geçersiz.");
+        setCouponMessage(data.message ?? t.component.booking.booking_client.coupon_invalid);
       }
     } catch (err) {
       console.error("[booking] coupon validate failed", err);
       if (isValidPromoCode(code)) {
         setPromoStatus("valid");
-        setCouponMessage("Kupon uygulandı (lokal).");
+        setCouponMessage(t.component.booking.booking_client.coupon_applied_local);
       } else {
         setPromoStatus("invalid");
-        setCouponMessage("Kupon doğrulanamadı.");
+        setCouponMessage(t.component.booking.booking_client.coupon_verify_failed);
       }
     } finally {
       setCouponApplying(false);
@@ -367,12 +351,12 @@ export function BookingClient({ service }: { service: BookingService }) {
 
   async function startCheckout() {
     if (availabilityFull) {
-      setSubmitError("Bu tarih dolu. Lütfen başka bir tarih seçin.");
+      setSubmitError(t.component.booking.booking_client.error_date_full);
       return;
     }
     if (availabilityShort) {
       setSubmitError(
-        `Bu tarihte yeterli koltuk yok (${availability?.remainingSlots ?? 0} kaldı).`
+        t.component.booking.booking_client.error_not_enough_seats.replace("{count}", String(availability?.remainingSlots ?? 0))
       );
       return;
     }
@@ -400,14 +384,14 @@ export function BookingClient({ service }: { service: BookingService }) {
       });
       if (!res.ok) {
         const err = await res.json().catch(() => ({}));
-        throw new Error(err?.error ?? `Ödeme başlatılamadı (${res.status})`);
+        throw new Error(err?.error ?? t.component.booking.booking_client.error_payment_start.replace("{status}", String(res.status)));
       }
       const data = (await res.json()) as { url?: string };
-      if (!data.url) throw new Error("Ödeme URL'i alınamadı");
+      if (!data.url) throw new Error(t.component.booking.booking_client.error_payment_url);
       window.location.href = data.url;
     } catch (err) {
       console.error("[booking] checkout failed", err);
-      setSubmitError(err instanceof Error ? err.message : "Bilinmeyen hata");
+      setSubmitError(err instanceof Error ? err.message : t.component.booking.booking_client.error_unknown);
       setSubmitting(false);
     }
   }
@@ -429,7 +413,7 @@ export function BookingClient({ service }: { service: BookingService }) {
         : passengers;
       const lead = pax[0];
       if (!lead || !lead.email) {
-        throw new Error("Yolcu e-postası bulunamadı");
+        throw new Error(t.component.booking.booking_client.error_passenger_email_missing);
       }
 
       const res = await fetch("/api/booking", {
@@ -444,7 +428,7 @@ export function BookingClient({ service }: { service: BookingService }) {
           totalPrice: draft?.totalPrice ?? totalPrice,
           currency: service.currency,
           passengers: pax.map((p) => ({
-            fullName: p.fullName || "Yolcu",
+            fullName: p.fullName || t.component.booking.booking_client.passenger_default_name,
             email: p.email,
             phone: p.phone || "+90",
             nationality: p.nationality || "TR",
@@ -459,7 +443,7 @@ export function BookingClient({ service }: { service: BookingService }) {
 
       if (!res.ok) {
         const errBody = await res.json().catch(() => ({}));
-        throw new Error(errBody?.error ?? `Mail gönderilemedi (${res.status})`);
+        throw new Error(errBody?.error ?? t.component.booking.booking_client.error_mail_failed.replace("{status}", String(res.status)));
       }
 
       const data = (await res.json()) as {
@@ -470,13 +454,13 @@ export function BookingClient({ service }: { service: BookingService }) {
       const customerOk = data.emailSent?.customer ?? false;
       setEmailStatus(customerOk ? "sent" : "error");
       if (!customerOk) {
-        setEmailError("E-posta sağlayıcısı geçici olarak yanıt vermiyor. Lütfen birazdan tekrar deneyin.");
+        setEmailError(t.component.booking.booking_client.error_email_provider_unavailable);
       }
       setEmailSent(true);
     } catch (err) {
       console.error("[booking] sendBookingEmail failed", err);
       setEmailStatus("error");
-      setEmailError(err instanceof Error ? err.message : "Bilinmeyen hata");
+      setEmailError(err instanceof Error ? err.message : t.component.booking.booking_client.error_unknown);
       setEmailSent(true);
     }
   }
@@ -553,16 +537,16 @@ export function BookingClient({ service }: { service: BookingService }) {
     <main className="min-h-screen bg-slate-50 py-10 px-4">
       <div ref={formTopRef} className="max-w-5xl mx-auto scroll-mt-20">
         <nav className="text-sm text-slate-500 mb-4">
-          <Link href="/" className="hover:underline">Ana Sayfa</Link>
+          <Link href="/" className="hover:underline">{t.component.booking.booking_client.breadcrumb_home}</Link>
           <span className="mx-2">›</span>
           <Link href={categoryHref} className="hover:underline">
-            {service.category === "balloon" ? "Balon Turları" : "Hizmetler"}
+            {service.category === "balloon" ? t.component.booking.booking_client.category_balloon_tours : t.component.booking.booking_client.category_services}
           </Link>
           <span className="mx-2">›</span>
-          <span className="text-slate-700">Rezervasyon</span>
+          <span className="text-slate-700">{t.component.booking.booking_client.breadcrumb_reservation}</span>
         </nav>
 
-        <h1 className="text-3xl font-bold text-slate-900 mb-2">Online Rezervasyon</h1>
+        <h1 className="text-3xl font-bold text-slate-900 mb-2">{t.component.booking.booking_client.page_title}</h1>
         <p className="text-slate-600 mb-8">{service.name} — {service.shortDescription}</p>
 
         <ProgressBar currentStep={step} />
@@ -660,80 +644,80 @@ export function BookingClient({ service }: { service: BookingService }) {
           </div>
 
           <aside className="bg-white rounded-2xl shadow-sm p-6 h-fit lg:sticky lg:top-4">
-            <h3 className="font-bold text-slate-900 mb-4">Rezervasyon Özeti</h3>
+            <h3 className="font-bold text-slate-900 mb-4">{t.component.booking.booking_client.sidebar_title}</h3>
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
-                <span className="text-slate-600">Hizmet</span>
+                <span className="text-slate-600">{t.component.booking.booking_client.sidebar_service}</span>
                 <span className="font-medium text-right">{service.name}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-slate-600">Süre</span>
+                <span className="text-slate-600">{t.component.booking.booking_client.sidebar_duration}</span>
                 <span>{service.duration}</span>
               </div>
               {date && (
                 <div className="flex justify-between">
-                  <span className="text-slate-600">Tarih</span>
+                  <span className="text-slate-600">{t.component.booking.booking_client.sidebar_date}</span>
                   <span>{formatDate(date)}</span>
                 </div>
               )}
               <div className="flex justify-between">
-                <span className="text-slate-600">Yetişkin</span>
+                <span className="text-slate-600">{t.component.booking.booking_client.sidebar_adult}</span>
                 <span>{adults} × {formatPrice(effectiveAdultPrice, service.currency)}</span>
               </div>
               {children > 0 && (
                 <div className="flex justify-between">
-                  <span className="text-slate-600">Çocuk</span>
+                  <span className="text-slate-600">{t.component.booking.booking_client.sidebar_child}</span>
                   <span>{children} × {formatPrice(Math.round(effectiveAdultPrice * service.childRatio), service.currency)}</span>
                 </div>
               )}
               {priceInfo?.hasOverride && priceInfo.effectivePrice !== priceInfo.catalogPrice && (
                 <div className="text-[10px] text-amber-700 mt-1">
-                  Bu tarih için güncel fiyat (katalog: {formatPrice(priceInfo.catalogPrice, priceInfo.currency)})
+                  {t.component.booking.booking_client.sidebar_price_override.replace("{catalog}", formatPrice(priceInfo.catalogPrice, priceInfo.currency))}
                 </div>
               )}
               {overrideCancelled && (
                 <div className="mt-2 text-xs text-rose-700 bg-rose-50 rounded p-2">
-                  <strong>Bu tarih iptal edildi.</strong> {priceInfo?.cancellationReason ?? ""}
+                  <strong>{t.component.booking.booking_client.sidebar_date_cancelled}</strong> {priceInfo?.cancellationReason ?? ""}
                 </div>
               )}
               {overrideDelayed && (
                 <div className="mt-2 text-xs text-amber-700 bg-amber-50 rounded p-2">
-                  <strong>Bu tarihte {priceInfo?.delayMinutes ?? 0} dk rotar.</strong> {priceInfo?.note ?? ""}
+                  <strong>{t.component.booking.booking_client.sidebar_date_delayed.replace("{minutes}", String(priceInfo?.delayMinutes ?? 0))}</strong> {priceInfo?.note ?? ""}
                 </div>
               )}
               {insurance && (
                 <div className="flex justify-between">
-                  <span className="text-slate-600">Sigorta</span>
+                  <span className="text-slate-600">{t.component.booking.booking_client.sidebar_insurance}</span>
                   <span>{formatPrice(insuranceTotal, service.currency)}</span>
                 </div>
               )}
               {discountAmount > 0 && (
                 <div className="flex justify-between text-emerald-600">
-                  <span>İndirim</span>
+                  <span>{t.component.booking.booking_client.sidebar_discount}</span>
                   <span>−{formatPrice(discountAmount, service.currency)}</span>
                 </div>
               )}
               {referralDiscount > 0 && (
                 <div className="flex justify-between text-rose-600">
-                  <span>Referans (%{referralBonusPct}) {referralCode && <em className="text-[10px] opacity-70">— {referralCode}</em>}</span>
+                  <span>{t.component.booking.booking_client.sidebar_referral.replace("{pct}", String(referralBonusPct))} {referralCode && <em className="text-[10px] opacity-70">— {referralCode}</em>}</span>
                   <span>−{formatPrice(referralDiscount, service.currency)}</span>
                 </div>
               )}
               <hr className="my-3" />
               <div className="flex justify-between items-baseline text-lg">
-                <span className="font-bold">Toplam</span>
+                <span className="font-bold">{t.component.booking.booking_client.sidebar_total}</span>
                 <span className="font-bold text-amber-600">{formatPrice(discountedTotal, service.currency)}</span>
               </div>
               {service.marketPrice && (
                 <p className="text-xs text-emerald-700">
-                  Piyasa fiyatından {formatPrice((service.marketPrice - service.adultPrice) * adults, service.currency)} avantajlı.
+                  {t.component.booking.booking_client.sidebar_market_advantage.replace("{amount}", formatPrice((service.marketPrice - service.adultPrice) * adults, service.currency))}
                 </p>
               )}
             </div>
             <div className="mt-6 space-y-2 text-xs text-slate-500">
-              <p>✓ Hava iptalinde %100 iade</p>
-              <p>✓ 48 saat öncesine kadar ücretsiz iptal</p>
-              <p>✓ SSL korumalı ödeme (Stripe)</p>
+              <p>{t.component.booking.booking_client.sidebar_guarantee_weather}</p>
+              <p>{t.component.booking.booking_client.sidebar_guarantee_cancel}</p>
+              <p>{t.component.booking.booking_client.sidebar_guarantee_ssl}</p>
             </div>
           </aside>
         </div>
@@ -743,6 +727,17 @@ export function BookingClient({ service }: { service: BookingService }) {
 }
 
 function ProgressBar({ currentStep }: { currentStep: BookingStep }) {
+  const t = useT();
+
+  const STEP_LABELS = [
+    { id: 1, label: t.component.booking.booking_client.step_package, icon: Tag },
+    { id: 2, label: t.component.booking.booking_client.step_date, icon: Calendar },
+    { id: 3, label: t.component.booking.booking_client.step_passengers, icon: Users },
+    { id: 4, label: t.component.booking.booking_client.step_summary, icon: ShieldCheck },
+    { id: 5, label: t.component.booking.booking_client.step_payment, icon: CreditCard },
+    { id: 6, label: t.component.booking.booking_client.step_confirmation, icon: CheckCircle2 },
+  ] as const;
+
   return (
     <div className="bg-white rounded-2xl shadow-sm p-4 overflow-x-auto">
       <ol className="flex items-center justify-between gap-2 min-w-[600px]">
@@ -784,9 +779,10 @@ function ProgressBar({ currentStep }: { currentStep: BookingStep }) {
 }
 
 function Step1Overview({ service, onNext }: { service: BookingService; onNext: () => void }) {
+  const t = useT();
   return (
     <div>
-      <h2 className="text-2xl font-bold text-slate-900 mb-4">1. Paket Özeti</h2>
+      <h2 className="text-2xl font-bold text-slate-900 mb-4">{t.component.booking.booking_client.step1_title}</h2>
       <div className="space-y-4 mb-6">
         <div className="bg-slate-50 rounded-lg p-4">
           <h3 className="font-semibold text-slate-900 mb-2">{service.name}</h3>
@@ -800,7 +796,7 @@ function Step1Overview({ service, onNext }: { service: BookingService; onNext: (
           </div>
         </div>
         <div>
-          <h4 className="font-semibold text-slate-900 mb-2">Dahil Olanlar</h4>
+          <h4 className="font-semibold text-slate-900 mb-2">{t.component.booking.booking_client.step1_includes_title}</h4>
           <ul className="space-y-1 text-sm text-slate-600">
             {service.includes.map((inc) => (
               <li key={inc} className="flex items-start gap-2">
@@ -815,7 +811,7 @@ function Step1Overview({ service, onNext }: { service: BookingService; onNext: (
             <div className="flex items-start gap-2">
               <AlertTriangle className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
               <div className="text-sm">
-                <p className="font-semibold text-amber-900 mb-1">Önemli Uyarılar</p>
+                <p className="font-semibold text-amber-900 mb-1">{t.component.booking.booking_client.step1_warnings_title}</p>
                 <ul className="space-y-1 text-amber-800">
                   {service.warnings.map((w) => (
                     <li key={w}>• {w}</li>
@@ -831,7 +827,7 @@ function Step1Overview({ service, onNext }: { service: BookingService; onNext: (
           onClick={onNext}
           className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
         >
-          Devam Et <ChevronRight className="w-4 h-4" />
+          {t.component.booking.booking_client.btn_continue} <ChevronRight className="w-4 h-4" />
         </button>
       </div>
     </div>
@@ -853,6 +849,7 @@ function Step2DateAndPax(props: {
   onBack: () => void;
   onNext: () => void;
 }) {
+  const t = useT();
   const {
     service, date, setDate, adults, setAdults, childPax, setChildren,
     canContinue, availability, availabilityLoading, paxTotal, onBack, onNext,
@@ -874,10 +871,10 @@ function Step2DateAndPax(props: {
 
   return (
     <div>
-      <h2 className="text-2xl font-bold text-slate-900 mb-4">2. Tarih ve Kişi Sayısı</h2>
+      <h2 className="text-2xl font-bold text-slate-900 mb-4">{t.component.booking.booking_client.step2_title}</h2>
       <div className="space-y-6 mb-6">
         <div>
-          <label className="block text-sm font-medium text-slate-700 mb-2">Uçuş Tarihi</label>
+          <label className="block text-sm font-medium text-slate-700 mb-2">{t.component.booking.booking_client.step2_flight_date_label}</label>
           <AvailabilityCalendar
             serviceSlug={service.slug}
             selectedDate={date}
@@ -886,25 +883,26 @@ function Step2DateAndPax(props: {
           />
           <p className="text-xs text-slate-500 mt-2">
             {date
-              ? `Seçili tarih: ${date}`
-              : "Yeşil = müsait, sarı = sınırlı, kırmızı = dolu. En erken yarın için rezervasyon yapabilirsiniz."}
+              ? t.component.booking.booking_client.step2_date_selected.replace("{date}", date)
+              : t.component.booking.booking_client.step2_date_hint}
           </p>
 
           {date && availabilityLoading && (
-            <p className="text-xs text-slate-500 mt-2">Doluluk kontrol ediliyor...</p>
+            <p className="text-xs text-slate-500 mt-2">{t.component.booking.booking_client.step2_checking_availability}</p>
           )}
 
           {showFull && (
             <div className="mt-3 border-l-4 border-rose-500 bg-rose-50 p-3 rounded text-sm text-rose-900">
-              <strong>Bu tarih dolu.</strong> Lütfen başka bir tarih seçin.
+              <strong>{t.component.booking.booking_client.step2_date_full_title}</strong> {t.component.booking.booking_client.step2_date_full_desc}
               {availability?.note && <p className="mt-1 text-xs">{availability.note}</p>}
             </div>
           )}
 
           {showShort && (
             <div className="mt-3 border-l-4 border-rose-500 bg-rose-50 p-3 rounded text-sm text-rose-900">
-              <strong>Yeterli koltuk yok</strong> — bu tarihte sadece {availability!.remainingSlots} koltuk kaldı, siz {paxTotal} kişisiniz.
-              Kişi sayısını azaltın veya başka tarih seçin.
+              <strong>{t.component.booking.booking_client.step2_not_enough_seats_title}</strong> {t.component.booking.booking_client.step2_not_enough_seats_desc
+                .replace("{remaining}", String(availability!.remainingSlots))
+                .replace("{paxTotal}", String(paxTotal))}
             </div>
           )}
 
@@ -912,7 +910,7 @@ function Step2DateAndPax(props: {
             <div className="mt-3 border-l-4 border-amber-500 bg-amber-50 p-3 rounded text-sm text-amber-900 flex items-start gap-2">
               <AlertTriangle className="w-4 h-4 text-amber-600 mt-0.5 flex-shrink-0" />
               <div>
-                <strong>Sadece {availability!.remainingSlots} koltuk kaldı!</strong> Hızlı rezervasyon önerilir.
+                <strong>{t.component.booking.booking_client.step2_limited_seats.replace("{remaining}", String(availability!.remainingSlots))}</strong> {t.component.booking.booking_client.step2_limited_seats_hint}
                 {availability?.note && <p className="mt-1 text-xs">{availability.note}</p>}
               </div>
             </div>
@@ -928,12 +926,12 @@ function Step2DateAndPax(props: {
             </div>
           )}
         </div>
-        <Counter label="Yetişkin (12+ yaş)" value={adults} min={1} max={20} onChange={setAdults} />
-        <Counter label={`Çocuk (${service.minAge || 6}-11 yaş)`} value={childPax} min={0} max={10} onChange={setChildren} disabled={service.minAge >= 16} />
+        <Counter label={t.component.booking.booking_client.counter_adult} value={adults} min={1} max={20} onChange={setAdults} />
+        <Counter label={t.component.booking.booking_client.counter_child.replace("{min}", String(service.minAge || 6))} value={childPax} min={0} max={10} onChange={setChildren} disabled={service.minAge >= 16} />
         {service.minAge >= 6 && (
           <div className="border-l-4 border-amber-500 bg-amber-50 p-3 rounded text-sm text-amber-900">
-            <strong>Yaş kısıtı:</strong> {service.minAge} yaş altı çocuklar bu hizmete katılamaz.
-            Hamileler ve ciddi sağlık sorunu olanlar binemez. Detaylı koşullar için <Link href="/sss" className="underline">SSS</Link> sayfasına bakın.
+            <strong>{t.component.booking.booking_client.step2_age_restriction_title}</strong> {t.component.booking.booking_client.step2_age_restriction_desc.replace("{minAge}", String(service.minAge))}
+            {" "}<Link href="/sss" className="underline">{t.component.booking.booking_client.step2_age_restriction_faq_link}</Link> {t.component.booking.booking_client.step2_age_restriction_faq_suffix}
           </div>
         )}
       </div>
@@ -982,28 +980,45 @@ function Step3Passengers(props: {
   onBack: () => void;
   onNext: () => void;
 }) {
+  const t = useT();
   const { passengers, errors, onUpdate, onBack, onNext, adults } = props;
+
+  const NATIONALITIES_LOCAL = [
+    { code: "TR", label: "Türkiye" },
+    { code: "EN", label: "United Kingdom" },
+    { code: "US", label: "United States" },
+    { code: "DE", label: "Deutschland" },
+    { code: "FR", label: "France" },
+    { code: "ES", label: "España" },
+    { code: "NL", label: "Nederland" },
+    { code: "ZH", label: "中国" },
+    { code: "HI", label: "भारत" },
+    { code: "OTHER", label: t.component.booking.booking_client.nationality_other },
+  ];
+
   return (
     <div>
-      <h2 className="text-2xl font-bold text-slate-900 mb-1">3. Yolcu Bilgileri</h2>
-      <p className="text-sm text-slate-500 mb-6">İletişim bilgileri grup lideri için zorunlu. Konaklama transferi için otel adı önemli.</p>
+      <h2 className="text-2xl font-bold text-slate-900 mb-1">{t.component.booking.booking_client.step3_title}</h2>
+      <p className="text-sm text-slate-500 mb-6">{t.component.booking.booking_client.step3_subtitle}</p>
       <div className="space-y-6">
-        {passengers.map((p, i) => {
+        {passengers.map((pax, i) => {
           const isLead = i === 0;
           const isAdult = i < adults;
           const errs = errors[i] ?? {};
           return (
             <div key={i} className="border border-slate-200 rounded-lg p-4">
               <h3 className="font-semibold text-slate-900 mb-3">
-                {isLead ? "👤 Grup Lideri" : `${isAdult ? "Yetişkin" : "Çocuk"} ${isAdult ? i + 1 : i - adults + 1}`}
+                {isLead
+                  ? t.component.booking.booking_client.step3_group_leader
+                  : `${isAdult ? t.component.booking.booking_client.step3_adult_label : t.component.booking.booking_client.step3_child_label} ${isAdult ? i + 1 : i - adults + 1}`}
               </h3>
               <div className="grid sm:grid-cols-2 gap-3">
-                <Field label="Ad Soyad" value={p.fullName} onChange={(v) => onUpdate(i, "fullName", v)} error={errs.fullName} />
-                <Field label="Uyruk" value={p.nationality} onChange={(v) => onUpdate(i, "nationality", v)} as="select" options={NATIONALITIES} />
-                <Field label="E-posta" type="email" value={p.email} onChange={(v) => onUpdate(i, "email", v)} error={errs.email} />
-                <Field label="Telefon" type="tel" placeholder="+90 5xx ..." value={p.phone} onChange={(v) => onUpdate(i, "phone", v)} error={errs.phone} />
-                <Field label="Yaş" type="number" value={p.age?.toString() ?? ""} onChange={(v) => onUpdate(i, "age", v ? Number(v) : 0)} />
-                <Field label="Konaklama (otel adı + Kapadokya)" value={p.accommodation ?? ""} onChange={(v) => onUpdate(i, "accommodation", v)} placeholder="Örn: Sultan Cave Suites - Göreme" />
+                <Field label={t.component.booking.booking_client.field_full_name} value={pax.fullName} onChange={(v) => onUpdate(i, "fullName", v)} error={errs.fullName} />
+                <Field label={t.component.booking.booking_client.field_nationality} value={pax.nationality} onChange={(v) => onUpdate(i, "nationality", v)} as="select" options={NATIONALITIES_LOCAL} />
+                <Field label={t.component.booking.booking_client.field_email} type="email" value={pax.email} onChange={(v) => onUpdate(i, "email", v)} error={errs.email} />
+                <Field label={t.component.booking.booking_client.field_phone} type="tel" placeholder="+90 5xx ..." value={pax.phone} onChange={(v) => onUpdate(i, "phone", v)} error={errs.phone} />
+                <Field label={t.component.booking.booking_client.field_age} type="number" value={pax.age?.toString() ?? ""} onChange={(v) => onUpdate(i, "age", v ? Number(v) : 0)} />
+                <Field label={t.component.booking.booking_client.field_accommodation} value={pax.accommodation ?? ""} onChange={(v) => onUpdate(i, "accommodation", v)} placeholder={t.component.booking.booking_client.field_accommodation_placeholder} />
               </div>
             </div>
           );
@@ -1085,6 +1100,7 @@ function Step4Summary(props: {
   onBack: () => void;
   onNext: () => void;
 }) {
+  const t = useT();
   const {
     service, date, adults, childPax, insurance, setInsurance,
     promoCode, setPromoCode, applyPromo, promoStatus, couponMessage, couponApplying,
@@ -1098,26 +1114,26 @@ function Step4Summary(props: {
 
   return (
     <div>
-      <h2 className="text-2xl font-bold text-slate-900 mb-4">4. Özet ve Ekstralar</h2>
+      <h2 className="text-2xl font-bold text-slate-900 mb-4">{t.component.booking.booking_client.step4_title}</h2>
       <div className="space-y-4">
         <div className="bg-slate-50 rounded-lg p-4 space-y-2 text-sm">
-          <div className="flex justify-between"><span className="text-slate-600">Hizmet</span><span className="font-medium">{service.name}</span></div>
-          <div className="flex justify-between"><span className="text-slate-600">Tarih</span><span>{date ? formatDate(date) : "—"}</span></div>
-          <div className="flex justify-between"><span className="text-slate-600">Kişi sayısı</span><span>{paxCount} ({adults} yetişkin, {childPax} çocuk)</span></div>
+          <div className="flex justify-between"><span className="text-slate-600">{t.component.booking.booking_client.sidebar_service}</span><span className="font-medium">{service.name}</span></div>
+          <div className="flex justify-between"><span className="text-slate-600">{t.component.booking.booking_client.sidebar_date}</span><span>{date ? formatDate(date) : "—"}</span></div>
+          <div className="flex justify-between"><span className="text-slate-600">{t.component.booking.booking_client.step4_pax_count}</span><span>{paxCount} ({adults} {t.component.booking.booking_client.step4_adults_suffix}, {childPax} {t.component.booking.booking_client.step4_children_suffix})</span></div>
         </div>
 
         <div className="border border-slate-200 rounded-lg p-4">
           <label className="flex items-start gap-3 cursor-pointer">
             <input type="checkbox" checked={insurance} onChange={(e) => setInsurance(e.target.checked)} className="mt-1 w-4 h-4" />
             <div>
-              <p className="font-semibold text-slate-900">Seyahat Sigortası (+€{INSURANCE_PRICE_PER_PAX} kişi başı)</p>
-              <p className="text-sm text-slate-600 mt-1">İptal koruması, medikal kapsam, bagaj kaybı. {paxCount} kişi için toplam €{paxCount * INSURANCE_PRICE_PER_PAX}.</p>
+              <p className="font-semibold text-slate-900">{t.component.booking.booking_client.step4_insurance_title.replace("{price}", String(INSURANCE_PRICE_PER_PAX))}</p>
+              <p className="text-sm text-slate-600 mt-1">{t.component.booking.booking_client.step4_insurance_desc.replace("{count}", String(paxCount)).replace("{total}", String(paxCount * INSURANCE_PRICE_PER_PAX))}</p>
             </div>
           </label>
         </div>
 
         <div className="border border-slate-200 rounded-lg p-4">
-          <p className="font-semibold text-slate-900 mb-2">Promosyon Kodu</p>
+          <p className="font-semibold text-slate-900 mb-2">{t.component.booking.booking_client.step4_promo_title}</p>
           <div className="flex gap-2">
             <input
               value={promoCode}
@@ -1130,51 +1146,51 @@ function Step4Summary(props: {
               disabled={couponApplying}
               className="px-4 py-2 bg-slate-900 text-white rounded-lg text-sm hover:bg-slate-800 disabled:opacity-50"
             >
-              {couponApplying ? "Doğrulanıyor..." : "Uygula"}
+              {couponApplying ? t.component.booking.booking_client.step4_promo_verifying : t.component.booking.booking_client.step4_promo_apply}
             </button>
           </div>
           {promoStatus === "valid" && (
             <p className="text-xs text-emerald-600 mt-2">
-              ✓ {couponMessage || "Kod geçerli — indirim uygulandı."}
+              ✓ {couponMessage || t.component.booking.booking_client.step4_promo_valid}
             </p>
           )}
           {promoStatus === "invalid" && (
-            <p className="text-xs text-rose-600 mt-2">{couponMessage || "Kod geçersiz."}</p>
+            <p className="text-xs text-rose-600 mt-2">{couponMessage || t.component.booking.booking_client.coupon_invalid}</p>
           )}
         </div>
 
         <div className="border-2 border-amber-200 bg-amber-50 rounded-lg p-4">
-          <h3 className="font-bold text-slate-900 mb-3">Fiyat Dökümü</h3>
+          <h3 className="font-bold text-slate-900 mb-3">{t.component.booking.booking_client.step4_price_breakdown_title}</h3>
           <div className="space-y-1 text-sm">
-            <div className="flex justify-between"><span>Yetişkin × {adults}</span><span>{formatPrice(adultsLine, service.currency)}</span></div>
-            {childPax > 0 && <div className="flex justify-between"><span>Çocuk × {childPax}</span><span>{formatPrice(childrenLine, service.currency)}</span></div>}
-            {insurance && <div className="flex justify-between"><span>Sigorta × {paxCount}</span><span>{formatPrice(insuranceTotal, service.currency)}</span></div>}
-            {discountAmount > 0 && <div className="flex justify-between text-emerald-700"><span>İndirim</span><span>−{formatPrice(discountAmount, service.currency)}</span></div>}
+            <div className="flex justify-between"><span>{t.component.booking.booking_client.step4_adults_row.replace("{count}", String(adults))}</span><span>{formatPrice(adultsLine, service.currency)}</span></div>
+            {childPax > 0 && <div className="flex justify-between"><span>{t.component.booking.booking_client.step4_children_row.replace("{count}", String(childPax))}</span><span>{formatPrice(childrenLine, service.currency)}</span></div>}
+            {insurance && <div className="flex justify-between"><span>{t.component.booking.booking_client.step4_insurance_row.replace("{count}", String(paxCount))}</span><span>{formatPrice(insuranceTotal, service.currency)}</span></div>}
+            {discountAmount > 0 && <div className="flex justify-between text-emerald-700"><span>{t.component.booking.booking_client.sidebar_discount}</span><span>−{formatPrice(discountAmount, service.currency)}</span></div>}
             {referralDiscount > 0 && (
               <div className="flex justify-between text-rose-700">
                 <span>
-                  Referans %{referralBonusPct}{referralCode ? ` (${referralCode})` : ""}
+                  {t.component.booking.booking_client.step4_referral_row.replace("{pct}", String(referralBonusPct))}{referralCode ? ` (${referralCode})` : ""}
                 </span>
                 <span>−{formatPrice(referralDiscount, service.currency)}</span>
               </div>
             )}
             <hr className="my-2 border-amber-300" />
-            <div className="flex justify-between text-lg font-bold"><span>Toplam</span><span className="text-amber-600">{formatPrice(totalPrice, service.currency)}</span></div>
+            <div className="flex justify-between text-lg font-bold"><span>{t.component.booking.booking_client.sidebar_total}</span><span className="text-amber-600">{formatPrice(totalPrice, service.currency)}</span></div>
           </div>
         </div>
 
         <div className="border border-slate-200 rounded-lg p-4 text-sm text-slate-600">
-          <h4 className="font-semibold text-slate-900 mb-2">İptal Politikası</h4>
+          <h4 className="font-semibold text-slate-900 mb-2">{t.component.booking.booking_client.step4_cancel_policy_title}</h4>
           <ul className="space-y-1 text-xs">
-            <li>• Hava durumu nedeniyle operatör iptalinde <strong>%100 iade</strong>.</li>
-            <li>• 48 saat öncesine kadar ücretsiz iptal.</li>
-            <li>• 24-48 saat içinde iptalde <strong>%50</strong> iade.</li>
-            <li>• 24 saatten az iptalde iade yapılmaz.</li>
+            <li>• {t.component.booking.booking_client.step4_cancel_policy_weather}</li>
+            <li>• {t.component.booking.booking_client.step4_cancel_policy_48h}</li>
+            <li>• {t.component.booking.booking_client.step4_cancel_policy_24_48h}</li>
+            <li>• {t.component.booking.booking_client.step4_cancel_policy_under_24h}</li>
           </ul>
           <label className="flex items-start gap-2 mt-3 cursor-pointer">
             <input type="checkbox" checked={policyAccepted} onChange={(e) => setPolicyAccepted(e.target.checked)} className="mt-1 w-4 h-4" />
             <span className="text-xs">
-              <Link href="/yasal/kvkk" className="underline">KVKK</Link>, <Link href="/yasal/kullanim-kosullari" className="underline">Kullanım Koşulları</Link> ve iptal politikasını okudum, kabul ediyorum.
+              <Link href="/yasal/kvkk" className="underline">{t.component.booking.booking_client.step4_policy_kvkk}</Link>, <Link href="/yasal/kullanim-kosullari" className="underline">{t.component.booking.booking_client.step4_policy_terms}</Link> {t.component.booking.booking_client.step4_policy_accept}
             </span>
           </label>
         </div>
@@ -1194,19 +1210,20 @@ function Step5Payment(props: {
   onBack: () => void;
   onPay: () => void;
 }) {
+  const t = useT();
   const { service, totalPrice, submitting, error, onBack, onPay } = props;
 
   return (
     <div>
-      <h2 className="text-2xl font-bold text-slate-900 mb-4">5. Güvenli Ödeme</h2>
+      <h2 className="text-2xl font-bold text-slate-900 mb-4">{t.component.booking.booking_client.step5_title}</h2>
 
       <div className="space-y-3 mb-5">
         <div className="flex items-start gap-3 border-2 border-amber-500 bg-amber-50 rounded-lg p-4">
           <div className="mt-1 w-4 h-4 rounded-full bg-amber-500" />
           <div className="flex-1">
-            <p className="font-semibold text-slate-900">Kart ile odeme (Stripe)</p>
+            <p className="font-semibold text-slate-900">{t.component.booking.booking_client.step5_card_payment_title}</p>
             <p className="text-sm text-slate-600 mt-0.5">
-              VISA · Mastercard · AmEx · Apple Pay · Google Pay · 3D Secure destekli. EUR / USD / TRY tum kartlar.
+              {t.component.booking.booking_client.step5_card_payment_desc}
             </p>
           </div>
         </div>
@@ -1216,14 +1233,14 @@ function Step5Payment(props: {
         <div className="border border-slate-200 rounded-lg p-6 text-center">
           <ShieldCheck className="w-12 h-12 text-emerald-500 mx-auto mb-3" />
           <p className="text-slate-700 mb-1">
-            Ödeme <strong>Stripe</strong> ile SSL 256-bit şifreli yapılır.
+            {t.component.booking.booking_client.step5_ssl_desc}
           </p>
-          <p className="text-sm text-slate-500">Kart bilgileri Trip and Tick'e iletilmez.</p>
+          <p className="text-sm text-slate-500">{t.component.booking.booking_client.step5_card_not_stored}</p>
         </div>
 
         {error && (
           <div className="border-l-4 border-rose-500 bg-rose-50 p-3 text-sm text-rose-800 rounded">
-            <strong>Hata:</strong> {error}
+            <strong>{t.component.booking.booking_client.step5_error_prefix}</strong> {error}
           </div>
         )}
 
@@ -1232,10 +1249,10 @@ function Step5Payment(props: {
           disabled={submitting}
           className="w-full bg-amber-500 hover:bg-amber-600 text-white py-4 rounded-lg font-bold text-lg transition-colors disabled:opacity-50 inline-flex items-center justify-center gap-2"
         >
-          {submitting ? "Yönlendiriliyor..." : (
+          {submitting ? t.component.booking.booking_client.step5_redirecting : (
             <>
               <CreditCard className="w-5 h-5" />
-              Güvenli Öde {formatPrice(totalPrice, service.currency)}
+              {t.component.booking.booking_client.step5_pay_button} {formatPrice(totalPrice, service.currency)}
             </>
           )}
         </button>
@@ -1262,27 +1279,28 @@ function Step6Confirmation(props: {
   onResend: () => void;
   onStartOver: () => void;
 }) {
+  const t = useT();
   const { service, bookingCode, date, paxCount, totalPrice, emailStatus, emailError, onResend, onStartOver } = props;
 
   const emailBanner =
     emailStatus === "pending" ? (
       <div className="bg-slate-50 border border-slate-200 rounded-lg p-3 max-w-md mx-auto mb-4 text-sm text-slate-600 flex items-center justify-center gap-2">
         <span className="inline-block w-3 h-3 border-2 border-slate-300 border-t-amber-500 rounded-full animate-spin" />
-        E-postanız gönderiliyor...
+        {t.component.booking.booking_client.step6_email_sending}
       </div>
     ) : emailStatus === "sent" ? (
       <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-3 max-w-md mx-auto mb-4 text-sm text-emerald-700">
-        ✓ Bilet e-postanıza gönderildi. Gelmediyse spam klasörünü kontrol edin.
+        {t.component.booking.booking_client.step6_email_sent}
       </div>
     ) : (
       <div className="bg-rose-50 border border-rose-200 rounded-lg p-3 max-w-md mx-auto mb-4 text-sm text-rose-700">
-        <p className="font-semibold mb-1">E-posta gönderilemedi</p>
-        <p className="text-xs mb-2">{emailError ?? "Bilinmeyen hata"}</p>
+        <p className="font-semibold mb-1">{t.component.booking.booking_client.step6_email_failed_title}</p>
+        <p className="text-xs mb-2">{emailError ?? t.component.booking.booking_client.error_unknown}</p>
         <button
           onClick={onResend}
           className="inline-flex items-center gap-2 px-3 py-1.5 bg-rose-600 hover:bg-rose-700 text-white rounded-md text-xs font-semibold"
         >
-          Tekrar Gönder
+          {t.component.booking.booking_client.step6_resend}
         </button>
       </div>
     );
@@ -1292,31 +1310,31 @@ function Step6Confirmation(props: {
       <div className="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
         <CheckCircle2 className="w-12 h-12 text-emerald-600" />
       </div>
-      <h2 className="text-2xl font-bold text-slate-900 mb-2">Rezervasyonunuz Onaylandı!</h2>
-      <p className="text-slate-600 mb-4">Rezervasyon kodunuzu not edin — onay e-postası da yola çıktı.</p>
+      <h2 className="text-2xl font-bold text-slate-900 mb-2">{t.component.booking.booking_client.step6_confirmed_title}</h2>
+      <p className="text-slate-600 mb-4">{t.component.booking.booking_client.step6_confirmed_desc}</p>
 
       {emailBanner}
 
       <div className="bg-amber-50 border-2 border-amber-200 rounded-lg p-4 max-w-md mx-auto mb-6">
-        <p className="text-sm text-slate-600 mb-1">Rezervasyon Kodu</p>
+        <p className="text-sm text-slate-600 mb-1">{t.component.booking.booking_client.step6_booking_code_label}</p>
         <p className="text-3xl font-bold text-amber-700 tracking-wider">{bookingCode}</p>
       </div>
 
       <div className="grid sm:grid-cols-2 gap-2 max-w-md mx-auto text-sm text-left mb-6">
         <div className="bg-slate-50 rounded p-3">
-          <p className="text-xs text-slate-500">Hizmet</p>
+          <p className="text-xs text-slate-500">{t.component.booking.booking_client.sidebar_service}</p>
           <p className="font-semibold">{service.name}</p>
         </div>
         <div className="bg-slate-50 rounded p-3">
-          <p className="text-xs text-slate-500">Tarih</p>
+          <p className="text-xs text-slate-500">{t.component.booking.booking_client.sidebar_date}</p>
           <p className="font-semibold">{date ? formatDate(date) : "—"}</p>
         </div>
         <div className="bg-slate-50 rounded p-3">
-          <p className="text-xs text-slate-500">Kişi</p>
+          <p className="text-xs text-slate-500">{t.component.booking.booking_client.step6_pax_label}</p>
           <p className="font-semibold">{paxCount}</p>
         </div>
         <div className="bg-slate-50 rounded p-3">
-          <p className="text-xs text-slate-500">Toplam</p>
+          <p className="text-xs text-slate-500">{t.component.booking.booking_client.sidebar_total}</p>
           <p className="font-semibold">{formatPrice(totalPrice, service.currency)}</p>
         </div>
       </div>
@@ -1326,13 +1344,13 @@ function Step6Confirmation(props: {
           href={`/api/ical?bookingId=${bookingCode}&serviceName=${encodeURIComponent(service.name)}&date=${date}&time=05:00`}
           className="inline-flex items-center gap-2 px-4 py-2 bg-slate-900 text-white rounded-lg text-sm hover:bg-slate-800"
         >
-          <Calendar className="w-4 h-4" /> Takvime Ekle (.ics)
+          <Calendar className="w-4 h-4" /> {t.component.booking.booking_client.step6_add_to_calendar}
         </a>
         <a
           href={`/api/ticket-pdf?bookingId=${bookingCode}`}
           className="inline-flex items-center gap-2 px-4 py-2 border border-slate-300 rounded-lg text-sm hover:bg-slate-50"
         >
-          <Download className="w-4 h-4" /> Bilet PDF
+          <Download className="w-4 h-4" /> {t.component.booking.booking_client.step6_download_pdf}
         </a>
         <button
           onClick={async () => {
@@ -1341,17 +1359,17 @@ function Step6Confirmation(props: {
               try { await navigator.share({ title: service.name, url }); } catch { /* user cancelled */ }
             } else if (typeof navigator !== "undefined") {
               await navigator.clipboard.writeText(url);
-              alert("Link kopyalandı!");
+              alert(t.component.booking.booking_client.step6_link_copied);
             }
           }}
           className="inline-flex items-center gap-2 px-4 py-2 border border-slate-300 rounded-lg text-sm hover:bg-slate-50"
         >
-          <Share2 className="w-4 h-4" /> Paylaş
+          <Share2 className="w-4 h-4" /> {t.component.booking.booking_client.step6_share}
         </button>
       </div>
 
       <button onClick={onStartOver} className="text-sm text-amber-600 hover:underline">
-        Yeni bir rezervasyon yap →
+        {t.component.booking.booking_client.step6_new_reservation}
       </button>
     </div>
   );
@@ -1363,13 +1381,14 @@ function NavButtons({ onBack, onNext, disabled, hideNext }: {
   disabled?: boolean;
   hideNext?: boolean;
 }) {
+  const t = useT();
   return (
     <div className="flex justify-between gap-3 pt-4 border-t border-slate-100">
       <button
         onClick={onBack}
         className="inline-flex items-center gap-2 px-4 py-2 border border-slate-300 rounded-lg hover:bg-slate-50 text-slate-700"
       >
-        <ChevronLeft className="w-4 h-4" /> Geri
+        <ChevronLeft className="w-4 h-4" /> {t.component.booking.booking_client.btn_back}
       </button>
       {!hideNext && (
         <button
@@ -1377,7 +1396,7 @@ function NavButtons({ onBack, onNext, disabled, hideNext }: {
           disabled={disabled}
           className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white px-6 py-2 rounded-lg font-semibold disabled:opacity-40 disabled:cursor-not-allowed"
         >
-          Devam Et <ChevronRight className="w-4 h-4" />
+          {t.component.booking.booking_client.btn_continue} <ChevronRight className="w-4 h-4" />
         </button>
       )}
     </div>

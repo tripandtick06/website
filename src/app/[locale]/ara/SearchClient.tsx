@@ -15,6 +15,7 @@
 // Para birimi filter, Sıralama dropdown."
 
 import { useEffect, useMemo, useState, useTransition, type FormEvent } from "react";
+import { useT } from "@/lib/i18n/I18nProvider";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Link } from "@/i18n/routing";
 import {
@@ -56,54 +57,54 @@ interface PriceChip {
   max: number | null;
 }
 
-const PRICE_CHIPS: PriceChip[] = [
-  { id: "any", label: "Tümü", min: null, max: null },
-  { id: "0-50", label: "€0-50", min: 0, max: 50 },
-  { id: "50-150", label: "€50-150", min: 50, max: 150 },
-  { id: "150-300", label: "€150-300", min: 150, max: 300 },
-  { id: "300+", label: "€300+", min: 300, max: null },
+const PRICE_CHIP_DEFS: { id: string; min: number | null; max: number | null }[] = [
+  { id: "any", min: null, max: null },
+  { id: "0-50", min: 0, max: 50 },
+  { id: "50-150", min: 50, max: 150 },
+  { id: "150-300", min: 150, max: 300 },
+  { id: "300+", min: 300, max: null },
 ];
 
-const RATING_CHIPS: { id: string; label: string; value: number | null }[] = [
-  { id: "any", label: "Tümü", value: null },
-  { id: "3", label: "3+ ★", value: 3 },
-  { id: "4", label: "4+ ★", value: 4 },
-  { id: "4.5", label: "4.5+ ★", value: 4.5 },
+const RATING_CHIP_DEFS: { id: string; value: number | null }[] = [
+  { id: "any", value: null },
+  { id: "3", value: 3 },
+  { id: "4", value: 4 },
+  { id: "4.5", value: 4.5 },
 ];
 
-const DURATION_CHIPS: { id: DurationBucket; label: string }[] = [
-  { id: "any", label: "Tüm Süreler" },
-  { id: "lt2h", label: "< 2 saat" },
-  { id: "2to4h", label: "2-4 saat" },
-  { id: "halfDay", label: "Yarım gün" },
-  { id: "fullDay", label: "Tam gün" },
-  { id: "multiDay", label: "Çok günlü" },
+const DURATION_CHIP_DEFS: { id: DurationBucket }[] = [
+  { id: "any" },
+  { id: "lt2h" },
+  { id: "2to4h" },
+  { id: "halfDay" },
+  { id: "fullDay" },
+  { id: "multiDay" },
 ];
 
-const CURRENCY_CHIPS: { id: CurrencyFilter; label: string }[] = [
-  { id: "any", label: "Tüm Para" },
-  { id: "EUR", label: "EUR €" },
-  { id: "TRY", label: "TRY ₺" },
-  { id: "USD", label: "USD $" },
+const CURRENCY_CHIP_DEFS: { id: CurrencyFilter }[] = [
+  { id: "any" },
+  { id: "EUR" },
+  { id: "TRY" },
+  { id: "USD" },
 ];
 
-const SORT_OPTIONS: { id: SortKey; label: string }[] = [
-  { id: "popularity", label: "En Popüler" },
-  { id: "priceAsc", label: "En Ucuz" },
-  { id: "priceDesc", label: "En Pahalı" },
-  { id: "ratingDesc", label: "En Yüksek Puan" },
-  { id: "newest", label: "En Yeni" },
+const SORT_OPTION_DEFS: { id: SortKey }[] = [
+  { id: "popularity" },
+  { id: "priceAsc" },
+  { id: "priceDesc" },
+  { id: "ratingDesc" },
+  { id: "newest" },
 ];
 
-const CATEGORY_TABS: { id: CategoryFilter; label: string; icon: typeof Wind }[] = [
-  { id: "all", label: "Tümü", icon: SearchIcon },
-  { id: "balloon", label: "Balon", icon: Wind },
-  { id: "package", label: "Paket", icon: PackageIcon },
-  { id: "tour", label: "Tur", icon: TreePine },
-  { id: "activity", label: "Aktivite", icon: MountainSnow },
-  { id: "hotel", label: "Otel", icon: Hotel },
-  { id: "transfer", label: "Transfer", icon: Car },
-  { id: "pillar", label: "Rehber", icon: BookOpen },
+const CATEGORY_TAB_DEFS: { id: CategoryFilter; icon: typeof Wind }[] = [
+  { id: "all", icon: SearchIcon },
+  { id: "balloon", icon: Wind },
+  { id: "package", icon: PackageIcon },
+  { id: "tour", icon: TreePine },
+  { id: "activity", icon: MountainSnow },
+  { id: "hotel", icon: Hotel },
+  { id: "transfer", icon: Car },
+  { id: "pillar", icon: BookOpen },
 ];
 
 interface RecentEntry {
@@ -200,19 +201,22 @@ const CATEGORY_ICON: Record<SearchCategory, typeof Wind> = {
   pillar: BookOpen,
 };
 
-const CATEGORY_LABEL: Record<SearchCategory, string> = {
-  balloon: "Balon",
-  activity: "Aktivite",
-  tour: "Tur",
-  hotel: "Otel",
-  package: "Paket",
-  transfer: "Transfer",
-  pillar: "Rehber",
-};
+// CATEGORY_LABEL moved into SearchClient body as useCategoryLabel() — needs t
 
 function ResultCard({ result }: { result: SearchResult }) {
+  const t = useT();
+  const ns = t.component.ara.search_client;
   const Icon = CATEGORY_ICON[result.type];
   const gradient = CATEGORY_GRADIENT[result.type];
+  const CATEGORY_LABEL: Record<SearchCategory, string> = {
+    balloon: ns.category_label_balloon,
+    activity: ns.category_label_activity,
+    tour: ns.category_label_tour,
+    hotel: ns.category_label_hotel,
+    package: ns.category_label_package,
+    transfer: ns.category_label_transfer,
+    pillar: ns.category_label_pillar,
+  };
   return (
     <Link
       href={result.href}
@@ -286,6 +290,97 @@ export function SearchClient({
   initialCurrency?: string;
   initialSort?: string;
 }) {
+  const t = useT();
+  const ns = t.component.ara.search_client;
+
+  const PRICE_CHIPS = PRICE_CHIP_DEFS.map((c) => ({
+    ...c,
+    label:
+      c.id === "any"
+        ? ns.price_chip_any
+        : c.id === "0-50"
+        ? ns.price_chip_0_50
+        : c.id === "50-150"
+        ? ns.price_chip_50_150
+        : c.id === "150-300"
+        ? ns.price_chip_150_300
+        : ns.price_chip_300_plus,
+  }));
+
+  const RATING_CHIPS = RATING_CHIP_DEFS.map((c) => ({
+    ...c,
+    label:
+      c.id === "any"
+        ? ns.rating_chip_any
+        : c.id === "3"
+        ? ns.rating_chip_3
+        : c.id === "4"
+        ? ns.rating_chip_4
+        : ns.rating_chip_4_5,
+  }));
+
+  const DURATION_CHIPS = DURATION_CHIP_DEFS.map((c) => ({
+    ...c,
+    label:
+      c.id === "any"
+        ? ns.duration_chip_any
+        : c.id === "lt2h"
+        ? ns.duration_chip_lt2h
+        : c.id === "2to4h"
+        ? ns.duration_chip_2to4h
+        : c.id === "halfDay"
+        ? ns.duration_chip_half_day
+        : c.id === "fullDay"
+        ? ns.duration_chip_full_day
+        : ns.duration_chip_multi_day,
+  }));
+
+  const CURRENCY_CHIPS = CURRENCY_CHIP_DEFS.map((c) => ({
+    ...c,
+    label:
+      c.id === "any"
+        ? ns.currency_chip_any
+        : c.id === "EUR"
+        ? ns.currency_chip_eur
+        : c.id === "TRY"
+        ? ns.currency_chip_try
+        : ns.currency_chip_usd,
+  }));
+
+  const SORT_OPTIONS = SORT_OPTION_DEFS.map((c) => ({
+    ...c,
+    label:
+      c.id === "popularity"
+        ? ns.sort_popularity
+        : c.id === "priceAsc"
+        ? ns.sort_price_asc
+        : c.id === "priceDesc"
+        ? ns.sort_price_desc
+        : c.id === "ratingDesc"
+        ? ns.sort_rating_desc
+        : ns.sort_newest,
+  }));
+
+  const CATEGORY_TABS = CATEGORY_TAB_DEFS.map((c) => ({
+    ...c,
+    label:
+      c.id === "all"
+        ? ns.category_tab_all
+        : c.id === "balloon"
+        ? ns.category_tab_balloon
+        : c.id === "package"
+        ? ns.category_tab_package
+        : c.id === "tour"
+        ? ns.category_tab_tour
+        : c.id === "activity"
+        ? ns.category_tab_activity
+        : c.id === "hotel"
+        ? ns.category_tab_hotel
+        : c.id === "transfer"
+        ? ns.category_tab_transfer
+        : ns.category_tab_pillar,
+  }));
+
   const router = useRouter();
   const searchParams = useSearchParams();
   const [, startTransition] = useTransition();
@@ -407,16 +502,16 @@ export function SearchClient({
         <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-2">
           {query.trim() ? (
             <>
-              Arama: <span className="text-primary">&ldquo;{query.trim()}&rdquo;</span>
+              {ns.heading_search_prefix} <span className="text-primary">&ldquo;{query.trim()}&rdquo;</span>
             </>
           ) : (
-            "Arama"
+            ns.heading_search
           )}
         </h1>
         <p className="text-sm text-slate-600 mb-4">
           {query.trim() || hasActiveFilters
-            ? `${results.length} sonuç bulundu.`
-            : "Balon turu, otel, aktivite, paket veya transfer arayın."}
+            ? ns.results_count.replace("{count}", String(results.length))
+            : ns.results_empty_hint}
         </p>
         <form onSubmit={handleSubmit} className="relative" role="search">
           <SearchIcon className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
@@ -424,9 +519,9 @@ export function SearchClient({
             type="search"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Örn: balon, deluxe, atv, mağara otel, kırmızı tur…"
+            placeholder={ns.search_placeholder}
             className="w-full pl-12 pr-12 py-3.5 rounded-xl border-2 border-slate-200 bg-white text-base focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
-            aria-label="Arama kutusu"
+            aria-label={ns.search_aria_label}
             autoFocus
           />
           {query && (
@@ -434,7 +529,7 @@ export function SearchClient({
               type="button"
               onClick={() => setQuery("")}
               className="absolute right-3 top-1/2 -translate-y-1/2 p-1 text-slate-400 hover:text-slate-700"
-              aria-label="Aramayı temizle"
+              aria-label={ns.clear_search_aria_label}
             >
               <XIcon className="w-5 h-5" />
             </button>
@@ -445,13 +540,13 @@ export function SearchClient({
           <div className="mt-4">
             <div className="flex items-center justify-between mb-2">
               <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
-                Son Aramalar
+                {ns.recent_searches_heading}
               </p>
               <button
                 onClick={handleClearRecent}
                 className="text-xs text-slate-400 hover:text-rose-600"
               >
-                Temizle
+                {ns.recent_searches_clear}
               </button>
             </div>
             <div className="flex flex-wrap gap-2">
@@ -513,16 +608,16 @@ export function SearchClient({
           aria-expanded={filtersOpen}
         >
           <SlidersHorizontal className="w-4 h-4" />
-          Filtreler
+          {ns.filters_button}
           {hasActiveFilters && (
             <span className="bg-accent text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">
-              aktif
+              {ns.filters_active_badge}
             </span>
           )}
         </button>
 
         <label className="inline-flex items-center gap-2 text-sm text-slate-700">
-          <span className="text-slate-500">Sırala:</span>
+          <span className="text-slate-500">{ns.sort_label}</span>
           <select
             value={sortBy}
             onChange={(e) =>
@@ -544,7 +639,7 @@ export function SearchClient({
             className="ml-auto inline-flex items-center gap-1 text-xs text-rose-600 hover:text-rose-700 font-semibold"
           >
             <XIcon className="w-3.5 h-3.5" />
-            Filtreleri Temizle
+            {ns.clear_filters}
           </button>
         )}
       </div>
@@ -554,7 +649,7 @@ export function SearchClient({
           {/* Price chips */}
           <div>
             <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">
-              Fiyat Aralığı
+              {ns.filter_price_heading}
             </p>
             <div className="flex flex-wrap gap-2">
               {PRICE_CHIPS.map((chip) => {
@@ -576,12 +671,12 @@ export function SearchClient({
               })}
             </div>
             <div className="flex items-center gap-2 mt-3">
-              <span className="text-xs text-slate-500">Özel:</span>
+              <span className="text-xs text-slate-500">{ns.filter_price_custom}</span>
               <input
                 type="number"
                 min="0"
                 step="10"
-                placeholder="Min €"
+                placeholder={ns.filter_price_min_placeholder}
                 value={priceMin ?? ""}
                 onChange={(e) => {
                   const v = e.target.value === "" ? null : parseInt(e.target.value, 10);
@@ -594,7 +689,7 @@ export function SearchClient({
                 type="number"
                 min="0"
                 step="10"
-                placeholder="Max €"
+                placeholder={ns.filter_price_max_placeholder}
                 value={priceMax ?? ""}
                 onChange={(e) => {
                   const v = e.target.value === "" ? null : parseInt(e.target.value, 10);
@@ -608,7 +703,7 @@ export function SearchClient({
           {/* Rating chips */}
           <div>
             <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">
-              Minimum Puan
+              {ns.filter_rating_heading}
             </p>
             <div className="flex flex-wrap gap-2">
               {RATING_CHIPS.map((chip) => {
@@ -634,7 +729,7 @@ export function SearchClient({
           {/* Duration chips */}
           <div>
             <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">
-              Süre
+              {ns.filter_duration_heading}
             </p>
             <div className="flex flex-wrap gap-2">
               {DURATION_CHIPS.map((chip) => {
@@ -660,7 +755,7 @@ export function SearchClient({
           {/* Currency chips */}
           <div>
             <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">
-              Para Birimi
+              {ns.filter_currency_heading}
             </p>
             <div className="flex flex-wrap gap-2">
               {CURRENCY_CHIPS.map((chip) => {
@@ -696,14 +791,14 @@ export function SearchClient({
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-slate-100 mb-4">
             <SearchIcon className="w-8 h-8 text-slate-400" />
           </div>
-          <h2 className="text-xl font-bold text-slate-900 mb-2">Sonuç bulunamadı</h2>
+          <h2 className="text-xl font-bold text-slate-900 mb-2">{ns.no_results_heading}</h2>
           <p className="text-sm text-slate-600 mb-8 max-w-md mx-auto">
             {query.trim() || hasActiveFilters ? (
               <>
-                Filtrelerinize uygun sonuç yok. Farklı bir filtre veya kelime deneyin.
+                {ns.no_results_with_filters}
               </>
             ) : (
-              "Aramaya başlamak için bir kelime girin."
+              ns.no_results_empty_query
             )}
           </p>
           {hasActiveFilters && (
@@ -712,11 +807,11 @@ export function SearchClient({
               className="mb-6 inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary text-white text-sm font-semibold hover:bg-primary/90"
             >
               <XIcon className="w-4 h-4" />
-              Filtreleri Temizle
+              {ns.clear_filters}
             </button>
           )}
           <p className="text-xs uppercase tracking-widest text-slate-500 font-semibold mb-4">
-            Önerilenler
+            {ns.suggestions_heading}
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
             {suggestions.map((r) => (
@@ -734,7 +829,7 @@ export function SearchClient({
             className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white border border-slate-200 text-sm font-semibold text-slate-700 hover:border-slate-300"
           >
             <XIcon className="w-4 h-4" />
-            Filtreleri Temizle
+            {ns.clear_filters}
           </button>
         </div>
       )}
