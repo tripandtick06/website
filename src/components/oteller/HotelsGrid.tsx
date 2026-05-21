@@ -25,6 +25,9 @@ const STORAGE_KEY = "tripandtick:oteller:tierFilter";
 
 type TierId = "all" | "budget" | "mid" | "lux";
 
+// Stable id list — localStorage validation (TIERS with labels is render-scoped).
+const TIER_IDS: readonly TierId[] = ["all", "budget", "mid", "lux"];
+
 function matches(hotel: ServiceItem, tier: TierId): boolean {
   if (tier === "all") return true;
   return hotel.tier === tier;
@@ -45,7 +48,7 @@ export function HotelsGrid({ hotels }: { hotels: ServiceItem[] }) {
   useEffect(() => {
     if (typeof window === "undefined") return;
     const saved = window.localStorage.getItem(STORAGE_KEY);
-    if (saved && TIERS.some((tier) => tier.id === saved)) {
+    if (saved && TIER_IDS.includes(saved as TierId)) {
       setType(saved as TierId);
     }
     setHydrated(true);

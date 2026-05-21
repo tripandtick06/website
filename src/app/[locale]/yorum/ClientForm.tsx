@@ -49,11 +49,14 @@ export function ClientForm() {
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [reviewId, setReviewId] = useState<string | null>(null);
 
-  const SERVICE_OPTIONS: ServiceOption[] = [
-    ...BALLOON_PACKAGES.map((p) => ({ slug: p.slug, name: p.name, category: t.component.yorum.review_form.category_balloon })),
-    ...ACTIVITIES.map((a) => ({ slug: a.slug, name: a.name, category: t.component.yorum.review_form.category_activity })),
-    ...TOURS.map((tour) => ({ slug: tour.slug, name: tour.name, category: t.component.yorum.review_form.category_tour })),
-  ];
+  const SERVICE_OPTIONS: ServiceOption[] = useMemo(
+    () => [
+      ...BALLOON_PACKAGES.map((p) => ({ slug: p.slug, name: p.name, category: t.component.yorum.review_form.category_balloon })),
+      ...ACTIVITIES.map((a) => ({ slug: a.slug, name: a.name, category: t.component.yorum.review_form.category_activity })),
+      ...TOURS.map((tour) => ({ slug: tour.slug, name: tour.name, category: t.component.yorum.review_form.category_tour })),
+    ],
+    [t]
+  );
 
   const selectedService = useMemo(
     () => SERVICE_OPTIONS.find((s) => s.slug === serviceSlug),

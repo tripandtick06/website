@@ -293,19 +293,23 @@ export function SearchClient({
   const t = useT();
   const ns = t.component.ara.search_client;
 
-  const PRICE_CHIPS = PRICE_CHIP_DEFS.map((c) => ({
-    ...c,
-    label:
-      c.id === "any"
-        ? ns.price_chip_any
-        : c.id === "0-50"
-        ? ns.price_chip_0_50
-        : c.id === "50-150"
-        ? ns.price_chip_50_150
-        : c.id === "150-300"
-        ? ns.price_chip_150_300
-        : ns.price_chip_300_plus,
-  }));
+  const PRICE_CHIPS = useMemo(
+    () =>
+      PRICE_CHIP_DEFS.map((c) => ({
+        ...c,
+        label:
+          c.id === "any"
+            ? ns.price_chip_any
+            : c.id === "0-50"
+            ? ns.price_chip_0_50
+            : c.id === "50-150"
+            ? ns.price_chip_50_150
+            : c.id === "150-300"
+            ? ns.price_chip_150_300
+            : ns.price_chip_300_plus,
+      })),
+    [ns]
+  );
 
   const RATING_CHIPS = RATING_CHIP_DEFS.map((c) => ({
     ...c,
@@ -463,7 +467,7 @@ export function SearchClient({
       (c) => c.min === priceMin && c.max === priceMax
     );
     return m?.id ?? "custom";
-  }, [priceMin, priceMax]);
+  }, [priceMin, priceMax, PRICE_CHIPS]);
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
