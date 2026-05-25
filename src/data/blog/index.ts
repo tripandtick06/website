@@ -28,6 +28,8 @@ export interface BlogArticle {
   publishedAt: string;
   seoScore: number;
   isAiGenerated?: boolean;
+  /** Relative path under /public — e.g. "/images/blog/<slug>.jpg". */
+  coverImage?: string;
 }
 
 export const ARTICLES: BlogArticle[] = [

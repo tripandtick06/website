@@ -1,5 +1,6 @@
 "use client";
 
+import NextImage from "next/image";
 import { Link } from "@/i18n/routing";
 import { Star, Clock, Check, Hotel, MountainSnow, TreePine, Package, Car, Wind } from "lucide-react";
 import { formatPrice } from "@/lib/utils";
@@ -64,19 +65,27 @@ export function ServiceCard({ item, ctaHref }: ServiceCardProps) {
 
   return (
     <article className="card overflow-hidden flex flex-col h-full">
-      {/* Hero / Icon area */}
-      <div className={`relative h-48 bg-gradient-to-br ${gradient} flex items-center justify-center`}>
-        {emoji ? (
+      {/* Hero — photoUrl varsa Next/Image, yoksa gradient + emoji/icon fallback */}
+      <div className={`relative h-48 ${item.photoUrl ? "bg-slate-100" : `bg-gradient-to-br ${gradient} flex items-center justify-center`}`}>
+        {item.photoUrl ? (
+          <NextImage
+            src={item.photoUrl}
+            alt={`${item.name} — Kapadokya ${item.duration}`}
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover"
+          />
+        ) : emoji ? (
           <span className="text-7xl opacity-90 drop-shadow-lg" aria-hidden="true">{emoji}</span>
         ) : (
           <Icon className="w-20 h-20 text-white/85" strokeWidth={1.4} />
         )}
         {item.badge && (
-          <span className="absolute top-3 left-3 bg-white text-primary px-2.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wide shadow-sm">
+          <span className="absolute top-3 left-3 bg-white text-primary px-2.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wide shadow-sm z-10">
             {item.badge}
           </span>
         )}
-        <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-sm text-primary px-2 py-1 rounded-md text-xs font-bold flex items-center gap-1">
+        <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-sm text-primary px-2 py-1 rounded-md text-xs font-bold flex items-center gap-1 z-10">
           <Star className="w-3 h-3 fill-warning text-warning" />
           {item.rating}
         </div>

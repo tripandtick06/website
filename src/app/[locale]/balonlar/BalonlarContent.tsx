@@ -1,5 +1,6 @@
 "use client";
 
+import NextImage from "next/image";
 import { Link } from "@/i18n/routing";
 import { Wind, Star, Clock, Users, Check, Shield } from "lucide-react";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
@@ -49,14 +50,25 @@ export function BalonlarContent() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {BALLOON_PACKAGES.map((pkg) => (
               <article key={pkg.slug} className="card overflow-hidden flex flex-col">
-                <div className="relative h-56 bg-gradient-to-br from-primary via-primary-light to-accent flex items-center justify-center">
-                  <Wind className="w-24 h-24 text-white/85" strokeWidth={1.2} />
+                <div className={`relative h-56 ${pkg.images[0] ? "bg-slate-100" : "bg-gradient-to-br from-primary via-primary-light to-accent flex items-center justify-center"}`}>
+                  {pkg.images[0] ? (
+                    <NextImage
+                      src={pkg.images[0]}
+                      alt={`${pkg.name} — Kapadokya sıcak hava balon turu, ${pkg.duration}, ${pkg.capacity.max} kişilik sepet`}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover"
+                      priority
+                    />
+                  ) : (
+                    <Wind className="w-24 h-24 text-white/85" strokeWidth={1.2} />
+                  )}
                   <span
-                    className={`absolute top-4 left-4 ${BADGE_BG[pkg.badgeColor]} text-white px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide shadow-md`}
+                    className={`absolute top-4 left-4 ${BADGE_BG[pkg.badgeColor]} text-white px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide shadow-md z-10`}
                   >
                     {pkg.badge}
                   </span>
-                  <div className="absolute top-4 right-4 bg-white/95 text-primary px-2.5 py-1 rounded-md text-sm font-bold flex items-center gap-1">
+                  <div className="absolute top-4 right-4 bg-white/95 text-primary px-2.5 py-1 rounded-md text-sm font-bold flex items-center gap-1 z-10">
                     <Star className="w-3.5 h-3.5 fill-warning text-warning" />
                     {pkg.rating}
                   </div>

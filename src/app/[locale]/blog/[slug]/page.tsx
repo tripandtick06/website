@@ -107,6 +107,7 @@ export default async function BlogArticlePage({
     slug: article.slug,
     title: article.title,
     description: article.metaDescription,
+    image: article.coverImage,
     datePublished: article.publishedAt,
     dateModified: article.publishedAt,
     author: FOUNDER.name,
