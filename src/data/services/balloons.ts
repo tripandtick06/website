@@ -50,7 +50,7 @@ export const BALLOON_PACKAGES: BalloonPackage[] = [
     badgeColor: "accent",
     rating: 4.9,
     reviewCount: 2847,
-    images: ["/images/balloons/standart-1.jpg", "/images/balloons/standart-2.jpg"],
+    images: ["/images/balloons/standart-balon-ucusu.jpg"],
     includes: [
       "Otelden transfer",
       "Hafif kahvaltı",
@@ -89,7 +89,7 @@ export const BALLOON_PACKAGES: BalloonPackage[] = [
     badgeColor: "warning",
     rating: 5.0,
     reviewCount: 894,
-    images: ["/images/balloons/deluxe-1.jpg"],
+    images: ["/images/balloons/deluxe-balon-ucusu.jpg"],
     includes: [
       "VIP otel transferi",
       "Gourmet kahvaltı",
@@ -125,7 +125,7 @@ export const BALLOON_PACKAGES: BalloonPackage[] = [
     badgeColor: "accent",
     rating: 5.0,
     reviewCount: 412,
-    images: ["/images/balloons/romantic-1.jpg"],
+    images: ["/images/balloons/romantik-ozel-balon.jpg"],
     includes: [
       "VIP transfer",
       "Özel dekor",
