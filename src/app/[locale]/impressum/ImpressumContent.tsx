@@ -4,6 +4,7 @@ import { Link } from "@/i18n/routing";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { PageHero } from "@/components/layout/PageHero";
 import { SITE_URL } from "@/lib/schema";
+import { COMPANY } from "@/data/founder";
 import { useT } from "@/lib/i18n/I18nProvider";
 
 export function ImpressumContent() {
@@ -39,11 +40,11 @@ export function ImpressumContent() {
           <p className="text-slate-700 mb-4">
             <strong>{d.label_anschrift}:</strong> {d.address}
             <br />
-            <strong>{d.label_telefon}:</strong> +90 537 464 78 61
+            <strong>{d.label_telefon}:</strong> {COMPANY.phone}
             <br />
             <strong>{d.label_email}:</strong>{" "}
-            <a href="mailto:info@tripandtick.com" className="text-accent font-semibold">
-              info@tripandtick.com
+            <a href={`mailto:${COMPANY.email}`} className="text-accent font-semibold">
+              {COMPANY.email}
             </a>
             <br />
             <strong>{d.label_internet}:</strong>{" "}
@@ -172,8 +173,8 @@ export function ImpressumContent() {
 
           <p className="text-xs text-slate-500 mt-8 border-t pt-4">
             {d.footer_note_prefix}{" "}
-            <a href="mailto:info@tripandtick.com" className="text-accent">
-              info@tripandtick.com
+            <a href={`mailto:${COMPANY.email}`} className="text-accent">
+              {COMPANY.email}
             </a>
             {d.footer_note_suffix}
           </p>

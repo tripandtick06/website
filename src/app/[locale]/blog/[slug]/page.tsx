@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { SITE_URL } from "@/lib/schema";
+import { SITE_URL, articleSchema, breadcrumbSchema } from "@/lib/schema";
+import { FOUNDER } from "@/data/founder";
 import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
 import { ARTICLES, type BlogArticle } from "@/data/blog";
 import { BlogArticleContent } from "./BlogArticleContent";
@@ -102,36 +103,32 @@ export default async function BlogArticlePage({
   const readTime = Math.ceil(wordCount / 200);
   const renderedContent = renderMarkdown(article.content);
 
-  // Schema.org structured data
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: article.title,
+  const articleLd = articleSchema({
+    slug: article.slug,
+    title: article.title,
     description: article.metaDescription,
     datePublished: article.publishedAt,
     dateModified: article.publishedAt,
-    author: {
-      "@type": "Organization",
-      name: "Trip and Tick",
-      url: "https://www.tripandtick.com",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Trip and Tick",
-      url: "https://www.tripandtick.com",
-    },
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": `https://www.tripandtick.com/blog/${article.slug}`,
-    },
-    keywords: article.tags.join(", "),
-  };
+    author: FOUNDER.name,
+    authorType: "Person",
+    authorUrl: `${SITE_URL}/hakkimizda`,
+    keywords: article.tags,
+  });
+
+  const breadcrumbLd = breadcrumbSchema([
+    { name: "Blog", href: "/blog" },
+    { name: article.title, href: `/blog/${article.slug}` },
+  ]);
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
       <BlogArticleContent
         article={article}

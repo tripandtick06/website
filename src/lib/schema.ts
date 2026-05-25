@@ -182,9 +182,25 @@ export interface ArticleInput {
   datePublished: string;
   dateModified?: string;
   author?: string;
+  authorType?: "Person" | "Organization";
+  authorUrl?: string;
+  keywords?: string[];
 }
 
 export function articleSchema(a: ArticleInput) {
+  const authorNode =
+    a.authorType === "Person"
+      ? {
+          "@type": "Person",
+          name: a.author || FOUNDER.name,
+          ...(a.authorUrl ? { url: a.authorUrl } : {}),
+        }
+      : {
+          "@type": "Organization",
+          name: a.author || "Trip and Tick Editöryal",
+          url: SITE_URL,
+        };
+
   return {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -193,15 +209,13 @@ export function articleSchema(a: ArticleInput) {
     image: a.image ? `${SITE_URL}${a.image}` : `${SITE_URL}/og-default.jpg`,
     datePublished: a.datePublished,
     dateModified: a.dateModified || a.datePublished,
-    author: {
-      "@type": "Organization",
-      name: a.author || "Trip and Tick Editöryal",
-    },
+    author: authorNode,
     publisher: { "@id": ORG_ID },
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": `${SITE_URL}/blog/${a.slug}`,
     },
+    ...(a.keywords && a.keywords.length ? { keywords: a.keywords.join(", ") } : {}),
     speakable: {
       "@type": "SpeakableSpecification",
       cssSelector: ["h1", "h2", ".speakable"],

@@ -70,10 +70,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     alternates: alt(`/blog/${p.slug}`),
   }));
 
-  // Sessiyon-7 fix: ARTICLES static-import (Edge-safe — no fs).
-  // Locale prefix `/tr` schaal: per article publish under its native locale; hreflang covers others.
+  // Blog canonical: TR-prefix for all (matches other dynamic pages); hreflang
+  // alternates cover EN/DE/other locales — keeps sitemap canonical consistent.
   const blogPages: MetadataRoute.Sitemap = ARTICLES.map((a) => ({
-    url: `${SITE_URL}/${a.locale}/blog/${a.slug}`,
+    url: url(`/blog/${a.slug}`),
     lastModified: a.publishedAt ? new Date(a.publishedAt) : now,
     changeFrequency: "weekly",
     priority: 0.6,

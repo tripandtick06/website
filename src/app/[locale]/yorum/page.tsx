@@ -18,7 +18,6 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   return {
     title: d.meta_title,
     description: d.meta_desc,
-    robots: { index: false, follow: false },
   };
 }
 
