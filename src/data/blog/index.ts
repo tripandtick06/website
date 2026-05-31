@@ -5,6 +5,7 @@
 
 import en1 from "./en-cappadocia-hot-air-balloon-price-2026.json";
 import en2 from "./en-cappadocia-winter-2026-guide.json";
+import en3 from "./en-best-time-cappadocia-balloon.json";
 import de1 from "./de-heissluftballon-kappadokien-preise.json";
 import tr1 from "./tr-kapadokya-aktiviteler.json";
 import tr2 from "./tr-kapadokya-balon-turu-fiyat-2026.json";
@@ -30,11 +31,18 @@ export interface BlogArticle {
   isAiGenerated?: boolean;
   /** Relative path under /public — e.g. "/images/blog/<slug>.jpg". */
   coverImage?: string;
+  /**
+   * Optional Q&A pairs surfaced as FAQPage JSON-LD on the article detail page.
+   * Mirror the article's "Frequently Asked Questions" section. Plain text only
+   * (no markdown) — Google requires the answer text to match visible content.
+   */
+  faq?: { question: string; answer: string }[];
 }
 
 export const ARTICLES: BlogArticle[] = [
   en1 as BlogArticle,
   en2 as BlogArticle,
+  en3 as BlogArticle,
   de1 as BlogArticle,
   tr1 as BlogArticle,
   tr2 as BlogArticle,

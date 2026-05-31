@@ -12,5 +12,39 @@
   "publishedAt": "2026-05-25T00:00:00.000Z",
   "isAiGenerated": false,
   "seoScore": 93,
-  "coverImage": "/images/blog/cappadocia-winter-2026-guide.jpg"
+  "coverImage": "/images/blog/cappadocia-winter-2026-guide.jpg",
+  "faq": [
+    {
+      "question": "Is Cappadocia worth visiting in winter?",
+      "answer": "Yes — snow-covered fairy chimneys, 30-40% lower hotel rates, balloon flights still operating on 70-80% of mornings, and far fewer crowds. Most photographers consider winter the best season."
+    },
+    {
+      "question": "Do hot air balloons fly in winter in Cappadocia?",
+      "answer": "Yes. Roughly 21-24 days of flights per month in December and February, 19-22 in January. Operators confirm overnight based on wind and visibility. Trip and Tick refunds 100% on weather cancellations."
+    },
+    {
+      "question": "How cold does Cappadocia get in January?",
+      "answer": "Average day 3°C, average night -6°C. Extreme cold snaps can reach -15°C overnight. Layered winter clothing is essential."
+    },
+    {
+      "question": "What should I pack for a Cappadocia balloon flight in winter?",
+      "answer": "Thermal base layer, fleece, waterproof shell, thermal leggings, insulated gloves (touchscreen-compatible inner), wool beanie, neck gaiter, thick wool socks, waterproof boots, optional hand warmers. Burners radiate heat upward in the basket but extremities still get cold."
+    },
+    {
+      "question": "Are cave hotels warm in winter?",
+      "answer": "Yes. The natural rock keeps interior temperature at 18-22°C without heating. Many deluxe cave rooms include wood-burning fireplaces."
+    },
+    {
+      "question": "What is the cheapest month to visit Cappadocia?",
+      "answer": "January, followed by February. Hotel rates drop 30-40% versus July-August peak. Balloon prices are constant year-round."
+    },
+    {
+      "question": "Can I drive to Cappadocia in winter?",
+      "answer": "Possible but requires snow tires and winter driving experience. The O-21 highway from Istanbul takes 8 hours. Most travelers fly to Nevşehir (NAV) or Kayseri (ASR) instead."
+    },
+    {
+      "question": "Are restaurants and tours open in winter?",
+      "answer": "Yes — about 90% of restaurants and 95% of major tours run year-round. Some small family pensions close mid-December to late February."
+    }
+  ]
 }
