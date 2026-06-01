@@ -93,4 +93,4 @@ jobs:
           # 4.x auto-creates the Pages project on first deploy; 3.90
           # (action default) fails non-interactively when project absent.
           wranglerVersion: "4"
-          command: pages deploy .vercel/output/static --project-name=tripandtick --branch=master --commit-dirty=true
+          command: pages deploy .vercel/output/static --project-name=website --branch=master --commit-dirty=true
