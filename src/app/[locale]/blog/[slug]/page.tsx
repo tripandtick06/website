@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { SITE_URL, articleSchema, breadcrumbSchema } from "@/lib/schema";
+import { SITE_URL, articleSchema, breadcrumbSchema, faqPageSchema } from "@/lib/schema";
 import { FOUNDER } from "@/data/founder";
 import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
 import { ARTICLES, type BlogArticle } from "@/data/blog";
@@ -121,6 +121,11 @@ export default async function BlogArticlePage({
     { name: article.title, href: `/blog/${article.slug}` },
   ]);
 
+  // FAQPage JSON-LD — only emitted when the article supplies a `faq` array.
+  // Answers must mirror the visible "Frequently Asked Questions" section.
+  const faqLd =
+    article.faq && article.faq.length > 0 ? faqPageSchema(article.faq) : null;
+
   return (
     <>
       <script
@@ -131,6 +136,12 @@ export default async function BlogArticlePage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
+      {faqLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+        />
+      )}
       <BlogArticleContent
         article={article}
         related={related}
