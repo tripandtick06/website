@@ -33,7 +33,7 @@ App Router, server-first RSC, TR primary (next-intl EN ikinci).
 ```bash
 npx next build           # production build = test gate
 npm run lint             # ESLint
-node scripts/psi-audit.cjs https://www.tripandtick.com  # Lighthouse PSI
+node scripts/psi-audit.cjs https://tripandtick.com  # Lighthouse PSI
 ```
 
 Build yesil olmadan commit yapma. Hata cikarsa once fix.

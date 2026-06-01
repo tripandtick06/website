@@ -3,7 +3,7 @@
 import { COMPANY, FOUNDER, type Founder } from "@/data/founder";
 
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://www.tripandtick.com";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://tripandtick.com";
 
 export const ORG_ID = `${SITE_URL}/#organization`;
 

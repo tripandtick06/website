@@ -24,7 +24,7 @@ export const runtime = "edge";
 export const dynamic = "force-dynamic";
 
 const ADMIN_TOKEN = process.env.ADMIN_API_TOKEN ?? "demo-admin-token-rotate-me";
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.tripandtick.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://tripandtick.com";
 const TTL_DAYS = 14;
 const ALT_LOOKAHEAD_DAYS = 14;
 const MAX_ALTERNATIVES = 5;

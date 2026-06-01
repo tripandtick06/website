@@ -172,13 +172,13 @@ describe("sendBrevoEmail (with key + retry + DLQ)", () => {
         to: { email: "first@x.com" },
         subject: "first",
         htmlContent: "<p>first</p>",
-        unsubscribe: { url: "https://www.tripandtick.com/unsub?t=abc" },
+        unsubscribe: { url: "https://tripandtick.com/unsub?t=abc" },
       });
       expect(r.ok).toBe(true);
       expect(r.messageId).toBe("msg-first");
       expect(stub.calls).toHaveLength(1);
       const body = JSON.parse(stub.calls[0].init?.body as string);
-      expect(body.headers["List-Unsubscribe"]).toBe("<https://www.tripandtick.com/unsub?t=abc>");
+      expect(body.headers["List-Unsubscribe"]).toBe("<https://tripandtick.com/unsub?t=abc>");
       expect(body.headers["List-Unsubscribe-Post"]).toBe("List-Unsubscribe=One-Click");
     } finally {
       stub.restore();

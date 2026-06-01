@@ -15,7 +15,7 @@
 1. https://dashboard.stripe.com → sag-ust **View test data** TOGGLE OFF (live mode)
 2. Developers → **API keys** → "Reveal live key" → **Secret key** kopyala (`sk_live_...`)
 3. Developers → **Webhooks** → **Add endpoint**
-   - Endpoint URL: `https://www.tripandtick.com/api/stripe/webhook`
+   - Endpoint URL: `https://tripandtick.com/api/stripe/webhook`
    - Events:
      - `checkout.session.completed`
      - `payment_intent.succeeded`
@@ -97,7 +97,7 @@ Settings → Environment Variables → **Production** (her variable icin "Encryp
 
 | Key | Deger / Kaynak |
 |---|---|
-| `NEXT_PUBLIC_SITE_URL` | `https://www.tripandtick.com` |
+| `NEXT_PUBLIC_SITE_URL` | `https://tripandtick.com` |
 | `NEXT_PUBLIC_DEFAULT_LOCALE` | `tr` |
 | `STRIPE_SECRET_KEY` | Faz 1.1 — `sk_live_...` (Encrypt) |
 | `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` | Faz 1.1 — `pk_live_...` |
@@ -140,7 +140,7 @@ Settings → Environment Variables → **Production** (her variable icin "Encryp
 
 | # | Test | Beklenen |
 |---|---|---|
-| 1 | `https://www.tripandtick.com` GET | 200 + TR homepage |
+| 1 | `https://tripandtick.com` GET | 200 + TR homepage |
 | 2 | `/api/health` GET | `{"status":"ok"}` 200 |
 | 3 | `/tr/balonlar/standart-balon-ucusu` | SSR balon detay sayfa |
 | 4 | `/en/balonlar/standart-balon-ucusu` | EN locale render |
@@ -164,7 +164,7 @@ Settings → Environment Variables → **Production** (her variable icin "Encryp
 | Supabase Logs | app.supabase.com → Project → Logs |
 | Brevo Statistics | app.brevo.com → Statistics → Email |
 | Google Search Console | search.google.com/search-console |
-| Lighthouse PSI | pagespeed.web.dev → `https://www.tripandtick.com` |
+| Lighthouse PSI | pagespeed.web.dev → `https://tripandtick.com` |
 
 ---
 

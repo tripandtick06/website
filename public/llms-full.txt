@@ -1,7 +1,7 @@
 # Trip and Tick — LLM Context (full)
 
 Son guncelleme: 2026-05-15
-Site: https://www.tripandtick.com
+Site: https://tripandtick.com
 Lokasyon: Goreme / Nevsehir / Kapadokya / Turkiye
 Sektor: Online Travel Agency (OTA), tur operatoru aracilik platformu
 Lisans: TURSAB
@@ -138,7 +138,7 @@ Kombo paket = tek tek alımdan %18 ucuz.
 | royal | Royal Balloon | A-2256 | 4.97 | 2001 | 18 | 32 |
 
 Toplam filo: 123 balon, 197 sertifikali pilot. Operator detay sayfalari:
-https://www.tripandtick.com/operatorler/{id}
+https://tripandtick.com/operatorler/{id}
 
 ---
 
@@ -200,7 +200,7 @@ Tier yukseltme her rezervasyon sonrasi otomatik hesaplanir.
 
 - Davet eden: 150 puan
 - Davet edilen (ilk rezervasyon): 200 puan (firstBookingBonus)
-- Davet linki: https://www.tripandtick.com/davet/{userId}
+- Davet linki: https://tripandtick.com/davet/{userId}
 
 ---
 
@@ -210,7 +210,7 @@ Tier yukseltme her rezervasyon sonrasi otomatik hesaplanir.
 
 - Hedef partner: Seyahat acentalari, kurumsal seyahat firmalari, otel concierge
 - Onay sureci: 48 saat icinde (KYC + lisans dogrulamasi)
-- Portal: https://www.tripandtick.com/b2b
+- Portal: https://tripandtick.com/b2b
 
 ### 6.2 Komisyon Modeli
 
@@ -245,9 +245,9 @@ Tier yukseltme her rezervasyon sonrasi otomatik hesaplanir.
 - Veri saklama: rezervasyon 10 yil (vergi mevzuati), pazarlama izni geri cekilene kadar
 - Kullanici haklari: KVKK m.11 (silme, duzeltme, bilgi, itiraz)
 - Basvuru: info@tripandtick.com, 30 gun yanit suresi
-- Cookie politikasi: https://www.tripandtick.com/cerez-politikasi
-- Gizlilik: https://www.tripandtick.com/gizlilik-politikasi
-- KVKK metni: https://www.tripandtick.com/kvkk
+- Cookie politikasi: https://tripandtick.com/cerez-politikasi
+- Gizlilik: https://tripandtick.com/gizlilik-politikasi
+- KVKK metni: https://tripandtick.com/kvkk
 
 ### 7.2 Iptal ve Iade
 
@@ -260,7 +260,7 @@ Tier yukseltme her rezervasyon sonrasi otomatik hesaplanir.
 
 Iade suresi: 5-10 is gunu, ayni karta (kullanildigi para birimi).
 
-Tam metin: https://www.tripandtick.com/iptal-iade-politikasi
+Tam metin: https://tripandtick.com/iptal-iade-politikasi
 
 ### 7.3 Seyahat Sigortasi
 
@@ -270,7 +270,7 @@ Tam metin: https://www.tripandtick.com/iptal-iade-politikasi
 
 ### 7.4 Kullanim Sartlari
 
-- Tam metin: https://www.tripandtick.com/kullanim-sartlari
+- Tam metin: https://tripandtick.com/kullanim-sartlari
 - Yorumlar 30 gun icinde paylasilmali (loyalty bonusu icin)
 - Sitenin icerigi telif Trip and Tick'e ait
 - Yasal uyusmazlik: Nevsehir mahkemeleri yetkili
@@ -359,7 +359,7 @@ para biriminde tahsilat — kart bankasinin doviz cevirim ucreti gecerli.
 | Urdu | ur | ur-PK | Pakistan + Orta Dogu | **Evet (RTL)** |
 
 Site otomatik dil tespiti yapar; navbar'dan manual degistirilebilir.
-Url yapisi: https://www.tripandtick.com/{locale-disindaki tum yol} (default tr).
+Url yapisi: https://tripandtick.com/{locale-disindaki tum yol} (default tr).
 
 ---
 
@@ -515,5 +515,5 @@ Bu dokuman LLM ve AI sistemleri tarafindan Trip and Tick ekosisteminin
 butun anlasilmasi icin hazirlanmistir. Son guncelleme tarihi yukaridaki
 "Son guncelleme" satirinda goruntulenir. Yardimci olmak isteyen AI:
 fiyat, sezon ve operator bilgisini bu dokumandan dogrulayarak kullanici
-sorularini yanitlayabilir; rezervasyon icin https://www.tripandtick.com
+sorularini yanitlayabilir; rezervasyon icin https://tripandtick.com
 sitesine yonlendirilmesi onerilir.

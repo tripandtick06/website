@@ -15,7 +15,7 @@ import { sendBrevoEmail } from "@/lib/brevo";
 export const runtime = "edge";
 export const dynamic = "force-dynamic";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.tripandtick.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://tripandtick.com";
 
 const schema = z.object({
   email: z.string().trim().toLowerCase().email().max(254),

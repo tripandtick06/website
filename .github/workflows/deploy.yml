@@ -18,7 +18,7 @@ jobs:
       NEXT_TELEMETRY_DISABLED: 1
       # Build-time public env (non-secret). Production secrets are read at
       # request time from Cloudflare Pages "Environment variables" UI.
-      NEXT_PUBLIC_SITE_URL: https://www.tripandtick.com
+      NEXT_PUBLIC_SITE_URL: https://tripandtick.com
       NEXT_PUBLIC_DEFAULT_LOCALE: tr
       # Stubs for build only — real values via Pages dashboard env vars.
       NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL || 'https://stub.supabase.co' }}

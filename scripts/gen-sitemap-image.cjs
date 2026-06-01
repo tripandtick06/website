@@ -18,7 +18,7 @@
  *   "postbuild": "node scripts/indexnow-postbuild.cjs && node scripts/gen-sitemap-image.cjs"
  *
  * Ortam:
- *   NEXT_PUBLIC_SITE_URL   default: https://www.tripandtick.com
+ *   NEXT_PUBLIC_SITE_URL   default: https://tripandtick.com
  *
  * NOT: balloons.ts iceriksel olarak '/images/balloons/standart-1.jpg' vb.
  *      gosterir ama filesystem'de sadece '/images/balloons/{slug}.svg' var.
@@ -35,7 +35,7 @@ const path = require("path");
 
 // ---------------- Config ----------------
 
-const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://www.tripandtick.com").replace(/\/+$/, "");
+const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://tripandtick.com").replace(/\/+$/, "");
 const ROOT = path.resolve(__dirname, "..");
 const PUBLIC_DIR = path.join(ROOT, "public");
 const OUT_FILE = path.join(PUBLIC_DIR, "sitemap-image.xml");

@@ -4,8 +4,8 @@
 > rezervasyonu, ATV / at / jeep aktiviteleri, gunluk turlar ve kombine paketler.
 > 9+ TURSAB lisansli operator, %100 iade garantisi, en dusuk fiyat garantisi.
 
-Site: https://www.tripandtick.com
-Iletisim: https://www.tripandtick.com/tr/iletisim
+Site: https://tripandtick.com
+Iletisim: https://tripandtick.com/tr/iletisim
 E-posta: info@tripandtick.com
 Telefon: +90 537 464 78 61
 WhatsApp: +90 537 464 78 61
@@ -14,36 +14,36 @@ Dil: TR (primary), EN/DE/FR/ES/NL/ZH/HI/UR (canli)
 
 ## Ana sayfalar
 
-- [Anasayfa](https://www.tripandtick.com/tr) — kategoriler, en cok satanlar, garantiler
-- [Balon turlari](https://www.tripandtick.com/tr/balonlar) — 4 paket EUR 165'ten baslayan
-- [Oteller](https://www.tripandtick.com/tr/oteller) — Kapadokya magara + butik oteller (20 secenek)
-- [Aktiviteler](https://www.tripandtick.com/tr/aktiviteler) — ATV, at binme, jeep safari, hamam, microlight (16 paket)
-- [Turlar](https://www.tripandtick.com/tr/turlar) — Kirmizi/Yesil/Mix/Sari + yeralti + gun-batimi + Instagram turu
-- [Paketler](https://www.tripandtick.com/tr/paketler) — kombine deneyim paketleri (balayi/aile/macera/kurumsal)
-- [Transferler](https://www.tripandtick.com/tr/transferler) — Nevsehir/Kayseri havalimani transfer
-- [Operatorler](https://www.tripandtick.com/tr/operatorler) — 9+ TURSAB lisansli partner
-- [Kapadokya rehberi](https://www.tripandtick.com/tr/kapadokya) — destinasyon overview
+- [Anasayfa](https://tripandtick.com/tr) — kategoriler, en cok satanlar, garantiler
+- [Balon turlari](https://tripandtick.com/tr/balonlar) — 4 paket EUR 165'ten baslayan
+- [Oteller](https://tripandtick.com/tr/oteller) — Kapadokya magara + butik oteller (20 secenek)
+- [Aktiviteler](https://tripandtick.com/tr/aktiviteler) — ATV, at binme, jeep safari, hamam, microlight (16 paket)
+- [Turlar](https://tripandtick.com/tr/turlar) — Kirmizi/Yesil/Mix/Sari + yeralti + gun-batimi + Instagram turu
+- [Paketler](https://tripandtick.com/tr/paketler) — kombine deneyim paketleri (balayi/aile/macera/kurumsal)
+- [Transferler](https://tripandtick.com/tr/transferler) — Nevsehir/Kayseri havalimani transfer
+- [Operatorler](https://tripandtick.com/tr/operatorler) — 9+ TURSAB lisansli partner
+- [Kapadokya rehberi](https://tripandtick.com/tr/kapadokya) — destinasyon overview
 
 ## Bilgi
 
-- [SSS](https://www.tripandtick.com/tr/sss) — sik sorulan sorular (balon iptal, hava, sigorta)
-- [Blog](https://www.tripandtick.com/tr/blog) — Kapadokya rehberi, gezi ipuclari (10 makale)
-- [Yorum / Yorum Yaz](https://www.tripandtick.com/tr/yorum) — musteri yorumlari
-- [Hakkimizda](https://www.tripandtick.com/tr/hakkimizda)
-- [Iletisim](https://www.tripandtick.com/tr/iletisim)
+- [SSS](https://tripandtick.com/tr/sss) — sik sorulan sorular (balon iptal, hava, sigorta)
+- [Blog](https://tripandtick.com/tr/blog) — Kapadokya rehberi, gezi ipuclari (10 makale)
+- [Yorum / Yorum Yaz](https://tripandtick.com/tr/yorum) — musteri yorumlari
+- [Hakkimizda](https://tripandtick.com/tr/hakkimizda)
+- [Iletisim](https://tripandtick.com/tr/iletisim)
 
 ## Yasal
 
-- [Gizlilik Politikasi](https://www.tripandtick.com/tr/gizlilik-politikasi)
-- [Kullanim Sartlari](https://www.tripandtick.com/tr/kullanim-sartlari)
-- [Iptal & Iade Politikasi](https://www.tripandtick.com/tr/iptal-iade-politikasi) — 14+ gun %100 iade
-- [Cerez Politikasi](https://www.tripandtick.com/tr/cerez-politikasi)
-- [KVKK Aydinlatma](https://www.tripandtick.com/tr/kvkk)
-- [GDPR / Veri Haklari](https://www.tripandtick.com/tr/gdpr)
-- [Impressum (DE/AT)](https://www.tripandtick.com/tr/impressum)
+- [Gizlilik Politikasi](https://tripandtick.com/tr/gizlilik-politikasi)
+- [Kullanim Sartlari](https://tripandtick.com/tr/kullanim-sartlari)
+- [Iptal & Iade Politikasi](https://tripandtick.com/tr/iptal-iade-politikasi) — 14+ gun %100 iade
+- [Cerez Politikasi](https://tripandtick.com/tr/cerez-politikasi)
+- [KVKK Aydinlatma](https://tripandtick.com/tr/kvkk)
+- [GDPR / Veri Haklari](https://tripandtick.com/tr/gdpr)
+- [Impressum (DE/AT)](https://tripandtick.com/tr/impressum)
 
 ## API
 
-- Sitemap: https://www.tripandtick.com/sitemap.xml
-- Robots: https://www.tripandtick.com/robots.txt
-- Detayli LLM context: https://www.tripandtick.com/llms-full.txt
+- Sitemap: https://tripandtick.com/sitemap.xml
+- Robots: https://tripandtick.com/robots.txt
+- Detayli LLM context: https://tripandtick.com/llms-full.txt

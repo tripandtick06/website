@@ -109,7 +109,7 @@ async function brevoSendWelcomeEmail(
     const siteUrl =
       process.env.NEXT_PUBLIC_SITE_URL ??
       process.env.SITE_URL ??
-      "https://www.tripandtick.com";
+      "https://tripandtick.com";
     const unsubToken = await signUnsubscribeToken(email, "marketing");
     const unsubUrl = buildUnsubscribeUrl(siteUrl, unsubToken);
     const listUnsubscribeHeaders = {
