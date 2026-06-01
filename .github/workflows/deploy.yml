@@ -35,8 +35,33 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
           cache: npm
+
+      - name: Verify Cloudflare token permissions
+        env:
+          CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          # 1) Token must be active — catches a missing, expired, or mistyped secret.
+          VERIFY=$(curl -s -o /dev/null -w "%{http_code}" \
+            -H "Authorization: Bearer ${CF_TOKEN}" \
+            "https://api.cloudflare.com/client/v4/user/tokens/verify")
+          if [ "$VERIFY" != "200" ]; then
+            echo "::error::CLOUDFLARE_API_TOKEN is invalid, expired, or missing (HTTP ${VERIFY}). Regenerate it in the Cloudflare dashboard. See CLOUDFLARE_TOKEN_PERMISSIONS.md."
+            exit 1
+          fi
+          # 2) Token must carry "User -> User Details -> Read". wrangler pages
+          #    deploy reads the account owner's email; without this scope it fails
+          #    late with "Authentication error [code: 10000]" on the Pages endpoint.
+          #    /user returns 200 only when that permission is present.
+          USERCODE=$(curl -s -o /dev/null -w "%{http_code}" \
+            -H "Authorization: Bearer ${CF_TOKEN}" \
+            "https://api.cloudflare.com/client/v4/user")
+          if [ "$USERCODE" != "200" ]; then
+            echo "::error::Token is active but is missing 'User -> User Details -> Read' (HTTP ${USERCODE} from /user). Add that permission to the token in the Cloudflare dashboard. See CLOUDFLARE_TOKEN_PERMISSIONS.md."
+            exit 1
+          fi
+          echo "Cloudflare token verified: active and 'User Details: Read' present."
 
       - name: Install
         run: npm ci --no-audit --no-fund

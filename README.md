@@ -140,6 +140,13 @@ wrangler pages deploy .vercel/output/static --project-name=tripandtick
 
 Alternatif: Cloudflare dashboard -> Pages -> Connect GitHub `tripandtick06/website` -> auto-deploy her push'ta.
 
+> **API Token izinleri:** GitHub Actions deploy'u icin gereken Cloudflare API
+> Token'i, Cloudflare Dashboard -> My Profile -> API Tokens bolumunden
+> `Edit Cloudflare Pages` template'i kullanilarak olusturulmali ve ek olarak
+> **`User -> User Details -> Read`** izni eklenmelidir. Bu izin eksik oldugunda
+> deploy `Authentication error [code: 10000]` ile basarisiz olur. Tam liste:
+> [`CLOUDFLARE_TOKEN_PERMISSIONS.md`](./CLOUDFLARE_TOKEN_PERMISSIONS.md).
+
 Build ayarlari (Cloudflare Pages dashboard):
 - Framework preset: `Next.js`
 - Build command: `npm run build:cf`
