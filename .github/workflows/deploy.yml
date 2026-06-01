@@ -41,6 +41,7 @@ jobs:
       - name: Verify Cloudflare token permissions
         env:
           CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: |
           # 1) Token must be active — catches a missing, expired, or mistyped secret.
           VERIFY=$(curl -s -o /dev/null -w "%{http_code}" \
@@ -61,7 +62,22 @@ jobs:
             echo "::error::Token is active but is missing 'User -> User Details -> Read' (HTTP ${USERCODE} from /user). Add that permission to the token in the Cloudflare dashboard. See CLOUDFLARE_TOKEN_PERMISSIONS.md."
             exit 1
           fi
-          echo "Cloudflare token verified: active and 'User Details: Read' present."
+          # 3) Token must reach the Pages API for THIS account — catches a token
+          #    missing "Account -> Cloudflare Pages -> Edit", an account-resource
+          #    scope that excludes this account, or a wrong CLOUDFLARE_ACCOUNT_ID.
+          #    This is the exact endpoint `wrangler pages deploy` hits.
+          if [ -z "$CF_ACCOUNT_ID" ]; then
+            echo "::error::CLOUDFLARE_ACCOUNT_ID secret is empty. Set it to the account that owns the 'tripandtick' Pages project."
+            exit 1
+          fi
+          PAGES=$(curl -s -o /dev/null -w "%{http_code}" \
+            -H "Authorization: Bearer ${CF_TOKEN}" \
+            "https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/pages/projects?per_page=1")
+          if [ "$PAGES" != "200" ]; then
+            echo "::error::Token cannot access Pages for this account (HTTP ${PAGES} from /accounts/<id>/pages/projects). Add 'Account -> Cloudflare Pages -> Edit' and ensure the token's Account Resources include this account, and that CLOUDFLARE_ACCOUNT_ID is correct. See CLOUDFLARE_TOKEN_PERMISSIONS.md."
+            exit 1
+          fi
+          echo "Cloudflare token verified: active, 'User Details: Read', and Pages access for the account."
 
       - name: Install
         run: npm ci --no-audit --no-fund

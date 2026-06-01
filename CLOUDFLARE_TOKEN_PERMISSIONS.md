@@ -38,6 +38,10 @@ It calls:
 
 - `GET /user/tokens/verify` → token is active.
 - `GET /user` → returns `200` **only** when `User Details: Read` is present.
+- `GET /accounts/<CLOUDFLARE_ACCOUNT_ID>/pages/projects` → returns `200` **only**
+  when the token has `Cloudflare Pages: Edit` for this account (the exact endpoint
+  `wrangler pages deploy` hits). Catches a missing Pages scope, an account-resource
+  scope that excludes this account, or a wrong `CLOUDFLARE_ACCOUNT_ID`.
 
-A non-200 from `/user` fails the job early with an actionable message instead of
+A non-200 from any probe fails the job early with an actionable message instead of
 wasting a full build on a token that cannot deploy.
