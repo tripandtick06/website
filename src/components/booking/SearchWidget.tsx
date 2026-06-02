@@ -1,35 +1,38 @@
 "use client";
 
+// Anasayfa hero arama widget'i (booking-tarzi cila).
+// Importers: src/components/sections/HeroSection.tsx
+// Routing/state logic (Goreme override, query params) DEGISMEDI — sadece sunum.
+
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import {
-  Wind,
-  Hotel,
-  MountainSnow,
-  TreePine,
-  Package,
-  CalendarDays,
-  MapPin,
-  Search,
-  Minus,
-  Plus,
-  AlertTriangle,
-  Users,
+  Wind, Hotel, MountainSnow, TreePine, Package,
+  CalendarDays, MapPin, Search,
 } from "lucide-react";
-import { cn } from "@/lib/utils";
 import { useT } from "@/lib/i18n/I18nProvider";
+import { PillTabs, type PillTabItem } from "@/components/ui/PillTabs";
+import { Stepper } from "@/components/ui/Stepper";
+import { Button } from "@/components/ui/Button";
+import { Banner } from "@/components/ui/Banner";
 
 export function SearchWidget() {
   const t = useT();
   const router = useRouter();
 
-  const TABS = [
+  const TABS: { id: string; label: string; icon: typeof Wind; path: string }[] = [
     { id: "balloon", label: t.component.booking.search.tab_balon_ucusu, icon: Wind, path: "/balonlar" },
     { id: "hotel", label: t.component.booking.search.tab_otel, icon: Hotel, path: "/oteller" },
     { id: "atv", label: t.component.booking.search.tab_aktiviteler, icon: MountainSnow, path: "/aktiviteler" },
     { id: "tour", label: t.component.booking.search.tab_gezi_turlari, icon: TreePine, path: "/turlar" },
     { id: "package", label: t.component.booking.search.tab_paketler, icon: Package, path: "/paketler" },
   ];
+  const tabItems: PillTabItem[] = TABS.map((tab) => ({
+    id: tab.id,
+    label: tab.label,
+    icon: <tab.icon className="h-4 w-4" aria-hidden />,
+  }));
+
   const [activeTab, setActiveTab] = useState("balloon");
   const [destination, setDestination] = useState("");
   const [date, setDate] = useState("2026-03-20");
@@ -58,7 +61,7 @@ export function SearchWidget() {
       return;
     }
 
-    const tab = TABS.find((t) => t.id === activeTab);
+    const tab = TABS.find((tb) => tb.id === activeTab);
     const basePath = tab?.path ?? "/balonlar";
 
     const params = new URLSearchParams();
@@ -77,43 +80,28 @@ export function SearchWidget() {
     }, 300);
   };
 
+  const labelCls = "text-[11px] font-bold text-slate-500 uppercase tracking-wider";
+
   return (
-    <div className="w-full max-w-[880px] bg-white rounded-2xl sm:rounded-3xl shadow-elevated p-5 sm:p-7 mx-auto">
-      {/* Tabs */}
-      <div className="flex gap-1.5 overflow-x-auto pb-4 mb-5 border-b border-slate-100 scrollbar-hide">
-        {TABS.map((tab) => (
-          <button
-            key={tab.id}
-            onClick={() => setActiveTab(tab.id)}
-            className={cn(
-              "flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold whitespace-nowrap transition-all",
-              activeTab === tab.id
-                ? "bg-primary text-white shadow-sm"
-                : "text-slate-500 hover:bg-slate-100"
-            )}
-          >
-            <tab.icon className="w-4 h-4" />
-            {tab.label}
-          </button>
-        ))}
+    <div className="mx-auto w-full max-w-[880px] rounded-2xl bg-white p-5 shadow-elevated sm:rounded-3xl sm:p-7">
+      <div className="mb-5 border-b border-slate-100 pb-4">
+        <PillTabs items={tabItems} value={activeTab} onValueChange={setActiveTab} groupId="hero-search" />
       </div>
 
-      {/* Search Fields */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2fr_1.3fr_1fr_1fr_auto] gap-3 items-end">
+      <div className="grid grid-cols-1 items-end gap-3 sm:grid-cols-2 lg:grid-cols-[2fr_1.3fr_1fr_1fr_auto]">
         {/* Destination */}
         <div className="space-y-1.5">
-          <label className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">
-            {t.component.booking.search.label_destinasyon}
-          </label>
+          <label htmlFor="sw-dest" className={labelCls}>{t.component.booking.search.label_destinasyon}</label>
           <div className="relative">
-            <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+            <MapPin className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" aria-hidden />
             <input
+              id="sw-dest"
               type="text"
               name="destination"
               value={destination}
               onChange={(e) => setDestination(e.target.value)}
               placeholder={t.component.booking.search.input_placeholder_goreme_kapadokya}
-              className="input-field !pl-10"
+              className="input-field !pl-10 focus-visible:ring-2 focus-visible:ring-booking/[0.35]"
               aria-label={t.component.booking.search.input_aria_label_destinasyon}
             />
           </div>
@@ -121,85 +109,53 @@ export function SearchWidget() {
 
         {/* Date */}
         <div className="space-y-1.5">
-          <label className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">
-            {t.component.booking.search.tarih}
-          </label>
+          <label htmlFor="sw-date" className={labelCls}>{t.component.booking.search.tarih}</label>
           <div className="relative">
-            <CalendarDays className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+            <CalendarDays className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" aria-hidden />
             <input
+              id="sw-date"
               type="date"
               value={date}
               onChange={(e) => setDate(e.target.value)}
-              className="input-field !pl-10"
+              className="input-field !pl-10 focus-visible:ring-2 focus-visible:ring-booking/[0.35]"
             />
           </div>
         </div>
 
         {/* Adults */}
         <div className="space-y-1.5">
-          <label className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">
-            {t.component.booking.search.yetiskin}
-          </label>
-          <div className="flex items-center border-2 border-slate-200 rounded-xl overflow-hidden">
-            <button
-              onClick={() => setAdults(Math.max(1, adults - 1))}
-              className="w-10 h-[46px] bg-slate-50 hover:bg-slate-100 flex items-center justify-center transition-colors"
-            >
-              <Minus className="w-4 h-4 text-primary" />
-            </button>
-            <span className="flex-1 text-center font-bold text-slate-800">{adults}</span>
-            <button
-              onClick={() => setAdults(Math.min(20, adults + 1))}
-              className="w-10 h-[46px] bg-slate-50 hover:bg-slate-100 flex items-center justify-center transition-colors"
-            >
-              <Plus className="w-4 h-4 text-primary" />
-            </button>
+          <label className={labelCls}>{t.component.booking.search.yetiskin}</label>
+          <div className="flex h-[50px] items-center justify-center rounded-booking border-2 border-slate-200">
+            <Stepper value={adults} onChange={setAdults} min={1} max={20} label={t.component.booking.search.yetiskin} />
           </div>
         </div>
 
         {/* Children */}
         <div className="space-y-1.5">
-          <label className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">
-            {t.component.booking.search.cocuk_12}
-          </label>
-          <div className="flex items-center border-2 border-slate-200 rounded-xl overflow-hidden">
-            <button
-              onClick={() => setChildren(Math.max(0, children - 1))}
-              className="w-10 h-[46px] bg-slate-50 hover:bg-slate-100 flex items-center justify-center transition-colors"
-            >
-              <Minus className="w-4 h-4 text-primary" />
-            </button>
-            <span className="flex-1 text-center font-bold text-slate-800">{children}</span>
-            <button
-              onClick={() => setChildren(Math.min(10, children + 1))}
-              className="w-10 h-[46px] bg-slate-50 hover:bg-slate-100 flex items-center justify-center transition-colors"
-            >
-              <Plus className="w-4 h-4 text-primary" />
-            </button>
+          <label className={labelCls}>{t.component.booking.search.cocuk_12}</label>
+          <div className="flex h-[50px] items-center justify-center rounded-booking border-2 border-slate-200">
+            <Stepper value={children} onChange={setChildren} min={0} max={10} label={t.component.booking.search.cocuk_12} />
           </div>
         </div>
 
-        {/* Search Button */}
-        <button
+        {/* Search */}
+        <Button
           onClick={handleSearch}
-          disabled={searching}
-          className="btn-accent flex items-center justify-center gap-2.5 !py-3 lg:col-span-1 sm:col-span-2 lg:!px-8"
+          loading={searching}
+          variant="accent"
+          size="lg"
+          className="sm:col-span-2 lg:col-span-1 lg:!px-8"
         >
-          <Search className="w-5 h-5" />
-          {searching
-            ? t.component.booking.search.button_araniyor
-            : t.component.booking.search.button_ara}
-        </button>
+          {!searching && <Search className="h-5 w-5" aria-hidden />}
+          {searching ? t.component.booking.search.button_araniyor : t.component.booking.search.button_ara}
+        </Button>
       </div>
 
-      {/* Age Warning */}
+      {/* Yas uyarisi — balon */}
       {activeTab === "balloon" && (
-        <div className="mt-4 flex items-start gap-2.5 bg-amber-50 border border-amber-200 rounded-xl p-3.5 text-sm text-amber-800">
-          <AlertTriangle className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
-          <div>
-            <strong>{t.component.booking.search.onemli}</strong> {t.component.booking.search.yas_alti_cocuklar_balon}
-          </div>
-        </div>
+        <Banner variant="warning" className="mt-4">
+          <strong>{t.component.booking.search.onemli}</strong> {t.component.booking.search.yas_alti_cocuklar_balon}
+        </Banner>
       )}
     </div>
   );

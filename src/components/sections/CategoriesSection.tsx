@@ -88,19 +88,20 @@ export function CategoriesSection() {
               key={cat.name}
               href={cat.href}
               className={cn(
-                "group flex flex-col items-center text-center p-6 rounded-2xl border-2 transition-all duration-300",
+                "group flex flex-col items-center text-center p-6 rounded-booking border transition-[transform,box-shadow,border-color] duration-200 ease-out-strong",
+                "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-booking/[0.45]",
                 cat.featured
-                  ? "bg-gradient-to-br from-primary to-primary-light text-white border-transparent shadow-card"
-                  : "bg-white border-slate-200 text-slate-800 hover:border-primary hover:-translate-y-1 hover:shadow-card"
+                  ? "bg-gradient-to-br from-primary to-primary-light text-white border-transparent shadow-booking-card"
+                  : "bg-white border-slate-200 text-slate-800 hover:border-booking hover:-translate-y-0.5 hover:shadow-booking-hover"
               )}
             >
               <div
                 className={cn(
                   "w-12 h-12 rounded-xl flex items-center justify-center mb-3 transition-transform group-hover:scale-110",
-                  cat.featured ? "bg-white/20" : "bg-primary/[0.08]"
+                  cat.featured ? "bg-white/20" : "bg-booking/[0.10]"
                 )}
               >
-                <cat.icon className={cn("w-6 h-6", cat.featured ? "text-white" : "text-primary")} />
+                <cat.icon className={cn("w-6 h-6", cat.featured ? "text-white" : "text-booking-600")} />
               </div>
               <span className="font-bold text-sm">{cat.name}</span>
               <span className={cn("text-xs mt-1", cat.featured ? "text-white/70" : "text-slate-400")}>

@@ -8,7 +8,7 @@ export function HeroSection() {
   const t = useT();
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-[#0F1B4D] via-primary to-[#2A1A4A] overflow-hidden px-4 pt-[100px] pb-16">
+    <section className="relative min-h-[100dvh] flex flex-col items-center justify-center bg-gradient-to-br from-[#0F1B4D] via-primary to-[#2A1A4A] overflow-hidden px-4 pt-[100px] pb-16">
       {/* Background Decorative Circles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-[10%] left-[15%] w-80 h-80 rounded-full bg-accent/[0.06] blur-3xl" />
