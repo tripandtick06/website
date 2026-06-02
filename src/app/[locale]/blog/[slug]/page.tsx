@@ -3,22 +3,29 @@ import type { Metadata } from "next";
 import { SITE_URL, articleSchema, breadcrumbSchema, faqPageSchema } from "@/lib/schema";
 import { FOUNDER } from "@/data/founder";
 import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
-import { ARTICLES, type BlogArticle } from "@/data/blog";
+import { ARTICLES, type BlogArticle, type BlogArticleMeta } from "@/data/blog";
 import { BlogArticleContent } from "./BlogArticleContent";
 
 export const runtime = "edge";
 
-export async function generateStaticParams() {
-  return ARTICLES.map((a) => ({ slug: a.slug }));
+// Icerik public/blog/*.json STATIK asset; runtime'da fetch ile alinir (Worker
+// bundle 3 MiB limiti icin). SSG yok -> build-time fetch sorunu olmaz.
+async function getArticle(slug: string): Promise<BlogArticle | null> {
+  const meta = ARTICLES.find((a) => a.slug === slug);
+  if (!meta) return null;
+  try {
+    const res = await fetch(`${SITE_URL}/blog/${meta.file}`, { cache: "force-cache" });
+    if (!res.ok) return null;
+    const full = (await res.json()) as { content?: string; faq?: BlogArticle["faq"] };
+    return { ...meta, content: full.content ?? "", faq: full.faq };
+  } catch {
+    return null;
+  }
 }
 
-function getArticle(slug: string): BlogArticle | null {
-  return ARTICLES.find((a) => a.slug === slug) ?? null;
-}
-
-function getRelatedArticles(currentSlug: string, category: string): BlogArticle[] {
+function getRelatedArticles(currentSlug: string, category: string, locale: string): BlogArticleMeta[] {
   return ARTICLES.filter(
-    (a) => a.slug !== currentSlug && a.category === category
+    (a) => a.slug !== currentSlug && a.category === category && a.locale === locale
   ).slice(0, 3);
 }
 
@@ -27,7 +34,7 @@ export async function generateMetadata({
 }: {
   params: { locale: string; slug: string };
 }): Promise<Metadata> {
-  const article = await getArticle(params.slug);
+  const article = ARTICLES.find((a) => a.slug === params.slug);
   if (!article) return { title: "Yazı Bulunamadı" };
 
   const path = `/blog/${article.slug}`;
@@ -98,7 +105,7 @@ export default async function BlogArticlePage({
   const article = await getArticle(params.slug);
   if (!article) notFound();
 
-  const related = getRelatedArticles(article.slug, article.category);
+  const related = getRelatedArticles(article.slug, article.category, article.locale);
   const wordCount = article.content.split(/\s+/).length;
   const readTime = Math.ceil(wordCount / 200);
   const renderedContent = renderMarkdown(article.content);

@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { SITE_URL } from "@/lib/schema";
 import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
-import { ARTICLES, type BlogArticle } from "@/data/blog";
+import { ARTICLES, type BlogArticleMeta } from "@/data/blog";
 import { BlogContent } from "./BlogContent";
 
-// CF Pages edge runtime. Content loaded via static import (build-time embed).
+// CF Pages edge runtime. Liste metadata manifest'ten (icerik statik asset).
 export const runtime = "edge";
 
-async function getBlogArticles(): Promise<BlogArticle[]> {
+async function getBlogArticles(): Promise<BlogArticleMeta[]> {
   return ARTICLES;
 }
 

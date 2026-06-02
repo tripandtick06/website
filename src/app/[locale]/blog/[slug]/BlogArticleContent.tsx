@@ -13,7 +13,7 @@
 import { ArrowLeft, Calendar, Tag, User, Clock } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { useT } from "@/lib/i18n/I18nProvider";
-import type { BlogArticle } from "@/data/blog";
+import type { BlogArticle, BlogArticleMeta } from "@/data/blog";
 
 // NEW KEYS — pending dict addition. TR fallback used until dict is updated.
 function getCategoryLabel(
@@ -26,7 +26,7 @@ function getCategoryLabel(
 
 interface BlogArticleContentProps {
   article: BlogArticle;
-  related: BlogArticle[];
+  related: BlogArticleMeta[];
   readTime: number;
   renderedContent: string;
 }
