@@ -10,6 +10,13 @@ dist/
 .env*.local
 .env
 
+# secrets / keys (asla commit etme — defansif; gercek dosya repo disinda)
+*key*.txt
+*token*.txt
+*secret*
+*.pem
+*credentials*
+
 # logs
 *.log
 npm-debug.log*
