@@ -17,7 +17,6 @@ import {
   DICTIONARIES,
   LOCALE_DIR,
   LOCALE_STORAGE_KEY,
-  isLocale,
   type Dictionary,
   type Locale,
 } from "./dictionaries";
@@ -31,34 +30,27 @@ interface I18nContextValue {
 
 const I18nContext = createContext<I18nContextValue | null>(null);
 
-export function I18nProvider({ children }: { children: ReactNode }) {
-  // Always start with DEFAULT_LOCALE on both server and first client render to avoid
-  // hydration mismatch. After mount we hydrate from localStorage.
-  const [locale, setLocaleState] = useState<Locale>(DEFAULT_LOCALE);
+export function I18nProvider({
+  children,
+  initialLocale,
+}: {
+  children: ReactNode;
+  initialLocale?: Locale;
+}) {
+  // URL route locale (layout'tan [locale] segmenti) source-of-truth'tur. Server ve
+  // ilk client render ayni initialLocale ile baslar -> hydration mismatch yok +
+  // /nl gibi prefixli URL'de icerik dogru dilde SSR olur (localStorage degil URL kazanir).
+  const [locale, setLocaleState] = useState<Locale>(initialLocale ?? DEFAULT_LOCALE);
   const [ready, setReady] = useState(false);
 
-  // Hydrate from localStorage after mount.
+  // Mount sonrasi: html lang/dir senkron + ready. localStorage URL'i EZMEZ (URL otorite).
   useEffect(() => {
-    if (typeof window === "undefined") return;
-    try {
-      const stored = window.localStorage.getItem(LOCALE_STORAGE_KEY);
-      if (isLocale(stored) && stored !== locale) {
-        setLocaleState(stored);
-        if (typeof document !== "undefined") {
-          document.documentElement.lang = stored;
-          document.documentElement.dir = LOCALE_DIR[stored];
-        }
-      } else if (typeof document !== "undefined") {
-        document.documentElement.lang = locale;
-        document.documentElement.dir = LOCALE_DIR[locale];
-      }
-    } catch {
-      // localStorage may throw (private mode, quota, etc.) — fall back silently.
-    } finally {
-      setReady(true);
+    setReady(true);
+    if (typeof document !== "undefined") {
+      document.documentElement.lang = locale;
+      document.documentElement.dir = LOCALE_DIR[locale];
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [locale]);
 
   const setLocale = useCallback((next: Locale) => {
     setLocaleState(next);

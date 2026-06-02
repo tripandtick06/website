@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Link, usePathname } from "@/i18n/routing";
+import { Link, usePathname, useRouter } from "@/i18n/routing";
 import {
   Globe,
   Menu,
@@ -45,6 +45,7 @@ export function Header() {
   const { locale, setLocale } = useLocale();
   const t = useT();
   const pathname = usePathname();
+  const router = useRouter();
   const langWrapperRef = useRef<HTMLDivElement | null>(null);
   const mobileWrapperRef = useRef<HTMLDivElement | null>(null);
 
@@ -201,6 +202,8 @@ export function Header() {
                       onClick={() => {
                         if (isLocale(lang.code)) {
                           setLocale(lang.code);
+                          // URL otorite: locale-prefixli yola git (SSR dogru dil).
+                          router.replace(pathname, { locale: lang.code });
                         }
                         setLangOpen(false);
                       }}

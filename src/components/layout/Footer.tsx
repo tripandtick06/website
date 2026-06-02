@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Link } from "@/i18n/routing";
+import { Link, usePathname, useRouter } from "@/i18n/routing";
 import {
   Wind,
   Mail,
@@ -47,6 +47,8 @@ const FOOTER_LANGUAGES: FooterLang[] = [
 export function Footer() {
   const t = useT();
   const { locale, setLocale } = useLocale();
+  const pathname = usePathname();
+  const router = useRouter();
   const [langOpen, setLangOpen] = useState(false);
   const langRef = useRef<HTMLDivElement | null>(null);
 
@@ -241,6 +243,7 @@ export function Footer() {
                           onClick={() => {
                             if (isLocale(lang.code)) {
                               setLocale(lang.code);
+                              router.replace(pathname, { locale: lang.code });
                             }
                             setLangOpen(false);
                           }}
