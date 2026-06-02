@@ -10,7 +10,7 @@
 
 import { useState, type FormEvent } from "react";
 import { Phone, MessageSquare, CheckCircle2 } from "lucide-react";
-import { useT } from "@/lib/i18n/I18nProvider";
+import { useT, useLocale } from "@/lib/i18n/I18nProvider";
 import { Field } from "@/components/ui/Field";
 import { Input, Textarea } from "@/components/ui/Input";
 import { Stepper } from "@/components/ui/Stepper";
@@ -37,6 +37,9 @@ function plusNDays(n: number): string {
 
 export function HotelInquiryForm({ hotelSlug, hotelName, tier, region }: Props) {
   const t = useT();
+  const { locale } = useLocale();
+  // Telefon ipucu: +90 sadece TR icin; diger diller uluslararasi generic (TR varsaymaz).
+  const phonePlaceholder = locale === "tr" ? "+90 5xx 000 00 00" : "+__ ___ ___ ____";
   const f = t.component.oteller.hotel_inquiry_form;
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -128,7 +131,7 @@ export function HotelInquiryForm({ hotelSlug, hotelName, tier, region }: Props) 
           <Input id="hi-name" type="text" value={name} onChange={(e) => setName(e.target.value)} required minLength={2} maxLength={100} autoComplete="name" />
         </Field>
         <Field label={f.telefon_sizi_arayacagiz} htmlFor="hi-phone" required>
-          <Input id="hi-phone" type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} required placeholder="+90 5xx ..." autoComplete="tel" />
+          <Input id="hi-phone" type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} required placeholder={phonePlaceholder} autoComplete="tel" />
         </Field>
         <Field label={f.posta} htmlFor="hi-email" required>
           <Input id="hi-email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required autoComplete="email" />
