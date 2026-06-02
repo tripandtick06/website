@@ -138,7 +138,7 @@ export function BlogArticleContent({
               {related.map((rel) => (
                 <Link
                   key={rel.slug}
-                  href={`/blog/${rel.slug}`}
+                  href={{ pathname: "/blog/[slug]", params: { slug: rel.slug } }}
                   className="bg-white rounded-xl border border-slate-200 p-5 hover:shadow-card transition-shadow group"
                 >
                   <h4 className="font-bold text-sm text-slate-900 mb-2 line-clamp-2 group-hover:text-primary transition-colors">

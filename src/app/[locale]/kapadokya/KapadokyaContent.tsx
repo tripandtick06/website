@@ -40,7 +40,7 @@ export function KapadokyaContent() {
       desc: d.cat_desc_kombo,
       color: "from-warning to-warning-light",
     },
-  ];
+  ] as const;
 
   return (
     <>
@@ -121,7 +121,7 @@ export function KapadokyaContent() {
             {KAPADOKYA_PILLARS.map((p) => (
               <Link
                 key={p.slug}
-                href={`/blog/${p.slug}`}
+                href={{ pathname: "/blog/[slug]", params: { slug: p.slug } }}
                 className="card p-6 group flex gap-4"
               >
                 <div className="w-12 h-12 rounded-xl bg-primary/[0.08] flex items-center justify-center flex-shrink-0">

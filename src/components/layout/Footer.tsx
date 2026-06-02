@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useParams } from "next/navigation";
 import { Link, usePathname, useRouter } from "@/i18n/routing";
 import {
   Wind,
@@ -49,6 +50,7 @@ export function Footer() {
   const { locale, setLocale } = useLocale();
   const pathname = usePathname();
   const router = useRouter();
+  const params = useParams();
   const [langOpen, setLangOpen] = useState(false);
   const langRef = useRef<HTMLDivElement | null>(null);
 
@@ -73,7 +75,7 @@ export function Footer() {
     { href: "/turlar", label: t.nav.tours },
     { href: "/paketler", label: t.nav.packages },
     { href: "/transferler", label: f.service_transfer },
-  ];
+  ] as const;
 
   const FOOTER_COMPANY = [
     { href: "/hakkimizda", label: t.nav.about },
@@ -84,7 +86,7 @@ export function Footer() {
     { href: "/sss", label: t.nav.faq },
     { href: "/hesabim", label: f.company_rezervasyonum },
     { href: "/b2b", label: f.company_b2b_acente },
-  ];
+  ] as const;
 
   const FOOTER_LEGAL = [
     { href: "/iptal-iade-politikasi", label: f.legal_iptal_iade },
@@ -93,7 +95,7 @@ export function Footer() {
     { href: "/cerez-politikasi", label: f.legal_kvkk_cerezler },
     { href: "/gdpr", label: f.legal_veri_haklari_gdpr },
     { href: "/impressum", label: f.legal_impressum },
-  ];
+  ] as const;
 
   return (
     <footer className="bg-slate-900 text-slate-400">
@@ -243,7 +245,11 @@ export function Footer() {
                           onClick={() => {
                             if (isLocale(lang.code)) {
                               setLocale(lang.code);
-                              router.replace(pathname, { locale: lang.code });
+                              router.replace(
+                                // @ts-expect-error -- params always match current route
+                                { pathname, params },
+                                { locale: lang.code }
+                              );
                             }
                             setLangOpen(false);
                           }}

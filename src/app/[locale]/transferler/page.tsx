@@ -4,6 +4,7 @@ import { SITE_URL, itemListSchema, faqPageSchema } from "@/lib/schema";
 import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { TRANSFERS } from "@/data/services/catalog";
+import { tServiceList } from "@/lib/i18n/localizeData";
 import { TransferlerContent } from "./TransferlerContent";
 
 const TRANSFER_FAQS = [
@@ -58,9 +59,14 @@ export async function generateMetadata({
   };
 }
 
-export default function Page() {
+export default function Page({
+  params,
+}: {
+  params: { locale: string };
+}) {
+  const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
   const itemList = itemListSchema(
-    TRANSFERS.map((t) => ({ name: t.name, urlPath: `/rezervasyon/${t.slug}` })),
+    tServiceList(TRANSFERS, loc).map((t) => ({ name: t.name, urlPath: `/rezervasyon/${t.slug}` })),
     "Kapadokya Havalimanı Transferleri"
   );
 

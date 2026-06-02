@@ -14,7 +14,7 @@
 // Sure < 2 saat / 2-4 saat / Yarim gun / Tam gun / Cok gunlu chip,
 // Para birimi filter, Sıralama dropdown."
 
-import { useEffect, useMemo, useState, useTransition, type FormEvent } from "react";
+import { useEffect, useMemo, useState, useTransition, type FormEvent, type ComponentProps } from "react";
 import { useT } from "@/lib/i18n/I18nProvider";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Link } from "@/i18n/routing";
@@ -219,7 +219,7 @@ function ResultCard({ result }: { result: SearchResult }) {
   };
   return (
     <Link
-      href={result.href}
+      href={result.href as ComponentProps<typeof Link>["href"]}
       className="card overflow-hidden flex flex-col h-full hover:shadow-elevated transition-shadow"
     >
       <div

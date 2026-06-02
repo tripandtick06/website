@@ -6,8 +6,9 @@ export const runtime = "edge";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { BALLOON_PACKAGES, getBalloonPackageBySlug } from "@/data/services/balloons";
 import { OPERATORS } from "@/data/services/operators";
-import { FAQ_ITEMS } from "@/data/faq";
 import { REVIEWS } from "@/data/reviews";
+import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
+import { tFaq } from "@/lib/i18n/localizeData";
 import { formatPrice } from "@/lib/utils";
 import {
   breadcrumbSchema,
@@ -61,8 +62,9 @@ export default function BalonDetayPage({ params }: PageParams) {
   const pkg = getBalloonPackageBySlug(params.slug);
   if (!pkg) notFound();
 
+  const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
   const operators = OPERATORS.filter((op) => pkg.operatorIds.includes(op.id));
-  const balonFaqs = FAQ_ITEMS.filter((f) => f.category === "balon");
+  const balonFaqs = tFaq(loc).filter((f) => f.category === "balon");
   const balonReviews = REVIEWS.filter(
     (r) => r.service === "Balon" && r.rating >= 4
   )

@@ -1,5 +1,6 @@
 "use client";
 
+import type { ComponentProps } from "react";
 import { Link } from "@/i18n/routing";
 import {
   Wind,
@@ -86,7 +87,8 @@ export function CategoriesSection() {
           {CATEGORIES.map((cat) => (
             <Link
               key={cat.name}
-              href={cat.href}
+              // href may be a shared route or a "#" placeholder (insurance) — cast.
+              href={cat.href as ComponentProps<typeof Link>["href"]}
               className={cn(
                 "group flex flex-col items-center text-center p-6 rounded-booking border transition-[transform,box-shadow,border-color] duration-200 ease-out-strong",
                 "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-booking/[0.45]",

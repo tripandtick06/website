@@ -218,7 +218,7 @@ export function BalonDetayContent({
                 </div>
 
                 <Link
-                  href={`/rezervasyon/${pkg.slug}#tarih`}
+                  href={{ pathname: "/rezervasyon/[slug]", params: { slug: pkg.slug }, hash: "tarih" }}
                   className="btn-accent w-full block text-center mb-2"
                 >
                   {s.tarih_sec_rezerve_et}

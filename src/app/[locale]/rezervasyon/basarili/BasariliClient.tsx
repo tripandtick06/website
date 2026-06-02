@@ -177,7 +177,7 @@ export function BasariliClient(props: Props) {
             <CalendarPlus className="w-4 h-4" /> {ns.cta_ical}
           </a>
           <Link
-            href={`/hesabim?code=${encodeURIComponent(code)}`}
+            href={{ pathname: "/hesabim", query: { code } }}
             className="inline-flex items-center justify-center gap-2 bg-amber-500 text-white px-5 py-3 rounded-lg font-semibold hover:bg-amber-600 transition-colors text-sm"
           >
             <UserCircle className="w-4 h-4" /> {ns.cta_my_booking}
