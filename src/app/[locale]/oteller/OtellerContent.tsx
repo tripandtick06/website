@@ -8,6 +8,7 @@ import { JsonLd } from "@/components/layout/JsonLd";
 import { HOTELS } from "@/data/services/catalog";
 import { breadcrumbSchema, itemListSchema } from "@/lib/schema";
 import { HotelsGrid } from "@/components/oteller/HotelsGrid";
+import { Banner } from "@/components/ui/Banner";
 
 export function OtellerContent() {
   const t = useT();
@@ -26,6 +27,16 @@ export function OtellerContent() {
 
       <section className="section-padding bg-slate-50">
         <div className="container-main">
+          {/* Contact-only akis: net + pozitif cerceve (i18n-debt: TR hardcode). */}
+          <Banner
+            variant="info"
+            title="Online rezervasyon yakında"
+            className="mb-8"
+          >
+            Şu an otelleri online rezerve edemiyorsunuz. Uzman ekibimiz size özel fiyat ve uygun
+            müsaitlik hazırlıyor — kartlardan <b>&ldquo;Fiyat teklifi al&rdquo;</b> deyin, 24 saat içinde dönüş yapalım.
+          </Banner>
+
           <HotelsGrid hotels={HOTELS} />
 
           <div className="mt-12 text-center bg-white rounded-2xl p-8 border border-slate-200">

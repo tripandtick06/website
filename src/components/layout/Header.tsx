@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Link } from "@/i18n/routing";
+import { Link, usePathname } from "@/i18n/routing";
 import {
   Globe,
   Menu,
@@ -44,6 +44,7 @@ export function Header() {
   const [langOpen, setLangOpen] = useState(false);
   const { locale, setLocale } = useLocale();
   const t = useT();
+  const pathname = usePathname();
   const langWrapperRef = useRef<HTMLDivElement | null>(null);
   const mobileWrapperRef = useRef<HTMLDivElement | null>(null);
 
@@ -116,16 +117,28 @@ export function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-1">
-          {NAV_ITEMS.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-white/75 hover:text-white hover:bg-white/[0.08] transition-all"
-            >
-              <item.icon className="w-4 h-4" />
-              {item.label}
-            </Link>
-          ))}
+          {NAV_ITEMS.map((item) => {
+            const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                aria-current={active ? "page" : undefined}
+                className={cn(
+                  "relative flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors",
+                  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-booking/[0.5]",
+                  active ? "text-white" : "text-white/75 hover:text-white hover:bg-white/[0.08]"
+                )}
+              >
+                <item.icon className="w-4 h-4" />
+                {item.label}
+                {active && (
+                  // aktif route — booking-blue alt indikator
+                  <span className="absolute inset-x-3 -bottom-px h-0.5 rounded-full bg-booking" />
+                )}
+              </Link>
+            );
+          })}
           <Link
             href="/blog"
             className="px-4 py-2 rounded-lg text-sm font-medium text-white/75 hover:text-white hover:bg-white/[0.08] transition-all"

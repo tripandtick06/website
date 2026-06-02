@@ -30,14 +30,21 @@ export function StepsSection() {
 
           {STEPS.map((step) => (
             <div key={step.num} className="flex-1 text-center relative group">
-              <div className="w-16 h-16 rounded-full bg-white border-[3px] border-slate-200 flex items-center justify-center mx-auto mb-4 relative z-10 transition-all group-hover:border-accent group-hover:bg-accent/5">
-                <step.icon className="w-6 h-6 text-slate-400 group-hover:text-accent transition-colors" />
+              <div className="w-16 h-16 rounded-full bg-white border-[3px] border-slate-200 flex items-center justify-center mx-auto mb-4 relative z-10 transition-colors duration-200 group-hover:border-booking group-hover:bg-booking-50">
+                <step.icon className="w-6 h-6 text-slate-400 group-hover:text-booking transition-colors" />
               </div>
               <h4 className="font-bold text-slate-900 mb-2">{step.title}</h4>
               <p className="text-sm text-slate-500 px-3">{step.desc}</p>
             </div>
           ))}
         </div>
+
+        {/* Oteller contact-only — adimlar balon/tur Stripe akisini anlatir; otel farkli. */}
+        <p className="mx-auto mt-10 max-w-2xl text-center text-sm text-slate-500">
+          <b className="text-slate-700">Oteller için</b> online ödeme yerine uzman ekibimiz size özel
+          fiyat ve müsaitlik hazırlar — otel kartından &ldquo;Fiyat teklifi al&rdquo; deyin, 24 saat
+          içinde dönelim.
+        </p>
       </div>
     </section>
   );

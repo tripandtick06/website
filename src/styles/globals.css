@@ -6,6 +6,7 @@
   :root {
     --primary: 26 43 107;
     --accent: 255 107 53;
+    --booking: 0 108 228;
   }
 
   html {
@@ -18,7 +19,7 @@
   }
 
   ::selection {
-    @apply bg-accent/20 text-accent-dark;
+    @apply bg-booking/[0.15] text-booking-700;
   }
 }
 
@@ -64,6 +65,49 @@
   .gradient-text {
     @apply bg-clip-text text-transparent
            bg-gradient-to-r from-primary to-accent;
+  }
+
+  /* booking-blue link / ikincil aksiyon */
+  .btn-link {
+    @apply text-booking-600 font-semibold hover:text-booking-700
+           hover:underline underline-offset-2 transition-colors;
+  }
+
+  /* booking.com review-skor rozeti — asimetrik sol-alt kose imzasi */
+  .score-badge {
+    @apply inline-flex items-center justify-center bg-primary text-white
+           text-sm font-bold rounded-lg rounded-bl-sm px-2 py-1 leading-none;
+  }
+
+  /* amenity chip */
+  .chip {
+    @apply inline-flex items-center gap-1 text-xs font-medium text-slate-600
+           bg-slate-100 rounded-full px-2.5 py-1;
+  }
+
+  /* skeleton shimmer (emil: perceived performance) */
+  .skeleton {
+    @apply animate-shimmer rounded-lg
+           bg-[linear-gradient(90deg,#eef0f4,#f6f8fa,#eef0f4)] bg-[length:200%_100%];
+  }
+
+  /* a11y focus ring helper — emil/impeccable. Opt-in, * yerine (regresyon riski). */
+  .focus-ring {
+    @apply outline-none focus-visible:ring-2 focus-visible:ring-booking/[0.45]
+           focus-visible:ring-offset-1;
+  }
+}
+
+/* emil/impeccable: reduced-motion zorunlu. Transform-tabanli hareketi kapat,
+   opacity/renge dokunma. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
