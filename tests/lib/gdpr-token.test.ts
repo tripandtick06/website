@@ -66,8 +66,8 @@ describe("signGdprToken / verifyGdprToken", () => {
 
 describe("buildGdprLinkUrl", () => {
   it("builds export URL with encoded token", () => {
-    const link = buildGdprLinkUrl("https://www.tripandtick.com/", "export", "abc.def");
-    expect(link).toBe("https://www.tripandtick.com/api/gdpr/export?token=abc.def");
+    const link = buildGdprLinkUrl("https://tripandtick.com/", "export", "abc.def");
+    expect(link).toBe("https://tripandtick.com/api/gdpr/export?token=abc.def");
   });
 
   it("strips trailing slashes from siteUrl", () => {

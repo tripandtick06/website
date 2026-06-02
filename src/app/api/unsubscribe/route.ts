@@ -57,14 +57,14 @@ export async function GET(req: NextRequest) {
     s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
   if (!result.ok) {
-    const html = `<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><title>Abonelik iptali — Trip and Tick</title><meta name="robots" content="noindex,nofollow"></head><body style="font-family:system-ui,sans-serif;max-width:560px;margin:48px auto;padding:24px;color:#1e293b"><h1 style="color:#dc2626">Hata</h1><p>${escape(result.error ?? "Bilinmeyen hata")}</p><p><a href="https://www.tripandtick.com">Ana sayfaya don</a></p></body></html>`;
+    const html = `<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><title>Abonelik iptali — Trip and Tick</title><meta name="robots" content="noindex,nofollow"></head><body style="font-family:system-ui,sans-serif;max-width:560px;margin:48px auto;padding:24px;color:#1e293b"><h1 style="color:#dc2626">Hata</h1><p>${escape(result.error ?? "Bilinmeyen hata")}</p><p><a href="https://tripandtick.com">Ana sayfaya don</a></p></body></html>`;
     return new NextResponse(html, {
       status: result.status,
       headers: { "Content-Type": "text/html; charset=utf-8" },
     });
   }
 
-  const html = `<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><title>Abonelikten cikildi — Trip and Tick</title><meta name="robots" content="noindex,nofollow"></head><body style="font-family:system-ui,sans-serif;max-width:560px;margin:48px auto;padding:24px;color:#1e293b"><h1 style="color:#16a34a">Tamam!</h1><p><strong>${escape(result.email ?? "")}</strong> adresi <strong>${escape(result.list ?? "marketing")}</strong> e-postalarindan cikarildi.</p><p>Rezervasyon onaylari ve degisiklik bildirimleri (transactional) gonderilmeye devam edecek.</p><p style="margin-top:32px"><a href="https://www.tripandtick.com" style="display:inline-block;background:#dc2626;color:#fff;padding:10px 20px;border-radius:8px;text-decoration:none">Ana sayfaya don</a></p></body></html>`;
+  const html = `<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><title>Abonelikten cikildi — Trip and Tick</title><meta name="robots" content="noindex,nofollow"></head><body style="font-family:system-ui,sans-serif;max-width:560px;margin:48px auto;padding:24px;color:#1e293b"><h1 style="color:#16a34a">Tamam!</h1><p><strong>${escape(result.email ?? "")}</strong> adresi <strong>${escape(result.list ?? "marketing")}</strong> e-postalarindan cikarildi.</p><p>Rezervasyon onaylari ve degisiklik bildirimleri (transactional) gonderilmeye devam edecek.</p><p style="margin-top:32px"><a href="https://tripandtick.com" style="display:inline-block;background:#dc2626;color:#fff;padding:10px 20px;border-radius:8px;text-decoration:none">Ana sayfaya don</a></p></body></html>`;
   return new NextResponse(html, {
     status: 200,
     headers: { "Content-Type": "text/html; charset=utf-8" },

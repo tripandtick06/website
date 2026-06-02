@@ -4,7 +4,7 @@
  *
  * Env:
  *   INDEXNOW_KEY = 32+ char random anahtar (public/<KEY>.txt dosyasinda da olmali)
- *   NEXT_PUBLIC_SITE_URL = canli site adresi (https://www.tripandtick.com)
+ *   NEXT_PUBLIC_SITE_URL = canli site adresi (https://tripandtick.com)
  *
  * Yerel build'lerde veya KEY yoksa sessizce skip eder.
  */
@@ -12,7 +12,7 @@
 const https = require("https");
 
 const KEY = process.env.INDEXNOW_KEY;
-const HOST = process.env.NEXT_PUBLIC_SITE_URL || "https://www.tripandtick.com";
+const HOST = process.env.NEXT_PUBLIC_SITE_URL || "https://tripandtick.com";
 const HOSTNAME = HOST.replace(/^https?:\/\//, "").replace(/\/.*$/, "");
 
 if (!KEY) {

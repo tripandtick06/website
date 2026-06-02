@@ -49,7 +49,7 @@ export function ImpressumContent() {
             <br />
             <strong>{d.label_internet}:</strong>{" "}
             <a href={SITE_URL} className="text-accent font-semibold">
-              www.tripandtick.com
+              tripandtick.com
             </a>
           </p>
 

@@ -4,7 +4,7 @@
  *
  * Usage:
  *   node scripts/psi-audit.cjs                              # default URL
- *   node scripts/psi-audit.cjs https://www.tripandtick.com/sss/ # custom URL
+ *   node scripts/psi-audit.cjs https://tripandtick.com/sss/ # custom URL
  *
  * Env:
  *   GOOGLE_PSI_KEY  PSI v5 API key (opsiyonel ama rate-limit icin onerilir)
@@ -18,7 +18,7 @@ const fs = require("fs");
 const path = require("path");
 const https = require("https");
 
-const DEFAULT_URL = "https://www.tripandtick.com";
+const DEFAULT_URL = "https://tripandtick.com";
 const TARGET_URL = process.argv[2] || DEFAULT_URL;
 const API_KEY = process.env.GOOGLE_PSI_KEY || "";
 

@@ -3,7 +3,7 @@ import { NextRequest } from "next/server";
 
 beforeAll(() => {
   process.env.GDPR_SECRET = "test-secret-min-32-chars-aaaaaaaaaa";
-  process.env.NEXT_PUBLIC_SITE_URL = "https://www.tripandtick.com";
+  process.env.NEXT_PUBLIC_SITE_URL = "https://tripandtick.com";
 });
 
 const sendBrevoEmailMock = vi.fn();
@@ -18,7 +18,7 @@ beforeEach(() => {
 });
 
 function buildReq(body: unknown, ip = "10.0.0.1"): NextRequest {
-  return new NextRequest("https://www.tripandtick.com/api/gdpr/request", {
+  return new NextRequest("https://tripandtick.com/api/gdpr/request", {
     method: "POST",
     headers: { "content-type": "application/json", "cf-connecting-ip": ip },
     body: typeof body === "string" ? body : JSON.stringify(body),

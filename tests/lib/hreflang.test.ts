@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeAll } from "vitest";
 
 beforeAll(() => {
-  process.env.NEXT_PUBLIC_SITE_URL = "https://www.tripandtick.com";
+  process.env.NEXT_PUBLIC_SITE_URL = "https://tripandtick.com";
 });
 
 import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
@@ -24,21 +24,21 @@ describe("generateHreflang", () => {
 
   it("prefixes each href with `/locale`", () => {
     const out = generateHreflang("/balonlar");
-    expect(out["tr-TR"]).toBe("https://www.tripandtick.com/tr/balonlar");
-    expect(out.en).toBe("https://www.tripandtick.com/en/balonlar");
-    expect(out["zh-Hans"]).toBe("https://www.tripandtick.com/zh/balonlar");
+    expect(out["tr-TR"]).toBe("https://tripandtick.com/tr/balonlar");
+    expect(out.en).toBe("https://tripandtick.com/en/balonlar");
+    expect(out["zh-Hans"]).toBe("https://tripandtick.com/zh/balonlar");
   });
 
   it("handles root path without double slash", () => {
     const out = generateHreflang("/");
-    expect(out["tr-TR"]).toBe("https://www.tripandtick.com/tr");
-    expect(out.en).toBe("https://www.tripandtick.com/en");
-    expect(out["x-default"]).toBe("https://www.tripandtick.com/tr");
+    expect(out["tr-TR"]).toBe("https://tripandtick.com/tr");
+    expect(out.en).toBe("https://tripandtick.com/en");
+    expect(out["x-default"]).toBe("https://tripandtick.com/tr");
   });
 
   it("x-default falls back to /tr", () => {
     const out = generateHreflang("/oteller");
-    expect(out["x-default"]).toBe("https://www.tripandtick.com/tr/oteller");
+    expect(out["x-default"]).toBe("https://tripandtick.com/tr/oteller");
   });
 });
 

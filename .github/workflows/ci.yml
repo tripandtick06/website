@@ -17,7 +17,7 @@ jobs:
     timeout-minutes: 15
     env:
       NEXT_TELEMETRY_DISABLED: 1
-      NEXT_PUBLIC_SITE_URL: https://www.tripandtick.com
+      NEXT_PUBLIC_SITE_URL: https://tripandtick.com
       NEXT_PUBLIC_SUPABASE_URL: https://stub.supabase.co
       NEXT_PUBLIC_SUPABASE_ANON_KEY: stub
       SUPABASE_SERVICE_ROLE_KEY: stub
@@ -69,5 +69,5 @@ jobs:
 
       - name: Validate hreflang on production sitemap
         env:
-          SITE: https://www.tripandtick.com
+          SITE: https://tripandtick.com
         run: npm run validate:hreflang || true

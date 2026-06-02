@@ -22,7 +22,7 @@ import {
 export const runtime = "edge";
 export const dynamic = "force-dynamic";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.tripandtick.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://tripandtick.com";
 
 function htmlError(status: number, title: string, message: string) {
   const esc = (s: string) =>

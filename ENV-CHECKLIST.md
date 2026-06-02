@@ -10,7 +10,7 @@ Bu liste Cloudflare Pages Dashboard → Project → **Settings → Environment V
 
 | Key | Tip | Deger |
 |---|---|---|
-| `NEXT_PUBLIC_SITE_URL` | plain | `https://www.tripandtick.com` |
+| `NEXT_PUBLIC_SITE_URL` | plain | `https://tripandtick.com` |
 | `NEXT_PUBLIC_DEFAULT_LOCALE` | plain | `tr` |
 
 ## 2. Stripe (zorunlu, prod-canli)
@@ -19,7 +19,7 @@ Bu liste Cloudflare Pages Dashboard → Project → **Settings → Environment V
 |---|---|---|
 | `STRIPE_SECRET_KEY` | **secret** | Stripe Dashboard → Developers → API keys → **Live secret key** (`sk_live_...`). Restricted key ise `Checkout sessions: write` + `Payment intents: read` + `Refunds: read` yetkili. |
 | `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` | plain | Stripe Dashboard → Developers → API keys → **Publishable key** (`pk_live_...`). Client-side Stripe.js icin. |
-| `STRIPE_WEBHOOK_SECRET` | **secret** | Stripe Dashboard → Developers → Webhooks → endpoint olustur → `whsec_...`. **Endpoint URL**: `https://www.tripandtick.com/api/stripe/webhook`. Events: `checkout.session.completed`, `payment_intent.succeeded`, `payment_intent.payment_failed`, `charge.refunded`. |
+| `STRIPE_WEBHOOK_SECRET` | **secret** | Stripe Dashboard → Developers → Webhooks → endpoint olustur → `whsec_...`. **Endpoint URL**: `https://tripandtick.com/api/stripe/webhook`. Events: `checkout.session.completed`, `payment_intent.succeeded`, `payment_intent.payment_failed`, `charge.refunded`. |
 
 ## 3. Admin Panel (zorunlu)
 
@@ -121,7 +121,7 @@ Node version:       20
 
 ## Post-deploy smoke test
 
-1. `https://www.tripandtick.com/api/health` → 200
+1. `https://tripandtick.com/api/health` → 200
 2. `/tr/balonlar/standart-balon-ucusu` → SSR render OK
 3. `/tr/rezervasyon/standart-balon-ucusu` → tarih sec → 5. adim → Stripe Checkout butonu → Live Stripe payment page
 4. `/admin/login` → admin password → `/admin/fiyat` acilir

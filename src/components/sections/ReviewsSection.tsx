@@ -4,6 +4,8 @@ import { Link } from "@/i18n/routing";
 import { Star, Quote, PenLine } from "lucide-react";
 import { pickReviews } from "@/data/reviews";
 import { useT } from "@/lib/i18n/I18nProvider";
+import { ReviewScore } from "@/components/ui/ReviewScore";
+import { Button } from "@/components/ui/Button";
 
 const AVATAR_COLORS = [
   "bg-primary",
@@ -37,16 +39,20 @@ export function ReviewsSection() {
           <p className="text-slate-500 mt-2 text-sm sm:text-base">
             {t.component.sections.reviews.trip_tick_guvenenlerin_gercek}
           </p>
+
+          {/* booking imzasi: aggregate skor rozeti — sosyal kanit / guven. */}
+          <div className="mt-5 inline-flex items-center justify-center rounded-full border border-slate-200 bg-slate-50 px-4 py-2 shadow-sm">
+            <ReviewScore rating={4.7} count={12000} format="ten" />
+          </div>
         </div>
 
         <div className="text-center mb-8">
-          <Link
-            href="/yorum"
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-amber-500 hover:bg-amber-600 text-white rounded-full text-sm font-bold transition-colors shadow-sm"
-          >
-            <PenLine className="w-4 h-4" />
-            {t.component.sections.reviews.yorumunuzu_yazin}
-          </Link>
+          <Button asChild variant="booking" size="sm" className="rounded-full">
+            <Link href="/yorum">
+              <PenLine className="w-4 h-4" aria-hidden />
+              {t.component.sections.reviews.yorumunuzu_yazin}
+            </Link>
+          </Button>
           <p className="text-xs text-slate-400 mt-2">
             {t.component.sections.reviews.trip_tick_yasadiginiz_deneyimi}
           </p>

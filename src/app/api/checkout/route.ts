@@ -29,7 +29,7 @@ const checkoutSchema = z.object({
   locale: z.enum(LOCALES).optional(),
 });
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.tripandtick.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://tripandtick.com";
 
 function localePath(locale: string | undefined): string {
   const l = locale ?? DEFAULT_LOCALE;

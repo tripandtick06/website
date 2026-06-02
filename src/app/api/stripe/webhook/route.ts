@@ -26,7 +26,7 @@ const BREVO_FROM_NAME = process.env.BREVO_FROM_NAME ?? "Trip and Tick";
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL ?? "info@tripandtick.com";
 const STRIPE_SECRET_KEY = process.env.STRIPE_SECRET_KEY;
 const STRIPE_WEBHOOK_SECRET = process.env.STRIPE_WEBHOOK_SECRET;
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.tripandtick.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://tripandtick.com";
 
 interface MailInput {
   to: { email: string; name: string };

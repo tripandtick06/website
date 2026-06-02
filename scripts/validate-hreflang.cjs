@@ -21,7 +21,7 @@ const EXPECTED_LOCALES = ["tr-TR", "en", "de", "fr", "es", "nl", "zh-Hans", "hi"
 const SITE =
   process.env.SITE ||
   process.env.NEXT_PUBLIC_SITE_URL ||
-  "https://www.tripandtick.com";
+  "https://tripandtick.com";
 
 const args = process.argv.slice(2);
 const VERBOSE = args.includes("--verbose") || args.includes("-v");

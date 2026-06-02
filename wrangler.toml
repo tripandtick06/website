@@ -14,7 +14,7 @@ pages_build_output_dir = ".vercel/output/static"
 # Production env (placeholders) — gercek degerler Cloudflare Pages dashboard'da
 # "Environment variables" + "Secrets" altinda set edilir.
 [vars]
-NEXT_PUBLIC_SITE_URL = "https://www.tripandtick.com"
+NEXT_PUBLIC_SITE_URL = "https://tripandtick.com"
 NEXT_PUBLIC_DEFAULT_LOCALE = "tr"
 
 # --- Secret keys (Cloudflare Pages dashboard "Encrypted" olarak set) ---

@@ -3,7 +3,7 @@ import { NextRequest } from "next/server";
 
 beforeAll(() => {
   process.env.GDPR_SECRET = "test-secret-min-32-chars-aaaaaaaaaa";
-  process.env.NEXT_PUBLIC_SITE_URL = "https://www.tripandtick.com";
+  process.env.NEXT_PUBLIC_SITE_URL = "https://tripandtick.com";
 });
 
 const getCustomerByEmailMock = vi.fn();
@@ -52,8 +52,8 @@ async function buildToken(action: "export" | "delete", email = "alice@example.co
 
 function reqWith(token?: string): NextRequest {
   const url = token
-    ? `https://www.tripandtick.com/api/gdpr/export?token=${encodeURIComponent(token)}`
-    : "https://www.tripandtick.com/api/gdpr/export";
+    ? `https://tripandtick.com/api/gdpr/export?token=${encodeURIComponent(token)}`
+    : "https://tripandtick.com/api/gdpr/export";
   return new NextRequest(url, { method: "GET" });
 }
 

@@ -16,7 +16,7 @@
 // state localStorage."
 
 import { useEffect, useMemo, useState } from "react";
-import { ServiceCard } from "@/components/layout/ServiceCard";
+import { HotelCard } from "@/components/oteller/HotelCard";
 import { cn } from "@/lib/utils";
 import { useT } from "@/lib/i18n/I18nProvider";
 import type { ServiceItem } from "@/data/services/catalog";
@@ -95,9 +95,11 @@ export function HotelsGrid({ hotels }: { hotels: ServiceItem[] }) {
             aria-selected={type === tier.id}
             className={cn(
               "inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold border transition-colors",
+              "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-booking/[0.4]",
+              // orange = CTA-only; filtre aktif durumu navy (chrome) (3-renk lock).
               type === tier.id
-                ? "bg-accent border-accent text-white"
-                : "bg-white border-slate-200 text-slate-700 hover:bg-slate-50"
+                ? "bg-primary border-primary text-white"
+                : "bg-white border-slate-200 text-slate-700 hover:border-booking hover:text-booking"
             )}
           >
             <span>{tier.label}</span>
@@ -122,7 +124,7 @@ export function HotelsGrid({ hotels }: { hotels: ServiceItem[] }) {
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filtered.map((item) => (
-            <ServiceCard key={item.slug} item={item} />
+            <HotelCard key={item.slug} item={item} />
           ))}
         </div>
       )}
