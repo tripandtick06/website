@@ -49,9 +49,17 @@ interface ButtonProps
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, loading = false, children, disabled, ...props }, ref) => {
-    const Comp = asChild ? Slot : "button";
+    // asChild (Radix Slot) TEK child element ister — loader sibling'i eklenirse
+    // React.Children.only patlar. Bu yuzden asChild dalinda yalniz children gecilir.
+    if (asChild) {
+      return (
+        <Slot ref={ref} className={cn(buttonVariants({ variant, size }), className)} {...props}>
+          {children}
+        </Slot>
+      );
+    }
     return (
-      <Comp
+      <button
         ref={ref}
         className={cn(buttonVariants({ variant, size }), className)}
         disabled={disabled || loading}
@@ -63,7 +71,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           <Loader2 className="h-4 w-4 animate-spin" aria-hidden />
         ) : null}
         {children}
-      </Comp>
+      </button>
     );
   }
 );
