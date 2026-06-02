@@ -13,7 +13,7 @@
 import { ArrowRight, Calendar, Tag, Search } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { useT } from "@/lib/i18n/I18nProvider";
-import type { BlogArticle } from "@/data/blog";
+import type { BlogArticleMeta } from "@/data/blog";
 
 // CATEGORY_COLORS stays here (purely visual, no translation needed)
 const CATEGORY_COLORS: Record<string, string> = {
@@ -36,7 +36,7 @@ function getCategoryLabel(
 }
 
 interface BlogContentProps {
-  articles: BlogArticle[];
+  articles: BlogArticleMeta[];
 }
 
 export function BlogContent({ articles }: BlogContentProps) {
