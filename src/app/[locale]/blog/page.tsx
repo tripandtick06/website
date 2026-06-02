@@ -48,7 +48,15 @@ export async function generateMetadata({
   };
 }
 
-export default async function BlogPage() {
-  const articles = await getBlogArticles();
+export default async function BlogPage({
+  params,
+}: {
+  params: { locale: string };
+}) {
+  const { isLocale, DEFAULT_LOCALE } = await import("@/lib/i18n/dictionaries");
+  const loc = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
+  const all = await getBlogArticles();
+  // Sadece aktif dilin makaleleri (her konu 9 dile cevrildi).
+  const articles = all.filter((a) => a.locale === loc);
   return <BlogContent articles={articles} />;
 }
