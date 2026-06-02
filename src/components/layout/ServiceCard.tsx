@@ -64,7 +64,7 @@ export function ServiceCard({ item, ctaHref }: ServiceCardProps) {
   const emoji = slugEmoji(item.slug);
 
   return (
-    <article className="card overflow-hidden flex flex-col h-full">
+    <article className="group/card overflow-hidden flex flex-col h-full rounded-booking border border-slate-200 bg-white shadow-booking-card transition-[transform,box-shadow] duration-200 ease-out-strong hover:-translate-y-0.5 hover:shadow-booking-hover">
       {/* Hero — photoUrl varsa Next/Image, yoksa gradient + emoji/icon fallback */}
       <div className={`relative h-48 ${item.photoUrl ? "bg-slate-100" : `bg-gradient-to-br ${gradient} flex items-center justify-center`}`}>
         {item.photoUrl ? (
@@ -140,7 +140,10 @@ export function ServiceCard({ item, ctaHref }: ServiceCardProps) {
               </>
             )}
           </div>
-          <Link href={href} className="btn-accent text-sm !py-2 !px-4 flex-shrink-0">
+          <Link
+            href={href}
+            className="btn-accent text-sm !py-2 !px-4 flex-shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-booking/[0.45] focus-visible:ring-offset-1"
+          >
             {isHotelInfoOnly ? "Bilgi & Form" : "Rezervasyon"}
           </Link>
         </div>

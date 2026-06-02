@@ -103,7 +103,7 @@ export function Footer() {
             <span>{t.trust.refund}</span>
           </div>
           <div className="flex items-center gap-2">
-            <CreditCard className="w-5 h-5 text-accent" />
+            <CreditCard className="w-5 h-5 text-booking" />
             <span>{t.trust.secure}</span>
           </div>
           <div className="flex items-center gap-2">
@@ -111,7 +111,7 @@ export function Footer() {
             <span>{t.trust.insurance}</span>
           </div>
           <div className="flex items-center gap-2">
-            <Globe className="w-5 h-5 text-accent" />
+            <Globe className="w-5 h-5 text-booking" />
             <span>{t.trust.languages}</span>
           </div>
         </div>
