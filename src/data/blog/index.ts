@@ -53,7 +53,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-31T00:00:00.000Z",
     "seoScore": 94,
     "isAiGenerated": true,
-    "coverImage": "/images/blog/cappadocia-winter-2026-guide.jpg"
+    "coverImage": "/images/blog/best-time-cappadocia-balloon.jpg"
   },
   {
     "file": "de-cappadocia-winter-2026-guide.json",
@@ -98,7 +98,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-25T00:00:00.000Z",
     "seoScore": 93,
     "isAiGenerated": false,
-    "coverImage": "/images/blog/heissluftballon-kappadokien-preise.jpg"
+    "coverImage": "/images/blog/heissluftballon-kappadokien-preise-buchung.jpg"
   },
   {
     "file": "de-kapadokya-aktiviteler.json",
@@ -120,7 +120,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "de",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 90,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-aktiviteler.jpg"
   },
   {
     "file": "de-kapadokya-dugun-fotografciligi.json",
@@ -143,7 +144,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-25T00:00:00.000Z",
     "seoScore": 92,
     "isAiGenerated": true,
-    "coverImage": "/images/blog/kapadokya-dugun-fotografciligi.jpg"
+    "coverImage": "/images/blog/kapadokya-dugun-fotografciligi-rehberi.jpg"
   },
   {
     "file": "de-kapadokya-fotograf-noktalari.json",
@@ -165,7 +166,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "de",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 90,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-fotograf-noktalari.jpg"
   },
   {
     "file": "de-kapadokya-istanbuldan-nasil-gidilir.json",
@@ -189,7 +191,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "de",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 91,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-istanbuldan-nasil-gidilir.jpg"
   },
   {
     "file": "de-kapadokya-ne-zaman-gidilir.json",
@@ -211,7 +214,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "de",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 92,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-ne-zaman-gidilir.jpg"
   },
   {
     "file": "de-kapadokya-otel-tavsiye-2026.json",
@@ -233,7 +237,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "de",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 91,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-otel-tavsiye-2026.jpg"
   },
   {
     "file": "en-best-time-cappadocia-balloon.json",
@@ -256,7 +261,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-31T00:00:00.000Z",
     "seoScore": 94,
     "isAiGenerated": false,
-    "coverImage": "/images/blog/cappadocia-winter-2026-guide.jpg"
+    "coverImage": "/images/blog/best-time-cappadocia-balloon.jpg"
   },
   {
     "file": "en-cappadocia-hot-air-balloon-price-2026.json",
@@ -277,7 +282,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "en",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 92,
-    "isAiGenerated": false
+    "isAiGenerated": false,
+    "coverImage": "/images/blog/cappadocia-hot-air-balloon-price-2026.jpg"
   },
   {
     "file": "en-cappadocia-winter-2026-guide.json",
@@ -322,7 +328,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-25T00:00:00.000Z",
     "seoScore": 93,
     "isAiGenerated": true,
-    "coverImage": "/images/blog/heissluftballon-kappadokien-preise.jpg"
+    "coverImage": "/images/blog/heissluftballon-kappadokien-preise-buchung.jpg"
   },
   {
     "file": "en-kapadokya-aktiviteler.json",
@@ -344,7 +350,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "en",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 90,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-aktiviteler.jpg"
   },
   {
     "file": "en-kapadokya-dugun-fotografciligi-rehberi.json",
@@ -367,7 +374,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-25T00:00:00.000Z",
     "seoScore": 92,
     "isAiGenerated": true,
-    "coverImage": "/images/blog/kapadokya-dugun-fotografciligi.jpg"
+    "coverImage": "/images/blog/kapadokya-dugun-fotografciligi-rehberi.jpg"
   },
   {
     "file": "en-kapadokya-fotograf-noktalari.json",
@@ -389,7 +396,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "en",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 90,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-fotograf-noktalari.jpg"
   },
   {
     "file": "en-kapadokya-istanbuldan-nasil-gidilir.json",
@@ -413,7 +421,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "en",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 91,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-istanbuldan-nasil-gidilir.jpg"
   },
   {
     "file": "en-kapadokya-ne-zaman-gidilir.json",
@@ -435,7 +444,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "en",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 92,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-ne-zaman-gidilir.jpg"
   },
   {
     "file": "en-kapadokya-otel-tavsiye-2026.json",
@@ -457,7 +467,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "en",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 91,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-otel-tavsiye-2026.jpg"
   },
   {
     "file": "es-best-time-cappadocia-balloon.json",
@@ -480,7 +491,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-31T00:00:00.000Z",
     "seoScore": 94,
     "isAiGenerated": true,
-    "coverImage": "/images/blog/cappadocia-winter-2026-guide.jpg"
+    "coverImage": "/images/blog/best-time-cappadocia-balloon.jpg"
   },
   {
     "file": "es-cappadocia-winter-2026-guide.json",
@@ -525,7 +536,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-25T00:00:00.000Z",
     "seoScore": 93,
     "isAiGenerated": true,
-    "coverImage": "/images/blog/heissluftballon-kappadokien-preise.jpg"
+    "coverImage": "/images/blog/heissluftballon-kappadokien-preise-buchung.jpg"
   },
   {
     "file": "es-kapadokya-aktiviteler.json",
@@ -547,7 +558,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "es",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 90,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-aktiviteler.jpg"
   },
   {
     "file": "es-kapadokya-dugun-fotografciligi.json",
@@ -570,7 +582,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-25T00:00:00.000Z",
     "seoScore": 92,
     "isAiGenerated": true,
-    "coverImage": "/images/blog/kapadokya-dugun-fotografciligi.jpg"
+    "coverImage": "/images/blog/kapadokya-dugun-fotografciligi-rehberi.jpg"
   },
   {
     "file": "es-kapadokya-fotograf-noktalari.json",
@@ -592,7 +604,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "es",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 90,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-fotograf-noktalari.jpg"
   },
   {
     "file": "es-kapadokya-istanbuldan-nasil-gidilir.json",
@@ -616,7 +629,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "es",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 91,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-istanbuldan-nasil-gidilir.jpg"
   },
   {
     "file": "es-kapadokya-ne-zaman-gidilir.json",
@@ -638,7 +652,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "es",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 92,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-ne-zaman-gidilir.jpg"
   },
   {
     "file": "es-kapadokya-otel-tavsiye-2026.json",
@@ -660,7 +675,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "es",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 91,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-otel-tavsiye-2026.jpg"
   },
   {
     "file": "fr-best-time-cappadocia-balloon.json",
@@ -683,7 +699,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-31T00:00:00.000Z",
     "seoScore": 94,
     "isAiGenerated": true,
-    "coverImage": "/images/blog/cappadocia-winter-2026-guide.jpg"
+    "coverImage": "/images/blog/best-time-cappadocia-balloon.jpg"
   },
   {
     "file": "fr-cappadocia-winter-2026-guide.json",
@@ -728,7 +744,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-25T00:00:00.000Z",
     "seoScore": 93,
     "isAiGenerated": true,
-    "coverImage": "/images/blog/heissluftballon-kappadokien-preise.jpg"
+    "coverImage": "/images/blog/heissluftballon-kappadokien-preise-buchung.jpg"
   },
   {
     "file": "fr-kapadokya-aktiviteler.json",
@@ -750,7 +766,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "fr",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 90,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-aktiviteler.jpg"
   },
   {
     "file": "fr-kapadokya-dugun-fotografciligi-rehberi.json",
@@ -773,7 +790,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-25T00:00:00.000Z",
     "seoScore": 92,
     "isAiGenerated": true,
-    "coverImage": "/images/blog/kapadokya-dugun-fotografciligi.jpg"
+    "coverImage": "/images/blog/kapadokya-dugun-fotografciligi-rehberi.jpg"
   },
   {
     "file": "fr-kapadokya-fotograf-noktalari.json",
@@ -795,7 +812,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "fr",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 90,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-fotograf-noktalari.jpg"
   },
   {
     "file": "fr-kapadokya-istanbuldan-nasil-gidilir.json",
@@ -819,7 +837,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "fr",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 91,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-istanbuldan-nasil-gidilir.jpg"
   },
   {
     "file": "fr-kapadokya-ne-zaman-gidilir.json",
@@ -841,7 +860,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "fr",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 92,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-ne-zaman-gidilir.jpg"
   },
   {
     "file": "fr-kapadokya-otel-tavsiye-2026.json",
@@ -863,7 +883,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "fr",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 91,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-otel-tavsiye-2026.jpg"
   },
   {
     "file": "hi-best-time-cappadocia-balloon.json",
@@ -886,7 +907,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-31T00:00:00.000Z",
     "seoScore": 94,
     "isAiGenerated": true,
-    "coverImage": "/images/blog/cappadocia-winter-2026-guide.jpg"
+    "coverImage": "/images/blog/best-time-cappadocia-balloon.jpg"
   },
   {
     "file": "hi-cappadocia-winter-2026-guide.json",
@@ -931,7 +952,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-25T00:00:00.000Z",
     "seoScore": 93,
     "isAiGenerated": true,
-    "coverImage": "/images/blog/heissluftballon-kappadokien-preise.jpg"
+    "coverImage": "/images/blog/heissluftballon-kappadokien-preise-buchung.jpg"
   },
   {
     "file": "hi-kapadokya-aktiviteler.json",
@@ -953,7 +974,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "hi",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 90,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-aktiviteler.jpg"
   },
   {
     "file": "hi-kapadokya-dugun-fotografciligi-rehberi.json",
@@ -976,7 +998,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-25T00:00:00.000Z",
     "seoScore": 92,
     "isAiGenerated": true,
-    "coverImage": "/images/blog/kapadokya-dugun-fotografciligi.jpg"
+    "coverImage": "/images/blog/kapadokya-dugun-fotografciligi-rehberi.jpg"
   },
   {
     "file": "hi-kapadokya-fotograf-noktalari.json",
@@ -998,7 +1020,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "hi",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 90,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-fotograf-noktalari.jpg"
   },
   {
     "file": "hi-kapadokya-istanbuldan-nasil-gidilir.json",
@@ -1022,7 +1045,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "hi",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 91,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-istanbuldan-nasil-gidilir.jpg"
   },
   {
     "file": "hi-kapadokya-ne-zaman-gidilir.json",
@@ -1044,7 +1068,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "hi",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 92,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-ne-zaman-gidilir.jpg"
   },
   {
     "file": "hi-kapadokya-otel-tavsiye-2026.json",
@@ -1066,7 +1091,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "hi",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 91,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-otel-tavsiye-2026.jpg"
   },
   {
     "file": "nl-best-time-cappadocia-balloon.json",
@@ -1089,7 +1115,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-31T00:00:00.000Z",
     "seoScore": 94,
     "isAiGenerated": true,
-    "coverImage": "/images/blog/cappadocia-winter-2026-guide.jpg"
+    "coverImage": "/images/blog/best-time-cappadocia-balloon.jpg"
   },
   {
     "file": "nl-cappadocia-winter-2026-guide.json",
@@ -1134,7 +1160,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-25T00:00:00.000Z",
     "seoScore": 93,
     "isAiGenerated": true,
-    "coverImage": "/images/blog/heissluftballon-kappadokien-preise.jpg"
+    "coverImage": "/images/blog/heissluftballon-kappadokien-preise-buchung.jpg"
   },
   {
     "file": "nl-kapadokya-aktiviteler.json",
@@ -1156,7 +1182,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "nl",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 90,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-aktiviteler.jpg"
   },
   {
     "file": "nl-kapadokya-dugun-fotografciligi.json",
@@ -1179,7 +1206,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-25T00:00:00.000Z",
     "seoScore": 92,
     "isAiGenerated": true,
-    "coverImage": "/images/blog/kapadokya-dugun-fotografciligi.jpg"
+    "coverImage": "/images/blog/kapadokya-dugun-fotografciligi-rehberi.jpg"
   },
   {
     "file": "nl-kapadokya-fotograf-noktalari.json",
@@ -1201,7 +1228,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "nl",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 90,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-fotograf-noktalari.jpg"
   },
   {
     "file": "nl-kapadokya-istanbuldan-nasil-gidilir.json",
@@ -1225,7 +1253,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "nl",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 91,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-istanbuldan-nasil-gidilir.jpg"
   },
   {
     "file": "nl-kapadokya-ne-zaman-gidilir.json",
@@ -1247,7 +1276,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "nl",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 92,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-ne-zaman-gidilir.jpg"
   },
   {
     "file": "nl-kapadokya-otel-tavsiye-2026.json",
@@ -1269,7 +1299,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "nl",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 91,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-otel-tavsiye-2026.jpg"
   },
   {
     "file": "tr-best-time-cappadocia-balloon.json",
@@ -1292,7 +1323,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-31T00:00:00.000Z",
     "seoScore": 94,
     "isAiGenerated": true,
-    "coverImage": "/images/blog/cappadocia-winter-2026-guide.jpg"
+    "coverImage": "/images/blog/best-time-cappadocia-balloon.jpg"
   },
   {
     "file": "tr-cappadocia-winter-2026-guide.json",
@@ -1337,7 +1368,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-25T00:00:00.000Z",
     "seoScore": 93,
     "isAiGenerated": true,
-    "coverImage": "/images/blog/heissluftballon-kappadokien-preise.jpg"
+    "coverImage": "/images/blog/heissluftballon-kappadokien-preise-buchung.jpg"
   },
   {
     "file": "tr-kapadokya-aktiviteler.json",
@@ -1359,7 +1390,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "tr",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 90,
-    "isAiGenerated": false
+    "isAiGenerated": false,
+    "coverImage": "/images/blog/kapadokya-aktiviteler.jpg"
   },
   {
     "file": "tr-kapadokya-balon-turu-fiyat-2026.json",
@@ -1380,7 +1412,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "tr",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 92,
-    "isAiGenerated": false
+    "isAiGenerated": false,
+    "coverImage": "/images/blog/kapadokya-balon-turu-fiyat-2026.jpg"
   },
   {
     "file": "tr-kapadokya-dugun-fotografciligi.json",
@@ -1403,7 +1436,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-25T00:00:00.000Z",
     "seoScore": 92,
     "isAiGenerated": false,
-    "coverImage": "/images/blog/kapadokya-dugun-fotografciligi.jpg"
+    "coverImage": "/images/blog/kapadokya-dugun-fotografciligi-rehberi.jpg"
   },
   {
     "file": "tr-kapadokya-fotograf-noktalari.json",
@@ -1425,7 +1458,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "tr",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 90,
-    "isAiGenerated": false
+    "isAiGenerated": false,
+    "coverImage": "/images/blog/kapadokya-fotograf-noktalari.jpg"
   },
   {
     "file": "tr-kapadokya-istanbuldan-nasil-gidilir.json",
@@ -1449,7 +1483,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "tr",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 91,
-    "isAiGenerated": false
+    "isAiGenerated": false,
+    "coverImage": "/images/blog/kapadokya-istanbuldan-nasil-gidilir.jpg"
   },
   {
     "file": "tr-kapadokya-ne-zaman-gidilir.json",
@@ -1471,7 +1506,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "tr",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 92,
-    "isAiGenerated": false
+    "isAiGenerated": false,
+    "coverImage": "/images/blog/kapadokya-ne-zaman-gidilir.jpg"
   },
   {
     "file": "tr-kapadokya-otel-tavsiye-2026.json",
@@ -1493,7 +1529,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "tr",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 91,
-    "isAiGenerated": false
+    "isAiGenerated": false,
+    "coverImage": "/images/blog/kapadokya-otel-tavsiye-2026.jpg"
   },
   {
     "file": "ur-best-time-cappadocia-balloon.json",
@@ -1516,7 +1553,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-31T00:00:00.000Z",
     "seoScore": 94,
     "isAiGenerated": true,
-    "coverImage": "/images/blog/cappadocia-winter-2026-guide.jpg"
+    "coverImage": "/images/blog/best-time-cappadocia-balloon.jpg"
   },
   {
     "file": "ur-cappadocia-winter-2026-guide.json",
@@ -1561,7 +1598,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-25T00:00:00.000Z",
     "seoScore": 93,
     "isAiGenerated": true,
-    "coverImage": "/images/blog/heissluftballon-kappadokien-preise.jpg"
+    "coverImage": "/images/blog/heissluftballon-kappadokien-preise-buchung.jpg"
   },
   {
     "file": "ur-kapadokya-aktiviteler.json",
@@ -1583,7 +1620,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "ur",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 90,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-aktiviteler.jpg"
   },
   {
     "file": "ur-kapadokya-dugun-fotografciligi-rehberi.json",
@@ -1606,7 +1644,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-25T00:00:00.000Z",
     "seoScore": 92,
     "isAiGenerated": true,
-    "coverImage": "/images/blog/kapadokya-dugun-fotografciligi.jpg"
+    "coverImage": "/images/blog/kapadokya-dugun-fotografciligi-rehberi.jpg"
   },
   {
     "file": "ur-kapadokya-fotograf-noktalari.json",
@@ -1628,7 +1666,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "ur",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 90,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-fotograf-noktalari.jpg"
   },
   {
     "file": "ur-kapadokya-istanbuldan-nasil-gidilir.json",
@@ -1652,7 +1691,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "ur",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 91,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-istanbuldan-nasil-gidilir.jpg"
   },
   {
     "file": "ur-kapadokya-ne-zaman-gidilir.json",
@@ -1674,7 +1714,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "ur",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 92,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-ne-zaman-gidilir.jpg"
   },
   {
     "file": "ur-kapadokya-otel-tavsiye-2026.json",
@@ -1696,7 +1737,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "ur",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 91,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-otel-tavsiye-2026.jpg"
   },
   {
     "file": "zh-best-time-cappadocia-balloon.json",
@@ -1719,7 +1761,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-31T00:00:00.000Z",
     "seoScore": 94,
     "isAiGenerated": true,
-    "coverImage": "/images/blog/cappadocia-winter-2026-guide.jpg"
+    "coverImage": "/images/blog/best-time-cappadocia-balloon.jpg"
   },
   {
     "file": "zh-cappadocia-winter-2026-guide.json",
@@ -1764,7 +1806,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-25T00:00:00.000Z",
     "seoScore": 93,
     "isAiGenerated": true,
-    "coverImage": "/images/blog/heissluftballon-kappadokien-preise.jpg"
+    "coverImage": "/images/blog/heissluftballon-kappadokien-preise-buchung.jpg"
   },
   {
     "file": "zh-kapadokya-aktiviteler.json",
@@ -1786,7 +1828,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "zh",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 90,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-aktiviteler.jpg"
   },
   {
     "file": "zh-kapadokya-dugun-fotografciligi.json",
@@ -1809,7 +1852,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-25T00:00:00.000Z",
     "seoScore": 92,
     "isAiGenerated": true,
-    "coverImage": "/images/blog/kapadokya-dugun-fotografciligi.jpg"
+    "coverImage": "/images/blog/kapadokya-dugun-fotografciligi-rehberi.jpg"
   },
   {
     "file": "zh-kapadokya-fotograf-noktalari.json",
@@ -1831,7 +1874,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "zh",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 90,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-fotograf-noktalari.jpg"
   },
   {
     "file": "zh-kapadokya-istanbuldan-nasil-gidilir.json",
@@ -1855,7 +1899,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "zh",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 91,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-istanbuldan-nasil-gidilir.jpg"
   },
   {
     "file": "zh-kapadokya-ne-zaman-gidilir.json",
@@ -1877,7 +1922,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "zh",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 92,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-ne-zaman-gidilir.jpg"
   },
   {
     "file": "zh-kapadokya-otel-tavsiye-2026.json",
@@ -1899,6 +1945,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "locale": "zh",
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 91,
-    "isAiGenerated": true
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-otel-tavsiye-2026.jpg"
   }
 ];
