@@ -148,7 +148,7 @@ export function OperatorDetayContent({
                   {packages.map((pkg) => (
                     <Link
                       key={pkg.slug}
-                      href={`/balonlar/${pkg.slug}`}
+                      href={{ pathname: "/balonlar/[slug]", params: { slug: pkg.slug } }}
                       className="border border-slate-200 rounded-xl p-4 hover:border-amber-400 hover:shadow-md transition-all flex flex-col"
                     >
                       <div className="flex items-center justify-between mb-2">

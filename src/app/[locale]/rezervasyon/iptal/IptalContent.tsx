@@ -36,7 +36,7 @@ export function IptalContent({ retrySlug }: IptalContentProps) {
 
         <div className="flex flex-wrap gap-3 justify-center mb-6">
           <Link
-            href={`/rezervasyon/${retrySlug}`}
+            href={{ pathname: "/rezervasyon/[slug]", params: { slug: retrySlug } }}
             className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-lg font-semibold"
           >
             <ArrowLeft className="w-4 h-4" /> {d.tekrar_dene}

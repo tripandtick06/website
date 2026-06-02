@@ -130,7 +130,7 @@ export function BalonlarContent() {
                         </>
                       )}
                     </div>
-                    <Link href={`/balonlar/${pkg.slug}`} className="btn-accent text-sm">
+                    <Link href={{ pathname: "/balonlar/[slug]", params: { slug: pkg.slug } }} className="btn-accent text-sm">
                       {pkg.priceOnRequest ? b.detay_iletisim : b.detay_rezerve}
                     </Link>
                   </div>

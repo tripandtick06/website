@@ -26,7 +26,7 @@ const TIER: Record<string, { label: string; variant: "success" | "booking" | "ac
 export function HotelCard({ item }: { item: ServiceItem }) {
   const tier = item.tier ? TIER[item.tier] : undefined;
   const amenities = item.amenities ?? item.includes;
-  const href = `/oteller/${item.slug}`;
+  const href = { pathname: "/oteller/[slug]" as const, params: { slug: item.slug } };
 
   return (
     <Card variant="interactive" className="flex h-full flex-col">

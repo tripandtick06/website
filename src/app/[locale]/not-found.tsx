@@ -23,7 +23,7 @@ const SUGGESTIONS = [
   { href: "/paketler", key: "paketler" as const, icon: Package },
   { href: "/sss", key: "sss" as const, icon: HelpCircle },
   { href: "/iletisim", key: "iletisim" as const, icon: Mail },
-];
+] as const;
 
 export default function NotFound() {
   const t = useT();

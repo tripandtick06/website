@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useParams } from "next/navigation";
 import { Link, usePathname, useRouter } from "@/i18n/routing";
 import {
   Globe,
@@ -46,6 +47,7 @@ export function Header() {
   const t = useT();
   const pathname = usePathname();
   const router = useRouter();
+  const params = useParams();
   const langWrapperRef = useRef<HTMLDivElement | null>(null);
   const mobileWrapperRef = useRef<HTMLDivElement | null>(null);
 
@@ -96,7 +98,7 @@ export function Header() {
     { href: "/aktiviteler", label: t.nav.activities, icon: MountainSnow },
     { href: "/turlar", label: t.nav.tours, icon: TreePine },
     { href: "/paketler", label: t.nav.packages, icon: Package },
-  ];
+  ] as const;
 
   // Mevcut nav-row kalabaligini onlemek icin "Rezervasyonum" link'i sadece mobile-menu'da gosterilir.
 
@@ -203,7 +205,11 @@ export function Header() {
                         if (isLocale(lang.code)) {
                           setLocale(lang.code);
                           // URL otorite: locale-prefixli yola git (SSR dogru dil).
-                          router.replace(pathname, { locale: lang.code });
+                          router.replace(
+                            // @ts-expect-error -- params always match current route
+                            { pathname, params },
+                            { locale: lang.code }
+                          );
                         }
                         setLangOpen(false);
                       }}

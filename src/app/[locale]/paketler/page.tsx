@@ -4,6 +4,7 @@ import { breadcrumbSchema, itemListSchema, faqPageSchema, SITE_URL } from "@/lib
 import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
 import { DICTIONARIES, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { PACKAGES } from "@/data/services/catalog";
+import { tServiceList } from "@/lib/i18n/localizeData";
 import { PaketlerContent } from "./PaketlerContent";
 
 const PACKAGE_FAQS = [
@@ -61,9 +62,14 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   };
 }
 
-export default function PaketlerPage() {
+export default function PaketlerPage({
+  params,
+}: {
+  params: { locale: string };
+}) {
+  const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
   const itemList = itemListSchema(
-    PACKAGES.map((p) => ({ name: p.name, urlPath: `/rezervasyon/${p.slug}` })),
+    tServiceList(PACKAGES, loc).map((p) => ({ name: p.name, urlPath: `/rezervasyon/${p.slug}` })),
     "Kapadokya Kombi Paketleri"
   );
 

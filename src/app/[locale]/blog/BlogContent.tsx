@@ -112,7 +112,7 @@ export function BlogContent({ articles }: BlogContentProps) {
 
                 {/* Content */}
                 <div className="p-6">
-                  <Link href={`/blog/${article.slug}`}>
+                  <Link href={{ pathname: "/blog/[slug]", params: { slug: article.slug } }}>
                     <h2 className="text-lg font-bold text-slate-900 mb-3 line-clamp-2 group-hover:text-primary transition-colors">
                       {article.title}
                     </h2>
@@ -148,7 +148,7 @@ export function BlogContent({ articles }: BlogContentProps) {
                       )}
                     </div>
                     <Link
-                      href={`/blog/${article.slug}`}
+                      href={{ pathname: "/blog/[slug]", params: { slug: article.slug } }}
                       className="inline-flex items-center gap-1 text-xs font-semibold text-primary hover:text-accent transition-colors"
                     >
                       {blog.devamini_oku}

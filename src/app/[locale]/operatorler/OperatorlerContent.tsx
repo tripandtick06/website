@@ -100,7 +100,7 @@ export function OperatorlerContent() {
                     </div>
                   )}
                   <Link
-                    href={`/operatorler/${op.id}`}
+                    href={{ pathname: "/operatorler/[id]", params: { id: op.id } }}
                     className="mt-auto inline-flex items-center justify-center px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white rounded-lg text-sm font-semibold transition-colors"
                   >
                     {t.page.operatorler.detaylari_gor}

@@ -1,5 +1,6 @@
 "use client";
 
+import type { ComponentProps } from "react";
 import { Link } from "@/i18n/routing";
 import { Home, ChevronRight } from "lucide-react";
 import { useT } from "@/lib/i18n/I18nProvider";
@@ -41,7 +42,7 @@ export function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
                   </span>
                 ) : (
                   <Link
-                    href={it.href}
+                    href={it.href as ComponentProps<typeof Link>["href"]}
                     className="hover:text-primary transition-colors"
                   >
                     {it.name}

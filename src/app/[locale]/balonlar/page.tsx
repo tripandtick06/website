@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/layout/JsonLd";
-import { BALLOON_PACKAGES } from "@/data/services/balloons";
-import { FAQ_ITEMS } from "@/data/faq";
 import {
   breadcrumbSchema,
   faqPageSchema,
@@ -15,6 +13,7 @@ import {
   DEFAULT_LOCALE,
   type Locale,
 } from "@/lib/i18n/dictionaries";
+import { tBalloons, tFaq } from "@/lib/i18n/localizeData";
 import { BalonlarContent } from "./BalonlarContent";
 
 export const runtime = "edge";
@@ -50,8 +49,13 @@ export async function generateMetadata({
   };
 }
 
-export default function BalonlarPage() {
-  const balonFaqs = FAQ_ITEMS.filter((f) => f.category === "balon");
+export default function BalonlarPage({
+  params,
+}: {
+  params: { locale: string };
+}) {
+  const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
+  const balonFaqs = tFaq(loc).filter((f) => f.category === "balon");
 
   return (
     <>
@@ -60,7 +64,7 @@ export default function BalonlarPage() {
         data={[
           breadcrumbSchema([{ name: "Balon Turları", href: "/balonlar" }]),
           itemListSchema(
-            BALLOON_PACKAGES.map((pkg) => ({
+            tBalloons(loc).map((pkg) => ({
               name: pkg.name,
               urlPath: `/balonlar/${pkg.slug}`,
             })),

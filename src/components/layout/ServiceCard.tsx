@@ -1,5 +1,6 @@
 "use client";
 
+import type { ComponentProps } from "react";
 import NextImage from "next/image";
 import { Link } from "@/i18n/routing";
 import { Star, Clock, Check, Hotel, MountainSnow, TreePine, Package, Car, Wind } from "lucide-react";
@@ -59,8 +60,10 @@ export function ServiceCard({ item, ctaHref }: ServiceCardProps) {
   const gradient = CATEGORY_GRADIENT[item.category];
   // Otel kategorisi info-only flow — /oteller/[slug] info page (rezervasyon yok).
   const isHotelInfoOnly = item.category === "hotel";
-  const defaultHref = isHotelInfoOnly ? `/oteller/${item.slug}` : `/rezervasyon/${item.slug}`;
-  const href = ctaHref || defaultHref;
+  // Hotel info page is a localized route → object form so the locale prefix maps.
+  // Rezervasyon is NOT localized → plain string Link. ctaHref override stays string.
+  const useLocalizedHotelHref = isHotelInfoOnly && !ctaHref;
+  const stringHref = ctaHref || `/rezervasyon/${item.slug}`;
   const emoji = slugEmoji(item.slug);
 
   return (
@@ -140,12 +143,21 @@ export function ServiceCard({ item, ctaHref }: ServiceCardProps) {
               </>
             )}
           </div>
-          <Link
-            href={href}
-            className="btn-accent text-sm !py-2 !px-4 flex-shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-booking/[0.45] focus-visible:ring-offset-1"
-          >
-            {isHotelInfoOnly ? "Bilgi & Form" : "Rezervasyon"}
-          </Link>
+          {useLocalizedHotelHref ? (
+            <Link
+              href={{ pathname: "/oteller/[slug]", params: { slug: item.slug } }}
+              className="btn-accent text-sm !py-2 !px-4 flex-shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-booking/[0.45] focus-visible:ring-offset-1"
+            >
+              Bilgi & Form
+            </Link>
+          ) : (
+            <Link
+              href={stringHref as ComponentProps<typeof Link>["href"]}
+              className="btn-accent text-sm !py-2 !px-4 flex-shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-booking/[0.45] focus-visible:ring-offset-1"
+            >
+              {isHotelInfoOnly ? "Bilgi & Form" : "Rezervasyon"}
+            </Link>
+          )}
         </div>
       </div>
     </article>
