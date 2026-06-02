@@ -1,0 +1,1155 @@
+{
+  "balloons": {
+    "standart-balon-ucusu": {
+      "name": "Vuelo en Globo Estándar",
+      "shortDescription": "El tour en globo más económico. 60 min de vuelo, cesta amplia, reembolso del 100% por cancelación meteorológica.",
+      "longDescription": "La opción con la mejor relación calidad-precio para contemplar a vista de pájaro las legendarias chimeneas de hadas de Capadocia. La cesta estándar tiene capacidad para 16-20 pasajeros y ofrece 60 minutos de vuelo acompañado por pilotos profesionales. Traslado desde el hotel, desayuno ligero, seguro de 40 millones de euros, certificado y medalla de vuelo, y celebración del aterrizaje con champán: todo está incluido en el precio. Los precios pueden variar a diario según las condiciones meteorológicas y la demanda: para fechas a más de 7 días aplica el precio de catálogo, y para fechas dentro de 7 días aplica el precio actualizado.",
+      "badge": "El Más Popular",
+      "includes": [
+        "Traslado desde el hotel",
+        "Desayuno ligero",
+        "Seguro de 40M€",
+        "Certificado y medalla de vuelo",
+        "Celebración del aterrizaje con champán",
+        "Piloto profesional"
+      ],
+      "excludes": [
+        "Gastos personales",
+        "Paquete de fotos (opcional)"
+      ],
+      "warnings": [
+        "Los niños menores de 6 años no pueden volar",
+        "Las embarazadas no pueden volar",
+        "Las personas con problemas graves de corazón o de salud no pueden volar",
+        "Cancelación según el clima: en caso de cancelación por el operador, reembolso del 100%",
+        "El precio puede variar a diario dentro de los 7 días (condiciones meteorológicas + demanda)"
+      ],
+      "highlights": [
+        "60 minutos",
+        "Certificado incluido",
+        "Servicio de champán"
+      ]
+    },
+    "deluxe-balon-ucusu": {
+      "name": "Vuelo en Globo Deluxe",
+      "shortDescription": "Cesta pequeña (máx. 16 personas), experiencia de lujo de 60 minutos + certificado en cartón.",
+      "longDescription": "Una experiencia premium en globo. Vuelo de 60 minutos más espacioso en cesta pequeña (máx. 16 pasajeros), certificado de vuelo en cartón, desayuno gourmet y traslado VIP. Trabajamos con los operadores más selectos.",
+      "badge": "Deluxe",
+      "includes": [
+        "Traslado VIP desde el hotel",
+        "Desayuno gourmet",
+        "Seguro de 40M€",
+        "Certificado de vuelo en cartón",
+        "Champán premium",
+        "Sesión fotográfica profesional"
+      ],
+      "excludes": [
+        "Gastos personales"
+      ],
+      "warnings": [
+        "Los niños menores de 6 años no pueden volar",
+        "Las embarazadas no pueden volar",
+        "Las personas con problemas graves de corazón o de salud no pueden volar"
+      ],
+      "highlights": [
+        "60 minutos",
+        "Cesta pequeña (máx. 16)",
+        "Certificado en cartón"
+      ]
+    },
+    "romantik-ozel-balon": {
+      "name": "Globo Privado Romántico",
+      "shortDescription": "Cesta privada solo para parejas. Pedida de mano, luna de miel, aniversario. Consúltanos el precio especial.",
+      "longDescription": "Cesta privada solo para 2 personas o grupo reducido (máx. 8). Diseñado para los momentos más especiales de la vida. Decoración exclusiva, organización sorpresa, fotógrafo, champán premium y certificado personalizado. Como cada organización se prepara a medida, el precio se establece según presupuesto: ponte en contacto con nosotros.",
+      "badge": "Romántico",
+      "includes": [
+        "Traslado VIP",
+        "Decoración exclusiva",
+        "Champán premium",
+        "Fotógrafo profesional",
+        "Certificado en cartón",
+        "Organización sorpresa"
+      ],
+      "excludes": [
+        "Anillo (si se contrata el paquete de pedida de mano)"
+      ],
+      "warnings": [
+        "Los niños no pueden volar (cesta privada)",
+        "Las embarazadas no pueden volar",
+        "Las personas con problemas graves de corazón o de salud no pueden volar"
+      ],
+      "highlights": [
+        "Solo parejas",
+        "Decoración exclusiva",
+        "Fotógrafo incluido"
+      ]
+    }
+  },
+  "services": {
+    "atv-standart": {
+      "name": "Tour en ATV Estándar",
+      "shortDescription": "ATV de 1-2 horas a cualquier hora del día: Sword Valley, Red & Rose Valley, Çavuşin, Love Valley. Traslado desde el hotel incluido.",
+      "badge": "El Más Popular",
+      "includes": [
+        "Uso del ATV",
+        "Equipo de seguridad",
+        "Acompañamiento de guía",
+        "Traslado desde el hotel (incluido)"
+      ],
+      "highlights": [
+        "4 valles famosos",
+        "1-2 horas",
+        "Traslado incluido"
+      ]
+    },
+    "atv-sunrise": {
+      "name": "Tour en ATV al Amanecer",
+      "shortDescription": "ATV de 2 horas al amanecer: compatible con el tour en globo, los valles bajo la luz de la mañana. Traslado incluido.",
+      "includes": [
+        "ATV",
+        "Equipo de seguridad",
+        "Guía",
+        "Traslado desde el hotel"
+      ],
+      "highlights": [
+        "Amanecer",
+        "Compatible con el globo",
+        "Traslado incluido"
+      ]
+    },
+    "atv-sunset": {
+      "name": "Tour en ATV al Atardecer",
+      "shortDescription": "ATV de 2 horas al atardecer: panorámica de los valles con la puesta de sol. La opción más elegida.",
+      "badge": "Más Elegido",
+      "includes": [
+        "ATV",
+        "Equipo de seguridad",
+        "Guía",
+        "Traslado desde el hotel"
+      ],
+      "highlights": [
+        "Atardecer",
+        "Panorámica",
+        "Traslado incluido"
+      ]
+    },
+    "jeep-standart": {
+      "name": "Jeep Safari Estándar",
+      "shortDescription": "Jeep Safari de 3-4 horas a cualquier hora del día: tour panorámico por los valles de Göreme.",
+      "includes": [
+        "Jeep",
+        "Guía",
+        "Traslado desde el hotel"
+      ],
+      "highlights": [
+        "Valles de Göreme",
+        "Flexible durante el día",
+        "Guía incluido"
+      ]
+    },
+    "jeep-sunrise": {
+      "name": "Jeep Safari al Amanecer",
+      "shortDescription": "Jeep Safari al amanecer: la luz de la mañana en los valles de Göreme + vistas de los globos.",
+      "includes": [
+        "Jeep",
+        "Guía",
+        "Traslado desde el hotel"
+      ],
+      "highlights": [
+        "Amanecer",
+        "Vistas de los globos",
+        "Valles"
+      ]
+    },
+    "jeep-sunset": {
+      "name": "Jeep Safari al Atardecer",
+      "shortDescription": "Jeep Safari al atardecer: panorámica de los valles de Göreme con la puesta de sol.",
+      "badge": "Más Elegido",
+      "includes": [
+        "Jeep",
+        "Guía",
+        "Traslado desde el hotel"
+      ],
+      "highlights": [
+        "Atardecer",
+        "Panorámica",
+        "Valles"
+      ]
+    },
+    "at-standart": {
+      "name": "Paseo a Caballo Estándar",
+      "shortDescription": "Paseo a caballo de 1-2 horas a cualquier hora del día: valles de Ürgüp.",
+      "includes": [
+        "Uso del caballo",
+        "Guía",
+        "Casco",
+        "Traslado desde el hotel"
+      ],
+      "highlights": [
+        "Flexible durante el día",
+        "Tour por los valles",
+        "1-2 horas"
+      ]
+    },
+    "at-sunrise": {
+      "name": "Paseo a Caballo al Amanecer",
+      "shortDescription": "Paseo a caballo de 1 hora al amanecer: valles de Ürgüp.",
+      "includes": [
+        "Uso del caballo",
+        "Guía",
+        "Casco",
+        "Traslado desde el hotel"
+      ],
+      "highlights": [
+        "Amanecer",
+        "Tour por los valles",
+        "Guía"
+      ]
+    },
+    "at-sunset": {
+      "name": "Paseo a Caballo al Atardecer",
+      "shortDescription": "Paseo a caballo de 1,5 horas al atardecer: vistas panorámicas.",
+      "includes": [
+        "Caballo",
+        "Guía",
+        "Casco",
+        "Traslado desde el hotel"
+      ],
+      "highlights": [
+        "Atardecer",
+        "Panorámica",
+        "Guía"
+      ]
+    },
+    "hamam-standart": {
+      "name": "Baño Turco Estándar",
+      "shortDescription": "Baño turco tradicional de 90 minutos: sala caliente, exfoliación, masaje de espuma, sauna, jacuzzi, té/café. Traslado desde el hotel incluido.",
+      "includes": [
+        "Hamam (sala caliente)",
+        "Exfoliación (esponja kese)",
+        "Masaje de espuma",
+        "Sauna + baño de vapor",
+        "Jacuzzi",
+        "Té turco / café",
+        "Traslado desde el hotel"
+      ],
+      "highlights": [
+        "90 min",
+        "Exfoliación + espuma",
+        "Sauna + jacuzzi"
+      ]
+    },
+    "hamam-deluxe": {
+      "name": "Baño Turco Deluxe + Masaje",
+      "shortDescription": "Paquete de hamam + 30 minutos de masaje sueco con aceite + mascarilla corporal completa. Experiencia spa premium, con traslado.",
+      "badge": "Premium",
+      "includes": [
+        "Paquete completo de hamam",
+        "Exfoliación + espuma",
+        "Masaje sueco con aceite de 30 min",
+        "Mascarilla corporal completa de algas/barro",
+        "Sauna + jacuzzi",
+        "Servicio de bebidas",
+        "Traslado VIP"
+      ],
+      "highlights": [
+        "2 horas",
+        "Masaje con aceite de 30 min",
+        "Mascarilla corporal completa"
+      ]
+    },
+    "turk-gecesi-yemekli": {
+      "name": "Noche Turca (con Cena + Bebidas)",
+      "shortDescription": "Noche Turca de 3 horas en un restaurante cueva: semah, folclore, danza oriental, espectáculo de danza caucásica + cena + alcohol ilimitado. Traslado desde el hotel incluido.",
+      "badge": "Popular",
+      "includes": [
+        "Espectáculo de semah",
+        "Espectáculo folclórico (Anatolia)",
+        "Danza oriental",
+        "Espectáculo de danza caucásica",
+        "Música Clásica Turca",
+        "3 platos",
+        "Bebidas alcohólicas/sin alcohol ilimitadas",
+        "Traslado desde el hotel"
+      ],
+      "highlights": [
+        "Restaurante cueva",
+        "Bebidas ilimitadas",
+        "Espectáculo de 3 horas"
+      ]
+    },
+    "turk-gecesi-yemeksiz": {
+      "name": "Noche Turca (sin Cena)",
+      "shortDescription": "Espectáculo de Noche Turca: semah, folclore, oriental, caucásica. No incluye comida/alcohol, solo espectáculo + traslado.",
+      "includes": [
+        "Semah + folclore + oriental",
+        "Espectáculo de danza caucásica",
+        "Bebida de bienvenida",
+        "Traslado desde el hotel"
+      ],
+      "highlights": [
+        "Más económico",
+        "Solo espectáculo",
+        "Traslado incluido"
+      ]
+    },
+    "microlight-standart": {
+      "name": "Vuelo en Microlight Estándar",
+      "shortDescription": "Vuelo a motor en microlight de 15-18 minutos sobre el corazón de Capadocia: traslado privado, certificado de vuelo, equipo y sesión de fotos incluidos.",
+      "includes": [
+        "Vuelo en microlight",
+        "Piloto profesional",
+        "Certificado de vuelo",
+        "Traslado privado",
+        "Equipo de vuelo",
+        "Sesión de fotos"
+      ],
+      "highlights": [
+        "15-18 min",
+        "Junto al piloto",
+        "Certificado incluido"
+      ]
+    },
+    "microlight-deluxe": {
+      "name": "Vuelo en Microlight Deluxe",
+      "shortDescription": "Vuelo en microlight de 30-35 minutos sobre toda Capadocia: ruta más larga, más puntos de interés, paquete de fotos premium.",
+      "badge": "Deluxe",
+      "includes": [
+        "Vuelo largo en microlight",
+        "Piloto profesional",
+        "Certificado de vuelo",
+        "Traslado VIP",
+        "Paquete de fotos premium",
+        "Equipo de vuelo"
+      ],
+      "highlights": [
+        "30-35 min",
+        "Toda Capadocia",
+        "Fotos premium"
+      ]
+    },
+    "kirmizi-tur": {
+      "name": "Tour Rojo de Capadocia (Red Tour)",
+      "shortDescription": "Museo al Aire Libre de Göreme, Castillo de Uçhisar, Museo al Aire Libre de Zelve, Paşabağ (Valle de los Monjes), Valle de Devrent (Valle de la Imaginación), taller de cerámica de Avanos, Valle del Amor, Valle de las Palomas, Çavuşin, taller de cuero: guía profesional + entradas a los museos + almuerzo incluidos.",
+      "badge": "El Más Popular",
+      "includes": [
+        "Guía turístico profesional (TR/EN/RU)",
+        "Traslado desde el hotel",
+        "Entradas a los museos",
+        "Almuerzo",
+        "Todos los impuestos"
+      ],
+      "highlights": [
+        "Más de 10 paradas",
+        "Museo al Aire Libre de Göreme",
+        "Taller de cerámica de Avanos",
+        "Entradas a los museos incluidas"
+      ]
+    },
+    "yesil-tur": {
+      "name": "Tour Verde de Capadocia (Green Tour)",
+      "shortDescription": "Panorámica de Göreme, Valle de las Palomas, Ciudad Subterránea de Derinkuyu, Valle de Ihlara (terraza panorámica de cristal + senderismo), almuerzo en el pueblo de Belisırma, Catedral de Selime, Narlıgöl, Yaprakhisar: guía profesional + entradas a los museos + almuerzo en Belisırma incluidos.",
+      "badge": "Naturaleza",
+      "includes": [
+        "Guía turístico profesional",
+        "Traslado desde el hotel",
+        "Entradas a la ciudad subterránea + museos",
+        "Almuerzo en Belisırma",
+        "Todos los impuestos"
+      ],
+      "highlights": [
+        "Ciudad subterránea",
+        "Terraza de cristal de Ihlara",
+        "Almuerzo del pueblo de Belisırma",
+        "Catedral de Selime"
+      ]
+    },
+    "mix-tur": {
+      "name": "Tour Mixto de Capadocia (Best of)",
+      "shortDescription": "Lo mejor del híbrido Red + Green: Museo al Aire Libre de Göreme, Castillo de Uçhisar, Zelve, Paşabağ, Devrent, cerámica de Avanos, Valle del Amor, Ciudad Subterránea de Özkonak o Kaymaklı, taller de cuero. El tour más completo en un solo día.",
+      "badge": "Best of",
+      "includes": [
+        "Guía turístico profesional",
+        "Traslado desde el hotel",
+        "Todas las entradas a museos + ciudad subterránea",
+        "Almuerzo",
+        "Todos los impuestos"
+      ],
+      "highlights": [
+        "Combo Cultura + Naturaleza",
+        "Ciudad subterránea incluida",
+        "Más de 12 paradas"
+      ]
+    },
+    "sari-tur": {
+      "name": "Tour Amarillo de Capadocia (Yellow Tour)",
+      "shortDescription": "Iglesias de Soğanlı, ciudad antigua de Sobesos, pueblo griego de Mustafapaşa, 2 km de senderismo por el Valle de Kızılçukur, iglesia bizantina de Çavuşin, Jardín de Lavanda, taller de alfombras, Valle de las Palomas: una ruta más tranquila y profunda.",
+      "includes": [
+        "Guía turístico profesional",
+        "Traslado",
+        "Entradas a los museos",
+        "Almuerzo"
+      ],
+      "highlights": [
+        "Iglesias de Soğanlı",
+        "Senderismo por Kızılçukur",
+        "Mustafapaşa",
+        "Ruta tranquila"
+      ]
+    },
+    "yeralti-turu": {
+      "name": "Tour de las Ciudades Subterráneas",
+      "shortDescription": "Ciudades subterráneas de Derinkuyu + Kaymaklı, iglesia bizantina de Çavuşin, Valle de las Palomas: tour detallado de medio día. Guía profesional + entradas a los museos incluidos.",
+      "includes": [
+        "Guía profesional",
+        "Traslado",
+        "Entrada a 2 ciudades subterráneas",
+        "Iglesia de Çavuşin"
+      ],
+      "highlights": [
+        "2 ciudades subterráneas",
+        "Iglesia bizantina de Çavuşin",
+        "Medio día"
+      ]
+    },
+    "gun-batimi-turu": {
+      "name": "Tour Panorámico al Atardecer",
+      "shortDescription": "Atardecer en Aktepe + panorámica de Göreme + Valle de Kızılçukur: copa de vino incluida.",
+      "includes": [
+        "Guía",
+        "Traslado",
+        "Copa de vino"
+      ],
+      "highlights": [
+        "Atardecer",
+        "Servicio de vino",
+        "Panorámica"
+      ]
+    },
+    "instagram-turu": {
+      "name": "Tour de Fotos & Instagram",
+      "shortDescription": "Puntos de Instagram con guía: fotógrafo profesional, fotos con vistas a los globos, imágenes editadas.",
+      "includes": [
+        "Fotógrafo profesional",
+        "Traslado",
+        "Fotos editadas"
+      ],
+      "highlights": [
+        "Fotos profesionales",
+        "Puntos de Instagram",
+        "Edición incluida"
+      ]
+    },
+    "magara-otel-suit": {
+      "name": "Suite en Hotel Cueva (Ürgüp)",
+      "shortDescription": "Suite premium, baño con jacuzzi, planta superior con vistas, servicio de mayordomo.",
+      "badge": "Lujo",
+      "includes": [
+        "Suite",
+        "Jacuzzi",
+        "Desayuno bufé",
+        "Wifi",
+        "Mayordomo"
+      ],
+      "highlights": [
+        "Jacuzzi",
+        "Suite premium",
+        "Terraza"
+      ],
+      "amenities": [
+        "Jacuzzi",
+        "Servicio de mayordomo",
+        "Suite premium",
+        "Bufé libre",
+        "Wifi",
+        "Aire acondicionado"
+      ],
+      "region": "Ürgüp"
+    },
+    "magara-otel-urgup-aile": {
+      "name": "Suite Familiar en Hotel Cueva (Ürgüp)",
+      "shortDescription": "Suite cueva de 2 habitaciones apta para familias, con cama supletoria para niños y amplio espacio.",
+      "includes": [
+        "Suite de 2 habitaciones",
+        "Cama para niños",
+        "Desayuno",
+        "Wifi",
+        "Aire acondicionado"
+      ],
+      "highlights": [
+        "2 habitaciones",
+        "Apto para familias",
+        "Amplio"
+      ],
+      "amenities": [
+        "Suite de 2 habitaciones",
+        "Cama para niños",
+        "Espacio amplio",
+        "Bufé libre",
+        "Wifi"
+      ],
+      "region": "Ürgüp"
+    },
+    "magara-otel-goreme-honeymoon": {
+      "name": "Cueva para Luna de Miel (Göreme)",
+      "shortDescription": "Paquete VIP para parejas en luna de miel: jacuzzi con espuma, champán, recibimiento con flores.",
+      "badge": "Luna de Miel",
+      "includes": [
+        "Suite VIP",
+        "Jacuzzi",
+        "Champán",
+        "Decoración floral",
+        "Salida tardía (late check-out)"
+      ],
+      "highlights": [
+        "Luna de miel",
+        "Suite VIP",
+        "Champán"
+      ],
+      "amenities": [
+        "Suite VIP",
+        "Jacuzzi",
+        "Servicio de champán",
+        "Decoración floral",
+        "Salida tardía (late check-out)"
+      ],
+      "region": "Göreme"
+    },
+    "resort-avanos-spa": {
+      "name": "Spa Resort (Avanos)",
+      "shortDescription": "Resort spa termal: piscina cubierta, masaje, hamam, media pensión incluida.",
+      "badge": "Spa",
+      "includes": [
+        "Acceso al spa",
+        "Piscina cubierta",
+        "Hamam",
+        "Media pensión",
+        "Masaje de 30 min"
+      ],
+      "highlights": [
+        "Spa",
+        "Hamam",
+        "Media pensión"
+      ],
+      "amenities": [
+        "Spa",
+        "Piscina cubierta",
+        "Hamam",
+        "Media pensión",
+        "Masaje"
+      ],
+      "region": "Avanos"
+    },
+    "resort-nevsehir-deluxe": {
+      "name": "Resort Deluxe (Nevşehir)",
+      "shortDescription": "Resort deluxe todo incluido: piscina exterior/cubierta, gimnasio, cena.",
+      "includes": [
+        "Todo incluido",
+        "Piscinas",
+        "Gimnasio",
+        "Cena",
+        "Aire acondicionado"
+      ],
+      "highlights": [
+        "Todo incluido",
+        "2 piscinas",
+        "Gimnasio"
+      ],
+      "amenities": [
+        "Todo incluido",
+        "Piscina exterior/cubierta",
+        "Gimnasio",
+        "Cena"
+      ],
+      "region": "Nevşehir"
+    },
+    "magara-otel-deluxe": {
+      "name": "Hotel Cueva Deluxe (Göreme)",
+      "shortDescription": "Auténticas habitaciones cueva de piedra, desayuno bufé, terraza con vistas panorámicas.",
+      "includes": [
+        "Habitación cueva",
+        "Desayuno bufé",
+        "Wifi",
+        "Aire acondicionado",
+        "Terraza panorámica"
+      ],
+      "highlights": [
+        "Zona UNESCO",
+        "Habitación cueva",
+        "Desayuno"
+      ],
+      "amenities": [
+        "Habitación cueva",
+        "Terraza panorámica",
+        "Bufé libre",
+        "Wifi",
+        "Aire acondicionado"
+      ],
+      "region": "Göreme"
+    },
+    "magara-otel-goreme-romantik": {
+      "name": "Cueva Romántica (Göreme)",
+      "shortDescription": "Diseñada para parejas: habitación cueva con chimenea, balcón, servicio de velas por la noche.",
+      "includes": [
+        "Habitación con chimenea",
+        "Desayuno",
+        "Servicio de velas",
+        "Wifi",
+        "Aire acondicionado"
+      ],
+      "highlights": [
+        "Especial para parejas",
+        "Chimenea",
+        "Servicio de velas"
+      ],
+      "amenities": [
+        "Habitación con chimenea",
+        "Balcón",
+        "Servicio de velas",
+        "Desayuno"
+      ],
+      "region": "Göreme"
+    },
+    "magara-otel-urgup-king": {
+      "name": "Habitación Cueva King (Ürgüp)",
+      "shortDescription": "Cama king size, paredes de cueva talladas, minibar incluido, vistas al valle.",
+      "includes": [
+        "Cama king",
+        "Minibar",
+        "Desayuno",
+        "Wifi",
+        "Vistas al valle"
+      ],
+      "highlights": [
+        "Cama king",
+        "Vistas al valle",
+        "Minibar"
+      ],
+      "amenities": [
+        "Cama king",
+        "Minibar",
+        "Vistas al valle",
+        "Desayuno"
+      ],
+      "region": "Ürgüp"
+    },
+    "magara-otel-urgup-cave": {
+      "name": "Hotel Heritage Cave (Ürgüp)",
+      "shortDescription": "Mansión cueva histórica restaurada, mobiliario antiguo, desayuno en el jardín.",
+      "includes": [
+        "Habitación histórica",
+        "Decoración antigua",
+        "Desayuno en el jardín",
+        "Wifi"
+      ],
+      "highlights": [
+        "Mansión histórica",
+        "Decoración antigua",
+        "Jardín"
+      ],
+      "amenities": [
+        "Mansión histórica",
+        "Decoración antigua",
+        "Desayuno en el jardín"
+      ],
+      "region": "Ürgüp"
+    },
+    "butik-otel-uchisar-deluxe": {
+      "name": "Hotel Boutique Deluxe Uçhisar",
+      "shortDescription": "Hotel boutique con panorámica del Castillo de Uçhisar, desayuno en la terraza, baño moderno.",
+      "includes": [
+        "Habitación deluxe",
+        "Desayuno en la terraza",
+        "Vistas al castillo",
+        "Wifi"
+      ],
+      "highlights": [
+        "Vistas al castillo",
+        "Terraza",
+        "Moderno"
+      ],
+      "amenities": [
+        "Vistas al castillo",
+        "Desayuno en la terraza",
+        "Baño moderno"
+      ],
+      "region": "Uçhisar"
+    },
+    "butik-otel-urgup-design": {
+      "name": "Hotel Boutique de Diseño (Ürgüp)",
+      "shortDescription": "Hotel boutique con enfoque en el diseño, pared con colección de artistas, bar de espresso.",
+      "includes": [
+        "Habitación de diseño",
+        "Bar de espresso",
+        "Desayuno",
+        "Wifi"
+      ],
+      "highlights": [
+        "Diseño",
+        "Bar de espresso",
+        "Arte"
+      ],
+      "amenities": [
+        "Habitación de diseño",
+        "Bar de espresso",
+        "Colección de arte"
+      ],
+      "region": "Ürgüp"
+    },
+    "butik-otel-uchisar-premium": {
+      "name": "Boutique Premium (Uçhisar)",
+      "shortDescription": "Boutique con concepto de cinco estrellas, jardín paisajístico, desayuno gourmet, aparcamiento.",
+      "includes": [
+        "Habitación premium",
+        "Desayuno gourmet",
+        "Jardín",
+        "Aparcamiento",
+        "Wifi"
+      ],
+      "highlights": [
+        "Premium",
+        "Gourmet",
+        "Jardín"
+      ],
+      "amenities": [
+        "Habitación premium",
+        "Desayuno gourmet",
+        "Jardín paisajístico",
+        "Aparcamiento"
+      ],
+      "region": "Uçhisar"
+    },
+    "resort-aile": {
+      "name": "Resort Familiar (Nevşehir)",
+      "shortDescription": "Resort para familias con niños: piscina semiolímpica, amplio jardín, animación.",
+      "includes": [
+        "Habitación familiar",
+        "Piscina",
+        "Desayuno bufé",
+        "Jardín",
+        "Animación"
+      ],
+      "highlights": [
+        "Apto para niños",
+        "Piscina",
+        "Jardín"
+      ],
+      "amenities": [
+        "Piscina infantil",
+        "Animación",
+        "Amplio jardín",
+        "Habitación familiar"
+      ],
+      "region": "Nevşehir"
+    },
+    "glamping-cadir-deluxe": {
+      "name": "Tienda Glamping Deluxe",
+      "shortDescription": "Tienda safari de lujo: cama, baño privado, hoguera, vistas a las estrellas.",
+      "badge": "Glamping",
+      "includes": [
+        "Tienda de lujo",
+        "Baño privado",
+        "Hoguera",
+        "Desayuno"
+      ],
+      "highlights": [
+        "Naturaleza",
+        "Hoguera",
+        "Estrellas"
+      ],
+      "amenities": [
+        "Tienda de lujo",
+        "Baño privado",
+        "Hoguera",
+        "Vistas a las estrellas"
+      ],
+      "region": "Capadocia rural"
+    },
+    "glamping-yurt-suit": {
+      "name": "Suite Yurta Glamping",
+      "shortDescription": "Suite en tienda yurta de estilo mongol: cama king size, estufa de leña, vistas al despegue de los globos.",
+      "includes": [
+        "Tienda yurta",
+        "Cama king",
+        "Estufa de leña",
+        "Desayuno",
+        "Vistas"
+      ],
+      "highlights": [
+        "Yurta auténtica",
+        "Vistas a los globos",
+        "Estufa de leña"
+      ],
+      "amenities": [
+        "Tienda yurta",
+        "Cama king",
+        "Estufa de leña",
+        "Vistas a los globos"
+      ],
+      "region": "Capadocia rural"
+    },
+    "magara-otel-goreme-standart": {
+      "name": "Cueva Estándar (Göreme)",
+      "shortDescription": "Habitación cueva económica, confort impecable, vistas al despegue matinal de los globos.",
+      "includes": [
+        "Habitación cueva",
+        "Desayuno",
+        "Wifi",
+        "Vistas a los globos"
+      ],
+      "highlights": [
+        "Precio asequible",
+        "Vistas a los globos",
+        "Céntrico"
+      ],
+      "amenities": [
+        "Habitación cueva",
+        "Vistas a los globos",
+        "Desayuno",
+        "Céntrico"
+      ],
+      "region": "Göreme"
+    },
+    "butik-otel-standart": {
+      "name": "Hotel Boutique Estándar (Göreme)",
+      "shortDescription": "Decoración moderna, hotel boutique confortable, desayuno bufé por la mañana, ubicación céntrica.",
+      "includes": [
+        "Habitación estándar",
+        "Desayuno bufé",
+        "Wifi",
+        "Aire acondicionado"
+      ],
+      "highlights": [
+        "Centro de la ciudad",
+        "Moderno",
+        "Desayuno"
+      ],
+      "amenities": [
+        "Habitación moderna",
+        "Bufé libre",
+        "Centro de la ciudad"
+      ],
+      "region": "Göreme"
+    },
+    "butik-otel-goreme-loft": {
+      "name": "Hotel Boutique Loft (Göreme)",
+      "shortDescription": "Habitaciones loft dúplex, techos altos, bar en el ático con vistas.",
+      "includes": [
+        "Habitación loft",
+        "Bar en el ático",
+        "Desayuno",
+        "Wifi",
+        "Aire acondicionado"
+      ],
+      "highlights": [
+        "Loft",
+        "Bar en el ático",
+        "Moderno"
+      ],
+      "amenities": [
+        "Habitación loft",
+        "Bar en el ático",
+        "Decoración moderna"
+      ],
+      "region": "Göreme"
+    },
+    "apart-daire-goreme-1": {
+      "name": "Apartamento 1+1 (Göreme)",
+      "shortDescription": "Apartamento 1+1 con cocina: ideal para estancias largas, cocina por tu cuenta.",
+      "includes": [
+        "Apartamento 1+1",
+        "Cocina",
+        "Lavadora",
+        "Wifi"
+      ],
+      "highlights": [
+        "Asequible",
+        "Cocina",
+        "Estancia larga"
+      ],
+      "amenities": [
+        "Apartamento 1+1",
+        "Cocina",
+        "Lavadora",
+        "Estancia larga"
+      ],
+      "region": "Göreme"
+    },
+    "apart-daire-urgup-2": {
+      "name": "Apartamento 2+1 (Ürgüp)",
+      "shortDescription": "Amplio apartamento 2+1: para grupos/familias, con balcón, aparcamiento incluido.",
+      "includes": [
+        "Apartamento 2+1",
+        "Cocina",
+        "Balcón",
+        "Aparcamiento",
+        "Wifi"
+      ],
+      "highlights": [
+        "Apto para grupos",
+        "2 habitaciones",
+        "Aparcamiento"
+      ],
+      "amenities": [
+        "Apartamento 2+1",
+        "Cocina",
+        "Balcón",
+        "Aparcamiento"
+      ],
+      "region": "Ürgüp"
+    },
+    "tam-gun-paket": {
+      "name": "Capadocia Día Completo Premium",
+      "shortDescription": "Globo estándar + Tour Rojo + 1 noche en hotel cueva + cena + todos los traslados: ideal para individuales/parejas.",
+      "badge": "Ventajoso",
+      "includes": [
+        "Globo estándar",
+        "Tour Rojo (con guía)",
+        "1 noche en hotel cueva",
+        "Cena",
+        "Todos los traslados"
+      ],
+      "highlights": [
+        "Paquete 4 en 1",
+        "Hotel cueva incluido",
+        "2 días 1 noche"
+      ]
+    },
+    "balayi-paketi": {
+      "name": "Paquete de Lujo de Luna de Miel",
+      "shortDescription": "Globo romántico + 2 noches en Hotel Cueva VIP + champán + traslado VIP + decoración sorpresa.",
+      "badge": "Premium",
+      "includes": [
+        "Globo romántico (cesta VIP)",
+        "2 noches en Hotel Cueva VIP",
+        "Champán de bienvenida",
+        "Traslado VIP",
+        "Decoración sorpresa en la habitación",
+        "Cena romántica"
+      ],
+      "highlights": [
+        "Cesta de globo VIP",
+        "2 noches en hotel VIP",
+        "Cena romántica"
+      ]
+    },
+    "macera-paketi": {
+      "name": "Paquete de Aventura (2 Días)",
+      "shortDescription": "Globo + ATV Full Experience + Paseo a Caballo + Jeep Safari + 1 noche de hotel: para huéspedes jóvenes y activos.",
+      "includes": [
+        "Globo estándar",
+        "ATV Full (4 horas)",
+        "Paseo a caballo de 1,5 h",
+        "Jeep Safari de medio día",
+        "1 noche en hotel boutique",
+        "Todos los traslados"
+      ],
+      "highlights": [
+        "4 actividades + globo",
+        "Alta adrenalina",
+        "Hotel incluido"
+      ]
+    },
+    "aile-paketi": {
+      "name": "Paquete Familiar Completo (2 adultos + 2 niños)",
+      "shortDescription": "Globo para 2 adultos + tour apto para niños + 2 noches en resort familiar + piscina + animación + traslados.",
+      "includes": [
+        "Globo para 2 adultos",
+        "Tour Verde apto para niños",
+        "2 noches en Resort Familiar",
+        "Desayuno bufé",
+        "Piscina + animación",
+        "Todos los traslados"
+      ],
+      "highlights": [
+        "Precio familiar total",
+        "2 noches de resort",
+        "Apto para niños"
+      ]
+    },
+    "evlilik-teklifi": {
+      "name": "Paquete de Lujo de Pedida de Mano",
+      "shortDescription": "Globo privado (solo la pareja) + champán premium + ramo de flores + fotógrafo profesional + vídeo + decoración sorpresa.",
+      "badge": "Especial",
+      "includes": [
+        "Globo privado para la pareja (solo para vosotros)",
+        "Champán premium + 2 copas",
+        "Ramo de flores de lujo",
+        "Fotógrafo profesional (2 horas)",
+        "Grabación de vídeo con dron",
+        "Marco de regalo",
+        "Decoración romántica sorpresa"
+      ],
+      "highlights": [
+        "Globo solo para vosotros",
+        "Vídeo con dron",
+        "Fotos profesionales"
+      ]
+    },
+    "kurumsal-paket": {
+      "name": "Paquete de Evento Corporativo (10+ personas)",
+      "shortDescription": "Globo en grupo + tour + cena + organización para eventos de empresa: precio por persona (mín. 10 personas).",
+      "includes": [
+        "Globo de grupo (cesta de 15+ personas)",
+        "Tour de grupo con guía",
+        "Cena de gala",
+        "Organizador corporativo",
+        "Pago con factura",
+        "Opción de branding personalizado"
+      ],
+      "highlights": [
+        "Precio por persona",
+        "Factura corporativa",
+        "Programa flexible"
+      ]
+    },
+    "nev-otel": {
+      "name": "Aeropuerto de Nevşehir → Hotel",
+      "shortDescription": "Traslado privado (1-4 personas). Opción de vehículo VIP.",
+      "includes": [
+        "Vehículo privado",
+        "Conductor",
+        "Asistencia con el equipaje"
+      ],
+      "highlights": [
+        "Vehículo privado",
+        "Hasta el hotel",
+        "Opción VIP"
+      ]
+    },
+    "kayseri-otel": {
+      "name": "Aeropuerto de Kayseri → Hotel",
+      "shortDescription": "Traslado privado (1-4 personas). Vehículo ideal para distancias más largas.",
+      "includes": [
+        "Vehículo privado",
+        "Conductor",
+        "Equipaje"
+      ],
+      "highlights": [
+        "Kayseri-Capadocia",
+        "Cómodo",
+        "Equipaje"
+      ]
+    },
+    "minibus-grup": {
+      "name": "Minibús (5-12 personas)",
+      "shortDescription": "Traslado de grupo: desde Nevşehir o Kayseri.",
+      "includes": [
+        "Minibús",
+        "Conductor",
+        "Equipaje"
+      ],
+      "highlights": [
+        "Descuento de grupo",
+        "Precio por persona",
+        "Cómodo"
+      ]
+    },
+    "vip-arac": {
+      "name": "Vehículo VIP + Conductor (por horas)",
+      "shortDescription": "Vehículo VIP y conductor: alquiler por horas, recorrido por Capadocia.",
+      "includes": [
+        "Vehículo VIP",
+        "Conductor profesional",
+        "Combustible"
+      ],
+      "highlights": [
+        "Vehículo VIP",
+        "Flexibilidad por horas",
+        "Conductor profesional"
+      ]
+    }
+  },
+  "faq": {
+    "f0": {
+      "question": "¿Cuánto cuesta el tour en globo en Capadocia?",
+      "answer": "En Trip and Tick, los precios del tour en globo en Capadocia comienzan desde 165 € por persona. Estándar 165 €, Confort 215 €, Deluxe 295 €, Privado romántico 580 €. Todos los precios incluyen traslado desde el hotel, desayuno, seguro de 40 millones de euros, certificado y servicio de champán."
+    },
+    "f1": {
+      "question": "¿A partir de qué edad se puede subir al globo en Capadocia?",
+      "answer": "Los niños de 6 años en adelante pueden participar en los vuelos en globo de Capadocia. Los niños menores de 6 años no pueden volar por motivos de seguridad. Para los niños de 7 a 12 años se aplica una tarifa infantil con un 80% de descuento."
+    },
+    "f2": {
+      "question": "¿Las embarazadas pueden subir al globo?",
+      "answer": "No. Las embarazadas no pueden participar en los vuelos en globo por motivos de seguridad. Las personas con problemas graves de corazón o de tensión arterial tampoco deberían volar."
+    },
+    "f3": {
+      "question": "¿Cuándo se cancela el tour en globo en Capadocia?",
+      "answer": "Puede cancelarse por condiciones meteorológicas: viento por encima de 25 km/h, reducción de la visibilidad o precipitaciones. En caso de cancelación por el operador, reembolso del 100% o fecha alternativa."
+    },
+    "f4": {
+      "question": "¿Cómo se hace la reserva del globo en Capadocia?",
+      "answer": "En 5 minutos: 1) Elige el paquete, 2) Selecciona la fecha y el número de personas, 3) Introduce los datos de los pasajeros, 4) Realiza el pago seguro, 5) Tu billete en PDF llega al instante a tu correo electrónico. Atención en TR/EN."
+    },
+    "f5": {
+      "question": "¿Qué métodos de pago se aceptan?",
+      "answer": "Visa, Mastercard, American Express y UnionPay. EUR, TRY, USD. Compatible con 3D Secure. Amex y UnionPay solo para TRY."
+    },
+    "f6": {
+      "question": "¿Cuál es la política de cancelación?",
+      "answer": "Con más de 72 horas de antelación: reembolso del 100%. Entre 24 y 72 horas: reembolso del 50%. Con menos de 24 horas: sin reembolso. Cancelación por el operador (incluido el clima): siempre reembolso del 100% o fecha alternativa."
+    },
+    "f7": {
+      "question": "¿A qué hora es el tour en globo?",
+      "answer": "Los vuelos en globo se realizan al amanecer. El traslado desde el hotel comienza 1-1,5 horas antes del vuelo, entre las 04:00 y las 05:30 de la mañana. La hora exacta varía según el programa del operador y la temporada."
+    },
+    "f8": {
+      "question": "¿Qué ropa se debe llevar durante el tour en globo?",
+      "answer": "Ropa por capas (las mañanas son frescas). Es imprescindible calzado cerrado y cómodo. Resultan útiles un gorro, guantes (en invierno) y gafas de sol. Ropa que no limite tus movimientos al entrar y salir de la cesta."
+    },
+    "f9": {
+      "question": "¿Por qué Trip and Tick es más barato que otras webs?",
+      "answer": "Tenemos contratos de agencia directa con más de 9 operadores; sin comisión de intermediarios. Nuestra garantía del precio más bajo: si encuentras una oferta más barata, reservas un 5% por debajo de ese precio (misma fecha + paquete + prueba)."
+    }
+  },
+  "reviews": {
+    "r1": {
+      "text": "¡Fue una experiencia maravillosa! Los precios son realmente competitivos; los comparé con otras webs y Trip and Tick resultó ser el más económico. El traslado llegó puntual al minuto.",
+      "service": "Globo"
+    },
+    "r2": {
+      "text": "Mi pareja y yo elegimos Capadocia para nuestra luna de miel. La reserva del hotel, el tour en globo y el ATV los contratamos todos con Trip and Tick. Todo fue impecable, lo recomiendo sin duda.",
+      "service": "Paquete"
+    },
+    "r3": {
+      "text": "Esperienza incredibile! Il volo all'alba in mongolfiera era mozzafiato. Prezzo migliore trovato online, servizio impeccabile.",
+      "service": "Globo"
+    },
+    "r4": {
+      "text": "Das Preis-Leistungs-Verhältnis ist unschlagbar. Wir haben mehrere Anbieter verglichen — Trip and Tick war mit Abstand am günstigsten und die Kommunikation auf WhatsApp war exzellent.",
+      "service": "Hotel"
+    },
+    "r5": {
+      "text": "El tour en ATV fue muy divertido, el guía hablaba turco e inglés. Lo único que faltó: el casco le quedaba grande a algunas personas. Aun así, excelente para el precio.",
+      "service": "ATV"
+    },
+    "r6": {
+      "text": "Booked the horse riding tour at sunset — truly magical experience. The team responded on WhatsApp within minutes and helped us swap our balloon date due to weather. Highly professional.",
+      "service": "Paseo a Caballo"
+    },
+    "r7": {
+      "text": "Fuimos 4 en familia, los niños de 8 y 11 años. El límite de edad para el globo estaba claramente indicado y nos organizaron una habitación familiar en el hotel. Precio transparente, sin ninguna sorpresa.",
+      "service": "Globo"
+    },
+    "r8": {
+      "text": "Excellent service du début à la fin. La réservation en ligne était simple, le transfert depuis l'aéroport ponctuel, et le vol en montgolfière inoubliable. Je recommande vivement.",
+      "service": "Tour"
+    },
+    "r9": {
+      "text": "Nuestro globo se canceló por el clima y nos reubicaron el mismo día en otra fecha sin coste adicional. Sus políticas de reembolso son reales: se aplicaron tal y como están escritas. Da confianza.",
+      "service": "Globo"
+    },
+    "r10": {
+      "text": "土耳其卡帕多西亚热气球太美了！预订流程简单，价格透明，全程英文沟通顺畅。绝对推荐 Trip and Tick。",
+      "service": "Globo"
+    },
+    "r11": {
+      "text": "El guía del Tour Verde era culto y simpático. El menú del almuerzo podría enriquecerse, pero en general la experiencia que vivimos estuvo muy por encima del precio.",
+      "service": "Tour"
+    },
+    "r12": {
+      "text": "Contratamos en un solo día el paquete de globo + ATV + hotel cueva. La logística fue impecable, no esperamos nada y no hubo gastos extra. A mis amigos que vayan a Capadocia les recomendaría directamente este.",
+      "service": "Paquete"
+    }
+  }
+}

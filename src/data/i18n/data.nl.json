@@ -1,0 +1,1155 @@
+{
+  "balloons": {
+    "standart-balon-ucusu": {
+      "name": "Standaard Ballonvlucht",
+      "shortDescription": "De voordeligste ballontour. 60 min vliegen, ruime mand, 100% terugbetaling bij annulering wegens weer.",
+      "longDescription": "De voordeligste manier om de legendarische sprookjesschoorstenen van Cappadocië vanuit de lucht te bewonderen. De standaardmand biedt plaats aan 16-20 passagiers en levert onder begeleiding van professionele piloten een vlucht van 60 minuten. Hoteltransfer, licht ontbijt, verzekering van 40 miljoen euro, vluchtcertificaat en medaille, en een landingsviering met champagne — alles is bij de prijs inbegrepen. De prijzen kunnen dagelijks variëren afhankelijk van de weersomstandigheden en de drukte — voor data die meer dan 7 dagen vooruit liggen geldt de catalogusprijs, voor data binnen 7 dagen geldt de actuele prijs.",
+      "badge": "Populairst",
+      "includes": [
+        "Transfer vanaf het hotel",
+        "Licht ontbijt",
+        "Verzekering van 40 mln €",
+        "Vluchtcertificaat en medaille",
+        "Landingsviering met champagne",
+        "Professionele piloot"
+      ],
+      "excludes": [
+        "Persoonlijke uitgaven",
+        "Fotopakket (optioneel)"
+      ],
+      "warnings": [
+        "Kinderen onder de 6 jaar mogen niet mee",
+        "Zwangere vrouwen mogen niet mee",
+        "Mensen met ernstige hart- of gezondheidsproblemen mogen niet mee",
+        "Annulering afhankelijk van het weer — bij annulering door de operator 100% terugbetaling",
+        "Prijs kan binnen 7 dagen dagelijks variëren (weersomstandigheden + drukte)"
+      ],
+      "highlights": [
+        "60 minuten",
+        "Inclusief certificaat",
+        "Champagneservice"
+      ]
+    },
+    "deluxe-balon-ucusu": {
+      "name": "Deluxe Ballonvlucht",
+      "shortDescription": "Kleine mand (max. 16 personen), 60 minuten luxe beleving + kartonnen certificaat.",
+      "longDescription": "Een premium ballonbeleving. Een ruimere vlucht van 60 minuten met een kleine mand (max. 16 passagiers), een kartonnen vluchtcertificaat, een gourmetontbijt en een VIP-transfer. Wij werken met de meest vooraanstaande operators.",
+      "badge": "Deluxe",
+      "includes": [
+        "VIP-hoteltransfer",
+        "Gourmetontbijt",
+        "Verzekering van 40 mln €",
+        "Kartonnen vluchtcertificaat",
+        "Premium champagne",
+        "Professionele fotoshoot"
+      ],
+      "excludes": [
+        "Persoonlijke uitgaven"
+      ],
+      "warnings": [
+        "Kinderen onder de 6 jaar mogen niet mee",
+        "Zwangere vrouwen mogen niet mee",
+        "Mensen met ernstige hart- of gezondheidsproblemen mogen niet mee"
+      ],
+      "highlights": [
+        "60 minuten",
+        "Kleine mand (max. 16)",
+        "Kartonnen certificaat"
+      ]
+    },
+    "romantik-ozel-balon": {
+      "name": "Romantische Privéballon",
+      "shortDescription": "Privémand uitsluitend voor stellen. Huwelijksaanzoek, huwelijksreis, jubileum. Vraag naar de speciale prijs.",
+      "longDescription": "Een privémand voor slechts 2 personen of een kleine groep (max. 8). Ontworpen voor de meest bijzondere momenten in het leven. Speciale aankleding, een verrassingsorganisatie, een fotograaf, premium champagne en een gepersonaliseerd certificaat. Omdat elke organisatie op maat wordt samengesteld, gebeurt de prijsstelling op offertebasis — neem contact met ons op.",
+      "badge": "Romantisch",
+      "includes": [
+        "VIP-transfer",
+        "Speciale aankleding",
+        "Premium champagne",
+        "Professionele fotograaf",
+        "Kartonnen certificaat",
+        "Verrassingsorganisatie"
+      ],
+      "excludes": [
+        "Ring (indien huwelijksaanzoekpakket)"
+      ],
+      "warnings": [
+        "Kinderen mogen niet mee (privémand)",
+        "Zwangere vrouwen mogen niet mee",
+        "Mensen met ernstige hart- of gezondheidsproblemen mogen niet mee"
+      ],
+      "highlights": [
+        "Uitsluitend voor stellen",
+        "Speciale aankleding",
+        "Inclusief fotograaf"
+      ]
+    }
+  },
+  "services": {
+    "atv-standart": {
+      "name": "ATV Standaardtour",
+      "shortDescription": "ATV van 1-2 uur op een willekeurig tijdstip overdag — Sword Valley, Red & Rose Valley, Çavuşin, Love Valley. Inclusief hoteltransfer.",
+      "badge": "Populairst",
+      "includes": [
+        "Gebruik van de ATV",
+        "Veiligheidsuitrusting",
+        "Begeleiding door een gids",
+        "Hoteltransfer (inbegrepen)"
+      ],
+      "highlights": [
+        "4 beroemde valleien",
+        "1-2 uur",
+        "Inclusief transfer"
+      ]
+    },
+    "atv-sunrise": {
+      "name": "Sunrise ATV-tour",
+      "shortDescription": "ATV bij zonsopgang van 2 uur — afgestemd op de ballontour, de vallei in het ochtendlicht. Inclusief transfer.",
+      "includes": [
+        "ATV",
+        "Veiligheidsuitrusting",
+        "Gids",
+        "Hoteltransfer"
+      ],
+      "highlights": [
+        "Zonsopgang",
+        "Afgestemd op ballonvlucht",
+        "Inclusief transfer"
+      ]
+    },
+    "atv-sunset": {
+      "name": "Sunset ATV-tour",
+      "shortDescription": "ATV bij zonsondergang van 2 uur — valleipanorama bij zonsondergang. De meest gekozen optie.",
+      "badge": "Favoriet",
+      "includes": [
+        "ATV",
+        "Veiligheidsuitrusting",
+        "Gids",
+        "Hoteltransfer"
+      ],
+      "highlights": [
+        "Zonsondergang",
+        "Panorama",
+        "Inclusief transfer"
+      ]
+    },
+    "jeep-standart": {
+      "name": "Jeepsafari Standaard",
+      "shortDescription": "Jeepsafari van 3-4 uur op een willekeurig tijdstip overdag — panoramatour door de valleien van Göreme.",
+      "includes": [
+        "Jeep",
+        "Gids",
+        "Hoteltransfer"
+      ],
+      "highlights": [
+        "Valleien van Göreme",
+        "Flexibel overdag",
+        "Inclusief gids"
+      ]
+    },
+    "jeep-sunrise": {
+      "name": "Sunrise Jeepsafari",
+      "shortDescription": "Jeepsafari bij zonsopgang — ochtendlicht in de valleien van Göreme + uitzicht op de ballonnen.",
+      "includes": [
+        "Jeep",
+        "Gids",
+        "Hoteltransfer"
+      ],
+      "highlights": [
+        "Zonsopgang",
+        "Uitzicht op ballonnen",
+        "Valleien"
+      ]
+    },
+    "jeep-sunset": {
+      "name": "Sunset Jeepsafari",
+      "shortDescription": "Jeepsafari bij zonsondergang — panorama van de valleien van Göreme bij zonsondergang.",
+      "badge": "Favoriet",
+      "includes": [
+        "Jeep",
+        "Gids",
+        "Hoteltransfer"
+      ],
+      "highlights": [
+        "Zonsondergang",
+        "Panorama",
+        "Valleien"
+      ]
+    },
+    "at-standart": {
+      "name": "Paardrijden Standaard",
+      "shortDescription": "Paardrijden van 1-2 uur op een willekeurig tijdstip overdag — valleien van Ürgüp.",
+      "includes": [
+        "Gebruik van het paard",
+        "Gids",
+        "Helm",
+        "Hoteltransfer"
+      ],
+      "highlights": [
+        "Flexibel overdag",
+        "Valleitour",
+        "1-2 uur"
+      ]
+    },
+    "at-sunrise": {
+      "name": "Sunrise Paardrijtour",
+      "shortDescription": "Paardrijden bij zonsopgang van 1 uur — valleien van Ürgüp.",
+      "includes": [
+        "Gebruik van het paard",
+        "Gids",
+        "Helm",
+        "Hoteltransfer"
+      ],
+      "highlights": [
+        "Zonsopgang",
+        "Valleitour",
+        "Gids"
+      ]
+    },
+    "at-sunset": {
+      "name": "Sunset Paardrijtour",
+      "shortDescription": "Paardrijden bij zonsondergang van 1,5 uur — panoramisch uitzicht.",
+      "includes": [
+        "Paard",
+        "Gids",
+        "Helm",
+        "Hoteltransfer"
+      ],
+      "highlights": [
+        "Zonsondergang",
+        "Panorama",
+        "Gids"
+      ]
+    },
+    "hamam-standart": {
+      "name": "Turks Bad Standaard",
+      "shortDescription": "Traditioneel Turks bad van 90 minuten — warme ruimte, peeling, schuimmassage, sauna, jacuzzi, thee/koffie. Inclusief hoteltransfer.",
+      "includes": [
+        "Hamam (warme ruimte)",
+        "Peeling (loofah)",
+        "Schuimmassage",
+        "Sauna + stoomcabine",
+        "Jacuzzi",
+        "Turkse thee / koffie",
+        "Hoteltransfer"
+      ],
+      "highlights": [
+        "90 min",
+        "Peeling + schuim",
+        "Sauna + jacuzzi"
+      ]
+    },
+    "hamam-deluxe": {
+      "name": "Turks Bad Deluxe + Massage",
+      "shortDescription": "Hamampakket + 30 minuten Zweedse oliemassage + volledig lichaamsmasker. Premium spabeleving, inclusief transfer.",
+      "badge": "Premium",
+      "includes": [
+        "Volledig hamampakket",
+        "Peeling + schuim",
+        "Zweedse oliemassage 30 min",
+        "Volledig lichaamsmasker met algen/modder",
+        "Sauna + jacuzzi",
+        "Drankenservice",
+        "VIP-transfer"
+      ],
+      "highlights": [
+        "2 uur",
+        "30 min oliemassage",
+        "Volledig lichaamsmasker"
+      ]
+    },
+    "turk-gecesi-yemekli": {
+      "name": "Turkse Avond (met diner + drankjes)",
+      "shortDescription": "Turkse Avond van 3 uur in een grotrestaurant — semah, folklore, oosterse dans, Kaukasische dansshow + diner + onbeperkt alcohol. Inclusief hoteltransfer.",
+      "badge": "Populair",
+      "includes": [
+        "Semah-voorstelling",
+        "Folkloreshow (Anatolië)",
+        "Oosterse dans",
+        "Kaukasische dansshow",
+        "Klassieke Turkse muziek",
+        "Driegangenmaaltijd",
+        "Onbeperkt alcoholische/niet-alcoholische drankjes",
+        "Hoteltransfer"
+      ],
+      "highlights": [
+        "Grotrestaurant",
+        "Onbeperkt drankjes",
+        "3 uur show"
+      ]
+    },
+    "turk-gecesi-yemeksiz": {
+      "name": "Turkse Avond (zonder diner)",
+      "shortDescription": "Show van de Turkse Avond — semah, folklore, oosterse dans, Kaukasisch. Diner/alcohol niet inbegrepen, alleen de show + transfer.",
+      "includes": [
+        "Semah + folklore + oosterse dans",
+        "Kaukasische dansshow",
+        "Welkomstdrankje",
+        "Hoteltransfer"
+      ],
+      "highlights": [
+        "Voordeliger",
+        "Alleen de show",
+        "Inclusief transfer"
+      ]
+    },
+    "microlight-standart": {
+      "name": "Microlight Standaardvlucht",
+      "shortDescription": "Gemotoriseerde microlightvlucht van 15-18 minuten boven het hart van Cappadocië — inclusief privétransfer, vluchtcertificaat, uitrusting en fotoshoot.",
+      "includes": [
+        "Microlightvlucht",
+        "Professionele piloot",
+        "Vluchtcertificaat",
+        "Privétransfer",
+        "Vluchtuitrusting",
+        "Fotoshoot"
+      ],
+      "highlights": [
+        "15-18 min",
+        "Samen met de piloot",
+        "Inclusief certificaat"
+      ]
+    },
+    "microlight-deluxe": {
+      "name": "Microlight Deluxe Vlucht",
+      "shortDescription": "Microlightvlucht van 30-35 minuten over heel Cappadocië — langere route, meer bezienswaardigheden, premium fotopakket.",
+      "badge": "Deluxe",
+      "includes": [
+        "Lange microlightvlucht",
+        "Professionele piloot",
+        "Vluchtcertificaat",
+        "VIP-transfer",
+        "Premium fotopakket",
+        "Vluchtuitrusting"
+      ],
+      "highlights": [
+        "30-35 min",
+        "Heel Cappadocië",
+        "Premium foto's"
+      ]
+    },
+    "kirmizi-tur": {
+      "name": "Cappadocië Rode Tour (Red Tour)",
+      "shortDescription": "Openluchtmuseum Göreme, Kasteel van Uçhisar, Openluchtmuseum Zelve, Paşabağ (Monnikenvallei), Devrent (Verbeeldingsvallei), keramiekatelier in Avanos, Love Valley, Duivenvallei, Çavuşin, lederatelier — inclusief professionele gids + museumtickets + lunch.",
+      "badge": "Populairst",
+      "includes": [
+        "Professionele tourgids (TR/EN/RU)",
+        "Transfer vanaf het hotel",
+        "Toegangstickets musea",
+        "Lunch",
+        "Alle belastingen"
+      ],
+      "highlights": [
+        "10+ stops",
+        "Openluchtmuseum Göreme",
+        "Keramiekatelier in Avanos",
+        "Inclusief museumtickets"
+      ]
+    },
+    "yesil-tur": {
+      "name": "Cappadocië Groene Tour (Green Tour)",
+      "shortDescription": "Panorama van Göreme, Duivenvallei, ondergrondse stad Derinkuyu, Ihlaravallei (panoramisch glazen terras + wandeling), lunch in het dorp Belisırma, Kathedraal van Selime, Narlıgöl, Yaprakhisar — inclusief professionele gids + museumtickets + lunch in Belisırma.",
+      "badge": "Natuur",
+      "includes": [
+        "Professionele tourgids",
+        "Transfer vanaf het hotel",
+        "Tickets ondergrondse stad + musea",
+        "Lunch in Belisırma",
+        "Alle belastingen"
+      ],
+      "highlights": [
+        "Ondergrondse stad",
+        "Glazen terras Ihlara",
+        "Dorpslunch in Belisırma",
+        "Kathedraal van Selime"
+      ]
+    },
+    "mix-tur": {
+      "name": "Cappadocië Mix Tour (Best of)",
+      "shortDescription": "De beste hoogtepunten van Red + Green gecombineerd — Openluchtmuseum Göreme, Kasteel van Uçhisar, Zelve, Paşabağ, Devrent, keramiek in Avanos, Love Valley, ondergrondse stad Özkonak of Kaymaklı, lederatelier. De meest complete tour in één dag.",
+      "badge": "Best of",
+      "includes": [
+        "Professionele tourgids",
+        "Transfer vanaf het hotel",
+        "Alle museum- + ondergrondse stadstickets",
+        "Lunch",
+        "Alle belastingen"
+      ],
+      "highlights": [
+        "Cultuur + natuur combo",
+        "Inclusief ondergrondse stad",
+        "12+ stops"
+      ]
+    },
+    "sari-tur": {
+      "name": "Cappadocië Gele Tour (Yellow Tour)",
+      "shortDescription": "Kerken van Soğanlı, antieke stad Sobesos, Grieks dorp Mustafapaşa, wandeling van 2 km door de Kızılçukurvallei, Byzantijnse kerk van Çavuşin, Lavendeltuin, tapijtatelier, Duivenvallei — een rustigere en diepere route.",
+      "includes": [
+        "Professionele tourgids",
+        "Transfer",
+        "Museumtickets",
+        "Lunch"
+      ],
+      "highlights": [
+        "Kerken van Soğanlı",
+        "Wandeling Kızılçukur",
+        "Mustafapaşa",
+        "Rustige route"
+      ]
+    },
+    "yeralti-turu": {
+      "name": "Tour Ondergrondse Steden",
+      "shortDescription": "Ondergrondse steden Derinkuyu + Kaymaklı, Byzantijnse kerk van Çavuşin, Duivenvallei — gedetailleerde halvedagtour. Inclusief professionele gids + museumtickets.",
+      "includes": [
+        "Professionele gids",
+        "Transfer",
+        "Toegang tot 2 ondergrondse steden",
+        "Kerk van Çavuşin"
+      ],
+      "highlights": [
+        "2 ondergrondse steden",
+        "Byzantijnse kerk van Çavuşin",
+        "Halve dag"
+      ]
+    },
+    "gun-batimi-turu": {
+      "name": "Panoramatour bij Zonsondergang",
+      "shortDescription": "Aktepe + panorama van Göreme + Kızılçukurvallei bij zonsondergang — inclusief wijnservering.",
+      "includes": [
+        "Gids",
+        "Transfer",
+        "Wijnservering"
+      ],
+      "highlights": [
+        "Zonsondergang",
+        "Wijnservice",
+        "Panorama"
+      ]
+    },
+    "instagram-turu": {
+      "name": "Foto & Instagram Tour",
+      "shortDescription": "Begeleide Instagram-spots — professionele fotograaf, opnames met uitzicht op de ballonnen, bewerkte foto's.",
+      "includes": [
+        "Professionele fotograaf",
+        "Transfer",
+        "Bewerkte foto's"
+      ],
+      "highlights": [
+        "Professionele foto's",
+        "Instagram-spots",
+        "Inclusief bewerking"
+      ]
+    },
+    "magara-otel-suit": {
+      "name": "Grothotel Suite (Ürgüp)",
+      "shortDescription": "Premium suite, badkamer met jacuzzi, uitzicht vanaf de bovenste verdieping, butlerservice.",
+      "badge": "Luxe",
+      "includes": [
+        "Suite",
+        "Jacuzzi",
+        "Uitgebreid ontbijtbuffet",
+        "Wifi",
+        "Butler"
+      ],
+      "highlights": [
+        "Jacuzzi",
+        "Premium suite",
+        "Terras"
+      ],
+      "amenities": [
+        "Jacuzzi",
+        "Butlerservice",
+        "Premium suite",
+        "Ontbijtbuffet",
+        "Wifi",
+        "Airconditioning"
+      ],
+      "region": "Ürgüp"
+    },
+    "magara-otel-urgup-aile": {
+      "name": "Grot Familiesuite (Ürgüp)",
+      "shortDescription": "Grotsuite met 2 slaapkamers, geschikt voor gezinnen, mogelijkheid voor kinderbed, ruime opzet.",
+      "includes": [
+        "Suite met 2 slaapkamers",
+        "Kinderbed",
+        "Ontbijt",
+        "Wifi",
+        "Airconditioning"
+      ],
+      "highlights": [
+        "2 slaapkamers",
+        "Gezinsvriendelijk",
+        "Ruim"
+      ],
+      "amenities": [
+        "Suite met 2 slaapkamers",
+        "Kinderbed",
+        "Ruime opzet",
+        "Ontbijtbuffet",
+        "Wifi"
+      ],
+      "region": "Ürgüp"
+    },
+    "magara-otel-goreme-honeymoon": {
+      "name": "Honeymoon Grot (Göreme)",
+      "shortDescription": "VIP-pakket voor pasgetrouwde stellen — jacuzzi met schuim, champagne, ontvangst met bloemen.",
+      "badge": "Huwelijksreis",
+      "includes": [
+        "VIP-suite",
+        "Jacuzzi",
+        "Champagne",
+        "Bloemendecoratie",
+        "Late check-out"
+      ],
+      "highlights": [
+        "Huwelijksreis",
+        "VIP-suite",
+        "Champagne"
+      ],
+      "amenities": [
+        "VIP-suite",
+        "Jacuzzi",
+        "Champagneservice",
+        "Bloemendecoratie",
+        "Late check-out"
+      ],
+      "region": "Göreme"
+    },
+    "resort-avanos-spa": {
+      "name": "Spa Resort (Avanos)",
+      "shortDescription": "Thermaal spa resort — binnenzwembad, massage, hamam, inclusief halfpension.",
+      "badge": "Spa",
+      "includes": [
+        "Toegang tot de spa",
+        "Binnenzwembad",
+        "Hamam",
+        "Halfpension",
+        "Massage 30 min"
+      ],
+      "highlights": [
+        "Spa",
+        "Hamam",
+        "Halfpension"
+      ],
+      "amenities": [
+        "Spa",
+        "Binnenzwembad",
+        "Hamam",
+        "Halfpension",
+        "Massage"
+      ],
+      "region": "Avanos"
+    },
+    "resort-nevsehir-deluxe": {
+      "name": "Deluxe Resort (Nevşehir)",
+      "shortDescription": "All-inclusive deluxe resort — buiten-/binnenzwembad, fitness, diner.",
+      "includes": [
+        "All-inclusive",
+        "Zwembaden",
+        "Fitness",
+        "Diner",
+        "Airconditioning"
+      ],
+      "highlights": [
+        "All-inclusive",
+        "2 zwembaden",
+        "Fitness"
+      ],
+      "amenities": [
+        "All-inclusive",
+        "Buiten-/binnenzwembad",
+        "Fitness",
+        "Diner"
+      ],
+      "region": "Nevşehir"
+    },
+    "magara-otel-deluxe": {
+      "name": "Grothotel Deluxe (Göreme)",
+      "shortDescription": "Authentieke kamers in een stenen grot, uitgebreid ontbijtbuffet, panoramisch uitzicht vanaf het terras.",
+      "includes": [
+        "Grotkamer",
+        "Uitgebreid ontbijtbuffet",
+        "Wifi",
+        "Airconditioning",
+        "Panoramisch terras"
+      ],
+      "highlights": [
+        "UNESCO-gebied",
+        "Grotkamer",
+        "Ontbijt"
+      ],
+      "amenities": [
+        "Grotkamer",
+        "Panoramisch terras",
+        "Ontbijtbuffet",
+        "Wifi",
+        "Airconditioning"
+      ],
+      "region": "Göreme"
+    },
+    "magara-otel-goreme-romantik": {
+      "name": "Romantische Grot (Göreme)",
+      "shortDescription": "Ontworpen voor stellen, grotkamer met open haard, balkon, 's avonds kaarsenservice.",
+      "includes": [
+        "Kamer met open haard",
+        "Ontbijt",
+        "Kaarsenservice",
+        "Wifi",
+        "Airconditioning"
+      ],
+      "highlights": [
+        "Speciaal voor stellen",
+        "Open haard",
+        "Kaarsenservice"
+      ],
+      "amenities": [
+        "Kamer met open haard",
+        "Balkon",
+        "Kaarsenservice",
+        "Ontbijt"
+      ],
+      "region": "Göreme"
+    },
+    "magara-otel-urgup-king": {
+      "name": "Grot Kingkamer (Ürgüp)",
+      "shortDescription": "Kingsize bed, uitgehouwen grotwanden, inclusief minibar, met uitzicht op de vallei.",
+      "includes": [
+        "Kingsize bed",
+        "Minibar",
+        "Ontbijt",
+        "Wifi",
+        "Uitzicht op de vallei"
+      ],
+      "highlights": [
+        "Kingsize bed",
+        "Uitzicht op de vallei",
+        "Minibar"
+      ],
+      "amenities": [
+        "Kingsize bed",
+        "Minibar",
+        "Uitzicht op de vallei",
+        "Ontbijt"
+      ],
+      "region": "Ürgüp"
+    },
+    "magara-otel-urgup-cave": {
+      "name": "Heritage Cave Hotel (Ürgüp)",
+      "shortDescription": "Gerestaureerd historisch grotherenhuis, antieke meubels, ontbijt in de tuin.",
+      "includes": [
+        "Historische kamer",
+        "Antieke decoratie",
+        "Ontbijt in de tuin",
+        "Wifi"
+      ],
+      "highlights": [
+        "Historisch herenhuis",
+        "Antieke decoratie",
+        "Tuin"
+      ],
+      "amenities": [
+        "Historisch herenhuis",
+        "Antieke decoratie",
+        "Ontbijt in de tuin"
+      ],
+      "region": "Ürgüp"
+    },
+    "butik-otel-uchisar-deluxe": {
+      "name": "Uçhisar Boutiquehotel Deluxe",
+      "shortDescription": "Boutiquehotel met panorama op het Kasteel van Uçhisar, ontbijt op het terras, moderne badkamer.",
+      "includes": [
+        "Deluxe kamer",
+        "Ontbijt op het terras",
+        "Uitzicht op het kasteel",
+        "Wifi"
+      ],
+      "highlights": [
+        "Uitzicht op het kasteel",
+        "Terras",
+        "Modern"
+      ],
+      "amenities": [
+        "Uitzicht op het kasteel",
+        "Ontbijt op het terras",
+        "Moderne badkamer"
+      ],
+      "region": "Uçhisar"
+    },
+    "butik-otel-urgup-design": {
+      "name": "Design Boutiquehotel (Ürgüp)",
+      "shortDescription": "Designgericht boutiquehotel, wand met kunstenaarscollectie, espressobar.",
+      "includes": [
+        "Designkamer",
+        "Espressobar",
+        "Ontbijt",
+        "Wifi"
+      ],
+      "highlights": [
+        "Design",
+        "Espressobar",
+        "Kunst"
+      ],
+      "amenities": [
+        "Designkamer",
+        "Espressobar",
+        "Kunstcollectie"
+      ],
+      "region": "Ürgüp"
+    },
+    "butik-otel-uchisar-premium": {
+      "name": "Premium Boutique (Uçhisar)",
+      "shortDescription": "Vijfsterren-conceptboutique, aangelegde tuin, gourmetontbijt, parkeerplaats.",
+      "includes": [
+        "Premium kamer",
+        "Gourmetontbijt",
+        "Tuin",
+        "Parkeerplaats",
+        "Wifi"
+      ],
+      "highlights": [
+        "Premium",
+        "Gourmet",
+        "Tuin"
+      ],
+      "amenities": [
+        "Premium kamer",
+        "Gourmetontbijt",
+        "Aangelegde tuin",
+        "Parkeerplaats"
+      ],
+      "region": "Uçhisar"
+    },
+    "resort-aile": {
+      "name": "Familieresort (Nevşehir)",
+      "shortDescription": "Resort voor gezinnen met kinderen — half olympisch zwembad, grote tuin, animatie.",
+      "includes": [
+        "Familiekamer",
+        "Zwembad",
+        "Uitgebreid ontbijtbuffet",
+        "Tuin",
+        "Animatie"
+      ],
+      "highlights": [
+        "Kindvriendelijk",
+        "Zwembad",
+        "Tuin"
+      ],
+      "amenities": [
+        "Kinderzwembad",
+        "Animatie",
+        "Grote tuin",
+        "Familiekamer"
+      ],
+      "region": "Nevşehir"
+    },
+    "glamping-cadir-deluxe": {
+      "name": "Glamping Deluxe Tent",
+      "shortDescription": "Luxe safaritent — bed, eigen badkamer, kampvuur, uitzicht op de sterren.",
+      "badge": "Glamping",
+      "includes": [
+        "Luxe tent",
+        "Eigen badkamer",
+        "Kampvuur",
+        "Ontbijt"
+      ],
+      "highlights": [
+        "Natuur",
+        "Kampvuur",
+        "Sterren"
+      ],
+      "amenities": [
+        "Luxe tent",
+        "Eigen badkamer",
+        "Kampvuur",
+        "Uitzicht op de sterren"
+      ],
+      "region": "Platteland van Cappadocië"
+    },
+    "glamping-yurt-suit": {
+      "name": "Yurt Suite Glamping",
+      "shortDescription": "Yurttentsuite in Mongoolse stijl — kingsize bed, kachel, uitzicht op de ballonstart.",
+      "includes": [
+        "Yurttent",
+        "Kingsize bed",
+        "Kachel",
+        "Ontbijt",
+        "Uitzicht"
+      ],
+      "highlights": [
+        "Authentieke yurt",
+        "Uitzicht op ballonnen",
+        "Kachel"
+      ],
+      "amenities": [
+        "Yurttent",
+        "Kingsize bed",
+        "Kachel",
+        "Uitzicht op ballonnen"
+      ],
+      "region": "Platteland van Cappadocië"
+    },
+    "magara-otel-goreme-standart": {
+      "name": "Grot Standaard (Göreme)",
+      "shortDescription": "Budgetvriendelijke grotkamer, schoon en comfortabel, 's ochtends uitzicht op de ballonstart.",
+      "includes": [
+        "Grotkamer",
+        "Ontbijt",
+        "Wifi",
+        "Uitzicht op ballonnen"
+      ],
+      "highlights": [
+        "Voordelige prijs",
+        "Uitzicht op ballonnen",
+        "Centraal"
+      ],
+      "amenities": [
+        "Grotkamer",
+        "Uitzicht op ballonnen",
+        "Ontbijt",
+        "Centraal"
+      ],
+      "region": "Göreme"
+    },
+    "butik-otel-standart": {
+      "name": "Boutiquehotel Standaard (Göreme)",
+      "shortDescription": "Moderne inrichting, comfortabel boutiquehotel, 's ochtends ontbijtbuffet, centrale ligging.",
+      "includes": [
+        "Standaardkamer",
+        "Uitgebreid ontbijtbuffet",
+        "Wifi",
+        "Airconditioning"
+      ],
+      "highlights": [
+        "Stadscentrum",
+        "Modern",
+        "Ontbijt"
+      ],
+      "amenities": [
+        "Moderne kamer",
+        "Ontbijtbuffet",
+        "Stadscentrum"
+      ],
+      "region": "Göreme"
+    },
+    "butik-otel-goreme-loft": {
+      "name": "Loft Boutiquehotel (Göreme)",
+      "shortDescription": "Loftkamers met twee verdiepingen, hoge plafonds, bar op de dakverdieping met uitzicht.",
+      "includes": [
+        "Loftkamer",
+        "Dakbar",
+        "Ontbijt",
+        "Wifi",
+        "Airconditioning"
+      ],
+      "highlights": [
+        "Loft",
+        "Dakbar",
+        "Modern"
+      ],
+      "amenities": [
+        "Loftkamer",
+        "Dakbar",
+        "Moderne inrichting"
+      ],
+      "region": "Göreme"
+    },
+    "apart-daire-goreme-1": {
+      "name": "Appartement 1+1 (Göreme)",
+      "shortDescription": "Appartement van 1+1 met keuken — ideaal voor langere verblijven, zelf koken.",
+      "includes": [
+        "Appartement 1+1",
+        "Keuken",
+        "Wasmachine",
+        "Wifi"
+      ],
+      "highlights": [
+        "Voordelig",
+        "Keuken",
+        "Lang verblijf"
+      ],
+      "amenities": [
+        "Appartement 1+1",
+        "Keuken",
+        "Wasmachine",
+        "Lang verblijf"
+      ],
+      "region": "Göreme"
+    },
+    "apart-daire-urgup-2": {
+      "name": "Appartement 2+1 (Ürgüp)",
+      "shortDescription": "Ruim appartement van 2+1 — voor groepen/gezinnen, met balkon, inclusief parkeerplaats.",
+      "includes": [
+        "Appartement 2+1",
+        "Keuken",
+        "Balkon",
+        "Parkeerplaats",
+        "Wifi"
+      ],
+      "highlights": [
+        "Geschikt voor groepen",
+        "2 slaapkamers",
+        "Parkeerplaats"
+      ],
+      "amenities": [
+        "Appartement 2+1",
+        "Keuken",
+        "Balkon",
+        "Parkeerplaats"
+      ],
+      "region": "Ürgüp"
+    },
+    "tam-gun-paket": {
+      "name": "Cappadocië Hele Dag Premium",
+      "shortDescription": "Standaardballon + Rode Tour + Grothotel 1 nacht + Diner + Alle transfers — ideaal voor individuele reizigers/stellen.",
+      "badge": "Voordelig",
+      "includes": [
+        "Standaardballon",
+        "Rode tour (met gids)",
+        "Grothotel 1 nacht",
+        "Diner",
+        "Alle transfers"
+      ],
+      "highlights": [
+        "4-in-1 pakket",
+        "Inclusief grothotel",
+        "2 dagen 1 nacht"
+      ]
+    },
+    "balayi-paketi": {
+      "name": "Luxe Huwelijksreispakket",
+      "shortDescription": "Romantische ballon + VIP-grothotel 2 nachten + Champagne + VIP-transfer + Verrassingsdecoratie.",
+      "badge": "Premium",
+      "includes": [
+        "Romantische ballon (VIP-mand)",
+        "VIP-grothotel 2 nachten",
+        "Welkomstchampagne",
+        "VIP-transfer",
+        "Verrassingsdecoratie kamer",
+        "Romantisch diner"
+      ],
+      "highlights": [
+        "VIP-ballonmand",
+        "2 nachten VIP-hotel",
+        "Romantisch diner"
+      ]
+    },
+    "macera-paketi": {
+      "name": "Avonturenpakket (2 Dagen)",
+      "shortDescription": "Ballon + ATV Full Experience + Paardrijden + Jeepsafari + Hotel 1 nacht — voor jonge en actieve gasten.",
+      "includes": [
+        "Standaardballon",
+        "ATV Full (4 uur)",
+        "Paardrijden 1,5 u",
+        "Jeepsafari halve dag",
+        "Boutiquehotel 1 nacht",
+        "Alle transfers"
+      ],
+      "highlights": [
+        "4 activiteiten + ballon",
+        "Vol adrenaline",
+        "Inclusief hotel"
+      ]
+    },
+    "aile-paketi": {
+      "name": "Compleet Gezinspakket (2 volwassenen + 2 kinderen)",
+      "shortDescription": "Ballon voor 2 volwassenen + kindvriendelijke tour + familieresort 2 nachten + zwembad + animatie + transfers.",
+      "includes": [
+        "Ballon voor 2 volwassenen",
+        "Kindvriendelijke Groene Tour",
+        "Familieresort 2 nachten",
+        "Uitgebreid ontbijtbuffet",
+        "Zwembad + animatie",
+        "Alle transfers"
+      ],
+      "highlights": [
+        "Totaalprijs voor het gezin",
+        "2 nachten resort",
+        "Kindvriendelijk"
+      ]
+    },
+    "evlilik-teklifi": {
+      "name": "Luxe Huwelijksaanzoekpakket",
+      "shortDescription": "Privéballon (alleen het stel) + premium champagne + bloemenboeket + professionele fotograaf + video + verrassingsdecoratie.",
+      "badge": "Speciaal",
+      "includes": [
+        "Privéballon voor het stel (alleen u)",
+        "Premium champagne + 2 glazen",
+        "Luxe bloemenboeket",
+        "Professionele fotograaf (2 uur)",
+        "Drone-video-opname",
+        "Cadeau in een lijst",
+        "Romantische verrassingsdecoratie"
+      ],
+      "highlights": [
+        "Ballon alleen voor u",
+        "Drone-video",
+        "Professionele foto's"
+      ]
+    },
+    "kurumsal-paket": {
+      "name": "Zakelijk Evenementenpakket (10+ personen)",
+      "shortDescription": "Groepsballon + tour + diner + organisatie voor een bedrijfsevenement — prijs per persoon (min. 10 personen).",
+      "includes": [
+        "Groepsballon (mand voor 15+ personen)",
+        "Begeleide groepstour",
+        "Galadiner",
+        "Zakelijke organisator",
+        "Betaling op factuur",
+        "Optie voor eigen branding"
+      ],
+      "highlights": [
+        "Prijs per persoon",
+        "Zakelijke factuur",
+        "Flexibel programma"
+      ]
+    },
+    "nev-otel": {
+      "name": "Luchthaven Nevşehir → Hotel",
+      "shortDescription": "Privétransfer (1-4 personen). Met optie voor een VIP-voertuig.",
+      "includes": [
+        "Privévoertuig",
+        "Chauffeur",
+        "Hulp met bagage"
+      ],
+      "highlights": [
+        "Privévoertuig",
+        "Tot aan het hotel",
+        "VIP-optie"
+      ]
+    },
+    "kayseri-otel": {
+      "name": "Luchthaven Kayseri → Hotel",
+      "shortDescription": "Privétransfer (1-4 personen). Ideaal voertuig voor de langere afstand.",
+      "includes": [
+        "Privévoertuig",
+        "Chauffeur",
+        "Bagage"
+      ],
+      "highlights": [
+        "Kayseri-Cappadocië",
+        "Comfortabel",
+        "Bagage"
+      ]
+    },
+    "minibus-grup": {
+      "name": "Minibus (5-12 personen)",
+      "shortDescription": "Groepstransfer — vanaf Nevşehir of Kayseri.",
+      "includes": [
+        "Minibus",
+        "Chauffeur",
+        "Bagage"
+      ],
+      "highlights": [
+        "Groepskorting",
+        "Prijs per persoon",
+        "Comfortabel"
+      ]
+    },
+    "vip-arac": {
+      "name": "VIP-voertuig + Chauffeur (per uur)",
+      "shortDescription": "VIP-voertuig en chauffeur — huur per uur, rondrit door Cappadocië.",
+      "includes": [
+        "VIP-voertuig",
+        "Professionele chauffeur",
+        "Brandstof"
+      ],
+      "highlights": [
+        "VIP-voertuig",
+        "Flexibiliteit per uur",
+        "Professionele chauffeur"
+      ]
+    }
+  },
+  "faq": {
+    "f0": {
+      "question": "Hoeveel kost een ballontour in Cappadocië?",
+      "answer": "Bij Trip and Tick beginnen de prijzen voor een ballontour in Cappadocië vanaf €165 per persoon. Standaard €165, Comfort €215, Deluxe €295, Romantisch privé €580. Bij alle prijzen zijn de hoteltransfer, het ontbijt, een verzekering van 40 miljoen euro, het certificaat en de champagneservice inbegrepen."
+    },
+    "f1": {
+      "question": "Vanaf welke leeftijd mag je mee in een ballon in Cappadocië?",
+      "answer": "Kinderen van 6 jaar en ouder mogen deelnemen aan de ballonvluchten in Cappadocië. Kinderen onder de 6 jaar mogen om veiligheidsredenen niet mee. Voor kinderen van 7-12 jaar geldt een kinderprijs met 80% korting."
+    },
+    "f2": {
+      "question": "Mogen zwangere vrouwen mee in een ballon?",
+      "answer": "Nee. Zwangere vrouwen mogen om veiligheidsredenen niet deelnemen aan de ballonvluchten. Ook mensen met ernstige hart- of bloeddrukproblemen mogen niet mee."
+    },
+    "f3": {
+      "question": "Wanneer wordt een ballontour in Cappadocië geannuleerd?",
+      "answer": "Een vlucht kan vanwege de weersomstandigheden worden geannuleerd: bij wind boven 25 km/u, verminderd zicht of neerslag. Bij annulering door de operator volgt 100% terugbetaling of een alternatieve datum."
+    },
+    "f4": {
+      "question": "Hoe maak je een ballonreservering in Cappadocië?",
+      "answer": "In 5 minuten: 1) Kies een pakket, 2) Geef de datum en het aantal personen op, 3) Vul de passagiersgegevens in, 4) Betaal veilig, 5) Uw pdf-ticket komt direct in uw mailbox. Ondersteuning in TR/EN."
+    },
+    "f5": {
+      "question": "Welke betaalmethoden worden geaccepteerd?",
+      "answer": "Visa, Mastercard, American Express en UnionPay. EUR, TRY, USD. 3D Secure wordt ondersteund. Amex en UnionPay alleen voor TRY."
+    },
+    "f6": {
+      "question": "Wat is het annuleringsbeleid?",
+      "answer": "Meer dan 72 uur van tevoren: 100% terugbetaling. 24-72 uur: 50% terugbetaling. Minder dan 24 uur: geen terugbetaling. Annulering door de operator (inclusief weer): altijd 100% terugbetaling of een alternatieve datum."
+    },
+    "f7": {
+      "question": "Hoe laat is de ballontour?",
+      "answer": "De ballonvluchten vinden plaats bij zonsopgang. De hoteltransfer begint 1 tot 1,5 uur voor de vlucht — tussen 04:00 en 05:30 's ochtends. Het exacte tijdstip varieert afhankelijk van het programma van de operator en het seizoen."
+    },
+    "f8": {
+      "question": "Wat draag je tijdens een ballontour?",
+      "answer": "Kleed u in laagjes (de ochtenden zijn fris). Dichte, comfortabele schoenen zijn een must. Een muts, handschoenen (in de winter) en een zonnebril zijn handig. Draag kleding die uw bewegingen in en uit de mand niet belemmert."
+    },
+    "f9": {
+      "question": "Waarom is Trip and Tick goedkoper dan andere sites?",
+      "answer": "Wij hebben rechtstreekse agentschapscontracten met 9+ operators; er is geen tussenpersoonscommissie. Onze laagsteprijsgarantie: vindt u een goedkoper aanbod, dan reserveert u bij ons 5% onder die prijs (zelfde datum + pakket + bewijs)."
+    }
+  },
+  "reviews": {
+    "r1": {
+      "text": "Het was een geweldige ervaring! De prijzen zijn echt scherp; ik heb ze met andere sites vergeleken en Trip and Tick was het voordeligst. De transfer kwam tot op de minuut nauwkeurig.",
+      "service": "Ballon"
+    },
+    "r2": {
+      "text": "Met mijn vrouw kozen we Cappadocië voor onze huwelijksreis. De hotelreservering, de ballontour en de ATV hebben we allemaal via Trip and Tick geboekt. Alles was perfect, ik raad het zeker aan.",
+      "service": "Pakket"
+    },
+    "r3": {
+      "text": "Ongelofelijke ervaring! De ballonvlucht bij zonsopgang was adembenemend. De beste prijs die ik online vond, en een onberispelijke service.",
+      "service": "Ballon"
+    },
+    "r4": {
+      "text": "De prijs-kwaliteitverhouding is onverslaanbaar. We hebben meerdere aanbieders vergeleken — Trip and Tick was verreweg het voordeligst en de communicatie via WhatsApp was uitstekend.",
+      "service": "Hotel"
+    },
+    "r5": {
+      "text": "De ATV-tour was heel leuk, de gids sprak Turks en Engels. Enige minpuntje: bij een paar mensen zat de helm wat los. Toch perfect voor de prijs.",
+      "service": "ATV"
+    },
+    "r6": {
+      "text": "We boekten de paardrijtour bij zonsondergang — een werkelijk magische ervaring. Het team reageerde binnen enkele minuten op WhatsApp en hielp ons onze ballondatum te verzetten vanwege het weer. Zeer professioneel.",
+      "service": "Paardrijden"
+    },
+    "r7": {
+      "text": "We gingen met het gezin, met z'n vieren, de kinderen waren 8 en 11 jaar. De leeftijdsgrens voor de ballon was duidelijk aangegeven en in het hotel regelden ze een familiekamer. Transparante prijs, geen enkele verrassing.",
+      "service": "Ballon"
+    },
+    "r8": {
+      "text": "Uitstekende service van begin tot eind. De online reservering was eenvoudig, de transfer vanaf de luchthaven stipt op tijd, en de ballonvlucht onvergetelijk. Ik beveel het van harte aan.",
+      "service": "Tour"
+    },
+    "r9": {
+      "text": "Onze ballonvlucht werd geannuleerd vanwege het weer en we werden dezelfde dag zonder extra kosten op een andere datum ingedeeld. Hun terugbetalingsbeleid is echt — het werd precies zo toegepast als het op papier staat. Dat geeft vertrouwen.",
+      "service": "Ballon"
+    },
+    "r10": {
+      "text": "De heteluchtballonnen in Cappadocië, Turkije, waren werkelijk prachtig! Het boekingsproces was eenvoudig, de prijzen transparant en de communicatie verliep de hele tijd vlot in het Engels. Een absolute aanrader, Trip and Tick.",
+      "service": "Ballon"
+    },
+    "r11": {
+      "text": "De gids van de Groene Tour was deskundig en geestig. Het lunchmenu zou wat uitgebreider mogen, maar over het algemeen overtrof onze ervaring ruimschoots de prijs.",
+      "service": "Tour"
+    },
+    "r12": {
+      "text": "We boekten in één dag een pakket met ballon + ATV + grothotel. De logistiek was perfect, we hebben nergens hoeven wachten en er kwamen geen extra kosten bij. Aan vrienden die naar Cappadocië gaan, raad ik dit direct aan.",
+      "service": "Pakket"
+    }
+  }
+}

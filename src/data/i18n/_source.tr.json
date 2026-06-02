@@ -1,0 +1,1155 @@
+{
+  "balloons": {
+    "standart-balon-ucusu": {
+      "name": "Standart Balon Uçuşu",
+      "shortDescription": "En ekonomik balon turu. 60 dk uçuş, geniş sepet, %100 hava iptali iadesi.",
+      "longDescription": "Kapadokya'nın efsanevi peri bacalarını kuş bakışı izlemek için en uygun fiyatlı seçenek. Standart sepet 16-20 yolcu kapasiteli olup, profesyonel pilotlar eşliğinde 60 dakika uçuş sunar. Otel transferi, hafif kahvaltı, 40 milyon Euro sigorta, uçuş sertifikası ve madalya, şampanya ile iniş kutlaması — hepsi fiyata dahildir. Fiyatlar hava şartları ve yoğunluğa göre günlük değişebilir — 7 günden uzak tarihler için katalog fiyatı, 7 gün içi için güncel fiyat geçerlidir.",
+      "badge": "En Popüler",
+      "includes": [
+        "Otelden transfer",
+        "Hafif kahvaltı",
+        "40M€ sigorta",
+        "Uçuş sertifikası ve madalya",
+        "Şampanya ile iniş kutlaması",
+        "Profesyonel pilot"
+      ],
+      "excludes": [
+        "Kişisel harcamalar",
+        "Fotoğraf paketi (opsiyonel)"
+      ],
+      "warnings": [
+        "6 yaş altı çocuklar binemez",
+        "Hamileler binemez",
+        "Ciddi kalp veya sağlık sorunu olanlar binemez",
+        "Hava durumuna bağlı iptal — operatör iptalinde %100 iade",
+        "Fiyat 7 gün içi günlük değişebilir (hava şartları + yoğunluk)"
+      ],
+      "highlights": [
+        "60 dakika",
+        "Sertifika dahil",
+        "Şampanya servis"
+      ]
+    },
+    "deluxe-balon-ucusu": {
+      "name": "Deluxe Balon Uçuşu",
+      "shortDescription": "Küçük sepet (max 16 kişi), 60 dakika lüks deneyim + karton sertifika.",
+      "longDescription": "Premium balon deneyimi. Küçük sepet (max 16 yolcu) ile daha ferah 60 dakika uçuş, karton uçuş sertifikası, gourmet kahvaltı ve VIP transfer. En seçkin operatörlerle çalışılır.",
+      "badge": "Deluxe",
+      "includes": [
+        "VIP otel transferi",
+        "Gourmet kahvaltı",
+        "40M€ sigorta",
+        "Karton uçuş sertifikası",
+        "Premium şampanya",
+        "Profesyonel fotoğraf çekimi"
+      ],
+      "excludes": [
+        "Kişisel harcamalar"
+      ],
+      "warnings": [
+        "6 yaş altı çocuklar binemez",
+        "Hamileler binemez",
+        "Ciddi kalp veya sağlık sorunu olanlar binemez"
+      ],
+      "highlights": [
+        "60 dakika",
+        "Küçük sepet (max 16)",
+        "Karton sertifika"
+      ]
+    },
+    "romantik-ozel-balon": {
+      "name": "Romantik Özel Balon",
+      "shortDescription": "Sadece çiftler için özel sepet. Evlilik teklifi, balayı, yıldönümü. Özel fiyat sorunuz.",
+      "longDescription": "Sadece 2 kişilik özel sepet veya küçük grup (max 8). Hayatın en özel anları için tasarlandı. Özel dekor, sürpriz organizasyon, fotoğrafçı, premium şampanya, kişiselleştirilmiş sertifika. Her organizasyon kişiye özel hazırlandığı için fiyatlandırma teklife göre yapılır — bizimle iletişime geçin.",
+      "badge": "Romantik",
+      "includes": [
+        "VIP transfer",
+        "Özel dekor",
+        "Premium şampanya",
+        "Profesyonel fotoğrafçı",
+        "Karton sertifika",
+        "Sürpriz organizasyon"
+      ],
+      "excludes": [
+        "Yüzük (evlilik teklifi paketi varsa)"
+      ],
+      "warnings": [
+        "Çocuk binemez (özel sepet)",
+        "Hamileler binemez",
+        "Ciddi kalp veya sağlık sorunu olanlar binemez"
+      ],
+      "highlights": [
+        "Sadece çiftler",
+        "Özel dekor",
+        "Fotoğrafçı dahil"
+      ]
+    }
+  },
+  "services": {
+    "atv-standart": {
+      "name": "ATV Standart Tur",
+      "shortDescription": "Gün içi herhangi saat 1-2 saatlik ATV — Sword Valley, Red & Rose Valley, Çavuşin, Love Valley. Otel transferi dahil.",
+      "badge": "En Popüler",
+      "includes": [
+        "ATV kullanımı",
+        "Güvenlik ekipmanı",
+        "Rehber eşliği",
+        "Otel transferi (dahil)"
+      ],
+      "highlights": [
+        "4 ünlü vadi",
+        "1-2 saat",
+        "Transfer dahil"
+      ]
+    },
+    "atv-sunrise": {
+      "name": "Sunrise ATV Turu",
+      "shortDescription": "2 saatlik gün doğumu ATV — balon turuyla uyumlu, vadi sabah ışığında. Transfer dahil.",
+      "includes": [
+        "ATV",
+        "Güvenlik ekipmanı",
+        "Rehber",
+        "Otel transferi"
+      ],
+      "highlights": [
+        "Gün doğumu",
+        "Balon-uyumlu",
+        "Transfer dahil"
+      ]
+    },
+    "atv-sunset": {
+      "name": "Sunset ATV Turu",
+      "shortDescription": "2 saatlik gün batımı ATV — günbatımı vadi panorama. En çok tercih edilen seçenek.",
+      "badge": "Tercih Edilen",
+      "includes": [
+        "ATV",
+        "Güvenlik ekipmanı",
+        "Rehber",
+        "Otel transferi"
+      ],
+      "highlights": [
+        "Gün batımı",
+        "Panorama",
+        "Transfer dahil"
+      ]
+    },
+    "jeep-standart": {
+      "name": "Jeep Safari Standart",
+      "shortDescription": "Gün içi herhangi saat 3-4 saatlik Jeep Safari — Göreme vadileri panorama turu.",
+      "includes": [
+        "Jeep",
+        "Rehber",
+        "Otel transferi"
+      ],
+      "highlights": [
+        "Göreme vadileri",
+        "Gün içi esnek",
+        "Rehber dahil"
+      ]
+    },
+    "jeep-sunrise": {
+      "name": "Sunrise Jeep Safari",
+      "shortDescription": "Gün doğumu Jeep Safari — Göreme vadilerinde sabah ışığı + balon manzarası.",
+      "includes": [
+        "Jeep",
+        "Rehber",
+        "Otel transferi"
+      ],
+      "highlights": [
+        "Gün doğumu",
+        "Balon manzara",
+        "Vadiler"
+      ]
+    },
+    "jeep-sunset": {
+      "name": "Sunset Jeep Safari",
+      "shortDescription": "Gün batımı Jeep Safari — Göreme vadileri günbatımı panorama.",
+      "badge": "Tercih Edilen",
+      "includes": [
+        "Jeep",
+        "Rehber",
+        "Otel transferi"
+      ],
+      "highlights": [
+        "Gün batımı",
+        "Panorama",
+        "Vadiler"
+      ]
+    },
+    "at-standart": {
+      "name": "At Binme Standart",
+      "shortDescription": "Gün içi herhangi saat 1-2 saatlik at binme — Ürgüp vadileri.",
+      "includes": [
+        "At kullanımı",
+        "Rehber",
+        "Kask",
+        "Otel transferi"
+      ],
+      "highlights": [
+        "Gün içi esnek",
+        "Vadi turu",
+        "1-2 saat"
+      ]
+    },
+    "at-sunrise": {
+      "name": "Sunrise At Binme Turu",
+      "shortDescription": "1 saatlik gün doğumu at binme — Ürgüp vadileri.",
+      "includes": [
+        "At kullanımı",
+        "Rehber",
+        "Kask",
+        "Otel transferi"
+      ],
+      "highlights": [
+        "Gün doğumu",
+        "Vadi turu",
+        "Rehber"
+      ]
+    },
+    "at-sunset": {
+      "name": "Sunset At Binme Turu",
+      "shortDescription": "1,5 saatlik gün batımı at binme — panoramik manzara.",
+      "includes": [
+        "At",
+        "Rehber",
+        "Kask",
+        "Otel transferi"
+      ],
+      "highlights": [
+        "Gün batımı",
+        "Panorama",
+        "Rehber"
+      ]
+    },
+    "hamam-standart": {
+      "name": "Türk Hamamı Standart",
+      "shortDescription": "90 dakikalık geleneksel Türk hamamı — sıcak bölüm, kese, köpük masajı, sauna, jakuzi, çay/kahve. Otel transferi dahil.",
+      "includes": [
+        "Hamam (sıcak bölüm)",
+        "Kese (loofah)",
+        "Köpük masajı",
+        "Sauna + buhar odası",
+        "Jakuzi",
+        "Türk çayı / kahve",
+        "Otel transferi"
+      ],
+      "highlights": [
+        "90 dk",
+        "Kese + köpük",
+        "Sauna + jakuzi"
+      ]
+    },
+    "hamam-deluxe": {
+      "name": "Türk Hamamı Deluxe + Masaj",
+      "shortDescription": "Hamam paketi + 30 dakika İsveç yağ masajı + tam vücut mask. Premium spa deneyimi, transferli.",
+      "badge": "Premium",
+      "includes": [
+        "Hamam tam paket",
+        "Kese + köpük",
+        "İsveç yağ masajı 30 dk",
+        "Tam vücut yosun/çamur mask",
+        "Sauna + jakuzi",
+        "İçecek servisi",
+        "VIP transfer"
+      ],
+      "highlights": [
+        "2 saat",
+        "30 dk yağ masaj",
+        "Tam vücut mask"
+      ]
+    },
+    "turk-gecesi-yemekli": {
+      "name": "Türk Gecesi (Yemekli + İçecek)",
+      "shortDescription": "Mağara restoranda 3 saat Türk Gecesi — semah, folklor, oryantal dans, Kafkas dans şovu + yemek + sınırsız alkol. Otel transferi dahil.",
+      "badge": "Popüler",
+      "includes": [
+        "Semah gösterisi",
+        "Folklor şovu (Anadolu)",
+        "Oryantal dans",
+        "Kafkas dans şovu",
+        "Türk Klasik Müziği",
+        "3 çeşit yemek",
+        "Sınırsız alkollü/alkolsüz içecek",
+        "Otel transferi"
+      ],
+      "highlights": [
+        "Mağara restoran",
+        "Sınırsız içecek",
+        "3 saat şov"
+      ]
+    },
+    "turk-gecesi-yemeksiz": {
+      "name": "Türk Gecesi (Yemeksiz)",
+      "shortDescription": "Türk Gecesi şovu — semah, folklor, oryantal, Kafkas. Yemek/alkol dahil değil, sadece şov + transfer.",
+      "includes": [
+        "Semah + folklor + oryantal",
+        "Kafkas dans şovu",
+        "Hoşgeldin içeceği",
+        "Otel transferi"
+      ],
+      "highlights": [
+        "Daha uygun",
+        "Sadece şov",
+        "Transfer dahil"
+      ]
+    },
+    "microlight-standart": {
+      "name": "Microlight Standart Uçuş",
+      "shortDescription": "15-18 dakikalık Kapadokya kalbi üzerinde motorlu microlight uçuşu — özel transfer, uçuş sertifikası, ekipman, fotoğraf çekimi dahil.",
+      "includes": [
+        "Microlight uçuş",
+        "Profesyonel pilot",
+        "Uçuş sertifikası",
+        "Özel transfer",
+        "Uçuş ekipmanı",
+        "Fotoğraf çekimi"
+      ],
+      "highlights": [
+        "15-18 dk",
+        "Pilotla beraber",
+        "Sertifika dahil"
+      ]
+    },
+    "microlight-deluxe": {
+      "name": "Microlight Deluxe Uçuş",
+      "shortDescription": "30-35 dakikalık tüm Kapadokya üzerinde microlight uçuşu — uzun rota, daha fazla nokta, premium fotoğraf paketi.",
+      "badge": "Deluxe",
+      "includes": [
+        "Microlight uzun uçuş",
+        "Profesyonel pilot",
+        "Uçuş sertifikası",
+        "VIP transfer",
+        "Premium fotoğraf paketi",
+        "Uçuş ekipmanı"
+      ],
+      "highlights": [
+        "30-35 dk",
+        "Tüm Kapadokya",
+        "Premium foto"
+      ]
+    },
+    "kirmizi-tur": {
+      "name": "Kapadokya Kırmızı Tur (Red Tour)",
+      "shortDescription": "Göreme Açık Hava Müzesi, Uçhisar Kalesi, Zelve Açık Hava Müzesi, Paşabağ (Keşişler Vadisi), Devrent (Hayal) Vadisi, Avanos çömlek atölyesi, Aşk Vadisi, Güvercinlik Vadisi, Çavuşin, Deri atölyesi — profesyonel rehber + müze biletleri + öğle yemeği dahil.",
+      "badge": "En Popüler",
+      "includes": [
+        "Profesyonel tur rehberi (TR/EN/RU)",
+        "Otelden transfer",
+        "Müze giriş biletleri",
+        "Öğle yemeği",
+        "Tüm vergiler"
+      ],
+      "highlights": [
+        "10+ durak",
+        "Göreme Açık Hava Müzesi",
+        "Avanos çömlek atölyesi",
+        "Müze biletleri dahil"
+      ]
+    },
+    "yesil-tur": {
+      "name": "Kapadokya Yeşil Tur (Green Tour)",
+      "shortDescription": "Göreme panorama, Güvercinlik Vadisi, Derinkuyu Yeraltı Şehri, Ihlara Vadisi (panoramik cam teras + yürüyüş), Belisırma köyü öğle yemeği, Selime Katedrali, Narlıgöl, Yaprakhisar — profesyonel rehber + müze biletleri + Belisırma öğle yemeği dahil.",
+      "badge": "Doğa",
+      "includes": [
+        "Profesyonel tur rehberi",
+        "Otelden transfer",
+        "Yeraltı şehri + müze biletleri",
+        "Belisırma öğle yemeği",
+        "Tüm vergiler"
+      ],
+      "highlights": [
+        "Yeraltı şehri",
+        "Ihlara cam teras",
+        "Belisırma köy yemeği",
+        "Selime Katedrali"
+      ]
+    },
+    "mix-tur": {
+      "name": "Kapadokya Mix Tur (Best of)",
+      "shortDescription": "Red + Green hibrit en iyileri — Göreme Açık Hava Müzesi, Uçhisar Kalesi, Zelve, Paşabağ, Devrent, Avanos çömlek, Aşk Vadisi, Özkonak veya Kaymaklı Yeraltı Şehri, Deri atölyesi. Tek günde en kapsamlı tur.",
+      "badge": "Best of",
+      "includes": [
+        "Profesyonel tur rehberi",
+        "Otelden transfer",
+        "Tüm müze + yeraltı bilet",
+        "Öğle yemeği",
+        "Tüm vergiler"
+      ],
+      "highlights": [
+        "Kültür + Doğa kombo",
+        "Yeraltı şehri dahil",
+        "12+ durak"
+      ]
+    },
+    "sari-tur": {
+      "name": "Kapadokya Sarı Tur (Yellow Tour)",
+      "shortDescription": "Soğanlı kiliseler, Sobesos antik kenti, Mustafapaşa Rum köyü, Kızılçukur Vadisi 2 km yürüyüş, Çavuşin Bizans kilisesi, Lavanta Bahçesi, halı atölyesi, Güvercinlik Vadisi — daha sakin daha derin rota.",
+      "includes": [
+        "Profesyonel tur rehberi",
+        "Transfer",
+        "Müze biletleri",
+        "Öğle yemeği"
+      ],
+      "highlights": [
+        "Soğanlı kiliseler",
+        "Kızılçukur yürüyüşü",
+        "Mustafapaşa",
+        "Sakin rota"
+      ]
+    },
+    "yeralti-turu": {
+      "name": "Yeraltı Şehirleri Turu",
+      "shortDescription": "Derinkuyu + Kaymaklı yeraltı şehirleri, Çavuşin Bizans kilisesi, Güvercinlik Vadisi — yarım gün detaylı tur. Profesyonel rehber + müze biletleri dahil.",
+      "includes": [
+        "Profesyonel rehber",
+        "Transfer",
+        "2 yeraltı şehri giriş",
+        "Çavuşin kilisesi"
+      ],
+      "highlights": [
+        "2 yeraltı şehri",
+        "Çavuşin Bizans kilisesi",
+        "Yarım gün"
+      ]
+    },
+    "gun-batimi-turu": {
+      "name": "Gün Batımı Panorama Turu",
+      "shortDescription": "Aktepe + Göreme panorama + Kızılçukur Vadisi gün batımı — şarap ikramı dahil.",
+      "includes": [
+        "Rehber",
+        "Transfer",
+        "Şarap ikramı"
+      ],
+      "highlights": [
+        "Gün batımı",
+        "Şarap servisi",
+        "Panorama"
+      ]
+    },
+    "instagram-turu": {
+      "name": "Fotoğraf & Instagram Turu",
+      "shortDescription": "Rehberli Instagram noktaları — profesyonel fotoğrafçı, balon manzaralı çekimler, editlenmiş kareler.",
+      "includes": [
+        "Profesyonel fotoğrafçı",
+        "Transfer",
+        "Editlenmiş fotoğraflar"
+      ],
+      "highlights": [
+        "Profesyonel fotoğraf",
+        "Instagram noktaları",
+        "Editleme dahil"
+      ]
+    },
+    "magara-otel-suit": {
+      "name": "Mağara Otel Süit (Ürgüp)",
+      "shortDescription": "Premium süit, jakuzili banyo, üst kat manzaralı, butler servisi.",
+      "badge": "Lüks",
+      "includes": [
+        "Süit",
+        "Jakuzi",
+        "Açık büfe kahvaltı",
+        "Wifi",
+        "Butler"
+      ],
+      "highlights": [
+        "Jakuzi",
+        "Premium süit",
+        "Teras"
+      ],
+      "amenities": [
+        "Jakuzi",
+        "Butler servisi",
+        "Premium süit",
+        "Açık büfe",
+        "Wifi",
+        "Klima"
+      ],
+      "region": "Ürgüp"
+    },
+    "magara-otel-urgup-aile": {
+      "name": "Mağara Aile Süit (Ürgüp)",
+      "shortDescription": "Ailelere uygun 2 odalı mağara süit, çocuk yatak desteği, geniş alan.",
+      "includes": [
+        "2 oda süit",
+        "Çocuk yatak",
+        "Kahvaltı",
+        "Wifi",
+        "Klima"
+      ],
+      "highlights": [
+        "2 oda",
+        "Aile dostu",
+        "Geniş"
+      ],
+      "amenities": [
+        "2 oda süit",
+        "Çocuk yatak",
+        "Geniş alan",
+        "Açık büfe",
+        "Wifi"
+      ],
+      "region": "Ürgüp"
+    },
+    "magara-otel-goreme-honeymoon": {
+      "name": "Honeymoon Mağara (Göreme)",
+      "shortDescription": "Balayı çiftleri için VIP paket — köpük dolu jakuzi, şampanya, çiçek karşılama.",
+      "badge": "Balayı",
+      "includes": [
+        "VIP süit",
+        "Jakuzi",
+        "Şampanya",
+        "Çiçek dekor",
+        "Geç check-out"
+      ],
+      "highlights": [
+        "Balayı",
+        "VIP süit",
+        "Şampanya"
+      ],
+      "amenities": [
+        "VIP süit",
+        "Jakuzi",
+        "Şampanya servis",
+        "Çiçek dekor",
+        "Geç check-out"
+      ],
+      "region": "Göreme"
+    },
+    "resort-avanos-spa": {
+      "name": "Spa Resort (Avanos)",
+      "shortDescription": "Termal spa resort — kapalı havuz, masaj, hamam, yarım pansiyon dahil.",
+      "badge": "Spa",
+      "includes": [
+        "Spa erişim",
+        "Kapalı havuz",
+        "Hamam",
+        "Yarım pansiyon",
+        "Masaj 30dk"
+      ],
+      "highlights": [
+        "Spa",
+        "Hamam",
+        "Yarım pansiyon"
+      ],
+      "amenities": [
+        "Spa",
+        "Kapalı havuz",
+        "Hamam",
+        "Yarım pansiyon",
+        "Masaj"
+      ],
+      "region": "Avanos"
+    },
+    "resort-nevsehir-deluxe": {
+      "name": "Deluxe Resort (Nevşehir)",
+      "shortDescription": "Tüm dahil deluxe resort — açık/kapalı havuz, fitness, akşam yemeği.",
+      "includes": [
+        "Tüm dahil",
+        "Havuzlar",
+        "Fitness",
+        "Akşam yemeği",
+        "Klima"
+      ],
+      "highlights": [
+        "Tüm dahil",
+        "2 havuz",
+        "Fitness"
+      ],
+      "amenities": [
+        "Tüm dahil",
+        "Açık/kapalı havuz",
+        "Fitness",
+        "Akşam yemeği"
+      ],
+      "region": "Nevşehir"
+    },
+    "magara-otel-deluxe": {
+      "name": "Mağara Otel Deluxe (Göreme)",
+      "shortDescription": "Otantik taş mağara odalar, açık büfe kahvaltı, panoramik teras manzarası.",
+      "includes": [
+        "Mağara oda",
+        "Açık büfe kahvaltı",
+        "Wifi",
+        "Klima",
+        "Panoramik teras"
+      ],
+      "highlights": [
+        "UNESCO bölgesi",
+        "Mağara oda",
+        "Kahvaltı"
+      ],
+      "amenities": [
+        "Mağara oda",
+        "Panoramik teras",
+        "Açık büfe",
+        "Wifi",
+        "Klima"
+      ],
+      "region": "Göreme"
+    },
+    "magara-otel-goreme-romantik": {
+      "name": "Romantik Mağara (Göreme)",
+      "shortDescription": "Çiftler için tasarlanmış, şömineli mağara oda, balkon, akşam mum servisi.",
+      "includes": [
+        "Şömineli oda",
+        "Kahvaltı",
+        "Mum servisi",
+        "Wifi",
+        "Klima"
+      ],
+      "highlights": [
+        "Çiftlere özel",
+        "Şömine",
+        "Mum servisi"
+      ],
+      "amenities": [
+        "Şömineli oda",
+        "Balkon",
+        "Mum servisi",
+        "Kahvaltı"
+      ],
+      "region": "Göreme"
+    },
+    "magara-otel-urgup-king": {
+      "name": "Mağara King Oda (Ürgüp)",
+      "shortDescription": "Kingsize yatak, oyma mağara duvarları, mini bar dahil, vadi manzaralı.",
+      "includes": [
+        "King yatak",
+        "Mini bar",
+        "Kahvaltı",
+        "Wifi",
+        "Vadi manzara"
+      ],
+      "highlights": [
+        "King yatak",
+        "Vadi manzara",
+        "Mini bar"
+      ],
+      "amenities": [
+        "King yatak",
+        "Mini bar",
+        "Vadi manzara",
+        "Kahvaltı"
+      ],
+      "region": "Ürgüp"
+    },
+    "magara-otel-urgup-cave": {
+      "name": "Heritage Cave Otel (Ürgüp)",
+      "shortDescription": "Restore edilmiş tarihi mağara konak, antika mobilya, bahçeli kahvaltı.",
+      "includes": [
+        "Tarihi oda",
+        "Antika dekor",
+        "Bahçe kahvaltı",
+        "Wifi"
+      ],
+      "highlights": [
+        "Tarihi konak",
+        "Antika dekor",
+        "Bahçe"
+      ],
+      "amenities": [
+        "Tarihi konak",
+        "Antika dekor",
+        "Bahçe kahvaltı"
+      ],
+      "region": "Ürgüp"
+    },
+    "butik-otel-uchisar-deluxe": {
+      "name": "Uçhisar Butik Otel Deluxe",
+      "shortDescription": "Uçhisar Kalesi panoramalı butik otel, terasta kahvaltı, modern banyo.",
+      "includes": [
+        "Deluxe oda",
+        "Teras kahvaltı",
+        "Kale manzara",
+        "Wifi"
+      ],
+      "highlights": [
+        "Kale manzara",
+        "Teras",
+        "Modern"
+      ],
+      "amenities": [
+        "Kale manzara",
+        "Teras kahvaltı",
+        "Modern banyo"
+      ],
+      "region": "Uçhisar"
+    },
+    "butik-otel-urgup-design": {
+      "name": "Design Butik Otel (Ürgüp)",
+      "shortDescription": "Tasarım odaklı butik otel, sanatçı koleksiyonu duvar, espresso bar.",
+      "includes": [
+        "Tasarım oda",
+        "Espresso bar",
+        "Kahvaltı",
+        "Wifi"
+      ],
+      "highlights": [
+        "Tasarım",
+        "Espresso bar",
+        "Sanat"
+      ],
+      "amenities": [
+        "Tasarım oda",
+        "Espresso bar",
+        "Sanat koleksiyonu"
+      ],
+      "region": "Ürgüp"
+    },
+    "butik-otel-uchisar-premium": {
+      "name": "Premium Butik (Uçhisar)",
+      "shortDescription": "Beş yıldız konsept butik, peyzaj bahçe, gourmet kahvaltı, otopark.",
+      "includes": [
+        "Premium oda",
+        "Gourmet kahvaltı",
+        "Bahçe",
+        "Otopark",
+        "Wifi"
+      ],
+      "highlights": [
+        "Premium",
+        "Gourmet",
+        "Bahçe"
+      ],
+      "amenities": [
+        "Premium oda",
+        "Gourmet kahvaltı",
+        "Peyzaj bahçe",
+        "Otopark"
+      ],
+      "region": "Uçhisar"
+    },
+    "resort-aile": {
+      "name": "Aile Resort (Nevşehir)",
+      "shortDescription": "Çocuklu aileler için resort — yarı olimpik havuz, geniş bahçe, animasyon.",
+      "includes": [
+        "Aile odası",
+        "Havuz",
+        "Açık büfe kahvaltı",
+        "Bahçe",
+        "Animasyon"
+      ],
+      "highlights": [
+        "Çocuk dostu",
+        "Havuz",
+        "Bahçe"
+      ],
+      "amenities": [
+        "Çocuk havuzu",
+        "Animasyon",
+        "Geniş bahçe",
+        "Aile odası"
+      ],
+      "region": "Nevşehir"
+    },
+    "glamping-cadir-deluxe": {
+      "name": "Glamping Deluxe Çadır",
+      "shortDescription": "Lüks safari çadırı — yatak, özel banyo, kamp ateşi, yıldız manzarası.",
+      "badge": "Glamping",
+      "includes": [
+        "Lüks çadır",
+        "Özel banyo",
+        "Kamp ateşi",
+        "Kahvaltı"
+      ],
+      "highlights": [
+        "Doğa",
+        "Kamp ateşi",
+        "Yıldız"
+      ],
+      "amenities": [
+        "Lüks çadır",
+        "Özel banyo",
+        "Kamp ateşi",
+        "Yıldız manzarası"
+      ],
+      "region": "Kapadokya kırsalı"
+    },
+    "glamping-yurt-suit": {
+      "name": "Yurt Süit Glamping",
+      "shortDescription": "Moğol tarzı yurt çadır süit — kingsize yatak, soba, balon kalkış manzarası.",
+      "includes": [
+        "Yurt çadır",
+        "King yatak",
+        "Soba",
+        "Kahvaltı",
+        "Manzara"
+      ],
+      "highlights": [
+        "Otantik yurt",
+        "Balon manzara",
+        "Soba"
+      ],
+      "amenities": [
+        "Yurt çadır",
+        "King yatak",
+        "Soba",
+        "Balon manzara"
+      ],
+      "region": "Kapadokya kırsalı"
+    },
+    "magara-otel-goreme-standart": {
+      "name": "Mağara Standart (Göreme)",
+      "shortDescription": "Bütçe dostu mağara oda, temiz konfor, sabah balon kalkış manzarası.",
+      "includes": [
+        "Mağara oda",
+        "Kahvaltı",
+        "Wifi",
+        "Balon manzara"
+      ],
+      "highlights": [
+        "Uygun fiyat",
+        "Balon manzara",
+        "Merkezi"
+      ],
+      "amenities": [
+        "Mağara oda",
+        "Balon manzara",
+        "Kahvaltı",
+        "Merkezi"
+      ],
+      "region": "Göreme"
+    },
+    "butik-otel-standart": {
+      "name": "Butik Otel Standart (Göreme)",
+      "shortDescription": "Modern dekor, konforlu butik otel, sabah açık büfe, merkez konum.",
+      "includes": [
+        "Standart oda",
+        "Açık büfe kahvaltı",
+        "Wifi",
+        "Klima"
+      ],
+      "highlights": [
+        "Şehir merkezi",
+        "Modern",
+        "Kahvaltı"
+      ],
+      "amenities": [
+        "Modern oda",
+        "Açık büfe",
+        "Şehir merkezi"
+      ],
+      "region": "Göreme"
+    },
+    "butik-otel-goreme-loft": {
+      "name": "Loft Butik Otel (Göreme)",
+      "shortDescription": "İkili loft odalar, yüksek tavan, çatı katı manzaralı bar.",
+      "includes": [
+        "Loft oda",
+        "Çatı bar",
+        "Kahvaltı",
+        "Wifi",
+        "Klima"
+      ],
+      "highlights": [
+        "Loft",
+        "Çatı bar",
+        "Modern"
+      ],
+      "amenities": [
+        "Loft oda",
+        "Çatı bar",
+        "Modern dekor"
+      ],
+      "region": "Göreme"
+    },
+    "apart-daire-goreme-1": {
+      "name": "Apart Daire 1+1 (Göreme)",
+      "shortDescription": "Mutfaklı 1+1 apart daire — uzun konaklamalar için ideal, kendi başınıza yemek.",
+      "includes": [
+        "1+1 apart",
+        "Mutfak",
+        "Çamaşır makinesi",
+        "Wifi"
+      ],
+      "highlights": [
+        "Uygun",
+        "Mutfak",
+        "Uzun kalış"
+      ],
+      "amenities": [
+        "1+1 apart",
+        "Mutfak",
+        "Çamaşır makinesi",
+        "Uzun kalış"
+      ],
+      "region": "Göreme"
+    },
+    "apart-daire-urgup-2": {
+      "name": "Apart Daire 2+1 (Ürgüp)",
+      "shortDescription": "Geniş 2+1 apart daire — gruplar/aileler için, balkonlu, otopark dahil.",
+      "includes": [
+        "2+1 apart",
+        "Mutfak",
+        "Balkon",
+        "Otopark",
+        "Wifi"
+      ],
+      "highlights": [
+        "Grup uyumlu",
+        "2 oda",
+        "Otopark"
+      ],
+      "amenities": [
+        "2+1 apart",
+        "Mutfak",
+        "Balkon",
+        "Otopark"
+      ],
+      "region": "Ürgüp"
+    },
+    "tam-gun-paket": {
+      "name": "Kapadokya Tam Gün Premium",
+      "shortDescription": "Standart balon + Kırmızı Tur + Mağara otel 1 gece + Akşam yemeği + Tüm transferler — bireysel/çift için ideal.",
+      "badge": "Avantajlı",
+      "includes": [
+        "Standart balon",
+        "Kırmızı tur (rehberli)",
+        "Mağara otel 1 gece",
+        "Akşam yemeği",
+        "Tüm transferler"
+      ],
+      "highlights": [
+        "4-in-1 paket",
+        "Mağara otel dahil",
+        "2 gün 1 gece"
+      ]
+    },
+    "balayi-paketi": {
+      "name": "Balayı Lüks Paketi",
+      "shortDescription": "Romantik balon + VIP Mağara Otel 2 gece + Şampanya + VIP transfer + Sürpriz dekor.",
+      "badge": "Premium",
+      "includes": [
+        "Romantik balon (VIP sepet)",
+        "VIP Mağara Otel 2 gece",
+        "Welcome şampanya",
+        "VIP transfer",
+        "Sürpriz oda dekoru",
+        "Romantik akşam yemeği"
+      ],
+      "highlights": [
+        "VIP balon sepeti",
+        "2 gece VIP otel",
+        "Romantik akşam yemeği"
+      ]
+    },
+    "macera-paketi": {
+      "name": "Macera Paketi (2 Gün)",
+      "shortDescription": "Balon + ATV Full Experience + At Binme + Jeep Safari + Otel 1 gece — genç ve aktif misafirler için.",
+      "includes": [
+        "Standart balon",
+        "ATV Full (4 saat)",
+        "At binme 1,5s",
+        "Jeep Safari yarım gün",
+        "Butik otel 1 gece",
+        "Tüm transferler"
+      ],
+      "highlights": [
+        "4 aktivite + balon",
+        "Adrenaline-yüksek",
+        "Otel dahil"
+      ]
+    },
+    "aile-paketi": {
+      "name": "Aile Tam Paketi (2 yetişkin + 2 çocuk)",
+      "shortDescription": "2 yetişkin balon + çocuk uyumlu tur + aile resort 2 gece + havuz + animasyon + transferler.",
+      "includes": [
+        "2 yetişkin balon",
+        "Çocuk uyumlu Yeşil Tur",
+        "Aile Resort 2 gece",
+        "Açık büfe kahvaltı",
+        "Havuz + animasyon",
+        "Tüm transferler"
+      ],
+      "highlights": [
+        "Aile-toplam fiyat",
+        "2 gece resort",
+        "Çocuk-dostu"
+      ]
+    },
+    "evlilik-teklifi": {
+      "name": "Evlilik Teklifi Lüks Paketi",
+      "shortDescription": "Özel balon (çift-tek) + premium şampanya + çiçek buket + profesyonel fotoğrafçı + video + sürpriz dekor.",
+      "badge": "Özel",
+      "includes": [
+        "Özel çift-balon (sadece siz)",
+        "Premium şampanya + 2 kadeh",
+        "Lüks çiçek buket",
+        "Profesyonel fotoğrafçı (2 saat)",
+        "Drone video kayıt",
+        "Çerçeve hediye",
+        "Sürpriz romantik dekor"
+      ],
+      "highlights": [
+        "Sadece siz balon",
+        "Drone video",
+        "Profesyonel fotoğraf"
+      ]
+    },
+    "kurumsal-paket": {
+      "name": "Kurumsal Etkinlik Paketi (10+ kişi)",
+      "shortDescription": "Şirket etkinliği için grup balon + tur + akşam yemeği + organizasyon — kişi başı fiyat (min 10 kişi).",
+      "includes": [
+        "Grup balonu (15+ kişilik sepet)",
+        "Rehberli grup turu",
+        "Gala akşam yemeği",
+        "Kurumsal organizatör",
+        "Faturali ödeme",
+        "Özel branding seçeneği"
+      ],
+      "highlights": [
+        "Kişi başı fiyat",
+        "Kurumsal fatura",
+        "Esnek program"
+      ]
+    },
+    "nev-otel": {
+      "name": "Nevşehir Havalimanı → Otel",
+      "shortDescription": "Özel transfer (1-4 kişi). VIP araç seçenekli.",
+      "includes": [
+        "Özel araç",
+        "Şoför",
+        "Bagaj desteği"
+      ],
+      "highlights": [
+        "Özel araç",
+        "Otele kadar",
+        "VIP opsiyon"
+      ]
+    },
+    "kayseri-otel": {
+      "name": "Kayseri Havalimanı → Otel",
+      "shortDescription": "Özel transfer (1-4 kişi). Daha uzun mesafe için ideal araç.",
+      "includes": [
+        "Özel araç",
+        "Şoför",
+        "Bagaj"
+      ],
+      "highlights": [
+        "Kayseri-Kapadokya",
+        "Konforlu",
+        "Bagaj"
+      ]
+    },
+    "minibus-grup": {
+      "name": "Minibüs (5-12 kişi)",
+      "shortDescription": "Grup transferi — Nevşehir veya Kayseri'den.",
+      "includes": [
+        "Minibüs",
+        "Şoför",
+        "Bagaj"
+      ],
+      "highlights": [
+        "Grup indirimi",
+        "Kişi başı fiyat",
+        "Konforlu"
+      ]
+    },
+    "vip-arac": {
+      "name": "VIP Araç + Şoför (Saatlik)",
+      "shortDescription": "VIP araç ve şoför — saatlik kiralama, Kapadokya gezisi.",
+      "includes": [
+        "VIP araç",
+        "Profesyonel şoför",
+        "Yakıt"
+      ],
+      "highlights": [
+        "VIP araç",
+        "Saatlik esneklik",
+        "Profesyonel şoför"
+      ]
+    }
+  },
+  "faq": {
+    "f0": {
+      "question": "Kapadokya balon turu kaç para?",
+      "answer": "Trip and Tick'te Kapadokya balon turu fiyatları kişi başı €165'ten başlar. Standart €165, Konfor €215, Deluxe €295, Romantik özel €580. Tüm fiyatlara otel transferi, kahvaltı, 40 milyon Euro sigorta, sertifika ve şampanya servisi dahildir."
+    },
+    "f1": {
+      "question": "Kapadokya balona kaç yaşından itibaren binilir?",
+      "answer": "6 yaş ve üzeri çocuklar Kapadokya balon uçuşlarına katılabilir. 6 yaş altı çocuklar güvenlik nedeniyle binemez. 7-12 yaş arası çocuklar için %80 indirimli çocuk fiyatı uygulanır."
+    },
+    "f2": {
+      "question": "Hamileler balona binebilir mi?",
+      "answer": "Hayır. Hamileler güvenlik nedeniyle balon uçuşlarına katılamaz. Ciddi kalp veya tansiyon sorunu olanlar da binmemelidir."
+    },
+    "f3": {
+      "question": "Kapadokya balon turu ne zaman iptal olur?",
+      "answer": "Hava koşulları nedeniyle iptal edilebilir: rüzgar 25 km/sa üzerinde, görüş azalması veya yağış. Operatör iptalinde %100 iade veya alternatif tarih."
+    },
+    "f4": {
+      "question": "Kapadokya balon rezervasyonu nasıl yapılır?",
+      "answer": "5 dakikada: 1) Paket seçin, 2) Tarih ve kişi sayısını belirleyin, 3) Yolcu bilgilerini girin, 4) Güvenli ödeme yapın, 5) PDF biletiniz anında e-postanıza gelir. TR/EN destek."
+    },
+    "f5": {
+      "question": "Hangi ödeme yöntemleri kabul ediliyor?",
+      "answer": "Visa, Mastercard, American Express ve UnionPay. EUR, TRY, USD. 3D Secure desteği var. Amex ve UnionPay sadece TRY için."
+    },
+    "f6": {
+      "question": "İptal politikası nedir?",
+      "answer": "72+ saat öncesinde: %100 iade. 24-72 saat: %50 iade. 24 saatten az: iade yok. Operatör iptali (hava dahil): her zaman %100 iade veya alternatif tarih."
+    },
+    "f7": {
+      "question": "Balon turu saat kaçta?",
+      "answer": "Balon uçuşları gün doğumunda yapılır. Otel transferi uçuştan 1-1,5 saat önce başlar — sabah 04:00-05:30 arası. Tam saat operatör programına ve mevsime göre değişir."
+    },
+    "f8": {
+      "question": "Balon turu sırasında ne giyilir?",
+      "answer": "Katmanlı giyim (sabahlar serin). Kapalı, rahat ayakkabı şarttır. Şapka, eldiven (kış), güneş gözlüğü faydalı. Sepetten içeri-dışarı hareketinizi kısıtlamayan kıyafetler."
+    },
+    "f9": {
+      "question": "Trip and Tick neden diğer sitelerden daha ucuz?",
+      "answer": "9+ operatörle doğrudan acentelik sözleşmemiz var; aracı komisyonu yok. En düşük fiyat garantimiz: daha ucuz teklif bulursanız o fiyatın %5 altında rezervasyon (aynı tarih + paket + kanıt)."
+    }
+  },
+  "reviews": {
+    "r1": {
+      "text": "Harika bir deneyimdi! Fiyatlar gerçekten rekabetçi, diğer sitelerle karşılaştırdım, en uygunu Trip and Tick oldu. Transfer dakikası dakikasına geldi.",
+      "service": "Balon"
+    },
+    "r2": {
+      "text": "Eşimle balayı için Kapadokya'yı seçtik. Otel rezervasyonu, balon turu ve ATV hepsini Trip and Tick'ten aldık. Her şey kusursuzdu, kesinlikle tavsiye ederim.",
+      "service": "Paket"
+    },
+    "r3": {
+      "text": "Esperienza incredibile! Il volo all'alba in mongolfiera era mozzafiato. Prezzo migliore trovato online, servizio impeccabile.",
+      "service": "Balon"
+    },
+    "r4": {
+      "text": "Das Preis-Leistungs-Verhältnis ist unschlagbar. Wir haben mehrere Anbieter verglichen — Trip and Tick war mit Abstand am günstigsten und die Kommunikation auf WhatsApp war exzellent.",
+      "service": "Otel"
+    },
+    "r5": {
+      "text": "ATV turu çok eğlenceliydi, rehber Türkçe ve İngilizce konuştu. Tek eksik: kask birkaç kişide bol geldi. Yine de fiyata göre mükemmel.",
+      "service": "ATV"
+    },
+    "r6": {
+      "text": "Booked the horse riding tour at sunset — truly magical experience. The team responded on WhatsApp within minutes and helped us swap our balloon date due to weather. Highly professional.",
+      "service": "At Binme"
+    },
+    "r7": {
+      "text": "Aile olarak 4 kişi gittik, çocuklar 8 ve 11 yaşında. Balon için yaş sınırı net belirtilmiş, otelde aile odası ayarladılar. Şeffaf fiyat, hiç sürpriz çıkmadı.",
+      "service": "Balon"
+    },
+    "r8": {
+      "text": "Excellent service du début à la fin. La réservation en ligne était simple, le transfert depuis l'aéroport ponctuel, et le vol en montgolfière inoubliable. Je recommande vivement.",
+      "service": "Tur"
+    },
+    "r9": {
+      "text": "Hava yüzünden balonumuz iptal oldu, aynı gün başka tarihe alındık ekstra ücret olmadan. İade politikaları gerçek — yazılı gibi uygulandı. Güven veriyor.",
+      "service": "Balon"
+    },
+    "r10": {
+      "text": "土耳其卡帕多西亚热气球太美了！预订流程简单，价格透明，全程英文沟通顺畅。绝对推荐 Trip and Tick。",
+      "service": "Balon"
+    },
+    "r11": {
+      "text": "Yeşil tur rehberi bilgili ve esprili. Öğle yemeği menüsü zenginleştirilebilir ama genel olarak yaşadığımız deneyim fiyatın çok üstündeydi.",
+      "service": "Tur"
+    },
+    "r12": {
+      "text": "Bir günde balon + ATV + cave otel paketi aldık. Lojistik mükemmeldi, hiç beklemedik, ekstra masraf çıkmadı. Kapadokya'ya gidecek arkadaşlarıma direkt bunu öneririm.",
+      "service": "Paket"
+    }
+  }
+}

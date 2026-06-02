@@ -1,0 +1,1155 @@
+{
+  "balloons": {
+    "standart-balon-ucusu": {
+      "name": "Vol en montgolfière Standard",
+      "shortDescription": "Le vol en montgolfière le plus économique. 60 min de vol, grande nacelle, remboursement à 100 % en cas d'annulation météo.",
+      "longDescription": "L'option la plus abordable pour admirer à vol d'oiseau les légendaires cheminées de fées de la Cappadoce. La nacelle standard, d'une capacité de 16 à 20 passagers, offre 60 minutes de vol accompagné de pilotes professionnels. Transfert depuis l'hôtel, petit-déjeuner léger, assurance de 40 millions d'euros, certificat de vol et médaille, célébration de l'atterrissage au champagne — tout est compris dans le prix. Les tarifs peuvent varier au quotidien selon les conditions météo et l'affluence — le prix catalogue s'applique aux dates situées à plus de 7 jours, et le prix actualisé pour les dates dans les 7 jours.",
+      "badge": "Le plus populaire",
+      "includes": [
+        "Transfert depuis l'hôtel",
+        "Petit-déjeuner léger",
+        "Assurance 40 M€",
+        "Certificat de vol et médaille",
+        "Célébration de l'atterrissage au champagne",
+        "Pilote professionnel"
+      ],
+      "excludes": [
+        "Dépenses personnelles",
+        "Forfait photo (en option)"
+      ],
+      "warnings": [
+        "Les enfants de moins de 6 ans ne peuvent pas voler",
+        "Les femmes enceintes ne peuvent pas voler",
+        "Les personnes souffrant de problèmes cardiaques ou de santé graves ne peuvent pas voler",
+        "Annulation liée aux conditions météo — remboursement à 100 % en cas d'annulation par l'opérateur",
+        "Le prix peut varier au quotidien dans les 7 jours (conditions météo + affluence)"
+      ],
+      "highlights": [
+        "60 minutes",
+        "Certificat inclus",
+        "Service de champagne"
+      ]
+    },
+    "deluxe-balon-ucusu": {
+      "name": "Vol en montgolfière Deluxe",
+      "shortDescription": "Petite nacelle (max 16 personnes), expérience de luxe de 60 minutes + certificat cartonné.",
+      "longDescription": "Une expérience de vol en montgolfière premium. Avec une petite nacelle (max 16 passagers), profitez de 60 minutes de vol plus spacieux, d'un certificat de vol cartonné, d'un petit-déjeuner gourmet et d'un transfert VIP. Nous collaborons avec les opérateurs les plus prestigieux.",
+      "badge": "Deluxe",
+      "includes": [
+        "Transfert VIP depuis l'hôtel",
+        "Petit-déjeuner gourmet",
+        "Assurance 40 M€",
+        "Certificat de vol cartonné",
+        "Champagne premium",
+        "Séance photo professionnelle"
+      ],
+      "excludes": [
+        "Dépenses personnelles"
+      ],
+      "warnings": [
+        "Les enfants de moins de 6 ans ne peuvent pas voler",
+        "Les femmes enceintes ne peuvent pas voler",
+        "Les personnes souffrant de problèmes cardiaques ou de santé graves ne peuvent pas voler"
+      ],
+      "highlights": [
+        "60 minutes",
+        "Petite nacelle (max 16)",
+        "Certificat cartonné"
+      ]
+    },
+    "romantik-ozel-balon": {
+      "name": "Montgolfière privée Romantique",
+      "shortDescription": "Nacelle privée réservée aux couples. Demande en mariage, lune de miel, anniversaire. Demandez votre tarif sur mesure.",
+      "longDescription": "Nacelle privée pour 2 personnes seulement ou petit groupe (max 8). Conçue pour les moments les plus précieux de la vie. Décoration spéciale, organisation surprise, photographe, champagne premium, certificat personnalisé. Chaque organisation étant préparée sur mesure, la tarification se fait sur devis — contactez-nous.",
+      "badge": "Romantique",
+      "includes": [
+        "Transfert VIP",
+        "Décoration spéciale",
+        "Champagne premium",
+        "Photographe professionnel",
+        "Certificat cartonné",
+        "Organisation surprise"
+      ],
+      "excludes": [
+        "Bague (si forfait demande en mariage)"
+      ],
+      "warnings": [
+        "Les enfants ne peuvent pas voler (nacelle privée)",
+        "Les femmes enceintes ne peuvent pas voler",
+        "Les personnes souffrant de problèmes cardiaques ou de santé graves ne peuvent pas voler"
+      ],
+      "highlights": [
+        "Réservé aux couples",
+        "Décoration spéciale",
+        "Photographe inclus"
+      ]
+    }
+  },
+  "services": {
+    "atv-standart": {
+      "name": "Excursion en quad Standard",
+      "shortDescription": "Quad de 1 à 2 heures à toute heure de la journée — Sword Valley, Red & Rose Valley, Çavuşin, Love Valley. Transfert depuis l'hôtel inclus.",
+      "badge": "Le plus populaire",
+      "includes": [
+        "Utilisation du quad",
+        "Équipement de sécurité",
+        "Accompagnement d'un guide",
+        "Transfert depuis l'hôtel (inclus)"
+      ],
+      "highlights": [
+        "4 vallées célèbres",
+        "1 à 2 heures",
+        "Transfert inclus"
+      ]
+    },
+    "atv-sunrise": {
+      "name": "Excursion en quad au lever du soleil",
+      "shortDescription": "Quad de 2 heures au lever du soleil — compatible avec le vol en montgolfière, vallées baignées de la lumière du matin. Transfert inclus.",
+      "includes": [
+        "Quad",
+        "Équipement de sécurité",
+        "Guide",
+        "Transfert depuis l'hôtel"
+      ],
+      "highlights": [
+        "Lever du soleil",
+        "Compatible montgolfière",
+        "Transfert inclus"
+      ]
+    },
+    "atv-sunset": {
+      "name": "Excursion en quad au coucher du soleil",
+      "shortDescription": "Quad de 2 heures au coucher du soleil — panorama des vallées au crépuscule. L'option la plus prisée.",
+      "badge": "Le plus prisé",
+      "includes": [
+        "Quad",
+        "Équipement de sécurité",
+        "Guide",
+        "Transfert depuis l'hôtel"
+      ],
+      "highlights": [
+        "Coucher du soleil",
+        "Panorama",
+        "Transfert inclus"
+      ]
+    },
+    "jeep-standart": {
+      "name": "Jeep Safari Standard",
+      "shortDescription": "Jeep Safari de 3 à 4 heures à toute heure de la journée — tour panoramique des vallées de Göreme.",
+      "includes": [
+        "Jeep",
+        "Guide",
+        "Transfert depuis l'hôtel"
+      ],
+      "highlights": [
+        "Vallées de Göreme",
+        "Flexible dans la journée",
+        "Guide inclus"
+      ]
+    },
+    "jeep-sunrise": {
+      "name": "Jeep Safari au lever du soleil",
+      "shortDescription": "Jeep Safari au lever du soleil — lumière matinale dans les vallées de Göreme + vue sur les montgolfières.",
+      "includes": [
+        "Jeep",
+        "Guide",
+        "Transfert depuis l'hôtel"
+      ],
+      "highlights": [
+        "Lever du soleil",
+        "Vue sur les montgolfières",
+        "Vallées"
+      ]
+    },
+    "jeep-sunset": {
+      "name": "Jeep Safari au coucher du soleil",
+      "shortDescription": "Jeep Safari au coucher du soleil — panorama des vallées de Göreme au crépuscule.",
+      "badge": "Le plus prisé",
+      "includes": [
+        "Jeep",
+        "Guide",
+        "Transfert depuis l'hôtel"
+      ],
+      "highlights": [
+        "Coucher du soleil",
+        "Panorama",
+        "Vallées"
+      ]
+    },
+    "at-standart": {
+      "name": "Équitation Standard",
+      "shortDescription": "Équitation de 1 à 2 heures à toute heure de la journée — vallées d'Ürgüp.",
+      "includes": [
+        "Cheval mis à disposition",
+        "Guide",
+        "Casque",
+        "Transfert depuis l'hôtel"
+      ],
+      "highlights": [
+        "Flexible dans la journée",
+        "Tour des vallées",
+        "1 à 2 heures"
+      ]
+    },
+    "at-sunrise": {
+      "name": "Équitation au lever du soleil",
+      "shortDescription": "Équitation d'1 heure au lever du soleil — vallées d'Ürgüp.",
+      "includes": [
+        "Cheval mis à disposition",
+        "Guide",
+        "Casque",
+        "Transfert depuis l'hôtel"
+      ],
+      "highlights": [
+        "Lever du soleil",
+        "Tour des vallées",
+        "Guide"
+      ]
+    },
+    "at-sunset": {
+      "name": "Équitation au coucher du soleil",
+      "shortDescription": "Équitation d'1 h 30 au coucher du soleil — panorama à couper le souffle.",
+      "includes": [
+        "Cheval",
+        "Guide",
+        "Casque",
+        "Transfert depuis l'hôtel"
+      ],
+      "highlights": [
+        "Coucher du soleil",
+        "Panorama",
+        "Guide"
+      ]
+    },
+    "hamam-standart": {
+      "name": "Hammam turc Standard",
+      "shortDescription": "Hammam turc traditionnel de 90 minutes — salle chaude, gommage, massage à la mousse, sauna, jacuzzi, thé/café. Transfert depuis l'hôtel inclus.",
+      "includes": [
+        "Hammam (salle chaude)",
+        "Gommage (gant de crin)",
+        "Massage à la mousse",
+        "Sauna + hammam à vapeur",
+        "Jacuzzi",
+        "Thé / café turc",
+        "Transfert depuis l'hôtel"
+      ],
+      "highlights": [
+        "90 min",
+        "Gommage + mousse",
+        "Sauna + jacuzzi"
+      ]
+    },
+    "hamam-deluxe": {
+      "name": "Hammam turc Deluxe + Massage",
+      "shortDescription": "Forfait hammam + 30 minutes de massage suédois à l'huile + masque corps entier. Une expérience spa premium, transfert inclus.",
+      "badge": "Premium",
+      "includes": [
+        "Forfait hammam complet",
+        "Gommage + mousse",
+        "Massage suédois à l'huile 30 min",
+        "Masque corps entier aux algues/à la boue",
+        "Sauna + jacuzzi",
+        "Service de boissons",
+        "Transfert VIP"
+      ],
+      "highlights": [
+        "2 heures",
+        "30 min de massage à l'huile",
+        "Masque corps entier"
+      ]
+    },
+    "turk-gecesi-yemekli": {
+      "name": "Soirée turque (Dîner + Boissons)",
+      "shortDescription": "3 heures de Soirée turque dans un restaurant troglodyte — semah, folklore, danse orientale, spectacle de danse caucasienne + dîner + alcool à volonté. Transfert depuis l'hôtel inclus.",
+      "badge": "Populaire",
+      "includes": [
+        "Spectacle de semah",
+        "Spectacle folklorique (Anatolie)",
+        "Danse orientale",
+        "Spectacle de danse caucasienne",
+        "Musique classique turque",
+        "Dîner 3 plats",
+        "Boissons alcoolisées/sans alcool à volonté",
+        "Transfert depuis l'hôtel"
+      ],
+      "highlights": [
+        "Restaurant troglodyte",
+        "Boissons à volonté",
+        "Spectacle de 3 heures"
+      ]
+    },
+    "turk-gecesi-yemeksiz": {
+      "name": "Soirée turque (Sans dîner)",
+      "shortDescription": "Spectacle de la Soirée turque — semah, folklore, danse orientale, danse caucasienne. Dîner/alcool non inclus, uniquement le spectacle + transfert.",
+      "includes": [
+        "Semah + folklore + danse orientale",
+        "Spectacle de danse caucasienne",
+        "Boisson de bienvenue",
+        "Transfert depuis l'hôtel"
+      ],
+      "highlights": [
+        "Plus abordable",
+        "Spectacle uniquement",
+        "Transfert inclus"
+      ]
+    },
+    "microlight-standart": {
+      "name": "Vol en ULM Standard",
+      "shortDescription": "Vol motorisé en ULM de 15 à 18 minutes au-dessus du cœur de la Cappadoce — transfert privé, certificat de vol, équipement, séance photo inclus.",
+      "includes": [
+        "Vol en ULM",
+        "Pilote professionnel",
+        "Certificat de vol",
+        "Transfert privé",
+        "Équipement de vol",
+        "Séance photo"
+      ],
+      "highlights": [
+        "15 à 18 min",
+        "Aux côtés du pilote",
+        "Certificat inclus"
+      ]
+    },
+    "microlight-deluxe": {
+      "name": "Vol en ULM Deluxe",
+      "shortDescription": "Vol en ULM de 30 à 35 minutes au-dessus de toute la Cappadoce — itinéraire long, davantage de points d'intérêt, forfait photo premium.",
+      "badge": "Deluxe",
+      "includes": [
+        "Vol long en ULM",
+        "Pilote professionnel",
+        "Certificat de vol",
+        "Transfert VIP",
+        "Forfait photo premium",
+        "Équipement de vol"
+      ],
+      "highlights": [
+        "30 à 35 min",
+        "Toute la Cappadoce",
+        "Photos premium"
+      ]
+    },
+    "kirmizi-tur": {
+      "name": "Circuit Rouge de Cappadoce (Red Tour)",
+      "shortDescription": "Musée en plein air de Göreme, château d'Uçhisar, musée en plein air de Zelve, Paşabağ (Vallée des Moines), Vallée de Devrent (Vallée de l'Imagination), atelier de poterie d'Avanos, Vallée de l'Amour, Vallée des Pigeons, Çavuşin, atelier de cuir — guide professionnel + billets de musée + déjeuner inclus.",
+      "badge": "Le plus populaire",
+      "includes": [
+        "Guide touristique professionnel (TR/EN/RU)",
+        "Transfert depuis l'hôtel",
+        "Billets d'entrée aux musées",
+        "Déjeuner",
+        "Toutes les taxes"
+      ],
+      "highlights": [
+        "10+ arrêts",
+        "Musée en plein air de Göreme",
+        "Atelier de poterie d'Avanos",
+        "Billets de musée inclus"
+      ]
+    },
+    "yesil-tur": {
+      "name": "Circuit Vert de Cappadoce (Green Tour)",
+      "shortDescription": "Panorama de Göreme, Vallée des Pigeons, ville souterraine de Derinkuyu, Vallée d'Ihlara (terrasse panoramique en verre + randonnée), déjeuner au village de Belisırma, Cathédrale de Selime, Narlıgöl, Yaprakhisar — guide professionnel + billets de musée + déjeuner à Belisırma inclus.",
+      "badge": "Nature",
+      "includes": [
+        "Guide touristique professionnel",
+        "Transfert depuis l'hôtel",
+        "Ville souterraine + billets de musée",
+        "Déjeuner à Belisırma",
+        "Toutes les taxes"
+      ],
+      "highlights": [
+        "Ville souterraine",
+        "Terrasse en verre d'Ihlara",
+        "Repas au village de Belisırma",
+        "Cathédrale de Selime"
+      ]
+    },
+    "mix-tur": {
+      "name": "Circuit Mix de Cappadoce (Best of)",
+      "shortDescription": "Le meilleur du Red + Green en hybride — Musée en plein air de Göreme, château d'Uçhisar, Zelve, Paşabağ, Devrent, poterie d'Avanos, Vallée de l'Amour, ville souterraine d'Özkonak ou de Kaymaklı, atelier de cuir. Le circuit le plus complet en une seule journée.",
+      "badge": "Best of",
+      "includes": [
+        "Guide touristique professionnel",
+        "Transfert depuis l'hôtel",
+        "Tous les billets musées + souterrains",
+        "Déjeuner",
+        "Toutes les taxes"
+      ],
+      "highlights": [
+        "Combo Culture + Nature",
+        "Ville souterraine incluse",
+        "12+ arrêts"
+      ]
+    },
+    "sari-tur": {
+      "name": "Circuit Jaune de Cappadoce (Yellow Tour)",
+      "shortDescription": "Églises de Soğanlı, cité antique de Sobesos, village grec de Mustafapaşa, randonnée de 2 km dans la Vallée de Kızılçukur, église byzantine de Çavuşin, Jardin de Lavande, atelier de tapis, Vallée des Pigeons — un itinéraire plus paisible et plus approfondi.",
+      "includes": [
+        "Guide touristique professionnel",
+        "Transfert",
+        "Billets de musée",
+        "Déjeuner"
+      ],
+      "highlights": [
+        "Églises de Soğanlı",
+        "Randonnée de Kızılçukur",
+        "Mustafapaşa",
+        "Itinéraire paisible"
+      ]
+    },
+    "yeralti-turu": {
+      "name": "Circuit des villes souterraines",
+      "shortDescription": "Villes souterraines de Derinkuyu + Kaymaklı, église byzantine de Çavuşin, Vallée des Pigeons — circuit détaillé d'une demi-journée. Guide professionnel + billets de musée inclus.",
+      "includes": [
+        "Guide professionnel",
+        "Transfert",
+        "Entrée 2 villes souterraines",
+        "Église de Çavuşin"
+      ],
+      "highlights": [
+        "2 villes souterraines",
+        "Église byzantine de Çavuşin",
+        "Demi-journée"
+      ]
+    },
+    "gun-batimi-turu": {
+      "name": "Circuit Panorama au coucher du soleil",
+      "shortDescription": "Coucher du soleil à Aktepe + panorama de Göreme + Vallée de Kızılçukur — verre de vin offert.",
+      "includes": [
+        "Guide",
+        "Transfert",
+        "Verre de vin offert"
+      ],
+      "highlights": [
+        "Coucher du soleil",
+        "Service de vin",
+        "Panorama"
+      ]
+    },
+    "instagram-turu": {
+      "name": "Circuit Photo & Instagram",
+      "shortDescription": "Spots Instagram avec guide — photographe professionnel, prises de vue avec montgolfières, clichés retouchés.",
+      "includes": [
+        "Photographe professionnel",
+        "Transfert",
+        "Photos retouchées"
+      ],
+      "highlights": [
+        "Photos professionnelles",
+        "Spots Instagram",
+        "Retouche incluse"
+      ]
+    },
+    "magara-otel-suit": {
+      "name": "Suite d'hôtel troglodyte (Ürgüp)",
+      "shortDescription": "Suite premium, salle de bain avec jacuzzi, vue depuis l'étage supérieur, service de majordome.",
+      "badge": "Luxe",
+      "includes": [
+        "Suite",
+        "Jacuzzi",
+        "Petit-déjeuner buffet",
+        "Wifi",
+        "Majordome"
+      ],
+      "highlights": [
+        "Jacuzzi",
+        "Suite premium",
+        "Terrasse"
+      ],
+      "amenities": [
+        "Jacuzzi",
+        "Service de majordome",
+        "Suite premium",
+        "Buffet",
+        "Wifi",
+        "Climatisation"
+      ],
+      "region": "Ürgüp"
+    },
+    "magara-otel-urgup-aile": {
+      "name": "Suite familiale troglodyte (Ürgüp)",
+      "shortDescription": "Suite troglodyte de 2 chambres adaptée aux familles, lit d'enfant en option, vaste espace.",
+      "includes": [
+        "Suite 2 chambres",
+        "Lit d'enfant",
+        "Petit-déjeuner",
+        "Wifi",
+        "Climatisation"
+      ],
+      "highlights": [
+        "2 chambres",
+        "Adapté aux familles",
+        "Spacieux"
+      ],
+      "amenities": [
+        "Suite 2 chambres",
+        "Lit d'enfant",
+        "Vaste espace",
+        "Buffet",
+        "Wifi"
+      ],
+      "region": "Ürgüp"
+    },
+    "magara-otel-goreme-honeymoon": {
+      "name": "Troglodyte Lune de miel (Göreme)",
+      "shortDescription": "Forfait VIP pour les couples en lune de miel — jacuzzi rempli de mousse, champagne, accueil avec fleurs.",
+      "badge": "Lune de miel",
+      "includes": [
+        "Suite VIP",
+        "Jacuzzi",
+        "Champagne",
+        "Décoration florale",
+        "Départ tardif"
+      ],
+      "highlights": [
+        "Lune de miel",
+        "Suite VIP",
+        "Champagne"
+      ],
+      "amenities": [
+        "Suite VIP",
+        "Jacuzzi",
+        "Service de champagne",
+        "Décoration florale",
+        "Départ tardif"
+      ],
+      "region": "Göreme"
+    },
+    "resort-avanos-spa": {
+      "name": "Resort Spa (Avanos)",
+      "shortDescription": "Resort spa thermal — piscine intérieure, massage, hammam, demi-pension incluse.",
+      "badge": "Spa",
+      "includes": [
+        "Accès au spa",
+        "Piscine intérieure",
+        "Hammam",
+        "Demi-pension",
+        "Massage 30 min"
+      ],
+      "highlights": [
+        "Spa",
+        "Hammam",
+        "Demi-pension"
+      ],
+      "amenities": [
+        "Spa",
+        "Piscine intérieure",
+        "Hammam",
+        "Demi-pension",
+        "Massage"
+      ],
+      "region": "Avanos"
+    },
+    "resort-nevsehir-deluxe": {
+      "name": "Resort Deluxe (Nevşehir)",
+      "shortDescription": "Resort deluxe tout compris — piscine extérieure/intérieure, fitness, dîner.",
+      "includes": [
+        "Tout compris",
+        "Piscines",
+        "Fitness",
+        "Dîner",
+        "Climatisation"
+      ],
+      "highlights": [
+        "Tout compris",
+        "2 piscines",
+        "Fitness"
+      ],
+      "amenities": [
+        "Tout compris",
+        "Piscine extérieure/intérieure",
+        "Fitness",
+        "Dîner"
+      ],
+      "region": "Nevşehir"
+    },
+    "magara-otel-deluxe": {
+      "name": "Hôtel troglodyte Deluxe (Göreme)",
+      "shortDescription": "Chambres troglodytes en pierre authentique, petit-déjeuner buffet, vue panoramique depuis la terrasse.",
+      "includes": [
+        "Chambre troglodyte",
+        "Petit-déjeuner buffet",
+        "Wifi",
+        "Climatisation",
+        "Terrasse panoramique"
+      ],
+      "highlights": [
+        "Zone UNESCO",
+        "Chambre troglodyte",
+        "Petit-déjeuner"
+      ],
+      "amenities": [
+        "Chambre troglodyte",
+        "Terrasse panoramique",
+        "Buffet",
+        "Wifi",
+        "Climatisation"
+      ],
+      "region": "Göreme"
+    },
+    "magara-otel-goreme-romantik": {
+      "name": "Troglodyte Romantique (Göreme)",
+      "shortDescription": "Chambre troglodyte avec cheminée conçue pour les couples, balcon, service aux chandelles en soirée.",
+      "includes": [
+        "Chambre avec cheminée",
+        "Petit-déjeuner",
+        "Service aux chandelles",
+        "Wifi",
+        "Climatisation"
+      ],
+      "highlights": [
+        "Spécial couples",
+        "Cheminée",
+        "Service aux chandelles"
+      ],
+      "amenities": [
+        "Chambre avec cheminée",
+        "Balcon",
+        "Service aux chandelles",
+        "Petit-déjeuner"
+      ],
+      "region": "Göreme"
+    },
+    "magara-otel-urgup-king": {
+      "name": "Chambre troglodyte King (Ürgüp)",
+      "shortDescription": "Lit king size, parois troglodytes sculptées, minibar inclus, vue sur la vallée.",
+      "includes": [
+        "Lit king size",
+        "Minibar",
+        "Petit-déjeuner",
+        "Wifi",
+        "Vue sur la vallée"
+      ],
+      "highlights": [
+        "Lit king size",
+        "Vue sur la vallée",
+        "Minibar"
+      ],
+      "amenities": [
+        "Lit king size",
+        "Minibar",
+        "Vue sur la vallée",
+        "Petit-déjeuner"
+      ],
+      "region": "Ürgüp"
+    },
+    "magara-otel-urgup-cave": {
+      "name": "Hôtel Heritage Cave (Ürgüp)",
+      "shortDescription": "Demeure troglodyte historique restaurée, mobilier ancien, petit-déjeuner dans le jardin.",
+      "includes": [
+        "Chambre historique",
+        "Décoration ancienne",
+        "Petit-déjeuner au jardin",
+        "Wifi"
+      ],
+      "highlights": [
+        "Demeure historique",
+        "Décoration ancienne",
+        "Jardin"
+      ],
+      "amenities": [
+        "Demeure historique",
+        "Décoration ancienne",
+        "Petit-déjeuner au jardin"
+      ],
+      "region": "Ürgüp"
+    },
+    "butik-otel-uchisar-deluxe": {
+      "name": "Hôtel boutique Deluxe d'Uçhisar",
+      "shortDescription": "Hôtel boutique avec panorama sur le château d'Uçhisar, petit-déjeuner en terrasse, salle de bain moderne.",
+      "includes": [
+        "Chambre deluxe",
+        "Petit-déjeuner en terrasse",
+        "Vue sur le château",
+        "Wifi"
+      ],
+      "highlights": [
+        "Vue sur le château",
+        "Terrasse",
+        "Moderne"
+      ],
+      "amenities": [
+        "Vue sur le château",
+        "Petit-déjeuner en terrasse",
+        "Salle de bain moderne"
+      ],
+      "region": "Uçhisar"
+    },
+    "butik-otel-urgup-design": {
+      "name": "Hôtel boutique Design (Ürgüp)",
+      "shortDescription": "Hôtel boutique axé sur le design, mur de collection d'artistes, bar à espresso.",
+      "includes": [
+        "Chambre design",
+        "Bar à espresso",
+        "Petit-déjeuner",
+        "Wifi"
+      ],
+      "highlights": [
+        "Design",
+        "Bar à espresso",
+        "Art"
+      ],
+      "amenities": [
+        "Chambre design",
+        "Bar à espresso",
+        "Collection d'art"
+      ],
+      "region": "Ürgüp"
+    },
+    "butik-otel-uchisar-premium": {
+      "name": "Boutique Premium (Uçhisar)",
+      "shortDescription": "Hôtel boutique au concept cinq étoiles, jardin paysager, petit-déjeuner gourmet, parking.",
+      "includes": [
+        "Chambre premium",
+        "Petit-déjeuner gourmet",
+        "Jardin",
+        "Parking",
+        "Wifi"
+      ],
+      "highlights": [
+        "Premium",
+        "Gourmet",
+        "Jardin"
+      ],
+      "amenities": [
+        "Chambre premium",
+        "Petit-déjeuner gourmet",
+        "Jardin paysager",
+        "Parking"
+      ],
+      "region": "Uçhisar"
+    },
+    "resort-aile": {
+      "name": "Resort familial (Nevşehir)",
+      "shortDescription": "Resort pour les familles avec enfants — piscine semi-olympique, vaste jardin, animation.",
+      "includes": [
+        "Chambre familiale",
+        "Piscine",
+        "Petit-déjeuner buffet",
+        "Jardin",
+        "Animation"
+      ],
+      "highlights": [
+        "Adapté aux enfants",
+        "Piscine",
+        "Jardin"
+      ],
+      "amenities": [
+        "Piscine pour enfants",
+        "Animation",
+        "Vaste jardin",
+        "Chambre familiale"
+      ],
+      "region": "Nevşehir"
+    },
+    "glamping-cadir-deluxe": {
+      "name": "Tente Deluxe Glamping",
+      "shortDescription": "Tente safari de luxe — lit, salle de bain privée, feu de camp, vue sur les étoiles.",
+      "badge": "Glamping",
+      "includes": [
+        "Tente de luxe",
+        "Salle de bain privée",
+        "Feu de camp",
+        "Petit-déjeuner"
+      ],
+      "highlights": [
+        "Nature",
+        "Feu de camp",
+        "Étoiles"
+      ],
+      "amenities": [
+        "Tente de luxe",
+        "Salle de bain privée",
+        "Feu de camp",
+        "Vue sur les étoiles"
+      ],
+      "region": "Campagne de Cappadoce"
+    },
+    "glamping-yurt-suit": {
+      "name": "Suite Yourte Glamping",
+      "shortDescription": "Suite sous tente yourte de style mongol — lit king size, poêle, vue sur le décollage des montgolfières.",
+      "includes": [
+        "Tente yourte",
+        "Lit king size",
+        "Poêle",
+        "Petit-déjeuner",
+        "Vue"
+      ],
+      "highlights": [
+        "Yourte authentique",
+        "Vue sur les montgolfières",
+        "Poêle"
+      ],
+      "amenities": [
+        "Tente yourte",
+        "Lit king size",
+        "Poêle",
+        "Vue sur les montgolfières"
+      ],
+      "region": "Campagne de Cappadoce"
+    },
+    "magara-otel-goreme-standart": {
+      "name": "Troglodyte Standard (Göreme)",
+      "shortDescription": "Chambre troglodyte économique, confort impeccable, vue sur le décollage matinal des montgolfières.",
+      "includes": [
+        "Chambre troglodyte",
+        "Petit-déjeuner",
+        "Wifi",
+        "Vue sur les montgolfières"
+      ],
+      "highlights": [
+        "Prix abordable",
+        "Vue sur les montgolfières",
+        "Central"
+      ],
+      "amenities": [
+        "Chambre troglodyte",
+        "Vue sur les montgolfières",
+        "Petit-déjeuner",
+        "Central"
+      ],
+      "region": "Göreme"
+    },
+    "butik-otel-standart": {
+      "name": "Hôtel boutique Standard (Göreme)",
+      "shortDescription": "Décoration moderne, hôtel boutique confortable, buffet le matin, emplacement central.",
+      "includes": [
+        "Chambre standard",
+        "Petit-déjeuner buffet",
+        "Wifi",
+        "Climatisation"
+      ],
+      "highlights": [
+        "Centre-ville",
+        "Moderne",
+        "Petit-déjeuner"
+      ],
+      "amenities": [
+        "Chambre moderne",
+        "Buffet",
+        "Centre-ville"
+      ],
+      "region": "Göreme"
+    },
+    "butik-otel-goreme-loft": {
+      "name": "Hôtel boutique Loft (Göreme)",
+      "shortDescription": "Chambres loft en duplex, hauteur sous plafond, bar sur le toit avec vue.",
+      "includes": [
+        "Chambre loft",
+        "Bar sur le toit",
+        "Petit-déjeuner",
+        "Wifi",
+        "Climatisation"
+      ],
+      "highlights": [
+        "Loft",
+        "Bar sur le toit",
+        "Moderne"
+      ],
+      "amenities": [
+        "Chambre loft",
+        "Bar sur le toit",
+        "Décoration moderne"
+      ],
+      "region": "Göreme"
+    },
+    "apart-daire-goreme-1": {
+      "name": "Appartement T2 (Göreme)",
+      "shortDescription": "Appartement T2 avec cuisine — idéal pour les longs séjours, cuisinez par vous-même.",
+      "includes": [
+        "Appartement T2",
+        "Cuisine",
+        "Machine à laver",
+        "Wifi"
+      ],
+      "highlights": [
+        "Abordable",
+        "Cuisine",
+        "Long séjour"
+      ],
+      "amenities": [
+        "Appartement T2",
+        "Cuisine",
+        "Machine à laver",
+        "Long séjour"
+      ],
+      "region": "Göreme"
+    },
+    "apart-daire-urgup-2": {
+      "name": "Appartement T3 (Ürgüp)",
+      "shortDescription": "Spacieux appartement T3 — pour les groupes/familles, avec balcon, parking inclus.",
+      "includes": [
+        "Appartement T3",
+        "Cuisine",
+        "Balcon",
+        "Parking",
+        "Wifi"
+      ],
+      "highlights": [
+        "Adapté aux groupes",
+        "2 chambres",
+        "Parking"
+      ],
+      "amenities": [
+        "Appartement T3",
+        "Cuisine",
+        "Balcon",
+        "Parking"
+      ],
+      "region": "Ürgüp"
+    },
+    "tam-gun-paket": {
+      "name": "Cappadoce Premium Journée complète",
+      "shortDescription": "Montgolfière standard + Circuit Rouge + Hôtel troglodyte 1 nuit + Dîner + Tous les transferts — idéal pour les individuels/couples.",
+      "badge": "Avantageux",
+      "includes": [
+        "Montgolfière standard",
+        "Circuit Rouge (avec guide)",
+        "Hôtel troglodyte 1 nuit",
+        "Dîner",
+        "Tous les transferts"
+      ],
+      "highlights": [
+        "Forfait 4-en-1",
+        "Hôtel troglodyte inclus",
+        "2 jours 1 nuit"
+      ]
+    },
+    "balayi-paketi": {
+      "name": "Forfait Lune de miel Luxe",
+      "shortDescription": "Montgolfière romantique + Hôtel troglodyte VIP 2 nuits + Champagne + Transfert VIP + Décoration surprise.",
+      "badge": "Premium",
+      "includes": [
+        "Montgolfière romantique (nacelle VIP)",
+        "Hôtel troglodyte VIP 2 nuits",
+        "Champagne de bienvenue",
+        "Transfert VIP",
+        "Décoration surprise de la chambre",
+        "Dîner romantique"
+      ],
+      "highlights": [
+        "Nacelle de montgolfière VIP",
+        "2 nuits en hôtel VIP",
+        "Dîner romantique"
+      ]
+    },
+    "macera-paketi": {
+      "name": "Forfait Aventure (2 jours)",
+      "shortDescription": "Montgolfière + ATV Full Experience + Équitation + Jeep Safari + Hôtel 1 nuit — pour les voyageurs jeunes et actifs.",
+      "includes": [
+        "Montgolfière standard",
+        "ATV Full (4 heures)",
+        "Équitation 1 h 30",
+        "Jeep Safari demi-journée",
+        "Hôtel boutique 1 nuit",
+        "Tous les transferts"
+      ],
+      "highlights": [
+        "4 activités + montgolfière",
+        "Riche en adrénaline",
+        "Hôtel inclus"
+      ]
+    },
+    "aile-paketi": {
+      "name": "Forfait Famille complet (2 adultes + 2 enfants)",
+      "shortDescription": "Montgolfière pour 2 adultes + circuit adapté aux enfants + resort familial 2 nuits + piscine + animation + transferts.",
+      "includes": [
+        "Montgolfière pour 2 adultes",
+        "Circuit Vert adapté aux enfants",
+        "Resort familial 2 nuits",
+        "Petit-déjeuner buffet",
+        "Piscine + animation",
+        "Tous les transferts"
+      ],
+      "highlights": [
+        "Tarif famille global",
+        "2 nuits en resort",
+        "Adapté aux enfants"
+      ]
+    },
+    "evlilik-teklifi": {
+      "name": "Forfait Demande en mariage Luxe",
+      "shortDescription": "Montgolfière privée (couple seul) + champagne premium + bouquet de fleurs + photographe professionnel + vidéo + décoration surprise.",
+      "badge": "Spécial",
+      "includes": [
+        "Montgolfière privée pour deux (rien que vous)",
+        "Champagne premium + 2 coupes",
+        "Bouquet de fleurs luxueux",
+        "Photographe professionnel (2 heures)",
+        "Enregistrement vidéo par drone",
+        "Cadre en cadeau",
+        "Décoration romantique surprise"
+      ],
+      "highlights": [
+        "Montgolfière rien que pour vous",
+        "Vidéo par drone",
+        "Photographe professionnel"
+      ]
+    },
+    "kurumsal-paket": {
+      "name": "Forfait Événement d'entreprise (10+ personnes)",
+      "shortDescription": "Pour les événements d'entreprise : montgolfière de groupe + circuit + dîner + organisation — tarif par personne (min 10 personnes).",
+      "includes": [
+        "Montgolfière de groupe (nacelle 15+ personnes)",
+        "Circuit de groupe avec guide",
+        "Dîner de gala",
+        "Organisateur d'entreprise",
+        "Paiement sur facture",
+        "Option de branding personnalisé"
+      ],
+      "highlights": [
+        "Tarif par personne",
+        "Facture d'entreprise",
+        "Programme flexible"
+      ]
+    },
+    "nev-otel": {
+      "name": "Aéroport de Nevşehir → Hôtel",
+      "shortDescription": "Transfert privé (1 à 4 personnes). Option véhicule VIP disponible.",
+      "includes": [
+        "Véhicule privé",
+        "Chauffeur",
+        "Aide aux bagages"
+      ],
+      "highlights": [
+        "Véhicule privé",
+        "Jusqu'à l'hôtel",
+        "Option VIP"
+      ]
+    },
+    "kayseri-otel": {
+      "name": "Aéroport de Kayseri → Hôtel",
+      "shortDescription": "Transfert privé (1 à 4 personnes). Véhicule idéal pour les plus longues distances.",
+      "includes": [
+        "Véhicule privé",
+        "Chauffeur",
+        "Bagages"
+      ],
+      "highlights": [
+        "Kayseri-Cappadoce",
+        "Confortable",
+        "Bagages"
+      ]
+    },
+    "minibus-grup": {
+      "name": "Minibus (5 à 12 personnes)",
+      "shortDescription": "Transfert de groupe — depuis Nevşehir ou Kayseri.",
+      "includes": [
+        "Minibus",
+        "Chauffeur",
+        "Bagages"
+      ],
+      "highlights": [
+        "Réduction de groupe",
+        "Tarif par personne",
+        "Confortable"
+      ]
+    },
+    "vip-arac": {
+      "name": "Véhicule VIP + Chauffeur (à l'heure)",
+      "shortDescription": "Véhicule VIP avec chauffeur — location à l'heure, excursion en Cappadoce.",
+      "includes": [
+        "Véhicule VIP",
+        "Chauffeur professionnel",
+        "Carburant"
+      ],
+      "highlights": [
+        "Véhicule VIP",
+        "Flexibilité horaire",
+        "Chauffeur professionnel"
+      ]
+    }
+  },
+  "faq": {
+    "f0": {
+      "question": "Combien coûte un vol en montgolfière en Cappadoce ?",
+      "answer": "Chez Trip and Tick, les tarifs des vols en montgolfière en Cappadoce démarrent à 165 € par personne. Standard 165 €, Confort 215 €, Deluxe 295 €, Privé romantique 580 €. Tous les tarifs incluent le transfert depuis l'hôtel, le petit-déjeuner, l'assurance de 40 millions d'euros, le certificat et le service de champagne."
+    },
+    "f1": {
+      "question": "À partir de quel âge peut-on monter en montgolfière en Cappadoce ?",
+      "answer": "Les enfants âgés de 6 ans et plus peuvent participer aux vols en montgolfière en Cappadoce. Les enfants de moins de 6 ans ne peuvent pas voler pour des raisons de sécurité. Un tarif enfant réduit de 80 % s'applique aux enfants de 7 à 12 ans."
+    },
+    "f2": {
+      "question": "Les femmes enceintes peuvent-elles monter en montgolfière ?",
+      "answer": "Non. Les femmes enceintes ne peuvent pas participer aux vols en montgolfière pour des raisons de sécurité. Les personnes souffrant de problèmes cardiaques graves ou de tension artérielle ne devraient pas voler non plus."
+    },
+    "f3": {
+      "question": "Dans quels cas un vol en montgolfière en Cappadoce est-il annulé ?",
+      "answer": "Il peut être annulé en raison des conditions météo : vent supérieur à 25 km/h, visibilité réduite ou précipitations. En cas d'annulation par l'opérateur, remboursement à 100 % ou date alternative."
+    },
+    "f4": {
+      "question": "Comment réserver un vol en montgolfière en Cappadoce ?",
+      "answer": "En 5 minutes : 1) Choisissez un forfait, 2) Sélectionnez la date et le nombre de personnes, 3) Saisissez les informations des passagers, 4) Effectuez un paiement sécurisé, 5) Votre billet PDF arrive instantanément par e-mail. Assistance TR/EN."
+    },
+    "f5": {
+      "question": "Quels moyens de paiement sont acceptés ?",
+      "answer": "Visa, Mastercard, American Express et UnionPay. EUR, TRY, USD. Prise en charge du 3D Secure. Amex et UnionPay uniquement pour le TRY."
+    },
+    "f6": {
+      "question": "Quelle est la politique d'annulation ?",
+      "answer": "Plus de 72 heures à l'avance : remboursement à 100 %. 24 à 72 heures : remboursement à 50 %. Moins de 24 heures : pas de remboursement. Annulation par l'opérateur (météo incluse) : toujours remboursement à 100 % ou date alternative."
+    },
+    "f7": {
+      "question": "À quelle heure a lieu le vol en montgolfière ?",
+      "answer": "Les vols en montgolfière ont lieu au lever du soleil. Le transfert depuis l'hôtel commence 1 à 1 h 30 avant le vol — entre 04h00 et 05h30 le matin. L'heure exacte varie selon le programme de l'opérateur et la saison."
+    },
+    "f8": {
+      "question": "Comment s'habiller pendant un vol en montgolfière ?",
+      "answer": "Habillez-vous en plusieurs couches (les matins sont frais). Des chaussures fermées et confortables sont indispensables. Un chapeau, des gants (en hiver) et des lunettes de soleil sont utiles. Privilégiez des vêtements qui ne gênent pas vos mouvements pour entrer et sortir de la nacelle."
+    },
+    "f9": {
+      "question": "Pourquoi Trip and Tick est-il moins cher que les autres sites ?",
+      "answer": "Nous avons un contrat d'agence direct avec plus de 9 opérateurs ; aucune commission d'intermédiaire. Notre garantie du meilleur prix : si vous trouvez une offre moins chère, nous réservons à 5 % en dessous de ce prix (mêmes date + forfait + preuve à l'appui)."
+    }
+  },
+  "reviews": {
+    "r1": {
+      "text": "Une expérience formidable ! Les prix sont vraiment compétitifs, j'ai comparé avec d'autres sites et Trip and Tick s'est révélé le plus avantageux. Le transfert est arrivé à la minute près.",
+      "service": "Montgolfière"
+    },
+    "r2": {
+      "text": "Avec mon épouse, nous avons choisi la Cappadoce pour notre lune de miel. Réservation de l'hôtel, vol en montgolfière et quad, nous avons tout pris chez Trip and Tick. Tout était parfait, je recommande sans hésiter.",
+      "service": "Forfait"
+    },
+    "r3": {
+      "text": "Esperienza incredibile! Il volo all'alba in mongolfiera era mozzafiato. Prezzo migliore trovato online, servizio impeccabile.",
+      "service": "Montgolfière"
+    },
+    "r4": {
+      "text": "Das Preis-Leistungs-Verhältnis ist unschlagbar. Wir haben mehrere Anbieter verglichen — Trip and Tick war mit Abstand am günstigsten und die Kommunikation auf WhatsApp war exzellent.",
+      "service": "Hôtel"
+    },
+    "r5": {
+      "text": "L'excursion en quad était très amusante, le guide parlait turc et anglais. Le seul bémol : le casque était un peu grand pour quelques personnes. Mais pour ce prix, c'était parfait.",
+      "service": "Quad"
+    },
+    "r6": {
+      "text": "Booked the horse riding tour at sunset — truly magical experience. The team responded on WhatsApp within minutes and helped us swap our balloon date due to weather. Highly professional.",
+      "service": "Équitation"
+    },
+    "r7": {
+      "text": "Nous y sommes allés en famille à 4, les enfants ont 8 et 11 ans. La limite d'âge pour la montgolfière était clairement indiquée, et ils nous ont organisé une chambre familiale à l'hôtel. Des prix transparents, aucune mauvaise surprise.",
+      "service": "Montgolfière"
+    },
+    "r8": {
+      "text": "Excellent service du début à la fin. La réservation en ligne était simple, le transfert depuis l'aéroport ponctuel, et le vol en montgolfière inoubliable. Je recommande vivement.",
+      "service": "Circuit"
+    },
+    "r9": {
+      "text": "Notre vol en montgolfière a été annulé à cause de la météo, et nous avons été reportés à une autre date le jour même sans frais supplémentaires. Leur politique de remboursement est bien réelle — appliquée exactement comme indiqué. Cela inspire confiance.",
+      "service": "Montgolfière"
+    },
+    "r10": {
+      "text": "土耳其卡帕多西亚热气球太美了！预订流程简单，价格透明，全程英文沟通顺畅。绝对推荐 Trip and Tick。",
+      "service": "Montgolfière"
+    },
+    "r11": {
+      "text": "Le guide du circuit Vert était cultivé et plein d'humour. Le menu du déjeuner pourrait être enrichi, mais dans l'ensemble l'expérience que nous avons vécue dépassait largement le prix.",
+      "service": "Circuit"
+    },
+    "r12": {
+      "text": "Nous avons pris en une journée le forfait montgolfière + quad + hôtel troglodyte. La logistique était parfaite, nous n'avons jamais attendu, aucun frais supplémentaire. Je le recommande directement à mes amis qui partent en Cappadoce.",
+      "service": "Forfait"
+    }
+  }
+}

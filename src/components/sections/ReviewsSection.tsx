@@ -3,7 +3,8 @@
 import { Link } from "@/i18n/routing";
 import { Star, Quote, PenLine } from "lucide-react";
 import { pickReviews } from "@/data/reviews";
-import { useT } from "@/lib/i18n/I18nProvider";
+import { useT, useLocale } from "@/lib/i18n/I18nProvider";
+import { tReviews } from "@/lib/i18n/localizeData";
 import { ReviewScore } from "@/components/ui/ReviewScore";
 import { Button } from "@/components/ui/Button";
 
@@ -25,8 +26,9 @@ function formatDate(iso: string): string {
 
 export function ReviewsSection() {
   const t = useT();
+  const { locale } = useLocale();
   // Server-render'da tutarli olsun: seedKey sabit ("homepage").
-  const reviews = pickReviews(6, "homepage");
+  const reviews = tReviews(pickReviews(6, "homepage"), locale);
 
   return (
     <section className="section-padding bg-white">

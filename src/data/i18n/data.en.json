@@ -1,0 +1,1155 @@
+{
+  "balloons": {
+    "standart-balon-ucusu": {
+      "name": "Standard Balloon Flight",
+      "shortDescription": "Our most affordable balloon tour. 60 min flight, large basket, 100% refund on weather cancellations.",
+      "longDescription": "The best-value way to take in Cappadocia's legendary fairy chimneys from a bird's-eye view. The standard basket holds 16-20 passengers and offers a 60-minute flight accompanied by professional pilots. Hotel transfer, a light breakfast, 40 million Euro insurance, a flight certificate and medal, and a champagne landing celebration are all included in the price. Prices may vary daily depending on weather conditions and demand — the catalog price applies for dates more than 7 days away, and the current price applies within 7 days.",
+      "badge": "Most Popular",
+      "includes": [
+        "Hotel transfer",
+        "Light breakfast",
+        "40M€ insurance",
+        "Flight certificate and medal",
+        "Champagne landing celebration",
+        "Professional pilot"
+      ],
+      "excludes": [
+        "Personal expenses",
+        "Photo package (optional)"
+      ],
+      "warnings": [
+        "Children under 6 cannot fly",
+        "Pregnant women cannot fly",
+        "Those with serious heart or health conditions cannot fly",
+        "Weather-dependent cancellation — 100% refund if the operator cancels",
+        "Price may vary daily within 7 days (weather conditions + demand)"
+      ],
+      "highlights": [
+        "60 minutes",
+        "Certificate included",
+        "Champagne service"
+      ]
+    },
+    "deluxe-balon-ucusu": {
+      "name": "Deluxe Balloon Flight",
+      "shortDescription": "Small basket (max 16 people), 60-minute luxury experience + cardstock certificate.",
+      "longDescription": "A premium balloon experience. A more spacious 60-minute flight in a small basket (max 16 passengers), a cardstock flight certificate, a gourmet breakfast, and VIP transfer. We work only with the most select operators.",
+      "badge": "Deluxe",
+      "includes": [
+        "VIP hotel transfer",
+        "Gourmet breakfast",
+        "40M€ insurance",
+        "Cardstock flight certificate",
+        "Premium champagne",
+        "Professional photo shoot"
+      ],
+      "excludes": [
+        "Personal expenses"
+      ],
+      "warnings": [
+        "Children under 6 cannot fly",
+        "Pregnant women cannot fly",
+        "Those with serious heart or health conditions cannot fly"
+      ],
+      "highlights": [
+        "60 minutes",
+        "Small basket (max 16)",
+        "Cardstock certificate"
+      ]
+    },
+    "romantik-ozel-balon": {
+      "name": "Romantic Private Balloon",
+      "shortDescription": "A private basket for couples only. Marriage proposals, honeymoons, anniversaries. Ask us for a special price.",
+      "longDescription": "A private basket for just 2 people or a small group (max 8). Designed for life's most special moments. Custom decor, surprise arrangements, a photographer, premium champagne, and a personalized certificate. Since every arrangement is tailored to you, pricing is quote-based — get in touch with us.",
+      "badge": "Romantic",
+      "includes": [
+        "VIP transfer",
+        "Custom decor",
+        "Premium champagne",
+        "Professional photographer",
+        "Cardstock certificate",
+        "Surprise arrangement"
+      ],
+      "excludes": [
+        "Ring (if a marriage proposal package is selected)"
+      ],
+      "warnings": [
+        "Children cannot fly (private basket)",
+        "Pregnant women cannot fly",
+        "Those with serious heart or health conditions cannot fly"
+      ],
+      "highlights": [
+        "Couples only",
+        "Custom decor",
+        "Photographer included"
+      ]
+    }
+  },
+  "services": {
+    "atv-standart": {
+      "name": "Standard ATV Tour",
+      "shortDescription": "A 1-2 hour ATV ride at any time of day — Sword Valley, Red & Rose Valley, Çavuşin, Love Valley. Hotel transfer included.",
+      "badge": "Most Popular",
+      "includes": [
+        "ATV use",
+        "Safety equipment",
+        "Guide accompaniment",
+        "Hotel transfer (included)"
+      ],
+      "highlights": [
+        "4 famous valleys",
+        "1-2 hours",
+        "Transfer included"
+      ]
+    },
+    "atv-sunrise": {
+      "name": "Sunrise ATV Tour",
+      "shortDescription": "A 2-hour sunrise ATV ride — pairs perfectly with the balloon tour, the valleys in the morning light. Transfer included.",
+      "includes": [
+        "ATV",
+        "Safety equipment",
+        "Guide",
+        "Hotel transfer"
+      ],
+      "highlights": [
+        "Sunrise",
+        "Balloon-compatible",
+        "Transfer included"
+      ]
+    },
+    "atv-sunset": {
+      "name": "Sunset ATV Tour",
+      "shortDescription": "A 2-hour sunset ATV ride — sunset valley panorama. The most popular option.",
+      "badge": "Preferred",
+      "includes": [
+        "ATV",
+        "Safety equipment",
+        "Guide",
+        "Hotel transfer"
+      ],
+      "highlights": [
+        "Sunset",
+        "Panorama",
+        "Transfer included"
+      ]
+    },
+    "jeep-standart": {
+      "name": "Standard Jeep Safari",
+      "shortDescription": "A 3-4 hour Jeep Safari at any time of day — panoramic tour of the Göreme valleys.",
+      "includes": [
+        "Jeep",
+        "Guide",
+        "Hotel transfer"
+      ],
+      "highlights": [
+        "Göreme valleys",
+        "Flexible timing",
+        "Guide included"
+      ]
+    },
+    "jeep-sunrise": {
+      "name": "Sunrise Jeep Safari",
+      "shortDescription": "Sunrise Jeep Safari — morning light in the Göreme valleys + balloon views.",
+      "includes": [
+        "Jeep",
+        "Guide",
+        "Hotel transfer"
+      ],
+      "highlights": [
+        "Sunrise",
+        "Balloon views",
+        "Valleys"
+      ]
+    },
+    "jeep-sunset": {
+      "name": "Sunset Jeep Safari",
+      "shortDescription": "Sunset Jeep Safari — sunset panorama of the Göreme valleys.",
+      "badge": "Preferred",
+      "includes": [
+        "Jeep",
+        "Guide",
+        "Hotel transfer"
+      ],
+      "highlights": [
+        "Sunset",
+        "Panorama",
+        "Valleys"
+      ]
+    },
+    "at-standart": {
+      "name": "Standard Horseback Riding",
+      "shortDescription": "A 1-2 hour horseback ride at any time of day — the Ürgüp valleys.",
+      "includes": [
+        "Horse use",
+        "Guide",
+        "Helmet",
+        "Hotel transfer"
+      ],
+      "highlights": [
+        "Flexible timing",
+        "Valley tour",
+        "1-2 hours"
+      ]
+    },
+    "at-sunrise": {
+      "name": "Sunrise Horseback Riding Tour",
+      "shortDescription": "A 1-hour sunrise horseback ride — the Ürgüp valleys.",
+      "includes": [
+        "Horse use",
+        "Guide",
+        "Helmet",
+        "Hotel transfer"
+      ],
+      "highlights": [
+        "Sunrise",
+        "Valley tour",
+        "Guide"
+      ]
+    },
+    "at-sunset": {
+      "name": "Sunset Horseback Riding Tour",
+      "shortDescription": "A 1.5-hour sunset horseback ride — panoramic views.",
+      "includes": [
+        "Horse",
+        "Guide",
+        "Helmet",
+        "Hotel transfer"
+      ],
+      "highlights": [
+        "Sunset",
+        "Panorama",
+        "Guide"
+      ]
+    },
+    "hamam-standart": {
+      "name": "Standard Turkish Bath",
+      "shortDescription": "A 90-minute traditional Turkish bath — hot room, body scrub, foam massage, sauna, jacuzzi, tea/coffee. Hotel transfer included.",
+      "includes": [
+        "Hamam (hot room)",
+        "Body scrub (loofah)",
+        "Foam massage",
+        "Sauna + steam room",
+        "Jacuzzi",
+        "Turkish tea / coffee",
+        "Hotel transfer"
+      ],
+      "highlights": [
+        "90 min",
+        "Scrub + foam",
+        "Sauna + jacuzzi"
+      ]
+    },
+    "hamam-deluxe": {
+      "name": "Deluxe Turkish Bath + Massage",
+      "shortDescription": "Bath package + 30-minute Swedish oil massage + full-body mask. A premium spa experience, with transfer.",
+      "badge": "Premium",
+      "includes": [
+        "Full bath package",
+        "Scrub + foam",
+        "30-min Swedish oil massage",
+        "Full-body seaweed/mud mask",
+        "Sauna + jacuzzi",
+        "Beverage service",
+        "VIP transfer"
+      ],
+      "highlights": [
+        "2 hours",
+        "30-min oil massage",
+        "Full-body mask"
+      ]
+    },
+    "turk-gecesi-yemekli": {
+      "name": "Turkish Night (with Dinner + Drinks)",
+      "shortDescription": "A 3-hour Turkish Night in a cave restaurant — semah, folk dance, belly dance, Caucasian dance show + dinner + unlimited alcoholic drinks. Hotel transfer included.",
+      "badge": "Popular",
+      "includes": [
+        "Semah performance",
+        "Folk dance show (Anatolian)",
+        "Belly dance",
+        "Caucasian dance show",
+        "Turkish Classical Music",
+        "3-course dinner",
+        "Unlimited alcoholic/non-alcoholic drinks",
+        "Hotel transfer"
+      ],
+      "highlights": [
+        "Cave restaurant",
+        "Unlimited drinks",
+        "3-hour show"
+      ]
+    },
+    "turk-gecesi-yemeksiz": {
+      "name": "Turkish Night (without Dinner)",
+      "shortDescription": "Turkish Night show — semah, folk dance, belly dance, Caucasian dance. Dinner/alcohol not included, just the show + transfer.",
+      "includes": [
+        "Semah + folk dance + belly dance",
+        "Caucasian dance show",
+        "Welcome drink",
+        "Hotel transfer"
+      ],
+      "highlights": [
+        "More affordable",
+        "Show only",
+        "Transfer included"
+      ]
+    },
+    "microlight-standart": {
+      "name": "Standard Microlight Flight",
+      "shortDescription": "A 15-18 minute powered microlight flight over the heart of Cappadocia — private transfer, flight certificate, equipment, and photo shoot included.",
+      "includes": [
+        "Microlight flight",
+        "Professional pilot",
+        "Flight certificate",
+        "Private transfer",
+        "Flight equipment",
+        "Photo shoot"
+      ],
+      "highlights": [
+        "15-18 min",
+        "With a pilot",
+        "Certificate included"
+      ]
+    },
+    "microlight-deluxe": {
+      "name": "Deluxe Microlight Flight",
+      "shortDescription": "A 30-35 minute microlight flight over all of Cappadocia — longer route, more sights, premium photo package.",
+      "badge": "Deluxe",
+      "includes": [
+        "Extended microlight flight",
+        "Professional pilot",
+        "Flight certificate",
+        "VIP transfer",
+        "Premium photo package",
+        "Flight equipment"
+      ],
+      "highlights": [
+        "30-35 min",
+        "All of Cappadocia",
+        "Premium photos"
+      ]
+    },
+    "kirmizi-tur": {
+      "name": "Cappadocia Red Tour",
+      "shortDescription": "Göreme Open Air Museum, Uçhisar Castle, Zelve Open Air Museum, Paşabağ (Monks Valley), Devrent (Imagination) Valley, Avanos pottery workshop, Love Valley, Pigeon Valley, Çavuşin, leather workshop — professional guide + museum tickets + lunch included.",
+      "badge": "Most Popular",
+      "includes": [
+        "Professional tour guide (TR/EN/RU)",
+        "Hotel transfer",
+        "Museum entrance tickets",
+        "Lunch",
+        "All taxes"
+      ],
+      "highlights": [
+        "10+ stops",
+        "Göreme Open Air Museum",
+        "Avanos pottery workshop",
+        "Museum tickets included"
+      ]
+    },
+    "yesil-tur": {
+      "name": "Cappadocia Green Tour",
+      "shortDescription": "Göreme panorama, Pigeon Valley, Derinkuyu Underground City, Ihlara Valley (panoramic glass terrace + hike), lunch in Belisırma village, Selime Cathedral, Narlıgöl, Yaprakhisar — professional guide + museum tickets + lunch in Belisırma included.",
+      "badge": "Nature",
+      "includes": [
+        "Professional tour guide",
+        "Hotel transfer",
+        "Underground city + museum tickets",
+        "Lunch in Belisırma",
+        "All taxes"
+      ],
+      "highlights": [
+        "Underground city",
+        "Ihlara glass terrace",
+        "Belisırma village lunch",
+        "Selime Cathedral"
+      ]
+    },
+    "mix-tur": {
+      "name": "Cappadocia Mix Tour (Best of)",
+      "shortDescription": "The best of the Red + Green tours combined — Göreme Open Air Museum, Uçhisar Castle, Zelve, Paşabağ, Devrent, Avanos pottery, Love Valley, Özkonak or Kaymaklı Underground City, leather workshop. The most comprehensive tour in a single day.",
+      "badge": "Best of",
+      "includes": [
+        "Professional tour guide",
+        "Hotel transfer",
+        "All museum + underground tickets",
+        "Lunch",
+        "All taxes"
+      ],
+      "highlights": [
+        "Culture + Nature combo",
+        "Underground city included",
+        "12+ stops"
+      ]
+    },
+    "sari-tur": {
+      "name": "Cappadocia Yellow Tour",
+      "shortDescription": "Soğanlı churches, the ancient city of Sobesos, the Greek village of Mustafapaşa, a 2 km hike in Kızılçukur Valley, the Byzantine church in Çavuşin, a Lavender Garden, a carpet workshop, Pigeon Valley — a quieter, more in-depth route.",
+      "includes": [
+        "Professional tour guide",
+        "Transfer",
+        "Museum tickets",
+        "Lunch"
+      ],
+      "highlights": [
+        "Soğanlı churches",
+        "Kızılçukur hike",
+        "Mustafapaşa",
+        "Quiet route"
+      ]
+    },
+    "yeralti-turu": {
+      "name": "Underground Cities Tour",
+      "shortDescription": "Derinkuyu + Kaymaklı underground cities, the Byzantine church in Çavuşin, Pigeon Valley — a detailed half-day tour. Professional guide + museum tickets included.",
+      "includes": [
+        "Professional guide",
+        "Transfer",
+        "Entrance to 2 underground cities",
+        "Çavuşin church"
+      ],
+      "highlights": [
+        "2 underground cities",
+        "Çavuşin Byzantine church",
+        "Half day"
+      ]
+    },
+    "gun-batimi-turu": {
+      "name": "Sunset Panorama Tour",
+      "shortDescription": "Sunset at Aktepe + Göreme panorama + Kızılçukur Valley — wine service included.",
+      "includes": [
+        "Guide",
+        "Transfer",
+        "Wine service"
+      ],
+      "highlights": [
+        "Sunset",
+        "Wine service",
+        "Panorama"
+      ]
+    },
+    "instagram-turu": {
+      "name": "Photography & Instagram Tour",
+      "shortDescription": "Guided Instagram spots — professional photographer, shots with balloon views, edited photos.",
+      "includes": [
+        "Professional photographer",
+        "Transfer",
+        "Edited photos"
+      ],
+      "highlights": [
+        "Professional photos",
+        "Instagram spots",
+        "Editing included"
+      ]
+    },
+    "magara-otel-suit": {
+      "name": "Cave Hotel Suite (Ürgüp)",
+      "shortDescription": "Premium suite, bathroom with jacuzzi, top-floor views, butler service.",
+      "badge": "Luxury",
+      "includes": [
+        "Suite",
+        "Jacuzzi",
+        "Open buffet breakfast",
+        "Wifi",
+        "Butler"
+      ],
+      "highlights": [
+        "Jacuzzi",
+        "Premium suite",
+        "Terrace"
+      ],
+      "amenities": [
+        "Jacuzzi",
+        "Butler service",
+        "Premium suite",
+        "Open buffet",
+        "Wifi",
+        "Air conditioning"
+      ],
+      "region": "Ürgüp"
+    },
+    "magara-otel-urgup-aile": {
+      "name": "Cave Family Suite (Ürgüp)",
+      "shortDescription": "A family-friendly 2-room cave suite, child bed available, spacious.",
+      "includes": [
+        "2-room suite",
+        "Child bed",
+        "Breakfast",
+        "Wifi",
+        "Air conditioning"
+      ],
+      "highlights": [
+        "2 rooms",
+        "Family-friendly",
+        "Spacious"
+      ],
+      "amenities": [
+        "2-room suite",
+        "Child bed",
+        "Spacious area",
+        "Open buffet",
+        "Wifi"
+      ],
+      "region": "Ürgüp"
+    },
+    "magara-otel-goreme-honeymoon": {
+      "name": "Honeymoon Cave (Göreme)",
+      "shortDescription": "A VIP package for honeymoon couples — bubble-filled jacuzzi, champagne, flower welcome.",
+      "badge": "Honeymoon",
+      "includes": [
+        "VIP suite",
+        "Jacuzzi",
+        "Champagne",
+        "Flower decor",
+        "Late check-out"
+      ],
+      "highlights": [
+        "Honeymoon",
+        "VIP suite",
+        "Champagne"
+      ],
+      "amenities": [
+        "VIP suite",
+        "Jacuzzi",
+        "Champagne service",
+        "Flower decor",
+        "Late check-out"
+      ],
+      "region": "Göreme"
+    },
+    "resort-avanos-spa": {
+      "name": "Spa Resort (Avanos)",
+      "shortDescription": "A thermal spa resort — indoor pool, massage, Turkish bath, half board included.",
+      "badge": "Spa",
+      "includes": [
+        "Spa access",
+        "Indoor pool",
+        "Turkish bath",
+        "Half board",
+        "30-min massage"
+      ],
+      "highlights": [
+        "Spa",
+        "Turkish bath",
+        "Half board"
+      ],
+      "amenities": [
+        "Spa",
+        "Indoor pool",
+        "Turkish bath",
+        "Half board",
+        "Massage"
+      ],
+      "region": "Avanos"
+    },
+    "resort-nevsehir-deluxe": {
+      "name": "Deluxe Resort (Nevşehir)",
+      "shortDescription": "All-inclusive deluxe resort — outdoor/indoor pools, fitness, dinner.",
+      "includes": [
+        "All-inclusive",
+        "Pools",
+        "Fitness",
+        "Dinner",
+        "Air conditioning"
+      ],
+      "highlights": [
+        "All-inclusive",
+        "2 pools",
+        "Fitness"
+      ],
+      "amenities": [
+        "All-inclusive",
+        "Outdoor/indoor pool",
+        "Fitness",
+        "Dinner"
+      ],
+      "region": "Nevşehir"
+    },
+    "magara-otel-deluxe": {
+      "name": "Deluxe Cave Hotel (Göreme)",
+      "shortDescription": "Authentic stone cave rooms, open buffet breakfast, panoramic terrace views.",
+      "includes": [
+        "Cave room",
+        "Open buffet breakfast",
+        "Wifi",
+        "Air conditioning",
+        "Panoramic terrace"
+      ],
+      "highlights": [
+        "UNESCO area",
+        "Cave room",
+        "Breakfast"
+      ],
+      "amenities": [
+        "Cave room",
+        "Panoramic terrace",
+        "Open buffet",
+        "Wifi",
+        "Air conditioning"
+      ],
+      "region": "Göreme"
+    },
+    "magara-otel-goreme-romantik": {
+      "name": "Romantic Cave (Göreme)",
+      "shortDescription": "Designed for couples, a cave room with a fireplace, balcony, evening candle service.",
+      "includes": [
+        "Room with fireplace",
+        "Breakfast",
+        "Candle service",
+        "Wifi",
+        "Air conditioning"
+      ],
+      "highlights": [
+        "For couples",
+        "Fireplace",
+        "Candle service"
+      ],
+      "amenities": [
+        "Room with fireplace",
+        "Balcony",
+        "Candle service",
+        "Breakfast"
+      ],
+      "region": "Göreme"
+    },
+    "magara-otel-urgup-king": {
+      "name": "Cave King Room (Ürgüp)",
+      "shortDescription": "King-size bed, carved cave walls, mini bar included, valley views.",
+      "includes": [
+        "King bed",
+        "Mini bar",
+        "Breakfast",
+        "Wifi",
+        "Valley views"
+      ],
+      "highlights": [
+        "King bed",
+        "Valley views",
+        "Mini bar"
+      ],
+      "amenities": [
+        "King bed",
+        "Mini bar",
+        "Valley views",
+        "Breakfast"
+      ],
+      "region": "Ürgüp"
+    },
+    "magara-otel-urgup-cave": {
+      "name": "Heritage Cave Hotel (Ürgüp)",
+      "shortDescription": "A restored historic cave mansion, antique furniture, breakfast in the garden.",
+      "includes": [
+        "Historic room",
+        "Antique decor",
+        "Garden breakfast",
+        "Wifi"
+      ],
+      "highlights": [
+        "Historic mansion",
+        "Antique decor",
+        "Garden"
+      ],
+      "amenities": [
+        "Historic mansion",
+        "Antique decor",
+        "Garden breakfast"
+      ],
+      "region": "Ürgüp"
+    },
+    "butik-otel-uchisar-deluxe": {
+      "name": "Uçhisar Deluxe Boutique Hotel",
+      "shortDescription": "A boutique hotel with Uçhisar Castle panoramas, breakfast on the terrace, modern bathroom.",
+      "includes": [
+        "Deluxe room",
+        "Terrace breakfast",
+        "Castle views",
+        "Wifi"
+      ],
+      "highlights": [
+        "Castle views",
+        "Terrace",
+        "Modern"
+      ],
+      "amenities": [
+        "Castle views",
+        "Terrace breakfast",
+        "Modern bathroom"
+      ],
+      "region": "Uçhisar"
+    },
+    "butik-otel-urgup-design": {
+      "name": "Design Boutique Hotel (Ürgüp)",
+      "shortDescription": "A design-focused boutique hotel, artist collection wall, espresso bar.",
+      "includes": [
+        "Design room",
+        "Espresso bar",
+        "Breakfast",
+        "Wifi"
+      ],
+      "highlights": [
+        "Design",
+        "Espresso bar",
+        "Art"
+      ],
+      "amenities": [
+        "Design room",
+        "Espresso bar",
+        "Art collection"
+      ],
+      "region": "Ürgüp"
+    },
+    "butik-otel-uchisar-premium": {
+      "name": "Premium Boutique (Uçhisar)",
+      "shortDescription": "A five-star concept boutique, landscaped garden, gourmet breakfast, parking.",
+      "includes": [
+        "Premium room",
+        "Gourmet breakfast",
+        "Garden",
+        "Parking",
+        "Wifi"
+      ],
+      "highlights": [
+        "Premium",
+        "Gourmet",
+        "Garden"
+      ],
+      "amenities": [
+        "Premium room",
+        "Gourmet breakfast",
+        "Landscaped garden",
+        "Parking"
+      ],
+      "region": "Uçhisar"
+    },
+    "resort-aile": {
+      "name": "Family Resort (Nevşehir)",
+      "shortDescription": "A resort for families with children — semi-olympic pool, large garden, entertainment.",
+      "includes": [
+        "Family room",
+        "Pool",
+        "Open buffet breakfast",
+        "Garden",
+        "Entertainment"
+      ],
+      "highlights": [
+        "Child-friendly",
+        "Pool",
+        "Garden"
+      ],
+      "amenities": [
+        "Children's pool",
+        "Entertainment",
+        "Large garden",
+        "Family room"
+      ],
+      "region": "Nevşehir"
+    },
+    "glamping-cadir-deluxe": {
+      "name": "Deluxe Glamping Tent",
+      "shortDescription": "A luxury safari tent — bed, private bathroom, campfire, starry views.",
+      "badge": "Glamping",
+      "includes": [
+        "Luxury tent",
+        "Private bathroom",
+        "Campfire",
+        "Breakfast"
+      ],
+      "highlights": [
+        "Nature",
+        "Campfire",
+        "Stars"
+      ],
+      "amenities": [
+        "Luxury tent",
+        "Private bathroom",
+        "Campfire",
+        "Starry views"
+      ],
+      "region": "Cappadocia countryside"
+    },
+    "glamping-yurt-suit": {
+      "name": "Yurt Suite Glamping",
+      "shortDescription": "A Mongolian-style yurt tent suite — king-size bed, wood stove, balloon launch views.",
+      "includes": [
+        "Yurt tent",
+        "King bed",
+        "Wood stove",
+        "Breakfast",
+        "Views"
+      ],
+      "highlights": [
+        "Authentic yurt",
+        "Balloon views",
+        "Wood stove"
+      ],
+      "amenities": [
+        "Yurt tent",
+        "King bed",
+        "Wood stove",
+        "Balloon views"
+      ],
+      "region": "Cappadocia countryside"
+    },
+    "magara-otel-goreme-standart": {
+      "name": "Standard Cave (Göreme)",
+      "shortDescription": "A budget-friendly cave room, clean and comfortable, morning balloon launch views.",
+      "includes": [
+        "Cave room",
+        "Breakfast",
+        "Wifi",
+        "Balloon views"
+      ],
+      "highlights": [
+        "Affordable",
+        "Balloon views",
+        "Central"
+      ],
+      "amenities": [
+        "Cave room",
+        "Balloon views",
+        "Breakfast",
+        "Central"
+      ],
+      "region": "Göreme"
+    },
+    "butik-otel-standart": {
+      "name": "Standard Boutique Hotel (Göreme)",
+      "shortDescription": "Modern decor, a comfortable boutique hotel, morning open buffet, central location.",
+      "includes": [
+        "Standard room",
+        "Open buffet breakfast",
+        "Wifi",
+        "Air conditioning"
+      ],
+      "highlights": [
+        "City center",
+        "Modern",
+        "Breakfast"
+      ],
+      "amenities": [
+        "Modern room",
+        "Open buffet",
+        "City center"
+      ],
+      "region": "Göreme"
+    },
+    "butik-otel-goreme-loft": {
+      "name": "Loft Boutique Hotel (Göreme)",
+      "shortDescription": "Duplex loft rooms, high ceilings, rooftop bar with views.",
+      "includes": [
+        "Loft room",
+        "Rooftop bar",
+        "Breakfast",
+        "Wifi",
+        "Air conditioning"
+      ],
+      "highlights": [
+        "Loft",
+        "Rooftop bar",
+        "Modern"
+      ],
+      "amenities": [
+        "Loft room",
+        "Rooftop bar",
+        "Modern decor"
+      ],
+      "region": "Göreme"
+    },
+    "apart-daire-goreme-1": {
+      "name": "1-Bedroom Apartment (Göreme)",
+      "shortDescription": "A 1-bedroom apartment with a kitchen — ideal for longer stays, cook for yourself.",
+      "includes": [
+        "1-bedroom apartment",
+        "Kitchen",
+        "Washing machine",
+        "Wifi"
+      ],
+      "highlights": [
+        "Affordable",
+        "Kitchen",
+        "Long stays"
+      ],
+      "amenities": [
+        "1-bedroom apartment",
+        "Kitchen",
+        "Washing machine",
+        "Long stays"
+      ],
+      "region": "Göreme"
+    },
+    "apart-daire-urgup-2": {
+      "name": "2-Bedroom Apartment (Ürgüp)",
+      "shortDescription": "A spacious 2-bedroom apartment — for groups/families, with balcony, parking included.",
+      "includes": [
+        "2-bedroom apartment",
+        "Kitchen",
+        "Balcony",
+        "Parking",
+        "Wifi"
+      ],
+      "highlights": [
+        "Group-friendly",
+        "2 rooms",
+        "Parking"
+      ],
+      "amenities": [
+        "2-bedroom apartment",
+        "Kitchen",
+        "Balcony",
+        "Parking"
+      ],
+      "region": "Ürgüp"
+    },
+    "tam-gun-paket": {
+      "name": "Cappadocia Full Day Premium",
+      "shortDescription": "Standard balloon + Red Tour + Cave hotel 1 night + Dinner + All transfers — ideal for individuals/couples.",
+      "badge": "Great Value",
+      "includes": [
+        "Standard balloon",
+        "Red Tour (guided)",
+        "Cave hotel 1 night",
+        "Dinner",
+        "All transfers"
+      ],
+      "highlights": [
+        "4-in-1 package",
+        "Cave hotel included",
+        "2 days 1 night"
+      ]
+    },
+    "balayi-paketi": {
+      "name": "Luxury Honeymoon Package",
+      "shortDescription": "Romantic balloon + VIP Cave Hotel 2 nights + Champagne + VIP transfer + Surprise decor.",
+      "badge": "Premium",
+      "includes": [
+        "Romantic balloon (VIP basket)",
+        "VIP Cave Hotel 2 nights",
+        "Welcome champagne",
+        "VIP transfer",
+        "Surprise room decor",
+        "Romantic dinner"
+      ],
+      "highlights": [
+        "VIP balloon basket",
+        "2 nights VIP hotel",
+        "Romantic dinner"
+      ]
+    },
+    "macera-paketi": {
+      "name": "Adventure Package (2 Days)",
+      "shortDescription": "Balloon + Full ATV Experience + Horseback Riding + Jeep Safari + Hotel 1 night — for young and active guests.",
+      "includes": [
+        "Standard balloon",
+        "Full ATV (4 hours)",
+        "Horseback riding 1.5h",
+        "Jeep Safari half day",
+        "Boutique hotel 1 night",
+        "All transfers"
+      ],
+      "highlights": [
+        "4 activities + balloon",
+        "High-adrenaline",
+        "Hotel included"
+      ]
+    },
+    "aile-paketi": {
+      "name": "Complete Family Package (2 adults + 2 children)",
+      "shortDescription": "Balloon for 2 adults + child-friendly tour + family resort 2 nights + pool + entertainment + transfers.",
+      "includes": [
+        "Balloon for 2 adults",
+        "Child-friendly Green Tour",
+        "Family Resort 2 nights",
+        "Open buffet breakfast",
+        "Pool + entertainment",
+        "All transfers"
+      ],
+      "highlights": [
+        "Total family price",
+        "2 nights resort",
+        "Child-friendly"
+      ]
+    },
+    "evlilik-teklifi": {
+      "name": "Luxury Marriage Proposal Package",
+      "shortDescription": "Private balloon (couple only) + premium champagne + flower bouquet + professional photographer + video + surprise decor.",
+      "badge": "Special",
+      "includes": [
+        "Private couples balloon (just the two of you)",
+        "Premium champagne + 2 glasses",
+        "Luxury flower bouquet",
+        "Professional photographer (2 hours)",
+        "Drone video recording",
+        "Framed gift",
+        "Surprise romantic decor"
+      ],
+      "highlights": [
+        "Balloon just for you",
+        "Drone video",
+        "Professional photos"
+      ]
+    },
+    "kurumsal-paket": {
+      "name": "Corporate Event Package (10+ people)",
+      "shortDescription": "Group balloon + tour + dinner + organization for company events — per-person price (min 10 people).",
+      "includes": [
+        "Group balloon (basket for 15+)",
+        "Guided group tour",
+        "Gala dinner",
+        "Corporate organizer",
+        "Invoiced payment",
+        "Custom branding option"
+      ],
+      "highlights": [
+        "Per-person price",
+        "Corporate invoice",
+        "Flexible program"
+      ]
+    },
+    "nev-otel": {
+      "name": "Nevşehir Airport → Hotel",
+      "shortDescription": "Private transfer (1-4 people). VIP vehicle option available.",
+      "includes": [
+        "Private vehicle",
+        "Driver",
+        "Luggage assistance"
+      ],
+      "highlights": [
+        "Private vehicle",
+        "Door-to-door",
+        "VIP option"
+      ]
+    },
+    "kayseri-otel": {
+      "name": "Kayseri Airport → Hotel",
+      "shortDescription": "Private transfer (1-4 people). Ideal vehicle for the longer distance.",
+      "includes": [
+        "Private vehicle",
+        "Driver",
+        "Luggage"
+      ],
+      "highlights": [
+        "Kayseri-Cappadocia",
+        "Comfortable",
+        "Luggage"
+      ]
+    },
+    "minibus-grup": {
+      "name": "Minibus (5-12 people)",
+      "shortDescription": "Group transfer — from Nevşehir or Kayseri.",
+      "includes": [
+        "Minibus",
+        "Driver",
+        "Luggage"
+      ],
+      "highlights": [
+        "Group discount",
+        "Per-person price",
+        "Comfortable"
+      ]
+    },
+    "vip-arac": {
+      "name": "VIP Vehicle + Driver (Hourly)",
+      "shortDescription": "VIP vehicle and driver — hourly rental, Cappadocia tour.",
+      "includes": [
+        "VIP vehicle",
+        "Professional driver",
+        "Fuel"
+      ],
+      "highlights": [
+        "VIP vehicle",
+        "Hourly flexibility",
+        "Professional driver"
+      ]
+    }
+  },
+  "faq": {
+    "f0": {
+      "question": "How much does a Cappadocia balloon tour cost?",
+      "answer": "At Trip and Tick, Cappadocia balloon tour prices start from €165 per person. Standard €165, Comfort €215, Deluxe €295, Romantic private €580. All prices include hotel transfer, breakfast, 40 million Euro insurance, certificate, and champagne service."
+    },
+    "f1": {
+      "question": "What is the minimum age to ride a Cappadocia balloon?",
+      "answer": "Children aged 6 and over can join Cappadocia balloon flights. Children under 6 cannot fly for safety reasons. An 80% discounted child rate applies for children aged 7-12."
+    },
+    "f2": {
+      "question": "Can pregnant women fly in a balloon?",
+      "answer": "No. Pregnant women cannot join balloon flights for safety reasons. Those with serious heart or blood pressure conditions should also not fly."
+    },
+    "f3": {
+      "question": "When is a Cappadocia balloon tour cancelled?",
+      "answer": "It may be cancelled due to weather conditions: wind above 25 km/h, reduced visibility, or precipitation. If the operator cancels, you receive a 100% refund or an alternative date."
+    },
+    "f4": {
+      "question": "How do I make a Cappadocia balloon reservation?",
+      "answer": "In 5 minutes: 1) Choose a package, 2) Set the date and number of people, 3) Enter passenger details, 4) Make a secure payment, 5) Your PDF ticket arrives in your email instantly. TR/EN support."
+    },
+    "f5": {
+      "question": "Which payment methods are accepted?",
+      "answer": "Visa, Mastercard, American Express, and UnionPay. EUR, TRY, USD. 3D Secure is supported. Amex and UnionPay are for TRY only."
+    },
+    "f6": {
+      "question": "What is the cancellation policy?",
+      "answer": "72+ hours in advance: 100% refund. 24-72 hours: 50% refund. Less than 24 hours: no refund. Operator cancellation (including weather): always a 100% refund or an alternative date."
+    },
+    "f7": {
+      "question": "What time is the balloon tour?",
+      "answer": "Balloon flights take place at sunrise. The hotel transfer starts 1-1.5 hours before the flight — between 04:00 and 05:30 in the morning. The exact time varies depending on the operator's schedule and the season."
+    },
+    "f8": {
+      "question": "What should I wear during the balloon tour?",
+      "answer": "Layered clothing (mornings are cool). Closed, comfortable shoes are essential. A hat, gloves (in winter), and sunglasses are useful. Clothing that doesn't restrict your movement in and out of the basket."
+    },
+    "f9": {
+      "question": "Why is Trip and Tick cheaper than other sites?",
+      "answer": "We have direct agency agreements with 9+ operators; no intermediary commission. Our lowest-price guarantee: if you find a cheaper offer, we'll book it 5% below that price (same date + package + proof)."
+    }
+  },
+  "reviews": {
+    "r1": {
+      "text": "It was an amazing experience! The prices are truly competitive — I compared with other sites, and Trip and Tick was the most affordable. The transfer arrived right on time.",
+      "service": "Balloon"
+    },
+    "r2": {
+      "text": "My wife and I chose Cappadocia for our honeymoon. We booked the hotel, the balloon tour, and the ATV all through Trip and Tick. Everything was flawless — I highly recommend them.",
+      "service": "Package"
+    },
+    "r3": {
+      "text": "Esperienza incredibile! Il volo all'alba in mongolfiera era mozzafiato. Prezzo migliore trovato online, servizio impeccabile.",
+      "service": "Balloon"
+    },
+    "r4": {
+      "text": "Das Preis-Leistungs-Verhältnis ist unschlagbar. Wir haben mehrere Anbieter verglichen — Trip and Tick war mit Abstand am günstigsten und die Kommunikation auf WhatsApp war exzellent.",
+      "service": "Hotel"
+    },
+    "r5": {
+      "text": "The ATV tour was a lot of fun, and the guide spoke both Turkish and English. The only downside: the helmet was a bit loose for a few people. Still, excellent value for the price.",
+      "service": "ATV"
+    },
+    "r6": {
+      "text": "Booked the horse riding tour at sunset — truly magical experience. The team responded on WhatsApp within minutes and helped us swap our balloon date due to weather. Highly professional.",
+      "service": "Horseback Riding"
+    },
+    "r7": {
+      "text": "We went as a family of 4, with children aged 8 and 11. The age limit for the balloon was clearly stated, and they arranged a family room at the hotel. Transparent pricing, no surprises at all.",
+      "service": "Balloon"
+    },
+    "r8": {
+      "text": "Excellent service du début à la fin. La réservation en ligne était simple, le transfert depuis l'aéroport ponctuel, et le vol en montgolfière inoubliable. Je recommande vivement.",
+      "service": "Tour"
+    },
+    "r9": {
+      "text": "Our balloon was cancelled due to weather, and we were rebooked for another date the same day at no extra charge. Their refund policies are real — applied exactly as written. It builds trust.",
+      "service": "Balloon"
+    },
+    "r10": {
+      "text": "土耳其卡帕多西亚热气球太美了！预订流程简单，价格透明，全程英文沟通顺畅。绝对推荐 Trip and Tick。",
+      "service": "Balloon"
+    },
+    "r11": {
+      "text": "The Green Tour guide was knowledgeable and witty. The lunch menu could be more varied, but overall the experience we had was well above the price.",
+      "service": "Tour"
+    },
+    "r12": {
+      "text": "We took the balloon + ATV + cave hotel package in a single day. The logistics were perfect, we never waited, and there were no extra costs. I'd recommend this directly to any friends heading to Cappadocia.",
+      "service": "Package"
+    }
+  }
+}

@@ -1,0 +1,1155 @@
+{
+  "balloons": {
+    "standart-balon-ucusu": {
+      "name": "标准热气球飞行",
+      "shortDescription": "最经济的热气球之旅。飞行 60 分钟，大容量吊篮，天气取消 100% 退款。",
+      "longDescription": "想从空中俯瞰卡帕多奇亚传奇般的精灵烟囱，这是性价比最高的选择。标准吊篮可容纳 16-20 名乘客，在专业飞行员陪同下提供 60 分钟飞行。酒店接送、简易早餐、4000 万欧元保险、飞行证书与奖章、香槟落地庆祝——全部包含在价格内。价格会根据天气状况和客流量每日变动——距出发 7 天以上的日期适用目录价，7 天以内则适用实时价格。",
+      "badge": "最受欢迎",
+      "includes": [
+        "酒店接送",
+        "简易早餐",
+        "4000 万欧元保险",
+        "飞行证书与奖章",
+        "香槟落地庆祝",
+        "专业飞行员"
+      ],
+      "excludes": [
+        "个人消费",
+        "照片套餐（可选）"
+      ],
+      "warnings": [
+        "6 岁以下儿童不可乘坐",
+        "孕妇不可乘坐",
+        "患有严重心脏病或健康问题者不可乘坐",
+        "因天气原因取消——若运营方取消则 100% 退款",
+        "价格在 7 天以内可能每日变动（天气状况 + 客流量）"
+      ],
+      "highlights": [
+        "60 分钟",
+        "含证书",
+        "香槟服务"
+      ]
+    },
+    "deluxe-balon-ucusu": {
+      "name": "豪华热气球飞行",
+      "shortDescription": "小型吊篮（最多 16 人），60 分钟奢华体验 + 卡片式证书。",
+      "longDescription": "尊享热气球体验。小型吊篮（最多 16 名乘客）带来更宽敞的 60 分钟飞行，卡片式飞行证书、美食早餐及 VIP 接送。仅与最顶级的运营方合作。",
+      "badge": "豪华",
+      "includes": [
+        "VIP 酒店接送",
+        "美食早餐",
+        "4000 万欧元保险",
+        "卡片式飞行证书",
+        "尊享香槟",
+        "专业摄影拍摄"
+      ],
+      "excludes": [
+        "个人消费"
+      ],
+      "warnings": [
+        "6 岁以下儿童不可乘坐",
+        "孕妇不可乘坐",
+        "患有严重心脏病或健康问题者不可乘坐"
+      ],
+      "highlights": [
+        "60 分钟",
+        "小型吊篮（最多 16 人）",
+        "卡片式证书"
+      ]
+    },
+    "romantik-ozel-balon": {
+      "name": "浪漫私人热气球",
+      "shortDescription": "仅供情侣的专属吊篮。求婚、蜜月、纪念日。专属价格请咨询。",
+      "longDescription": "仅 2 人的专属吊篮或小型团体（最多 8 人）。专为人生最特别的时刻打造。专属装饰、惊喜策划、摄影师、尊享香槟、个性化证书。由于每场策划都为您量身定制，价格按报价方式确定——请与我们联系。",
+      "badge": "浪漫",
+      "includes": [
+        "VIP 接送",
+        "专属装饰",
+        "尊享香槟",
+        "专业摄影师",
+        "卡片式证书",
+        "惊喜策划"
+      ],
+      "excludes": [
+        "戒指（如选求婚套餐）"
+      ],
+      "warnings": [
+        "儿童不可乘坐（专属吊篮）",
+        "孕妇不可乘坐",
+        "患有严重心脏病或健康问题者不可乘坐"
+      ],
+      "highlights": [
+        "仅限情侣",
+        "专属装饰",
+        "含摄影师"
+      ]
+    }
+  },
+  "services": {
+    "atv-standart": {
+      "name": "ATV 标准之旅",
+      "shortDescription": "白天任意时段 1-2 小时 ATV——Sword Valley、Red & Rose Valley、Çavuşin、Love Valley。含酒店接送。",
+      "badge": "最受欢迎",
+      "includes": [
+        "ATV 使用",
+        "安全装备",
+        "向导陪同",
+        "酒店接送（含）"
+      ],
+      "highlights": [
+        "4 处著名峡谷",
+        "1-2 小时",
+        "含接送"
+      ]
+    },
+    "atv-sunrise": {
+      "name": "日出 ATV 之旅",
+      "shortDescription": "2 小时日出 ATV——与热气球之旅时间衔接，晨光中的峡谷。含接送。",
+      "includes": [
+        "ATV",
+        "安全装备",
+        "向导",
+        "酒店接送"
+      ],
+      "highlights": [
+        "日出",
+        "衔接热气球",
+        "含接送"
+      ]
+    },
+    "atv-sunset": {
+      "name": "日落 ATV 之旅",
+      "shortDescription": "2 小时日落 ATV——日落峡谷全景。最受青睐的选择。",
+      "badge": "热门之选",
+      "includes": [
+        "ATV",
+        "安全装备",
+        "向导",
+        "酒店接送"
+      ],
+      "highlights": [
+        "日落",
+        "全景",
+        "含接送"
+      ]
+    },
+    "jeep-standart": {
+      "name": "吉普越野标准之旅",
+      "shortDescription": "白天任意时段 3-4 小时吉普越野——Göreme 峡谷全景之旅。",
+      "includes": [
+        "吉普车",
+        "向导",
+        "酒店接送"
+      ],
+      "highlights": [
+        "Göreme 峡谷",
+        "白天灵活安排",
+        "含向导"
+      ]
+    },
+    "jeep-sunrise": {
+      "name": "日出吉普越野",
+      "shortDescription": "日出吉普越野——Göreme 峡谷的晨光 + 热气球景观。",
+      "includes": [
+        "吉普车",
+        "向导",
+        "酒店接送"
+      ],
+      "highlights": [
+        "日出",
+        "热气球景观",
+        "峡谷"
+      ]
+    },
+    "jeep-sunset": {
+      "name": "日落吉普越野",
+      "shortDescription": "日落吉普越野——Göreme 峡谷日落全景。",
+      "badge": "热门之选",
+      "includes": [
+        "吉普车",
+        "向导",
+        "酒店接送"
+      ],
+      "highlights": [
+        "日落",
+        "全景",
+        "峡谷"
+      ]
+    },
+    "at-standart": {
+      "name": "骑马标准之旅",
+      "shortDescription": "白天任意时段 1-2 小时骑马——Ürgüp 峡谷。",
+      "includes": [
+        "马匹使用",
+        "向导",
+        "头盔",
+        "酒店接送"
+      ],
+      "highlights": [
+        "白天灵活安排",
+        "峡谷之旅",
+        "1-2 小时"
+      ]
+    },
+    "at-sunrise": {
+      "name": "日出骑马之旅",
+      "shortDescription": "1 小时日出骑马——Ürgüp 峡谷。",
+      "includes": [
+        "马匹使用",
+        "向导",
+        "头盔",
+        "酒店接送"
+      ],
+      "highlights": [
+        "日出",
+        "峡谷之旅",
+        "向导"
+      ]
+    },
+    "at-sunset": {
+      "name": "日落骑马之旅",
+      "shortDescription": "1.5 小时日落骑马——全景风光。",
+      "includes": [
+        "马匹",
+        "向导",
+        "头盔",
+        "酒店接送"
+      ],
+      "highlights": [
+        "日落",
+        "全景",
+        "向导"
+      ]
+    },
+    "hamam-standart": {
+      "name": "土耳其浴标准",
+      "shortDescription": "90 分钟传统土耳其浴——热蒸区、去角质、泡沫按摩、桑拿、按摩浴缸、茶/咖啡。含酒店接送。",
+      "includes": [
+        "土耳其浴（热蒸区）",
+        "去角质（丝瓜络）",
+        "泡沫按摩",
+        "桑拿 + 蒸汽房",
+        "按摩浴缸",
+        "土耳其茶 / 咖啡",
+        "酒店接送"
+      ],
+      "highlights": [
+        "90 分钟",
+        "去角质 + 泡沫",
+        "桑拿 + 按摩浴缸"
+      ]
+    },
+    "hamam-deluxe": {
+      "name": "土耳其浴豪华 + 按摩",
+      "shortDescription": "土耳其浴套餐 + 30 分钟瑞典精油按摩 + 全身面膜。尊享水疗体验，含接送。",
+      "badge": "尊享",
+      "includes": [
+        "土耳其浴全套",
+        "去角质 + 泡沫",
+        "瑞典精油按摩 30 分钟",
+        "全身海藻/泥浆面膜",
+        "桑拿 + 按摩浴缸",
+        "饮品服务",
+        "VIP 接送"
+      ],
+      "highlights": [
+        "2 小时",
+        "30 分钟精油按摩",
+        "全身面膜"
+      ]
+    },
+    "turk-gecesi-yemekli": {
+      "name": "土耳其之夜（含餐 + 饮品）",
+      "shortDescription": "在洞穴餐厅享受 3 小时土耳其之夜——萨玛旋转舞、民俗舞、肚皮舞、高加索舞表演 + 餐食 + 无限量酒水。含酒店接送。",
+      "badge": "热门",
+      "includes": [
+        "萨玛旋转舞表演",
+        "民俗舞表演（安纳托利亚）",
+        "肚皮舞",
+        "高加索舞表演",
+        "土耳其古典音乐",
+        "3 道菜餐食",
+        "无限量含酒精/无酒精饮品",
+        "酒店接送"
+      ],
+      "highlights": [
+        "洞穴餐厅",
+        "无限量饮品",
+        "3 小时表演"
+      ]
+    },
+    "turk-gecesi-yemeksiz": {
+      "name": "土耳其之夜（不含餐）",
+      "shortDescription": "土耳其之夜表演——萨玛旋转舞、民俗舞、肚皮舞、高加索舞。不含餐食/酒水，仅含表演 + 接送。",
+      "includes": [
+        "萨玛旋转舞 + 民俗舞 + 肚皮舞",
+        "高加索舞表演",
+        "迎宾饮品",
+        "酒店接送"
+      ],
+      "highlights": [
+        "更实惠",
+        "仅含表演",
+        "含接送"
+      ]
+    },
+    "microlight-standart": {
+      "name": "超轻型飞机标准飞行",
+      "shortDescription": "15-18 分钟，飞越卡帕多奇亚核心地带的动力超轻型飞机飞行——含专属接送、飞行证书、装备、摄影拍摄。",
+      "includes": [
+        "超轻型飞机飞行",
+        "专业飞行员",
+        "飞行证书",
+        "专属接送",
+        "飞行装备",
+        "摄影拍摄"
+      ],
+      "highlights": [
+        "15-18 分钟",
+        "与飞行员同行",
+        "含证书"
+      ]
+    },
+    "microlight-deluxe": {
+      "name": "超轻型飞机豪华飞行",
+      "shortDescription": "30-35 分钟飞越整个卡帕多奇亚的超轻型飞机飞行——更长航线、更多景点、尊享照片套餐。",
+      "badge": "豪华",
+      "includes": [
+        "超轻型飞机长程飞行",
+        "专业飞行员",
+        "飞行证书",
+        "VIP 接送",
+        "尊享照片套餐",
+        "飞行装备"
+      ],
+      "highlights": [
+        "30-35 分钟",
+        "整个卡帕多奇亚",
+        "尊享照片"
+      ]
+    },
+    "kirmizi-tur": {
+      "name": "卡帕多奇亚红线之旅（Red Tour）",
+      "shortDescription": "Göreme 露天博物馆、Uçhisar 城堡、Zelve 露天博物馆、Paşabağ（修士谷）、Devrent（梦幻谷）、Avanos 陶艺工坊、爱情谷、鸽子谷、Çavuşin、皮革工坊——含专业向导 + 博物馆门票 + 午餐。",
+      "badge": "最受欢迎",
+      "includes": [
+        "专业导游（TR/EN/RU）",
+        "酒店接送",
+        "博物馆门票",
+        "午餐",
+        "所有税费"
+      ],
+      "highlights": [
+        "10+ 个景点",
+        "Göreme 露天博物馆",
+        "Avanos 陶艺工坊",
+        "含博物馆门票"
+      ]
+    },
+    "yesil-tur": {
+      "name": "卡帕多奇亚绿线之旅（Green Tour）",
+      "shortDescription": "Göreme 全景、鸽子谷、Derinkuyu 地下城、Ihlara 峡谷（全景玻璃观景台 + 徒步）、Belisırma 村午餐、Selime 大教堂、Narlıgöl、Yaprakhisar——含专业向导 + 博物馆门票 + Belisırma 午餐。",
+      "badge": "自然",
+      "includes": [
+        "专业导游",
+        "酒店接送",
+        "地下城 + 博物馆门票",
+        "Belisırma 午餐",
+        "所有税费"
+      ],
+      "highlights": [
+        "地下城",
+        "Ihlara 玻璃观景台",
+        "Belisırma 乡村午餐",
+        "Selime 大教堂"
+      ]
+    },
+    "mix-tur": {
+      "name": "卡帕多奇亚精选之旅（Best of）",
+      "shortDescription": "红线 + 绿线精华混合——Göreme 露天博物馆、Uçhisar 城堡、Zelve、Paşabağ、Devrent、Avanos 陶艺、爱情谷、Özkonak 或 Kaymaklı 地下城、皮革工坊。一天内最全面的行程。",
+      "badge": "精选",
+      "includes": [
+        "专业导游",
+        "酒店接送",
+        "所有博物馆 + 地下城门票",
+        "午餐",
+        "所有税费"
+      ],
+      "highlights": [
+        "文化 + 自然组合",
+        "含地下城",
+        "12+ 个景点"
+      ]
+    },
+    "sari-tur": {
+      "name": "卡帕多奇亚黄线之旅（Yellow Tour）",
+      "shortDescription": "Soğanlı 教堂群、Sobesos 古城、Mustafapaşa 希腊村、Kızılçukur 峡谷 2 公里徒步、Çavuşin 拜占庭教堂、薰衣草花园、地毯工坊、鸽子谷——更宁静、更深入的路线。",
+      "includes": [
+        "专业导游",
+        "接送",
+        "博物馆门票",
+        "午餐"
+      ],
+      "highlights": [
+        "Soğanlı 教堂群",
+        "Kızılçukur 徒步",
+        "Mustafapaşa",
+        "宁静路线"
+      ]
+    },
+    "yeralti-turu": {
+      "name": "地下城之旅",
+      "shortDescription": "Derinkuyu + Kaymaklı 地下城、Çavuşin 拜占庭教堂、鸽子谷——半天深度之旅。含专业向导 + 博物馆门票。",
+      "includes": [
+        "专业向导",
+        "接送",
+        "2 座地下城入场",
+        "Çavuşin 教堂"
+      ],
+      "highlights": [
+        "2 座地下城",
+        "Çavuşin 拜占庭教堂",
+        "半天"
+      ]
+    },
+    "gun-batimi-turu": {
+      "name": "日落全景之旅",
+      "shortDescription": "Aktepe + Göreme 全景 + Kızılçukur 峡谷日落——含葡萄酒招待。",
+      "includes": [
+        "向导",
+        "接送",
+        "葡萄酒招待"
+      ],
+      "highlights": [
+        "日落",
+        "葡萄酒服务",
+        "全景"
+      ]
+    },
+    "instagram-turu": {
+      "name": "摄影 & Instagram 之旅",
+      "shortDescription": "向导带队的 Instagram 打卡点——专业摄影师、以热气球为背景的拍摄、修图后的成片。",
+      "includes": [
+        "专业摄影师",
+        "接送",
+        "修图后的照片"
+      ],
+      "highlights": [
+        "专业摄影",
+        "Instagram 打卡点",
+        "含修图"
+      ]
+    },
+    "magara-otel-suit": {
+      "name": "洞穴酒店套房（Ürgüp）",
+      "shortDescription": "尊享套房，带按摩浴缸的浴室，高层景观，管家服务。",
+      "badge": "奢华",
+      "includes": [
+        "套房",
+        "按摩浴缸",
+        "自助早餐",
+        "Wifi",
+        "管家"
+      ],
+      "highlights": [
+        "按摩浴缸",
+        "尊享套房",
+        "露台"
+      ],
+      "amenities": [
+        "按摩浴缸",
+        "管家服务",
+        "尊享套房",
+        "自助餐",
+        "Wifi",
+        "空调"
+      ],
+      "region": "Ürgüp"
+    },
+    "magara-otel-urgup-aile": {
+      "name": "洞穴家庭套房（Ürgüp）",
+      "shortDescription": "适合家庭的 2 居室洞穴套房，提供儿童床，空间宽敞。",
+      "includes": [
+        "2 居室套房",
+        "儿童床",
+        "早餐",
+        "Wifi",
+        "空调"
+      ],
+      "highlights": [
+        "2 居室",
+        "家庭友好",
+        "宽敞"
+      ],
+      "amenities": [
+        "2 居室套房",
+        "儿童床",
+        "宽敞空间",
+        "自助餐",
+        "Wifi"
+      ],
+      "region": "Ürgüp"
+    },
+    "magara-otel-goreme-honeymoon": {
+      "name": "蜜月洞穴（Göreme）",
+      "shortDescription": "为蜜月情侣打造的 VIP 套餐——满注泡沫的按摩浴缸、香槟、鲜花迎宾。",
+      "badge": "蜜月",
+      "includes": [
+        "VIP 套房",
+        "按摩浴缸",
+        "香槟",
+        "鲜花装饰",
+        "延迟退房"
+      ],
+      "highlights": [
+        "蜜月",
+        "VIP 套房",
+        "香槟"
+      ],
+      "amenities": [
+        "VIP 套房",
+        "按摩浴缸",
+        "香槟服务",
+        "鲜花装饰",
+        "延迟退房"
+      ],
+      "region": "Göreme"
+    },
+    "resort-avanos-spa": {
+      "name": "水疗度假村（Avanos）",
+      "shortDescription": "温泉水疗度假村——室内泳池、按摩、土耳其浴、含半膳。",
+      "badge": "水疗",
+      "includes": [
+        "水疗使用",
+        "室内泳池",
+        "土耳其浴",
+        "半膳",
+        "按摩 30 分钟"
+      ],
+      "highlights": [
+        "水疗",
+        "土耳其浴",
+        "半膳"
+      ],
+      "amenities": [
+        "水疗",
+        "室内泳池",
+        "土耳其浴",
+        "半膳",
+        "按摩"
+      ],
+      "region": "Avanos"
+    },
+    "resort-nevsehir-deluxe": {
+      "name": "豪华度假村（Nevşehir）",
+      "shortDescription": "全包式豪华度假村——室外/室内泳池、健身、晚餐。",
+      "includes": [
+        "全包",
+        "泳池",
+        "健身",
+        "晚餐",
+        "空调"
+      ],
+      "highlights": [
+        "全包",
+        "2 个泳池",
+        "健身"
+      ],
+      "amenities": [
+        "全包",
+        "室外/室内泳池",
+        "健身",
+        "晚餐"
+      ],
+      "region": "Nevşehir"
+    },
+    "magara-otel-deluxe": {
+      "name": "洞穴酒店豪华（Göreme）",
+      "shortDescription": "原汁原味的石质洞穴客房，自助早餐，全景露台风光。",
+      "includes": [
+        "洞穴客房",
+        "自助早餐",
+        "Wifi",
+        "空调",
+        "全景露台"
+      ],
+      "highlights": [
+        "UNESCO 区域",
+        "洞穴客房",
+        "早餐"
+      ],
+      "amenities": [
+        "洞穴客房",
+        "全景露台",
+        "自助餐",
+        "Wifi",
+        "空调"
+      ],
+      "region": "Göreme"
+    },
+    "magara-otel-goreme-romantik": {
+      "name": "浪漫洞穴（Göreme）",
+      "shortDescription": "为情侣设计，带壁炉的洞穴客房，阳台，晚间烛光服务。",
+      "includes": [
+        "带壁炉客房",
+        "早餐",
+        "烛光服务",
+        "Wifi",
+        "空调"
+      ],
+      "highlights": [
+        "情侣专属",
+        "壁炉",
+        "烛光服务"
+      ],
+      "amenities": [
+        "带壁炉客房",
+        "阳台",
+        "烛光服务",
+        "早餐"
+      ],
+      "region": "Göreme"
+    },
+    "magara-otel-urgup-king": {
+      "name": "洞穴大床房（Ürgüp）",
+      "shortDescription": "特大号床，雕凿的洞穴墙面，含迷你吧，峡谷景观。",
+      "includes": [
+        "大号床",
+        "迷你吧",
+        "早餐",
+        "Wifi",
+        "峡谷景观"
+      ],
+      "highlights": [
+        "大号床",
+        "峡谷景观",
+        "迷你吧"
+      ],
+      "amenities": [
+        "大号床",
+        "迷你吧",
+        "峡谷景观",
+        "早餐"
+      ],
+      "region": "Ürgüp"
+    },
+    "magara-otel-urgup-cave": {
+      "name": "传承洞穴酒店（Ürgüp）",
+      "shortDescription": "修复的历史洞穴宅邸，古董家具，花园早餐。",
+      "includes": [
+        "历史客房",
+        "古董装饰",
+        "花园早餐",
+        "Wifi"
+      ],
+      "highlights": [
+        "历史宅邸",
+        "古董装饰",
+        "花园"
+      ],
+      "amenities": [
+        "历史宅邸",
+        "古董装饰",
+        "花园早餐"
+      ],
+      "region": "Ürgüp"
+    },
+    "butik-otel-uchisar-deluxe": {
+      "name": "Uçhisar 精品酒店豪华",
+      "shortDescription": "可眺望 Uçhisar 城堡全景的精品酒店，露台早餐，现代化浴室。",
+      "includes": [
+        "豪华客房",
+        "露台早餐",
+        "城堡景观",
+        "Wifi"
+      ],
+      "highlights": [
+        "城堡景观",
+        "露台",
+        "现代化"
+      ],
+      "amenities": [
+        "城堡景观",
+        "露台早餐",
+        "现代化浴室"
+      ],
+      "region": "Uçhisar"
+    },
+    "butik-otel-urgup-design": {
+      "name": "设计精品酒店（Ürgüp）",
+      "shortDescription": "注重设计的精品酒店，艺术家藏品装饰墙，浓缩咖啡吧。",
+      "includes": [
+        "设计客房",
+        "浓缩咖啡吧",
+        "早餐",
+        "Wifi"
+      ],
+      "highlights": [
+        "设计",
+        "浓缩咖啡吧",
+        "艺术"
+      ],
+      "amenities": [
+        "设计客房",
+        "浓缩咖啡吧",
+        "艺术藏品"
+      ],
+      "region": "Ürgüp"
+    },
+    "butik-otel-uchisar-premium": {
+      "name": "尊享精品酒店（Uçhisar）",
+      "shortDescription": "五星概念精品酒店，景观花园，美食早餐，停车场。",
+      "includes": [
+        "尊享客房",
+        "美食早餐",
+        "花园",
+        "停车场",
+        "Wifi"
+      ],
+      "highlights": [
+        "尊享",
+        "美食",
+        "花园"
+      ],
+      "amenities": [
+        "尊享客房",
+        "美食早餐",
+        "景观花园",
+        "停车场"
+      ],
+      "region": "Uçhisar"
+    },
+    "resort-aile": {
+      "name": "家庭度假村（Nevşehir）",
+      "shortDescription": "为有孩子的家庭打造的度假村——半奥林匹克泳池、宽阔花园、表演活动。",
+      "includes": [
+        "家庭客房",
+        "泳池",
+        "自助早餐",
+        "花园",
+        "表演活动"
+      ],
+      "highlights": [
+        "儿童友好",
+        "泳池",
+        "花园"
+      ],
+      "amenities": [
+        "儿童泳池",
+        "表演活动",
+        "宽阔花园",
+        "家庭客房"
+      ],
+      "region": "Nevşehir"
+    },
+    "glamping-cadir-deluxe": {
+      "name": "豪华野奢帐篷",
+      "shortDescription": "奢华旅行帐篷——床铺、私人浴室、篝火、星空景观。",
+      "badge": "野奢露营",
+      "includes": [
+        "奢华帐篷",
+        "私人浴室",
+        "篝火",
+        "早餐"
+      ],
+      "highlights": [
+        "自然",
+        "篝火",
+        "星空"
+      ],
+      "amenities": [
+        "奢华帐篷",
+        "私人浴室",
+        "篝火",
+        "星空景观"
+      ],
+      "region": "卡帕多奇亚乡野"
+    },
+    "glamping-yurt-suit": {
+      "name": "蒙古包套房野奢露营",
+      "shortDescription": "蒙古风格蒙古包套房——特大号床、火炉、热气球升空景观。",
+      "includes": [
+        "蒙古包",
+        "大号床",
+        "火炉",
+        "早餐",
+        "景观"
+      ],
+      "highlights": [
+        "原汁原味蒙古包",
+        "热气球景观",
+        "火炉"
+      ],
+      "amenities": [
+        "蒙古包",
+        "大号床",
+        "火炉",
+        "热气球景观"
+      ],
+      "region": "卡帕多奇亚乡野"
+    },
+    "magara-otel-goreme-standart": {
+      "name": "洞穴标准房（Göreme）",
+      "shortDescription": "经济实惠的洞穴客房，整洁舒适，清晨热气球升空景观。",
+      "includes": [
+        "洞穴客房",
+        "早餐",
+        "Wifi",
+        "热气球景观"
+      ],
+      "highlights": [
+        "实惠价格",
+        "热气球景观",
+        "位置中心"
+      ],
+      "amenities": [
+        "洞穴客房",
+        "热气球景观",
+        "早餐",
+        "位置中心"
+      ],
+      "region": "Göreme"
+    },
+    "butik-otel-standart": {
+      "name": "精品酒店标准房（Göreme）",
+      "shortDescription": "现代装饰，舒适的精品酒店，清晨自助餐，中心地段。",
+      "includes": [
+        "标准客房",
+        "自助早餐",
+        "Wifi",
+        "空调"
+      ],
+      "highlights": [
+        "市中心",
+        "现代化",
+        "早餐"
+      ],
+      "amenities": [
+        "现代客房",
+        "自助餐",
+        "市中心"
+      ],
+      "region": "Göreme"
+    },
+    "butik-otel-goreme-loft": {
+      "name": "Loft 精品酒店（Göreme）",
+      "shortDescription": "双层 Loft 客房，高挑层高，顶层景观酒吧。",
+      "includes": [
+        "Loft 客房",
+        "顶层酒吧",
+        "早餐",
+        "Wifi",
+        "空调"
+      ],
+      "highlights": [
+        "Loft",
+        "顶层酒吧",
+        "现代化"
+      ],
+      "amenities": [
+        "Loft 客房",
+        "顶层酒吧",
+        "现代装饰"
+      ],
+      "region": "Göreme"
+    },
+    "apart-daire-goreme-1": {
+      "name": "公寓套间 1+1（Göreme）",
+      "shortDescription": "带厨房的 1+1 公寓套间——长住理想之选，可自行下厨。",
+      "includes": [
+        "1+1 公寓",
+        "厨房",
+        "洗衣机",
+        "Wifi"
+      ],
+      "highlights": [
+        "实惠",
+        "厨房",
+        "长住"
+      ],
+      "amenities": [
+        "1+1 公寓",
+        "厨房",
+        "洗衣机",
+        "长住"
+      ],
+      "region": "Göreme"
+    },
+    "apart-daire-urgup-2": {
+      "name": "公寓套间 2+1（Ürgüp）",
+      "shortDescription": "宽敞的 2+1 公寓套间——适合团体/家庭，带阳台，含停车场。",
+      "includes": [
+        "2+1 公寓",
+        "厨房",
+        "阳台",
+        "停车场",
+        "Wifi"
+      ],
+      "highlights": [
+        "适合团体",
+        "2 居室",
+        "停车场"
+      ],
+      "amenities": [
+        "2+1 公寓",
+        "厨房",
+        "阳台",
+        "停车场"
+      ],
+      "region": "Ürgüp"
+    },
+    "tam-gun-paket": {
+      "name": "卡帕多奇亚全天尊享",
+      "shortDescription": "标准热气球 + 红线之旅 + 洞穴酒店 1 晚 + 晚餐 + 全程接送——个人/情侣理想之选。",
+      "badge": "超值",
+      "includes": [
+        "标准热气球",
+        "红线之旅（含向导）",
+        "洞穴酒店 1 晚",
+        "晚餐",
+        "全程接送"
+      ],
+      "highlights": [
+        "四合一套餐",
+        "含洞穴酒店",
+        "2 天 1 晚"
+      ]
+    },
+    "balayi-paketi": {
+      "name": "蜜月奢华套餐",
+      "shortDescription": "浪漫热气球 + VIP 洞穴酒店 2 晚 + 香槟 + VIP 接送 + 惊喜装饰。",
+      "badge": "尊享",
+      "includes": [
+        "浪漫热气球（VIP 吊篮）",
+        "VIP 洞穴酒店 2 晚",
+        "迎宾香槟",
+        "VIP 接送",
+        "惊喜客房装饰",
+        "浪漫晚餐"
+      ],
+      "highlights": [
+        "VIP 热气球吊篮",
+        "2 晚 VIP 酒店",
+        "浪漫晚餐"
+      ]
+    },
+    "macera-paketi": {
+      "name": "探险套餐（2 天）",
+      "shortDescription": "热气球 + ATV 全程体验 + 骑马 + 吉普越野 + 酒店 1 晚——专为年轻活力的客人打造。",
+      "includes": [
+        "标准热气球",
+        "ATV 全程（4 小时）",
+        "骑马 1.5 小时",
+        "吉普越野半天",
+        "精品酒店 1 晚",
+        "全程接送"
+      ],
+      "highlights": [
+        "4 项活动 + 热气球",
+        "高肾上腺素",
+        "含酒店"
+      ]
+    },
+    "aile-paketi": {
+      "name": "家庭全套套餐（2 名成人 + 2 名儿童）",
+      "shortDescription": "2 名成人热气球 + 适合儿童的行程 + 家庭度假村 2 晚 + 泳池 + 表演活动 + 接送。",
+      "includes": [
+        "2 名成人热气球",
+        "适合儿童的绿线之旅",
+        "家庭度假村 2 晚",
+        "自助早餐",
+        "泳池 + 表演活动",
+        "全程接送"
+      ],
+      "highlights": [
+        "家庭打包价",
+        "2 晚度假村",
+        "儿童友好"
+      ]
+    },
+    "evlilik-teklifi": {
+      "name": "求婚奢华套餐",
+      "shortDescription": "专属热气球（仅供一对情侣）+ 尊享香槟 + 鲜花花束 + 专业摄影师 + 视频 + 惊喜装饰。",
+      "badge": "专属",
+      "includes": [
+        "专属情侣热气球（仅你们）",
+        "尊享香槟 + 2 个酒杯",
+        "奢华鲜花花束",
+        "专业摄影师（2 小时）",
+        "无人机视频录制",
+        "相框礼物",
+        "惊喜浪漫装饰"
+      ],
+      "highlights": [
+        "仅你们的热气球",
+        "无人机视频",
+        "专业摄影"
+      ]
+    },
+    "kurumsal-paket": {
+      "name": "企业活动套餐（10+ 人）",
+      "shortDescription": "为公司活动提供团体热气球 + 行程 + 晚餐 + 策划——按人均价计（最少 10 人）。",
+      "includes": [
+        "团体热气球（15+ 人吊篮）",
+        "向导带队团体游",
+        "晚宴",
+        "企业策划人",
+        "可开发票付款",
+        "专属品牌定制选项"
+      ],
+      "highlights": [
+        "人均价",
+        "企业发票",
+        "灵活行程"
+      ]
+    },
+    "nev-otel": {
+      "name": "Nevşehir 机场 → 酒店",
+      "shortDescription": "专车接送（1-4 人）。可选 VIP 车辆。",
+      "includes": [
+        "专属车辆",
+        "司机",
+        "行李协助"
+      ],
+      "highlights": [
+        "专属车辆",
+        "直达酒店",
+        "VIP 选项"
+      ]
+    },
+    "kayseri-otel": {
+      "name": "Kayseri 机场 → 酒店",
+      "shortDescription": "专车接送（1-4 人）。适合更长距离的理想车辆。",
+      "includes": [
+        "专属车辆",
+        "司机",
+        "行李"
+      ],
+      "highlights": [
+        "Kayseri-卡帕多奇亚",
+        "舒适",
+        "行李"
+      ]
+    },
+    "minibus-grup": {
+      "name": "中巴（5-12 人）",
+      "shortDescription": "团体接送——从 Nevşehir 或 Kayseri 出发。",
+      "includes": [
+        "中巴",
+        "司机",
+        "行李"
+      ],
+      "highlights": [
+        "团体优惠",
+        "人均价",
+        "舒适"
+      ]
+    },
+    "vip-arac": {
+      "name": "VIP 车辆 + 司机（按小时）",
+      "shortDescription": "VIP 车辆与司机——按小时租用，畅游卡帕多奇亚。",
+      "includes": [
+        "VIP 车辆",
+        "专业司机",
+        "燃油"
+      ],
+      "highlights": [
+        "VIP 车辆",
+        "按小时灵活",
+        "专业司机"
+      ]
+    }
+  },
+  "faq": {
+    "f0": {
+      "question": "卡帕多奇亚热气球之旅多少钱？",
+      "answer": "在 Trip and Tick，卡帕多奇亚热气球之旅价格人均 €165 起。标准 €165，舒适 €215，豪华 €295，浪漫私人 €580。所有价格均含酒店接送、早餐、4000 万欧元保险、证书及香槟服务。"
+    },
+    "f1": {
+      "question": "卡帕多奇亚热气球几岁起可以乘坐？",
+      "answer": "6 岁及以上儿童可参与卡帕多奇亚热气球飞行。6 岁以下儿童出于安全原因不可乘坐。7-12 岁儿童适用 8 折儿童价。"
+    },
+    "f2": {
+      "question": "孕妇可以乘坐热气球吗？",
+      "answer": "不可以。孕妇出于安全原因不能参与热气球飞行。患有严重心脏病或血压问题者也不应乘坐。"
+    },
+    "f3": {
+      "question": "卡帕多奇亚热气球之旅在什么情况下会取消？",
+      "answer": "可能因天气状况取消：风速超过 25 km/小时、能见度下降或降雨。若运营方取消，则 100% 退款或改期。"
+    },
+    "f4": {
+      "question": "如何预订卡帕多奇亚热气球？",
+      "answer": "5 分钟搞定：1）选择套餐，2）确定日期和人数，3）填写乘客信息，4）安全付款，5）PDF 票券即时发送至您的邮箱。提供 TR/EN 支持。"
+    },
+    "f5": {
+      "question": "接受哪些付款方式？",
+      "answer": "Visa、Mastercard、American Express 和 UnionPay。支持 EUR、TRY、USD。提供 3D Secure 验证。Amex 和 UnionPay 仅支持 TRY。"
+    },
+    "f6": {
+      "question": "取消政策是怎样的？",
+      "answer": "提前 72 小时以上：100% 退款。24-72 小时：50% 退款。不足 24 小时：不退款。运营方取消（含天气原因）：始终 100% 退款或改期。"
+    },
+    "f7": {
+      "question": "热气球之旅在几点？",
+      "answer": "热气球飞行在日出时进行。酒店接送在飞行前 1-1.5 小时开始——清晨 04:00-05:30 之间。具体时间会根据运营方安排和季节而变化。"
+    },
+    "f8": {
+      "question": "热气球之旅期间应该穿什么？",
+      "answer": "分层着装（清晨较凉）。封闭式、舒适的鞋子必不可少。帽子、手套（冬季）、太阳镜会有帮助。建议穿不会妨碍您进出吊篮活动的衣物。"
+    },
+    "f9": {
+      "question": "为什么 Trip and Tick 比其他网站更便宜？",
+      "answer": "我们与 9 家以上运营方签有直接代理合约，没有中间商佣金。我们提供最低价保证：若您找到更便宜的报价，可按该价格再低 5% 为您预订（需相同日期 + 套餐 + 凭证）。"
+    }
+  },
+  "reviews": {
+    "r1": {
+      "text": "非常棒的体验！价格确实很有竞争力，我和其他网站比较过，Trip and Tick 是最划算的。接送车准时到达，分秒不差。",
+      "service": "热气球"
+    },
+    "r2": {
+      "text": "我和妻子选择卡帕多奇亚度蜜月。酒店预订、热气球之旅和 ATV 全部在 Trip and Tick 预订。一切都完美无瑕，绝对推荐。",
+      "service": "套餐"
+    },
+    "r3": {
+      "text": "Esperienza incredibile! Il volo all'alba in mongolfiera era mozzafiato. Prezzo migliore trovato online, servizio impeccabile.",
+      "service": "热气球"
+    },
+    "r4": {
+      "text": "Das Preis-Leistungs-Verhältnis ist unschlagbar. Wir haben mehrere Anbieter verglichen — Trip and Tick war mit Abstand am günstigsten und die Kommunikation auf WhatsApp war exzellent.",
+      "service": "酒店"
+    },
+    "r5": {
+      "text": "ATV 之旅非常有趣，向导会说土耳其语和英语。唯一的不足：头盔对有些人来说偏大。不过按这个价格来说还是很完美。",
+      "service": "ATV"
+    },
+    "r6": {
+      "text": "Booked the horse riding tour at sunset — truly magical experience. The team responded on WhatsApp within minutes and helped us swap our balloon date due to weather. Highly professional.",
+      "service": "骑马"
+    },
+    "r7": {
+      "text": "我们一家 4 口去的，孩子 8 岁和 11 岁。热气球的年龄限制写得很清楚，他们还在酒店安排了家庭房。价格透明，完全没有意外收费。",
+      "service": "热气球"
+    },
+    "r8": {
+      "text": "Excellent service du début à la fin. La réservation en ligne était simple, le transfert depuis l'aéroport ponctuel, et le vol en montgolfière inoubliable. Je recommande vivement.",
+      "service": "行程"
+    },
+    "r9": {
+      "text": "我们的热气球因天气取消了，当天就被改到了另一个日期，没有额外收费。退款政策是真的——完全按书面规定执行。让人很放心。",
+      "service": "热气球"
+    },
+    "r10": {
+      "text": "土耳其卡帕多西亚热气球太美了！预订流程简单，价格透明，全程英文沟通顺畅。绝对推荐 Trip and Tick。",
+      "service": "热气球"
+    },
+    "r11": {
+      "text": "绿线之旅的向导知识渊博又风趣。午餐菜单还可以再丰富些，但总体而言我们的体验远超这个价格。",
+      "service": "行程"
+    },
+    "r12": {
+      "text": "我们买了一天内热气球 + ATV + 洞穴酒店的套餐。后勤安排完美，完全没有等待，也没有额外开销。我会直接把它推荐给去卡帕多奇亚的朋友们。",
+      "service": "套餐"
+    }
+  }
+}
