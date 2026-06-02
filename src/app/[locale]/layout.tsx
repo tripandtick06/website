@@ -127,7 +127,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
       <body className="font-sans antialiased">
         <JsonLd data={ORGANIZATION_SCHEMA} />
         <NextIntlClientProvider messages={messages} locale={typedLocale}>
-          <I18nProvider>
+          <I18nProvider initialLocale={typedLocale}>
             <CurrencyProvider>
               <Header />
               <main className="min-h-screen">{children}</main>
