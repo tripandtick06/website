@@ -5,11 +5,10 @@ import { Link } from "@/i18n/routing";
 import { Wind, Star, Clock, Users, Check, Shield } from "lucide-react";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { PageHero } from "@/components/layout/PageHero";
-import { BALLOON_PACKAGES } from "@/data/services/balloons";
 import { OPERATORS } from "@/data/services/operators";
-import { FAQ_ITEMS } from "@/data/faq";
 import { formatPrice } from "@/lib/utils";
-import { useT } from "@/lib/i18n/I18nProvider";
+import { useT, useLocale } from "@/lib/i18n/I18nProvider";
+import { tBalloons, tFaq } from "@/lib/i18n/localizeData";
 
 const BADGE_BG: Record<string, string> = {
   accent: "bg-accent",
@@ -20,8 +19,10 @@ const BADGE_BG: Record<string, string> = {
 
 export function BalonlarContent() {
   const t = useT();
+  const { locale } = useLocale();
   const b = t.page.balonlar;
-  const balonFaqs = FAQ_ITEMS.filter((f) => f.category === "balon");
+  const balonFaqs = tFaq(locale).filter((f) => f.category === "balon");
+  const packages = tBalloons(locale);
 
   return (
     <>
@@ -48,7 +49,7 @@ export function BalonlarContent() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {BALLOON_PACKAGES.map((pkg) => (
+            {packages.map((pkg) => (
               <article key={pkg.slug} className="card overflow-hidden flex flex-col">
                 <div className={`relative h-56 ${pkg.images[0] ? "bg-slate-100" : "bg-gradient-to-br from-primary via-primary-light to-accent flex items-center justify-center"}`}>
                   {pkg.images[0] ? (

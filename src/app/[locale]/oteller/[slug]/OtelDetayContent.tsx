@@ -9,7 +9,8 @@ import NextImage from "next/image";
 import { Link } from "@/i18n/routing";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { HotelInquiryForm } from "@/components/oteller/HotelInquiryForm";
-import { useT } from "@/lib/i18n/I18nProvider";
+import { useT, useLocale } from "@/lib/i18n/I18nProvider";
+import { tService } from "@/lib/i18n/localizeData";
 import { MapPin, Phone, MessageSquare, Mail } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 import { Banner } from "@/components/ui/Banner";
@@ -39,10 +40,12 @@ interface OtelDetayContentProps {
   hotel: ServiceItem;
 }
 
-export function OtelDetayContent({ hotel }: OtelDetayContentProps) {
+export function OtelDetayContent({ hotel: hotelRaw }: OtelDetayContentProps) {
   const t = useT();
+  const { locale } = useLocale();
   const ts = t.page.oteller.slug;
 
+  const hotel = tService(hotelRaw, locale);
   const tier = tierBadge(hotel.tier, ts);
   const amenities = hotel.amenities ?? hotel.includes;
 

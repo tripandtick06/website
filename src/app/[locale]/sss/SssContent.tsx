@@ -1,13 +1,16 @@
 "use client";
 
-import { useT } from "@/lib/i18n/I18nProvider";
+import { useT, useLocale } from "@/lib/i18n/I18nProvider";
+import { tFaq } from "@/lib/i18n/localizeData";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { PageHero } from "@/components/layout/PageHero";
-import { FAQ_ITEMS, type FAQItem } from "@/data/faq";
+import { type FAQItem } from "@/data/faq";
 
 export function SssContent() {
   const t = useT();
+  const { locale } = useLocale();
   const sss = t.page.sss;
+  const faqItems = tFaq(locale);
 
   const CATEGORY_LABELS: Record<FAQItem["category"], string> = {
     balon: sss.category_balon,
@@ -18,7 +21,7 @@ export function SssContent() {
   };
 
   const grouped: Record<string, FAQItem[]> = {};
-  FAQ_ITEMS.forEach((item) => {
+  faqItems.forEach((item) => {
     if (!grouped[item.category]) grouped[item.category] = [];
     grouped[item.category].push(item);
   });

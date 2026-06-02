@@ -1,5 +1,6 @@
 "use client";
-import { useT } from "@/lib/i18n/I18nProvider";
+import { useT, useLocale } from "@/lib/i18n/I18nProvider";
+import { tServiceList } from "@/lib/i18n/localizeData";
 import { Link } from "@/i18n/routing";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { PageHero } from "@/components/layout/PageHero";
@@ -8,6 +9,8 @@ import { ACTIVITIES } from "@/data/services/catalog";
 
 export function AktivitelerContent() {
   const t = useT();
+  const { locale } = useLocale();
+  const items = tServiceList(ACTIVITIES, locale);
   return (
     <>
       <PageHero
@@ -22,7 +25,7 @@ export function AktivitelerContent() {
       <section className="section-padding bg-slate-50">
         <div className="container-main">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {ACTIVITIES.map((item) => (
+            {items.map((item) => (
               <ServiceCard key={item.slug} item={item} />
             ))}
           </div>

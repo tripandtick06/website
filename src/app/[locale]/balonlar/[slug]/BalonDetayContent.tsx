@@ -14,7 +14,9 @@ import {
 } from "lucide-react";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { formatPrice } from "@/lib/utils";
-import { useT } from "@/lib/i18n/I18nProvider";
+import { useT, useLocale } from "@/lib/i18n/I18nProvider";
+import { tBalloon, tFaq } from "@/lib/i18n/localizeData";
+import { FAQ_ITEMS } from "@/data/faq";
 import type { BalloonPackage } from "@/data/services/balloons";
 import type { Operator } from "@/data/services/operators";
 import type { FAQItem } from "@/data/faq";
@@ -26,12 +28,23 @@ interface BalonDetayContentProps {
 }
 
 export function BalonDetayContent({
-  pkg,
+  pkg: pkgRaw,
   operators,
-  balonFaqs,
+  balonFaqs: balonFaqsRaw,
 }: BalonDetayContentProps) {
   const t = useT();
+  const { locale } = useLocale();
   const s = t.page.balonlar.slug;
+
+  const pkg = tBalloon(pkgRaw, locale);
+  // tFaq(locale) base FAQ_ITEMS ile ayni sira/uzunlukta; base TR question -> cevrili item map.
+  const localizedFaqs = tFaq(locale);
+  const faqByBaseQuestion = new Map(
+    FAQ_ITEMS.map((item, i) => [item.question, localizedFaqs[i]])
+  );
+  const balonFaqs = balonFaqsRaw.map(
+    (f) => faqByBaseQuestion.get(f.question) ?? f
+  );
 
   return (
     <>

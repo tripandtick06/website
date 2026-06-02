@@ -1,6 +1,8 @@
 "use client";
 
 import { useT } from "@/lib/i18n/I18nProvider";
+import { useLocale } from "@/lib/i18n/I18nProvider";
+import { tServiceList } from "@/lib/i18n/localizeData";
 import { Link } from "@/i18n/routing";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { PageHero } from "@/components/layout/PageHero";
@@ -12,6 +14,8 @@ import { Banner } from "@/components/ui/Banner";
 
 export function OtellerContent() {
   const t = useT();
+  const { locale } = useLocale();
+  const hotels = tServiceList(HOTELS, locale);
   const breadcrumbItems = [{ name: t.page.oteller.breadcrumb_name, href: "/oteller" }];
 
   return (
@@ -37,7 +41,7 @@ export function OtellerContent() {
             müsaitlik hazırlıyor — kartlardan <b>&ldquo;Fiyat teklifi al&rdquo;</b> deyin, 24 saat içinde dönüş yapalım.
           </Banner>
 
-          <HotelsGrid hotels={HOTELS} />
+          <HotelsGrid hotels={hotels} />
 
           <div className="mt-12 text-center bg-white rounded-2xl p-8 border border-slate-200">
             <h3 className="text-xl font-bold text-slate-900 mb-2">
@@ -57,7 +61,7 @@ export function OtellerContent() {
         data={[
           breadcrumbSchema(breadcrumbItems),
           itemListSchema(
-            HOTELS.map((h) => ({
+            hotels.map((h) => ({
               name: h.name,
               urlPath: `/oteller/${h.slug}`,
             })),

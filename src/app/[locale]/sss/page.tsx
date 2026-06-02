@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/layout/JsonLd";
-import { FAQ_ITEMS } from "@/data/faq";
 import { breadcrumbSchema, faqPageSchema, SITE_URL } from "@/lib/schema";
 import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
 import { DICTIONARIES, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
+import { tFaq } from "@/lib/i18n/localizeData";
 import { SssContent } from "./SssContent";
 
 export const runtime = "edge";
@@ -39,7 +39,9 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   };
 }
 
-export default function Page() {
+export default function Page({ params }: { params: { locale: string } }) {
+  const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
+  const faqItems = tFaq(loc);
   return (
     <>
       <SssContent />
@@ -47,7 +49,7 @@ export default function Page() {
         data={[
           breadcrumbSchema([{ name: "SSS", href: "/sss" }]),
           faqPageSchema(
-            FAQ_ITEMS.map((f) => ({ question: f.question, answer: f.answer }))
+            faqItems.map((f) => ({ question: f.question, answer: f.answer }))
           ),
         ]}
       />
