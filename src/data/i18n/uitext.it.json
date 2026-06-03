@@ -1,0 +1,56 @@
+{
+  "nav": {
+    "myReservations": "Le mie prenotazioni"
+  },
+  "hotelCard": {
+    "quoteCta": "Richiedi un preventivo",
+    "customPrice": "Prezzo personalizzato per te",
+    "expertTeam": "Il nostro team di esperti prepara il tuo preventivo"
+  },
+  "tier": {
+    "budget": "Economico",
+    "mid": "Fascia media",
+    "lux": "Lusso / Premium"
+  },
+  "oteller": {
+    "bannerTitle": "Prenotazione online in arrivo",
+    "bannerBody": "Non puoi ancora prenotare hotel online. Il nostro team di esperti sta preparando un prezzo personalizzato e disponibilità in tempo reale per te — tocca \"Richiedi un preventivo\" su qualsiasi scheda e ti risponderemo entro 24 ore."
+  },
+  "steps": {
+    "s1t": "Scegli un servizio",
+    "s1d": "Pallone, tour, attività o pacchetto — filtra in base a ciò di cui hai bisogno.",
+    "s2t": "Data & Ospiti",
+    "s2d": "Scegli la tua data, controlla la disponibilità in tempo reale, imposta il numero di ospiti.",
+    "s3t": "Inserisci i dettagli",
+    "s3d": "Compila i dettagli dei viaggiatori e aggiungi l'assicurazione di viaggio.",
+    "s4t": "Paga in sicurezza",
+    "s4d": "Paga in EUR o TRY con Visa, Mastercard e 3D Secure.",
+    "s5t": "Biglietto nella tua inbox",
+    "s5d": "Il tuo biglietto PDF arriva istantaneamente nella tua inbox. Sei a posto!",
+    "hotelNote": "Per gli hotel, invece di pagare online, il nostro team di esperti prepara un prezzo personalizzato e disponibilità per te — tocca \"Richiedi un preventivo\" sulla scheda dell'hotel e ti risponderemo entro 24 ore."
+  },
+  "serviceCard": {
+    "infoForm": "Info & Modulo",
+    "reserve": "Prenota ora",
+    "perCouple": "per coppia"
+  },
+  "reviewScore": {
+    "excellent": "Eccellente",
+    "veryGood": "Molto buono",
+    "good": "Buono",
+    "nice": "Carino",
+    "reviews": "recensioni",
+    "ratingLabel": "Valutazione"
+  },
+  "availability": {
+    "lastSeats": "Ultimi {n} posti",
+    "limited": "Quasi esaurito",
+    "soldOut": "Esaurito"
+  },
+  "inquiry": {
+    "sending": "Invio...",
+    "submit": "Richiedi informazioni e preventivo",
+    "received": "La tua richiesta è stata ricevuta.",
+    "error": "Qualcosa è andato storto"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "nav": {
+    "myReservations": "Minhas Reservas"
+  },
+  "hotelCard": {
+    "quoteCta": "Obter um orçamento",
+    "customPrice": "Preço personalizado para si",
+    "expertTeam": "A nossa equipa de especialistas prepara o seu orçamento"
+  },
+  "tier": {
+    "budget": "Económico",
+    "mid": "Intermédio",
+    "lux": "Luxo / Premium"
+  },
+  "oteller": {
+    "bannerTitle": "Reserva online em breve",
+    "bannerBody": "Ainda não pode reservar hotéis online. A nossa equipa de especialistas está a preparar um preço personalizado e disponibilidade em tempo real para si — toque em \"Obter um orçamento\" em qualquer cartão e entraremos em contacto consigo dentro de 24 horas."
+  },
+  "steps": {
+    "s1t": "Escolha um Serviço",
+    "s1d": "Balão, tour, atividade ou pacote — filtre pelo que precisa.",
+    "s2t": "Data & Convidados",
+    "s2d": "Escolha a sua data, veja a disponibilidade em tempo real, defina o número de convidados.",
+    "s3t": "Introduza Detalhes",
+    "s3d": "Preencha os detalhes do viajante e adicione um seguro de viagem.",
+    "s4t": "Pague com Segurança",
+    "s4d": "Pague em EUR ou TRY com Visa, Mastercard e 3D Secure.",
+    "s5t": "Bilhete na Sua Caixa de Entrada",
+    "s5d": "O seu bilhete em PDF chega instantaneamente à sua caixa de entrada. Está tudo pronto!",
+    "hotelNote": "Para hotéis, em vez de pagar online, a nossa equipa de especialistas prepara um preço personalizado e disponibilidade para si — toque em \"Obter um orçamento\" no cartão do hotel e entraremos em contacto dentro de 24 horas."
+  },
+  "serviceCard": {
+    "infoForm": "Informação & Formulário",
+    "reserve": "Reservar Agora",
+    "perCouple": "por casal"
+  },
+  "reviewScore": {
+    "excellent": "Excelente",
+    "veryGood": "Muito bom",
+    "good": "Bom",
+    "nice": "Agradável",
+    "reviews": "avaliações",
+    "ratingLabel": "Classificação"
+  },
+  "availability": {
+    "lastSeats": "Últimos {n} lugares",
+    "limited": "Quase esgotado",
+    "soldOut": "Esgotado"
+  },
+  "inquiry": {
+    "sending": "A enviar...",
+    "submit": "Solicitar Informação & Orçamento",
+    "received": "A sua solicitação foi recebida.",
+    "error": "Algo correu mal"
+  }
+}

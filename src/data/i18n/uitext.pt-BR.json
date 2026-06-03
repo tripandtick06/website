@@ -1,0 +1,56 @@
+{
+  "nav": {
+    "myReservations": "Minhas Reservas"
+  },
+  "hotelCard": {
+    "quoteCta": "Solicitar um orçamento",
+    "customPrice": "Preço personalizado para você",
+    "expertTeam": "Nossa equipe de especialistas prepara seu orçamento"
+  },
+  "tier": {
+    "budget": "Econômico",
+    "mid": "Intermediário",
+    "lux": "Luxo / Premium"
+  },
+  "oteller": {
+    "bannerTitle": "Reserva online em breve",
+    "bannerBody": "Você ainda não pode reservar hotéis online. Nossa equipe de especialistas está preparando um preço personalizado e disponibilidade ao vivo para você — toque em \"Solicitar um orçamento\" em qualquer cartão e nós retornaremos em até 24 horas."
+  },
+  "steps": {
+    "s1t": "Escolha um Serviço",
+    "s1d": "Balão, tour, atividade ou pacote — filtre pelo que você precisa.",
+    "s2t": "Data & Convidados",
+    "s2d": "Escolha sua data, veja a disponibilidade ao vivo, defina o número de convidados.",
+    "s3t": "Insira os Detalhes",
+    "s3d": "Preencha os detalhes dos viajantes e adicione um seguro de viagem.",
+    "s4t": "Pague com Segurança",
+    "s4d": "Pague em EUR ou TRY com Visa, Mastercard e 3D Secure.",
+    "s5t": "Ingresso na Sua Caixa de Entrada",
+    "s5d": "Seu ingresso em PDF chega instantaneamente na sua caixa de entrada. Você está pronto!",
+    "hotelNote": "Para hotéis, em vez de pagar online, nossa equipe de especialistas prepara um preço personalizado e disponibilidade para você — toque em \"Solicitar um orçamento\" no cartão do hotel e nós retornaremos em até 24 horas."
+  },
+  "serviceCard": {
+    "infoForm": "Informações & Formulário",
+    "reserve": "Reservar Agora",
+    "perCouple": "por casal"
+  },
+  "reviewScore": {
+    "excellent": "Excelente",
+    "veryGood": "Muito bom",
+    "good": "Bom",
+    "nice": "Agradável",
+    "reviews": "avaliações",
+    "ratingLabel": "Avaliação"
+  },
+  "availability": {
+    "lastSeats": "Últimos {n} assentos",
+    "limited": "Quase esgotado",
+    "soldOut": "Esgotado"
+  },
+  "inquiry": {
+    "sending": "Enviando...",
+    "submit": "Solicitar Informações & Orçamento",
+    "received": "Sua solicitação foi recebida.",
+    "error": "Algo deu errado"
+  }
+}

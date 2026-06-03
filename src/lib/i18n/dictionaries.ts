@@ -3,6 +3,15 @@
 // localStorage key: "tripandtick:locale", value Locale union.
 // UR = RTL (LOCALE_DIR.ur = "rtl"), digerleri LTR.
 
+import dictPt from "@/data/i18n/dict.pt.json";
+import dictPtBR from "@/data/i18n/dict.pt-BR.json";
+import dictJa from "@/data/i18n/dict.ja.json";
+import dictKo from "@/data/i18n/dict.ko.json";
+import dictIt from "@/data/i18n/dict.it.json";
+import dictRu from "@/data/i18n/dict.ru.json";
+import dictUk from "@/data/i18n/dict.uk.json";
+import dictAz from "@/data/i18n/dict.az.json";
+
 export type Locale =
   | "tr"
   | "en"
@@ -14304,19 +14313,20 @@ const BASE_DICTIONARIES = {
   },
 } as const;
 
-// Yeni diller (pt/pt-BR/ja/ko/it/ru/uk/az) gecici olarak EN blokuna alias —
-// site hemen calisir (cevrilmemis yer EN gorunur). Faz B'de gercek ceviriyle degisir.
+// Yeni diller (pt/pt-BR/ja/ko/it/ru/uk/az) — gercek ceviri JSON'lari (Faz B, LLM pipeline).
+// EN blok yapisiyla ayni; tip uyumu icin cast. Eksik/bozuk olursa build'de yakalanir.
+type En = typeof BASE_DICTIONARIES.en;
 export const DICTIONARIES = {
   ...BASE_DICTIONARIES,
-  pt: BASE_DICTIONARIES.en,
-  "pt-BR": BASE_DICTIONARIES.en,
-  ja: BASE_DICTIONARIES.en,
-  ko: BASE_DICTIONARIES.en,
-  it: BASE_DICTIONARIES.en,
-  ru: BASE_DICTIONARIES.en,
-  uk: BASE_DICTIONARIES.en,
-  az: BASE_DICTIONARIES.en,
-} as const;
+  pt: dictPt as unknown as En,
+  "pt-BR": dictPtBR as unknown as En,
+  ja: dictJa as unknown as En,
+  ko: dictKo as unknown as En,
+  it: dictIt as unknown as En,
+  ru: dictRu as unknown as En,
+  uk: dictUk as unknown as En,
+  az: dictAz as unknown as En,
+};
 
 export type Dictionary = typeof DICTIONARIES.tr;
 

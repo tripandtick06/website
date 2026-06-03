@@ -10,7 +10,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import Anthropic from "@anthropic-ai/sdk";
+import { translateJson } from "./_openai";
 import { BALLOON_PACKAGES } from "../../src/data/services/balloons";
 import { ACTIVITIES, TOURS, HOTELS, PACKAGES, TRANSFERS } from "../../src/data/services/catalog";
 import { FAQ_ITEMS } from "../../src/data/faq";
@@ -21,16 +21,19 @@ const SERVICES = [...ACTIVITIES, ...TOURS, ...HOTELS, ...PACKAGES, ...TRANSFERS]
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const OUT_DIR = path.resolve(__dirname, "../../src/data/i18n");
 
-const ALL_LOCALES = ["en", "de", "fr", "es", "nl", "zh", "hi", "ur"] as const;
+const ALL_LOCALES = [
+  "en", "de", "fr", "es", "nl", "zh", "hi", "ur",
+  "pt", "pt-BR", "ja", "ko", "it", "ru", "uk", "az",
+] as const;
 type Target = (typeof ALL_LOCALES)[number];
 
 const LOCALE_NAME: Record<Target, string> = {
   en: "English", de: "German", fr: "French", es: "Spanish",
   nl: "Dutch", zh: "Simplified Chinese", hi: "Hindi", ur: "Urdu",
+  pt: "European Portuguese", "pt-BR": "Brazilian Portuguese", ja: "Japanese",
+  ko: "Korean", it: "Italian", ru: "Russian", uk: "Ukrainian", az: "Azerbaijani",
 };
 
-const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
-const MODEL = "claude-sonnet-4-6";
 
 function buildSource() {
   const balloons: Record<string, unknown> = {};
@@ -70,17 +73,8 @@ Translate JSON VALUES from Turkish into {LANG}. Rules:
 - Keep tone trustworthy and concise (booking.com style). No markdown, no comments, no extra text — JSON only.`;
 
 async function translateChunk(obj: Record<string, unknown>, lang: string): Promise<Record<string, unknown>> {
-  const res = await client.messages.create({
-    model: MODEL,
-    max_tokens: 8192,
-    system: SYSTEM.replace(/\{LANG\}/g, lang),
-    messages: [{ role: "user", content: "Translate this JSON:\n" + JSON.stringify(obj) }],
-  });
-  const text = res.content.filter((b) => b.type === "text").map((b) => (b as { text: string }).text).join("");
-  const start = text.indexOf("{");
-  const end = text.lastIndexOf("}");
-  if (start < 0 || end < 0) throw new Error("No JSON in response: " + text.slice(0, 200));
-  return JSON.parse(text.slice(start, end + 1));
+  const out = await translateJson(obj, SYSTEM.replace(/\{LANG\}/g, lang), lang);
+  return out as Record<string, unknown>;
 }
 
 function chunkObject(obj: Record<string, unknown>, size: number): Record<string, unknown>[] {
@@ -116,7 +110,6 @@ async function translateDomain(obj: Record<string, unknown>, lang: string, chunk
 }
 
 async function main() {
-  if (!process.env.ANTHROPIC_API_KEY) throw new Error("ANTHROPIC_API_KEY missing");
   fs.mkdirSync(OUT_DIR, { recursive: true });
   const src = buildSource();
   const argv = process.argv.slice(2).filter((a) => (ALL_LOCALES as readonly string[]).includes(a)) as Target[];

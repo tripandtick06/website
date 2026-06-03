@@ -17,6 +17,14 @@ import nl from "@/data/i18n/data.nl.json";
 import zh from "@/data/i18n/data.zh.json";
 import hi from "@/data/i18n/data.hi.json";
 import ur from "@/data/i18n/data.ur.json";
+import pt from "@/data/i18n/data.pt.json";
+import ptBR from "@/data/i18n/data.pt-BR.json";
+import ja from "@/data/i18n/data.ja.json";
+import ko from "@/data/i18n/data.ko.json";
+import it from "@/data/i18n/data.it.json";
+import ru from "@/data/i18n/data.ru.json";
+import uk from "@/data/i18n/data.uk.json";
+import az from "@/data/i18n/data.az.json";
 
 type FieldMap = Record<string, string | string[]>;
 interface Bundle {
@@ -65,6 +73,14 @@ const BUNDLES: Partial<Record<Locale, Bundle>> = {
   zh: zh as unknown as Bundle,
   hi: hi as unknown as Bundle,
   ur: ur as unknown as Bundle,
+  pt: pt as unknown as Bundle,
+  "pt-BR": ptBR as unknown as Bundle,
+  ja: ja as unknown as Bundle,
+  ko: ko as unknown as Bundle,
+  it: it as unknown as Bundle,
+  ru: ru as unknown as Bundle,
+  uk: uk as unknown as Bundle,
+  az: az as unknown as Bundle,
 };
 
 /** Balon paketleri — locale'e gore cevrili alanlarla. */

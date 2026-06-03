@@ -1,0 +1,56 @@
+{
+  "nav": {
+    "myReservations": "Mənim Rezervasiyalarım"
+  },
+  "hotelCard": {
+    "quoteCta": "Qiymət təklifi alın",
+    "customPrice": "Sizin üçün xüsusi qiymət",
+    "expertTeam": "Mütəxəssis komandamız sizin üçün qiymət təklifi hazırlayır"
+  },
+  "tier": {
+    "budget": "Büdcə",
+    "mid": "Orta",
+    "lux": "Lüks / Premium"
+  },
+  "oteller": {
+    "bannerTitle": "Onlayn rezervasiya tezliklə gələcək",
+    "bannerBody": "Hələlik otelləri onlayn rezervasiya edə bilmirsiniz. Mütəxssis komandamız sizin üçün xüsusi qiymət və canlı mövcudluq hazırlayır — istənilən kartda \"Qiymət təklifi alın\" düyməsini basın və 24 saat ərzində sizə geri dönəcəyik."
+  },
+  "steps": {
+    "s1t": "Xidmət Seçin",
+    "s1d": "Balon, tur, fəaliyyət və ya paket — ehtiyacınıza uyğun filtr edin.",
+    "s2t": "Tarix & Qonaqlar",
+    "s2d": "Tarixinizi seçin, canlı mövcudluğu görün, qonaqların sayını müəyyən edin.",
+    "s3t": "Məlumatları Daxil Edin",
+    "s3d": "Səyahətçi məlumatlarını doldurun və səyahət sığortası əlavə edin.",
+    "s4t": "Təhlükəsiz Ödəniş",
+    "s4d": "Visa, Mastercard və 3D Secure ilə EUR və ya TRY ilə ödəniş edin.",
+    "s5t": "Biletiniz E-poçtunuza Gəlir",
+    "s5d": "PDF biletiniz dərhal e-poçtunuza gəlir. Hər şey hazırdır!",
+    "hotelNote": "Otellər üçün, onlayn ödəniş əvəzinə, mütəxəssis komandamız sizin üçün xüsusi qiymət və mövcudluq hazırlayır — otel kartında \"Qiymət təklifi alın\" düyməsini basın və 24 saat ərzində sizə geri dönəcəyik."
+  },
+  "serviceCard": {
+    "infoForm": "Məlumat & Forma",
+    "reserve": "İndi Rezervasiya Et",
+    "perCouple": "cütlük başına"
+  },
+  "reviewScore": {
+    "excellent": "Əla",
+    "veryGood": "Çox Yaxşı",
+    "good": "Yaxşı",
+    "nice": "Gözəl",
+    "reviews": "rəy",
+    "ratingLabel": "Reytinq"
+  },
+  "availability": {
+    "lastSeats": "Son {n} yer",
+    "limited": "Demək olar ki, tükənib",
+    "soldOut": "Tükənib"
+  },
+  "inquiry": {
+    "sending": "Göndərilir...",
+    "submit": "Məlumat & Qiymət Təklifi İstəyin",
+    "received": "Sizin istəyiniz qəbul edilib.",
+    "error": "Bir şey səhv oldu"
+  }
+}

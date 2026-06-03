@@ -6,6 +6,14 @@
 // Server/non-hook use: import UI_TEXT directly. Client hook: useUiText().
 
 import type { Locale } from "./dictionaries";
+import uiPt from "@/data/i18n/uitext.pt.json";
+import uiPtBR from "@/data/i18n/uitext.pt-BR.json";
+import uiJa from "@/data/i18n/uitext.ja.json";
+import uiKo from "@/data/i18n/uitext.ko.json";
+import uiIt from "@/data/i18n/uitext.it.json";
+import uiRu from "@/data/i18n/uitext.ru.json";
+import uiUk from "@/data/i18n/uitext.uk.json";
+import uiAz from "@/data/i18n/uitext.az.json";
 import { useLocale } from "@/lib/i18n/I18nProvider";
 
 export interface UiText {
@@ -590,17 +598,17 @@ const BASE_UI_TEXT = {
   },
 };
 
-// Yeni diller (pt/pt-BR/ja/ko/it/ru/uk/az) gecici EN alias — Faz B'de gercek ceviri.
+// Yeni diller (pt/pt-BR/ja/ko/it/ru/uk/az) — gercek ceviri JSON (Faz B, LLM pipeline).
 export const UI_TEXT: Record<Locale, UiText> = {
   ...BASE_UI_TEXT,
-  pt: BASE_UI_TEXT.en,
-  "pt-BR": BASE_UI_TEXT.en,
-  ja: BASE_UI_TEXT.en,
-  ko: BASE_UI_TEXT.en,
-  it: BASE_UI_TEXT.en,
-  ru: BASE_UI_TEXT.en,
-  uk: BASE_UI_TEXT.en,
-  az: BASE_UI_TEXT.en,
+  pt: uiPt as unknown as UiText,
+  "pt-BR": uiPtBR as unknown as UiText,
+  ja: uiJa as unknown as UiText,
+  ko: uiKo as unknown as UiText,
+  it: uiIt as unknown as UiText,
+  ru: uiRu as unknown as UiText,
+  uk: uiUk as unknown as UiText,
+  az: uiAz as unknown as UiText,
 };
 
 /**
