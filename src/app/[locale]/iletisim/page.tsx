@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { DICTIONARIES, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
-import { generateHreflang, ogImageUrl, canonicalFor } from "@/lib/hreflang";
+import { generateHreflang, ogImageUrl, canonicalFor, ogLocale } from "@/lib/hreflang";
 import { IletisimContent } from "./IletisimContent";
 
 export const runtime = "edge";
@@ -22,6 +22,7 @@ export async function generateMetadata({
       languages: generateHreflang("/iletisim"),
     },
     openGraph: {
+      locale: ogLocale(loc),
       title: d.meta_title_2,
       description: d.meta_desc_2,
       url: canonicalFor("/iletisim", params.locale),

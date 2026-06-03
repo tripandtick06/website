@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { DICTIONARIES, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { itemListSchema, faqPageSchema } from "@/lib/schema";
-import { generateHreflang, ogImageUrl, canonicalFor } from "@/lib/hreflang";
+import { generateHreflang, ogImageUrl, canonicalFor, ogLocale } from "@/lib/hreflang";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { TRANSFERS } from "@/data/services/catalog";
 import { tServiceList } from "@/lib/i18n/localizeData";
@@ -25,6 +25,7 @@ export async function generateMetadata({
       languages: generateHreflang("/transferler"),
     },
     openGraph: {
+      locale: ogLocale(loc),
       title: d.meta_title_2,
       description: d.meta_desc_2,
       url: canonicalFor("/transferler", params.locale),

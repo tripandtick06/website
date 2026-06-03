@@ -81,6 +81,27 @@ export function canonicalFor(path: string, locale: string): string {
   return locale === DEFAULT_LOCALE ? `${SITE_URL}${tail}` : `${SITE_URL}/${locale}${tail}`;
 }
 
+// Map app locale -> Open Graph BCP47-ish locale (og:locale). Default tr_TR.
+const OG_LOCALE_MAP: Record<string, string> = {
+  tr: "tr_TR",
+  en: "en_US",
+  de: "de_DE",
+  fr: "fr_FR",
+  es: "es_ES",
+  nl: "nl_NL",
+  zh: "zh_CN",
+  hi: "hi_IN",
+  ur: "ur_PK",
+};
+
+/**
+ * Return the OG locale (og:locale) for a given app locale.
+ * Falls back to "tr_TR" for unknown locales.
+ */
+export function ogLocale(locale: string): string {
+  return OG_LOCALE_MAP[locale] ?? "tr_TR";
+}
+
 /**
  * Build dynamic OG image URL for `/api/og` endpoint.
  */

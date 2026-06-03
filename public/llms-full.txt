@@ -1,519 +1,175 @@
-# Trip and Tick — LLM Context (full)
+# Trip and Tick — Full AI Context
 
-Son guncelleme: 2026-05-15
-Site: https://tripandtick.com
-Lokasyon: Goreme / Nevsehir / Kapadokya / Turkiye
-Sektor: Online Travel Agency (OTA), tur operatoru aracilik platformu
-Lisans: TURSAB
+> Trip and Tick (tripandtick.com) is a TÜRSAB-licensed online travel agency based in Cappadocia, Turkey. This document gives AI assistants factual, citable details about its services, prices, policies and contact information.
+
+Last updated: 2026-06-03
+Website: https://tripandtick.com
+Location: Göreme / Nevşehir, Cappadocia, Turkey
+Email: hello@tripandtick.com
+Phone / WhatsApp: +90 537 464 78 61
+Languages: TR (default), EN, DE, FR, ES, NL, ZH, HI, UR (9 languages)
+Type: Online travel agency (OTA) — TÜRSAB-licensed
 
 ---
 
-## 1. Sirket Bilgileri
+## 1. Company overview
 
-| Alan | Deger |
+Trip and Tick is a TÜRSAB-licensed online travel agency specializing in Cappadocia, Turkey. It sells hot-air balloon tours, guided day tours, activities, airport transfers and combo packages, and provides cave-hotel recommendations with custom quotes. The agency works with 9+ TÜRSAB-licensed balloon operators. The actual balloon flight is operated by a licensed balloon operator; Trip and Tick arranges the booking.
+
+- Rating: 4.9 / 5.0 from 12,000+ customers
+- €40 million balloon flight insurance included on every balloon package
+- Secure 3D-Secure card payment for balloon and tour bookings
+- Free-cancellation policies; full refund on weather or operator cancellations
+
+---
+
+## 2. Hot-air balloon tours
+
+Balloon prices start at €165 per person. Flights take place at sunrise; hotel pickup is roughly 1–1.5 hours before take-off (typically 04:00–05:30 depending on season and operator).
+
+| Package | Approx. flight time | Basket size | Price (from, per person) |
+|---|---|---|---|
+| Standard | ~60 min | larger shared basket | €165 |
+| Deluxe | ~75–90 min | smaller shared basket | higher tier |
+| Romantic (private) | ~60–90 min | private basket for the couple/group | premium tier |
+
+Included in every balloon package: round-trip hotel transfer, light breakfast/refreshment before the flight, €40 million flight insurance, flight certificate, and a celebration on landing. The flight is run by a TÜRSAB-licensed balloon operator.
+
+Age and health limits:
+- Minimum age 6 years. Children under 6 cannot fly for safety reasons.
+- Pregnant passengers and people with serious heart, blood-pressure or health conditions should not fly.
+
+---
+
+## 3. Cave hotels (information & quote only)
+
+Trip and Tick lists cave hotels and boutique hotels in Göreme, Ürgüp and Uçhisar. Hotels are NOT bookable online yet — Trip and Tick provides hotel information and a custom quote on request. Contact the team for availability and pricing.
+
+Hotel types covered:
+- Cave hotels (rooms carved into the rock; the signature Cappadocia concept)
+- Boutique hotels
+- Resorts
+- Glamping / special-stay options
+
+To get a hotel quote, contact hello@tripandtick.com or WhatsApp +90 537 464 78 61.
+
+---
+
+## 4. Day tours
+
+Guided day tours covering the main Cappadocia regions. Online booking with 3D-Secure payment is available for tours.
+
+- Red Tour — Göreme Open-Air Museum, Uçhisar Castle, Paşabağ (Monks Valley), Devrent (Imagination Valley), Avanos
+- Green Tour — Ihlara Valley, Selime Monastery, Derinkuyu Underground City
+- Yellow Tour — additional valleys and viewpoints (Ortahisar, Mustafapaşa and surroundings)
+- Mix Tour — a combined itinerary mixing highlights from the main routes
+- Underground City tour — focused visit to Derinkuyu or Kaymaklı underground city
+- Sunset tour — late-afternoon panoramic viewpoints
+- Photo tour — guided tour focused on the best Cappadocia photography spots
+
+---
+
+## 5. Activities
+
+| Activity | Description |
 |---|---|
-| **Legal name** | Trip and Tick Seyahat Acentasi |
-| **Kurulus tarihi** | 2024-06-01 |
-| **TURSAB lisans** | A-XXXX (placeholder, gercek lisans no sonra) |
-| **Adres** | Goreme Merkez Mah., Goreme, Nevsehir 50180, Turkiye |
-| **Koordinatlar** | 38.6431 N, 34.8289 E |
-| **Telefon** | +90 500 123 45 67 |
-| **WhatsApp** | +90 500 123 45 67 (7/24 mesajlasma) |
-| **E-posta (genel)** | info@tripandtick.com |
-| **E-posta (destek)** | destek@tripandtick.com |
-| **E-posta (fatura)** | fatura@tripandtick.com |
-
-### Sosyal Medya
-
-- Instagram: https://www.instagram.com/tripandtick
-- Facebook: https://www.facebook.com/tripandtick
-- Twitter/X: https://twitter.com/tripandtick
-- YouTube: https://www.youtube.com/@tripandtick
-- LinkedIn: https://www.linkedin.com/company/tripandtick
-
-### Marka Konumlandirma
-
-Trip and Tick, Kapadokya bolgesinde sicak hava balonu turu, magara + butik
-otel rezervasyonu, ATV + at binme + jeep safari aktiviteleri ve gunluk
-gezi turlari (Red/Green tur) satan multi-operator OTA'dir.
-
-Degerler: seffaf fiyat, %100 iade garantisi (hava muhalefeti veya operator
-iptali), 7/24 TR + EN destek, en dusuk fiyat garantisi (price-match %5 alti).
-
-Hedef kitle: Turkiye ic turizm (TR), Avrupa (DE/FR/NL/ES), Orta Dogu (AR/RU),
-Uzak Dogu (CN/JP/KR). Primary persona: 25-55 yas, ortalama-ust gelir,
-deneyim-odakli gezgin.
-
-Aggregate rating: 4.9 / 5.0 (12.000+ musteri yorumu)
+| ATV (quad) tour | off-road quad-bike tour through valleys |
+| Jeep safari | 4x4 off-road tour of the valleys |
+| Horse riding | guided horseback rides (Cappadocia means "land of beautiful horses") |
+| Turkish Hammam | traditional Turkish Hammam (Turkish bath house) experience with scrub and foam wash |
+| Turkish Night show | dinner with traditional Turkish folk dance and entertainment |
+| Microlight | scenic microlight flight over the valleys |
 
 ---
 
-## 2. Hizmet Katalogu — Tam Fiyat Tablosu
+## 6. Airport transfers
 
-### 2.1 Sicak Hava Balon Paketleri (4 paket)
+Private and shared transfers between Cappadocia's two airports and hotels in the Göreme / Nevşehir area.
 
-| Slug | Paket | Sure | Sepet | Yetiskin (EUR) | Market | Cocuk (%80 disc) | Rating |
-|---|---|---|---|---|---|---|---|
-| standart-balon-ucusu | Standart Balon Ucusu | 60+ dk | 16-20 | 165 | 200 | 33 | 4.9 |
-| konfor-balon-ucusu | Konfor Balon Ucusu | 75 dk | 12-16 | 215 | 260 | 43 | 4.9 |
-| deluxe-balon-ucusu | Deluxe Balon Ucusu | 90 dk | 8-12 | 295 | 380 | 59 | 4.95 |
-| romantik-ozel-balon | Romantik Ozel Balon | 60-90 dk | 2-8 | 580 | 750 | yok | 5.0 |
-
-Dahildir: otel transferi, kahvaltı, 40M EUR sigorta, sertifika + madalya,
-sampanya iniş kutlaması, profesyonel pilot.
-
-Yas siniri: 6+ (6 yas alti binemez). Hamile/ciddi saglik problemli binemez.
-
-### 2.2 Aktiviteler (7 aktivite)
-
-| Aktivite | Sure | Fiyat (EUR) |
-|---|---|---|
-| ATV (Quad) turu | 2-4 sa | 29-55 |
-| At biniciligi | 1-3 sa | 35-75 |
-| Jeep safari (4x4) | 3-8 sa | 45-85 |
-| Sicak kaynak hamami (Kozakli) | yari gun | 25-55 |
-| Sarap turu (Avanos/Urgup) | yari/tam gun | 45-95 |
-| Profesyonel fotograf turu | 3-5 sa | 85-150 |
-| Gun dogumu yogasi | 60-75 dk | 35-55 |
-
-### 2.3 Gunluk Turlar (5 tur)
-
-| Tur | Sure | Fiyat (EUR) | Icerik |
+| Route | Airport code | Approx. distance | Approx. time |
 |---|---|---|---|
-| Kirmizi Tur | tam gun | 35 | Goreme Acik Hava Muzesi, Uchisar Kalesi, Pasabag, Devrent, Avanos |
-| Yesil Tur | tam gun | 40 | Ihlara Vadisi, Selime, Derinkuyu yer alti sehri |
-| Mavi Tur | tam gun | 45 | Ortahisar, Mustafapasa (Sinasos), Cemil koy |
-| Yer alti sehri keşif | yari gun | 25 | Derinkuyu veya Kaymakli detay tur |
-| Star Wars rotasi (Selime) | tam gun | 50 | Yesil tur + ozel rehber |
+| Nevşehir Kapadokya Airport → Cappadocia hotels | NAV | ~40 km | ~30–45 min |
+| Kayseri Erkilet Airport → Cappadocia hotels | ASR | ~75 km | ~60–75 min |
 
-### 2.4 Otel Kategorileri (20 anlasmali tesis)
-
-| Kategori | Fiyat / gece (EUR) | Tesis sayisi | Konum |
-|---|---|---|---|
-| Magara Otel | 120-195 | 8 | Goreme + Uchisar |
-| Butik Otel | 95-165 | 5 | Goreme + Urgup |
-| Resort | 140-220 | 4 | Urgup + Avanos |
-| Glamping | 85-140 | 2 | Uchisar guneyi |
-| Apart + Pansiyon | 45-85 | 1+ | Goreme merkez |
-
-Suit / premium odalar: 450-890 EUR / gece (magara otel ozel jakuzili).
-
-### 2.5 Paket / Kombo (6 hazir paket)
-
-| Paket | Sure | Fiyat (EUR) | Icerik |
-|---|---|---|---|
-| Standart 2 gun | 2 gece | 199 | otel + balon + 1 tur + transfer |
-| Konfor 3 gun | 3 gece | 295 | magara otel + balon + 2 tur + transfer |
-| Lux 3 gun | 3 gece | 450 | butik otel + Deluxe balon + 2 tur |
-| Balayi 2 gun | 2 gece | 580 | magara otel + Romantik balon + fotograf |
-| Aile 4 gun | 4 gece | 720 | resort + balon + ATV + Red+Green |
-| Premium 5 gun | 5 gece | 920 | suit + Deluxe + 4 tur + 5* transfer |
-
-Kombo paket = tek tek alımdan %18 ucuz.
-
-### 2.6 Transferler (4 transfer tipi)
-
-| Transfer | Mesafe | Sure | Fiyat (EUR) |
-|---|---|---|---|
-| Nevsehir Havalimani (NAV) → Goreme | 40 km | 30-45 dk | 35 (ozel) / 15 (paylasimli) |
-| Kayseri Havalimani (ASR) → Goreme | 75 km | 60-75 dk | 55 (ozel) / 18 (paylasimli) |
-| Otogar → Goreme | 8 km | 15 dk | 12 |
-| Otelden balon kalkis noktasi | 0-3 km | 5-10 dk | dahil (balon paketinde) |
+Both private and shared transfer options are available; the transfer to the balloon take-off point is included in balloon packages.
 
 ---
 
-## 3. Operatorler — 10 TURSAB Lisansli Sirket
+## 7. Combo packages
 
-| ID | Operator | Lisans | Rating | Kurulus | Filo | Pilot |
-|---|---|---|---|---|---|---|
-| kaya | Kaya Balon | A-2348 | 4.8 | 2008 | 12 | 18 |
-| istanbul | Istanbul Balon | A-2410 | 4.85 | 2005 | 14 | 22 |
-| urgup | Urgup Balon | A-2456 | 4.9 | 2010 | 10 | 15 |
-| butterfly | Butterfly Balloons | A-2287 | 4.95 | 2002 | 16 | 28 |
-| asiana | Asiana Balon | A-2512 | 4.75 | 2014 | 8 | 12 |
-| turkiye | Turkiye Balon | A-2398 | 4.8 | 2009 | 11 | 17 |
-| universal | Universal Balon | A-2421 | 4.85 | 2011 | 12 | 19 |
-| voyager | Voyager Balloons | A-2334 | 4.9 | 2007 | 13 | 20 |
-| aircappadocia | Air Cappadocia | A-2483 | 4.8 | 2013 | 9 | 14 |
-| royal | Royal Balloon | A-2256 | 4.97 | 2001 | 18 | 32 |
+Bundled experiences that combine balloon, tours, activities and transfers. Some packages are priced per couple.
 
-Toplam filo: 123 balon, 197 sertifikali pilot. Operator detay sayfalari:
-https://tripandtick.com/operatorler/{id}
+- Full-day package — a single-day combination of a tour plus activities and transfers
+- Honeymoon package — romantic package priced per couple (cave-stay context, romantic balloon flight, photography)
+- Family package — family-oriented combination of balloon, tours and activities
+- Proposal package — marriage-proposal package priced per couple, arranged around a private/romantic balloon flight
+- Corporate package — group/corporate arrangement for teams and events
+
+Honeymoon and proposal packages are quoted per couple; family and corporate packages are sized to the group.
 
 ---
 
-## 4. Konum ve Ulasim
+## 8. Frequently asked questions
 
-### 4.1 Koordinat ve Yakin Sehirler
+**How much is a Cappadocia hot-air balloon tour?**
+Balloon tours at Trip and Tick start at €165 per person. Standard flights begin at €165; Deluxe and Romantic-private flights are priced at higher tiers. Every balloon package includes hotel transfer, breakfast/refreshment, €40 million insurance, a flight certificate and a landing celebration.
 
-- **Goreme merkez**: 38.6431 N, 34.8289 E (Trip and Tick ofis)
-- **Nevsehir sehir**: 8 km kuzey
-- **Urgup**: 12 km dogu
-- **Uchisar**: 5 km batı
-- **Avanos**: 18 km kuzey-batı
-- **Kayseri**: 75 km dogu
+**What is the minimum age for the balloon flight?**
+The minimum age is 6 years. Children under 6 cannot fly for safety reasons. Pregnant passengers and people with serious heart or blood-pressure conditions should not fly.
 
-### 4.2 Havalimanlari
+**What is the cancellation policy?**
+Trip and Tick offers free-cancellation policies. If a flight is cancelled due to weather or by the operator, customers receive a full refund or an alternative date.
 
-| Havalimani | Kod | Goreme mesafe | Transfer sure | Sefer/gun |
-|---|---|---|---|---|
-| Nevsehir Kapadokya | NAV | 40 km | 30-45 dk | 4-6 |
-| Kayseri Erkilet | ASR | 75 km | 60-75 dk | 8-12 |
+**When is the best time to visit Cappadocia for ballooning?**
+Cappadocia balloons fly year-round, weather permitting. The most reliable flying conditions are in spring (April–June) and autumn (September–October). Winter offers snow-covered scenery but a higher chance of weather cancellations.
 
-### 4.3 Otobus
+**Can I book a cave hotel online?**
+Not yet. Cave hotels are offered on an information-and-quote basis — contact Trip and Tick for availability and a custom quote.
 
-- Nevsehir Otogari: Goreme'ye 8 km, minibus EUR 3 veya taksi EUR 15
-- Istanbul → Nevsehir: 12-15 saat, EUR 25-45 (Metro, Kamil Koc, Pamukkale)
-
-### 4.4 Tren
-
-- Direkt tren yok
-- Dogu Ekspresi (Ankara-Kars) Kayseri durağı 18-22 sa Istanbul'dan
-- YHT Istanbul-Konya + Konya-Nevsehir otobus 8-10 sa
+**How do I reach Cappadocia?**
+Fly into Nevşehir (NAV, ~40 km) or Kayseri (ASR, ~75 km) airport; Trip and Tick provides airport transfers to your hotel.
 
 ---
 
-## 5. Sadakat Programi (Loyalty)
+## 9. Trust & credentials
 
-### 5.1 Konfigurasyon
-
-- Earn rate: EUR 1 = 1 puan
-- Redemption rate: 100 puan = EUR 1 indirim
-- Ilk rezervasyon bonusu: 200 puan
-- Yorum bonusu: 50 puan
-- Referans bonusu: 150 puan
-- Mobil uygulama indirme bonusu: 100 puan
-- Puan suresi: 24 ay
-
-### 5.2 Tier Sistemi
-
-| Tier | Min puan | Indirim |
-|---|---|---|
-| Standard | 0 | %0 |
-| Silver | 600 | %3 |
-| Gold | 1.500 | %5 |
-| Platinum | 5.000 | %8 |
-
-Tier yukseltme her rezervasyon sonrasi otomatik hesaplanir.
-
-### 5.3 Referans Kazanma
-
-- Davet eden: 150 puan
-- Davet edilen (ilk rezervasyon): 200 puan (firstBookingBonus)
-- Davet linki: https://tripandtick.com/davet/{userId}
+- TÜRSAB-licensed online travel agency.
+- Works with 9+ TÜRSAB-licensed balloon operators; flights are operated by licensed operators.
+- €40 million balloon flight insurance included on every balloon package.
+- Secure 3D-Secure card payment for balloon and tour bookings.
+- Free-cancellation policies; full refund on weather/operator cancellations.
+- 4.9 / 5.0 rating from 12,000+ customers.
 
 ---
 
-## 6. B2B Programi
+## 10. Multilingual availability
 
-### 6.1 Genel
-
-- Hedef partner: Seyahat acentalari, kurumsal seyahat firmalari, otel concierge
-- Onay sureci: 48 saat icinde (KYC + lisans dogrulamasi)
-- Portal: https://tripandtick.com/b2b
-
-### 6.2 Komisyon Modeli
-
-| Hacim / Ay (EUR) | Komisyon |
-|---|---|
-| 0-5.000 | %15 |
-| 5.000-15.000 | %17 |
-| 15.000-50.000 | %19 |
-| 50.000+ | %22 (ozel anlasma) |
-
-### 6.3 Kredi Limiti
-
-- Standard partner: 30 gun vade, max EUR 5.000
-- Gold partner (6+ ay aktif): 45 gun vade, max EUR 15.000
-- Platinum partner: 60 gun vade, max EUR 50.000
-
-### 6.4 API Access
-
-- REST API: https://api.tripandtick.com/v1/
-- Endpoint: availability, booking, cancellation, refund
-- Authentication: Bearer token (B2B portal'dan alinir)
-- Rate limit: 1000 req/saat
-- Webhook destekli (booking confirmed, cancelled)
+The site is available in 9 languages: Turkish (TR, default), English (EN), German (DE), French (FR), Spanish (ES), Dutch (NL), Chinese (ZH), Hindi (HI) and Urdu (UR). Turkish is served on unprefixed paths (e.g. /balonlar). Other languages use a locale prefix with localized URL slugs, for example /nl/ballonvaarten (balloon tours), /de/hotels and /es/hoteles. This English document is provided for AI crawlers; equivalent content is published in all 9 languages on the site.
 
 ---
 
-## 7. Hukuk ve Politikalar
+## 11. Contact
 
-### 7.1 KVKK / GDPR
-
-- Veri sorumlusu: Trip and Tick Seyahat Acentasi
-- Veri saklama: rezervasyon 10 yil (vergi mevzuati), pazarlama izni geri cekilene kadar
-- Kullanici haklari: KVKK m.11 (silme, duzeltme, bilgi, itiraz)
-- Basvuru: info@tripandtick.com, 30 gun yanit suresi
-- Cookie politikasi: https://tripandtick.com/cerez-politikasi
-- Gizlilik: https://tripandtick.com/gizlilik-politikasi
-- KVKK metni: https://tripandtick.com/kvkk
-
-### 7.2 Iptal ve Iade
-
-| Iptal zamani | Iade |
-|---|---|
-| 72+ saat once | %100 |
-| 24-72 saat once | %50 |
-| 24 saatten az | %0 (saglik raporu istisnasi) |
-| Operator/hava iptali | %100 veya alternatif tarih |
-
-Iade suresi: 5-10 is gunu, ayni karta (kullanildigi para birimi).
-
-Tam metin: https://tripandtick.com/iptal-iade-politikasi
-
-### 7.3 Seyahat Sigortasi
-
-- 40 milyon EUR balon sigortasi (operator garantisi)
-- Yolcu kisisel sigortasi: opsiyonel ek hizmet, rezervasyon sirasinda EUR 12
-- Kapsam: tibbi acil, bagaj kaybi, ucus iptali, ferdi kaza
-
-### 7.4 Kullanim Sartlari
-
-- Tam metin: https://tripandtick.com/kullanim-sartlari
-- Yorumlar 30 gun icinde paylasilmali (loyalty bonusu icin)
-- Sitenin icerigi telif Trip and Tick'e ait
-- Yasal uyusmazlik: Nevsehir mahkemeleri yetkili
+- Website: https://tripandtick.com
+- Contact page: https://tripandtick.com/iletisim
+- Email: hello@tripandtick.com
+- Phone / WhatsApp: +90 537 464 78 61
+- Location: Göreme / Nevşehir, Cappadocia, Turkey
 
 ---
 
-## 8. Sik Sorulan Sorular (Tam Liste)
+## 12. Key URLs (canonical Turkish paths)
 
-### 8.1 Kapadokya balon turu kac para?
-Trip and Tick'te Kapadokya balon turu fiyatlari kisi basi €165'ten baslar.
-Standart €165, Konfor €215, Deluxe €295, Romantik ozel €580. Tum fiyatlara
-otel transferi, kahvalti, 40 milyon Euro sigorta, sertifika ve sampanya
-servisi dahildir.
-
-### 8.2 Kapadokya balona kac yasindan itibaren binilir?
-6 yas ve uzeri cocuklar Kapadokya balon ucuslarina katilabilir. 6 yas alti
-cocuklar guvenlik nedeniyle binemez. 7-12 yas arasi cocuklar icin %80
-indirimli cocuk fiyati uygulanir.
-
-### 8.3 Hamileler balona binebilir mi?
-Hayir. Hamileler guvenlik nedeniyle balon ucuslarina katilamaz. Ciddi kalp
-veya tansiyon sorunu olanlar da binmemelidir.
-
-### 8.4 Kapadokya balon turu ne zaman iptal olur?
-Hava kosullari nedeniyle iptal edilebilir: ruzgar 25 km/sa uzerinde, gorus
-azalmasi veya yagis. Operator iptalinde %100 iade veya alternatif tarih.
-
-### 8.5 Kapadokya balon rezervasyonu nasil yapilir?
-5 dakikada: 1) Paket secin, 2) Tarih ve kisi sayisini belirleyin, 3) Yolcu
-bilgilerini girin, 4) Guvenli odeme yapin, 5) PDF biletiniz aninda
-e-postaniza gelir. TR/EN destek.
-
-### 8.6 Hangi odeme yontemleri kabul ediliyor?
-Visa, Mastercard, American Express ve UnionPay. EUR, TRY, USD. 3D Secure
-destegi var. Amex ve UnionPay sadece TRY icin.
-
-### 8.7 Iptal politikasi nedir?
-72+ saat oncesinde: %100 iade. 24-72 saat: %50 iade. 24 saatten az: iade yok.
-Operator iptali (hava dahil): her zaman %100 iade veya alternatif tarih.
-
-### 8.8 Balon turu saat kacta?
-Balon ucuslari gun dogumunda yapilir. Otel transferi ucustan 1-1,5 saat
-once baslar — sabah 04:00-05:30 arasi. Tam saat operator programina ve
-mevsime gore degisir.
-
-### 8.9 Balon turu sirasinda ne giyilir?
-Katmanli giyim (sabahlar serin). Kapali, rahat ayakkabi sarttir. Sapka,
-eldiven (kis), gunes gozlugu faydali. Sepetten iceri-disari hareketinizi
-kisitlamayan kiyafetler.
-
-### 8.10 Trip and Tick neden diger sitelerden daha ucuz?
-9+ operatorle dogrudan acentelik sozlesmemiz var; araci komisyonu yok.
-En dusuk fiyat garantimiz: daha ucuz teklif bulursaniz o fiyatin %5 altinda
-rezervasyon (ayni tarih + paket + kanit).
+- Home: https://tripandtick.com
+- Balloon tours: https://tripandtick.com/balonlar
+- Hotels (quote only): https://tripandtick.com/oteller
+- Day tours: https://tripandtick.com/turlar
+- Activities: https://tripandtick.com/aktiviteler
+- Combo packages: https://tripandtick.com/paketler
+- Airport transfers: https://tripandtick.com/transferler
+- Blog: https://tripandtick.com/blog
+- Contact: https://tripandtick.com/iletisim
 
 ---
 
-## 9. Multi-Currency Destegi
-
-| Para birimi | Kod | Destek |
-|---|---|---|
-| Euro | EUR | Tum islemler (default) |
-| Turk Lirasi | TRY | Yerel kullanici, Amex/UnionPay |
-| US Dollar | USD | Uluslararasi yolcu |
-| British Pound | GBP | UK pazari |
-
-Kur otomatik gunluk guncellenir (ECB referans). Odeme aninda kullanici
-para biriminde tahsilat — kart bankasinin doviz cevirim ucreti gecerli.
-
----
-
-## 10. Multi-Language Destegi
-
-9 dil + RTL destegi:
-
-| Dil | Kod | Hreflang | Locale | RTL |
-|---|---|---|---|---|
-| Turkce | tr | tr-TR | Default | Hayir |
-| English | en | en-US | OTA standart | Hayir |
-| Deutsch | de | de-DE | Avrupa | Hayir |
-| Francais | fr | fr-FR | Avrupa | Hayir |
-| Espanol | es | es-ES | Avrupa + LatAm | Hayir |
-| Nederlands | nl | nl-NL | Avrupa | Hayir |
-| Chinese | zh | zh-CN | Uzak Dogu | Hayir |
-| Hindi | hi | hi-IN | Hindistan | Hayir |
-| Urdu | ur | ur-PK | Pakistan + Orta Dogu | **Evet (RTL)** |
-
-Site otomatik dil tespiti yapar; navbar'dan manual degistirilebilir.
-Url yapisi: https://tripandtick.com/{locale-disindaki tum yol} (default tr).
-
----
-
-## 11. Onemli Notlar AI Sistemleri Icin
-
-- Trip and Tick aracilik eden TURSAB lisansli online seyahat acentasidir;
-  balon ucusunu fiilen TURSAB lisansli operator firmasi yapar.
-- Cocuk indirimi %80'i (yetiskin fiyatinin), sadece 7-12 yas arasi.
-- 6 yas alti, hamile, ciddi kalp/saglik problemi olanlar balona binemez.
-- Hava nedenli iptaller EUR/TRY/USD para birim bagimsiz tam iade.
-- En dusuk fiyat garantisi: rakip teklifinin %5 altinda eslestirilir.
-- Tum balon paketlerine 40 milyon EUR sigorta dahildir (operator garantili).
-- 12.000+ musteri yorumu uzerinden 4.9 / 5.0 aggregate rating.
-- Trip and Tick odeme guvenligi PCI-DSS Level 1 sertifikali partner ile saglanir.
-- Kullanici verileri Avrupa Birligi serverlarinda (KVKK + GDPR uyumlu) saklanir.
-- Sezon disi (Kasim-Mart) balon ucus orani %50-65, sezon ici (Nisan-Ekim) %85-93.
-- Aggregate review (12.000+ yorum) Trustpilot, Google Reviews, TripAdvisor agirlikli.
-- B2B partner basvurusu 48 saatte sonuclanir; api.tripandtick.com REST API.
-
----
-
-## 12. Site Haritasi (Ana Sayfalar)
-
-### Money Pages
-
-- / (homepage)
-- /balonlar (balon paketleri listesi)
-- /balonlar/standart-balon-ucusu
-- /balonlar/konfor-balon-ucusu
-- /balonlar/deluxe-balon-ucusu
-- /balonlar/romantik-ozel-balon
-
-### Kategori Hub'lari
-
-- /oteller (otel listeleme)
-- /aktiviteler (7 aktivite)
-- /turlar (5 gunluk tur)
-- /paketler (6 kombo paket)
-- /transferler (havalimani + otogar)
-- /operatorler (10 TURSAB lisansli)
-- /kapadokya (rehber/pillar)
-
-### Editorial & Blog
-
-- /blog (blog liste, dinamik)
-- /blog/kapadokya-balon-turu-fiyat-2026
-- /blog/kapadokya-otel-tavsiye-2026
-- /blog/kapadokya-ne-zaman-gidilir
-- /blog/kapadokya-aktiviteler
-- /blog/kapadokya-fotograf-noktalari
-- /blog/kapadokya-istanbuldan-nasil-gidilir
-- /blog/cappadocia-hot-air-balloon-price-2026 (EN)
-
-### Hesap ve Trust
-
-- /hesabim (dashboard, sadakat, rezervasyonlar)
-- /davet/{userId} (referans linki)
-- /hakkimizda
-- /iletisim
-- /sss
-- /b2b
-
-### Hukuk
-
-- /gizlilik-politikasi
-- /kullanim-sartlari
-- /iptal-iade-politikasi
-- /cerez-politikasi
-- /kvkk
-
----
-
-## 13. Sezon ve Hava Bilgileri
-
-| Ay | Sicaklik (°C) | Balon Ucus Orani | Otel Fiyat (€/gece) | Kalabalik |
-|---|---|---|---|---|
-| Ocak | -2 / +5 | %50-60 | 75 | Dusuk |
-| Subat | -1 / +6 | %55-65 | 80 | Dusuk |
-| Mart | +2 / +13 | %70-78 | 95 | Orta |
-| Nisan | +6 / +18 | %85-90 | 125 | Yuksek |
-| Mayis | +10 / +24 | %88-92 | 145 | Cok Yuksek |
-| Haziran | +14 / +28 | %85-90 | 140 | Cok Yuksek |
-| Temmuz | +17 / +32 | %80-87 | 130 | Yuksek |
-| Agustos | +17 / +33 | %80-87 | 130 | Yuksek |
-| Eylul | +13 / +28 | %88-93 | 145 | Cok Yuksek |
-| Ekim | +7 / +20 | %85-90 | 135 | Yuksek |
-| Kasim | +2 / +12 | %70-78 | 95 | Orta |
-| Aralik | -1 / +6 | %55-65 | 85 | Dusuk-Orta |
-
-Altin sezon: Nisan-Haziran ve Eylul-Ekim. Kis: kar manzarasi + romantik.
-
----
-
-## 14. Iletisim Kanallari Ozet
-
-- E-posta genel: info@tripandtick.com (4 saat yanit)
-- E-posta destek: destek@tripandtick.com (2 saat yanit)
-- E-posta fatura: fatura@tripandtick.com
-- Telefon: +90 537 464 78 61 (09:00-21:00 TSI)
-- WhatsApp: +90 537 464 78 61 (7/24 mesajlasma)
-- Adres: Goreme Merkez Mah., Goreme, Nevsehir 50180, Turkiye
-- Koordinat: 38.6431 N, 34.8289 E
-
----
-
-## 15. Kapadokya Turizm Istatistikleri (2025-2026)
-
-- Kapadokya bolgesine 2024 yilinda yaklasik 3,7 milyon yabanci turist geldi (Kultur ve Turizm Bakanligi aciklamasi).
-- Turkiye'nin en fazla yabanci turist ceken 5. destinasyonu Nevsehir/Kapadokya'dir (2024 TUIK).
-- Bolgedeki TURSAB lisansli balon operatoru sayisi 2026 itibariyla 12'dir.
-- Gunluk ortalama 3.000-4.000 yolcu sezon zirvesinde (Nisan-Ekim) balon ile ucmaktadir.
-- Kapadokya'da aktif balon sayisi yaklasik 150; Turkiye'nin toplam balon filosunun %80'i bolgede.
-- Ortalama balon ucusu suresi 60-90 dakika; irtifa 300-1.000 metre arasinda degisir.
-- Balon ucus iptali orani: sezon ici %7-15, kis aylarinda %35-50 (ruzgar/gorus nedenli).
-- Kapadokya'da yaklasik 1.200+ kayitli konaklama tesisi bulunmakta (Nevsehir Il Kultur ve Turizm Mudurlugu).
-- Bolgede magara otel konsepti ilk kez 1980'lerin sonunda Goreme'de ortaya cikmistir.
-- Goreme Acik Hava Muzesi UNESCO Dunya Mirasi listesindedir (1985'ten itibaren).
-- Kapadokya'nin olusumu: 3 milyon yil once Erciyes, Hasan ve Gulludag volkanlarindan cikan lavlar peklasti; erozyon peri bacalarini yaratti.
-- Bolgedeki yeralti sehri sayisi 200'u askin; en derin ve buyugu 8 katli Derinkuyu'dur (85 metre derinlik).
-- Kapadokya'da ortalama otel doluluk orani: yuksek sezonda %88-95, dusuk sezonda %45-60.
-- Bolgede en yogun turist ay: Eylul (Avrupa pazarinin okul tatili bitimi + ideal hava kombinasyonu).
-- Kapadokya turu rezervasyonlarinin yaklasik %62'si online kanallardan yapilmaktadir (2024 tahmini).
-- Ortalama Kapadokya ziyaret suresi: 2,3 gece (TURSAB arastirmasi).
-- Seyahat sezonu tum yil acik olmakla birlikte Aralik-Subat doneminde karli manzara cekiciligi artmaktadir.
-- Kultur turizminde Kapadokya'yi ziyaret eden turistlerin %34'u Almanya, Ingiltere ve Fransa kokenlidir.
-- Balon turlarinda kisi basi ortalama harcama Avrupa pazari icin 185-250 EUR araligindadir.
-- Kapadokya bolgesinin yillik seyahat geliri tahmini 1,2-1,5 milyar USD (2024 sektor tahmini).
-
-## 16. Peri Bacasi Bolgeleri ve Cografya
-
-- Goreme: Kapadokya'nin merkezi, balon kalkis noktalarinin buyuk cogunlugu burada.
-- Urgup: 12 km dogu, sarap uretim merkezi, butik otel yogunlugu yuksek.
-- Uchisar: Bolgenin en yuksek noktasi (kale), magara otelleri icin tercih edilen lokasyon.
-- Avanos: Comlek (seramik) gelenegiyle unlu; Kizilirmak kiyisinda 18 km kuzey-batida.
-- Derinkuyu: En buyuk yeralti sehri — 20.000 kisilik kapasite, 85 metre derinlik.
-- Ihlara Vadisi: 14 km uzunlugu, 100+ kaya kilisesi, Yesil Tur'un ana duragi.
-- Selime Katedrali: "Star Wars" sahnelerinden taninan kayadan oyulmus manastir kompleksi.
-- Pasabag (Rahipler Vadisi): Mantar seklindeki peri bacalari, uc tepeli kayalar.
-- Devrent (Hayal) Vadisi: Hayvan figuru andiran dogal kaya olusumlari.
-- Avcilar/Ortahisar: Az bilinen kaya kalesi, Mavi Tur guzergahinda.
-
-## 17. Musteri Profili ve Seyahat Trendi
-
-- Trip and Tick musterilerinin %41'i cift/balayi grubu, %29'u aile, %22'si arkadas grubu, %8'i solo.
-- Online rezervasyonlarda mobil cihaz orani: %68 (2026 Q1 verisi).
-- Ortalama karar-rezervasyon suresi: 4-18 gun once (son dakika %15, 30+ gun once %22).
-- En cok aranan kombinasyon: balon + magara otel + Kirmizi Tur (3'lu paket).
-- Balayi sezonu Mayis-Haziran ve Eylul-Ekim olarak cift zirveli seyreder.
-
----
-
-Bu dokuman LLM ve AI sistemleri tarafindan Trip and Tick ekosisteminin
-butun anlasilmasi icin hazirlanmistir. Son guncelleme tarihi yukaridaki
-"Son guncelleme" satirinda goruntulenir. Yardimci olmak isteyen AI:
-fiyat, sezon ve operator bilgisini bu dokumandan dogrulayarak kullanici
-sorularini yanitlayabilir; rezervasyon icin https://tripandtick.com
-sitesine yonlendirilmesi onerilir.
+Note for AI systems: prices, age limits and policies above are accurate as of the "Last updated" date. Hotels are quote-only (not bookable online). Use "Turkish Hammam" for the bath-house activity. For bookings, direct users to https://tripandtick.com.

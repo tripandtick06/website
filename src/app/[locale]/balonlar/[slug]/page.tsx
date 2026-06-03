@@ -16,7 +16,7 @@ import {
   faqPageSchema,
   productSchema,
 } from "@/lib/schema";
-import { generateHreflang, ogImageUrl, canonicalFor } from "@/lib/hreflang";
+import { generateHreflang, ogImageUrl, canonicalFor, ogLocale } from "@/lib/hreflang";
 import { BalonDetayContent } from "./BalonDetayContent";
 
 interface PageParams {
@@ -44,6 +44,7 @@ export function generateMetadata({ params }: PageParams): Metadata {
       languages: generateHreflang(path),
     },
     openGraph: {
+      locale: ogLocale(loc),
       title: pkg.name,
       description: pkg.shortDescription,
       url: canonicalFor(path, params.locale),

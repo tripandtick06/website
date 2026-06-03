@@ -75,7 +75,7 @@ export function ServiceCard({ item, ctaHref }: ServiceCardProps) {
         {item.photoUrl ? (
           <NextImage
             src={item.photoUrl}
-            alt={`${item.name} — Kapadokya ${item.duration}`}
+            alt={`${item.name} — Kapadokya`}
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className="object-cover"

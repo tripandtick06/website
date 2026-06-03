@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { breadcrumbSchema, itemListSchema, faqPageSchema } from "@/lib/schema";
-import { generateHreflang, ogImageUrl, canonicalFor } from "@/lib/hreflang";
+import { generateHreflang, ogImageUrl, canonicalFor, ogLocale } from "@/lib/hreflang";
 import { DICTIONARIES, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { PACKAGES } from "@/data/services/catalog";
 import { tServiceList } from "@/lib/i18n/localizeData";
@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
       languages: generateHreflang("/paketler"),
     },
     openGraph: {
+      locale: ogLocale(loc),
       title: d.meta_title_2,
       description: d.meta_desc_2,
       url: canonicalFor("/paketler", params.locale),

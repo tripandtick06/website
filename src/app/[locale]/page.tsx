@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { canonicalFor, generateHreflang, ogImageUrl } from "@/lib/hreflang";
+import { canonicalFor, generateHreflang, ogImageUrl, ogLocale } from "@/lib/hreflang";
 import {
   DICTIONARIES,
   isLocale,
@@ -41,6 +41,7 @@ export async function generateMetadata({
     },
     openGraph: {
       type: "website",
+      locale: ogLocale(loc),
       url,
       siteName: "Trip and Tick",
       title,

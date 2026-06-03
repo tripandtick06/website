@@ -4,7 +4,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { SITE_URL, articleSchema, breadcrumbSchema, faqPageSchema } from "@/lib/schema";
 import { FOUNDER } from "@/data/founder";
-import { ogImageUrl, canonicalFor } from "@/lib/hreflang";
+import { ogImageUrl, canonicalFor, ogLocale } from "@/lib/hreflang";
 import { DICTIONARIES, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { ARTICLES, type BlogArticle, type BlogArticleMeta } from "@/data/blog";
 import { BlogArticleContent } from "./BlogArticleContent";
@@ -79,6 +79,7 @@ export async function generateMetadata({
       languages,
     },
     openGraph: {
+      locale: ogLocale(isLocale(params.locale) ? params.locale : DEFAULT_LOCALE),
       title,
       description: article.metaDescription,
       url: canonicalFor(path, params.locale),

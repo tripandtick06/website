@@ -55,7 +55,7 @@ export function BalonlarContent() {
                   {pkg.images[0] ? (
                     <NextImage
                       src={pkg.images[0]}
-                      alt={pkg.name}
+                      alt={`${pkg.name} — Kapadokya`}
                       fill
                       sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-cover"
