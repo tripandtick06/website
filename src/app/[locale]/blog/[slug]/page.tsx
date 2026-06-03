@@ -53,12 +53,15 @@ export async function generateMetadata({
   // shared base by stripping any trailing locale suffix, then resolve each
   // locale to its own article slug (suffixed OR bare). Only emit locales that
   // actually have a translation. x-default points to the tr version.
-  const SUPPORTED = ["tr", "en", "de", "fr", "es", "nl", "zh", "hi", "ur"] as const;
+  const SUPPORTED = ["tr", "en", "de", "fr", "es", "nl", "zh", "hi", "ur", "pt", "pt-BR", "ja", "ko", "it", "ru", "uk", "az"] as const;
   const TAG: Record<string, string> = {
     tr: "tr-TR", en: "en", de: "de", fr: "fr", es: "es",
     nl: "nl", zh: "zh-Hans", hi: "hi", ur: "ur",
+    pt: "pt-PT", "pt-BR": "pt-BR", ja: "ja", ko: "ko", it: "it",
+    ru: "ru", uk: "uk", az: "az",
   };
-  const base = article.slug.replace(/-(tr|en|de|fr|es|nl|zh|hi|ur)$/, "");
+  // pt-BR once (uzun) eslesir; anchored $ oldugu icin sira onemsiz ama acik tutuldu.
+  const base = article.slug.replace(/-(pt-BR|tr|en|de|fr|es|nl|zh|hi|ur|pt|ja|ko|it|ru|uk|az)$/, "");
   const languages: Record<string, string> = {};
   for (const loc of SUPPORTED) {
     const match = ARTICLES.find(

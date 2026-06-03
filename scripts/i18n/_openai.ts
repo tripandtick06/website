@@ -43,7 +43,7 @@ async function translateOnce(node: unknown, system: string, langName: string): P
     headers: { Authorization: `Bearer ${KEY}`, "Content-Type": "application/json" },
     body: JSON.stringify({
       model: MODEL,
-      max_tokens: 12000,
+      max_tokens: 16000,
       temperature: 0.3,
       response_format: { type: "json_object" },
       messages: [
