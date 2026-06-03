@@ -12,8 +12,15 @@ import { ACTIVITIES, TOURS, HOTELS, PACKAGES, TRANSFERS } from "@/data/services/
 
 const DISMISS_KEY = "tripandtick:socialproof:dismissed";
 
-// Degisken donus araliklari (ms) — sirayla doner: 3s, 7s, 4s, 6s, 5s, 8s, 3.5s, 6.5s, 4.5s, 5.5s.
-const INTERVALS = [3000, 7000, 4000, 6000, 5000, 8000, 3500, 6500, 4500, 5500];
+// Donus araligi: yavas + ongorulemez (aritmetik degil). Her adimda 13-29 sn arasi rastgele.
+const MIN_DELAY = 13000;
+const MAX_DELAY = 29000;
+function nextDelay(): number {
+  return MIN_DELAY + Math.floor(Math.random() * (MAX_DELAY - MIN_DELAY));
+}
+
+// Gercekci + cesitli kisi sayilari (cogu 1-4, ara sira daha fazla). 5 tekrari azaltildi.
+const COUNT_POOL = [2, 1, 4, 2, 3, 1, 6, 2, 1, 4, 3, 2, 8, 1, 2, 3, 1, 5, 2, 4, 1, 3, 2, 7, 1, 2, 4, 1, 3, 2];
 
 // Maskeli isim havuzu (uluslararasi). Ad ilk harf + **, soyad ilk harf + ***.
 const NAMES = [
@@ -74,7 +81,7 @@ export function SocialProofPopup() {
       out.push({
         name: NAMES[(i * 7) % NAMES.length],
         service: services[(i * 3) % services.length],
-        count: 1 + ((i * 2) % 6),
+        count: COUNT_POOL[i % COUNT_POOL.length],
       });
     }
     return out;
@@ -107,7 +114,7 @@ export function SocialProofPopup() {
   // Degisken aralikli donus: her adimda farkli sure (INTERVALS dongusu).
   useEffect(() => {
     if (dismissed || !visible || items.length === 0) return;
-    const delay = INTERVALS[stepRef.current % INTERVALS.length];
+    const delay = nextDelay();
     timerRef.current = setTimeout(() => {
       // Kisa "cikis" sonra yeni icerik + tekrar gosterim (fade).
       setVisible(false);
