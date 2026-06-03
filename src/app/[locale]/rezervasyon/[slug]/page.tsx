@@ -4,13 +4,16 @@ import { Suspense } from "react";
 import { BALLOON_PACKAGES, getBalloonPackageBySlug } from "@/data/services/balloons";
 import { ACTIVITIES, TOURS, HOTELS, PACKAGES, TRANSFERS, type ServiceItem } from "@/data/services/catalog";
 import { DICTIONARIES, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
+import { tBalloon, tService } from "@/lib/i18n/localizeData";
 import { BookingClient, type BookingService } from "./BookingClient";
 
 type Params = { locale: string; slug: string };
 
-function findService(slug: string): BookingService | null {
-  const balloon = getBalloonPackageBySlug(slug);
-  if (balloon) {
+// Locale'e gore cevrili (tBalloon/tService) + foto (image) ile BookingService dondurur.
+function findService(slug: string, locale: Locale): BookingService | null {
+  const balloonRaw = getBalloonPackageBySlug(slug);
+  if (balloonRaw) {
+    const balloon = tBalloon(balloonRaw, locale);
     return {
       slug: balloon.slug,
       name: balloon.name,
@@ -31,8 +34,9 @@ function findService(slug: string): BookingService | null {
   }
 
   const allOther: ServiceItem[] = [...ACTIVITIES, ...TOURS, ...HOTELS, ...PACKAGES, ...TRANSFERS];
-  const other = allOther.find((s) => s.slug === slug);
-  if (other) {
+  const otherRaw = allOther.find((s) => s.slug === slug);
+  if (otherRaw) {
+    const other = tService(otherRaw, locale);
     return {
       slug: other.slug,
       name: other.name,
@@ -48,7 +52,7 @@ function findService(slug: string): BookingService | null {
       includes: other.includes,
       warnings: [],
       highlights: other.highlights,
-      image: null,
+      image: other.photoUrl ?? null,
       priceUnit: other.priceUnit,
     };
   }
@@ -59,7 +63,7 @@ function findService(slug: string): BookingService | null {
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
   const d = DICTIONARIES[loc].page.rezervasyon.slug;
-  const service = findService(params.slug);
+  const service = findService(params.slug, loc);
   if (!service) {
     return { title: d.meta_title_not_found };
   }
@@ -81,7 +85,7 @@ export function generateStaticParams() {
 export default function RezervasyonSlugPage({ params }: { params: Params }) {
   const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
   const d = DICTIONARIES[loc].page.rezervasyon.slug;
-  const service = findService(params.slug);
+  const service = findService(params.slug, loc);
   if (!service) notFound();
   return (
     <Suspense fallback={<div className="container-main py-16 text-center text-slate-500">{d.loading}</div>}>

@@ -1,5 +1,6 @@
 "use client";
 
+import NextImage from "next/image";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useT } from "@/lib/i18n/I18nProvider";
 import { useUiText } from "@/lib/i18n/uiText";
@@ -552,7 +553,21 @@ export function BookingClient({ service }: { service: BookingService }) {
         </nav>
 
         <h1 className="text-3xl font-bold text-slate-900 mb-2">{t.component.booking.booking_client.page_title}</h1>
-        <p className="text-slate-600 mb-8">{service.name} — {service.shortDescription}</p>
+        <p className="text-slate-600 mb-6">{service.name} — {service.shortDescription}</p>
+
+        {/* Hero foto — service.image (catalog photoUrl / balloon images[0]); fotosuz bolum olmasin */}
+        {service.image && (
+          <div className="relative h-56 sm:h-72 rounded-2xl overflow-hidden mb-8 bg-slate-100">
+            <NextImage
+              src={service.image}
+              alt={`${service.name} — Kapadokya`}
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 1024px"
+              className="object-cover"
+            />
+          </div>
+        )}
 
         <ProgressBar currentStep={step} />
 

@@ -1,5 +1,6 @@
 "use client";
 
+import NextImage from "next/image";
 import { Link } from "@/i18n/routing";
 import {
   Wind,
@@ -60,9 +61,20 @@ export function BalonDetayContent({
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             {/* Main */}
             <div className="lg:col-span-2">
-              {/* Hero / gallery placeholder */}
-              <div className="relative h-72 lg:h-96 bg-gradient-to-br from-primary via-primary-light to-accent rounded-2xl flex items-center justify-center mb-8 overflow-hidden">
-                <Wind className="w-32 h-32 text-white/70" strokeWidth={1} />
+              {/* Hero / gallery — gercek foto (pkg.images[0]); yoksa gradient + Wind fallback */}
+              <div className={`relative h-72 lg:h-96 rounded-2xl flex items-center justify-center mb-8 overflow-hidden ${pkg.images[0] ? "bg-slate-100" : "bg-gradient-to-br from-primary via-primary-light to-accent"}`}>
+                {pkg.images[0] ? (
+                  <NextImage
+                    src={pkg.images[0]}
+                    alt={`${pkg.name} — Kapadokya`}
+                    fill
+                    priority
+                    sizes="(max-width: 1024px) 100vw, 66vw"
+                    className="object-cover"
+                  />
+                ) : (
+                  <Wind className="w-32 h-32 text-white/70" strokeWidth={1} />
+                )}
                 <div className="absolute top-4 left-4 bg-white text-primary px-3 py-1.5 rounded-full text-xs font-bold uppercase shadow-md">
                   {pkg.badge}
                 </div>
