@@ -5,6 +5,7 @@
 // Data: op (Operator), packages (BalloonPackage[]), reviews (Review[])
 // User verbatim: "JSX gövdesi YENİ OperatorDetayContent.tsx"
 
+import NextImage from "next/image";
 import { Link } from "@/i18n/routing";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { useT } from "@/lib/i18n/I18nProvider";
@@ -65,8 +66,18 @@ export function OperatorDetayContent({
 
   return (
     <>
-      <section className="bg-gradient-to-br from-primary via-primary-light to-primary-dark text-white">
-        <div className="container-main py-14 sm:py-20">
+      <section className="relative overflow-hidden text-white">
+        {/* Kapak foto — Kapadokya balon; gradient overlay metni okunur tutar */}
+        <NextImage
+          src="/images/hero/homepage.jpg"
+          alt="Kapadokya balon operatörü"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary-light/90 to-primary-dark/95" />
+        <div className="container-main py-14 sm:py-20 relative z-10">
           <div className="max-w-3xl">
             <span className="inline-block bg-white/[0.08] text-white/90 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 backdrop-blur-sm border border-white/10">
               {ti.operator_lisans} {op.licenseNo}
