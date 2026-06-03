@@ -1,22 +1,29 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import fs from "node:fs";
+import path from "node:path";
 import { SITE_URL, articleSchema, breadcrumbSchema, faqPageSchema } from "@/lib/schema";
 import { FOUNDER } from "@/data/founder";
 import { ogImageUrl, canonicalFor } from "@/lib/hreflang";
 import { ARTICLES, type BlogArticle, type BlogArticleMeta } from "@/data/blog";
 import { BlogArticleContent } from "./BlogArticleContent";
 
-export const runtime = "edge";
+// Tum makaleler build-time SSG -> statik HTML (indexlenebilir, noindex YOK).
+// Icerik public/blog/*.json'dan build'de fs ile okunur (Worker bundle'a girmez,
+// 3 MiB limiti korunur). dynamicParams=false -> sadece bilinen sluglar.
+export const dynamic = "force-static";
+export const dynamicParams = false;
 
-// Icerik public/blog/*.json STATIK asset; runtime'da fetch ile alinir (Worker
-// bundle 3 MiB limiti icin). SSG yok -> build-time fetch sorunu olmaz.
-async function getArticle(slug: string): Promise<BlogArticle | null> {
+export function generateStaticParams() {
+  return ARTICLES.map((a) => ({ locale: a.locale, slug: a.slug }));
+}
+
+function getArticle(slug: string): BlogArticle | null {
   const meta = ARTICLES.find((a) => a.slug === slug);
   if (!meta) return null;
   try {
-    const res = await fetch(`${SITE_URL}/blog/${meta.file}`, { cache: "force-cache" });
-    if (!res.ok) return null;
-    const full = (await res.json()) as { content?: string; faq?: BlogArticle["faq"] };
+    const raw = fs.readFileSync(path.join(process.cwd(), "public", "blog", meta.file), "utf8");
+    const full = JSON.parse(raw) as { content?: string; faq?: BlogArticle["faq"] };
     return { ...meta, content: full.content ?? "", faq: full.faq };
   } catch {
     return null;
