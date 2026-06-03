@@ -222,8 +222,8 @@
       ]
     },
     "hamam-standart": {
-      "name": "Standard Turkish Bath",
-      "shortDescription": "A 90-minute traditional Turkish bath — hot room, body scrub, foam massage, sauna, jacuzzi, tea/coffee. Hotel transfer included.",
+      "name": "Standard Turkish Hammam",
+      "shortDescription": "A 90-minute traditional Turkish hammam — hot room, body scrub, foam massage, sauna, jacuzzi, tea/coffee. Hotel transfer included.",
       "includes": [
         "Hamam (hot room)",
         "Body scrub (loofah)",
@@ -240,11 +240,11 @@
       ]
     },
     "hamam-deluxe": {
-      "name": "Deluxe Turkish Bath + Massage",
-      "shortDescription": "Bath package + 30-minute Swedish oil massage + full-body mask. A premium spa experience, with transfer.",
+      "name": "Deluxe Turkish Hammam + Massage",
+      "shortDescription": "Hammam package + 30-minute Swedish oil massage + full-body mask. A premium spa experience, with transfer.",
       "badge": "Premium",
       "includes": [
-        "Full bath package",
+        "Full hammam package",
         "Scrub + foam",
         "30-min Swedish oil massage",
         "Full-body seaweed/mud mask",

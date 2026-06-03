@@ -9,6 +9,9 @@ import type { Locale } from "./dictionaries";
 import { useLocale } from "@/lib/i18n/I18nProvider";
 
 export interface UiText {
+  nav: {
+    myReservations: string;
+  };
   hotelCard: {
     quoteCta: string;
     customPrice: string;
@@ -39,6 +42,7 @@ export interface UiText {
   serviceCard: {
     infoForm: string;
     reserve: string;
+    perCouple: string;
   };
   reviewScore: {
     excellent: string;
@@ -63,6 +67,9 @@ export interface UiText {
 
 export const UI_TEXT: Record<Locale, UiText> = {
   tr: {
+    nav: {
+      myReservations: "Rezervasyonum",
+    },
     hotelCard: {
       quoteCta: "Fiyat teklifi al",
       customPrice: "Size özel fiyat",
@@ -95,6 +102,7 @@ export const UI_TEXT: Record<Locale, UiText> = {
     serviceCard: {
       infoForm: "Bilgi & Form",
       reserve: "Rezervasyon",
+      perCouple: "çift başı",
     },
     reviewScore: {
       excellent: "Mükemmel",
@@ -117,6 +125,9 @@ export const UI_TEXT: Record<Locale, UiText> = {
     },
   },
   en: {
+    nav: {
+      myReservations: "My Reservations",
+    },
     hotelCard: {
       quoteCta: "Get a price quote",
       customPrice: "Custom price for you",
@@ -149,6 +160,7 @@ export const UI_TEXT: Record<Locale, UiText> = {
     serviceCard: {
       infoForm: "Info & Form",
       reserve: "Book Now",
+      perCouple: "per couple",
     },
     reviewScore: {
       excellent: "Excellent",
@@ -171,6 +183,9 @@ export const UI_TEXT: Record<Locale, UiText> = {
     },
   },
   de: {
+    nav: {
+      myReservations: "Meine Buchungen",
+    },
     hotelCard: {
       quoteCta: "Preisangebot anfordern",
       customPrice: "Individueller Preis für Sie",
@@ -203,6 +218,7 @@ export const UI_TEXT: Record<Locale, UiText> = {
     serviceCard: {
       infoForm: "Info & Formular",
       reserve: "Jetzt buchen",
+      perCouple: "pro Paar",
     },
     reviewScore: {
       excellent: "Ausgezeichnet",
@@ -225,6 +241,9 @@ export const UI_TEXT: Record<Locale, UiText> = {
     },
   },
   fr: {
+    nav: {
+      myReservations: "Mes réservations",
+    },
     hotelCard: {
       quoteCta: "Obtenir un devis",
       customPrice: "Prix personnalisé pour vous",
@@ -257,6 +276,7 @@ export const UI_TEXT: Record<Locale, UiText> = {
     serviceCard: {
       infoForm: "Infos & Formulaire",
       reserve: "Réserver",
+      perCouple: "par couple",
     },
     reviewScore: {
       excellent: "Excellent",
@@ -279,6 +299,9 @@ export const UI_TEXT: Record<Locale, UiText> = {
     },
   },
   es: {
+    nav: {
+      myReservations: "Mis reservas",
+    },
     hotelCard: {
       quoteCta: "Solicitar presupuesto",
       customPrice: "Precio personalizado para ti",
@@ -311,6 +334,7 @@ export const UI_TEXT: Record<Locale, UiText> = {
     serviceCard: {
       infoForm: "Info y formulario",
       reserve: "Reservar",
+      perCouple: "por pareja",
     },
     reviewScore: {
       excellent: "Excelente",
@@ -333,6 +357,9 @@ export const UI_TEXT: Record<Locale, UiText> = {
     },
   },
   nl: {
+    nav: {
+      myReservations: "Mijn reserveringen",
+    },
     hotelCard: {
       quoteCta: "Vraag een prijsofferte aan",
       customPrice: "Speciale prijs voor jou",
@@ -365,6 +392,7 @@ export const UI_TEXT: Record<Locale, UiText> = {
     serviceCard: {
       infoForm: "Info & formulier",
       reserve: "Reserveren",
+      perCouple: "per koppel",
     },
     reviewScore: {
       excellent: "Uitstekend",
@@ -387,6 +415,9 @@ export const UI_TEXT: Record<Locale, UiText> = {
     },
   },
   zh: {
+    nav: {
+      myReservations: "我的预订",
+    },
     hotelCard: {
       quoteCta: "获取报价",
       customPrice: "为您定制的价格",
@@ -419,6 +450,7 @@ export const UI_TEXT: Record<Locale, UiText> = {
     serviceCard: {
       infoForm: "信息与表单",
       reserve: "立即预订",
+      perCouple: "每对",
     },
     reviewScore: {
       excellent: "极好",
@@ -441,6 +473,9 @@ export const UI_TEXT: Record<Locale, UiText> = {
     },
   },
   hi: {
+    nav: {
+      myReservations: "मेरी बुकिंग",
+    },
     hotelCard: {
       quoteCta: "मूल्य कोटेशन प्राप्त करें",
       customPrice: "आपके लिए विशेष मूल्य",
@@ -473,6 +508,7 @@ export const UI_TEXT: Record<Locale, UiText> = {
     serviceCard: {
       infoForm: "जानकारी और फ़ॉर्म",
       reserve: "बुक करें",
+      perCouple: "प्रति जोड़ा",
     },
     reviewScore: {
       excellent: "उत्कृष्ट",
@@ -495,6 +531,9 @@ export const UI_TEXT: Record<Locale, UiText> = {
     },
   },
   ur: {
+    nav: {
+      myReservations: "میری بکنگ",
+    },
     hotelCard: {
       quoteCta: "قیمت کا تخمینہ حاصل کریں",
       customPrice: "آپ کے لیے خصوصی قیمت",
@@ -527,6 +566,7 @@ export const UI_TEXT: Record<Locale, UiText> = {
     serviceCard: {
       infoForm: "معلومات اور فارم",
       reserve: "بک کریں",
+      perCouple: "فی جوڑا",
     },
     reviewScore: {
       excellent: "بہترین",

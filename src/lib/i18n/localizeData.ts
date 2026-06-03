@@ -26,6 +26,36 @@ interface Bundle {
   reviews: Record<string, FieldMap>;
 }
 
+// Duration alanini locale'e gore yerellestir (dk/saat/gun/gece -> dil birimleri).
+// Data'da "60 dk", "2 saat", "2 gun 1 gece", "Saatlik" gibi TR degerler var.
+const DUR: Partial<Record<Locale, { dk: string; saat: string; gun: string; gece: string; saatlik: string; tamgun: string }>> = {
+  en: { dk: "min", saat: "h", gun: "day", gece: "night", saatlik: "Hourly", tamgun: "Full day" },
+  de: { dk: "Min", saat: "Std", gun: "Tag", gece: "Nacht", saatlik: "Stündlich", tamgun: "Ganztags" },
+  fr: { dk: "min", saat: "h", gun: "jour", gece: "nuit", saatlik: "À l'heure", tamgun: "Journée" },
+  es: { dk: "min", saat: "h", gun: "día", gece: "noche", saatlik: "Por hora", tamgun: "Día completo" },
+  nl: { dk: "min", saat: "uur", gun: "dag", gece: "nacht", saatlik: "Per uur", tamgun: "Hele dag" },
+  zh: { dk: "分钟", saat: "小时", gun: "天", gece: "晚", saatlik: "按小时", tamgun: "全天" },
+  hi: { dk: "मिनट", saat: "घंटे", gun: "दिन", gece: "रात", saatlik: "प्रति घंटा", tamgun: "पूरा दिन" },
+  ur: { dk: "منٹ", saat: "گھنٹے", gun: "دن", gece: "رات", saatlik: "فی گھنٹہ", tamgun: "پورا دن" },
+};
+
+export function localizeDuration(dur: string, locale: Locale): string {
+  if (locale === "tr" || !dur) return dur;
+  const u = DUR[locale];
+  if (!u) return dur;
+  return dur
+    .replace(/Saatlik/gi, u.saatlik)
+    .replace(/Tam [Gg]ün/g, u.tamgun)
+    .replace(/\bgün\b/gi, u.gun)
+    .replace(/\bgece\b/gi, u.gece)
+    .replace(/\bsaat\b/gi, u.saat)
+    .replace(/\bdk\b/gi, u.dk);
+}
+
+function withDuration<T extends { duration?: string }>(item: T, locale: Locale): T {
+  return item.duration ? { ...item, duration: localizeDuration(item.duration, locale) } : item;
+}
+
 const BUNDLES: Partial<Record<Locale, Bundle>> = {
   en: en as unknown as Bundle,
   de: de as unknown as Bundle,
@@ -43,14 +73,14 @@ export function tBalloons(locale: Locale): BalloonPackage[] {
   if (!b) return BALLOON_PACKAGES;
   return BALLOON_PACKAGES.map((p) => {
     const o = b[p.slug];
-    return o ? { ...p, ...(o as Partial<BalloonPackage>) } : p;
+    return withDuration(o ? { ...p, ...(o as Partial<BalloonPackage>) } : p, locale);
   });
 }
 
 /** Tek balon paketi (detay sayfasi). */
 export function tBalloon(pkg: BalloonPackage, locale: Locale): BalloonPackage {
   const o = BUNDLES[locale]?.balloons?.[pkg.slug];
-  return o ? { ...pkg, ...(o as Partial<BalloonPackage>) } : pkg;
+  return withDuration(o ? { ...pkg, ...(o as Partial<BalloonPackage>) } : pkg, locale);
 }
 
 /** ServiceItem listesi (otel/tur/aktivite/paket/transfer) — cevrili alanlarla. */
@@ -59,15 +89,16 @@ export function tServiceList(list: ServiceItem[], locale: Locale): ServiceItem[]
   if (!s) return list;
   return list.map((it) => {
     const o = s[it.slug];
-    return o ? { ...it, ...(o as Partial<ServiceItem>) } : it;
+    return withDuration(o ? { ...it, ...(o as Partial<ServiceItem>) } : it, locale);
   });
 }
 
 /** Tek ServiceItem (detay sayfasi / findService sonucu). */
 export function tService<T extends ServiceItem | undefined>(item: T, locale: Locale): T {
   if (!item) return item;
-  const o = BUNDLES[locale]?.services?.[item.slug];
-  return (o ? { ...item, ...(o as Partial<ServiceItem>) } : item) as T;
+  const base: ServiceItem = item;
+  const o = BUNDLES[locale]?.services?.[base.slug];
+  return withDuration(o ? { ...base, ...(o as Partial<ServiceItem>) } : base, locale) as T;
 }
 
 /** FAQ — cevrili soru/cevap. Sira/kategori korunur. */

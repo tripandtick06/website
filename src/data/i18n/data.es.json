@@ -222,8 +222,8 @@
       ]
     },
     "hamam-standart": {
-      "name": "Baño Turco Estándar",
-      "shortDescription": "Baño turco tradicional de 90 minutos: sala caliente, exfoliación, masaje de espuma, sauna, jacuzzi, té/café. Traslado desde el hotel incluido.",
+      "name": "Hammam Turco Estándar",
+      "shortDescription": "Hammam turco tradicional de 90 minutos: sala caliente, exfoliación, masaje de espuma, sauna, jacuzzi, té/café. Traslado desde el hotel incluido.",
       "includes": [
         "Hamam (sala caliente)",
         "Exfoliación (esponja kese)",
@@ -240,7 +240,7 @@
       ]
     },
     "hamam-deluxe": {
-      "name": "Baño Turco Deluxe + Masaje",
+      "name": "Hammam Turco Deluxe + Masaje",
       "shortDescription": "Paquete de hamam + 30 minutos de masaje sueco con aceite + mascarilla corporal completa. Experiencia spa premium, con traslado.",
       "badge": "Premium",
       "includes": [

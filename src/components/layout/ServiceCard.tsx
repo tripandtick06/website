@@ -141,7 +141,7 @@ export function ServiceCard({ item, ctaHref }: ServiceCardProps) {
                 <div className="text-2xl font-extrabold text-primary leading-none">
                   {formatPrice(item.adultPrice, item.currency)}
                 </div>
-                <div className="text-[10px] text-slate-500 mt-1">{t.component.layout.service_card.kisi_basi}</div>
+                <div className="text-[10px] text-slate-500 mt-1">{item.priceUnit === "couple" ? ui.serviceCard.perCouple : t.component.layout.service_card.kisi_basi}</div>
               </>
             )}
           </div>
