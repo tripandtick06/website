@@ -12,7 +12,15 @@ export type Locale =
   | "nl"
   | "zh"
   | "hi"
-  | "ur";
+  | "ur"
+  | "pt"
+  | "pt-BR"
+  | "ja"
+  | "ko"
+  | "it"
+  | "ru"
+  | "uk"
+  | "az";
 
 export const DEFAULT_LOCALE: Locale = "tr";
 export const SUPPORTED_LOCALES: Locale[] = [
@@ -25,6 +33,14 @@ export const SUPPORTED_LOCALES: Locale[] = [
   "zh",
   "hi",
   "ur",
+  "pt",
+  "pt-BR",
+  "ja",
+  "ko",
+  "it",
+  "ru",
+  "uk",
+  "az",
 ];
 
 export const LOCALE_DIR: Record<Locale, "ltr" | "rtl"> = {
@@ -37,9 +53,17 @@ export const LOCALE_DIR: Record<Locale, "ltr" | "rtl"> = {
   zh: "ltr",
   hi: "ltr",
   ur: "rtl",
+  pt: "ltr",
+  "pt-BR": "ltr",
+  ja: "ltr",
+  ko: "ltr",
+  it: "ltr",
+  ru: "ltr",
+  uk: "ltr",
+  az: "ltr",
 };
 
-export const DICTIONARIES = {
+const BASE_DICTIONARIES = {
   tr: {
     common: {
       reserve: "Rezervasyon Yap",
@@ -14280,6 +14304,20 @@ export const DICTIONARIES = {
   },
 } as const;
 
+// Yeni diller (pt/pt-BR/ja/ko/it/ru/uk/az) gecici olarak EN blokuna alias —
+// site hemen calisir (cevrilmemis yer EN gorunur). Faz B'de gercek ceviriyle degisir.
+export const DICTIONARIES = {
+  ...BASE_DICTIONARIES,
+  pt: BASE_DICTIONARIES.en,
+  "pt-BR": BASE_DICTIONARIES.en,
+  ja: BASE_DICTIONARIES.en,
+  ko: BASE_DICTIONARIES.en,
+  it: BASE_DICTIONARIES.en,
+  ru: BASE_DICTIONARIES.en,
+  uk: BASE_DICTIONARIES.en,
+  az: BASE_DICTIONARIES.en,
+} as const;
+
 export type Dictionary = typeof DICTIONARIES.tr;
 
 export const LOCALE_STORAGE_KEY = "tripandtick:locale";
@@ -14294,6 +14332,14 @@ export function isLocale(value: unknown): value is Locale {
     value === "nl" ||
     value === "zh" ||
     value === "hi" ||
-    value === "ur"
+    value === "ur" ||
+    value === "pt" ||
+    value === "pt-BR" ||
+    value === "ja" ||
+    value === "ko" ||
+    value === "it" ||
+    value === "ru" ||
+    value === "uk" ||
+    value === "az"
   );
 }

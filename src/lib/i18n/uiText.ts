@@ -65,7 +65,7 @@ export interface UiText {
   };
 }
 
-export const UI_TEXT: Record<Locale, UiText> = {
+const BASE_UI_TEXT = {
   tr: {
     nav: {
       myReservations: "Rezervasyonum",
@@ -588,6 +588,19 @@ export const UI_TEXT: Record<Locale, UiText> = {
       error: "ایک خرابی پیش آگئی",
     },
   },
+};
+
+// Yeni diller (pt/pt-BR/ja/ko/it/ru/uk/az) gecici EN alias — Faz B'de gercek ceviri.
+export const UI_TEXT: Record<Locale, UiText> = {
+  ...BASE_UI_TEXT,
+  pt: BASE_UI_TEXT.en,
+  "pt-BR": BASE_UI_TEXT.en,
+  ja: BASE_UI_TEXT.en,
+  ko: BASE_UI_TEXT.en,
+  it: BASE_UI_TEXT.en,
+  ru: BASE_UI_TEXT.en,
+  uk: BASE_UI_TEXT.en,
+  az: BASE_UI_TEXT.en,
 };
 
 /**

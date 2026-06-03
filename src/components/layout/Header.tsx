@@ -39,6 +39,14 @@ const LANGUAGES: LangEntry[] = [
   { code: "zh", label: "中文", flag: "ZH", disabled: false },
   { code: "hi", label: "हिन्दी", flag: "HI", disabled: false },
   { code: "ur", label: "اردو", flag: "UR", disabled: false },
+  { code: "pt", label: "Português", flag: "PT", disabled: false },
+  { code: "pt-BR", label: "Português (BR)", flag: "BR", disabled: false },
+  { code: "ja", label: "日本語", flag: "JA", disabled: false },
+  { code: "ko", label: "한국어", flag: "KO", disabled: false },
+  { code: "it", label: "Italiano", flag: "IT", disabled: false },
+  { code: "ru", label: "Русский", flag: "RU", disabled: false },
+  { code: "uk", label: "Українська", flag: "UK", disabled: false },
+  { code: "az", label: "Azərbaycan", flag: "AZ", disabled: false },
 ];
 
 export function Header() {

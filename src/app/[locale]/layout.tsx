@@ -48,6 +48,14 @@ const OG_LOCALE: Record<Locale, string> = {
   zh: "zh_CN",
   hi: "hi_IN",
   ur: "ur_PK",
+  pt: "pt_PT",
+  "pt-BR": "pt_BR",
+  ja: "ja_JP",
+  ko: "ko_KR",
+  it: "it_IT",
+  ru: "ru_RU",
+  uk: "uk_UA",
+  az: "az_AZ",
 };
 
 export async function generateMetadata({

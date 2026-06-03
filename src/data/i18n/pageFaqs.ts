@@ -9,7 +9,8 @@ type Faq = { question: string; answer: string };
 
 type PageKey = "activities" | "packages" | "transfers" | "tours";
 
-const PAGE_FAQS: Record<Locale, Record<PageKey, Faq[]>> = {
+// Partial: yeni diller (pt/pt-BR/ja/ko/it/ru/uk/az) eksik olabilir; getPageFaqs tr'ye fallback yapar.
+const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
   tr: {
     activities: [
       {
@@ -958,5 +959,5 @@ const PAGE_FAQS: Record<Locale, Record<PageKey, Faq[]>> = {
 };
 
 export function getPageFaqs(key: PageKey, locale: Locale): Faq[] {
-  return (PAGE_FAQS[locale] ?? PAGE_FAQS.tr)[key];
+  return (PAGE_FAQS[locale] ?? PAGE_FAQS.tr!)[key];
 }

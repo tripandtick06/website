@@ -45,6 +45,14 @@ const HREFLANG_LOCALES: { locale: string; tag: string }[] = [
   { locale: "zh", tag: "zh-Hans" },
   { locale: "hi", tag: "hi" },
   { locale: "ur", tag: "ur" },
+  { locale: "pt", tag: "pt-PT" },
+  { locale: "pt-BR", tag: "pt-BR" },
+  { locale: "ja", tag: "ja" },
+  { locale: "ko", tag: "ko" },
+  { locale: "it", tag: "it" },
+  { locale: "ru", tag: "ru" },
+  { locale: "uk", tag: "uk" },
+  { locale: "az", tag: "az" },
 ];
 
 /**
@@ -92,6 +100,14 @@ const OG_LOCALE_MAP: Record<string, string> = {
   zh: "zh_CN",
   hi: "hi_IN",
   ur: "ur_PK",
+  pt: "pt_PT",
+  "pt-BR": "pt_BR",
+  ja: "ja_JP",
+  ko: "ko_KR",
+  it: "it_IT",
+  ru: "ru_RU",
+  uk: "uk_UA",
+  az: "az_AZ",
 };
 
 /**

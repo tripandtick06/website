@@ -5,7 +5,11 @@ import { defineRouting } from "next-intl/routing";
 import { createNavigation } from "next-intl/navigation";
 import type { Pathnames } from "next-intl/routing";
 
-const locales = ["tr", "en", "de", "fr", "es", "nl", "zh", "hi", "ur"] as const;
+const locales = ["tr", "en", "de", "fr", "es", "nl", "zh", "hi", "ur", "pt", "pt-BR", "ja", "ko", "it", "ru", "uk", "az"] as const;
+
+// Yeni diller (pt/pt-BR/ja/ko/it/ru/uk/az) lokalize URL slug'i icin EN slug'ini paylasir.
+// Latin/temiz URL; istenirse sonra dile ozel slug yapilabilir.
+const EXTRA = (en: string) => ({ pt: en, "pt-BR": en, ja: en, ko: en, it: en, ru: en, uk: en, az: en });
 
 // Localized external URL segments. Folder structure stays Turkish (internal);
 // next-intl maps these per-locale. zh/hi/ur use Latin English slugs for clean URLs.
@@ -22,6 +26,7 @@ const pathnames = {
     zh: "/balloon-tours",
     hi: "/balloon-tours",
     ur: "/balloon-tours",
+    ...EXTRA("/balloon-tours"),
   },
   "/balonlar/[slug]": {
     tr: "/balonlar/[slug]",
@@ -33,6 +38,7 @@ const pathnames = {
     zh: "/balloon-tours/[slug]",
     hi: "/balloon-tours/[slug]",
     ur: "/balloon-tours/[slug]",
+    ...EXTRA("/balloon-tours/[slug]"),
   },
   "/oteller": {
     tr: "/oteller",
@@ -44,6 +50,7 @@ const pathnames = {
     zh: "/hotels",
     hi: "/hotels",
     ur: "/hotels",
+    ...EXTRA("/hotels"),
   },
   "/oteller/[slug]": {
     tr: "/oteller/[slug]",
@@ -55,6 +62,7 @@ const pathnames = {
     zh: "/hotels/[slug]",
     hi: "/hotels/[slug]",
     ur: "/hotels/[slug]",
+    ...EXTRA("/hotels/[slug]"),
   },
   "/aktiviteler": {
     tr: "/aktiviteler",
@@ -66,6 +74,7 @@ const pathnames = {
     zh: "/activities",
     hi: "/activities",
     ur: "/activities",
+    ...EXTRA("/activities"),
   },
   "/turlar": {
     tr: "/turlar",
@@ -77,6 +86,7 @@ const pathnames = {
     zh: "/tours",
     hi: "/tours",
     ur: "/tours",
+    ...EXTRA("/tours"),
   },
   "/paketler": {
     tr: "/paketler",
@@ -88,6 +98,7 @@ const pathnames = {
     zh: "/packages",
     hi: "/packages",
     ur: "/packages",
+    ...EXTRA("/packages"),
   },
   "/transferler": {
     tr: "/transferler",
@@ -99,6 +110,7 @@ const pathnames = {
     zh: "/transfers",
     hi: "/transfers",
     ur: "/transfers",
+    ...EXTRA("/transfers"),
   },
   "/kapadokya": {
     tr: "/kapadokya",
@@ -110,6 +122,7 @@ const pathnames = {
     zh: "/cappadocia",
     hi: "/cappadocia",
     ur: "/cappadocia",
+    ...EXTRA("/cappadocia"),
   },
   "/operatorler": {
     tr: "/operatorler",
@@ -121,6 +134,7 @@ const pathnames = {
     zh: "/operators",
     hi: "/operators",
     ur: "/operators",
+    ...EXTRA("/operators"),
   },
   "/operatorler/[id]": {
     tr: "/operatorler/[id]",
@@ -132,6 +146,7 @@ const pathnames = {
     zh: "/operators/[id]",
     hi: "/operators/[id]",
     ur: "/operators/[id]",
+    ...EXTRA("/operators/[id]"),
   },
   "/hakkimizda": {
     tr: "/hakkimizda",
@@ -143,6 +158,7 @@ const pathnames = {
     zh: "/about",
     hi: "/about",
     ur: "/about",
+    ...EXTRA("/about"),
   },
   "/iletisim": {
     tr: "/iletisim",
@@ -154,6 +170,7 @@ const pathnames = {
     zh: "/contact",
     hi: "/contact",
     ur: "/contact",
+    ...EXTRA("/contact"),
   },
   "/sss": {
     tr: "/sss",
@@ -165,6 +182,7 @@ const pathnames = {
     zh: "/faq",
     hi: "/faq",
     ur: "/faq",
+    ...EXTRA("/faq"),
   },
   "/yorum": {
     tr: "/yorum",
@@ -176,6 +194,7 @@ const pathnames = {
     zh: "/reviews",
     hi: "/reviews",
     ur: "/reviews",
+    ...EXTRA("/reviews"),
   },
   "/blog": "/blog",
   "/blog/[slug]": "/blog/[slug]",
