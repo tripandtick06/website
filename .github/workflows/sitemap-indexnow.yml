@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       urls:
-        description: 'URLs to submit, one per line (blank = parse sitemap)'
+        description: 'URLs to submit, one per line (blank = auto-parse sitemap)'
         required: false
         default: ''
 
@@ -12,58 +12,62 @@ jobs:
   indexnow:
     name: Submit URLs via IndexNow
     runs-on: ubuntu-latest
+    env:
+      INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+      SITE_HOST: tripandtick.com
     steps:
-      - name: Fetch sitemap and extract URLs
-        id: extract
+      - name: Build URL list and submit
         run: |
-          SITEMAP_URL="https://tripandtick.com/sitemap.xml"
-          MANUAL_URLS="${{ github.event.inputs.urls }}"
-          if [ -n "$MANUAL_URLS" ]; then
-            URL_LIST=$(echo "$MANUAL_URLS" | tr '\n' ',' | sed 's/,$//')
-          else
-            SITEMAP=$(curl -s "$SITEMAP_URL")
-            URL_LIST=$(echo "$SITEMAP" | grep -oP '(?<=<loc>)[^<]+' | head -50 | tr '\n' ',' | sed 's/,$//')
-          fi
-          echo "url_list=$URL_LIST" >> $GITHUB_OUTPUT
-          echo "Extracted URLs: $URL_LIST"
+          set -e
+          KEY="$INDEXNOW_KEY"
+          HOST="$SITE_HOST"
+          MANUAL="${{ github.event.inputs.urls }}"
 
-      - name: Build JSON payload
-        id: payload
-        run: |
-          IFS=',' read -ra URLS <<< "${{ steps.extract.outputs.url_list }}"
-          JSON_URLS=$(printf '"%s",' "${URLS[@]}" | sed 's/,$//')
-          KEY="${{ secrets.INDEXNOW_KEY }}"
-          PAYLOAD="{\"host\":\"tripandtick.com\",\"key\":\"${KEY}\",\"keyLocation\":\"https://tripandtick.com/${KEY}.txt\",\"urlList\":[${JSON_URLS}]}"
-          echo "payload=$PAYLOAD" >> $GITHUB_OUTPUT
-
-      - name: Submit to Bing (IndexNow)
-        run: |
-          RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" \
-            -X POST -H "Content-Type: application/json; charset=utf-8" \
-            -d "${{ steps.payload.outputs.payload }}" \
-            "https://www.bing.com/indexnow")
-          echo "Bing response: $RESPONSE"
-          if [ "$RESPONSE" = "200" ] || [ "$RESPONSE" = "202" ]; then
-            echo 'Bing submission successful'
+          if [ -n "$MANUAL" ]; then
+            URLS=$(echo "$MANUAL" | tr '\n' ' ' | xargs)
           else
-            echo "::warning::Bing IndexNow returned HTTP $RESPONSE"
+            URLS=$(curl -sf "https://${HOST}/sitemap.xml" | grep -oP '(?<=<loc>)[^<]+' | head -50 | tr '\n' ' ' | xargs)
           fi
 
-      - name: Submit to Yandex (IndexNow)
-        run: |
-          RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" \
-            -X POST -H "Content-Type: application/json; charset=utf-8" \
-            -d "${{ steps.payload.outputs.payload }}" \
-            "https://yandex.com/indexnow")
-          echo "Yandex response: $RESPONSE"
-          if [ "$RESPONSE" = "200" ] || [ "$RESPONSE" = "202" ]; then
-            echo 'Yandex submission successful'
-          else
-            echo "::warning::Yandex IndexNow returned HTTP $RESPONSE"
-          fi
+          # Build JSON array
+          JSON_ARRAY=$(echo "$URLS" | tr ' ' '\n' | python3 -c "import sys,json; print(json.dumps([l.strip() for l in sys.stdin if l.strip()]))")
+
+          echo "URLs: $JSON_ARRAY"
+
+          PAYLOAD=$(python3 -c "
+          import json
+          key = '$KEY'
+          host = '$HOST'
+          import sys
+          urls = $JSON_ARRAY
+          payload = {'host': host, 'key': key, 'keyLocation': f'https://{host}/{key}.txt', 'urlList': urls}
+          print(json.dumps(payload))
+          ")
+
+          echo "Payload length: ${#PAYLOAD}"
+
+          # Submit to Bing
+          BING=$(curl -s -o /tmp/bing_resp.txt -w "%{http_code}" \
+            -X POST \
+            -H 'Content-Type: application/json; charset=utf-8' \
+            -d "$PAYLOAD" \
+            'https://www.bing.com/indexnow')
+          echo "Bing HTTP: $BING"
+          cat /tmp/bing_resp.txt || true
+          [ "$BING" = "200" ] || [ "$BING" = "202" ] && echo 'Bing OK' || echo "::warning::Bing returned HTTP $BING"
+
+          # Submit to Yandex
+          YANDEX=$(curl -s -o /tmp/yandex_resp.txt -w "%{http_code}" \
+            -X POST \
+            -H 'Content-Type: application/json; charset=utf-8' \
+            -d "$PAYLOAD" \
+            'https://yandex.com/indexnow')
+          echo "Yandex HTTP: $YANDEX"
+          cat /tmp/yandex_resp.txt || true
+          [ "$YANDEX" = "200" ] || [ "$YANDEX" = "202" ] && echo 'Yandex OK' || echo "::warning::Yandex returned HTTP $YANDEX"
 
       - name: Summary
+        if: always()
         run: |
-          echo '### IndexNow Submission Complete' >> $GITHUB_STEP_SUMMARY
-          echo "**URLs submitted:** ${{ steps.extract.outputs.url_list }}" >> $GITHUB_STEP_SUMMARY
+          echo '### IndexNow Submission' >> $GITHUB_STEP_SUMMARY
           echo '**Engines:** Bing, Yandex' >> $GITHUB_STEP_SUMMARY
