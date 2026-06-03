@@ -10,7 +10,7 @@ import {
 import { serverDict } from "@/lib/i18n/serverDict";
 import { GizlilikContent } from "./GizlilikContent";
 
-export const dynamic = "force-static";
+export const runtime = "edge";
 
 export async function generateMetadata({
   params,

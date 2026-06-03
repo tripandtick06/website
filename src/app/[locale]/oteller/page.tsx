@@ -4,7 +4,7 @@ import { serverDict } from "@/lib/i18n/serverDict";
 import { generateHreflang, ogImageUrl, canonicalFor, ogLocale } from "@/lib/hreflang";
 import { OtellerContent } from "./OtellerContent";
 
-export const dynamic = "force-static";
+export const runtime = "edge";
 
 export async function generateMetadata({
   params,

@@ -4,7 +4,7 @@ import { serverDict } from "@/lib/i18n/serverDict";
 import { canonicalFor } from "@/lib/hreflang";
 import { OperatorlerContent } from "./OperatorlerContent";
 
-export const dynamic = "force-static";
+export const runtime = "edge";
 
 export async function generateMetadata({
   params,

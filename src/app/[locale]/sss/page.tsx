@@ -7,7 +7,7 @@ import { serverDict } from "@/lib/i18n/serverDict";
 import { tFaq } from "@/lib/i18n/localizeData";
 import { SssContent } from "./SssContent";
 
-export const dynamic = "force-static";
+export const runtime = "edge";
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;

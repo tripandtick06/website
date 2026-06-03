@@ -18,7 +18,7 @@ import { LoyaltySection } from "@/components/sections/LoyaltySection";
 import { StatsBar } from "@/components/sections/StatsBar";
 import { MobileStickyCTA } from "@/components/sections/MobileStickyCTA";
 
-export const dynamic = "force-static";
+export const runtime = "edge";
 
 export async function generateMetadata({
   params,

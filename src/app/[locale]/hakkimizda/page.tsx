@@ -7,7 +7,7 @@ import { serverDict } from "@/lib/i18n/serverDict";
 import { FOUNDER } from "@/data/founder";
 import { HakkimizdaContent } from "./HakkimizdaContent";
 
-export const dynamic = "force-static";
+export const runtime = "edge";
 
 export async function generateMetadata({
   params,

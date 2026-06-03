@@ -10,7 +10,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-export const dynamic = "force-static";
+export const runtime = "edge";
 
 import { JsonLd } from "@/components/layout/JsonLd";
 import { OPERATORS, getOperatorById } from "@/data/services/operators";
