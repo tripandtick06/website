@@ -40,7 +40,15 @@ export async function middleware(req: NextRequest) {
       }
       return NextResponse.next();
     }
-    return intlMiddleware(req);
+    // next-intl emits 307 (temporary) for locale redirects; upgrade to 308
+    // (permanent) so SEO link equity is preserved. Only the redirect path is
+    // touched — 200/next responses pass through untouched.
+    const res = intlMiddleware(req);
+    if (res.status === 307) {
+      const loc = res.headers.get("location");
+      if (loc) return NextResponse.redirect(loc, { status: 308, headers: res.headers });
+    }
+    return res;
   }
 
   // Stripe webhook bypass — Stripe IP'lerinden gelir, signature verify yeterli koruma.

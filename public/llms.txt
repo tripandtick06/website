@@ -1,49 +1,42 @@
 # Trip and Tick
 
-> Kapadokya odakli online seyahat acentasi (OTA). Sicak hava balonu turu, otel
-> rezervasyonu, ATV / at / jeep aktiviteleri, gunluk turlar ve kombine paketler.
-> 9+ TURSAB lisansli operator, %100 iade garantisi, en dusuk fiyat garantisi.
+> Trip and Tick (tripandtick.com) is a TÜRSAB-licensed online travel agency for Cappadocia, Turkey. It sells hot-air balloon tours (from €165), guided day tours, activities, airport transfers and combo packages, and provides cave-hotel information with custom quotes. Available in 9 languages with secure 3D-Secure payment, free-cancellation policies, €40M balloon insurance and a 4.9/5 rating from 12,000+ customers.
 
-Site: https://tripandtick.com
-Iletisim: https://tripandtick.com/tr/iletisim
-E-posta: info@tripandtick.com
-Telefon: +90 537 464 78 61
-WhatsApp: +90 537 464 78 61
-Lokasyon: Goreme / Nevsehir / Turkiye
-Dil: TR (primary), EN/DE/FR/ES/NL/ZH/HI/UR (canli)
+Website: https://tripandtick.com
+Contact: https://tripandtick.com/iletisim
+Email: hello@tripandtick.com
+Phone / WhatsApp: +90 537 464 78 61
+Location: Göreme / Nevşehir, Cappadocia, Turkey
+Languages: TR (default), EN, DE, FR, ES, NL, ZH, HI, UR
 
-## Ana sayfalar
+## Services
 
-- [Anasayfa](https://tripandtick.com/tr) — kategoriler, en cok satanlar, garantiler
-- [Balon turlari](https://tripandtick.com/tr/balonlar) — 4 paket EUR 165'ten baslayan
-- [Oteller](https://tripandtick.com/tr/oteller) — Kapadokya magara + butik oteller (20 secenek)
-- [Aktiviteler](https://tripandtick.com/tr/aktiviteler) — ATV, at binme, jeep safari, hamam, microlight (16 paket)
-- [Turlar](https://tripandtick.com/tr/turlar) — Kirmizi/Yesil/Mix/Sari + yeralti + gun-batimi + Instagram turu
-- [Paketler](https://tripandtick.com/tr/paketler) — kombine deneyim paketleri (balayi/aile/macera/kurumsal)
-- [Transferler](https://tripandtick.com/tr/transferler) — Nevsehir/Kayseri havalimani transfer
-- [Operatorler](https://tripandtick.com/tr/operatorler) — 9+ TURSAB lisansli partner
-- [Kapadokya rehberi](https://tripandtick.com/tr/kapadokya) — destinasyon overview
+- [Hot-air balloon tours](https://tripandtick.com/balonlar) — Standard, Deluxe and Romantic-private flights from €165 per person; includes hotel transfer, certificate and insurance; minimum age 6
+- [Cave hotels](https://tripandtick.com/oteller) — cave and boutique hotels in Göreme, Ürgüp and Uçhisar; information and custom quote only (no online booking — contact for a quote)
+- [Day tours](https://tripandtick.com/turlar) — Red, Green, Yellow and Mix tours, Underground City, Sunset and Photo tours
+- [Activities](https://tripandtick.com/aktiviteler) — ATV (quad), jeep safari, horse riding, Turkish Hammam, Turkish Night show, microlight
+- [Combo packages](https://tripandtick.com/paketler) — full-day, honeymoon (per couple), family, proposal (per couple) and corporate packages
+- [Airport transfers](https://tripandtick.com/transferler) — from Nevşehir (NAV) and Kayseri (ASR) airports to Cappadocia hotels
 
-## Bilgi
+## Trust & credentials
 
-- [SSS](https://tripandtick.com/tr/sss) — sik sorulan sorular (balon iptal, hava, sigorta)
-- [Blog](https://tripandtick.com/tr/blog) — Kapadokya rehberi, gezi ipuclari (10 makale)
-- [Yorum / Yorum Yaz](https://tripandtick.com/tr/yorum) — musteri yorumlari
-- [Hakkimizda](https://tripandtick.com/tr/hakkimizda)
-- [Iletisim](https://tripandtick.com/tr/iletisim)
+- TÜRSAB-licensed travel agency working with 9+ licensed balloon operators
+- €40 million balloon flight insurance included on every balloon package
+- Secure 3D-Secure card payment for balloon and tour bookings
+- Free-cancellation policies; full refund on weather/operator cancellations
+- 4.9 / 5.0 rating from 12,000+ customers
 
-## Yasal
+## Information
 
-- [Gizlilik Politikasi](https://tripandtick.com/tr/gizlilik-politikasi)
-- [Kullanim Sartlari](https://tripandtick.com/tr/kullanim-sartlari)
-- [Iptal & Iade Politikasi](https://tripandtick.com/tr/iptal-iade-politikasi) — 14+ gun %100 iade
-- [Cerez Politikasi](https://tripandtick.com/tr/cerez-politikasi)
-- [KVKK Aydinlatma](https://tripandtick.com/tr/kvkk)
-- [GDPR / Veri Haklari](https://tripandtick.com/tr/gdpr)
-- [Impressum (DE/AT)](https://tripandtick.com/tr/impressum)
+- [Blog](https://tripandtick.com/blog) — Cappadocia guides in 9 languages: balloon prices, best time to visit, activities, photo spots, cave-hotel recommendations, getting from Istanbul, wedding photography, winter guide
+- [Contact](https://tripandtick.com/iletisim) — phone, WhatsApp and email
+- Detailed AI context: https://tripandtick.com/llms-full.txt
 
-## API
+## Multilingual
+
+Content is available in 9 languages. Turkish is the default and is served on unprefixed paths (e.g. /balonlar). Other languages use a locale prefix with localized URL slugs — for example /nl/ballonvaarten, /de/hotels, /es/hoteles.
+
+## Crawl
 
 - Sitemap: https://tripandtick.com/sitemap.xml
 - Robots: https://tripandtick.com/robots.txt
-- Detayli LLM context: https://tripandtick.com/llms-full.txt

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { SITE_URL } from "@/lib/schema";
-import { generateHreflang, ogImageUrl, canonicalFor } from "@/lib/hreflang";
+import { generateHreflang, ogImageUrl, canonicalFor, ogLocale } from "@/lib/hreflang";
 import { ARTICLES, type BlogArticleMeta } from "@/data/blog";
 import { BlogContent } from "./BlogContent";
 
@@ -32,6 +32,7 @@ export async function generateMetadata({
       },
     },
     openGraph: {
+      locale: ogLocale(loc),
       title: d.meta_title_2,
       description: d.meta_desc_2,
       url: canonicalFor("/blog", params.locale),

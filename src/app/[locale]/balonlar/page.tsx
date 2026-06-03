@@ -5,7 +5,7 @@ import {
   faqPageSchema,
   itemListSchema,
 } from "@/lib/schema";
-import { generateHreflang, ogImageUrl, canonicalFor } from "@/lib/hreflang";
+import { generateHreflang, ogImageUrl, canonicalFor, ogLocale } from "@/lib/hreflang";
 import {
   DICTIONARIES,
   isLocale,
@@ -32,6 +32,7 @@ export async function generateMetadata({
       languages: generateHreflang("/balonlar"),
     },
     openGraph: {
+      locale: ogLocale(loc),
       title: d.meta_title_2,
       description: d.meta_desc_2,
       url: canonicalFor("/balonlar", params.locale),
