@@ -36,7 +36,7 @@ export function ReviewsSection() {
         <div className="text-center mb-12">
           <span className="section-tag">{t.component.sections.reviews.musteri_yorumlari}</span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            12.000+ Mutlu Yolcu
+            {t.component.sections.reviews.happy_travelers}
           </h2>
           <p className="text-slate-500 mt-2 text-sm sm:text-base">
             {t.component.sections.reviews.trip_tick_guvenenlerin_gercek}

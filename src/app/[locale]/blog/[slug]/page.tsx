@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { SITE_URL, articleSchema, breadcrumbSchema, faqPageSchema } from "@/lib/schema";
 import { FOUNDER } from "@/data/founder";
-import { generateHreflang, ogImageUrl, canonicalFor } from "@/lib/hreflang";
+import { ogImageUrl, canonicalFor } from "@/lib/hreflang";
 import { ARTICLES, type BlogArticle, type BlogArticleMeta } from "@/data/blog";
 import { BlogArticleContent } from "./BlogArticleContent";
 
@@ -39,12 +39,36 @@ export async function generateMetadata({
 
   const path = `/blog/${article.slug}`;
   const title = article.metaTitle || article.title;
+
+  // Per-locale hreflang for blog detail: each locale owns a DISTINCT slug
+  // (e.g. `-de`, `-en`); some tr/en slugs are bare (no suffix). Derive the
+  // shared base by stripping any trailing locale suffix, then resolve each
+  // locale to its own article slug (suffixed OR bare). Only emit locales that
+  // actually have a translation. x-default points to the tr version.
+  const SUPPORTED = ["tr", "en", "de", "fr", "es", "nl", "zh", "hi", "ur"] as const;
+  const TAG: Record<string, string> = {
+    tr: "tr-TR", en: "en", de: "de", fr: "fr", es: "es",
+    nl: "nl", zh: "zh-Hans", hi: "hi", ur: "ur",
+  };
+  const base = article.slug.replace(/-(tr|en|de|fr|es|nl|zh|hi|ur)$/, "");
+  const languages: Record<string, string> = {};
+  for (const loc of SUPPORTED) {
+    const match = ARTICLES.find(
+      (a) => a.locale === loc && (a.slug === `${base}-${loc}` || a.slug === base)
+    );
+    if (!match) continue;
+    const href = `${SITE_URL}${loc === "tr" ? "" : `/${loc}`}/blog/${match.slug}`;
+    languages[TAG[loc]] = href;
+    if (loc === "tr") languages["x-default"] = href;
+  }
+
   return {
     title,
     description: article.metaDescription,
+    robots: { index: true, follow: true },
     alternates: {
       canonical: canonicalFor(path, params.locale),
-      languages: generateHreflang(path),
+      languages,
     },
     openGraph: {
       title,

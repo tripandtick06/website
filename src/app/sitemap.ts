@@ -11,7 +11,7 @@ import { generateHreflang } from "@/lib/hreflang";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  const url = (p: string) => `${SITE_URL}/tr${p === "/" ? "" : p}`;
+  const url = (p: string) => `${SITE_URL}${p === "/" ? "" : p}`;
   const alt = (p: string) => ({ languages: generateHreflang(p) });
 
   const staticPages: MetadataRoute.Sitemap = [
@@ -70,7 +70,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     alternates: alt(`/blog/${p.slug}`),
   }));
 
-  // Blog canonical: TR-prefix for all (matches other dynamic pages); hreflang
+  // Blog canonical: TR unprefixed (matches other dynamic pages); hreflang
   // alternates cover EN/DE/other locales — keeps sitemap canonical consistent.
   const blogPages: MetadataRoute.Sitemap = ARTICLES.map((a) => ({
     url: url(`/blog/${a.slug}`),
