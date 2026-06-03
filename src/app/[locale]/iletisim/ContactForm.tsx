@@ -3,14 +3,14 @@
 import { useState, FormEvent } from "react";
 import { Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 import { useT, useLocale } from "@/lib/i18n/I18nProvider";
+import { PhoneField, dialForLocale } from "@/components/booking/PhoneField";
 
 type Status = "idle" | "loading" | "success" | "error";
 
 export function ContactForm() {
   const t = useT();
   const { locale } = useLocale();
-  // Telefon ipucu: +90 sadece TR; diger diller uluslararasi generic.
-  const phonePlaceholder = locale === "tr" ? "+90 5XX XXX XX XX" : "+__ ___ ___ ____";
+  const [phone, setPhone] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
 
@@ -68,12 +68,14 @@ export function ContactForm() {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div>
-          <label htmlFor="phone" className="block text-sm font-semibold text-slate-700 mb-1.5">
-            {t.component.iletisim.contact_form.label_phone}
-          </label>
-          <input id="phone" name="phone" type="tel" className="input-field" placeholder={phonePlaceholder} />
-        </div>
+        <PhoneField
+          id="phone"
+          name="phone"
+          label={t.component.iletisim.contact_form.label_phone}
+          value={phone}
+          onChange={setPhone}
+          defaultDial={dialForLocale(locale)}
+        />
         <div>
           <label htmlFor="subject" className="block text-sm font-semibold text-slate-700 mb-1.5">
             {t.component.iletisim.contact_form.label_subject}

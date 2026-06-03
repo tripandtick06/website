@@ -17,6 +17,7 @@ import { Input, Textarea } from "@/components/ui/Input";
 import { Stepper } from "@/components/ui/Stepper";
 import { Button } from "@/components/ui/Button";
 import { Banner } from "@/components/ui/Banner";
+import { PhoneField, dialForLocale } from "@/components/booking/PhoneField";
 
 interface Props {
   hotelSlug: string;
@@ -41,7 +42,6 @@ export function HotelInquiryForm({ hotelSlug, hotelName, tier, region }: Props) 
   const ui = useUiText();
   const { locale } = useLocale();
   // Telefon ipucu: +90 sadece TR icin; diger diller uluslararasi generic (TR varsaymaz).
-  const phonePlaceholder = locale === "tr" ? "+90 5xx 000 00 00" : "+__ ___ ___ ____";
   const f = t.component.oteller.hotel_inquiry_form;
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -132,9 +132,7 @@ export function HotelInquiryForm({ hotelSlug, hotelName, tier, region }: Props) 
         <Field label={f.ad_soyad} htmlFor="hi-name" required className="sm:col-span-2">
           <Input id="hi-name" type="text" value={name} onChange={(e) => setName(e.target.value)} required minLength={2} maxLength={100} autoComplete="name" />
         </Field>
-        <Field label={f.telefon_sizi_arayacagiz} htmlFor="hi-phone" required>
-          <Input id="hi-phone" type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} required placeholder={phonePlaceholder} autoComplete="tel" />
-        </Field>
+        <PhoneField id="hi-phone" label={f.telefon_sizi_arayacagiz} value={phone} onChange={setPhone} defaultDial={dialForLocale(locale)} required />
         <Field label={f.posta} htmlFor="hi-email" required>
           <Input id="hi-email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required autoComplete="email" />
         </Field>

@@ -15,6 +15,7 @@ import { cn } from "@/lib/utils";
 import { BALLOON_PACKAGES } from "@/data/services/balloons";
 import { ACTIVITIES, TOURS } from "@/data/services/catalog";
 import { useT, useLocale } from "@/lib/i18n/I18nProvider";
+import { PhoneField, dialForLocale } from "@/components/booking/PhoneField";
 import { tNodes } from "@/lib/i18n/trans";
 
 interface ServiceOption {
@@ -37,8 +38,6 @@ type Status = "idle" | "submitting" | "success" | "error";
 export function ClientForm() {
   const t = useT();
   const { locale } = useLocale();
-  // Telefon ipucu: +90 sadece TR; diger diller uluslararasi generic.
-  const phonePlaceholder = locale === "tr" ? "+90 5xx 000 00 00" : "+__ ___ ___ ____";
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -187,15 +186,7 @@ export function ClientForm() {
       </div>
 
       <div className="grid sm:grid-cols-2 gap-4">
-        <FormField label={t.component.yorum.review_form.label_phone}>
-          <input
-            type="tel"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-            className={inputCls}
-            placeholder={phonePlaceholder}
-          />
-        </FormField>
+        <PhoneField label={t.component.yorum.review_form.label_phone} value={phone} onChange={setPhone} defaultDial={dialForLocale(locale)} />
         <FormField label={t.component.yorum.review_form.label_language}>
           <select
             value={language}

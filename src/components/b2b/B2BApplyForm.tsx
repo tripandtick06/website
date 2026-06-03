@@ -12,6 +12,7 @@
 import { useState, type FormEvent } from "react";
 import { CheckCircle2, AlertCircle, Send } from "lucide-react";
 import { useT, useLocale } from "@/lib/i18n/I18nProvider";
+import { PhoneField, dialForLocale } from "@/components/booking/PhoneField";
 
 const COUNTRIES = [
   "Türkiye",
@@ -46,8 +47,7 @@ const COUNTRIES = [
 export function B2BApplyForm() {
   const t = useT();
   const { locale } = useLocale();
-  // Telefon ipucu: +90 sadece TR; diger diller uluslararasi generic.
-  const phonePlaceholder = locale === "tr" ? "+90 ..." : "+__ ...";
+  const [phone, setPhone] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -157,20 +157,15 @@ export function B2BApplyForm() {
             className="w-full px-3 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
           />
         </div>
-        <div>
-          <label htmlFor="b2b-phone" className="block text-sm font-medium text-slate-700 mb-1">
-            Telefon <span className="text-rose-500">*</span>
-          </label>
-          <input
-            id="b2b-phone"
-            name="phone"
-            type="tel"
-            required
-            maxLength={40}
-            placeholder={phonePlaceholder}
-            className="w-full px-3 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
-          />
-        </div>
+        <PhoneField
+          id="b2b-phone"
+          name="phone"
+          label="Telefon *"
+          value={phone}
+          onChange={setPhone}
+          defaultDial={dialForLocale(locale)}
+          required
+        />
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

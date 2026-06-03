@@ -2,6 +2,7 @@
 
 import NextImage from "next/image";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { PhoneField, dialForLocale } from "@/components/booking/PhoneField";
 import { useT } from "@/lib/i18n/I18nProvider";
 import { useUiText } from "@/lib/i18n/uiText";
 import { tNodes } from "@/lib/i18n/trans";
@@ -1027,8 +1028,6 @@ function Step3Passengers(props: {
   const t = useT();
   const locale = useLocale();
   const { passengers, errors, onUpdate, onBack, onNext, adults } = props;
-  // Telefon ipucu: +90 sadece TR; diger diller uluslararasi generic (TR varsaymaz).
-  const phonePlaceholder = locale === "tr" ? "+90 5xx 000 00 00" : "+__ ___ ___ ____";
 
   const NATIONALITIES_LOCAL = [
     { code: "TR", label: "Türkiye" },
@@ -1063,7 +1062,7 @@ function Step3Passengers(props: {
                 <Field label={t.component.booking.booking_client.field_full_name} value={pax.fullName} onChange={(v) => onUpdate(i, "fullName", v)} error={errs.fullName} />
                 <Field label={t.component.booking.booking_client.field_nationality} value={pax.nationality} onChange={(v) => onUpdate(i, "nationality", v)} as="select" options={NATIONALITIES_LOCAL} />
                 <Field label={t.component.booking.booking_client.field_email} type="email" value={pax.email} onChange={(v) => onUpdate(i, "email", v)} error={errs.email} />
-                <Field label={t.component.booking.booking_client.field_phone} type="tel" placeholder={phonePlaceholder} value={pax.phone} onChange={(v) => onUpdate(i, "phone", v)} error={errs.phone} />
+                <PhoneField label={t.component.booking.booking_client.field_phone} value={pax.phone} onChange={(v) => onUpdate(i, "phone", v)} error={errs.phone} defaultDial={dialForLocale(locale as Parameters<typeof dialForLocale>[0])} />
                 <Field label={t.component.booking.booking_client.field_passport} value={pax.passport ?? ""} onChange={(v) => onUpdate(i, "passport", v)} error={errs.passport} />
                 <Field label={t.component.booking.booking_client.field_age} type="number" value={pax.age?.toString() ?? ""} onChange={(v) => onUpdate(i, "age", v ? Number(v) : 0)} />
                 <Field label={t.component.booking.booking_client.field_accommodation} value={pax.accommodation ?? ""} onChange={(v) => onUpdate(i, "accommodation", v)} placeholder={t.component.booking.booking_client.field_accommodation_placeholder} error={errs.accommodation} />
