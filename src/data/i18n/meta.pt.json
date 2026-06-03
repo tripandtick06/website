@@ -1,0 +1,182 @@
+{
+  "page": {
+    "home": {
+      "meta_title": "Trip and Tick — Melhores Experiências na Cappadocia",
+      "meta_desc": "Passeios de balão na Cappadocia, hotéis, tours e transfers de aeroporto. Garantia do melhor preço, proteção de reembolso de 100%. Reserve a sua aventura na Cappadocia agora!"
+    },
+    "aktiviteler": {
+      "meta_desc": "As melhores atividades para fazer em Cappadocia: passeios de ATV, passeios a cavalo, safari de jipe. Guiados, seguros, transferência de hotel incluída. Reserva instantânea.",
+      "meta_desc_2": "ATV, passeios a cavalo, safari de jipe — guiados e seguros.",
+      "meta_og_alt": "Atividades em Cappadocia — Trip and Tick",
+      "meta_title": "Atividades em Cappadocia — ATV, Passeios a Cavalo, Safari de Jipe",
+      "meta_title_2": "Atividades em Cappadocia"
+    },
+    "ara": {
+      "meta_desc": "Pesquise passeios de balão, hotéis, atividades, passeios turísticos, pacotes e transfers no catálogo da Trip and Tick. Filtre por preço, classificação, duração e moeda."
+    },
+    "b2b": {
+      "meta_desc": "Programa B2B para agências de viagens: 12–18% de comissão, acesso à REST API, gestor de conta dedicado, limite de crédito, suporte a múltiplas moedas.",
+      "meta_desc_2": "Preços por atacado · REST API · 12–18% de comissão · Suporte dedicado.",
+      "meta_title": "Programa B2B para Agências — Preços por Atacado & API",
+      "meta_title_2": "Programa B2B da Trip and Tick"
+    },
+    "balonlar": {
+      "meta_desc": "Passeios de balão na Cappadocia a partir de €165. Pacotes privados Standard, Comfort, Deluxe e Românticos. 9+ operadores licenciados pela TÜRSAB, garantia de reembolso de 100%, garantia do melhor preço.",
+      "meta_desc_2": "Pacotes a partir de €165. 9+ operadores, garantia de reembolso de 100%.",
+      "meta_og_alt": "Passeio de Balão na Cappadocia — Trip and Tick",
+      "meta_title": "Preços do Passeio de Balão na Cappadocia 2026",
+      "meta_title_2": "Preços do Passeio de Balão na Cappadocia 2026",
+      "slug": {
+        "meta_title": "Pacote Não Encontrado"
+      }
+    },
+    "blog": {
+      "meta_desc": "As últimas publicações do blog sobre passeios de balão em Cappadocia, guias de viagem, atividades e recomendações de hotéis. Preços, dicas e experiências.",
+      "meta_desc_2": "Passeios de balão, guias de viagem, atividades — preços e dicas.",
+      "meta_og_alt": "Trip and Tick — Blog",
+      "meta_title": "Blog — Guia de Viagem de Cappadocia",
+      "meta_title_2": "Blog — Guia de Viagem de Cappadocia",
+      "slug": {
+        "meta_title": "Artigo Não Encontrado"
+      }
+    },
+    "cerez_politikasi": {
+      "meta_desc": "Política de cookies da Trip and Tick: cookies estritamente necessários, analíticos, funcionais e de marketing. Um guia para a gestão de cookies e definições do navegador.",
+      "meta_desc_2": "Um guia para cookies estritamente necessários, analíticos, funcionais e de marketing.",
+      "meta_title": "Política de Cookies",
+      "meta_title_2": "Política de Cookies"
+    },
+    "gizlilik_politikasi": {
+      "meta_desc": "Trip and Tick privacy policy: collection, use, storage of personal data and user rights. KVKK and GDPR compliant processing.",
+      "meta_desc_2": "Our KVKK and GDPR compliant data processing policy.",
+      "meta_og_alt": "Privacy Policy — Trip and Tick",
+      "meta_title": "Privacy Policy — KVKK Compliant",
+      "meta_title_2": "Privacy Policy — KVKK Compliant"
+    },
+    "hakkimizda": {
+      "meta_desc": "Trip and Tick: uma agência de viagens online licenciada pela TÜRSAB que serve a Capadócia desde 2024. 9+ operadores, 12.000+ clientes satisfeitos, garantia do menor preço.",
+      "meta_desc_2": "12.000+ clientes desde 2024, 9+ operadores, garantia do menor preço.",
+      "meta_og_alt": "Trip and Tick — Sobre Nós",
+      "meta_title": "Sobre Nós — Agência Licenciada pela TÜRSAB na Capadócia",
+      "meta_title_2": "Sobre Nós — Agência Licenciada pela TÜRSAB na Capadócia"
+    },
+    "iletisim": {
+      "meta_desc": "Entre em contato com a Trip and Tick: info@tripandtick.com, +90 537 464 78 61. Escritório em Göreme/Nevşehir. WhatsApp 24/7, resposta por email em até 4 horas.",
+      "meta_desc_2": "WhatsApp 24/7, resposta por email em até 4 horas, escritório em Göreme/Nevşehir.",
+      "meta_title": "Contato — Trip and Tick Agência de Viagens Cappadocia",
+      "meta_title_2": "Contato — Trip and Tick"
+    },
+    "iptal_iade_politikasi": {
+      "meta_desc": "Política de cancelamento e reembolso da Trip and Tick: reembolso de 100% com 72+ horas de antecedência, cancelamentos devido ao tempo sempre totalmente reembolsados. Reembolso em até 5-10 dias úteis.",
+      "meta_desc_2": "Reembolso de 100% com 72+ horas de antecedência, cancelamentos devido ao tempo sempre totalmente reembolsados.",
+      "meta_og_alt": "Cancelamento & Reembolso — Trip and Tick",
+      "meta_title": "Política de Cancelamento & Reembolso — Garantia de Reembolso de 100%",
+      "meta_title_2": "Política de Cancelamento & Reembolso"
+    },
+    "kapadokya": {
+      "meta_desc": "Guia de viagem da Capadócia: preços de passeios de balão, os melhores hotéis, passeios turísticos, atividades, locais para fotos e quando ir. O guia completo em uma única página.",
+      "meta_desc_2": "Balões, hotéis, passeios, atividades — o guia completo da Capadócia em uma página.",
+      "meta_og_alt": "Guia da Capadócia — Trip and Tick",
+      "meta_title": "Guia da Capadócia 2026 — Balões, Hotéis, Passeios, Atividades",
+      "meta_title_2": "Guia da Capadócia 2026"
+    },
+    "kullanim_sartlari": {
+      "meta_desc": "Trip and Tick terms of use and distance sales contract: scope of service, payment, cancellation, disclaimer and dispute resolution.",
+      "meta_desc_2": "Scope of service, payment, cancellation, liability.",
+      "meta_og_alt": "Terms of Use — Trip and Tick",
+      "meta_title": "Terms of Use — Distance Sales Contract",
+      "meta_title_2": "Terms of Use — Distance Sales Contract"
+    },
+    "kvkk": {
+      "meta_desc": "Trip and Tick KVKK disclosure text: data controller, purposes of personal data processing, transfer, retention and user rights under KVKK art. 11.",
+      "meta_desc_2": "Law No. 6698 · Data controller · User rights.",
+      "meta_og_alt": "KVKK — Trip and Tick",
+      "meta_title": "KVKK Disclosure Text — Law No. 6698",
+      "meta_title_2": "KVKK Disclosure Text"
+    },
+    "offline": {
+      "meta_desc": "Nenhuma conexão à internet foi encontrada. As páginas que visitou anteriormente podem ser exibidas a partir do cache.",
+      "meta_title": "Offline — Sem Conexão à Internet"
+    },
+    "operatorler": {
+      "meta_desc": "Operadores de balão parceiros licenciados pela TÜRSAB da Trip and Tick. Pilotos certificados pela SHGM, padrões EASA, uma capacidade anual de mais de 250.000 passageiros.",
+      "meta_title": "Operadores de Balão Parceiros",
+      "id": {
+        "meta_title": "Operador não encontrado"
+      }
+    },
+    "oteller": {
+      "meta_desc": "Hotéis em cavernas na Cappadocia, estadias boutique e hotéis familiares. Opções centradas em Göreme e Ürgüp — melhor preço, confirmação instantânea.",
+      "meta_desc_2": "Hotéis em cavernas, boutique e familiares — Göreme e Ürgüp.",
+      "meta_og_alt": "Hotéis na Cappadocia — Trip and Tick",
+      "meta_title": "Reserva de Hotéis na Cappadocia — Hotéis em Cavernas & Boutique",
+      "meta_title_2": "Reserva de Hotéis na Cappadocia",
+      "slug": {
+        "meta_title": "Hotel Não Encontrado"
+      }
+    },
+    "paketler": {
+      "meta_desc": "Pacotes de dia inteiro em Cappadocia, pacotes de lua de mel, família, aventura e propostas de casamento. Balão + hotel + tour numa única reserva — a um preço vantajoso.",
+      "meta_desc_2": "Pacotes de lua de mel, família, aventura — balão + hotel + tour numa única reserva.",
+      "meta_og_alt": "Pacotes de Férias em Cappadocia — Trip and Tick",
+      "meta_title": "Pacotes de Férias em Cappadocia — Lua de Mel, Família, Aventura",
+      "meta_title_2": "Pacotes de Férias em Cappadocia"
+    },
+    "rezervasyon": {
+      "basarili": {
+        "meta_desc": "A sua reserva foi concluída com sucesso.",
+        "meta_title": "Reserva Confirmada"
+      },
+      "iptal": {
+        "meta_desc": "O seu pagamento não foi concluído. Pode tentar novamente.",
+        "meta_title": "Pagamento Cancelado"
+      },
+      "yeniden_tarih": {
+        "token": {
+          "meta_desc": "Escolha uma data alternativa para a sua reserva cancelada ou solicite um reembolso total.",
+          "meta_title": "Reserva — Nova Data ou Reembolso"
+        }
+      },
+      "slug": {
+        "meta_desc_template": "Reserva online para {name}. {desc}",
+        "meta_title_not_found": "Reserva Não Encontrada | Trip and Tick",
+        "meta_title_template": "Reserva | {name} - Trip and Tick"
+      }
+    },
+    "sss": {
+      "meta_desc": "Respostas rápidas sobre os preços dos passeios de balão na Capadócia, limites de idade, política de cancelamento, métodos de pagamento e outras perguntas frequentes. Pesquisa otimizada por IA.",
+      "meta_desc_2": "Passeio de balão, preço, idade, cancelamento, pagamento — respostas rápidas.",
+      "meta_og_alt": "FAQ — Trip and Tick",
+      "meta_title": "Perguntas Frequentes — FAQ do Passeio de Balão na Capadócia",
+      "meta_title_2": "Perguntas Frequentes",
+      "meta_og_image_subtitle": "Passeio de Balão · Preço · Cancelamento · Pagamento — Respostas Rápidas"
+    },
+    "transferler": {
+      "meta_desc": "Transfers de aeroporto de Nevşehir (NAV) e Kayseri (ASR). Opções de carro privado, minibus e VIP. Serviço 24/7, preço fixo, reserva instantânea.",
+      "meta_desc_2": "Nevşehir (NAV) & Kayseri (ASR) — 24/7, preço fixo.",
+      "meta_og_alt": "Transfer de Aeroporto da Capadócia — Trip and Tick",
+      "meta_title": "Transfer de Aeroporto da Capadócia — Nevşehir & Kayseri",
+      "meta_title_2": "Transfer de Aeroporto da Capadócia"
+    },
+    "turlar": {
+      "meta_desc": "Os passeios turísticos mais populares da Cappadocia: Tour Vermelho (Göreme + Uçhisar), Tour Verde (Ihlara + Derinkuyu), passeios ao pôr do sol e de fotografia. Guiados, transfer incluído.",
+      "meta_desc_2": "Tours Vermelho, Verde e ao Pôr do Sol — guiados, transfer incluído.",
+      "meta_og_alt": "Tours Turísticos na Cappadocia — Trip and Tick",
+      "meta_title": "Tours Turísticos na Cappadocia — Vermelho, Verde, Pôr do Sol",
+      "meta_title_2": "Tours Turísticos na Cappadocia"
+    },
+    "yorum": {
+      "meta_desc": "Partilhe a sua experiência com a Trip and Tick. A sua avaliação é publicada após aprovação do moderador em 24 horas.",
+      "meta_title": "Escreva a Sua Avaliação"
+    },
+    "gdpr": {
+      "meta_title": "Gerir os Seus Dados (GDPR/KVKK)",
+      "meta_desc": "Aceda aos seus dados pessoais (Artigo 15 do GDPR) ou solicite a eliminação (Artigo 17 do GDPR). Processamento seguro através de um link mágico verificado de 24 horas."
+    },
+    "impressum": {
+      "meta_title": "Impressum",
+      "meta_desc": "Anbieterkennzeichnung gemäß § 5 TMG (DE) und § 18 Abs. 2 MStV. Vertreten durch Trip and Tick Turizm ve Seyahat Acentası Limited Şirketi, Göreme/Nevşehir, Türkei.",
+      "meta_og_desc": "Anbieterkennzeichnung § 5 TMG · § 18 MStV · EU-Streitschlichtung."
+    }
+  }
+}

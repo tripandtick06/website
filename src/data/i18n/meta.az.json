@@ -1,0 +1,182 @@
+{
+  "page": {
+    "home": {
+      "meta_title": "Trip and Tick — Ən Yaxşı Kapadokya Təcrübələri",
+      "meta_desc": "Kapadokya balon turları, otellər, turlar və hava limanı transferləri. Ən aşağı qiymət zəmanəti, 100% geri ödəmə qorunması. Kapadokya macəranızı indi rezerv edin!"
+    },
+    "aktiviteler": {
+      "meta_desc": "Kapadokyada edilməsi lazım olan ən yaxşı fəaliyyətlər: ATV turları, at sürmə, jeep safari. Rəhbərlik, sığorta, otel transferi daxildir. Anında rezervasiya.",
+      "meta_desc_2": "ATV, at sürmə, jeep safari — rəhbərli və sığortalı.",
+      "meta_og_alt": "Kapadokya Fəaliyyətləri — Trip and Tick",
+      "meta_title": "Kapadokya Fəaliyyətləri — ATV, At Sürmə, Jeep Safari",
+      "meta_title_2": "Kapadokya Fəaliyyətləri"
+    },
+    "ara": {
+      "meta_desc": "Trip and Tick kataloqunda balon turları, otellər, fəaliyyətlər, ekskursiyalar, paketlər və transferlər axtarın. Qiymət, reytinq, müddət və valyuta üzrə filtr edin."
+    },
+    "b2b": {
+      "meta_desc": "Səyahət agentlikləri üçün B2B proqramı: 12–18% komissiya, REST API girişi, xüsusi hesab meneceri, kredit limiti, çoxlu valyuta dəstəyi.",
+      "meta_desc_2": "Topdan qiymət · REST API · 12–18% komissiya · Xüsusi dəstək.",
+      "meta_title": "B2B Agentlik Proqramı — Topdan Qiymət & API",
+      "meta_title_2": "Trip and Tick B2B Agentlik Proqramı"
+    },
+    "balonlar": {
+      "meta_desc": "Kapadokya balon turları €165-dan başlayır. Standart, Komfort, Deluxe və Romantik xüsusi paketlər. 9+ TÜRSAB-lisenziyalı operator, 100% geri qaytarma zəmanəti, ən aşağı qiymət zəmanəti.",
+      "meta_desc_2": "Paketlər €165-dan başlayır. 9+ operator, 100% geri qaytarma zəmanəti.",
+      "meta_og_alt": "Kapadokya Balon Turu — Trip and Tick",
+      "meta_title": "Kapadokya Balon Turu Qiymətləri 2026",
+      "meta_title_2": "Kapadokya Balon Turu Qiymətləri 2026",
+      "slug": {
+        "meta_title": "Paket Tapılmadı"
+      }
+    },
+    "blog": {
+      "meta_desc": "Kapadokya balon turları, səyahət bələdçiləri, fəaliyyətlər və otel tövsiyələri haqqında ən son blog yazıları. Qiymətlər, məsləhətlər və təcrübələr.",
+      "meta_desc_2": "Balon turları, səyahət bələdçiləri, fəaliyyətlər — qiymətlər və məsləhətlər.",
+      "meta_og_alt": "Trip and Tick — Blog",
+      "meta_title": "Blog — Kapadokya Səyahət Bələdçisi",
+      "meta_title_2": "Blog — Kapadokya Səyahət Bələdçisi",
+      "slug": {
+        "meta_title": "Məqalə Tapılmadı"
+      }
+    },
+    "cerez_politikasi": {
+      "meta_desc": "Trip and Tick çerez siyasəti: mütləq zəruri, analitika, funksional və marketinq çerezləri. Çerez idarəetməsi və brauzer ayarları üçün bir bələdçi.",
+      "meta_desc_2": "Mütləq zəruri, analitika, funksional və marketinq çerezləri üçün bir bələdçi.",
+      "meta_title": "Çerez Siyasəti",
+      "meta_title_2": "Çerez Siyasəti"
+    },
+    "gizlilik_politikasi": {
+      "meta_desc": "Trip and Tick privacy policy: collection, use, storage of personal data and user rights. KVKK and GDPR compliant processing.",
+      "meta_desc_2": "Our KVKK and GDPR compliant data processing policy.",
+      "meta_og_alt": "Privacy Policy — Trip and Tick",
+      "meta_title": "Privacy Policy — KVKK Compliant",
+      "meta_title_2": "Privacy Policy — KVKK Compliant"
+    },
+    "hakkimizda": {
+      "meta_desc": "Trip and Tick: 2024-cü ildən bəri Kapadokyaya xidmət edən TÜRSAB-lisensiyalı onlayn turizm agentliyi. 9+ operator, 12,000+ məmnun müştəri, ən aşağı qiymət zəmanəti.",
+      "meta_desc_2": "2024-cü ildən bəri 12,000+ müştəri, 9+ operator, ən aşağı qiymət zəmanəti.",
+      "meta_og_alt": "Trip and Tick — Haqqımızda",
+      "meta_title": "Haqqımızda — TÜRSAB-Lisensiyalı Kapadokya Agentliyi",
+      "meta_title_2": "Haqqımızda — TÜRSAB-Lisensiyalı Kapadokya Agentliyi"
+    },
+    "iletisim": {
+      "meta_desc": "Trip and Tick ilə əlaqə saxlayın: info@tripandtick.com, +90 537 464 78 61. Göreme/Nevşehir ofisi. WhatsApp 24/7, e-poçt cavabı 4 saat ərzində.",
+      "meta_desc_2": "WhatsApp 24/7, e-poçt cavabı 4 saat ərzində, Göreme/Nevşehir ofisi.",
+      "meta_title": "Əlaqə — Trip and Tick Cappadocia Səyahət Agentliyi",
+      "meta_title_2": "Əlaqə — Trip and Tick"
+    },
+    "iptal_iade_politikasi": {
+      "meta_desc": "Trip and Tick ləğv & geri ödəmə siyasəti: 100% geri ödəmə 72+ saat əvvəl, hava ləğvləri həmişə tam geri ödənilir. 5-10 iş günü ərzində geri ödəmə.",
+      "meta_desc_2": "100% geri ödəmə 72+ saat əvvəl, hava ləğvləri həmişə tam geri ödənilir.",
+      "meta_og_alt": "Ləğv & Geri Ödəmə — Trip and Tick",
+      "meta_title": "Ləğv & Geri Ödəmə Siyasəti — 100% Geri Ödəmə Zəmanəti",
+      "meta_title_2": "Ləğv & Geri Ödəmə Siyasəti"
+    },
+    "kapadokya": {
+      "meta_desc": "Kapadokya səyahət bələdçisi: balon turu qiymətləri, ən yaxşı otellər, gəzinti turları, fəaliyyətlər, foto məkanlar və nə vaxt getmək. Tam bələdçi bir səhifədə.",
+      "meta_desc_2": "Balonlar, otellər, turlar, fəaliyyətlər — bütün Kapadokya bələdçisi bir səhifədə.",
+      "meta_og_alt": "Kapadokya Bələdçisi — Trip and Tick",
+      "meta_title": "Kapadokya Bələdçisi 2026 — Balonlar, Otellər, Turlar, Fəaliyyətlər",
+      "meta_title_2": "Kapadokya Bələdçisi 2026"
+    },
+    "kullanim_sartlari": {
+      "meta_desc": "Trip and Tick terms of use and distance sales contract: scope of service, payment, cancellation, disclaimer and dispute resolution.",
+      "meta_desc_2": "Scope of service, payment, cancellation, liability.",
+      "meta_og_alt": "Terms of Use — Trip and Tick",
+      "meta_title": "Terms of Use — Distance Sales Contract",
+      "meta_title_2": "Terms of Use — Distance Sales Contract"
+    },
+    "kvkk": {
+      "meta_desc": "Trip and Tick KVKK disclosure text: data controller, purposes of personal data processing, transfer, retention and user rights under KVKK art. 11.",
+      "meta_desc_2": "Law No. 6698 · Data controller · User rights.",
+      "meta_og_alt": "KVKK — Trip and Tick",
+      "meta_title": "KVKK Disclosure Text — Law No. 6698",
+      "meta_title_2": "KVKK Disclosure Text"
+    },
+    "offline": {
+      "meta_desc": "İnternet bağlantısı tapılmadı. Daha əvvəl ziyarət etdiyiniz səhifələr keşdən göstərilə bilər.",
+      "meta_title": "Oflayn — İnternet Bağlantısı Yoxdur"
+    },
+    "operatorler": {
+      "meta_desc": "Trip and Tick-in 9+ TÜRSAB lisenziyalı partnyor balon operatorları. SHGM sertifikatlı pilotlar, EASA standartları, illik 250,000+ sərnişin tutumu.",
+      "meta_title": "Partnyor Balon Operatorları",
+      "id": {
+        "meta_title": "Operator tapılmadı"
+      }
+    },
+    "oteller": {
+      "meta_desc": "Cappadocia mağara otelləri, butik qalma yerləri və ailə otelləri. Göreme və Ürgüp mərkəzli seçimlər — ən yaxşı qiymət, dərhal təsdiq.",
+      "meta_desc_2": "Mağara otelləri, butik və ailə otelləri — Göreme və Ürgüp.",
+      "meta_og_alt": "Cappadocia Otelləri — Trip and Tick",
+      "meta_title": "Cappadocia Otel Rezervasiyası — Mağara Otelləri & Butik",
+      "meta_title_2": "Cappadocia Otel Rezervasiyası",
+      "slug": {
+        "meta_title": "Otel Tapılmadı"
+      }
+    },
+    "paketler": {
+      "meta_desc": "Kapadokya tam gün paketləri, bal ayı, ailə, macəra və evlilik təklifi paketləri. Balon + otel + tur bir yerdə — sərfəli qiymətə.",
+      "meta_desc_2": "Bal ayı, ailə, macəra paketləri — balon + otel + tur bir yerdə.",
+      "meta_og_alt": "Kapadokya Tətil Paketləri — Trip and Tick",
+      "meta_title": "Kapadokya Tətil Paketləri — Bal Ayı, Ailə, Macəra",
+      "meta_title_2": "Kapadokya Tətil Paketləri"
+    },
+    "rezervasyon": {
+      "basarili": {
+        "meta_desc": "Sizin rezervasiyanız müvəffəqiyyətlə tamamlandı.",
+        "meta_title": "Rezervasiya Təsdiq Olundu"
+      },
+      "iptal": {
+        "meta_desc": "Sizin ödənişiniz tamamlanmadı. Yenidən cəhd edə bilərsiniz.",
+        "meta_title": "Ödəniş Ləğv Edildi"
+      },
+      "yeniden_tarih": {
+        "token": {
+          "meta_desc": "Ləğv edilmiş rezervasiyanız üçün alternativ tarix seçin və ya tam geri ödəmə tələb edin.",
+          "meta_title": "Rezervasiya — Yeni Tarix və ya Geri Ödəmə"
+        }
+      },
+      "slug": {
+        "meta_desc_template": "Online rezervasiya {name} üçün. {desc}",
+        "meta_title_not_found": "Rezervasiya Tapılmadı | Trip and Tick",
+        "meta_title_template": "Rezervasiya | {name} - Trip and Tick"
+      }
+    },
+    "sss": {
+      "meta_desc": "Kapadokya balon turu qiymətləri, yaş məhdudiyyətləri, ləğv siyasəti, ödəniş üsulları və digər tez-tez verilən suallara sürətli cavablar.",
+      "meta_desc_2": "Balon turu, qiymət, yaş, ləğv, ödəniş — sürətli cavablar.",
+      "meta_og_alt": "Tez-tez Verilən Suallar — Trip and Tick",
+      "meta_title": "Tez-tez Verilən Suallar — Kapadokya Balon Turu FAQ",
+      "meta_title_2": "Tez-tez Verilən Suallar",
+      "meta_og_image_subtitle": "Balon Turu · Qiymət · Ləğv · Ödəniş — Sürətli Cavablar"
+    },
+    "transferler": {
+      "meta_desc": "Nevşehir (NAV) və Kayseri (ASR) hava limanı transferləri. Şəxsi avtomobil, mikroavtobus və VIP seçimləri. 24/7 xidmət, sabit qiymət, dərhal rezervasiya.",
+      "meta_desc_2": "Nevşehir (NAV) & Kayseri (ASR) — 24/7, sabit qiymət.",
+      "meta_og_alt": "Cappadocia Hava Limanı Transferi — Trip and Tick",
+      "meta_title": "Cappadocia Hava Limanı Transferi — Nevşehir & Kayseri",
+      "meta_title_2": "Cappadocia Hava Limanı Transferi"
+    },
+    "turlar": {
+      "meta_desc": "Kapadokyanın ən populyar turistik turları: Qırmızı Tur (Göreme + Uçhisar), Yaşıl Tur (Ihlara + Derinkuyu), gün batımı və fotoqrafiya turları. Rəhbərlikli, transfer daxildir.",
+      "meta_desc_2": "Qırmızı, Yaşıl və Gün Batımı turları — rəhbərlikli, transfer daxildir.",
+      "meta_og_alt": "Kapadokya Turistik Turları — Trip and Tick",
+      "meta_title": "Kapadokya Turistik Turları — Qırmızı, Yaşıl, Gün Batımı",
+      "meta_title_2": "Kapadokya Turistik Turları"
+    },
+    "yorum": {
+      "meta_desc": "Trip and Tick təcrübənizi paylaşın. Rəyiniz moderator təsdiqindən sonra 24 saat ərzində dərc olunur.",
+      "meta_title": "Rəyinizi Yazın"
+    },
+    "gdpr": {
+      "meta_title": "Məlumatlarınızı İdarə Edin (GDPR/KVKK)",
+      "meta_desc": "Şəxsi məlumatlarınıza daxil olun (GDPR Maddəsi 15) və ya silinməsini tələb edin (GDPR Maddəsi 17). 24 saatlıq təsdiqlənmiş sehrli bağlantı ilə təhlükəsiz işləmə."
+    },
+    "impressum": {
+      "meta_title": "Impressum",
+      "meta_desc": "Anbieterkennzeichnung gemäß § 5 TMG (DE) und § 18 Abs. 2 MStV. Vertreten durch Trip and Tick Turizm ve Seyahat Acentası Limited Şirketi, Göreme/Nevşehir, Türkei.",
+      "meta_og_desc": "Anbieterkennzeichnung § 5 TMG · § 18 MStV · EU-Streitschlichtung."
+    }
+  }
+}

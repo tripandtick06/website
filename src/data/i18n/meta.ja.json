@@ -1,0 +1,182 @@
+{
+  "page": {
+    "home": {
+      "meta_title": "Trip and Tick — 最高のカッパドキア体験",
+      "meta_desc": "カッパドキアのバルーンツアー、ホテル、ツアー＆空港送迎。最低価格保証、100%返金保証。今すぐカッパドキアの冒険を予約しましょう！"
+    },
+    "aktiviteler": {
+      "meta_desc": "カッパドキアでのおすすめアクティビティ：ATVツアー、乗馬、ジープサファリ。ガイド付き、保険付き、ホテル送迎込み。即時予約可能。",
+      "meta_desc_2": "ATV、乗馬、ジープサファリ — ガイド付き・保険付き。",
+      "meta_og_alt": "カッパドキアのアクティビティ — Trip and Tick",
+      "meta_title": "カッパドキアのアクティビティ — ATV、乗馬、ジープサファリ",
+      "meta_title_2": "カッパドキアのアクティビティ"
+    },
+    "ara": {
+      "meta_desc": "Trip and Tick カタログでバルーンツアー、ホテル、アクティビティ、観光ツアー、パッケージ、送迎を検索します。価格、評価、期間、通貨でフィルタリングできます。"
+    },
+    "b2b": {
+      "meta_desc": "旅行代理店向けB2Bプログラム：12〜18％のコミッション、REST APIアクセス、専任アカウントマネージャー、信用限度、複数通貨サポート。",
+      "meta_desc_2": "卸売価格 · REST API · 12〜18％のコミッション · 専任サポート。",
+      "meta_title": "B2B代理店プログラム — 卸売価格とAPI",
+      "meta_title_2": "Trip and Tick B2B代理店プログラム"
+    },
+    "balonlar": {
+      "meta_desc": "カッパドキアのバルーンツアーは€165から。スタンダード、コンフォート、デラックス、ロマンティックなプライベートパッケージ。9以上のTÜRSABライセンスオペレーター、100%返金保証、最低価格保証。",
+      "meta_desc_2": "パッケージは€165から。9以上のオペレーター、100%返金保証。",
+      "meta_og_alt": "カッパドキアバルーンツアー — Trip and Tick",
+      "meta_title": "カッパドキアバルーンツアー価格2026",
+      "meta_title_2": "カッパドキアバルーンツアー価格2026",
+      "slug": {
+        "meta_title": "パッケージが見つかりません"
+      }
+    },
+    "blog": {
+      "meta_desc": "カッパドキアのバルーンツアー、旅行ガイド、アクティビティ、ホテルのおすすめに関する最新のブログ記事。価格、ヒント、体験。",
+      "meta_desc_2": "バルーンツアー、旅行ガイド、アクティビティ — 価格とヒント。",
+      "meta_og_alt": "Trip and Tick — ブログ",
+      "meta_title": "ブログ — カッパドキア旅行ガイド",
+      "meta_title_2": "ブログ — カッパドキア旅行ガイド",
+      "slug": {
+        "meta_title": "記事が見つかりません"
+      }
+    },
+    "cerez_politikasi": {
+      "meta_desc": "Trip and Tickのクッキーポリシー: 厳密に必要な、アナリティクス、機能的およびマーケティングクッキー。クッキー管理とブラウザ設定のガイド。",
+      "meta_desc_2": "厳密に必要な、アナリティクス、機能的およびマーケティングクッキーのガイド。",
+      "meta_title": "クッキーポリシー",
+      "meta_title_2": "クッキーポリシー"
+    },
+    "gizlilik_politikasi": {
+      "meta_desc": "Trip and Tick privacy policy: collection, use, storage of personal data and user rights. KVKK and GDPR compliant processing.",
+      "meta_desc_2": "Our KVKK and GDPR compliant data processing policy.",
+      "meta_og_alt": "Privacy Policy — Trip and Tick",
+      "meta_title": "Privacy Policy — KVKK Compliant",
+      "meta_title_2": "Privacy Policy — KVKK Compliant"
+    },
+    "hakkimizda": {
+      "meta_desc": "Trip and Tick：2024年からカッパドキアでサービスを提供するTÜRSABライセンスのオンライン旅行代理店。9以上のオペレーター、12,000人以上の満足した顧客、最低価格保証。",
+      "meta_desc_2": "2024年以降、12,000人以上の顧客、9以上のオペレーター、最低価格保証。",
+      "meta_og_alt": "Trip and Tick — 私たちについて",
+      "meta_title": "私たちについて — TÜRSABライセンスのカッパドキア代理店",
+      "meta_title_2": "私たちについて — TÜRSABライセンスのカッパドキア代理店"
+    },
+    "iletisim": {
+      "meta_desc": "Trip and Tickにご連絡ください: info@tripandtick.com, +90 537 464 78 61。Göreme/Nevşehirオフィス。WhatsApp 24/7、メールは4時間以内に返信。",
+      "meta_desc_2": "WhatsApp 24/7、メールは4時間以内に返信、Göreme/Nevşehirオフィス。",
+      "meta_title": "お問い合わせ — Trip and Tick Cappadocia旅行代理店",
+      "meta_title_2": "お問い合わせ — Trip and Tick"
+    },
+    "iptal_iade_politikasi": {
+      "meta_desc": "Trip and Tickのキャンセルおよび返金ポリシー：72時間以上前のキャンセルで100%返金、天候によるキャンセルは常に全額返金。返金は5〜10営業日以内。",
+      "meta_desc_2": "72時間以上前のキャンセルで100%返金、天候によるキャンセルは常に全額返金。",
+      "meta_og_alt": "キャンセルと返金 — Trip and Tick",
+      "meta_title": "キャンセルと返金ポリシー — 100%返金保証",
+      "meta_title_2": "キャンセルと返金ポリシー"
+    },
+    "kapadokya": {
+      "meta_desc": "カッパドキア旅行ガイド：バルーントゥアの価格、最高のホテル、観光ツアー、アクティビティ、写真スポット、訪れるべき時期。すべての情報が1ページにまとめられています。",
+      "meta_desc_2": "バルーン、ホテル、ツアー、アクティビティ — カッパドキアの完全ガイドが1ページに。",
+      "meta_og_alt": "カッパドキアガイド — Trip and Tick",
+      "meta_title": "カッパドキアガイド2026 — バルーン、ホテル、ツアー、アクティビティ",
+      "meta_title_2": "カッパドキアガイド2026"
+    },
+    "kullanim_sartlari": {
+      "meta_desc": "Trip and Tick terms of use and distance sales contract: scope of service, payment, cancellation, disclaimer and dispute resolution.",
+      "meta_desc_2": "Scope of service, payment, cancellation, liability.",
+      "meta_og_alt": "Terms of Use — Trip and Tick",
+      "meta_title": "Terms of Use — Distance Sales Contract",
+      "meta_title_2": "Terms of Use — Distance Sales Contract"
+    },
+    "kvkk": {
+      "meta_desc": "Trip and Tick KVKK disclosure text: data controller, purposes of personal data processing, transfer, retention and user rights under KVKK art. 11.",
+      "meta_desc_2": "Law No. 6698 · Data controller · User rights.",
+      "meta_og_alt": "KVKK — Trip and Tick",
+      "meta_title": "KVKK Disclosure Text — Law No. 6698",
+      "meta_title_2": "KVKK Disclosure Text"
+    },
+    "offline": {
+      "meta_desc": "インターネット接続が見つかりませんでした。以前に訪れたページはキャッシュから表示される場合があります。",
+      "meta_title": "オフライン — インターネット接続なし"
+    },
+    "operatorler": {
+      "meta_desc": "Trip and Tickの9以上のTÜRSAB認可パートナーバルーンオペレーター。SHGM認定パイロット、EASA基準、年間250,000人以上のキャパシティ。",
+      "meta_title": "パートナーバルーンオペレーター",
+      "id": {
+        "meta_title": "オペレーターが見つかりません"
+      }
+    },
+    "oteller": {
+      "meta_desc": "カッパドキアの洞窟ホテル、ブティック宿泊施設、ファミリーホテル。ギョレメとウルギュップを中心に — 最良の価格、即時確認。",
+      "meta_desc_2": "洞窟ホテル、ブティック＆ファミリーホテル — ギョレメとウルギュップ。",
+      "meta_og_alt": "カッパドキアのホテル — Trip and Tick",
+      "meta_title": "カッパドキアホテル予約 — 洞窟ホテル＆ブティック",
+      "meta_title_2": "カッパドキアホテル予約",
+      "slug": {
+        "meta_title": "ホテルが見つかりません"
+      }
+    },
+    "paketler": {
+      "meta_desc": "カッパドキアのフルデイパッケージ、ハネムーン、ファミリー、アドベンチャー、プロポーズパッケージ。バルーン + ホテル + ツアーを一度の予約で — お得な価格で。",
+      "meta_desc_2": "ハネムーン、ファミリー、アドベンチャーパッケージ — バルーン + ホテル + ツアーを一度の予約で。",
+      "meta_og_alt": "カッパドキア ホリデーパッケージ — Trip and Tick",
+      "meta_title": "カッパドキア ホリデーパッケージ — ハネムーン、ファミリー、アドベンチャー",
+      "meta_title_2": "カッパドキア ホリデーパッケージ"
+    },
+    "rezervasyon": {
+      "basarili": {
+        "meta_desc": "ご予約が正常に完了しました。",
+        "meta_title": "予約確認済み"
+      },
+      "iptal": {
+        "meta_desc": "お支払いが完了していません。再度お試しください。",
+        "meta_title": "お支払いキャンセル"
+      },
+      "yeniden_tarih": {
+        "token": {
+          "meta_desc": "キャンセルされた予約の代替日を選択するか、全額返金をリクエストしてください。",
+          "meta_title": "予約 — 新しい日付または返金"
+        }
+      },
+      "slug": {
+        "meta_desc_template": "{name}のオンライン予約。 {desc}",
+        "meta_title_not_found": "予約が見つかりません | Trip and Tick",
+        "meta_title_template": "予約 | {name} - Trip and Tick"
+      }
+    },
+    "sss": {
+      "meta_desc": "カッパドキアの気球ツアーの価格、年齢制限、キャンセルポリシー、支払い方法、その他のよくある質問への迅速な回答。AI検索最適化済み。",
+      "meta_desc_2": "気球ツアー、価格、年齢、キャンセル、支払い — 迅速な回答。",
+      "meta_og_alt": "FAQ — Trip and Tick",
+      "meta_title": "よくある質問 — カッパドキア気球ツアーFAQ",
+      "meta_title_2": "よくある質問",
+      "meta_og_image_subtitle": "気球ツアー · 価格 · キャンセル · 支払い — 迅速な回答"
+    },
+    "transferler": {
+      "meta_desc": "ネヴシェヒル (NAV) とカイセリ (ASR) の空港送迎。プライベートカー、ミニバス、VIPオプション。24時間年中無休、固定料金、即時予約。",
+      "meta_desc_2": "ネヴシェヒル (NAV) & カイセリ (ASR) — 24時間年中無休、固定料金。",
+      "meta_og_alt": "カッパドキア空港送迎 — Trip and Tick",
+      "meta_title": "カッパドキア空港送迎 — ネヴシェヒル & カイセリ",
+      "meta_title_2": "カッパドキア空港送迎"
+    },
+    "turlar": {
+      "meta_desc": "カッパドキアの最も人気のある観光ツアー：レッドツアー（ギョレメ + ウチヒサール）、グリーンツアー（イフララ + デリンクユ）、サンセットおよび写真ツアー。ガイド付き、送迎込み。",
+      "meta_desc_2": "レッド、グリーン、サンセットツアー — ガイド付き、送迎込み。",
+      "meta_og_alt": "カッパドキア観光ツアー — Trip and Tick",
+      "meta_title": "カッパドキア観光ツアー — レッド、グリーン、サンセット",
+      "meta_title_2": "カッパドキア観光ツアー"
+    },
+    "yorum": {
+      "meta_desc": "Trip and Tickの体験を共有してください。あなたのレビューは、24時間以内にモデレーターの承認後に公開されます。",
+      "meta_title": "レビューを書く"
+    },
+    "gdpr": {
+      "meta_title": "データの管理 (GDPR/KVKK)",
+      "meta_desc": "個人データにアクセスする (GDPR 第15条) または削除をリクエストする (GDPR 第17条)。24時間確認済みのマジックリンクによる安全な処理。"
+    },
+    "impressum": {
+      "meta_title": "Impressum",
+      "meta_desc": "Anbieterkennzeichnung gemäß § 5 TMG (DE) und § 18 Abs. 2 MStV. Vertreten durch Trip and Tick Turizm ve Seyahat Acentası Limited Şirketi, Göreme/Nevşehir, Türkei.",
+      "meta_og_desc": "Anbieterkennzeichnung § 5 TMG · § 18 MStV · EU-Streitschlichtung."
+    }
+  }
+}
