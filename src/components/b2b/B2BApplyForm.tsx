@@ -13,6 +13,7 @@ import { useState, type FormEvent } from "react";
 import { CheckCircle2, AlertCircle, Send } from "lucide-react";
 import { useT, useLocale } from "@/lib/i18n/I18nProvider";
 import { PhoneField, dialForLocale } from "@/components/booking/PhoneField";
+import { Link } from "@/i18n/routing";
 
 const COUNTRIES = [
   "Türkiye",
@@ -230,9 +231,9 @@ export function B2BApplyForm() {
       </button>
       <p className="text-xs text-slate-500 text-center">
         {t.component.b2b.b2_b_apply_form.basvurunuzla}{" "}
-        <a href="/kullanim-sartlari" className="underline hover:text-slate-700">
+        <Link href="/kullanim-sartlari" className="underline hover:text-slate-700">
           {t.component.b2b.b2_b_apply_form.kullanim_sartlarini}
-        </a>{" "}
+        </Link>{" "}
         {t.component.b2b.b2_b_apply_form.kabul_etmis_sayilirsiniz}
       </p>
     </form>

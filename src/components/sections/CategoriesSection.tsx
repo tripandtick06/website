@@ -74,7 +74,7 @@ export function CategoriesSection() {
       icon: Shield,
       name: t.categories.insurance,
       sub: t.categories.insurance_sub,
-      href: "#",
+      href: "/iletisim",
       bg: "/images/hero/homepage.jpg",
     },
   ];

@@ -16,6 +16,7 @@ import { BALLOON_PACKAGES } from "@/data/services/balloons";
 import { ACTIVITIES, TOURS } from "@/data/services/catalog";
 import { useT, useLocale } from "@/lib/i18n/I18nProvider";
 import { PhoneField, dialForLocale } from "@/components/booking/PhoneField";
+import { Link } from "@/i18n/routing";
 import { tNodes } from "@/lib/i18n/trans";
 
 interface ServiceOption {
@@ -305,9 +306,9 @@ export function ClientForm() {
           required
         />
         <span>
-          <a href="/kvkk" className="text-amber-600 underline" target="_blank">
+          <Link href="/kvkk" className="text-amber-600 underline" target="_blank">
             KVKK
-          </a>{" "}
+          </Link>{" "}
           {t.component.yorum.review_form.kvkk_consent}
         </span>
       </label>

@@ -1,5 +1,6 @@
 "use client";
 
+import type { ComponentProps } from "react";
 import NextImage from "next/image";
 import {
   Clock,
@@ -11,6 +12,7 @@ import {
   Check,
   ArrowRight,
 } from "lucide-react";
+import { Link } from "@/i18n/routing";
 import { useT } from "@/lib/i18n/I18nProvider";
 
 interface PackageCardProps {
@@ -27,6 +29,7 @@ interface PackageCardProps {
   marketLabel: string;
   reserveLabel: string;
   photo: string;
+  href: string;
 }
 
 function PackageCard({
@@ -41,6 +44,7 @@ function PackageCard({
   marketLabel,
   reserveLabel,
   photo,
+  href,
 }: PackageCardProps) {
   const badgeColors = {
     accent: "bg-accent",
@@ -95,9 +99,9 @@ function PackageCard({
             <div className="text-2xl font-black text-primary">€{price}</div>
             <div className="text-xs text-slate-500">{unit}</div>
           </div>
-          <button className="btn-accent flex items-center gap-2 !text-sm !py-2.5 !px-5">
+          <Link href={href as ComponentProps<typeof Link>["href"]} className="btn-accent flex items-center gap-2 !text-sm !py-2.5 !px-5">
             {reserveLabel} <ArrowRight className="w-4 h-4" />
-          </button>
+          </Link>
         </div>
       </div>
     </div>
@@ -149,6 +153,7 @@ export function PackagesSection() {
             gradient="bg-gradient-to-br from-primary to-accent"
             icon={<Wind className="w-24 h-24 text-white" />}
             photo="/images/balloons/standart-balon-ucusu.jpg"
+            href="/rezervasyon/standart-balon-ucusu"
           />
 
           <PackageCard
@@ -175,6 +180,7 @@ export function PackagesSection() {
             gradient="bg-gradient-to-br from-[#4A1A8B] to-accent"
             icon={<Heart className="w-24 h-24 text-white" />}
             photo="/images/packages/balayi-paketi.jpg"
+            href="/rezervasyon/balayi-paketi"
           />
 
           <PackageCard
@@ -201,6 +207,7 @@ export function PackagesSection() {
             gradient="bg-gradient-to-br from-[#1A6B2B] to-[#4BBE6A]"
             icon={<Zap className="w-24 h-24 text-white" />}
             photo="/images/activities/atv-sunset.jpg"
+            href="/rezervasyon/macera-paketi"
           />
         </div>
 
