@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { SITE_URL } from "@/lib/schema";
-import { generateHreflang } from "@/lib/hreflang";
+import { generateHreflang, canonicalFor } from "@/lib/hreflang";
 import { DICTIONARIES, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { GdprContent } from "./GdprContent";
 
@@ -17,7 +16,7 @@ export async function generateMetadata({
     title: d.meta_title,
     description: d.meta_desc,
     alternates: {
-      canonical: `${SITE_URL}/gdpr`,
+      canonical: canonicalFor("/gdpr", params.locale),
       languages: generateHreflang("/gdpr"),
     },
     robots: {

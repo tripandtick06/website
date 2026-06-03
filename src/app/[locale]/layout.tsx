@@ -14,7 +14,7 @@ import { JsonLd } from "@/components/layout/JsonLd";
 import { Analytics } from "@/components/analytics/Analytics";
 import { RegisterSW } from "@/components/sw/RegisterSW";
 import { ORGANIZATION_SCHEMA, SITE_URL } from "@/lib/schema";
-import { generateHreflang } from "@/lib/hreflang";
+import { generateHreflang, canonicalFor } from "@/lib/hreflang";
 import { LOCALE_DIR, isLocale, type Locale } from "@/lib/i18n/dictionaries";
 import { routing } from "@/i18n/routing";
 
@@ -37,7 +37,13 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-export const metadata: Metadata = {
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  const typedLocale = isLocale(params.locale) ? params.locale : routing.defaultLocale;
+  return {
   metadataBase: new URL(SITE_URL),
   title: {
     default: "Trip and Tick — Kapadokya Balon Turu & Seyahat Acentası",
@@ -54,7 +60,7 @@ export const metadata: Metadata = {
     "trip and tick",
   ],
   alternates: {
-    canonical: SITE_URL,
+    canonical: canonicalFor("/", typedLocale),
     languages: generateHreflang("/"),
   },
   openGraph: {
@@ -105,7 +111,8 @@ export const metadata: Metadata = {
     ],
     apple: [{ url: "/icons/icon-192.svg", sizes: "192x192", type: "image/svg+xml" }],
   },
-};
+  };
+}
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));

@@ -17,7 +17,7 @@ import {
   productSchema,
   SITE_URL,
 } from "@/lib/schema";
-import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
+import { generateHreflang, ogImageUrl, canonicalFor } from "@/lib/hreflang";
 import { BalonDetayContent } from "./BalonDetayContent";
 
 interface PageParams {
@@ -38,7 +38,7 @@ export function generateMetadata({ params }: PageParams): Metadata {
     title: `${pkg.name} — ${priceLabel} | Trip and Tick`,
     description: pkg.shortDescription,
     alternates: {
-      canonical: `${SITE_URL}${path}`,
+      canonical: canonicalFor(path, params.locale),
       languages: generateHreflang(path),
     },
     openGraph: {

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { breadcrumbSchema, itemListSchema, faqPageSchema, SITE_URL } from "@/lib/schema";
-import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
+import { generateHreflang, ogImageUrl, canonicalFor } from "@/lib/hreflang";
 import { DICTIONARIES, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { TOURS } from "@/data/services/catalog";
 import { getPageFaqs } from "@/data/i18n/pageFaqs";
@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
     title: d.meta_title,
     description: d.meta_desc,
     alternates: {
-      canonical: `${SITE_URL}/turlar`,
+      canonical: canonicalFor("/turlar", params.locale),
       languages: generateHreflang("/turlar"),
     },
     openGraph: {

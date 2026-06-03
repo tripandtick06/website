@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { SITE_URL } from "@/lib/schema";
-import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
+import { generateHreflang, ogImageUrl, canonicalFor } from "@/lib/hreflang";
 import { ARTICLES, type BlogArticleMeta } from "@/data/blog";
 import { BlogContent } from "./BlogContent";
 
@@ -25,7 +25,7 @@ export async function generateMetadata({
     title: d.meta_title,
     description: d.meta_desc,
     alternates: {
-      canonical: `${SITE_URL}/blog`,
+      canonical: canonicalFor("/blog", params.locale),
       languages: generateHreflang("/blog"),
       types: {
         "application/rss+xml": `${SITE_URL}/blog/rss.xml`,

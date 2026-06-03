@@ -13,7 +13,7 @@ import type { Metadata } from "next";
 import { DICTIONARIES, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { breadcrumbSchema, SITE_URL } from "@/lib/schema";
-import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
+import { generateHreflang, ogImageUrl, canonicalFor } from "@/lib/hreflang";
 import { B2BContent } from "./B2BContent";
 
 export const runtime = "edge";
@@ -29,7 +29,7 @@ export async function generateMetadata({
     title: d.meta_title,
     description: d.meta_desc,
     alternates: {
-      canonical: `${SITE_URL}/b2b`,
+      canonical: canonicalFor("/b2b", params.locale),
       languages: generateHreflang("/b2b"),
     },
     openGraph: {

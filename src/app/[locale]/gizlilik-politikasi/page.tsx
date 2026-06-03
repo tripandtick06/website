@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { breadcrumbSchema, SITE_URL } from "@/lib/schema";
-import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
+import { generateHreflang, ogImageUrl, canonicalFor } from "@/lib/hreflang";
 import {
   DICTIONARIES,
   isLocale,
@@ -23,7 +23,7 @@ export async function generateMetadata({
     title: d.meta_title,
     description: d.meta_desc,
     alternates: {
-      canonical: `${SITE_URL}/gizlilik-politikasi`,
+      canonical: canonicalFor("/gizlilik-politikasi", params.locale),
       languages: generateHreflang("/gizlilik-politikasi"),
     },
     openGraph: {
