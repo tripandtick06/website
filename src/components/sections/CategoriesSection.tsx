@@ -111,7 +111,7 @@ export function CategoriesSection() {
                 alt={cat.name}
                 fill
                 sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                className="object-cover transition-transform duration-300 group-hover:scale-105"
+                className="object-cover transition-transform duration-[900ms] ease-out-strong group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/45 to-black/30" />
               <div className="relative w-12 h-12 rounded-xl flex items-center justify-center mb-3 bg-white/20 backdrop-blur-sm transition-transform group-hover:scale-110">

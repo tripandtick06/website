@@ -78,7 +78,7 @@ export function ServiceCard({ item, ctaHref }: ServiceCardProps) {
             alt={`${item.name} — Kapadokya`}
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-cover transition-transform duration-500 ease-out group-hover/card:scale-105"
+            className="object-cover transition-transform duration-[900ms] ease-out-strong group-hover/card:scale-105"
           />
         ) : emoji ? (
           <span className="text-7xl opacity-90 drop-shadow-lg" aria-hidden="true">{emoji}</span>

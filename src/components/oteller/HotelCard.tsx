@@ -39,7 +39,7 @@ export function HotelCard({ item, priority = false }: { item: ServiceItem; prior
             alt={`${item.name}, ${item.region ?? "Kapadokya"} — Kapadokya`}
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-cover transition-transform duration-300 ease-out-strong group-hover:scale-[1.04]"
+            className="object-cover transition-transform duration-[900ms] ease-out-strong group-hover:scale-105"
             priority={priority}
             loading={priority ? undefined : "lazy"}
           />
