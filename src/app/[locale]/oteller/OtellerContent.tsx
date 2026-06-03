@@ -11,9 +11,11 @@ import { HOTELS } from "@/data/services/catalog";
 import { breadcrumbSchema, itemListSchema } from "@/lib/schema";
 import { HotelsGrid } from "@/components/oteller/HotelsGrid";
 import { Banner } from "@/components/ui/Banner";
+import { useUiText } from "@/lib/i18n/uiText";
 
 export function OtellerContent() {
   const t = useT();
+  const ui = useUiText();
   const { locale } = useLocale();
   const hotels = tServiceList(HOTELS, locale);
   const breadcrumbItems = [{ name: t.page.oteller.breadcrumb_name, href: "/oteller" }];
@@ -34,11 +36,10 @@ export function OtellerContent() {
           {/* Contact-only akis: net + pozitif cerceve (i18n-debt: TR hardcode). */}
           <Banner
             variant="info"
-            title="Online rezervasyon yakında"
+            title={ui.oteller.bannerTitle}
             className="mb-8"
           >
-            Şu an otelleri online rezerve edemiyorsunuz. Uzman ekibimiz size özel fiyat ve uygun
-            müsaitlik hazırlıyor — kartlardan <b>&ldquo;Fiyat teklifi al&rdquo;</b> deyin, 24 saat içinde dönüş yapalım.
+            {ui.oteller.bannerBody}
           </Banner>
 
           <HotelsGrid hotels={hotels} />

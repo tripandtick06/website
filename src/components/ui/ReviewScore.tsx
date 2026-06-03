@@ -1,5 +1,8 @@
+"use client";
+
 import { Star } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useUiText, type UiText } from "@/lib/i18n/uiText";
 
 /**
  * Booking.com review-skor rozeti.
@@ -15,11 +18,11 @@ interface ReviewScoreProps {
   className?: string;
 }
 
-function scoreWord(outOfTen: number): string {
-  if (outOfTen >= 9) return "Mükemmel";
-  if (outOfTen >= 8) return "Çok iyi";
-  if (outOfTen >= 7) return "İyi";
-  return "Güzel";
+function scoreWord(outOfTen: number, ui: UiText): string {
+  if (outOfTen >= 9) return ui.reviewScore.excellent;
+  if (outOfTen >= 8) return ui.reviewScore.veryGood;
+  if (outOfTen >= 7) return ui.reviewScore.good;
+  return ui.reviewScore.nice;
 }
 
 export function ReviewScore({
@@ -29,6 +32,7 @@ export function ReviewScore({
   size = "md",
   className,
 }: ReviewScoreProps) {
+  const ui = useUiText();
   if (format === "stars") {
     return (
       <span className={cn("inline-flex items-center gap-1", className)}>
@@ -40,11 +44,11 @@ export function ReviewScore({
   }
 
   const outOfTen = Math.round(rating * 2 * 10) / 10;
-  const label = scoreWord(outOfTen);
+  const label = scoreWord(outOfTen, ui);
   return (
     <span
       className={cn("inline-flex items-center gap-2", className)}
-      aria-label={`Değerlendirme ${outOfTen} / 10 — ${label}${count != null ? `, ${count} yorum` : ""}`}
+      aria-label={`${ui.reviewScore.ratingLabel} ${outOfTen} / 10 — ${label}${count != null ? `, ${count} ${ui.reviewScore.reviews}` : ""}`}
     >
       <span className={cn("score-badge", size === "md" ? "text-sm" : "text-xs")}>
         {outOfTen.toFixed(1)}
@@ -52,7 +56,7 @@ export function ReviewScore({
       <span className="leading-tight">
         <span className="block text-sm font-bold text-slate-800">{label}</span>
         {count != null && (
-          <span className="block text-xs text-slate-500">{count} yorum</span>
+          <span className="block text-xs text-slate-500">{count} {ui.reviewScore.reviews}</span>
         )}
       </span>
     </span>

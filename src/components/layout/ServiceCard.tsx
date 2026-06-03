@@ -6,6 +6,7 @@ import { Link } from "@/i18n/routing";
 import { Star, Clock, Check, Hotel, MountainSnow, TreePine, Package, Car, Wind } from "lucide-react";
 import { formatPrice } from "@/lib/utils";
 import { useT } from "@/lib/i18n/I18nProvider";
+import { useUiText } from "@/lib/i18n/uiText";
 import type { ServiceItem } from "@/data/services/catalog";
 
 const CATEGORY_ICON: Record<ServiceItem["category"], typeof Wind> = {
@@ -56,6 +57,7 @@ export interface ServiceCardProps {
 
 export function ServiceCard({ item, ctaHref }: ServiceCardProps) {
   const t = useT();
+  const ui = useUiText();
   const Icon = CATEGORY_ICON[item.category];
   const gradient = CATEGORY_GRADIENT[item.category];
   // Otel kategorisi info-only flow — /oteller/[slug] info page (rezervasyon yok).
@@ -148,14 +150,14 @@ export function ServiceCard({ item, ctaHref }: ServiceCardProps) {
               href={{ pathname: "/oteller/[slug]", params: { slug: item.slug } }}
               className="btn-accent text-sm !py-2 !px-4 flex-shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-booking/[0.45] focus-visible:ring-offset-1"
             >
-              Bilgi & Form
+              {ui.serviceCard.infoForm}
             </Link>
           ) : (
             <Link
               href={stringHref as ComponentProps<typeof Link>["href"]}
               className="btn-accent text-sm !py-2 !px-4 flex-shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-booking/[0.45] focus-visible:ring-offset-1"
             >
-              {isHotelInfoOnly ? "Bilgi & Form" : "Rezervasyon"}
+              {isHotelInfoOnly ? ui.serviceCard.infoForm : ui.serviceCard.reserve}
             </Link>
           )}
         </div>

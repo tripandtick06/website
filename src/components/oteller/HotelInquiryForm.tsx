@@ -11,6 +11,7 @@
 import { useState, type FormEvent } from "react";
 import { Phone, MessageSquare, CheckCircle2 } from "lucide-react";
 import { useT, useLocale } from "@/lib/i18n/I18nProvider";
+import { useUiText } from "@/lib/i18n/uiText";
 import { Field } from "@/components/ui/Field";
 import { Input, Textarea } from "@/components/ui/Input";
 import { Stepper } from "@/components/ui/Stepper";
@@ -37,6 +38,7 @@ function plusNDays(n: number): string {
 
 export function HotelInquiryForm({ hotelSlug, hotelName, tier, region }: Props) {
   const t = useT();
+  const ui = useUiText();
   const { locale } = useLocale();
   // Telefon ipucu: +90 sadece TR icin; diger diller uluslararasi generic (TR varsaymaz).
   const phonePlaceholder = locale === "tr" ? "+90 5xx 000 00 00" : "+__ ___ ___ ____";
@@ -77,10 +79,10 @@ export function HotelInquiryForm({ hotelSlug, hotelName, tier, region }: Props) 
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(data.error ?? `HTTP ${res.status}`);
-      setResult({ kind: "ok", msg: data.message ?? "Talebiniz alındı.", inquiryId: data.inquiryId });
+      setResult({ kind: "ok", msg: data.message ?? ui.inquiry.received, inquiryId: data.inquiryId });
       setName(""); setEmail(""); setPhone(""); setBudget(""); setPreferences("");
     } catch (err) {
-      setResult({ kind: "err", msg: err instanceof Error ? err.message : "Hata olustu" });
+      setResult({ kind: "err", msg: err instanceof Error ? err.message : ui.inquiry.error });
     } finally {
       clearTimeout(timeout);
       setSubmitting(false);
@@ -161,7 +163,7 @@ export function HotelInquiryForm({ hotelSlug, hotelName, tier, region }: Props) 
       )}
 
       <Button type="submit" variant="accent" size="lg" loading={submitting} className="w-full">
-        {submitting ? "Gönderiliyor..." : "Bilgi & Fiyat Teklifi İste"}
+        {submitting ? ui.inquiry.sending : ui.inquiry.submit}
       </Button>
 
       <div className="border-t border-slate-100 pt-2 text-center text-xs text-slate-500">
