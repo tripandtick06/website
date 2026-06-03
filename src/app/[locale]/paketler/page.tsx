@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/layout/JsonLd";
-import { breadcrumbSchema, itemListSchema, faqPageSchema, SITE_URL } from "@/lib/schema";
+import { breadcrumbSchema, itemListSchema, faqPageSchema } from "@/lib/schema";
 import { generateHreflang, ogImageUrl, canonicalFor } from "@/lib/hreflang";
 import { DICTIONARIES, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { PACKAGES } from "@/data/services/catalog";
@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
     openGraph: {
       title: d.meta_title_2,
       description: d.meta_desc_2,
-      url: `${SITE_URL}/paketler`,
+      url: canonicalFor("/paketler", params.locale),
       type: "website",
       images: [
         {
@@ -47,14 +47,14 @@ export default function PaketlerPage({
 }) {
   const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
   const itemList = itemListSchema(
-    tServiceList(PACKAGES, loc).map((p) => ({ name: p.name, urlPath: `/rezervasyon/${p.slug}` })),
+    tServiceList(PACKAGES, loc).map((p) => ({ name: p.name, urlPath: canonicalFor(`/rezervasyon/${p.slug}`, loc) })),
     "Kapadokya Kombi Paketleri"
   );
 
   return (
     <>
       <PaketlerContent />
-      <JsonLd data={breadcrumbSchema([{ name: "Paketler", href: "/paketler" }])} />
+      <JsonLd data={breadcrumbSchema([{ name: DICTIONARIES[loc].nav.packages, href: canonicalFor("/paketler", loc) }])} />
       <JsonLd data={itemList} />
       <JsonLd data={faqPageSchema(getPageFaqs("packages", loc))} />
     </>

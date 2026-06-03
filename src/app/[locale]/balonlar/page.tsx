@@ -4,7 +4,6 @@ import {
   breadcrumbSchema,
   faqPageSchema,
   itemListSchema,
-  SITE_URL,
 } from "@/lib/schema";
 import { generateHreflang, ogImageUrl, canonicalFor } from "@/lib/hreflang";
 import {
@@ -35,7 +34,7 @@ export async function generateMetadata({
     openGraph: {
       title: d.meta_title_2,
       description: d.meta_desc_2,
-      url: `${SITE_URL}/balonlar`,
+      url: canonicalFor("/balonlar", params.locale),
       type: "website",
       images: [
         {
@@ -62,11 +61,11 @@ export default function BalonlarPage({
       <BalonlarContent />
       <JsonLd
         data={[
-          breadcrumbSchema([{ name: "Balon Turları", href: "/balonlar" }]),
+          breadcrumbSchema([{ name: DICTIONARIES[loc].nav.balloons, href: canonicalFor("/balonlar", loc) }]),
           itemListSchema(
             tBalloons(loc).map((pkg) => ({
               name: pkg.name,
-              urlPath: `/balonlar/${pkg.slug}`,
+              urlPath: canonicalFor(`/balonlar/${pkg.slug}`, loc),
             })),
             "Kapadokya Balon Turu Paketleri"
           ),

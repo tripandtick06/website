@@ -5,6 +5,7 @@ import path from "node:path";
 import { SITE_URL, articleSchema, breadcrumbSchema, faqPageSchema } from "@/lib/schema";
 import { FOUNDER } from "@/data/founder";
 import { ogImageUrl, canonicalFor } from "@/lib/hreflang";
+import { DICTIONARIES, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { ARTICLES, type BlogArticle, type BlogArticleMeta } from "@/data/blog";
 import { BlogArticleContent } from "./BlogArticleContent";
 
@@ -80,7 +81,7 @@ export async function generateMetadata({
     openGraph: {
       title,
       description: article.metaDescription,
-      url: `${SITE_URL}${path}`,
+      url: canonicalFor(path, params.locale),
       type: "article",
       publishedTime: article.publishedAt,
       tags: article.tags,
@@ -136,6 +137,8 @@ export default async function BlogArticlePage({
   const article = await getArticle(params.slug);
   if (!article) notFound();
 
+  const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
+  const articleUrl = canonicalFor(`/blog/${article.slug}`, loc);
   const related = getRelatedArticles(article.slug, article.category, article.locale);
   const wordCount = article.content.split(/\s+/).length;
   const readTime = Math.ceil(wordCount / 200);
@@ -150,13 +153,14 @@ export default async function BlogArticlePage({
     dateModified: article.publishedAt,
     author: FOUNDER.name,
     authorType: "Person",
-    authorUrl: `${SITE_URL}/hakkimizda`,
+    authorUrl: canonicalFor("/hakkimizda", loc),
     keywords: article.tags,
+    urlPath: articleUrl,
   });
 
   const breadcrumbLd = breadcrumbSchema([
-    { name: "Blog", href: "/blog" },
-    { name: article.title, href: `/blog/${article.slug}` },
+    { name: DICTIONARIES[loc].nav.blog, href: canonicalFor("/blog", loc) },
+    { name: article.title, href: articleUrl },
   ]);
 
   // FAQPage JSON-LD — only emitted when the article supplies a `faq` array.

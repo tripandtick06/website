@@ -116,17 +116,20 @@ export interface TouristTripInput {
   rating: number;
   reviewCount: number;
   image?: string;
+  /** Absolute, locale-aware URL for url/offers.url. Default /balonlar/<slug>. */
+  urlPath?: string;
   /** Price hidden in UI (quote-based) — omit numeric price from Offer. */
   priceOnRequest?: boolean;
 }
 
 export function touristTripSchema(p: TouristTripInput) {
+  const url = p.urlPath ?? `${SITE_URL}/balonlar/${p.slug}`;
   return {
     "@context": "https://schema.org",
     "@type": "TouristTrip",
     name: p.name,
     description: p.description,
-    url: `${SITE_URL}/balonlar/${p.slug}`,
+    url,
     image: p.image ? `${SITE_URL}${p.image}` : `${SITE_URL}/images/og/og-default.jpg`,
     touristType: ["Couples", "Families", "Solo", "Groups"],
     itinerary: {
@@ -141,7 +144,7 @@ export function touristTripSchema(p: TouristTripInput) {
     },
     offers: {
       "@type": "Offer",
-      url: `${SITE_URL}/balonlar/${p.slug}`,
+      url,
       ...(p.priceOnRequest
         ? {}
         : { price: p.price.toString(), priceCurrency: p.currency }),
@@ -185,6 +188,8 @@ export interface ArticleInput {
   authorType?: "Person" | "Organization";
   authorUrl?: string;
   keywords?: string[];
+  /** Absolute, locale-aware URL for mainEntityOfPage @id. Default /blog/<slug>. */
+  urlPath?: string;
 }
 
 export function articleSchema(a: ArticleInput) {
@@ -213,7 +218,7 @@ export function articleSchema(a: ArticleInput) {
     publisher: { "@id": ORG_ID },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `${SITE_URL}/blog/${a.slug}`,
+      "@id": a.urlPath ?? `${SITE_URL}/blog/${a.slug}`,
     },
     ...(a.keywords && a.keywords.length ? { keywords: a.keywords.join(", ") } : {}),
     speakable: {
@@ -297,7 +302,8 @@ export interface ProductSchemaInput {
   rating: number;
   reviewCount: number;
   category?: string;
-  urlPath?: string; // default /balonlar/<slug>
+  /** Absolute URL or path. Absolute (starts http) used verbatim; else prefixed with SITE_URL. Default /balonlar/<slug>. */
+  urlPath?: string;
   reviews?: ReviewInput[];
   /** Price hidden in UI (quote-based) — omit numeric price from Offer. */
   priceOnRequest?: boolean;
@@ -309,7 +315,8 @@ export interface ProductSchemaInput {
  * hasMerchantReturnPolicy (trust cue LLMs cite).
  */
 export function productSchema(p: ProductSchemaInput) {
-  const url = `${SITE_URL}${p.urlPath ?? `/balonlar/${p.slug}`}`;
+  const rawPath = p.urlPath ?? `/balonlar/${p.slug}`;
+  const url = rawPath.startsWith("http") ? rawPath : `${SITE_URL}${rawPath}`;
   const priceValidUntil = new Date(Date.now() + 365 * 86400000)
     .toISOString()
     .split("T")[0];
@@ -366,6 +373,8 @@ export interface LodgingInput {
   region?: string;
   amenities?: string[];
   priceRange?: string;
+  /** Absolute, locale-aware URL for url. Default /oteller/<slug>. */
+  urlPath?: string;
 }
 
 /**
@@ -379,7 +388,7 @@ export function lodgingSchema(h: LodgingInput) {
     "@type": "Hotel",
     name: h.name,
     description: h.description,
-    url: `${SITE_URL}/oteller/${h.slug}`,
+    url: h.urlPath ?? `${SITE_URL}/oteller/${h.slug}`,
     ...(h.region
       ? {
           address: {
@@ -407,6 +416,43 @@ export function lodgingSchema(h: LodgingInput) {
           })),
         }
       : {}),
+  };
+}
+
+/** Locale -> BCP47 language tag for schema inLanguage. */
+const SCHEMA_LANG: Record<string, string> = {
+  tr: "tr-TR",
+  en: "en-US",
+  de: "de-DE",
+  fr: "fr-FR",
+  es: "es-ES",
+  nl: "nl-NL",
+  zh: "zh-CN",
+  hi: "hi-IN",
+  ur: "ur-PK",
+};
+
+/**
+ * WebSite schema with SearchAction — lets search engines surface a sitelinks
+ * search box and lets AI assistants discover the on-site search endpoint.
+ */
+export function websiteSchema(locale: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
+    name: "Trip and Tick",
+    url: SITE_URL,
+    inLanguage: SCHEMA_LANG[locale] ?? "tr-TR",
+    publisher: { "@id": ORG_ID },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${SITE_URL}/ara?q={search_term_string}`,
+      },
+      "query-input": "required name=search_term_string",
+    },
   };
 }
 

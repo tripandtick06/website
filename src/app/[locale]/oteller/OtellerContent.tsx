@@ -9,6 +9,7 @@ import { PageHero } from "@/components/layout/PageHero";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { HOTELS } from "@/data/services/catalog";
 import { breadcrumbSchema, itemListSchema } from "@/lib/schema";
+import { canonicalFor } from "@/lib/hreflang";
 import { HotelsGrid } from "@/components/oteller/HotelsGrid";
 import { Banner } from "@/components/ui/Banner";
 import { useUiText } from "@/lib/i18n/uiText";
@@ -19,6 +20,10 @@ export function OtellerContent() {
   const { locale } = useLocale();
   const hotels = tServiceList(HOTELS, locale);
   const breadcrumbItems = [{ name: t.page.oteller.breadcrumb_name, href: "/oteller" }];
+  // JSON-LD breadcrumb uses absolute localized URLs (UI Breadcrumb keeps relative).
+  const breadcrumbLdItems = [
+    { name: t.page.oteller.breadcrumb_name, href: canonicalFor("/oteller", locale) },
+  ];
 
   return (
     <>
@@ -60,11 +65,11 @@ export function OtellerContent() {
 
       <JsonLd
         data={[
-          breadcrumbSchema(breadcrumbItems),
+          breadcrumbSchema(breadcrumbLdItems),
           itemListSchema(
             hotels.map((h) => ({
               name: h.name,
-              urlPath: `/oteller/${h.slug}`,
+              urlPath: canonicalFor(`/oteller/${h.slug}`, locale),
             })),
             t.page.oteller.jsonld_item_list_name
           ),

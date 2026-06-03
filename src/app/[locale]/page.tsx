@@ -5,6 +5,8 @@ import {
   isLocale,
   DEFAULT_LOCALE,
 } from "@/lib/i18n/dictionaries";
+import { JsonLd } from "@/components/layout/JsonLd";
+import { websiteSchema } from "@/lib/schema";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { CategoriesSection } from "@/components/sections/CategoriesSection";
 import { PackagesSection } from "@/components/sections/PackagesSection";
@@ -61,9 +63,15 @@ export async function generateMetadata({
   };
 }
 
-export default function HomePage() {
+export default function HomePage({
+  params,
+}: {
+  params: { locale: string };
+}) {
+  const loc = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
   return (
     <>
+      <JsonLd data={websiteSchema(loc)} />
       <HeroSection />
       <StatsBar />
       <CategoriesSection />

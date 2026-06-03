@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/layout/JsonLd";
-import { breadcrumbSchema, personSchema, SITE_URL } from "@/lib/schema";
+import { breadcrumbSchema, personSchema } from "@/lib/schema";
 import { generateHreflang, ogImageUrl, canonicalFor } from "@/lib/hreflang";
 import { DICTIONARIES, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { FOUNDER } from "@/data/founder";
@@ -25,7 +25,7 @@ export async function generateMetadata({
     openGraph: {
       title: d.meta_title_2,
       description: d.meta_desc_2,
-      url: `${SITE_URL}/hakkimizda`,
+      url: canonicalFor("/hakkimizda", params.locale),
       type: "website",
       images: [
         {
@@ -42,13 +42,18 @@ export async function generateMetadata({
   };
 }
 
-export default function HakkimizdaPage() {
+export default function HakkimizdaPage({
+  params,
+}: {
+  params: { locale: string };
+}) {
+  const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
   return (
     <>
       <HakkimizdaContent />
       <JsonLd
         data={[
-          breadcrumbSchema([{ name: "Hakkımızda", href: "/hakkimizda" }]),
+          breadcrumbSchema([{ name: DICTIONARIES[loc].nav.about, href: canonicalFor("/hakkimizda", loc) }]),
           personSchema(FOUNDER),
         ]}
       />

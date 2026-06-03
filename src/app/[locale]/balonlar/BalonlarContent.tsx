@@ -49,7 +49,7 @@ export function BalonlarContent() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {packages.map((pkg) => (
+            {packages.map((pkg, index) => (
               <article key={pkg.slug} className="card overflow-hidden flex flex-col">
                 <div className={`relative h-56 ${pkg.images[0] ? "bg-slate-100" : "bg-gradient-to-br from-primary via-primary-light to-accent flex items-center justify-center"}`}>
                   {pkg.images[0] ? (
@@ -59,7 +59,8 @@ export function BalonlarContent() {
                       fill
                       sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-cover"
-                      priority
+                      priority={index === 0}
+                      loading={index === 0 ? undefined : "lazy"}
                     />
                   ) : (
                     <Wind className="w-24 h-24 text-white/85" strokeWidth={1.2} />

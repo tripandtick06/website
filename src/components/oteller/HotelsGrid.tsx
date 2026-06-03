@@ -123,8 +123,8 @@ export function HotelsGrid({ hotels }: { hotels: ServiceItem[] }) {
         </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filtered.map((item) => (
-            <HotelCard key={item.slug} item={item} />
+          {filtered.map((item, index) => (
+            <HotelCard key={item.slug} item={item} priority={index < 3} />
           ))}
         </div>
       )}

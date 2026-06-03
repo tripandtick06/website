@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/layout/JsonLd";
-import { breadcrumbSchema, faqPageSchema, SITE_URL } from "@/lib/schema";
+import { breadcrumbSchema, faqPageSchema } from "@/lib/schema";
 import { generateHreflang, ogImageUrl, canonicalFor } from "@/lib/hreflang";
 import { DICTIONARIES, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { tFaq } from "@/lib/i18n/localizeData";
@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
     openGraph: {
       title: d.meta_title_2,
       description: d.meta_desc_2,
-      url: `${SITE_URL}/sss`,
+      url: canonicalFor("/sss", params.locale),
       type: "website",
       images: [
         {
@@ -47,7 +47,7 @@ export default function Page({ params }: { params: { locale: string } }) {
       <SssContent />
       <JsonLd
         data={[
-          breadcrumbSchema([{ name: "SSS", href: "/sss" }]),
+          breadcrumbSchema([{ name: DICTIONARIES[loc].nav.faq, href: canonicalFor("/sss", loc) }]),
           faqPageSchema(
             faqItems.map((f) => ({ question: f.question, answer: f.answer }))
           ),
