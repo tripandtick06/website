@@ -30,6 +30,11 @@ interface I18nContextValue {
 
 const I18nContext = createContext<I18nContextValue | null>(null);
 
+// Worker-disi (bundle disi) diller — gercek sozluk public/i18n'den fetch edilir.
+const FETCH_DICT_LOCALES = new Set<Locale>([
+  "pt", "pt-BR", "ja", "ko", "it", "ru", "uk", "az",
+]);
+
 export function I18nProvider({
   children,
   initialLocale,
@@ -42,6 +47,9 @@ export function I18nProvider({
   // /nl gibi prefixli URL'de icerik dogru dilde SSR olur (localStorage degil URL kazanir).
   const [locale, setLocaleState] = useState<Locale>(initialLocale ?? DEFAULT_LOCALE);
   const [ready, setReady] = useState(false);
+  // Yeni diller (EN-alias senkron) icin gercek sozluk public/i18n'den client-fetch.
+  // SSR + ilk render EN (alias) -> hydration match; fetch sonrasi gercek ceviri.
+  const [fetched, setFetched] = useState<Partial<Record<Locale, Dictionary>>>({});
 
   // Mount sonrasi: html lang/dir senkron + ready. localStorage URL'i EZMEZ (URL otorite).
   useEffect(() => {
@@ -51,6 +59,21 @@ export function I18nProvider({
       document.documentElement.dir = LOCALE_DIR[locale];
     }
   }, [locale]);
+
+  // Worker-disi diller: gercek sozlugu statik asset'ten cek (bir kez locale basina).
+  useEffect(() => {
+    if (!FETCH_DICT_LOCALES.has(locale) || fetched[locale]) return;
+    let cancelled = false;
+    fetch(`/i18n/dict.${locale}.json`)
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d) => {
+        if (!cancelled && d) setFetched((prev) => ({ ...prev, [locale]: d as Dictionary }));
+      })
+      .catch(() => undefined);
+    return () => {
+      cancelled = true;
+    };
+  }, [locale, fetched]);
 
   const setLocale = useCallback((next: Locale) => {
     setLocaleState(next);
@@ -70,11 +93,11 @@ export function I18nProvider({
   const value = useMemo<I18nContextValue>(
     () => ({
       locale,
-      t: DICTIONARIES[locale] as Dictionary,
+      t: (fetched[locale] ?? DICTIONARIES[locale]) as Dictionary,
       setLocale,
       ready,
     }),
-    [locale, setLocale, ready]
+    [locale, setLocale, ready, fetched]
   );
 
   return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
