@@ -10,6 +10,7 @@
 //   page.blog.category_ulasim = "Ulaşım"
 //   page.blog.category_genel = "Genel"
 
+import NextImage from "next/image";
 import { ArrowRight, Calendar, Tag, Search } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { useT } from "@/lib/i18n/I18nProvider";
@@ -95,6 +96,20 @@ export function BlogContent({ articles }: BlogContentProps) {
                 key={`${article.locale}-${article.slug}`}
                 className="bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-card transition-shadow group"
               >
+                {/* Cover foto */}
+                <Link
+                  href={{ pathname: "/blog/[slug]", params: { slug: article.slug } }}
+                  className="block relative h-44 bg-slate-100 overflow-hidden"
+                >
+                  <NextImage
+                    src={article.coverImage || "/images/hero/homepage.jpg"}
+                    alt={article.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </Link>
+
                 {/* Category & Locale Badge */}
                 <div className="px-6 pt-6 flex items-center gap-2">
                   <span

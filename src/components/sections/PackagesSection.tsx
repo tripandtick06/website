@@ -1,5 +1,6 @@
 "use client";
 
+import NextImage from "next/image";
 import {
   Clock,
   Users,
@@ -25,6 +26,7 @@ interface PackageCardProps {
   icon: React.ReactNode;
   marketLabel: string;
   reserveLabel: string;
+  photo: string;
 }
 
 function PackageCard({
@@ -36,10 +38,9 @@ function PackageCard({
   marketPrice,
   price,
   unit,
-  gradient,
-  icon,
   marketLabel,
   reserveLabel,
+  photo,
 }: PackageCardProps) {
   const badgeColors = {
     accent: "bg-accent",
@@ -49,10 +50,16 @@ function PackageCard({
 
   return (
     <div className="card overflow-hidden group">
-      {/* Image Area */}
-      <div className={`h-52 relative ${gradient} flex items-center justify-center`}>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/40" />
-        <div className="opacity-20 group-hover:opacity-30 transition-opacity">{icon}</div>
+      {/* Image Area — gercek foto + alt gradient (badge kontrasti) */}
+      <div className="h-52 relative bg-slate-100 overflow-hidden">
+        <NextImage
+          src={photo}
+          alt={title}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          className="object-cover transition-transform duration-300 group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40" />
         <span
           className={`absolute top-4 left-4 ${badgeColors[badgeColor]} text-white px-3 py-1 rounded-lg text-xs font-bold z-10`}
         >
@@ -110,6 +117,7 @@ export function PackagesSection() {
           <span className="section-tag">{t.packages_section.tag}</span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             {t.packages_section.title}
+            <span className="text-accent align-super text-lg">*</span>
           </h2>
           <p className="text-slate-500 mt-3 max-w-md mx-auto">
             {t.packages_section.subtitle}
@@ -140,6 +148,7 @@ export function PackagesSection() {
             unit={ps.unit_kisi_basi}
             gradient="bg-gradient-to-br from-primary to-accent"
             icon={<Wind className="w-24 h-24 text-white" />}
+            photo="/images/balloons/standart-balon-ucusu.jpg"
           />
 
           <PackageCard
@@ -165,6 +174,7 @@ export function PackagesSection() {
             unit={ps.unit_2_kisi_toplam}
             gradient="bg-gradient-to-br from-[#4A1A8B] to-accent"
             icon={<Heart className="w-24 h-24 text-white" />}
+            photo="/images/packages/balayi-paketi.jpg"
           />
 
           <PackageCard
@@ -190,8 +200,14 @@ export function PackagesSection() {
             unit={ps.unit_kisi_basi}
             gradient="bg-gradient-to-br from-[#1A6B2B] to-[#4BBE6A]"
             icon={<Zap className="w-24 h-24 text-white" />}
+            photo="/images/packages/macera-paketi.jpg"
           />
         </div>
+
+        {/* En dusuk fiyat garantisi — yildiz isaretli not (sadece paket satislari) */}
+        <p className="mt-8 max-w-2xl mx-auto text-center text-xs text-slate-500 leading-relaxed">
+          <span className="text-accent font-bold">*</span> {t.packages_section.price_match}
+        </p>
       </div>
     </section>
   );

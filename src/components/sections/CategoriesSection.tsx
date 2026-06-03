@@ -1,6 +1,7 @@
 "use client";
 
 import type { ComponentProps } from "react";
+import NextImage from "next/image";
 import { Link } from "@/i18n/routing";
 import {
   Wind,
@@ -25,48 +26,56 @@ export function CategoriesSection() {
       sub: t.categories.balloons_sub,
       href: "/balonlar",
       featured: true,
+      bg: "/images/balloons/standart-balon-ucusu.jpg",
     },
     {
       icon: Hotel,
       name: t.categories.hotels,
       sub: t.categories.hotels_sub,
       href: "/oteller",
+      bg: "/images/hotels/magara-otel-deluxe.jpg",
     },
     {
       icon: Car,
       name: t.categories.transfer,
       sub: t.categories.transfer_sub,
       href: "/transferler",
+      bg: "/images/transfers/vip-arac.jpg",
     },
     {
       icon: MountainSnow,
       name: t.categories.atv,
       sub: t.categories.atv_sub,
       href: "/aktiviteler",
+      bg: "/images/activities/atv-sunset.jpg",
     },
     {
       icon: TreePine,
       name: t.categories.tours,
       sub: t.categories.tours_sub,
       href: "/turlar",
+      bg: "/images/tours/kirmizi-tur.jpg",
     },
     {
       icon: Package,
       name: t.categories.packages,
       sub: t.categories.packages_sub,
       href: "/paketler",
+      bg: "/images/packages/balayi-paketi.jpg",
     },
     {
       icon: PartyPopper,
       name: t.categories.horse,
       sub: t.categories.horse_sub,
       href: "/aktiviteler",
+      bg: "/images/activities/at-sunset.jpg",
     },
     {
       icon: Shield,
       name: t.categories.insurance,
       sub: t.categories.insurance_sub,
       href: "#",
+      bg: "/images/hero/homepage.jpg",
     },
   ];
 
@@ -90,23 +99,26 @@ export function CategoriesSection() {
               // href may be a shared route or a "#" placeholder (insurance) — cast.
               href={cat.href as ComponentProps<typeof Link>["href"]}
               className={cn(
-                "group flex flex-col items-center text-center p-6 rounded-booking border transition-[transform,box-shadow,border-color] duration-200 ease-out-strong",
+                "group relative flex flex-col items-center text-center p-6 rounded-booking overflow-hidden text-white shadow-booking-card transition-[transform,box-shadow] duration-200 ease-out-strong",
+                "hover:-translate-y-0.5 hover:shadow-booking-hover",
                 "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-booking/[0.45]",
-                cat.featured
-                  ? "bg-gradient-to-br from-primary to-primary-light text-white border-transparent shadow-booking-card"
-                  : "bg-white border-slate-200 text-slate-800 hover:border-booking hover:-translate-y-0.5 hover:shadow-booking-hover"
+                cat.featured && "ring-2 ring-accent"
               )}
             >
-              <div
-                className={cn(
-                  "w-12 h-12 rounded-xl flex items-center justify-center mb-3 transition-transform group-hover:scale-110",
-                  cat.featured ? "bg-white/20" : "bg-booking/[0.10]"
-                )}
-              >
-                <cat.icon className={cn("w-6 h-6", cat.featured ? "text-white" : "text-booking-600")} />
+              {/* Arka plan foto + koyu gradient overlay (metin/ikon okunur) */}
+              <NextImage
+                src={cat.bg}
+                alt={cat.name}
+                fill
+                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/45 to-black/30" />
+              <div className="relative w-12 h-12 rounded-xl flex items-center justify-center mb-3 bg-white/20 backdrop-blur-sm transition-transform group-hover:scale-110">
+                <cat.icon className="w-6 h-6 text-white" />
               </div>
-              <span className="font-bold text-sm">{cat.name}</span>
-              <span className={cn("text-xs mt-1", cat.featured ? "text-white/70" : "text-slate-400")}>
+              <span className="relative font-bold text-sm drop-shadow">{cat.name}</span>
+              <span className="relative text-xs mt-1 text-white/80 drop-shadow">
                 {cat.sub}
               </span>
             </Link>

@@ -10,6 +10,7 @@
 //   page.blog.category_ulasim = "Ulaşım"
 //   page.blog.category_genel = "Genel"
 
+import NextImage from "next/image";
 import { ArrowLeft, Calendar, Tag, User, Clock } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { useT } from "@/lib/i18n/I18nProvider";
@@ -43,9 +44,18 @@ export function BlogArticleContent({
 
   return (
     <main className="min-h-screen bg-slate-50">
-      {/* Article Header */}
-      <section className="bg-gradient-to-br from-primary via-[#1A2B6B] to-[#2A1A4A] text-white py-12 sm:py-16">
-        <div className="max-w-3xl mx-auto px-4">
+      {/* Article Header — konuyla ilgili cover foto + koyu gradient overlay */}
+      <section className="relative overflow-hidden text-white py-12 sm:py-16">
+        <NextImage
+          src={article.coverImage || "/images/hero/homepage.jpg"}
+          alt={article.title}
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-[#1A2B6B]/85 to-[#2A1A4A]/90" />
+        <div className="relative z-10 max-w-3xl mx-auto px-4">
           <Link
             href="/blog"
             className="inline-flex items-center gap-2 text-white/60 hover:text-white text-sm mb-6 transition-colors"
