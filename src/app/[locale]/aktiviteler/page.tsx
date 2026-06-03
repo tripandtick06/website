@@ -9,7 +9,7 @@ import { tServiceList } from "@/lib/i18n/localizeData";
 import { getPageFaqs } from "@/data/i18n/pageFaqs";
 import { AktivitelerContent } from "./AktivitelerContent";
 
-export const runtime = "edge";
+export const dynamic = "force-static";
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;

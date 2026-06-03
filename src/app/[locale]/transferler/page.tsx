@@ -9,7 +9,7 @@ import { tServiceList } from "@/lib/i18n/localizeData";
 import { getPageFaqs } from "@/data/i18n/pageFaqs";
 import { TransferlerContent } from "./TransferlerContent";
 
-export const runtime = "edge";
+export const dynamic = "force-static";
 
 export async function generateMetadata({
   params,

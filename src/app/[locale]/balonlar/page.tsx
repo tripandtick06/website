@@ -15,7 +15,7 @@ import { serverDict } from "@/lib/i18n/serverDict";
 import { tBalloons, tFaq } from "@/lib/i18n/localizeData";
 import { BalonlarContent } from "./BalonlarContent";
 
-export const runtime = "edge";
+export const dynamic = "force-static";
 
 export async function generateMetadata({
   params,

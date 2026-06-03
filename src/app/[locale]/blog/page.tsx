@@ -6,7 +6,7 @@ import { serverDict } from "@/lib/i18n/serverDict";
 import { BlogContent } from "./BlogContent";
 
 // CF Pages edge runtime. Liste metadata manifest'ten (icerik statik asset).
-export const runtime = "edge";
+export const dynamic = "force-static";
 
 async function getBlogArticles(): Promise<BlogArticleMeta[]> {
   return ARTICLES;

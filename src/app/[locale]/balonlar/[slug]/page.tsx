@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-export const runtime = "edge";
+export const dynamic = "force-static";
 
 import { JsonLd } from "@/components/layout/JsonLd";
 import { BALLOON_PACKAGES, getBalloonPackageBySlug } from "@/data/services/balloons";

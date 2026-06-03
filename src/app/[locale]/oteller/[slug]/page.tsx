@@ -15,7 +15,7 @@ import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { serverDict } from "@/lib/i18n/serverDict";
 import { OtelDetayContent } from "./OtelDetayContent";
 
-export const runtime = "edge";
+export const dynamic = "force-static";
 
 interface PageParams {
   params: { locale: string; slug: string };

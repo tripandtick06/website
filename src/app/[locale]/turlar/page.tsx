@@ -8,7 +8,7 @@ import { TOURS } from "@/data/services/catalog";
 import { getPageFaqs } from "@/data/i18n/pageFaqs";
 import { TurlarContent } from "./TurlarContent";
 
-export const runtime = "edge";
+export const dynamic = "force-static";
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;

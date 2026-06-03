@@ -5,7 +5,7 @@ import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { serverDict } from "@/lib/i18n/serverDict";
 import { ImpressumContent } from "./ImpressumContent";
 
-export const runtime = "edge";
+export const dynamic = "force-static";
 
 export async function generateMetadata({
   params,

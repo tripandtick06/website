@@ -15,9 +15,13 @@ export function serverDict(locale: Locale): Dictionary {
   if (!PUBLIC_DICT.has(locale)) return DICTIONARIES[locale] as Dictionary;
   if (cache[locale]) return cache[locale] as Dictionary;
   try {
-    const nodeRequire = eval("require") as NodeRequire;
-    const fs = nodeRequire("node:fs") as typeof import("node:fs");
-    const path = nodeRequire("node:path") as typeof import("node:path");
+    // Node 22: process.getBuiltinModule — bundler'a takilmaz, edge'de yoksa fallback.
+    const getMod = (process as unknown as {
+      getBuiltinModule?: (id: string) => unknown;
+    }).getBuiltinModule;
+    if (!getMod) return DICTIONARIES[locale] as Dictionary;
+    const fs = getMod("node:fs") as typeof import("node:fs");
+    const path = getMod("node:path") as typeof import("node:path");
     const raw = fs.readFileSync(
       path.join(process.cwd(), "public", "i18n", `dict.${locale}.json`),
       "utf8"
