@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { SITE_URL, articleSchema, breadcrumbSchema, faqPageSchema } from "@/lib/schema";
 import { FOUNDER } from "@/data/founder";
-import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
+import { generateHreflang, ogImageUrl, canonicalFor } from "@/lib/hreflang";
 import { ARTICLES, type BlogArticle, type BlogArticleMeta } from "@/data/blog";
 import { BlogArticleContent } from "./BlogArticleContent";
 
@@ -43,7 +43,7 @@ export async function generateMetadata({
     title,
     description: article.metaDescription,
     alternates: {
-      canonical: `${SITE_URL}${path}`,
+      canonical: canonicalFor(path, params.locale),
       languages: generateHreflang(path),
     },
     openGraph: {

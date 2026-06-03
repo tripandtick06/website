@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { SITE_URL } from "@/lib/schema";
-import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
+import { generateHreflang, ogImageUrl, canonicalFor } from "@/lib/hreflang";
 import { DICTIONARIES, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { ImpressumContent } from "./ImpressumContent";
 
@@ -17,7 +17,7 @@ export async function generateMetadata({
     title: d.meta_title,
     description: d.meta_desc,
     alternates: {
-      canonical: `${SITE_URL}/impressum`,
+      canonical: canonicalFor("/impressum", params.locale),
       languages: generateHreflang("/impressum"),
     },
     openGraph: {

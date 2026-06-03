@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { DICTIONARIES, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { SITE_URL, itemListSchema, faqPageSchema } from "@/lib/schema";
-import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
+import { generateHreflang, ogImageUrl, canonicalFor } from "@/lib/hreflang";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { TRANSFERS } from "@/data/services/catalog";
 import { tServiceList } from "@/lib/i18n/localizeData";
@@ -21,7 +21,7 @@ export async function generateMetadata({
     title: d.meta_title,
     description: d.meta_desc,
     alternates: {
-      canonical: `${SITE_URL}/transferler`,
+      canonical: canonicalFor("/transferler", params.locale),
       languages: generateHreflang("/transferler"),
     },
     openGraph: {

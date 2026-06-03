@@ -10,7 +10,7 @@ import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { HOTELS } from "@/data/services/catalog";
 import { breadcrumbSchema, lodgingSchema, SITE_URL } from "@/lib/schema";
-import { generateHreflang } from "@/lib/hreflang";
+import { generateHreflang, canonicalFor } from "@/lib/hreflang";
 import { OtelDetayContent } from "./OtelDetayContent";
 
 export const runtime = "edge";
@@ -30,7 +30,7 @@ export function generateMetadata({ params }: PageParams): Metadata {
   return {
     title: `${hotel.name} — Bilgi & İletişim | Trip and Tick`,
     description: hotel.shortDescription,
-    alternates: { canonical: `${SITE_URL}${path}`, languages: generateHreflang(path) },
+    alternates: { canonical: canonicalFor(path, params.locale), languages: generateHreflang(path) },
     openGraph: {
       title: hotel.name,
       description: hotel.shortDescription,

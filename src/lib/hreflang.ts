@@ -65,6 +65,22 @@ export function generateHreflang(
 }
 
 /**
+ * Build a self-referencing canonical URL for a TR-canonical path + locale.
+ * Default locale (tr) is unprefixed; other locales get a `/locale` prefix.
+ * The path's first segment is localized via SEGMENT_MAP.
+ *   tr  + "/balonlar"  -> https://site/balonlar
+ *   nl  + "/balonlar"  -> https://site/nl/ballonvaarten
+ *   tr  + "/"          -> https://site
+ *   nl  + "/"          -> https://site/nl
+ */
+export function canonicalFor(path: string, locale: string): string {
+  const norm = path.startsWith("/") ? path : `/${path}`;
+  const lp = localizePath(norm, locale);
+  const tail = lp === "/" ? "" : lp;
+  return locale === DEFAULT_LOCALE ? `${SITE_URL}${tail}` : `${SITE_URL}/${locale}${tail}`;
+}
+
+/**
  * Build dynamic OG image URL for `/api/og` endpoint.
  */
 export function ogImageUrl(title: string, subtitle?: string): string {
