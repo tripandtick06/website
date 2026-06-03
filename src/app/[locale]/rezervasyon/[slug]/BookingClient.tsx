@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useT } from "@/lib/i18n/I18nProvider";
+import { useUiText } from "@/lib/i18n/uiText";
 import { tNodes } from "@/lib/i18n/trans";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useLocale } from "next-intl";
@@ -76,6 +77,7 @@ export interface BookingService {
   warnings: string[];
   highlights: string[];
   image: string | null;
+  priceUnit?: "couple";
 }
 
 // NATIONALITIES ve STEP_LABELS module-level'dan kaldırıldı; t'ye erişim gerektirdiğinden
@@ -110,6 +112,8 @@ function makeEmptyPassenger(): BookingPassenger {
 
 export function BookingClient({ service }: { service: BookingService }) {
   const t = useT();
+  const ui = useUiText();
+  const isCouplePriced = service.priceUnit === "couple";
   const router = useRouter();
   const searchParams = useSearchParams();
   const locale = useLocale();
@@ -662,7 +666,7 @@ export function BookingClient({ service }: { service: BookingService }) {
                 </div>
               )}
               <div className="flex justify-between">
-                <span className="text-slate-600">{t.component.booking.booking_client.sidebar_adult}</span>
+                <span className="text-slate-600">{isCouplePriced ? ui.serviceCard.perCouple : t.component.booking.booking_client.sidebar_adult}</span>
                 <span>{adults} × {formatPrice(effectiveAdultPrice, service.currency)}</span>
               </div>
               {children > 0 && (
@@ -1111,6 +1115,7 @@ function Step4Summary(props: {
   onNext: () => void;
 }) {
   const t = useT();
+  const ui = useUiText();
   const {
     service, date, adults, childPax, insurance, setInsurance,
     promoCode, setPromoCode, applyPromo, promoStatus, couponMessage, couponApplying,
@@ -1121,6 +1126,7 @@ function Step4Summary(props: {
   } = props;
 
   const paxCount = adults + childPax;
+  const isCouplePriced = service.priceUnit === "couple";
 
   return (
     <div>
@@ -1172,7 +1178,7 @@ function Step4Summary(props: {
         <div className="border-2 border-amber-200 bg-amber-50 rounded-lg p-4">
           <h3 className="font-bold text-slate-900 mb-3">{t.component.booking.booking_client.step4_price_breakdown_title}</h3>
           <div className="space-y-1 text-sm">
-            <div className="flex justify-between"><span>{t.component.booking.booking_client.step4_adults_row.replace("{count}", String(adults))}</span><span>{formatPrice(adultsLine, service.currency)}</span></div>
+            <div className="flex justify-between"><span>{isCouplePriced ? ui.serviceCard.perCouple : t.component.booking.booking_client.step4_adults_row.replace("{count}", String(adults))}</span><span>{formatPrice(adultsLine, service.currency)}</span></div>
             {childPax > 0 && <div className="flex justify-between"><span>{t.component.booking.booking_client.step4_children_row.replace("{count}", String(childPax))}</span><span>{formatPrice(childrenLine, service.currency)}</span></div>}
             {insurance && <div className="flex justify-between"><span>{t.component.booking.booking_client.step4_insurance_row.replace("{count}", String(paxCount))}</span><span>{formatPrice(insuranceTotal, service.currency)}</span></div>}
             {discountAmount > 0 && <div className="flex justify-between text-emerald-700"><span>{t.component.booking.booking_client.sidebar_discount}</span><span>−{formatPrice(discountAmount, service.currency)}</span></div>}

@@ -49,6 +49,7 @@ function findService(slug: string): BookingService | null {
       warnings: [],
       highlights: other.highlights,
       image: null,
+      priceUnit: other.priceUnit,
     };
   }
 

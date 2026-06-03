@@ -222,8 +222,8 @@
       ]
     },
     "hamam-standart": {
-      "name": "Turks Bad Standaard",
-      "shortDescription": "Traditioneel Turks bad van 90 minuten — warme ruimte, peeling, schuimmassage, sauna, jacuzzi, thee/koffie. Inclusief hoteltransfer.",
+      "name": "Turks Hammam Standaard",
+      "shortDescription": "Traditioneel Turks hammam van 90 minuten — warme ruimte, peeling, schuimmassage, sauna, jacuzzi, thee/koffie. Inclusief hoteltransfer.",
       "includes": [
         "Hamam (warme ruimte)",
         "Peeling (loofah)",
@@ -240,7 +240,7 @@
       ]
     },
     "hamam-deluxe": {
-      "name": "Turks Bad Deluxe + Massage",
+      "name": "Turks Hammam Deluxe + Massage",
       "shortDescription": "Hamampakket + 30 minuten Zweedse oliemassage + volledig lichaamsmasker. Premium spabeleving, inclusief transfer.",
       "badge": "Premium",
       "includes": [
