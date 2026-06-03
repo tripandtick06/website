@@ -22,23 +22,23 @@ describe("generateHreflang", () => {
     expect(a).toEqual(b);
   });
 
-  it("prefixes each href with `/locale`", () => {
+  it("default locale (tr) is unprefixed, others get `/locale`", () => {
     const out = generateHreflang("/balonlar");
-    expect(out["tr-TR"]).toBe("https://tripandtick.com/tr/balonlar");
+    expect(out["tr-TR"]).toBe("https://tripandtick.com/balonlar");
     expect(out.en).toBe("https://tripandtick.com/en/balonlar");
     expect(out["zh-Hans"]).toBe("https://tripandtick.com/zh/balonlar");
   });
 
   it("handles root path without double slash", () => {
     const out = generateHreflang("/");
-    expect(out["tr-TR"]).toBe("https://tripandtick.com/tr");
+    expect(out["tr-TR"]).toBe("https://tripandtick.com");
     expect(out.en).toBe("https://tripandtick.com/en");
-    expect(out["x-default"]).toBe("https://tripandtick.com/tr");
+    expect(out["x-default"]).toBe("https://tripandtick.com");
   });
 
-  it("x-default falls back to /tr", () => {
+  it("x-default falls back to unprefixed tr", () => {
     const out = generateHreflang("/oteller");
-    expect(out["x-default"]).toBe("https://tripandtick.com/tr/oteller");
+    expect(out["x-default"]).toBe("https://tripandtick.com/oteller");
   });
 });
 

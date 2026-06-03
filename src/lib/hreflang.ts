@@ -49,8 +49,9 @@ const HREFLANG_LOCALES: { locale: string; tag: string }[] = [
 
 /**
  * Build hreflang `alternates.languages` map for a given path.
- * Returns real `/tr/path`, `/en/path`, etc URLs for all 9 locales.
- * x-default points to /tr (default locale).
+ * Default locale (tr) is UNPREFIXED (its canonical lives at the bare path),
+ * other locales get a `/locale` prefix. x-default points to the unprefixed
+ * tr URL too. Mirrors canonicalFor() so hreflang never 307-redirects.
  */
 export function generateHreflang(
   path: string
@@ -58,9 +59,9 @@ export function generateHreflang(
   const normalized = path.startsWith("/") ? path : `/${path}`;
   const result: Record<string, string> = {};
   for (const { locale, tag } of HREFLANG_LOCALES) {
-    result[tag] = `${SITE_URL}/${locale}${localizePath(normalized, locale)}`;
+    result[tag] = canonicalFor(normalized, locale);
   }
-  result["x-default"] = `${SITE_URL}/${DEFAULT_LOCALE}${localizePath(normalized, DEFAULT_LOCALE)}`;
+  result["x-default"] = canonicalFor(normalized, DEFAULT_LOCALE);
   return result;
 }
 
