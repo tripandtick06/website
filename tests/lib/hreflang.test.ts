@@ -22,11 +22,20 @@ describe("generateHreflang", () => {
     expect(a).toEqual(b);
   });
 
-  it("default locale (tr) is unprefixed, others get `/locale`", () => {
+  it("default locale (tr) is unprefixed, others get `/locale` with localized slug", () => {
     const out = generateHreflang("/balonlar");
     expect(out["tr-TR"]).toBe("https://tripandtick.com/balonlar");
-    expect(out.en).toBe("https://tripandtick.com/en/balonlar");
-    expect(out["zh-Hans"]).toBe("https://tripandtick.com/zh/balonlar");
+    expect(out.en).toBe("https://tripandtick.com/en/balloon-tours");
+    expect(out.de).toBe("https://tripandtick.com/de/heissluftballonfahrten");
+    expect(out["zh-Hans"]).toBe("https://tripandtick.com/zh/balloon-tours");
+    expect(out["x-default"]).toBe("https://tripandtick.com/balonlar");
+  });
+
+  it("localizes known TR slugs to per-locale equivalents", () => {
+    const out = generateHreflang("/oteller");
+    expect(out.en).toBe("https://tripandtick.com/en/hotels");
+    expect(out.es).toBe("https://tripandtick.com/es/hoteles");
+    expect(out.nl).toBe("https://tripandtick.com/nl/hotels");
   });
 
   it("handles root path without double slash", () => {
