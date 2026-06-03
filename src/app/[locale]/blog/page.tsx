@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SITE_URL } from "@/lib/schema";
 import { generateHreflang, ogImageUrl, canonicalFor, ogLocale } from "@/lib/hreflang";
 import { ARTICLES, type BlogArticleMeta } from "@/data/blog";
+import { serverDict } from "@/lib/i18n/serverDict";
 import { BlogContent } from "./BlogContent";
 
 // CF Pages edge runtime. Liste metadata manifest'ten (icerik statik asset).
@@ -16,11 +17,11 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
-  const { DICTIONARIES, isLocale, DEFAULT_LOCALE } = await import(
+  const { isLocale, DEFAULT_LOCALE } = await import(
     "@/lib/i18n/dictionaries"
   );
   const loc = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
-  const d = DICTIONARIES[loc].page.blog;
+  const d = serverDict(loc).page.blog;
   return {
     title: d.meta_title,
     description: d.meta_desc,

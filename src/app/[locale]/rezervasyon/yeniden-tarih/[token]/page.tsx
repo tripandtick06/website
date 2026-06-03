@@ -8,7 +8,8 @@ import { notFound } from "next/navigation";
 import { verifyRescheduleToken } from "@/lib/reschedule-token";
 import { getBookingById } from "@/lib/db/bookings";
 import { listOverrides } from "@/lib/db/service-overrides";
-import { DICTIONARIES, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
+import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
+import { serverDict } from "@/lib/i18n/serverDict";
 import { YenidenTarihClient } from "./YenidenTarihClient";
 
 export const runtime = "edge";
@@ -19,7 +20,7 @@ export async function generateMetadata({
   params: { locale: string; token: string };
 }): Promise<Metadata> {
   const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
-  const d = DICTIONARIES[loc].page.rezervasyon.yeniden_tarih.token;
+  const d = serverDict(loc).page.rezervasyon.yeniden_tarih.token;
   return {
     title: d.meta_title,
     description: d.meta_desc,
@@ -59,7 +60,7 @@ export default async function YenidenTarihPage({
   params: { locale: string; token: string };
 }) {
   const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
-  const d = DICTIONARIES[loc].page.rezervasyon.yeniden_tarih.token;
+  const d = serverDict(loc).page.rezervasyon.yeniden_tarih.token;
 
   const verify = await verifyRescheduleToken(params.token);
   if (!verify.valid || !verify.payload) {

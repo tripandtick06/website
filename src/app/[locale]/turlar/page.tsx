@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { breadcrumbSchema, itemListSchema, faqPageSchema } from "@/lib/schema";
 import { generateHreflang, ogImageUrl, canonicalFor, ogLocale } from "@/lib/hreflang";
-import { DICTIONARIES, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
+import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
+import { serverDict } from "@/lib/i18n/serverDict";
 import { TOURS } from "@/data/services/catalog";
 import { getPageFaqs } from "@/data/i18n/pageFaqs";
 import { TurlarContent } from "./TurlarContent";
@@ -11,7 +12,7 @@ export const runtime = "edge";
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
-  const d = DICTIONARIES[loc].page.turlar;
+  const d = serverDict(loc).page.turlar;
   return {
     title: d.meta_title,
     description: d.meta_desc,
@@ -54,7 +55,7 @@ export default function TurlarPage({
   return (
     <>
       <TurlarContent />
-      <JsonLd data={breadcrumbSchema([{ name: DICTIONARIES[loc].nav.tours, href: canonicalFor("/turlar", loc) }])} />
+      <JsonLd data={breadcrumbSchema([{ name: serverDict(loc).nav.tours, href: canonicalFor("/turlar", loc) }])} />
       <JsonLd data={itemList} />
       <JsonLd data={faqPageSchema(getPageFaqs("tours", loc))} />
     </>

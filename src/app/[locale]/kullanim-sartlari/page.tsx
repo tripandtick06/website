@@ -2,14 +2,15 @@ import type { Metadata } from "next";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { breadcrumbSchema, SITE_URL } from "@/lib/schema";
 import { generateHreflang, ogImageUrl, canonicalFor } from "@/lib/hreflang";
-import { DICTIONARIES, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
+import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
+import { serverDict } from "@/lib/i18n/serverDict";
 import { KullanimSartlariContent } from "./KullanimSartlariContent";
 
 export const runtime = "edge";
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
-  const d = DICTIONARIES[loc].page.kullanim_sartlari;
+  const d = serverDict(loc).page.kullanim_sartlari;
 
   return {
     title: d.meta_title,

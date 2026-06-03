@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { breadcrumbSchema, faqPageSchema } from "@/lib/schema";
 import { generateHreflang, ogImageUrl, canonicalFor, ogLocale } from "@/lib/hreflang";
-import { DICTIONARIES, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
+import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
+import { serverDict } from "@/lib/i18n/serverDict";
 import { tFaq } from "@/lib/i18n/localizeData";
 import { SssContent } from "./SssContent";
 
@@ -10,7 +11,7 @@ export const runtime = "edge";
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
-  const d = DICTIONARIES[loc].page.sss;
+  const d = serverDict(loc).page.sss;
 
   return {
     title: d.meta_title,
@@ -48,7 +49,7 @@ export default function Page({ params }: { params: { locale: string } }) {
       <SssContent />
       <JsonLd
         data={[
-          breadcrumbSchema([{ name: DICTIONARIES[loc].nav.faq, href: canonicalFor("/sss", loc) }]),
+          breadcrumbSchema([{ name: serverDict(loc).nav.faq, href: canonicalFor("/sss", loc) }]),
           faqPageSchema(
             faqItems.map((f) => ({ question: f.question, answer: f.answer }))
           ),

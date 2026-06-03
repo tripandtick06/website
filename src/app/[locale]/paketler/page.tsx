@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { breadcrumbSchema, itemListSchema, faqPageSchema } from "@/lib/schema";
 import { generateHreflang, ogImageUrl, canonicalFor, ogLocale } from "@/lib/hreflang";
-import { DICTIONARIES, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
+import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
+import { serverDict } from "@/lib/i18n/serverDict";
 import { PACKAGES } from "@/data/services/catalog";
 import { tServiceList } from "@/lib/i18n/localizeData";
 import { getPageFaqs } from "@/data/i18n/pageFaqs";
@@ -12,7 +13,7 @@ export const runtime = "edge";
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
-  const d = DICTIONARIES[loc].page.paketler;
+  const d = serverDict(loc).page.paketler;
   return {
     title: d.meta_title,
     description: d.meta_desc,
@@ -55,7 +56,7 @@ export default function PaketlerPage({
   return (
     <>
       <PaketlerContent />
-      <JsonLd data={breadcrumbSchema([{ name: DICTIONARIES[loc].nav.packages, href: canonicalFor("/paketler", loc) }])} />
+      <JsonLd data={breadcrumbSchema([{ name: serverDict(loc).nav.packages, href: canonicalFor("/paketler", loc) }])} />
       <JsonLd data={itemList} />
       <JsonLd data={faqPageSchema(getPageFaqs("packages", loc))} />
     </>

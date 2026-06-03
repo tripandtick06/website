@@ -3,7 +3,8 @@ import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import { BALLOON_PACKAGES, getBalloonPackageBySlug } from "@/data/services/balloons";
 import { ACTIVITIES, TOURS, HOTELS, PACKAGES, TRANSFERS, type ServiceItem } from "@/data/services/catalog";
-import { DICTIONARIES, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
+import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
+import { serverDict } from "@/lib/i18n/serverDict";
 import { tBalloon, tService } from "@/lib/i18n/localizeData";
 import { BookingClient, type BookingService } from "./BookingClient";
 
@@ -62,7 +63,7 @@ function findService(slug: string, locale: Locale): BookingService | null {
 
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
-  const d = DICTIONARIES[loc].page.rezervasyon.slug;
+  const d = serverDict(loc).page.rezervasyon.slug;
   const service = findService(params.slug, loc);
   if (!service) {
     return { title: d.meta_title_not_found };
@@ -84,7 +85,7 @@ export function generateStaticParams() {
 
 export default function RezervasyonSlugPage({ params }: { params: Params }) {
   const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
-  const d = DICTIONARIES[loc].page.rezervasyon.slug;
+  const d = serverDict(loc).page.rezervasyon.slug;
   const service = findService(params.slug, loc);
   if (!service) notFound();
   return (

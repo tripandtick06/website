@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { DICTIONARIES, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
+import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
+import { serverDict } from "@/lib/i18n/serverDict";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
 import { generateHreflang, ogImageUrl, canonicalFor, ogLocale } from "@/lib/hreflang";
@@ -13,7 +14,7 @@ export async function generateMetadata({
   params: { locale: string };
 }): Promise<Metadata> {
   const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
-  const d = DICTIONARIES[loc].page.iletisim;
+  const d = serverDict(loc).page.iletisim;
   return {
     title: d.meta_title,
     description: d.meta_desc,
@@ -51,7 +52,7 @@ export default function Page({
   return (
     <>
       <IletisimContent />
-      <JsonLd data={breadcrumbSchema([{ name: DICTIONARIES[loc].nav.contact, href: canonicalFor("/iletisim", loc) }])} />
+      <JsonLd data={breadcrumbSchema([{ name: serverDict(loc).nav.contact, href: canonicalFor("/iletisim", loc) }])} />
     </>
   );
 }

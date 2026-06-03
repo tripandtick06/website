@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { DICTIONARIES, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
+import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
+import { serverDict } from "@/lib/i18n/serverDict";
 import { itemListSchema, faqPageSchema } from "@/lib/schema";
 import { generateHreflang, ogImageUrl, canonicalFor, ogLocale } from "@/lib/hreflang";
 import { JsonLd } from "@/components/layout/JsonLd";
@@ -16,7 +17,7 @@ export async function generateMetadata({
   params: { locale: string };
 }): Promise<Metadata> {
   const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
-  const d = DICTIONARIES[loc].page.transferler;
+  const d = serverDict(loc).page.transferler;
   return {
     title: d.meta_title,
     description: d.meta_desc,

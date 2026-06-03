@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { breadcrumbSchema, itemListSchema, faqPageSchema } from "@/lib/schema";
 import { generateHreflang, ogImageUrl, canonicalFor } from "@/lib/hreflang";
-import { DICTIONARIES, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
+import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
+import { serverDict } from "@/lib/i18n/serverDict";
 import { ACTIVITIES } from "@/data/services/catalog";
 import { tServiceList } from "@/lib/i18n/localizeData";
 import { getPageFaqs } from "@/data/i18n/pageFaqs";
@@ -12,7 +13,7 @@ export const runtime = "edge";
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
-  const d = DICTIONARIES[loc].page.aktiviteler;
+  const d = serverDict(loc).page.aktiviteler;
   return {
     title: d.meta_title,
     description: d.meta_desc,
@@ -54,7 +55,7 @@ export default function AktivitelerPage({
   return (
     <>
       <AktivitelerContent />
-      <JsonLd data={breadcrumbSchema([{ name: DICTIONARIES[loc].nav.activities, href: canonicalFor("/aktiviteler", loc) }])} />
+      <JsonLd data={breadcrumbSchema([{ name: serverDict(loc).nav.activities, href: canonicalFor("/aktiviteler", loc) }])} />
       <JsonLd data={itemList} />
       <JsonLd data={faqPageSchema(getPageFaqs("activities", loc))} />
     </>

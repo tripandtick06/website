@@ -7,11 +7,11 @@ import {
 } from "@/lib/schema";
 import { generateHreflang, ogImageUrl, canonicalFor, ogLocale } from "@/lib/hreflang";
 import {
-  DICTIONARIES,
   isLocale,
   DEFAULT_LOCALE,
   type Locale,
 } from "@/lib/i18n/dictionaries";
+import { serverDict } from "@/lib/i18n/serverDict";
 import { tBalloons, tFaq } from "@/lib/i18n/localizeData";
 import { BalonlarContent } from "./BalonlarContent";
 
@@ -23,7 +23,7 @@ export async function generateMetadata({
   params: { locale: string };
 }): Promise<Metadata> {
   const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
-  const d = DICTIONARIES[loc].page.balonlar;
+  const d = serverDict(loc).page.balonlar;
   return {
     title: d.meta_title,
     description: d.meta_desc,
@@ -62,7 +62,7 @@ export default function BalonlarPage({
       <BalonlarContent />
       <JsonLd
         data={[
-          breadcrumbSchema([{ name: DICTIONARIES[loc].nav.balloons, href: canonicalFor("/balonlar", loc) }]),
+          breadcrumbSchema([{ name: serverDict(loc).nav.balloons, href: canonicalFor("/balonlar", loc) }]),
           itemListSchema(
             tBalloons(loc).map((pkg) => ({
               name: pkg.name,

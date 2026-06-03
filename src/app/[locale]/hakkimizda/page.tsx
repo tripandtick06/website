@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { breadcrumbSchema, personSchema } from "@/lib/schema";
 import { generateHreflang, ogImageUrl, canonicalFor, ogLocale } from "@/lib/hreflang";
-import { DICTIONARIES, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
+import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
+import { serverDict } from "@/lib/i18n/serverDict";
 import { FOUNDER } from "@/data/founder";
 import { HakkimizdaContent } from "./HakkimizdaContent";
 
@@ -14,7 +15,7 @@ export async function generateMetadata({
   params: { locale: string };
 }): Promise<Metadata> {
   const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
-  const d = DICTIONARIES[loc].page.hakkimizda;
+  const d = serverDict(loc).page.hakkimizda;
   return {
     title: d.meta_title,
     description: d.meta_desc,
@@ -54,7 +55,7 @@ export default function HakkimizdaPage({
       <HakkimizdaContent />
       <JsonLd
         data={[
-          breadcrumbSchema([{ name: DICTIONARIES[loc].nav.about, href: canonicalFor("/hakkimizda", loc) }]),
+          breadcrumbSchema([{ name: serverDict(loc).nav.about, href: canonicalFor("/hakkimizda", loc) }]),
           personSchema(FOUNDER),
         ]}
       />

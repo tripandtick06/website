@@ -5,7 +5,8 @@ import path from "node:path";
 import { SITE_URL, articleSchema, breadcrumbSchema, faqPageSchema } from "@/lib/schema";
 import { FOUNDER } from "@/data/founder";
 import { ogImageUrl, canonicalFor, ogLocale } from "@/lib/hreflang";
-import { DICTIONARIES, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
+import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
+import { serverDict } from "@/lib/i18n/serverDict";
 import { ARTICLES, type BlogArticle, type BlogArticleMeta } from "@/data/blog";
 import { BlogArticleContent } from "./BlogArticleContent";
 
@@ -163,7 +164,7 @@ export default async function BlogArticlePage({
   });
 
   const breadcrumbLd = breadcrumbSchema([
-    { name: DICTIONARIES[loc].nav.blog, href: canonicalFor("/blog", loc) },
+    { name: serverDict(loc).nav.blog, href: canonicalFor("/blog", loc) },
     { name: article.title, href: articleUrl },
   ]);
 

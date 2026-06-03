@@ -11,7 +11,8 @@ import { JsonLd } from "@/components/layout/JsonLd";
 import { HOTELS } from "@/data/services/catalog";
 import { breadcrumbSchema, lodgingSchema } from "@/lib/schema";
 import { generateHreflang, canonicalFor, ogLocale } from "@/lib/hreflang";
-import { DICTIONARIES, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
+import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
+import { serverDict } from "@/lib/i18n/serverDict";
 import { OtelDetayContent } from "./OtelDetayContent";
 
 export const runtime = "edge";
@@ -61,7 +62,7 @@ export default function HotelDetailPage({ params }: PageParams) {
       <JsonLd
         data={[
           breadcrumbSchema([
-            { name: DICTIONARIES[loc].nav.hotels, href: canonicalFor("/oteller", loc) },
+            { name: serverDict(loc).nav.hotels, href: canonicalFor("/oteller", loc) },
             { name: hotel.name, href: detailUrl },
           ]),
           lodgingSchema({

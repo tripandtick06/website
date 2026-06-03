@@ -7,7 +7,8 @@ import { JsonLd } from "@/components/layout/JsonLd";
 import { BALLOON_PACKAGES, getBalloonPackageBySlug } from "@/data/services/balloons";
 import { OPERATORS } from "@/data/services/operators";
 import { REVIEWS } from "@/data/reviews";
-import { DICTIONARIES, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
+import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
+import { serverDict } from "@/lib/i18n/serverDict";
 import { tFaq } from "@/lib/i18n/localizeData";
 import { formatPrice } from "@/lib/utils";
 import {
@@ -87,7 +88,7 @@ export default function BalonDetayPage({ params }: PageParams) {
       <JsonLd
         data={[
           breadcrumbSchema([
-            { name: DICTIONARIES[loc].nav.balloons, href: canonicalFor("/balonlar", loc) },
+            { name: serverDict(loc).nav.balloons, href: canonicalFor("/balonlar", loc) },
             { name: pkg.name, href: detailUrl },
           ]),
           touristTripSchema({

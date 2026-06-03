@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { canonicalFor, generateHreflang, ogImageUrl, ogLocale } from "@/lib/hreflang";
 import {
-  DICTIONARIES,
   isLocale,
   DEFAULT_LOCALE,
 } from "@/lib/i18n/dictionaries";
+import { serverDict } from "@/lib/i18n/serverDict";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { websiteSchema } from "@/lib/schema";
 import { HeroSection } from "@/components/sections/HeroSection";
@@ -26,7 +26,7 @@ export async function generateMetadata({
   params: { locale: string };
 }): Promise<Metadata> {
   const loc = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
-  const home = DICTIONARIES[loc].page.home;
+  const home = serverDict(loc).page.home;
   const title = home.meta_title;
   const description = home.meta_desc;
   const url = canonicalFor("/", loc);
