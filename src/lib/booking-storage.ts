@@ -8,6 +8,7 @@ export interface BookingPassenger {
   email: string;
   phone: string;
   nationality: string;
+  passport?: string;
   age?: number;
   accommodation?: string;
 }

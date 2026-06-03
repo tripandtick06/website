@@ -90,6 +90,7 @@ const passengerSchema = z.object({
   email: z.string().email("passenger_error_email"),
   phone: z.string().min(7, "passenger_error_phone"),
   nationality: z.string().min(2),
+  passport: z.string().optional(),
   age: z.number().int().min(0).max(120).optional(),
   accommodation: z.string().optional(),
 });
@@ -106,6 +107,7 @@ function makeEmptyPassenger(): BookingPassenger {
     email: "",
     phone: "",
     nationality: "TR",
+    passport: "",
     age: undefined,
     accommodation: "",
   };
@@ -289,14 +291,26 @@ export function BookingClient({ service }: { service: BookingService }) {
   function validatePassengers(): boolean {
     const errs: Record<number, Record<string, string>> = {};
     let ok = true;
+    const bc = t.component.booking.booking_client;
     passengers.forEach((p, i) => {
+      const fieldErrs: Record<string, string> = {};
       const res = passengerSchema.safeParse(p);
       if (!res.success) {
-        ok = false;
-        const fieldErrs: Record<string, string> = {};
         res.error.errors.forEach((e) => {
           if (e.path[0]) fieldErrs[String(e.path[0])] = e.message;
         });
+      }
+      // Lider yolcu (rezervasyon sahibi): pasaport + otel adi zorunlu (sahte kart/dogrulama).
+      if (i === 0) {
+        if (!p.passport || p.passport.trim().length < 4) {
+          fieldErrs.passport = bc.passenger_error_passport;
+        }
+        if (!p.accommodation || !p.accommodation.trim()) {
+          fieldErrs.accommodation = bc.passenger_error_accommodation;
+        }
+      }
+      if (Object.keys(fieldErrs).length > 0) {
+        ok = false;
         errs[i] = fieldErrs;
       }
     });
@@ -438,6 +452,7 @@ export function BookingClient({ service }: { service: BookingService }) {
             email: p.email,
             phone: p.phone || "",
             nationality: p.nationality || "TR",
+            passport: p.passport,
             age: p.age,
             accommodation: p.accommodation,
           })),
@@ -1049,8 +1064,9 @@ function Step3Passengers(props: {
                 <Field label={t.component.booking.booking_client.field_nationality} value={pax.nationality} onChange={(v) => onUpdate(i, "nationality", v)} as="select" options={NATIONALITIES_LOCAL} />
                 <Field label={t.component.booking.booking_client.field_email} type="email" value={pax.email} onChange={(v) => onUpdate(i, "email", v)} error={errs.email} />
                 <Field label={t.component.booking.booking_client.field_phone} type="tel" placeholder={phonePlaceholder} value={pax.phone} onChange={(v) => onUpdate(i, "phone", v)} error={errs.phone} />
+                <Field label={t.component.booking.booking_client.field_passport} value={pax.passport ?? ""} onChange={(v) => onUpdate(i, "passport", v)} error={errs.passport} />
                 <Field label={t.component.booking.booking_client.field_age} type="number" value={pax.age?.toString() ?? ""} onChange={(v) => onUpdate(i, "age", v ? Number(v) : 0)} />
-                <Field label={t.component.booking.booking_client.field_accommodation} value={pax.accommodation ?? ""} onChange={(v) => onUpdate(i, "accommodation", v)} placeholder={t.component.booking.booking_client.field_accommodation_placeholder} />
+                <Field label={t.component.booking.booking_client.field_accommodation} value={pax.accommodation ?? ""} onChange={(v) => onUpdate(i, "accommodation", v)} placeholder={t.component.booking.booking_client.field_accommodation_placeholder} error={errs.accommodation} />
               </div>
             </div>
           );

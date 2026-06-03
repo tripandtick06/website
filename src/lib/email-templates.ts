@@ -7,6 +7,8 @@ export interface BookingEmailPassenger {
   email: string;
   phone: string;
   nationality?: string;
+  passport?: string;
+  accommodation?: string;
 }
 
 export interface BookingEmailPayload {
@@ -85,7 +87,7 @@ export function customerBookingEmailHtml(b: BookingEmailPayload): string {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rezervasyon Onayı — ${escapeHtml(b.bookingId)}</title>
+<title>Rezervasyon Talebiniz Alındı — ${escapeHtml(b.bookingId)}</title>
 </head>
 <body style="margin:0;padding:0;background:${BRAND_BG};font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#1f2937;">
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${BRAND_BG};padding:32px 16px;">
@@ -101,12 +103,12 @@ export function customerBookingEmailHtml(b: BookingEmailPayload): string {
 
         <!-- Hero -->
         <tr><td style="padding:32px 32px 16px 32px;">
-          <div style="display:inline-block;background:#d1fae5;color:#065f46;padding:6px 12px;border-radius:999px;font-size:12px;font-weight:600;margin-bottom:12px;">
-            ✓ Rezervasyon Alındı
+          <div style="display:inline-block;background:#fef3c7;color:#92400e;padding:6px 12px;border-radius:999px;font-size:12px;font-weight:600;margin-bottom:12px;">
+            ⏳ Talebiniz Alındı — Onay Bekleniyor
           </div>
           <h1 style="margin:0 0 8px 0;font-size:24px;line-height:1.3;color:${BRAND_PRIMARY};">Merhaba ${escapeHtml(b.customerName)},</h1>
           <p style="margin:0;font-size:15px;line-height:1.6;color:#475569;">
-            Rezervasyonunuz başarıyla oluşturuldu. Detaylar aşağıda — sorularınız için bu e-postayı yanıtlayabilirsiniz.
+            Rezervasyon talebiniz başarıyla alındı. Ekibimiz talebinizi inceleyip onayladıktan sonra size ayrı bir onay e-postası göndereceğiz. Detaylar aşağıda — sorularınız için bu e-postayı yanıtlayabilirsiniz.
           </p>
         </td></tr>
 
@@ -230,12 +232,12 @@ export function customerBookingEmailText(b: BookingEmailPayload): string {
   const paxCount = b.adults + b.children;
   const paxLabel = b.children > 0 ? `${b.adults} yetişkin, ${b.children} çocuk` : `${b.adults} yetişkin`;
   const lines = [
-    `Trip and Tick — Rezervasyon Onayı`,
+    `Trip and Tick — Rezervasyon Talebiniz Alındı`,
     `==================================`,
     ``,
     `Merhaba ${b.customerName},`,
     ``,
-    `Rezervasyonunuz başarıyla oluşturuldu.`,
+    `Rezervasyon talebiniz başarıyla alındı. Ekibimiz onayladıktan sonra ayrı bir onay e-postası göndereceğiz.`,
     ``,
     `REZERVASYON KODU: ${b.bookingId}`,
     ``,
@@ -283,6 +285,8 @@ export function adminBookingEmailHtml(b: BookingEmailPayload): string {
         <td style="padding:6px 8px;border-bottom:1px solid #e2e8f0;color:#475569;">${escapeHtml(p.email)}</td>
         <td style="padding:6px 8px;border-bottom:1px solid #e2e8f0;color:#475569;">${escapeHtml(p.phone)}</td>
         <td style="padding:6px 8px;border-bottom:1px solid #e2e8f0;color:#64748b;">${escapeHtml(p.nationality ?? "—")}</td>
+        <td style="padding:6px 8px;border-bottom:1px solid #e2e8f0;color:#0f172a;font-weight:600;">${escapeHtml(p.passport ?? "—")}</td>
+        <td style="padding:6px 8px;border-bottom:1px solid #e2e8f0;color:#64748b;">${escapeHtml(p.accommodation ?? "—")}</td>
       </tr>`)
     .join("");
 
@@ -332,6 +336,8 @@ export function adminBookingEmailHtml(b: BookingEmailPayload): string {
                 <th style="padding:6px 8px;text-align:left;font-weight:600;color:#475569;border-bottom:1px solid #cbd5e1;">E-posta</th>
                 <th style="padding:6px 8px;text-align:left;font-weight:600;color:#475569;border-bottom:1px solid #cbd5e1;">Telefon</th>
                 <th style="padding:6px 8px;text-align:left;font-weight:600;color:#475569;border-bottom:1px solid #cbd5e1;">Uyruk</th>
+                <th style="padding:6px 8px;text-align:left;font-weight:600;color:#475569;border-bottom:1px solid #cbd5e1;">Pasaport</th>
+                <th style="padding:6px 8px;text-align:left;font-weight:600;color:#475569;border-bottom:1px solid #cbd5e1;">Otel</th>
               </tr>
             </thead>
             <tbody>${passengerRows}</tbody>
@@ -374,7 +380,7 @@ export function adminBookingEmailText(b: BookingEmailPayload): string {
   const paxCount = b.adults + b.children;
   const paxLabel = b.children > 0 ? `${b.adults} yetişkin, ${b.children} çocuk` : `${b.adults} yetişkin`;
   const paxList = (b.passengers ?? [])
-    .map((p, i) => `  ${i + 1}. ${p.fullName} — ${p.email} — ${p.phone}${p.nationality ? ` (${p.nationality})` : ""}`)
+    .map((p, i) => `  ${i + 1}. ${p.fullName} — ${p.email} — ${p.phone}${p.nationality ? ` (${p.nationality})` : ""}${p.passport ? ` — Pasaport: ${p.passport}` : ""}${p.accommodation ? ` — Otel: ${p.accommodation}` : ""}`)
     .join("\n");
 
   const lines = [

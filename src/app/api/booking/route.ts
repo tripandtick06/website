@@ -19,6 +19,7 @@ const passengerSchema = z.object({
   email: z.string().email(),
   phone: z.string().min(7),
   nationality: z.string().min(2),
+  passport: z.string().optional(),
   age: z.number().int().min(0).max(120).optional(),
   accommodation: z.string().optional(),
 });
@@ -186,6 +187,8 @@ export async function POST(req: NextRequest) {
         email: p.email,
         phone: p.phone,
         nationality: p.nationality,
+        passport: p.passport,
+        accommodation: p.accommodation,
       })),
       insurance: parsed.data.insurance ?? false,
       specialRequests: parsed.data.specialRequests,
@@ -194,7 +197,7 @@ export async function POST(req: NextRequest) {
 
     const customerSend = sendBrevoEmail({
       to: { email: leadPax.email, name: leadPax.fullName },
-      subject: `Rezervasyonunuz Onaylandı — ${bookingId}`,
+      subject: `Rezervasyon Talebiniz Alındı — ${bookingId}`,
       htmlContent: customerBookingEmailHtml(emailPayload),
       textContent: customerBookingEmailText(emailPayload),
       replyTo: { email: ADMIN_EMAIL, name: "Trip and Tick" },
