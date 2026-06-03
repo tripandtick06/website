@@ -55,7 +55,7 @@ export function BalonlarContent() {
                   {pkg.images[0] ? (
                     <NextImage
                       src={pkg.images[0]}
-                      alt={`${pkg.name} — Kapadokya sıcak hava balon turu, ${pkg.duration}, ${pkg.capacity.max} kişilik sepet`}
+                      alt={pkg.name}
                       fill
                       sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-cover"

@@ -2,17 +2,18 @@
 
 import { ListFilter, CalendarCheck, PenLine, CreditCard, MailCheck } from "lucide-react";
 import { useT } from "@/lib/i18n/I18nProvider";
-
-const STEPS = [
-  { num: 1, icon: ListFilter, title: "Hizmeti Seç", desc: "Balon, tur, aktivite veya paket — ihtiyacınıza göre filtreleyin." },
-  { num: 2, icon: CalendarCheck, title: "Tarih & Kişi", desc: "Tarihinizi seçin, anlık müsaitliği görün, kişi sayısını belirleyin." },
-  { num: 3, icon: PenLine, title: "Bilgileri Girin", desc: "Yolcu bilgilerini doldurun, seyahat sigortası ekleyin." },
-  { num: 4, icon: CreditCard, title: "Güvenli Öde", desc: "Visa, Mastercard, 3D Secure ile EUR veya TRY ödeme." },
-  { num: 5, icon: MailCheck, title: "Bilet E-postanızda", desc: "PDF biletiniz anında e-postanıza gelir. Hazırsınız!" },
-];
+import { useUiText } from "@/lib/i18n/uiText";
 
 export function StepsSection() {
   const t = useT();
+  const ui = useUiText();
+  const STEPS = [
+    { num: 1, icon: ListFilter, title: ui.steps.s1t, desc: ui.steps.s1d },
+    { num: 2, icon: CalendarCheck, title: ui.steps.s2t, desc: ui.steps.s2d },
+    { num: 3, icon: PenLine, title: ui.steps.s3t, desc: ui.steps.s3d },
+    { num: 4, icon: CreditCard, title: ui.steps.s4t, desc: ui.steps.s4d },
+    { num: 5, icon: MailCheck, title: ui.steps.s5t, desc: ui.steps.s5d },
+  ];
   return (
     <section className="section-padding bg-white">
       <div className="container-main">
@@ -41,9 +42,7 @@ export function StepsSection() {
 
         {/* Oteller contact-only — adimlar balon/tur Stripe akisini anlatir; otel farkli. */}
         <p className="mx-auto mt-10 max-w-2xl text-center text-sm text-slate-500">
-          <b className="text-slate-700">Oteller için</b> online ödeme yerine uzman ekibimiz size özel
-          fiyat ve müsaitlik hazırlar — otel kartından &ldquo;Fiyat teklifi al&rdquo; deyin, 24 saat
-          içinde dönelim.
+          {ui.steps.hotelNote}
         </p>
       </div>
     </section>

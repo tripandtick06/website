@@ -15,15 +15,17 @@ import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { ReviewScore } from "@/components/ui/ReviewScore";
 import { AmenityChips } from "@/components/ui/AmenityChips";
+import { useUiText } from "@/lib/i18n/uiText";
 import type { ServiceItem } from "@/data/services/catalog";
 
-const TIER: Record<string, { label: string; variant: "success" | "booking" | "accent" }> = {
-  budget: { label: "Ekonomik", variant: "success" },
-  mid: { label: "Orta segment", variant: "booking" },
-  lux: { label: "Lüks / Premium", variant: "accent" },
+const TIER: Record<string, { tierKey: "budget" | "mid" | "lux"; variant: "success" | "booking" | "accent" }> = {
+  budget: { tierKey: "budget", variant: "success" },
+  mid: { tierKey: "mid", variant: "booking" },
+  lux: { tierKey: "lux", variant: "accent" },
 };
 
 export function HotelCard({ item }: { item: ServiceItem }) {
+  const ui = useUiText();
   const tier = item.tier ? TIER[item.tier] : undefined;
   const amenities = item.amenities ?? item.includes;
   const href = { pathname: "/oteller/[slug]" as const, params: { slug: item.slug } };
@@ -46,7 +48,7 @@ export function HotelCard({ item }: { item: ServiceItem }) {
         )}
         {tier && (
           <span className="absolute left-3 top-3 z-10">
-            <Badge variant={tier.variant} size="sm" className="shadow-sm">{tier.label}</Badge>
+            <Badge variant={tier.variant} size="sm" className="shadow-sm">{ui.tier[tier.tierKey]}</Badge>
           </span>
         )}
       </Link>
@@ -76,12 +78,12 @@ export function HotelCard({ item }: { item: ServiceItem }) {
 
         <div className="mt-4 flex items-end justify-between gap-3 border-t border-slate-100 pt-3">
           <div>
-            <div className="text-sm font-bold text-primary">Size özel fiyat</div>
-            <div className="text-[11px] text-slate-500">Uzman ekip teklif hazırlar</div>
+            <div className="text-sm font-bold text-primary">{ui.hotelCard.customPrice}</div>
+            <div className="text-[11px] text-slate-500">{ui.hotelCard.expertTeam}</div>
           </div>
           <Button asChild variant="accent" size="sm">
             <Link href={href}>
-              Fiyat teklifi al
+              {ui.hotelCard.quoteCta}
               <ChevronRight className="h-4 w-4" aria-hidden />
             </Link>
           </Button>

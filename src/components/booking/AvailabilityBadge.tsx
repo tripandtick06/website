@@ -15,6 +15,7 @@
 import { CheckCircle2, AlertTriangle, XCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useT } from "@/lib/i18n/I18nProvider";
+import { useUiText } from "@/lib/i18n/uiText";
 import type { AvailabilityStatus } from "@/data/availability";
 
 export interface AvailabilityBadgeProps {
@@ -31,6 +32,7 @@ export function AvailabilityBadge({
   size = "md",
 }: AvailabilityBadgeProps) {
   const t = useT();
+  const ui = useUiText();
   const sizeCls =
     size === "sm" ? "text-xs px-2 py-0.5 gap-1" : "text-sm px-3 py-1 gap-1.5";
   const iconCls = size === "sm" ? "w-3 h-3" : "w-4 h-4";
@@ -61,8 +63,8 @@ export function AvailabilityBadge({
       >
         <AlertTriangle className={iconCls} />
         {remainingSlots !== undefined
-          ? `Son ${remainingSlots} koltuk`
-          : "Az kaldı"}
+          ? ui.availability.lastSeats.replace("{n}", String(remainingSlots))
+          : ui.availability.limited}
       </span>
     );
   }
@@ -76,7 +78,7 @@ export function AvailabilityBadge({
       )}
     >
       <XCircle className={iconCls} />
-      Dolu
+      {ui.availability.soldOut}
     </span>
   );
 }
