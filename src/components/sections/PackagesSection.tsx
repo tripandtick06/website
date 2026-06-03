@@ -200,7 +200,7 @@ export function PackagesSection() {
             unit={ps.unit_kisi_basi}
             gradient="bg-gradient-to-br from-[#1A6B2B] to-[#4BBE6A]"
             icon={<Zap className="w-24 h-24 text-white" />}
-            photo="/images/packages/macera-paketi.jpg"
+            photo="/images/activities/atv-sunset.jpg"
           />
         </div>
 
