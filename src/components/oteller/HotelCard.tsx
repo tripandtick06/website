@@ -24,7 +24,7 @@ const TIER: Record<string, { tierKey: "budget" | "mid" | "lux"; variant: "succes
   lux: { tierKey: "lux", variant: "accent" },
 };
 
-export function HotelCard({ item }: { item: ServiceItem }) {
+export function HotelCard({ item, priority = false }: { item: ServiceItem; priority?: boolean }) {
   const ui = useUiText();
   const tier = item.tier ? TIER[item.tier] : undefined;
   const amenities = item.amenities ?? item.includes;
@@ -40,6 +40,8 @@ export function HotelCard({ item }: { item: ServiceItem }) {
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className="object-cover transition-transform duration-300 ease-out-strong group-hover:scale-[1.04]"
+            priority={priority}
+            loading={priority ? undefined : "lazy"}
           />
         ) : (
           <div className="flex h-full items-center justify-center bg-gradient-to-br from-primary to-primary-light">

@@ -7,7 +7,7 @@ import { JsonLd } from "@/components/layout/JsonLd";
 import { BALLOON_PACKAGES, getBalloonPackageBySlug } from "@/data/services/balloons";
 import { OPERATORS } from "@/data/services/operators";
 import { REVIEWS } from "@/data/reviews";
-import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
+import { DICTIONARIES, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { tFaq } from "@/lib/i18n/localizeData";
 import { formatPrice } from "@/lib/utils";
 import {
@@ -15,7 +15,6 @@ import {
   touristTripSchema,
   faqPageSchema,
   productSchema,
-  SITE_URL,
 } from "@/lib/schema";
 import { generateHreflang, ogImageUrl, canonicalFor } from "@/lib/hreflang";
 import { BalonDetayContent } from "./BalonDetayContent";
@@ -31,11 +30,14 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: PageParams): Metadata {
   const pkg = getBalloonPackageBySlug(params.slug);
   if (!pkg) return { title: "Paket Bulunamadı" };
+  const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
   const path = `/balonlar/${pkg.slug}`;
   const priceLabel = pkg.priceOnRequest ? "Özel Fiyat" : formatPrice(pkg.adultPrice, pkg.currency);
-  const ogTitle = `${pkg.name} — ${priceLabel}`;
+  // Geo modifier: TR uses "Kapadokya", others use "Cappadocia" (universally searched).
+  const geo = loc === "tr" ? "Kapadokya" : "Cappadocia";
+  const ogTitle = `${pkg.name} — ${geo} ${priceLabel}`;
   return {
-    title: `${pkg.name} — ${priceLabel} | Trip and Tick`,
+    title: `${pkg.name} — ${geo} ${priceLabel} | Trip and Tick`,
     description: pkg.shortDescription,
     alternates: {
       canonical: canonicalFor(path, params.locale),
@@ -44,7 +46,7 @@ export function generateMetadata({ params }: PageParams): Metadata {
     openGraph: {
       title: pkg.name,
       description: pkg.shortDescription,
-      url: `${SITE_URL}${path}`,
+      url: canonicalFor(path, params.locale),
       type: "website",
       images: [
         {
@@ -63,6 +65,7 @@ export default function BalonDetayPage({ params }: PageParams) {
   if (!pkg) notFound();
 
   const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
+  const detailUrl = canonicalFor(`/balonlar/${pkg.slug}`, loc);
   const operators = OPERATORS.filter((op) => pkg.operatorIds.includes(op.id));
   const balonFaqs = tFaq(loc).filter((f) => f.category === "balon");
   const balonReviews = REVIEWS.filter(
@@ -83,8 +86,8 @@ export default function BalonDetayPage({ params }: PageParams) {
       <JsonLd
         data={[
           breadcrumbSchema([
-            { name: "Balon Turları", href: "/balonlar" },
-            { name: pkg.name, href: `/balonlar/${pkg.slug}` },
+            { name: DICTIONARIES[loc].nav.balloons, href: canonicalFor("/balonlar", loc) },
+            { name: pkg.name, href: detailUrl },
           ]),
           touristTripSchema({
             slug: pkg.slug,
@@ -95,6 +98,7 @@ export default function BalonDetayPage({ params }: PageParams) {
             currency: pkg.currency,
             rating: pkg.rating,
             reviewCount: pkg.reviewCount,
+            urlPath: detailUrl,
             priceOnRequest: pkg.priceOnRequest,
           }),
           productSchema({
@@ -107,6 +111,7 @@ export default function BalonDetayPage({ params }: PageParams) {
             rating: pkg.rating,
             reviewCount: pkg.reviewCount,
             category: "Kapadokya Balon Turu",
+            urlPath: detailUrl,
             reviews: balonReviews,
             priceOnRequest: pkg.priceOnRequest,
           }),

@@ -9,8 +9,9 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { HOTELS } from "@/data/services/catalog";
-import { breadcrumbSchema, lodgingSchema, SITE_URL } from "@/lib/schema";
+import { breadcrumbSchema, lodgingSchema } from "@/lib/schema";
 import { generateHreflang, canonicalFor } from "@/lib/hreflang";
+import { DICTIONARIES, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { OtelDetayContent } from "./OtelDetayContent";
 
 export const runtime = "edge";
@@ -26,15 +27,20 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: PageParams): Metadata {
   const hotel = HOTELS.find((h) => h.slug === params.slug);
   if (!hotel) return { title: "Otel Bulunamadı" };
+  const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
   const path = `/oteller/${hotel.slug}`;
+  const geo = loc === "tr" ? "Kapadokya" : "Cappadocia";
+  // Enriched description: geo context + CTA, capped <155 chars.
+  const cta = loc === "tr" ? "Bilgi & rezervasyon için bize ulaşın." : "Contact us for info & booking.";
+  const enrichedDesc = `${hotel.name} — ${geo}. ${hotel.shortDescription} ${cta}`.slice(0, 154);
   return {
-    title: `${hotel.name} — Bilgi & İletişim | Trip and Tick`,
-    description: hotel.shortDescription,
+    title: `${hotel.name} — ${geo} | Trip and Tick`,
+    description: enrichedDesc,
     alternates: { canonical: canonicalFor(path, params.locale), languages: generateHreflang(path) },
     openGraph: {
       title: hotel.name,
-      description: hotel.shortDescription,
-      url: `${SITE_URL}${path}`,
+      description: enrichedDesc,
+      url: canonicalFor(path, params.locale),
       type: "website",
     },
   };
@@ -44,6 +50,8 @@ export default function HotelDetailPage({ params }: PageParams) {
   const hotel = HOTELS.find((h) => h.slug === params.slug);
   if (!hotel) notFound();
 
+  const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
+  const detailUrl = canonicalFor(`/oteller/${hotel.slug}`, loc);
   const amenities = hotel.amenities ?? hotel.includes;
 
   return (
@@ -52,8 +60,8 @@ export default function HotelDetailPage({ params }: PageParams) {
       <JsonLd
         data={[
           breadcrumbSchema([
-            { name: "Oteller", href: "/oteller" },
-            { name: hotel.name, href: `/oteller/${hotel.slug}` },
+            { name: DICTIONARIES[loc].nav.hotels, href: canonicalFor("/oteller", loc) },
+            { name: hotel.name, href: detailUrl },
           ]),
           lodgingSchema({
             slug: hotel.slug,
@@ -63,6 +71,7 @@ export default function HotelDetailPage({ params }: PageParams) {
             reviewCount: hotel.reviewCount,
             region: hotel.region,
             amenities,
+            urlPath: detailUrl,
             priceRange:
               hotel.tier === "lux"
                 ? "€€€"

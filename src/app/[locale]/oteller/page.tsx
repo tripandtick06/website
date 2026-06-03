@@ -1,6 +1,5 @@
 ﻿import type { Metadata } from "next";
 import { DICTIONARIES, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
-import { SITE_URL } from "@/lib/schema";
 import { generateHreflang, ogImageUrl, canonicalFor } from "@/lib/hreflang";
 import { OtellerContent } from "./OtellerContent";
 
@@ -23,7 +22,7 @@ export async function generateMetadata({
     openGraph: {
       title: d.meta_title_2,
       description: d.meta_desc_2,
-      url: `${SITE_URL}/oteller`,
+      url: canonicalFor("/oteller", params.locale),
       type: "website",
       images: [
         {

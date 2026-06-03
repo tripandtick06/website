@@ -37,6 +37,19 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+// OpenGraph locale tags (Facebook-style underscore format) per app locale.
+const OG_LOCALE: Record<Locale, string> = {
+  tr: "tr_TR",
+  en: "en_US",
+  de: "de_DE",
+  fr: "fr_FR",
+  es: "es_ES",
+  nl: "nl_NL",
+  zh: "zh_CN",
+  hi: "hi_IN",
+  ur: "ur_PK",
+};
+
 export async function generateMetadata({
   params,
 }: {
@@ -65,8 +78,8 @@ export async function generateMetadata({
   },
   openGraph: {
     type: "website",
-    locale: "tr_TR",
-    url: SITE_URL,
+    locale: OG_LOCALE[typedLocale],
+    url: canonicalFor("/", typedLocale),
     siteName: "Trip and Tick",
     title: "Trip and Tick — Kapadokya'nın En İyi Deneyimleri",
     description: "En düşük fiyat garantisi ile balon turu, otel, transfer ve aktiviteler.",
@@ -79,10 +92,10 @@ export async function generateMetadata({
       },
     ],
   },
+  // Twitter title/description intentionally omitted here so per-page
+  // generateMetadata controls them; card + default image stay as fallback.
   twitter: {
     card: "summary_large_image",
-    title: "Trip and Tick — Kapadokya Balon Turu",
-    description: "En düşük fiyat garantisi ile balon turu, otel, transfer ve aktiviteler.",
     images: [DEFAULT_OG_IMAGE],
   },
   robots: { index: true, follow: true },

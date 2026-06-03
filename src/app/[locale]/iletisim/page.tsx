@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { DICTIONARIES, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { JsonLd } from "@/components/layout/JsonLd";
-import { breadcrumbSchema, SITE_URL } from "@/lib/schema";
+import { breadcrumbSchema } from "@/lib/schema";
 import { generateHreflang, ogImageUrl, canonicalFor } from "@/lib/hreflang";
 import { IletisimContent } from "./IletisimContent";
 
@@ -24,7 +24,7 @@ export async function generateMetadata({
     openGraph: {
       title: d.meta_title_2,
       description: d.meta_desc_2,
-      url: `${SITE_URL}/iletisim`,
+      url: canonicalFor("/iletisim", params.locale),
       type: "website",
       images: [
         {
@@ -41,11 +41,16 @@ export async function generateMetadata({
   };
 }
 
-export default function Page() {
+export default function Page({
+  params,
+}: {
+  params: { locale: string };
+}) {
+  const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
   return (
     <>
       <IletisimContent />
-      <JsonLd data={breadcrumbSchema([{ name: "İletişim", href: "/iletisim" }])} />
+      <JsonLd data={breadcrumbSchema([{ name: DICTIONARIES[loc].nav.contact, href: canonicalFor("/iletisim", loc) }])} />
     </>
   );
 }

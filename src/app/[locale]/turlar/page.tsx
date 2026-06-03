@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/layout/JsonLd";
-import { breadcrumbSchema, itemListSchema, faqPageSchema, SITE_URL } from "@/lib/schema";
+import { breadcrumbSchema, itemListSchema, faqPageSchema } from "@/lib/schema";
 import { generateHreflang, ogImageUrl, canonicalFor } from "@/lib/hreflang";
 import { DICTIONARIES, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { TOURS } from "@/data/services/catalog";
@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
     openGraph: {
       title: d.meta_title_2,
       description: d.meta_desc_2,
-      url: `${SITE_URL}/turlar`,
+      url: canonicalFor("/turlar", params.locale),
       type: "website",
       images: [
         {
@@ -46,14 +46,14 @@ export default function TurlarPage({
 }) {
   const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
   const itemList = itemListSchema(
-    TOURS.map((t) => ({ name: t.name, urlPath: `/rezervasyon/${t.slug}` })),
+    TOURS.map((t) => ({ name: t.name, urlPath: canonicalFor(`/rezervasyon/${t.slug}`, loc) })),
     "Kapadokya Gezi Turları"
   );
 
   return (
     <>
       <TurlarContent />
-      <JsonLd data={breadcrumbSchema([{ name: "Gezi Turları", href: "/turlar" }])} />
+      <JsonLd data={breadcrumbSchema([{ name: DICTIONARIES[loc].nav.tours, href: canonicalFor("/turlar", loc) }])} />
       <JsonLd data={itemList} />
       <JsonLd data={faqPageSchema(getPageFaqs("tours", loc))} />
     </>

@@ -34,7 +34,7 @@ export async function generateMetadata({
     openGraph: {
       title: d.meta_title_2,
       description: d.meta_desc_2,
-      url: `${SITE_URL}/blog`,
+      url: canonicalFor("/blog", params.locale),
       type: "website",
       images: [
         {

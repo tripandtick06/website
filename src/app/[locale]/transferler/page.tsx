@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { DICTIONARIES, isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
-import { SITE_URL, itemListSchema, faqPageSchema } from "@/lib/schema";
+import { itemListSchema, faqPageSchema } from "@/lib/schema";
 import { generateHreflang, ogImageUrl, canonicalFor } from "@/lib/hreflang";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { TRANSFERS } from "@/data/services/catalog";
@@ -27,7 +27,7 @@ export async function generateMetadata({
     openGraph: {
       title: d.meta_title_2,
       description: d.meta_desc_2,
-      url: `${SITE_URL}/transferler`,
+      url: canonicalFor("/transferler", params.locale),
       type: "website",
       images: [
         {
@@ -48,7 +48,7 @@ export default function Page({
 }) {
   const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
   const itemList = itemListSchema(
-    tServiceList(TRANSFERS, loc).map((t) => ({ name: t.name, urlPath: `/rezervasyon/${t.slug}` })),
+    tServiceList(TRANSFERS, loc).map((t) => ({ name: t.name, urlPath: canonicalFor(`/rezervasyon/${t.slug}`, loc) })),
     "Kapadokya Havalimanı Transferleri"
   );
 
