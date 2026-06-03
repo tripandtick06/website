@@ -436,7 +436,7 @@ export function BookingClient({ service }: { service: BookingService }) {
           passengers: pax.map((p) => ({
             fullName: p.fullName || t.component.booking.booking_client.passenger_default_name,
             email: p.email,
-            phone: p.phone || "+90",
+            phone: p.phone || "",
             nationality: p.nationality || "TR",
             age: p.age,
             accommodation: p.accommodation,
@@ -1010,7 +1010,10 @@ function Step3Passengers(props: {
   onNext: () => void;
 }) {
   const t = useT();
+  const locale = useLocale();
   const { passengers, errors, onUpdate, onBack, onNext, adults } = props;
+  // Telefon ipucu: +90 sadece TR; diger diller uluslararasi generic (TR varsaymaz).
+  const phonePlaceholder = locale === "tr" ? "+90 5xx 000 00 00" : "+__ ___ ___ ____";
 
   const NATIONALITIES_LOCAL = [
     { code: "TR", label: "Türkiye" },
@@ -1045,7 +1048,7 @@ function Step3Passengers(props: {
                 <Field label={t.component.booking.booking_client.field_full_name} value={pax.fullName} onChange={(v) => onUpdate(i, "fullName", v)} error={errs.fullName} />
                 <Field label={t.component.booking.booking_client.field_nationality} value={pax.nationality} onChange={(v) => onUpdate(i, "nationality", v)} as="select" options={NATIONALITIES_LOCAL} />
                 <Field label={t.component.booking.booking_client.field_email} type="email" value={pax.email} onChange={(v) => onUpdate(i, "email", v)} error={errs.email} />
-                <Field label={t.component.booking.booking_client.field_phone} type="tel" placeholder="+90 5xx ..." value={pax.phone} onChange={(v) => onUpdate(i, "phone", v)} error={errs.phone} />
+                <Field label={t.component.booking.booking_client.field_phone} type="tel" placeholder={phonePlaceholder} value={pax.phone} onChange={(v) => onUpdate(i, "phone", v)} error={errs.phone} />
                 <Field label={t.component.booking.booking_client.field_age} type="number" value={pax.age?.toString() ?? ""} onChange={(v) => onUpdate(i, "age", v ? Number(v) : 0)} />
                 <Field label={t.component.booking.booking_client.field_accommodation} value={pax.accommodation ?? ""} onChange={(v) => onUpdate(i, "accommodation", v)} placeholder={t.component.booking.booking_client.field_accommodation_placeholder} />
               </div>

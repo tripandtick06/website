@@ -2,12 +2,15 @@
 
 import { useState, FormEvent } from "react";
 import { Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
-import { useT } from "@/lib/i18n/I18nProvider";
+import { useT, useLocale } from "@/lib/i18n/I18nProvider";
 
 type Status = "idle" | "loading" | "success" | "error";
 
 export function ContactForm() {
   const t = useT();
+  const { locale } = useLocale();
+  // Telefon ipucu: +90 sadece TR; diger diller uluslararasi generic.
+  const phonePlaceholder = locale === "tr" ? "+90 5XX XXX XX XX" : "+__ ___ ___ ____";
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
 
@@ -69,7 +72,7 @@ export function ContactForm() {
           <label htmlFor="phone" className="block text-sm font-semibold text-slate-700 mb-1.5">
             {t.component.iletisim.contact_form.label_phone}
           </label>
-          <input id="phone" name="phone" type="tel" className="input-field" placeholder="+90 5XX XXX XX XX" />
+          <input id="phone" name="phone" type="tel" className="input-field" placeholder={phonePlaceholder} />
         </div>
         <div>
           <label htmlFor="subject" className="block text-sm font-semibold text-slate-700 mb-1.5">

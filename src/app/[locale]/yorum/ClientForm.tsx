@@ -14,7 +14,7 @@ import { Star, Loader2, CheckCircle2, AlertTriangle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { BALLOON_PACKAGES } from "@/data/services/balloons";
 import { ACTIVITIES, TOURS } from "@/data/services/catalog";
-import { useT } from "@/lib/i18n/I18nProvider";
+import { useT, useLocale } from "@/lib/i18n/I18nProvider";
 import { tNodes } from "@/lib/i18n/trans";
 
 interface ServiceOption {
@@ -36,6 +36,9 @@ type Status = "idle" | "submitting" | "success" | "error";
 
 export function ClientForm() {
   const t = useT();
+  const { locale } = useLocale();
+  // Telefon ipucu: +90 sadece TR; diger diller uluslararasi generic.
+  const phonePlaceholder = locale === "tr" ? "+90 5xx 000 00 00" : "+__ ___ ___ ____";
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -190,7 +193,7 @@ export function ClientForm() {
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
             className={inputCls}
-            placeholder="+90 5xx ..."
+            placeholder={phonePlaceholder}
           />
         </FormField>
         <FormField label={t.component.yorum.review_form.label_language}>

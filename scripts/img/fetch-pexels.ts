@@ -38,9 +38,11 @@ function queryFor(slug: string, category: string): string {
   }
   if (category === "balloon") return `hot air balloon ${base} sunrise`;
   if (category === "transfer") {
-    if (s.includes("minibus")) return "passenger minibus van road";
-    if (s.includes("vip") || s.includes("arac")) return "black VIP van airport transfer";
-    return "airport transfer car road Turkey";
+    // Tum transferler Mercedes Sprinter (kullanici talebi). Slug bazli varyasyon -> farkli foto.
+    if (s.includes("minibus")) return "Mercedes Sprinter passenger van group";
+    if (s.includes("vip") || s.includes("arac")) return "Mercedes Sprinter black luxury van";
+    if (s.includes("kayseri")) return "Mercedes Sprinter airport shuttle van";
+    return "Mercedes Sprinter van airport transfer";
   }
   if (category === "tour") {
     if (s.includes("kirmizi")) return `${base} Goreme open air museum rock church`;

@@ -11,7 +11,7 @@
 
 import { useState, type FormEvent } from "react";
 import { CheckCircle2, AlertCircle, Send } from "lucide-react";
-import { useT } from "@/lib/i18n/I18nProvider";
+import { useT, useLocale } from "@/lib/i18n/I18nProvider";
 
 const COUNTRIES = [
   "Türkiye",
@@ -45,6 +45,9 @@ const COUNTRIES = [
 
 export function B2BApplyForm() {
   const t = useT();
+  const { locale } = useLocale();
+  // Telefon ipucu: +90 sadece TR; diger diller uluslararasi generic.
+  const phonePlaceholder = locale === "tr" ? "+90 ..." : "+__ ...";
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -164,7 +167,7 @@ export function B2BApplyForm() {
             type="tel"
             required
             maxLength={40}
-            placeholder="+90 ..."
+            placeholder={phonePlaceholder}
             className="w-full px-3 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
           />
         </div>
