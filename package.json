@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "node scripts/indexnow-postbuild.cjs",
+    "postbuild": "npx tsx scripts/indexnow-postbuild.ts",
     "start": "next start",
     "psi": "node scripts/psi-audit.cjs",
     "validate:hreflang": "node scripts/validate-hreflang.cjs",
