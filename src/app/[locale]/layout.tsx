@@ -110,7 +110,7 @@ export async function generateMetadata({
   robots: { index: true, follow: true },
   verification: {
     google: process.env.NEXT_PUBLIC_GSC_VERIFICATION || undefined,
-    yandex: process.env.NEXT_PUBLIC_YANDEX_VERIFICATION || undefined,
+    yandex: process.env.NEXT_PUBLIC_YANDEX_VERIFICATION || "4e0712c04a695041",
     other: {
       "msvalidate.01":
         process.env.NEXT_PUBLIC_BING_VERIFICATION ||
