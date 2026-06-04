@@ -22,6 +22,14 @@ import { formatPrice } from "@/lib/utils";
 
 type NavKey = "activities" | "tours" | "packages";
 
+// "Hakkında" bolum basligi — 17 locale (yeni diller dict'te EN-alias oldugu icin
+// kucuk inline map, dict plumbing'e gerek yok).
+const ABOUT_LABEL: Record<Locale, string> = {
+  tr: "Hakkında", en: "About", de: "Über", fr: "À propos de", es: "Acerca de",
+  nl: "Over", zh: "关于", hi: "परिचय", ur: "تعارف", pt: "Sobre", "pt-BR": "Sobre",
+  ja: "概要", ko: "소개", it: "Descrizione", ru: "Описание", uk: "Опис", az: "Haqqında",
+};
+
 export interface ServiceDetailConfig {
   items: ServiceItem[];
   /** TR-canonical listing path, orn "/aktiviteler". */
@@ -90,7 +98,7 @@ export function makeServiceDetailPage(cfg: ServiceDetailConfig) {
       : cfg.navLabel?.(loc) ?? "";
     const detailUrl = canonicalFor(`${cfg.categoryPath}/${item.slug}`, loc);
     const longDescription = getLongDescription(item.slug, loc);
-    const aboutLabel = loc === "tr" ? "Hakkında" : "About";
+    const aboutLabel = ABOUT_LABEL[loc] ?? "About";
 
     return (
       <>

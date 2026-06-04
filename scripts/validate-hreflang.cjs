@@ -16,7 +16,11 @@
 
 "use strict";
 
-const EXPECTED_LOCALES = ["tr-TR", "en", "de", "fr", "es", "nl", "zh-Hans", "hi", "ur", "x-default"];
+// 17 locale (src/lib/hreflang.ts HREFLANG_LOCALES ile senkron) + x-default.
+const EXPECTED_LOCALES = [
+  "tr-TR", "en", "de", "fr", "es", "nl", "zh-Hans", "hi", "ur",
+  "pt-PT", "pt-BR", "ja", "ko", "it", "ru", "uk", "az", "x-default",
+];
 
 const SITE =
   process.env.SITE ||
@@ -62,7 +66,8 @@ function pathOf(url) {
 }
 
 function stripLocale(pathname) {
-  return pathname.replace(/^\/(tr|en|de|fr|es|nl|zh|hi|ur)(\/|$)/, "/");
+  // pt-BR, pt'den ONCE (regex alternation sirasi onemli).
+  return pathname.replace(/^\/(tr|en|de|fr|es|nl|zh|hi|ur|pt-BR|pt|ja|ko|it|ru|uk|az)(\/|$)/, "/");
 }
 
 function validate(urls) {
@@ -122,7 +127,7 @@ function validate(urls) {
 
   const problems = validate(urls);
   if (problems.length === 0) {
-    log("ok", `All ${urls.size} URLs have complete 9-locale + x-default hreflang and reciprocal links.`);
+    log("ok", `All ${urls.size} URLs have complete 17-locale + x-default hreflang and reciprocal links.`);
     process.exit(0);
   }
 

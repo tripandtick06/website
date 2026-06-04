@@ -4,8 +4,33 @@
 // gosterilir (karisik dil olmaz) — locale yoksa detay sayfasi shortDescription'a duser.
 
 import type { Locale } from "@/lib/i18n/dictionaries";
+// tr+en asagida inline (source of truth). Diger 15 locale ceviri pipeline ciktisi
+// (scripts/i18n/translate-descriptions.ts -> descriptions.<locale>.json). data.*.json
+// gibi server-side static import; kucuk (~20KB/dil) — Worker 3 MiB limiti asilmaz.
+import deDesc from "@/data/i18n/descriptions.de.json";
+import frDesc from "@/data/i18n/descriptions.fr.json";
+import esDesc from "@/data/i18n/descriptions.es.json";
+import nlDesc from "@/data/i18n/descriptions.nl.json";
+import zhDesc from "@/data/i18n/descriptions.zh.json";
+import hiDesc from "@/data/i18n/descriptions.hi.json";
+import urDesc from "@/data/i18n/descriptions.ur.json";
+import ptDesc from "@/data/i18n/descriptions.pt.json";
+import ptBRDesc from "@/data/i18n/descriptions.pt-BR.json";
+import jaDesc from "@/data/i18n/descriptions.ja.json";
+import koDesc from "@/data/i18n/descriptions.ko.json";
+import itDesc from "@/data/i18n/descriptions.it.json";
+import ruDesc from "@/data/i18n/descriptions.ru.json";
+import ukDesc from "@/data/i18n/descriptions.uk.json";
+import azDesc from "@/data/i18n/descriptions.az.json";
 
 type LocalizedText = Partial<Record<Locale, string>>;
+
+// slug -> metin (her dosya). Inline tr/en'de olmayan locale'ler buradan gelir.
+const EXTERNAL: Partial<Record<Locale, Record<string, string>>> = {
+  de: deDesc, fr: frDesc, es: esDesc, nl: nlDesc, zh: zhDesc, hi: hiDesc, ur: urDesc,
+  pt: ptDesc, "pt-BR": ptBRDesc, ja: jaDesc, ko: koDesc, it: itDesc,
+  ru: ruDesc, uk: ukDesc, az: azDesc,
+};
 
 export const SERVICE_DESCRIPTIONS: Record<string, LocalizedText> = {
   // ---------- ACTIVITIES — ATV ----------
@@ -155,5 +180,7 @@ export function getLongDescription(
   slug: string,
   locale: Locale
 ): string | undefined {
-  return SERVICE_DESCRIPTIONS[slug]?.[locale];
+  // Once inline (tr/en source of truth), yoksa per-locale ceviri JSON. Tam locale
+  // eslesmesi yoksa undefined -> sayfa shortDescription'a duser (karisik dil olmaz).
+  return SERVICE_DESCRIPTIONS[slug]?.[locale] ?? EXTERNAL[locale]?.[slug];
 }
