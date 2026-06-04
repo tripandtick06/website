@@ -1,0 +1,121 @@
+// Aktivite/tur/paket/transfer detay route factory — 4 kategori ayni mantigi paylasir.
+// Her route page.tsx ilgili ServiceItem dizisi + kategori config'ini verir;
+// generateStaticParams / generateMetadata / Page geri doner.
+
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { JsonLd } from "@/components/layout/JsonLd";
+import { ServiceDetailContent } from "@/components/layout/ServiceDetailContent";
+import type { ServiceItem } from "@/data/services/catalog";
+import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
+import { serverDict } from "@/lib/i18n/serverDict";
+import { tService } from "@/lib/i18n/localizeData";
+import { breadcrumbSchema, productSchema } from "@/lib/schema";
+import {
+  generateHreflang,
+  ogImageUrl,
+  canonicalFor,
+  ogLocale,
+} from "@/lib/hreflang";
+import { formatPrice } from "@/lib/utils";
+
+type NavKey = "activities" | "tours" | "packages";
+
+export interface ServiceDetailConfig {
+  items: ServiceItem[];
+  /** TR-canonical listing path, orn "/aktiviteler". */
+  categoryPath: string;
+  /** serverDict().nav anahtari (etiket icin). */
+  navKey: NavKey;
+}
+
+type RouteParams = { params: { locale: string; slug: string } };
+
+export function makeServiceDetailPage(cfg: ServiceDetailConfig) {
+  const find = (slug: string): ServiceItem | undefined =>
+    cfg.items.find((s) => s.slug === slug);
+
+  function generateStaticParams() {
+    return cfg.items.map((s) => ({ slug: s.slug }));
+  }
+
+  function generateMetadata({ params }: RouteParams): Metadata {
+    const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
+    const raw = find(params.slug);
+    if (!raw) return { title: "Bulunamadı | Trip and Tick" };
+    const item = tService(raw, loc);
+    const path = `${cfg.categoryPath}/${item.slug}`;
+    const geo = loc === "tr" ? "Kapadokya" : "Cappadocia";
+    const priceLabel = item.priceOnRequest
+      ? loc === "tr"
+        ? "Özel Fiyat"
+        : "Custom Price"
+      : formatPrice(item.adultPrice, item.currency);
+    const ogTitle = `${item.name} — ${geo} ${priceLabel}`;
+    return {
+      title: `${ogTitle} | Trip and Tick`,
+      description: item.shortDescription,
+      alternates: {
+        canonical: canonicalFor(path, loc),
+        languages: generateHreflang(path),
+      },
+      openGraph: {
+        locale: ogLocale(loc),
+        title: item.name,
+        description: item.shortDescription,
+        url: canonicalFor(path, loc),
+        type: "website",
+        images: [
+          {
+            url: ogImageUrl(ogTitle, item.shortDescription),
+            width: 1200,
+            height: 630,
+            alt: item.name,
+          },
+        ],
+      },
+    };
+  }
+
+  function Page({ params }: RouteParams) {
+    const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
+    const raw = find(params.slug);
+    if (!raw) notFound();
+    const item = tService(raw, loc);
+    const navLabel = serverDict(loc).nav[cfg.navKey];
+    const detailUrl = canonicalFor(`${cfg.categoryPath}/${item.slug}`, loc);
+
+    return (
+      <>
+        <ServiceDetailContent
+          item={item}
+          categoryLabel={navLabel}
+          categoryHref={cfg.categoryPath}
+        />
+        <JsonLd
+          data={[
+            breadcrumbSchema([
+              { name: navLabel, href: canonicalFor(cfg.categoryPath, loc) },
+              { name: item.name, href: detailUrl },
+            ]),
+            productSchema({
+              slug: item.slug,
+              name: item.name,
+              description: item.shortDescription,
+              image: item.photoUrl,
+              price: item.adultPrice,
+              currency: item.currency,
+              rating: item.rating,
+              reviewCount: item.reviewCount,
+              category: navLabel,
+              urlPath: detailUrl,
+              priceOnRequest: item.priceOnRequest,
+            }),
+          ]}
+        />
+      </>
+    );
+  }
+
+  return { generateStaticParams, generateMetadata, Page };
+}

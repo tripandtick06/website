@@ -25,6 +25,15 @@ const CATEGORY_GRADIENT: Record<ServiceItem["category"], string> = {
   transfer: "from-slate-600 to-slate-700",
 };
 
+// Her kategori kendi lokalize DETAY (landing) route'una gider — indexlenebilir
+// sayfa; rezervasyon CTA detay sayfasinda. (Object-form Link locale prefix'i map'ler.)
+const DETAIL_PATHNAME: Partial<Record<ServiceItem["category"], string>> = {
+  activity: "/aktiviteler/[slug]",
+  tour: "/turlar/[slug]",
+  hotel: "/oteller/[slug]",
+  package: "/paketler/[slug]",
+};
+
 // Slug bazli emoji — daha dogru gorsel
 function slugEmoji(slug: string): string | null {
   if (slug.startsWith("atv-")) return "🏍️";
@@ -62,11 +71,20 @@ export function ServiceCard({ item, ctaHref }: ServiceCardProps) {
   const gradient = CATEGORY_GRADIENT[item.category];
   // Otel kategorisi info-only flow — /oteller/[slug] info page (rezervasyon yok).
   const isHotelInfoOnly = item.category === "hotel";
-  // Hotel info page is a localized route → object form so the locale prefix maps.
-  // Rezervasyon is NOT localized → plain string Link. ctaHref override stays string.
-  const useLocalizedHotelHref = isHotelInfoOnly && !ctaHref;
-  const stringHref = ctaHref || `/rezervasyon/${item.slug}`;
   const emoji = slugEmoji(item.slug);
+  // activity/tour/package/hotel -> lokalize DETAY route; transfer -> rezervasyon
+  // (detay sayfasi yok). ctaHref override string Link kalir.
+  const detailPathname = DETAIL_PATHNAME[item.category];
+  const href = (
+    ctaHref
+      ? ctaHref
+      : detailPathname
+        ? { pathname: detailPathname, params: { slug: item.slug } }
+        : `/rezervasyon/${item.slug}`
+  ) as ComponentProps<typeof Link>["href"];
+  const ctaLabel = isHotelInfoOnly
+    ? ui.serviceCard.infoForm
+    : ui.serviceCard.reserve;
 
   return (
     <article className="group/card overflow-hidden flex flex-col h-full rounded-booking border border-slate-200 bg-white shadow-booking-card transition-[transform,box-shadow] duration-200 ease-out-strong hover:-translate-y-0.5 hover:shadow-booking-hover">
@@ -145,21 +163,12 @@ export function ServiceCard({ item, ctaHref }: ServiceCardProps) {
               </>
             )}
           </div>
-          {useLocalizedHotelHref ? (
-            <Link
-              href={{ pathname: "/oteller/[slug]", params: { slug: item.slug } }}
-              className="btn-accent text-sm !py-2 !px-4 flex-shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-booking/[0.45] focus-visible:ring-offset-1"
-            >
-              {ui.serviceCard.infoForm}
-            </Link>
-          ) : (
-            <Link
-              href={stringHref as ComponentProps<typeof Link>["href"]}
-              className="btn-accent text-sm !py-2 !px-4 flex-shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-booking/[0.45] focus-visible:ring-offset-1"
-            >
-              {isHotelInfoOnly ? ui.serviceCard.infoForm : ui.serviceCard.reserve}
-            </Link>
-          )}
+          <Link
+            href={href}
+            className="btn-accent text-sm !py-2 !px-4 flex-shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-booking/[0.45] focus-visible:ring-offset-1"
+          >
+            {ctaLabel}
+          </Link>
         </div>
       </div>
     </article>

@@ -49,7 +49,7 @@ export default function PaketlerPage({
 }) {
   const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
   const itemList = itemListSchema(
-    tServiceList(PACKAGES, loc).map((p) => ({ name: p.name, urlPath: canonicalFor(`/rezervasyon/${p.slug}`, loc) })),
+    tServiceList(PACKAGES, loc).map((p) => ({ name: p.name, urlPath: canonicalFor(`/paketler/${p.slug}`, loc) })),
     "Kapadokya Kombi Paketleri"
   );
 

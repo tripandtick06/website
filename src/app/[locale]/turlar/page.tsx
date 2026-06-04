@@ -48,7 +48,7 @@ export default function TurlarPage({
 }) {
   const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
   const itemList = itemListSchema(
-    TOURS.map((t) => ({ name: t.name, urlPath: canonicalFor(`/rezervasyon/${t.slug}`, loc) })),
+    TOURS.map((t) => ({ name: t.name, urlPath: canonicalFor(`/turlar/${t.slug}`, loc) })),
     "Kapadokya Gezi Turları"
   );
 

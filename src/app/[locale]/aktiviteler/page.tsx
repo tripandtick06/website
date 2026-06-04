@@ -48,7 +48,7 @@ export default function AktivitelerPage({
 }) {
   const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
   const itemList = itemListSchema(
-    tServiceList(ACTIVITIES, loc).map((a) => ({ name: a.name, urlPath: canonicalFor(`/rezervasyon/${a.slug}`, loc) })),
+    tServiceList(ACTIVITIES, loc).map((a) => ({ name: a.name, urlPath: canonicalFor(`/aktiviteler/${a.slug}`, loc) })),
     "Kapadokya Aktiviteleri"
   );
 
