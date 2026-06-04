@@ -4,7 +4,9 @@ import { TRANSFERS } from "@/data/services/catalog";
 import type { Locale } from "@/lib/i18n/dictionaries";
 import { makeServiceDetailPage } from "@/lib/service-detail-page";
 
-export const runtime = "edge";
+// Blog pattern: tam statik SSG (Worker'a girmez) — uzun aciklama JSON build-time fs.
+export const dynamic = "force-static";
+export const dynamicParams = false;
 
 const TRANSFER_LABEL: Record<Locale, string> = {
   tr: "Transferler",

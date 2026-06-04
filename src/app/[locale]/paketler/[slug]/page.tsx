@@ -2,7 +2,9 @@
 import { PACKAGES } from "@/data/services/catalog";
 import { makeServiceDetailPage } from "@/lib/service-detail-page";
 
-export const runtime = "edge";
+// Blog pattern: tam statik SSG (Worker'a girmez) — uzun aciklama JSON build-time fs.
+export const dynamic = "force-static";
+export const dynamicParams = false;
 
 const handlers = makeServiceDetailPage({
   items: PACKAGES,

@@ -2,7 +2,8 @@
  * Detay sayfasi UZUN aciklama cevirisi — SERVICE_DESCRIPTIONS'in TR metnini
  * 15 locale'e cevirir (de fr es nl zh hi ur pt pt-BR ja ko it ru uk az).
  * tr+en zaten inline (source of truth) — bu script onlari ELLEMEZ.
- * Cikti: src/data/i18n/descriptions.<locale>.json  ->  { "<slug>": "<cevrili metin>" }
+ * Cikti: public/i18n/desc.<locale>.json  ->  { "<slug>": "<cevrili metin>" }
+ *   (public/ -> detay sayfalari build-time fs ile okur, Worker bundle'a girmez)
  * Calistir: npx tsx scripts/i18n/translate-descriptions.ts [locale1 locale2 ...]
  *   (locale verilmezse 15'inin hepsi)
  * Key: OPENAI_API_KEY (.env.local zaten yuklu) — _openai.ts.
@@ -14,7 +15,7 @@ import { translateJson } from "./_openai";
 import { SERVICE_DESCRIPTIONS } from "../../src/data/services/descriptions";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const OUT_DIR = path.resolve(__dirname, "../../src/data/i18n");
+const OUT_DIR = path.resolve(__dirname, "../../public/i18n");
 
 // tr+en haric, canli sitedeki diger 15 locale.
 const TARGET_LOCALES = [
@@ -78,7 +79,7 @@ async function main() {
     const lang = LOCALE_NAME[loc];
     process.stdout.write(`\n[${loc}] ${lang} `);
     const result = await translateLocale(src, lang);
-    const file = path.join(OUT_DIR, `descriptions.${loc}.json`);
+    const file = path.join(OUT_DIR, `desc.${loc}.json`);
     fs.writeFileSync(file, JSON.stringify(result, null, 2), "utf8");
     process.stdout.write(` -> ${file} (${Object.keys(result).length} slug)`);
   }

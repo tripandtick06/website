@@ -8,7 +8,7 @@ import { JsonLd } from "@/components/layout/JsonLd";
 import { ServiceDetailContent } from "@/components/layout/ServiceDetailContent";
 import type { ServiceItem } from "@/data/services/catalog";
 import { getLongDescription } from "@/data/services/descriptions";
-import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
+import { isLocale, DEFAULT_LOCALE, SUPPORTED_LOCALES, type Locale } from "@/lib/i18n/dictionaries";
 import { serverDict } from "@/lib/i18n/serverDict";
 import { tService } from "@/lib/i18n/localizeData";
 import { breadcrumbSchema, productSchema } from "@/lib/schema";
@@ -47,7 +47,10 @@ export function makeServiceDetailPage(cfg: ServiceDetailConfig) {
     cfg.items.find((s) => s.slug === slug);
 
   function generateStaticParams() {
-    return cfg.items.map((s) => ({ slug: s.slug }));
+    // force-static + dynamicParams=false -> tum locale x slug onceden uretilir.
+    return SUPPORTED_LOCALES.flatMap((locale) =>
+      cfg.items.map((s) => ({ locale, slug: s.slug }))
+    );
   }
 
   function generateMetadata({ params }: RouteParams): Metadata {
