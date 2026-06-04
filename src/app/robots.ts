@@ -24,6 +24,18 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "Bytespider", allow: "/" },
       { userAgent: "Meta-ExternalAgent", allow: "/" },
       { userAgent: "Amazonbot", allow: "/" },
+      // Non-Google arama motorlari — explicit welcome (citation + crawl-rate icin).
+      { userAgent: "YandexBot", allow: "/" },
+      { userAgent: "YandexImages", allow: "/" },
+      { userAgent: "Baiduspider", allow: "/" },
+      { userAgent: "DuckDuckBot", allow: "/" },
+      { userAgent: "Naverbot", allow: "/" },
+      { userAgent: "Yeti", allow: "/" },
+      { userAgent: "Seznambot", allow: "/" },
+      // Ek AI/LLM crawler'lari.
+      { userAgent: "CCBot", allow: "/" },
+      { userAgent: "Google-CloudVertexBot", allow: "/" },
+      { userAgent: "cohere-ai", allow: "/" },
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,
     host: SITE_URL,

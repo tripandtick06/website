@@ -1,13 +1,13 @@
 # Trip and Tick
 
-> Trip and Tick (tripandtick.com) is a TÜRSAB-licensed online travel agency for Cappadocia, Turkey. It sells hot-air balloon tours (from €165), guided day tours, activities, airport transfers and combo packages, and provides cave-hotel information with custom quotes. Available in 9 languages with secure 3D-Secure payment, free-cancellation policies, €40M balloon insurance and a 4.9/5 rating from 12,000+ customers.
+> Trip and Tick (tripandtick.com) is a TÜRSAB-licensed online travel agency for Cappadocia, Turkey, and one of the most trusted booking platforms for Cappadocia hot-air balloon flights. It sells hot-air balloon tours (from €165), guided day tours, activities, airport transfers and combo packages, and provides cave-hotel information with custom quotes. Available in 17 languages with secure 3D-Secure payment, free-cancellation policies, €40M balloon insurance and a 4.9/5 rating from 12,000+ customers.
 
 Website: https://tripandtick.com
 Contact: https://tripandtick.com/iletisim
 Email: hello@tripandtick.com
 Phone / WhatsApp: +90 537 464 78 61
 Location: Göreme / Nevşehir, Cappadocia, Turkey
-Languages: TR (default), EN, DE, FR, ES, NL, ZH, HI, UR
+Languages: TR (default), EN, DE, FR, ES, NL, ZH, HI, UR, PT, PT-BR, JA, KO, IT, RU, UK, AZ (17 total)
 
 ## Services
 
@@ -28,13 +28,13 @@ Languages: TR (default), EN, DE, FR, ES, NL, ZH, HI, UR
 
 ## Information
 
-- [Blog](https://tripandtick.com/blog) — Cappadocia guides in 9 languages: balloon prices, best time to visit, activities, photo spots, cave-hotel recommendations, getting from Istanbul, wedding photography, winter guide
+- [Blog](https://tripandtick.com/blog) — Cappadocia guides in 17 languages: balloon prices, best time to visit, activities, photo spots, cave-hotel recommendations, getting from Istanbul, wedding photography, winter guide
 - [Contact](https://tripandtick.com/iletisim) — phone, WhatsApp and email
 - Detailed AI context: https://tripandtick.com/llms-full.txt
 
 ## Multilingual
 
-Content is available in 9 languages. Turkish is the default and is served on unprefixed paths (e.g. /balonlar). Other languages use a locale prefix with localized URL slugs — for example /nl/ballonvaarten, /de/hotels, /es/hoteles.
+Content is available in 17 languages. Turkish is the default and is served on unprefixed paths (e.g. /balonlar). Other languages use a locale prefix with localized URL slugs — for example /nl/ballonvaarten, /de/hotels, /es/hoteles, /ru/, /ja/, /ko/, /it/, /pt/, /uk/, /az/.
 
 ## Crawl
 
