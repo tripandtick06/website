@@ -25,8 +25,10 @@ export interface ServiceDetailConfig {
   items: ServiceItem[];
   /** TR-canonical listing path, orn "/aktiviteler". */
   categoryPath: string;
-  /** serverDict().nav anahtari (etiket icin). */
-  navKey: NavKey;
+  /** serverDict().nav anahtari (etiket icin). nav'da olmayan kategori (transfer) navLabel kullanir. */
+  navKey?: NavKey;
+  /** navKey yoksa kategori etiketini locale'e gore dondurur (orn transfer). */
+  navLabel?: (loc: Locale) => string;
 }
 
 type RouteParams = { params: { locale: string; slug: string } };
@@ -82,7 +84,9 @@ export function makeServiceDetailPage(cfg: ServiceDetailConfig) {
     const raw = find(params.slug);
     if (!raw) notFound();
     const item = tService(raw, loc);
-    const navLabel = serverDict(loc).nav[cfg.navKey];
+    const navLabel = cfg.navKey
+      ? serverDict(loc).nav[cfg.navKey]
+      : cfg.navLabel?.(loc) ?? "";
     const detailUrl = canonicalFor(`${cfg.categoryPath}/${item.slug}`, loc);
 
     return (

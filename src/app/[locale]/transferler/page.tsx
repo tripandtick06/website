@@ -50,7 +50,7 @@ export default function Page({
 }) {
   const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
   const itemList = itemListSchema(
-    tServiceList(TRANSFERS, loc).map((t) => ({ name: t.name, urlPath: canonicalFor(`/rezervasyon/${t.slug}`, loc) })),
+    tServiceList(TRANSFERS, loc).map((t) => ({ name: t.name, urlPath: canonicalFor(`/transferler/${t.slug}`, loc) })),
     "Kapadokya Havalimanı Transferleri"
   );
 

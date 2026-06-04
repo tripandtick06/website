@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { BALLOON_PACKAGES } from "@/data/services/balloons";
-import { KAPADOKYA_PILLARS, HOTELS, ACTIVITIES, TOURS, PACKAGES } from "@/data/services/catalog";
+import { KAPADOKYA_PILLARS, HOTELS, ACTIVITIES, TOURS, PACKAGES, TRANSFERS } from "@/data/services/catalog";
 import { OPERATORS } from "@/data/services/operators";
 import { ARTICLES } from "@/data/blog";
 import { SITE_URL } from "@/lib/schema";
@@ -95,6 +95,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const activityPages = mk(ACTIVITIES, "/aktiviteler", 0.8);
   const tourPages = mk(TOURS, "/turlar", 0.8);
   const packagePages = mk(PACKAGES, "/paketler", 0.8);
+  const transferPages = mk(TRANSFERS, "/transferler", 0.7);
 
   // Dedupe — bazi pillar slug'lari blog JSON slug'lariyla cakisir (intentional).
   const combined = [
@@ -105,6 +106,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...activityPages,
     ...tourPages,
     ...packagePages,
+    ...transferPages,
     ...pillarPages,
     ...blogPages,
   ];

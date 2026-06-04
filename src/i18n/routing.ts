@@ -148,6 +148,18 @@ const pathnames = {
     ur: "/packages/[slug]",
     ...EXTRA("/packages/[slug]"),
   },
+  "/transferler/[slug]": {
+    tr: "/transferler/[slug]",
+    en: "/transfers/[slug]",
+    de: "/transfers/[slug]",
+    fr: "/transferts/[slug]",
+    es: "/traslados/[slug]",
+    nl: "/transfers/[slug]",
+    zh: "/transfers/[slug]",
+    hi: "/transfers/[slug]",
+    ur: "/transfers/[slug]",
+    ...EXTRA("/transfers/[slug]"),
+  },
   "/kapadokya": {
     tr: "/kapadokya",
     en: "/cappadocia",

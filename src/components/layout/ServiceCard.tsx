@@ -27,11 +27,12 @@ const CATEGORY_GRADIENT: Record<ServiceItem["category"], string> = {
 
 // Her kategori kendi lokalize DETAY (landing) route'una gider — indexlenebilir
 // sayfa; rezervasyon CTA detay sayfasinda. (Object-form Link locale prefix'i map'ler.)
-const DETAIL_PATHNAME: Partial<Record<ServiceItem["category"], string>> = {
+const DETAIL_PATHNAME: Record<ServiceItem["category"], string> = {
   activity: "/aktiviteler/[slug]",
   tour: "/turlar/[slug]",
   hotel: "/oteller/[slug]",
   package: "/paketler/[slug]",
+  transfer: "/transferler/[slug]",
 };
 
 // Slug bazli emoji — daha dogru gorsel
