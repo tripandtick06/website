@@ -21,12 +21,18 @@ export interface ServiceDetailContentProps {
   categoryLabel: string;
   /** Kategori listing path'i (orn "/aktiviteler") — Link lokalize eder. */
   categoryHref: string;
+  /** Locale'e ozel uzun aciklama (varsa) — "Hakkında" bolumu. */
+  longDescription?: string;
+  /** "Hakkında" / "About" baslik etiketi (locale'e gore). */
+  aboutLabel?: string;
 }
 
 export function ServiceDetailContent({
   item,
   categoryLabel,
   categoryHref,
+  longDescription,
+  aboutLabel,
 }: ServiceDetailContentProps) {
   const t = useT();
   const ui = useUiText();
@@ -145,6 +151,19 @@ export function ServiceDetailContent({
           </div>
         </div>
       </section>
+
+      {longDescription && (
+        <section className="section-padding bg-slate-50">
+          <div className="container-main max-w-3xl">
+            <h2 className="text-2xl font-extrabold text-slate-900 mb-4">
+              {aboutLabel ?? "Hakkında"} — {item.name}
+            </h2>
+            <p className="text-slate-700 leading-relaxed text-lg whitespace-pre-line">
+              {longDescription}
+            </p>
+          </div>
+        </section>
+      )}
     </>
   );
 }

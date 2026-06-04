@@ -7,6 +7,7 @@ import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { ServiceDetailContent } from "@/components/layout/ServiceDetailContent";
 import type { ServiceItem } from "@/data/services/catalog";
+import { getLongDescription } from "@/data/services/descriptions";
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { serverDict } from "@/lib/i18n/serverDict";
 import { tService } from "@/lib/i18n/localizeData";
@@ -88,6 +89,8 @@ export function makeServiceDetailPage(cfg: ServiceDetailConfig) {
       ? serverDict(loc).nav[cfg.navKey]
       : cfg.navLabel?.(loc) ?? "";
     const detailUrl = canonicalFor(`${cfg.categoryPath}/${item.slug}`, loc);
+    const longDescription = getLongDescription(item.slug, loc);
+    const aboutLabel = loc === "tr" ? "Hakkında" : "About";
 
     return (
       <>
@@ -95,6 +98,8 @@ export function makeServiceDetailPage(cfg: ServiceDetailConfig) {
           item={item}
           categoryLabel={navLabel}
           categoryHref={cfg.categoryPath}
+          longDescription={longDescription}
+          aboutLabel={aboutLabel}
         />
         <JsonLd
           data={[
@@ -105,7 +110,7 @@ export function makeServiceDetailPage(cfg: ServiceDetailConfig) {
             productSchema({
               slug: item.slug,
               name: item.name,
-              description: item.shortDescription,
+              description: longDescription ?? item.shortDescription,
               image: item.photoUrl,
               price: item.adultPrice,
               currency: item.currency,
