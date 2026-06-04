@@ -40,15 +40,12 @@ export async function middleware(req: NextRequest) {
       }
       return NextResponse.next();
     }
-    // next-intl emits 307 (temporary) for locale redirects; upgrade to 308
-    // (permanent) so SEO link equity is preserved. Only the redirect path is
-    // touched — 200/next responses pass through untouched.
-    const res = intlMiddleware(req);
-    if (res.status === 307) {
-      const loc = res.headers.get("location");
-      if (loc) return NextResponse.redirect(loc, { status: 308, headers: res.headers });
-    }
-    return res;
+    // next-intl emits 307 (temporary) for locale redirects. KEEP them temporary:
+    // root "/" redirects are per-user (Accept-Language / NEXT_LOCALE cookie based).
+    // Upgrading to 308 (permanent) makes browsers + shared caches pin the first
+    // detected locale forever, breaking device-language auto-detection. So pass
+    // next-intl's response through unchanged.
+    return intlMiddleware(req);
   }
 
   // Stripe webhook bypass — Stripe IP'lerinden gelir, signature verify yeterli koruma.

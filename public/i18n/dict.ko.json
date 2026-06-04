@@ -40,7 +40,7 @@
     "refund": "100% 환불 보장",
     "insurance": "€40M 보험",
     "operators": "9개 이상의 운영자",
-    "tursab": "TÜRSAB 라이센스"
+    "tursab": "TÜRSAB 가맹 운영사"
   },
   "stats": {
     "operators": "파트너 운영사",
@@ -1004,8 +1004,8 @@
       "turk_turizm_standartlarina_uyum": "터키 관광 기준 준수 보장.\n              4천만 유로의 전문 책임 보험, KVKK 준수 데이터 정책, 3D 보안 결제 인프라 및 24/7 고객 지원을 통해 국내외 고객에게 동일한 품질을 제공합니다.",
       "turkiye": "Türkiye",
       "turkiye_nin_en_guvenilir_online": "터키에서 가장 신뢰받는 온라인 여행사",
-      "tursab_lisans_no": "TÜRSAB 라이센스 번호",
-      "tursab_lisansimiz": "우리의 TÜRSAB 라이센스",
+      "tursab_lisans_no": "TÜRSAB 회원 운영사",
+      "tursab_lisansimiz": "제휴 운영사의 TÜRSAB 라이센스",
       "uygun_fiyatli_seffaf_guvenli": "합리적이고 투명하며 안전한",
       "yerel_istihdama_destek": "지역 고용 지원",
       "stat_label_mutlu_musteri": "행복한 고객",

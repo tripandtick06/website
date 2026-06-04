@@ -40,7 +40,7 @@
     "refund": "Garanzia di Rimborso del 100%",
     "insurance": "Assicurazione da €40M",
     "operators": "9+ Operatori",
-    "tursab": "Licenza TÜRSAB"
+    "tursab": "Operatori TÜRSAB"
   },
   "stats": {
     "operators": "Operatori Partner",
@@ -1004,8 +1004,8 @@
       "turk_turizm_standartlarina_uyum": "è una garanzia di conformità agli standard turistici turchi.\n              Con 40 milioni di euro di assicurazione di responsabilità professionale, una politica sui dati conforme al KVKK,\n              infrastruttura di pagamento 3D Secure e supporto clienti 24/7, offriamo la stessa qualità\n              per gli ospiti nazionali e internazionali.",
       "turkiye": "Türkiye",
       "turkiye_nin_en_guvenilir_online": "L'agenzia di viaggio online più affidabile della Türkiye\n                ",
-      "tursab_lisans_no": "Numero di Licenza TÜRSAB",
-      "tursab_lisansimiz": "la nostra licenza TÜRSAB",
+      "tursab_lisans_no": "Operatori membri TÜRSAB",
+      "tursab_lisansimiz": "la licenza TÜRSAB dei nostri operatori partner",
       "uygun_fiyatli_seffaf_guvenli": "economica, trasparente e\n                sicura",
       "yerel_istihdama_destek": "supporto per l'occupazione locale",
       "stat_label_mutlu_musteri": "Clienti Felici",

@@ -1,7 +1,7 @@
 "use client";
 
 import NextImage from "next/image";
-import { MapPin, ShieldCheck, Wallet, Users, BadgeCheck } from "lucide-react";
+import { MapPin, ShieldCheck, Wallet, Users } from "lucide-react";
 import { useT } from "@/lib/i18n/I18nProvider";
 
 export function HeroSection() {
@@ -58,7 +58,15 @@ export function HeroSection() {
           <span>{t.hero_trust.operators}</span>
         </div>
         <div className="flex items-center gap-2 bg-white/[0.07] border border-white/15 backdrop-blur-md rounded-full px-4 py-2 text-white/90 text-xs sm:text-sm font-medium">
-          <BadgeCheck className="w-4 h-4 text-accent-light shrink-0" />
+          <span className="flex items-center justify-center bg-white rounded-full p-0.5 shrink-0">
+            <NextImage
+              src="/images/tursab.png"
+              alt="TÜRSAB üyesi operatörler"
+              width={20}
+              height={20}
+              className="h-5 w-5"
+            />
+          </span>
           <span>{t.hero_trust.tursab}</span>
         </div>
       </div>

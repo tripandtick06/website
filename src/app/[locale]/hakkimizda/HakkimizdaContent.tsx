@@ -1,5 +1,6 @@
 "use client";
 
+import NextImage from "next/image";
 import { Link } from "@/i18n/routing";
 import {
   Shield,
@@ -15,7 +16,6 @@ import {
   MapPin,
   Receipt,
   Calendar,
-  BadgeCheck,
 } from "lucide-react";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { PageHero } from "@/components/layout/PageHero";
@@ -255,11 +255,17 @@ export function HakkimizdaContent() {
               </div>
             </div>
             <div className="card p-6">
-              <BadgeCheck className="w-7 h-7 text-accent mb-3" />
+              <NextImage
+                src="/images/tursab.png"
+                alt="TÜRSAB üyesi operatörler"
+                width={44}
+                height={44}
+                className="h-11 w-11 mb-3"
+              />
               <div className="text-xs text-slate-500 uppercase tracking-wide mb-1">
                 {d.tursab_lisans_no}
               </div>
-              <div className="text-slate-900 font-semibold">{COMPANY.tursab}</div>
+              <div className="text-slate-900 font-semibold">9+</div>
             </div>
             <div className="card p-6">
               <Calendar className="w-7 h-7 text-accent mb-3" />
