@@ -2,6 +2,10 @@
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { serverDict } from "@/lib/i18n/serverDict";
 import { generateHreflang, ogImageUrl, canonicalFor, ogLocale } from "@/lib/hreflang";
+import { JsonLd } from "@/components/layout/JsonLd";
+import { breadcrumbSchema, itemListSchema } from "@/lib/schema";
+import { HOTELS } from "@/data/services/catalog";
+import { tServiceList } from "@/lib/i18n/localizeData";
 import { OtellerContent } from "./OtellerContent";
 
 export const runtime = "edge";
@@ -38,6 +42,25 @@ export async function generateMetadata({
   };
 }
 
-export default function Page() {
-  return <OtellerContent />;
+export default function Page({ params }: { params: { locale: string } }) {
+  const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
+  return (
+    <>
+      <OtellerContent />
+      <JsonLd
+        data={[
+          breadcrumbSchema([
+            { name: serverDict(loc).nav.hotels, href: canonicalFor("/oteller", loc) },
+          ]),
+          itemListSchema(
+            tServiceList(HOTELS, loc).map((h) => ({
+              name: h.name,
+              urlPath: canonicalFor(`/oteller/${h.slug}`, loc),
+            })),
+            "Kapadokya Otelleri"
+          ),
+        ]}
+      />
+    </>
+  );
 }

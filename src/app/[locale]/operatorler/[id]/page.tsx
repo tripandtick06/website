@@ -17,7 +17,7 @@ import { OPERATORS, getOperatorById } from "@/data/services/operators";
 import { BALLOON_PACKAGES } from "@/data/services/balloons";
 import { pickReviews } from "@/data/reviews";
 import { breadcrumbSchema, SITE_URL } from "@/lib/schema";
-import { canonicalFor } from "@/lib/hreflang";
+import { canonicalFor, generateHreflang } from "@/lib/hreflang";
 import { OperatorDetayContent } from "./OperatorDetayContent";
 
 export function generateStaticParams() {
@@ -38,6 +38,7 @@ export async function generateMetadata({
       `${op.name} — ${op.founded} kuruluş, SHGM lisanslı, ${op.reviewCount.toLocaleString("tr-TR")}+ yorum. ${op.description.slice(0, 100)}...`,
     alternates: {
       canonical: canonicalFor(`/operatorler/${op.id}`, params.locale),
+      languages: generateHreflang(`/operatorler/${op.id}`),
     },
   };
 }

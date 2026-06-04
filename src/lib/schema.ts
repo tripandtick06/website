@@ -61,13 +61,6 @@ export const ORGANIZATION_SCHEMA = {
     jobTitle: FOUNDER.title,
     email: FOUNDER.email,
   },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "12000",
-    bestRating: "5",
-    worstRating: "1",
-  },
   sameAs: [
     COMPANY.social.instagram,
     COMPANY.social.facebook,

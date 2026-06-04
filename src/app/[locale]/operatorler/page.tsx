@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { serverDict } from "@/lib/i18n/serverDict";
-import { canonicalFor } from "@/lib/hreflang";
+import { canonicalFor, generateHreflang } from "@/lib/hreflang";
 import { OperatorlerContent } from "./OperatorlerContent";
 
 export const runtime = "edge";
@@ -18,6 +18,7 @@ export async function generateMetadata({
     description: d.meta_desc,
     alternates: {
       canonical: canonicalFor("/operatorler", params.locale),
+      languages: generateHreflang("/operatorler"),
     },
   };
 }

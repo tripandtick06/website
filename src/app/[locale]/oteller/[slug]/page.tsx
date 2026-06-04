@@ -10,7 +10,7 @@ import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { HOTELS } from "@/data/services/catalog";
 import { breadcrumbSchema, lodgingSchema } from "@/lib/schema";
-import { generateHreflang, canonicalFor, ogLocale } from "@/lib/hreflang";
+import { generateHreflang, canonicalFor, ogLocale, ogImageUrl } from "@/lib/hreflang";
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { serverDict } from "@/lib/i18n/serverDict";
 import { OtelDetayContent } from "./OtelDetayContent";
@@ -44,6 +44,14 @@ export function generateMetadata({ params }: PageParams): Metadata {
       description: enrichedDesc,
       url: canonicalFor(path, params.locale),
       type: "website",
+      images: [
+        {
+          url: ogImageUrl(hotel.name, `${geo} — ${hotel.shortDescription}`.slice(0, 120)),
+          width: 1200,
+          height: 630,
+          alt: `${hotel.name} — ${geo}`,
+        },
+      ],
     },
   };
 }
