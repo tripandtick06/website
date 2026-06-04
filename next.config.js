@@ -24,7 +24,16 @@ const nextConfig = {
     ],
   },
   async redirects() {
-    const redirects = [];
+    const redirects = [
+      // www → apex (non-www) — tek canonical host; GSC "alternatif sayfa,
+      // canonical farkli" hatasini onler.
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.tripandtick.com" }],
+        destination: "https://tripandtick.com/:path*",
+        permanent: true,
+      },
+    ];
     for (const { from, to } of LEGACY_SLUG_REDIRECTS) {
       if (from.includes("balon")) {
         redirects.push({ source: `/balonlar/${from}`, destination: `/balonlar/${to}`, permanent: true });

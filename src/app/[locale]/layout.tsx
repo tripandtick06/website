@@ -112,9 +112,9 @@ export async function generateMetadata({
     google: process.env.NEXT_PUBLIC_GSC_VERIFICATION || undefined,
     yandex: process.env.NEXT_PUBLIC_YANDEX_VERIFICATION || undefined,
     other: {
-      ...(process.env.NEXT_PUBLIC_BING_VERIFICATION
-        ? { "msvalidate.01": process.env.NEXT_PUBLIC_BING_VERIFICATION }
-        : {}),
+      "msvalidate.01":
+        process.env.NEXT_PUBLIC_BING_VERIFICATION ||
+        "71595D2C81CF0978FCE567579E41EB8F",
       ...(process.env.NEXT_PUBLIC_BAIDU_VERIFICATION
         ? { "baidu-site-verification": process.env.NEXT_PUBLIC_BAIDU_VERIFICATION }
         : {}),
