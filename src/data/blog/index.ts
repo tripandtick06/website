@@ -3076,7 +3076,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-istanbuldan-nasil-gidilir",
     "title": "İstanbul'dan Kapadokya'ya Nasıl Gidilir? 5 Seçenek — Süre, Fiyat ve Karşılaştırma 2026",
     "metaTitle": "İstanbul Kapadokya Ulaşım 2026 | Uçak, Otobüs, Tren, Araç | Trip and Tick",
-    "metaDescription": "İstanbul'dan Kapadokya'ya 5 seçenek: Uçak 1.25 sa €45, otobüs 12 sa €25, tren 18 sa €18, özel araç 8 sa €120, tur 2 gün €185. Detaylı karşılaştırma ve havalimanı transfer.",
+    "metaDescription": "İstanbul'dan Kapadokya'ya balon turu için 5 ulaşım seçeneği: uçak 1.25 sa €45, otobüs 12 sa €25, tren 18 sa €18. Balon turuna yetişme saatleri ve ipuçları.",
     "excerpt": "İstanbul'dan Kapadokya'ya nasıl gidilir? Uçak (Nevşehir/Kayseri), otobüs, tren (Doğu Ekspresi), özel araç ve rehberli tur — 5 seçenek için süre, fiyat ve avantajların tam karşılaştırması.",
     "category": "ulasim",
     "tags": [
