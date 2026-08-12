@@ -7,13 +7,17 @@ beforeAll(() => {
 import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
 
 describe("generateHreflang", () => {
-  it("returns 9 locales + x-default", () => {
+  it("returns 17 locales + x-default", () => {
     const out = generateHreflang("/balonlar");
     const keys = Object.keys(out);
-    for (const t of ["tr-TR", "en", "de", "fr", "es", "nl", "zh-Hans", "hi", "ur", "x-default"]) {
+    for (const t of [
+      "tr-TR", "en", "de", "fr", "es", "nl", "zh-Hans", "hi", "ur",
+      "pt-PT", "pt-BR", "ja", "ko", "it", "ru", "uk", "az",
+      "x-default",
+    ]) {
       expect(keys).toContain(t);
     }
-    expect(keys).toHaveLength(10);
+    expect(keys).toHaveLength(18);
   });
 
   it("normalizes paths missing leading slash", () => {
