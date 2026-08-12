@@ -1199,7 +1199,7 @@ const BASE_DICTIONARIES = {
         kapadokya_denildiginde_akla_ilk: "Kapadokya denildiğinde akla ilk gelen",
         kapadokya_hakkinda_bilgi_bankasi: "Kapadokya Hakkında Bilgi Bankası",
         kapadokya_maceraniz_simdi: "Kapadokya Maceranız Şimdi Başlasın",
-        meta_desc: "Kapadokya tatil rehberi: balon turu fiyatları, en iyi oteller, gezi turları, aktiviteler, fotoğraf noktaları ve ne zaman gidilir? Detaylı tüm rehber tek sayfada.",
+        meta_desc: "Kapadokya tatil rehberi: peri bacaları, balon turu fiyatları, en iyi oteller, gezi turları, aktiviteler ve ne zaman gidilir? Detaylı tüm rehber tek sayfada.",
         meta_desc_2: "Balon, otel, tur, aktiviteler — tüm Kapadokya rehberi tek sayfada.",
         meta_og_alt: "Kapadokya Rehberi — Trip and Tick",
         meta_title: "Kapadokya Rehberi 2026 — Balon, Otel, Tur, Aktiviteler",
