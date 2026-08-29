@@ -11,6 +11,14 @@ const LEGACY_SLUG_REDIRECTS = [
   { from: "at-full", to: "at-standart" },
 ];
 
+// Blog kannibalizasyon konsolidasyonu (2026-08-29) — silinen TR makale slug'lari
+// en yakin canonical slug'a 301 redirect. Kaynak: SEO sprint (best-time +
+// heissluftballon-preise TR ciftleri consolidate edildi).
+const BLOG_SLUG_REDIRECTS = [
+  { from: "best-time-cappadocia-balloon-tr", to: "kapadokya-ne-zaman-gidilir" },
+  { from: "heissluftballon-kappadokien-preise-buchung-tr", to: "kapadokya-balon-turu-fiyat-2026" },
+];
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -41,6 +49,10 @@ const nextConfig = {
       }
       redirects.push({ source: `/rezervasyon/${from}`, destination: `/rezervasyon/${to}`, permanent: true });
       redirects.push({ source: `/:locale/rezervasyon/${from}`, destination: `/:locale/rezervasyon/${to}`, permanent: true });
+    }
+    for (const { from, to } of BLOG_SLUG_REDIRECTS) {
+      redirects.push({ source: `/blog/${from}`, destination: `/blog/${to}`, permanent: true });
+      redirects.push({ source: `/:locale/blog/${from}`, destination: `/:locale/blog/${to}`, permanent: true });
     }
     return redirects;
   },

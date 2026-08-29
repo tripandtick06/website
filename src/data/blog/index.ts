@@ -2913,27 +2913,29 @@ export const ARTICLES: BlogArticleMeta[] = [
     "coverImage": "/images/blog/kapadokya-otel-tavsiye-2026.jpg"
   },
   {
-    "file": "tr-best-time-cappadocia-balloon.json",
-    "slug": "best-time-cappadocia-balloon-tr",
-    "title": "Kapadokya Balon Turu İçin En İyi Zaman — Aylara Göre Rehber (2026)",
-    "metaTitle": "Kapadokya Balon Turu En İyi Zaman 2026: Aylara Göre | Trip and Tick",
-    "metaDescription": "Kapadokya sıcak hava balonu turu için en iyi zaman ne zaman? 2026 için aylara göre uçuş günü oranları, hava durumu, kalabalık ve fiyatlar. Nisan-Haziran ve Eylül-Ekim ideal dönem — tüm veriler içeride.",
-    "excerpt": "Kapadokya balon turu için en iyi zaman, nisan sonundan haziran sonuna ve eylülden ekime kadar olan dönemdir — yüksek uçuş günü oranları, ılıman gün doğumu sıcaklıkları ve dengeli rüzgârlar. Bu aylara göre rehber; uçuş güvenilirliğini, hava durumunu, kalabalığı ve fiyatları ayrıntılarıyla açıklar ki mükemmel tarihi seçebilesiniz.",
-    "category": "balon-turlari",
+    "file": "tr-3-gunluk-kapadokya-gezi-plani.json",
+    "slug": "3-gunluk-kapadokya-gezi-plani",
+    "title": "3 Günlük Kapadokya Gezi Planı (2026)",
+    "metaTitle": "3 Günlük Kapadokya Gezi Planı 2026 | Trip and Tick",
+    "metaDescription": "3 günlük Kapadokya gezi planı 2026: gün gün balon uçuşu, Kırmızı/Yeşil Tur, ATV ve at binme, mağara otel önerileri. Gerçek rezervasyon linkleriyle tam rehber.",
+    "excerpt": "3 günde Kapadokya'yı dengeli şekilde gezmek mümkün: bir sabah balon uçuşu, iki tam gün kültür/doğa turu ve akşamlar için aktivite seçenekleri. Gün gün plan, gerçek rezervasyon linkleri ve bütçe özetiyle.",
+    "category": "rehber",
     "tags": [
       "kapadokya",
-      "balon",
-      "en iyi zaman",
-      "ne zaman gidilir",
+      "gezi planı",
+      "3 günlük",
+      "itinerary",
       "2026",
-      "hava durumu"
+      "balon",
+      "kırmızı tur",
+      "yeşil tur"
     ],
-    "targetKeyword": "kapadokya balon turu en iyi zaman",
+    "targetKeyword": "kapadokya gezi planı",
     "locale": "tr",
-    "publishedAt": "2026-05-31T00:00:00.000Z",
-    "seoScore": 94,
+    "publishedAt": "2026-08-29T00:00:00.000Z",
+    "seoScore": 90,
     "isAiGenerated": true,
-    "coverImage": "/images/blog/best-time-cappadocia-balloon.jpg"
+    "coverImage": "/images/blog/kapadokya-aktiviteler.jpg"
   },
   {
     "file": "tr-cappadocia-winter-2026-guide.json",
@@ -2957,28 +2959,6 @@ export const ARTICLES: BlogArticleMeta[] = [
     "seoScore": 93,
     "isAiGenerated": true,
     "coverImage": "/images/blog/cappadocia-winter-2026-guide.jpg"
-  },
-  {
-    "file": "tr-heissluftballon-kappadokien-preise.json",
-    "slug": "heissluftballon-kappadokien-preise-buchung-tr",
-    "title": "Kapadokya Sıcak Hava Balonu 2026 — Fiyatlar, Paketler ve Rezervasyon (Standart €165, Deluxe €295)",
-    "metaTitle": "Kapadokya Sıcak Hava Balonu 2026: Fiyatlar ve Rezervasyon | Trip and Tick",
-    "metaDescription": "Kapadokya sıcak hava balonu 2026 fiyatları: Standart €165, Deluxe €295, Romantik Özel kişi başı €580. Neler dahil, en iyi sezon, iptal koşulları — eksiksiz rezervasyon rehberi.",
-    "excerpt": "Kapadokya'nın peri bacaları üzerinde bir sıcak hava balonu uçuşu, dünya çapında en çok rezerve edilen hayal listesi deneyimlerinden biridir. 2026 fiyatları kişi başı €165'ten başlar. Bu rehber tüm paketleri, dahil olan hizmetleri, en iyi seyahat zamanını, iptal koşullarını ve piyasanın %5 altında nasıl rezervasyon yapacağınızı açıklar.",
-    "category": "balon-turlari",
-    "tags": [
-      "sıcak hava balonu",
-      "kapadokya",
-      "fiyatlar",
-      "2026",
-      "rezervasyon"
-    ],
-    "targetKeyword": "kapadokya sıcak hava balonu fiyatları",
-    "locale": "tr",
-    "publishedAt": "2026-05-25T00:00:00.000Z",
-    "seoScore": 93,
-    "isAiGenerated": true,
-    "coverImage": "/images/blog/heissluftballon-kappadokien-preise-buchung.jpg"
   },
   {
     "file": "tr-kapadokya-aktiviteler.json",
@@ -3024,6 +3004,30 @@ export const ARTICLES: BlogArticleMeta[] = [
     "seoScore": 92,
     "isAiGenerated": false,
     "coverImage": "/images/blog/kapadokya-balon-turu-fiyat-2026.jpg"
+  },
+  {
+    "file": "tr-kapadokya-balon-turu-guvenli-mi.json",
+    "slug": "kapadokya-balon-turu-guvenli-mi",
+    "title": "Kapadokya Balon Turu Güvenli mi? (2026)",
+    "metaTitle": "Kapadokya Balon Turu Güvenli mi? 2026 | Trip and Tick",
+    "metaDescription": "Kapadokya balon turu güvenli mi? SHGM lisansı, 40 milyon Euro sigorta, hava durumu iptal politikası ve dürüst artı-eksileriyle 2026 güvenlik rehberi.",
+    "excerpt": "Kapadokya balon turu güvenli mi? Kısa cevap: evet — SHGM lisanslı operatörler, 40 milyon Euro sigorta ve katı hava durumu protokolleriyle çalışılır. Bu yazıda gerçek güvenlik mekanizmalarını, iptal politikasını ve dürüst artı-eksileri anlatıyoruz.",
+    "category": "balon-turlari",
+    "tags": [
+      "kapadokya",
+      "balon turu",
+      "güvenlik",
+      "SHGM",
+      "sigorta",
+      "2026",
+      "is cappadocia hot air balloon safe"
+    ],
+    "targetKeyword": "kapadokya balon turu güvenli mi",
+    "locale": "tr",
+    "publishedAt": "2026-08-29T00:00:00.000Z",
+    "seoScore": 90,
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/best-time-cappadocia-balloon.jpg"
   },
   {
     "file": "tr-kapadokya-dugun-fotografciligi.json",
