@@ -328,6 +328,17 @@ export default function AdminFiyatPage() {
           <Link href="/admin" className="text-sm text-amber-600 hover:underline">← Admin Panel</Link>
         </header>
 
+        <div className="bg-sky-50 border border-sky-200 rounded-xl p-4 text-sm mb-6">
+          <p className="text-sky-900">
+            Bu sayfa <strong>tarihe-ozel</strong> fiyat/iptal/rotar icindir. Taban fiyatlar (tum
+            tarihlerde gecerli varsayilan) icin{" "}
+            <Link href="/admin?tab=fiyatlar" className="font-semibold underline">
+              ana panel → Fiyatlar sekmesi
+            </Link>
+            .
+          </p>
+        </div>
+
         <div className="grid lg:grid-cols-2 gap-6 mb-8">
           <section className="bg-white rounded-2xl shadow-sm p-6">
             <h2 className="font-bold text-slate-900 mb-4">Tek Tarih Düzenle</h2>

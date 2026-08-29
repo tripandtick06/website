@@ -12,6 +12,7 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { getAgencyByApiKey, agencyNetPrice, type Agency } from "@/data/agencies";
 import { isFixtureKeyInProd } from "@/lib/b2b-session";
+import { listBaseOverrides } from "@/lib/db/service-overrides";
 import {
   ACTIVITIES,
   TOURS,
@@ -42,17 +43,28 @@ export async function GET(req: NextRequest) {
     );
   }
 
+  // Base-fiyat override'lari tek seferde cek — slug -> price_override map.
+  const baseOverrides = await listBaseOverrides().catch((err) => {
+    console.error("[api/b2b/services] listBaseOverrides failed", err);
+    return [];
+  });
+  const basePriceBySlug = new Map<string, number>();
+  for (const o of baseOverrides) {
+    if (o.priceOverride !== null) basePriceBySlug.set(o.serviceSlug, o.priceOverride);
+  }
+
   const services = ALL_SERVICES.map((s) => {
-    const netPrice = agencyNetPrice(s.adultPrice, agency.commissionRate);
+    const listPrice = basePriceBySlug.get(s.slug) ?? s.adultPrice;
+    const netPrice = agencyNetPrice(listPrice, agency.commissionRate);
     return {
       slug: s.slug,
       category: s.category,
       name: s.name,
       shortDescription: s.shortDescription,
       duration: s.duration,
-      listPrice: s.adultPrice,
+      listPrice,
       netPrice,
-      savings: Math.round((s.adultPrice - netPrice) * 100) / 100,
+      savings: Math.round((listPrice - netPrice) * 100) / 100,
       currency: s.currency,
       rating: s.rating,
       reviewCount: s.reviewCount,

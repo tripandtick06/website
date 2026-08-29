@@ -12,6 +12,7 @@ import { formatPrice } from "@/lib/utils";
 import { useT } from "@/lib/i18n/I18nProvider";
 import { useUiText } from "@/lib/i18n/uiText";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
+import { LivePrice } from "@/components/pricing/LivePrice";
 import type { ServiceItem } from "@/data/services/catalog";
 
 export interface ServiceDetailContentProps {
@@ -127,7 +128,11 @@ export function ServiceDetailContent({
                       </div>
                     )}
                     <div className="text-3xl font-extrabold text-primary leading-none">
-                      {formatPrice(item.adultPrice, item.currency)}
+                      <LivePrice
+                        slug={item.slug}
+                        fallback={item.adultPrice}
+                        format={(n) => formatPrice(n, item.currency)}
+                      />
                     </div>
                     <div className="text-xs text-slate-500 mt-1">
                       {item.priceUnit === "couple"

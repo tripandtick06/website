@@ -9,12 +9,14 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { z } from "zod";
 import {
+  BASE_PRICE_DATE,
   getOverride,
   listOverrides,
   upsertOverride,
   deleteOverride,
   bulkCancel,
 } from "@/lib/db/service-overrides";
+import { sendCancellationNotifications } from "@/lib/cancel-notify";
 
 export const runtime = "edge";
 export const dynamic = "force-dynamic";
@@ -72,9 +74,45 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Gecersiz veri", details: parsed.error.flatten() }, { status: 400 });
   }
   const { slug, date, ...patch } = parsed.data;
+
+  // Guard: cift-gonderim onlemek icin upsert'ten ONCE mevcut status'u oku —
+  // zaten 'cancelled' ise (ayni satir tekrar PATCH edilirse) tekrar mail atma.
+  const previous = await getOverride(slug, date).catch(() => null);
+  const wasAlreadyCancelled = previous?.status === "cancelled";
+
   try {
     const result = await upsertOverride(slug, date, patch);
-    return NextResponse.json({ ok: true, override: result });
+
+    // Base-fiyat satiri (BASE_PRICE_DATE) hicbir zaman bildirim tetiklemez —
+    // sadece gercek tarih-ozel iptal, hem de daha once iptal degilse.
+    const shouldNotify =
+      patch.status === "cancelled" && date !== BASE_PRICE_DATE && !wasAlreadyCancelled;
+
+    let notify:
+      | { total: number; sent: number; demoLogged: number; skippedNoEmail: number }
+      | { error: string }
+      | undefined;
+
+    if (shouldNotify) {
+      try {
+        const summary = await sendCancellationNotifications({
+          slugs: [slug],
+          date,
+          cancellationReason: patch.cancellationReason ?? undefined,
+        });
+        notify = {
+          total: summary.total,
+          sent: summary.sent,
+          demoLogged: summary.demoLogged,
+          skippedNoEmail: summary.skippedNoEmail,
+        };
+      } catch (notifyErr) {
+        console.error("[api/admin/service-override] sendCancellationNotifications failed", notifyErr);
+        notify = { error: notifyErr instanceof Error ? notifyErr.message : "Bildirim gonderimi basarisiz" };
+      }
+    }
+
+    return NextResponse.json({ ok: true, override: result, ...(notify ? { notify } : {}) });
   } catch (err) {
     console.error("[api/admin/service-override] POST failed", err);
     return NextResponse.json({ error: err instanceof Error ? err.message : "Bilinmeyen hata" }, { status: 500 });

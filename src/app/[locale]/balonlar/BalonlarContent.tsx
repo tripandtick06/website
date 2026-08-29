@@ -9,6 +9,7 @@ import { OPERATORS } from "@/data/services/operators";
 import { formatPrice } from "@/lib/utils";
 import { useT, useLocale } from "@/lib/i18n/I18nProvider";
 import { tBalloons, tFaq } from "@/lib/i18n/localizeData";
+import { LivePrice } from "@/components/pricing/LivePrice";
 
 const BADGE_BG: Record<string, string> = {
   accent: "bg-accent",
@@ -123,7 +124,11 @@ export function BalonlarContent() {
                             {formatPrice(pkg.marketPrice, pkg.currency)}
                           </div>
                           <div className="text-3xl font-extrabold text-primary leading-none">
-                            {formatPrice(pkg.adultPrice, pkg.currency)}
+                            <LivePrice
+                              slug={pkg.slug}
+                              fallback={pkg.adultPrice}
+                              format={(n) => formatPrice(n, pkg.currency)}
+                            />
                           </div>
                           <div className="text-xs text-slate-500 mt-1">
                             {pkg.dynamicPricing ? b.kisi_basi_dinamik : b.kisi_basi_yetiskin}

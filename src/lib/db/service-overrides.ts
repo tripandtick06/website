@@ -11,6 +11,11 @@
 
 import { supabaseAdmin, supabaseEnabled } from "@/lib/supabase";
 
+// Base-price override sentinel — bu tarihteki override TUM tarihlere uygulanir
+// (date-specific override yoksa fallback). Fiyat zinciri:
+//   dateOverride.priceOverride ?? baseOverride.priceOverride ?? catalog.adultPrice
+export const BASE_PRICE_DATE = "1970-01-01";
+
 export type ServiceOverrideStatus = "active" | "cancelled" | "delayed" | "sold_out";
 
 export interface ServiceOverride {
@@ -74,6 +79,16 @@ export async function getOverride(slug: string, date: string): Promise<ServiceOv
     return memStore.get(key(slug, date)) ?? null;
   }
   return data ? rowToOverride(data as OverrideRow) : null;
+}
+
+// Base-fiyat override — slug icin BASE_PRICE_DATE satiri (tum tarihlere uygulanir).
+export async function getBaseOverride(slug: string): Promise<ServiceOverride | null> {
+  return getOverride(slug, BASE_PRICE_DATE);
+}
+
+// Tum base-fiyat override'lari (BASE_PRICE_DATE satirlari). slug filtresi opsiyonel.
+export async function listBaseOverrides(opts: { slug?: string } = {}): Promise<ServiceOverride[]> {
+  return listOverrides({ slug: opts.slug, startDate: BASE_PRICE_DATE, endDate: BASE_PRICE_DATE });
 }
 
 export async function listOverrides(opts: {

@@ -7,6 +7,7 @@ import { Star, Clock, Check, Hotel, MountainSnow, TreePine, Package, Car, Wind }
 import { formatPrice } from "@/lib/utils";
 import { useT } from "@/lib/i18n/I18nProvider";
 import { useUiText } from "@/lib/i18n/uiText";
+import { LivePrice } from "@/components/pricing/LivePrice";
 import type { ServiceItem } from "@/data/services/catalog";
 
 const CATEGORY_ICON: Record<ServiceItem["category"], typeof Wind> = {
@@ -158,7 +159,11 @@ export function ServiceCard({ item, ctaHref }: ServiceCardProps) {
                   </div>
                 )}
                 <div className="text-2xl font-extrabold text-primary leading-none">
-                  {formatPrice(item.adultPrice, item.currency)}
+                  <LivePrice
+                    slug={item.slug}
+                    fallback={item.adultPrice}
+                    format={(n) => formatPrice(n, item.currency)}
+                  />
                 </div>
                 <div className="text-[10px] text-slate-500 mt-1">{item.priceUnit === "couple" ? ui.serviceCard.perCouple : t.component.layout.service_card.kisi_basi}</div>
               </>

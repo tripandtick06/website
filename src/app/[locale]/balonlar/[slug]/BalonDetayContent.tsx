@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { formatPrice } from "@/lib/utils";
+import { LivePrice } from "@/components/pricing/LivePrice";
 import { useT, useLocale } from "@/lib/i18n/I18nProvider";
 import { tBalloon, tFaq } from "@/lib/i18n/localizeData";
 import { FAQ_ITEMS } from "@/data/faq";
@@ -222,7 +223,11 @@ export function BalonDetayContent({
                   {formatPrice(pkg.marketPrice, pkg.currency)}
                 </div>
                 <div className="text-4xl font-extrabold text-primary leading-none mb-1">
-                  {formatPrice(pkg.adultPrice, pkg.currency)}
+                  <LivePrice
+                    slug={pkg.slug}
+                    fallback={pkg.adultPrice}
+                    format={(n) => formatPrice(n, pkg.currency)}
+                  />
                 </div>
                 <div className="text-xs text-success font-semibold mb-5">
                   %{Math.round(((pkg.marketPrice - pkg.adultPrice) / pkg.marketPrice) * 100)}{" "}

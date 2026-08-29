@@ -9,7 +9,7 @@
 //             cancellationReason?, delayMinutes?, note?, priceOnRequest?, dynamicPricing? }
 
 import { NextResponse, type NextRequest } from "next/server";
-import { getOverride } from "@/lib/db/service-overrides";
+import { getOverride, getBaseOverride } from "@/lib/db/service-overrides";
 import { BALLOON_PACKAGES } from "@/data/services/balloons";
 import { ACTIVITIES, TOURS, HOTELS, PACKAGES, TRANSFERS } from "@/data/services/catalog";
 
@@ -67,12 +67,22 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: "Hizmet bulunamadi" }, { status: 404 });
   }
 
-  const override = await getOverride(slug, date).catch((err) => {
-    console.error("[api/price] getOverride failed", err);
-    return null;
-  });
+  const [override, baseOverride] = await Promise.all([
+    getOverride(slug, date).catch((err) => {
+      console.error("[api/price] getOverride failed", err);
+      return null;
+    }),
+    getBaseOverride(slug).catch((err) => {
+      console.error("[api/price] getBaseOverride failed", err);
+      return null;
+    }),
+  ]);
 
-  const effectivePrice = override?.priceOverride ?? catalog.adultPrice;
+  // Fiyat zinciri: dateOverride.priceOverride ?? baseOverride.priceOverride ?? catalog.adultPrice.
+  // Tarih-ozel satir price_override=null ama status set edilmis olabilir (ornek: iptal
+  // notu ile fiyat dokunulmamis) — bu durumda da fiyat base/katalog'a duser.
+  const basePrice = baseOverride?.priceOverride ?? null;
+  const effectivePrice = override?.priceOverride ?? basePrice ?? catalog.adultPrice;
   const status = override?.status ?? "active";
 
   return NextResponse.json(
@@ -81,8 +91,9 @@ export async function GET(req: NextRequest) {
       name: catalog.name,
       date,
       catalogPrice: catalog.adultPrice,
+      basePrice,
       effectivePrice,
-      currency: override?.currency ?? catalog.currency,
+      currency: override?.currency ?? baseOverride?.currency ?? catalog.currency,
       status,
       cancellationReason: override?.cancellationReason ?? null,
       delayMinutes: override?.delayMinutes ?? null,

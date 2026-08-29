@@ -7,7 +7,7 @@
 // Catalog priceOnRequest → ok:false + status 400.
 // Catalog yok → ok:false + status 404.
 
-import { getOverride, type ServiceOverride } from "@/lib/db/service-overrides";
+import { getOverride, getBaseOverride, type ServiceOverride } from "@/lib/db/service-overrides";
 import { BALLOON_PACKAGES } from "@/data/services/balloons";
 import { ACTIVITIES, TOURS, HOTELS, PACKAGES, TRANSFERS } from "@/data/services/catalog";
 
@@ -105,7 +105,12 @@ export async function computeServerTotal(input: PricingInput): Promise<PricingRe
       error: "Bu hizmet icin direkt online odeme yok — telefon/WhatsApp ile iletisime gecin.",
     };
   }
-  const override = await getOverride(input.serviceSlug, input.date).catch(() => null);
+  const [override, baseOverride] = await Promise.all([
+    getOverride(input.serviceSlug, input.date).catch(() => null),
+    getBaseOverride(input.serviceSlug).catch(() => null),
+  ]);
+  // Sadece tarih-ozel override status'u checkout'u bloklar — base-fiyat satiri
+  // (BASE_PRICE_DATE) hicbir zaman bloklamaz/bildirim tetiklemez, sadece fiyat sagliyor.
   if (override?.status === "cancelled" || override?.status === "sold_out") {
     return {
       ok: false,
@@ -118,7 +123,9 @@ export async function computeServerTotal(input: PricingInput): Promise<PricingRe
     };
   }
 
-  const effectiveAdultPrice = override?.priceOverride ?? catalog.adultPrice;
+  // Fiyat zinciri: dateOverride.priceOverride ?? baseOverride.priceOverride ?? catalog.adultPrice.
+  const effectiveAdultPrice =
+    override?.priceOverride ?? baseOverride?.priceOverride ?? catalog.adultPrice;
   const pax = input.adults + input.children;
   const adultsLine = input.adults * effectiveAdultPrice;
   const childrenLine = Math.round(input.children * effectiveAdultPrice * catalog.childRatio);
@@ -130,7 +137,7 @@ export async function computeServerTotal(input: PricingInput): Promise<PricingRe
   return {
     ok: true,
     serverTotal,
-    currency: override?.currency ?? catalog.currency,
+    currency: override?.currency ?? baseOverride?.currency ?? catalog.currency,
     catalog,
     override,
     breakdown: { adultsLine, childrenLine, insuranceLine, preDiscount, discount },

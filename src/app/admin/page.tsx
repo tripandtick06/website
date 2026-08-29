@@ -51,6 +51,11 @@ import { generateReferralCode, getReferralStats } from "@/lib/referral";
 import { CAMPAIGNS, type EmailCampaign } from "@/data/email-campaigns";
 
 const ADMIN_AUTH_KEY = "tripandtick:admin:auth";
+// Taban fiyat override tarihi — sabit "1970-01-01" satiri, tarihe-ozel override yoksa
+// tum tarihlerde gecerli olan taban fiyati tasir (bkz. /api/admin/service-override).
+const BASE_OVERRIDE_DATE = "1970-01-01";
+// x-admin-token — /admin/fiyat/page.tsx ile ayni pattern (env yoksa demo fallback).
+const ADMIN_TOKEN = process.env.NEXT_PUBLIC_ADMIN_TOKEN ?? "demo-admin-token-rotate-me";
 
 type Tab =
   | "dashboard"
@@ -300,75 +305,272 @@ function WeatherCard() {
   );
 }
 
-function PricesTab() {
-  const [packages, setPackages] = useState(() => BALLOON_PACKAGES.map((p) => ({ ...p })));
+// Taban fiyat editoru icin satir sekli — kategori bagimsiz ortak alanlar.
+interface PriceRow {
+  slug: string;
+  name: string;
+  catalogPrice: number;
+  currency: string;
+  priceOnRequest?: boolean;
+}
 
-  function updatePrice(idx: number, field: "adultPrice" | "marketPrice", value: number) {
-    setPackages((prev) => prev.map((p, i) => (i === idx ? { ...p, [field]: value } : p)));
+interface PriceCategoryGroup {
+  key: string;
+  label: string;
+  items: PriceRow[];
+}
+
+// service-override tablosundaki taban-fiyat satiri (date = BASE_OVERRIDE_DATE).
+interface BaseOverride {
+  serviceSlug: string;
+  date: string;
+  priceOverride: number | null;
+  currency: string;
+  status: string;
+  updatedBy: string | null;
+  updatedAt: string;
+}
+
+function buildPriceCategoryGroups(): PriceCategoryGroup[] {
+  return [
+    {
+      key: "balon",
+      label: "Balon Paketleri",
+      items: BALLOON_PACKAGES.map((p) => ({ slug: p.slug, name: p.name, catalogPrice: p.adultPrice, currency: p.currency })),
+    },
+    {
+      key: "aktivite",
+      label: "Aktiviteler",
+      items: ACTIVITIES.map((s) => ({ slug: s.slug, name: s.name, catalogPrice: s.adultPrice, currency: s.currency })),
+    },
+    {
+      key: "tur",
+      label: "Turlar",
+      items: TOURS.map((s) => ({ slug: s.slug, name: s.name, catalogPrice: s.adultPrice, currency: s.currency })),
+    },
+    {
+      key: "otel",
+      label: "Oteller",
+      items: HOTELS.map((s) => ({ slug: s.slug, name: s.name, catalogPrice: s.adultPrice, currency: s.currency, priceOnRequest: s.priceOnRequest })),
+    },
+    {
+      key: "paket",
+      label: "Paketler",
+      items: PACKAGES.map((s) => ({ slug: s.slug, name: s.name, catalogPrice: s.adultPrice, currency: s.currency })),
+    },
+    {
+      key: "transfer",
+      label: "Transferler",
+      items: TRANSFERS.map((s) => ({ slug: s.slug, name: s.name, catalogPrice: s.adultPrice, currency: s.currency })),
+    },
+  ];
+}
+
+function PricesTab() {
+  const groups = useMemo(() => buildPriceCategoryGroups(), []);
+  const totalCount = useMemo(() => groups.reduce((sum, g) => sum + g.items.length, 0), [groups]);
+
+  const [overridesBySlug, setOverridesBySlug] = useState<Record<string, BaseOverride>>({});
+  const [inputs, setInputs] = useState<Record<string, string>>({});
+  const [loading, setLoading] = useState(true);
+  const [loadError, setLoadError] = useState<string | null>(null);
+  const [rowState, setRowState] = useState<Record<string, { kind: "ok" | "err" | "saving"; msg?: string }>>({});
+
+  const loadOverrides = useCallback(async () => {
+    setLoading(true);
+    setLoadError(null);
+    try {
+      // NOT: GET route su an (slug yoksa) `date` parametresini yoksayip listOverrides'i
+      // startDate/endDate ile cagiriyor — bu yuzden slugsuz tek-gunluk filtre icin
+      // startDate=endDate=BASE_OVERRIDE_DATE kullaniyoruz (bkz. src/app/api/admin/service-override/route.ts GET).
+      const res = await fetch(
+        `/api/admin/service-override?startDate=${BASE_OVERRIDE_DATE}&endDate=${BASE_OVERRIDE_DATE}`,
+        { headers: { "x-admin-token": ADMIN_TOKEN } }
+      );
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      const list: BaseOverride[] = Array.isArray(data.overrides) ? data.overrides : [];
+      const map: Record<string, BaseOverride> = {};
+      for (const o of list) map[o.serviceSlug] = o;
+      setOverridesBySlug(map);
+    } catch (err) {
+      setLoadError(err instanceof Error ? err.message : "Taban fiyatlar yuklenemedi");
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    void loadOverrides();
+  }, [loadOverrides]);
+
+  function inputValue(slug: string): string {
+    if (inputs[slug] !== undefined) return inputs[slug];
+    const ov = overridesBySlug[slug];
+    return ov?.priceOverride != null ? String(ov.priceOverride) : "";
+  }
+
+  async function handleSave(slug: string) {
+    const raw = inputValue(slug).trim();
+    if (raw === "") {
+      setRowState((p) => ({ ...p, [slug]: { kind: "err", msg: "Fiyat girin (temizlemek icin Temizle kullanin)" } }));
+      return;
+    }
+    const num = Number(raw);
+    if (!Number.isFinite(num) || num <= 0) {
+      setRowState((p) => ({ ...p, [slug]: { kind: "err", msg: "Gecersiz fiyat" } }));
+      return;
+    }
+    setRowState((p) => ({ ...p, [slug]: { kind: "saving" } }));
+    try {
+      const res = await fetch("/api/admin/service-override", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "x-admin-token": ADMIN_TOKEN },
+        body: JSON.stringify({
+          slug,
+          date: BASE_OVERRIDE_DATE,
+          priceOverride: num,
+          status: overridesBySlug[slug]?.status ?? "active",
+          updatedBy: "admin-panel",
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error ?? `HTTP ${res.status}`);
+      setRowState((p) => ({ ...p, [slug]: { kind: "ok", msg: "Kaydedildi" } }));
+      setInputs((p) => {
+        const next = { ...p };
+        delete next[slug];
+        return next;
+      });
+      await loadOverrides();
+    } catch (err) {
+      setRowState((p) => ({ ...p, [slug]: { kind: "err", msg: err instanceof Error ? err.message : "Kaydetme hatasi" } }));
+    }
+  }
+
+  async function handleClear(slug: string) {
+    setRowState((p) => ({ ...p, [slug]: { kind: "saving" } }));
+    try {
+      const res = await fetch(
+        `/api/admin/service-override?slug=${encodeURIComponent(slug)}&date=${BASE_OVERRIDE_DATE}`,
+        { method: "DELETE", headers: { "x-admin-token": ADMIN_TOKEN } }
+      );
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      setRowState((p) => ({ ...p, [slug]: { kind: "ok", msg: "Temizlendi — katalog fiyati gecerli" } }));
+      setInputs((p) => {
+        const next = { ...p };
+        delete next[slug];
+        return next;
+      });
+      await loadOverrides();
+    } catch (err) {
+      setRowState((p) => ({ ...p, [slug]: { kind: "err", msg: err instanceof Error ? err.message : "Silme hatasi" } }));
+    }
   }
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
       <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm">
-        <p className="font-semibold text-amber-900 mb-1">Günlük dinamik fiyat + iptal/rotar</p>
+        <p className="font-semibold text-amber-900 mb-1">Taban fiyat override — tum {totalCount} hizmet</p>
         <p className="text-amber-800 text-xs mb-2">
-          Tarihe özel fiyat override, hava iptal ve rotar yönetimi için yeni paneli kullanın.
+          Buradaki fiyat, o hizmet icin tarihe-ozel bir override yoksa TUM tarihlerde gecerli taban
+          fiyattir (canli site burayi okur). Belirli bir gun icin fiyat/iptal/rotar yonetimi ayri
+          panelde.
         </p>
         <Link href="/admin/fiyat" className="inline-block bg-amber-500 hover:bg-amber-600 text-white text-xs font-semibold px-3 py-1.5 rounded-lg">
-          Fiyat & İptal Paneline Git →
+          Günlük Fiyat & İptal Paneline Git →
         </Link>
       </div>
-    <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-x-auto">
-      <table className="w-full text-sm">
-        <thead className="bg-slate-50 text-left text-slate-600 border-b border-slate-200">
-          <tr>
-            <th className="p-4">Slug</th>
-            <th className="p-4">Paket Adı</th>
-            <th className="p-4">Sure</th>
-            <th className="p-4 text-right">Yetiskin €</th>
-            <th className="p-4 text-right">Piyasa €</th>
-            <th className="p-4 text-right">Marj</th>
-          </tr>
-        </thead>
-        <tbody>
-          {packages.map((p, i) => {
-            const margin = p.marketPrice ? Math.round(((p.marketPrice - p.adultPrice) / p.marketPrice) * 100) : 0;
-            return (
-              <tr key={p.slug} className="border-b border-slate-100 hover:bg-slate-50">
-                <td className="p-4 font-mono text-xs text-slate-500">{p.slug}</td>
-                <td className="p-4 font-medium">{p.name}</td>
-                <td className="p-4 text-slate-600">{p.duration}</td>
-                <td className="p-4 text-right">
-                  <input
-                    type="number"
-                    value={p.adultPrice}
-                    onChange={(e) => updatePrice(i, "adultPrice", Number(e.target.value))}
-                    className="w-24 text-right border border-slate-200 rounded px-2 py-1"
-                  />
-                </td>
-                <td className="p-4 text-right">
-                  <input
-                    type="number"
-                    value={p.marketPrice}
-                    onChange={(e) => updatePrice(i, "marketPrice", Number(e.target.value))}
-                    className="w-24 text-right border border-slate-200 rounded px-2 py-1"
-                  />
-                </td>
-                <td className={cn("p-4 text-right font-medium", margin > 0 ? "text-emerald-600" : "text-slate-400")}>
-                  {margin}%
-                </td>
+
+      {loadError && (
+        <div className="bg-rose-50 border border-rose-200 text-rose-700 text-xs rounded-lg p-3">
+          Taban fiyatlar yuklenemedi: {loadError}. Asagida katalog fiyatlari gosteriliyor, canli
+          degerler eski olabilir — "Yenile" ile tekrar deneyin.
+          <button onClick={() => void loadOverrides()} className="ml-2 underline font-semibold">Yenile</button>
+        </div>
+      )}
+
+      {groups.map((group) => (
+        <div key={group.key} className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-x-auto">
+          <div className="px-4 py-3 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
+            <h3 className="font-bold text-slate-900">{group.label}</h3>
+            <span className="text-xs text-slate-500">{group.items.length} hizmet</span>
+          </div>
+          <table className="w-full text-sm">
+            <thead className="text-left text-slate-500 border-b border-slate-100">
+              <tr>
+                <th className="p-3">Hizmet</th>
+                <th className="p-3 text-right">Katalog Fiyati</th>
+                <th className="p-3 text-right">Guncel Canli Deger</th>
+                <th className="p-3 text-right">Taban Fiyat Override</th>
+                <th className="p-3"></th>
               </tr>
-            );
-          })}
-        </tbody>
-      </table>
-      <div className="p-4 bg-slate-50 border-t border-slate-200 flex items-center justify-between">
-        <p className="text-xs text-slate-500">Faz 2: Supabase persist + audit log.</p>
-        <button className="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg text-sm font-semibold">
-          Değişiklikleri Kaydet (Demo)
-        </button>
-      </div>
-    </div>
+            </thead>
+            <tbody>
+              {group.items.map((item) => {
+                const ov = overridesBySlug[item.slug];
+                const hasOverride = ov?.priceOverride != null;
+                const liveValue = hasOverride ? (ov?.priceOverride as number) : item.catalogPrice;
+                const state = rowState[item.slug];
+                return (
+                  <tr key={item.slug} className="border-b border-slate-50 last:border-b-0 hover:bg-slate-50">
+                    <td className="p-3">
+                      <div className="font-medium text-slate-900">{item.name}</div>
+                      <div className="font-mono text-[10px] text-slate-400">{item.slug}</div>
+                      {item.priceOnRequest && (
+                        <span className="inline-block mt-1 bg-slate-200 text-slate-600 text-[10px] font-semibold px-1.5 py-0.5 rounded">
+                          fiyat sorunuz
+                        </span>
+                      )}
+                    </td>
+                    <td className="p-3 text-right text-slate-400">{formatPrice(item.catalogPrice, item.currency)}</td>
+                    <td className="p-3 text-right font-semibold text-slate-700">
+                      {formatPrice(liveValue, item.currency)}
+                      {hasOverride && <span className="ml-1 text-[10px] font-semibold text-emerald-600">override</span>}
+                    </td>
+                    <td className="p-3 text-right">
+                      <input
+                        type="number"
+                        step="0.01"
+                        min="0"
+                        value={inputValue(item.slug)}
+                        onChange={(e) => setInputs((p) => ({ ...p, [item.slug]: e.target.value }))}
+                        placeholder={String(item.catalogPrice)}
+                        className="w-24 text-right border border-slate-200 rounded px-2 py-1"
+                      />
+                    </td>
+                    <td className="p-3">
+                      <div className="flex items-center justify-end gap-2">
+                        <button
+                          onClick={() => void handleSave(item.slug)}
+                          disabled={state?.kind === "saving"}
+                          className="bg-amber-500 hover:bg-amber-600 text-white text-xs font-semibold px-3 py-1.5 rounded-lg disabled:opacity-50"
+                        >
+                          {state?.kind === "saving" ? "..." : "Kaydet"}
+                        </button>
+                        <button
+                          onClick={() => void handleClear(item.slug)}
+                          disabled={state?.kind === "saving" || !hasOverride}
+                          className="text-rose-600 hover:underline text-xs font-semibold disabled:opacity-30 disabled:no-underline"
+                        >
+                          Temizle
+                        </button>
+                      </div>
+                      {state && state.kind !== "saving" && state.msg && (
+                        <div className={cn("text-[10px] mt-1 text-right", state.kind === "ok" ? "text-emerald-600" : "text-rose-600")}>
+                          {state.msg}
+                        </div>
+                      )}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      ))}
+
+      {loading && <p className="text-xs text-slate-400 text-center">Yukleniyor...</p>}
     </div>
   );
 }

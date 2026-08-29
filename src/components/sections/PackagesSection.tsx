@@ -14,6 +14,16 @@ import {
 } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { useT } from "@/lib/i18n/I18nProvider";
+import { LivePrice } from "@/components/pricing/LivePrice";
+import { BALLOON_PACKAGES } from "@/data/services/balloons";
+import { PACKAGES } from "@/data/services/catalog";
+
+/** Slug ile katalogda garanti bulunan bir kaydi getirir (build-time statik veri). */
+function findOrThrow<T extends { slug: string }>(arr: T[], slug: string): T {
+  const found = arr.find((x) => x.slug === slug);
+  if (!found) throw new Error(`PackagesSection: katalogda bulunamadi — ${slug}`);
+  return found;
+}
 
 interface PackageCardProps {
   badge: string;
@@ -21,7 +31,9 @@ interface PackageCardProps {
   title: string;
   meta: { icon: React.ReactNode; text: string }[];
   includes: string[];
+  slug: string;
   marketPrice: number;
+  /** Katalog (fallback) fiyati — canli taban fiyat varsa LivePrice ile degisir. */
   price: number;
   unit: string;
   gradient: string;
@@ -38,6 +50,7 @@ function PackageCard({
   title,
   meta,
   includes,
+  slug,
   marketPrice,
   price,
   unit,
@@ -96,7 +109,9 @@ function PackageCard({
         <div className="flex items-center justify-between pt-4 border-t border-slate-100">
           <div>
             <div className="text-sm text-slate-400 line-through">{marketLabel}: €{marketPrice}</div>
-            <div className="text-2xl font-black text-primary">€{price}</div>
+            <div className="text-2xl font-black text-primary">
+              <LivePrice slug={slug} fallback={price} format={(n) => `€${n}`} />
+            </div>
             <div className="text-xs text-slate-500">{unit}</div>
           </div>
           <Link href={href as ComponentProps<typeof Link>["href"]} className="btn-accent flex items-center gap-2 !text-sm !py-2.5 !px-5">
@@ -113,6 +128,11 @@ export function PackagesSection() {
   const marketLabel = t.packages_section.market_price;
   const reserveLabel = t.packages_section.reserve;
   const ps = t.component.sections.packages;
+
+  // Katalogdan gercek fiyatlari cek — hardcoded stale degerler yasak (bkz. catalog.ts).
+  const standartBalon = findOrThrow(BALLOON_PACKAGES, "standart-balon-ucusu");
+  const balayiPaketi = findOrThrow(PACKAGES, "balayi-paketi");
+  const maceraPaketi = findOrThrow(PACKAGES, "macera-paketi");
 
   return (
     <section className="section-padding bg-white">
@@ -147,13 +167,14 @@ export function PackagesSection() {
               ps.standart_include_sertifika,
               ps.standart_include_sampanya,
             ]}
-            marketPrice={200}
-            price={165}
+            slug={standartBalon.slug}
+            marketPrice={standartBalon.marketPrice}
+            price={standartBalon.adultPrice}
             unit={ps.unit_kisi_basi}
             gradient="bg-gradient-to-br from-primary to-accent"
             icon={<Wind className="w-24 h-24 text-white" />}
             photo="/images/balloons/standart-balon-ucusu.jpg"
-            href="/rezervasyon/standart-balon-ucusu"
+            href={`/rezervasyon/${standartBalon.slug}`}
           />
 
           <PackageCard
@@ -174,13 +195,14 @@ export function PackagesSection() {
               ps.balayi_include_cicek_dekor,
               ps.balayi_include_fotograf,
             ]}
-            marketPrice={680}
-            price={560}
+            slug={balayiPaketi.slug}
+            marketPrice={balayiPaketi.marketPrice ?? balayiPaketi.adultPrice}
+            price={balayiPaketi.adultPrice}
             unit={ps.unit_2_kisi_toplam}
             gradient="bg-gradient-to-br from-[#4A1A8B] to-accent"
             icon={<Heart className="w-24 h-24 text-white" />}
             photo="/images/packages/balayi-paketi.jpg"
-            href="/rezervasyon/balayi-paketi"
+            href={`/rezervasyon/${balayiPaketi.slug}`}
           />
 
           <PackageCard
@@ -201,13 +223,14 @@ export function PackagesSection() {
               ps.macera_include_transferler,
               ps.macera_include_rehber,
             ]}
-            marketPrice={280}
-            price={229}
+            slug={maceraPaketi.slug}
+            marketPrice={maceraPaketi.marketPrice ?? maceraPaketi.adultPrice}
+            price={maceraPaketi.adultPrice}
             unit={ps.unit_kisi_basi}
             gradient="bg-gradient-to-br from-[#1A6B2B] to-[#4BBE6A]"
             icon={<Zap className="w-24 h-24 text-white" />}
             photo="/images/activities/atv-sunset.jpg"
-            href="/rezervasyon/macera-paketi"
+            href={`/rezervasyon/${maceraPaketi.slug}`}
           />
         </div>
 
