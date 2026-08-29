@@ -472,6 +472,20 @@ export const ARTICLES: BlogArticleMeta[] = [
     "coverImage": "/images/blog/cappadocia-hot-air-balloon-price-2026.jpg"
   },
   {
+    "file": "en-cappadocia-hot-air-balloon-safety-guide-en.json",
+    "slug": "cappadocia-hot-air-balloon-safety-guide-en",
+    "title": "Cappadocia Hot Air Balloon Safety Guide — Rules, Weather and What to Expect",
+    "metaTitle": "Cappadocia Hot Air Balloon Safety Guide | Göreme Flights | Trip and Tick",
+    "metaDescription": "Cappadocia hot air balloon safety guide: how flights are licensed and regulated, why weather cancels them, briefing rules, landing position and who can fly.",
+    "excerpt": "How safe are hot air balloon flights over Göreme? A practical safety guide to Cappadocia ballooning: who licenses operators, why mornings get cancelled, what the pre-flight briefing covers, the landing brace position, and health and age restrictions.",
+    "category": "",
+    "tags": [],
+    "targetKeyword": "",
+    "locale": "en",
+    "seoScore": 0,
+    "isAiGenerated": false
+  },
+  {
     "file": "en-cappadocia-winter-2026-guide.json",
     "slug": "cappadocia-winter-2026-guide",
     "title": "Cappadocia in Winter 2026 — Complete Travel Guide (Snow, Balloons, Hotels)",
