@@ -479,9 +479,14 @@ export const ARTICLES: BlogArticleMeta[] = [
     "metaDescription": "Cappadocia hot air balloon safety guide: how flights are licensed and regulated, why weather cancels them, briefing rules, landing position and who can fly.",
     "excerpt": "How safe are hot air balloon flights over Göreme? A practical safety guide to Cappadocia ballooning: who licenses operators, why mornings get cancelled, what the pre-flight briefing covers, the landing brace position, and health and age restrictions.",
     "category": "",
-    "tags": [],
+    "tags": [
+      "cappadocia",
+      "balloon",
+      "safety"
+    ],
     "targetKeyword": "",
     "locale": "en",
+    "publishedAt": "2026-08-29T10:11:36.170785+00:00",
     "seoScore": 0,
     "isAiGenerated": false
   },
