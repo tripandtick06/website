@@ -491,6 +491,26 @@ export const ARTICLES: BlogArticleMeta[] = [
     "isAiGenerated": false
   },
   {
+    "file": "en-cappadocia-hotel-booking-guide-en.json",
+    "slug": "cappadocia-hotel-booking-guide-en",
+    "title": "Cappadocia Hotel Booking Guide — Cave Hotels in Göreme, Ürgüp and Uçhisar",
+    "metaTitle": "Cappadocia Hotel Booking Guide | Göreme Cave Hotels | Trip and Tick",
+    "metaDescription": "Cappadocia hotel booking guide: how to choose between Göreme, Ürgüp and Uçhisar, when to book cave hotels, and what a balloon-view room really means.",
+    "excerpt": "Where should you stay in Cappadocia, and when should you reserve? A practical hotel booking guide to Göreme, Ürgüp, Uçhisar, Ortahisar and Avanos: how cave hotels really work, which rooms face the balloons at sunrise, and what to confirm before you pay.",
+    "category": "blog",
+    "tags": [
+      "cappadocia",
+      "hotel",
+      "booking",
+      "guide"
+    ],
+    "targetKeyword": "카파도키아 호텔 예약",
+    "locale": "en",
+    "publishedAt": "2026-08-29T11:48:40.856689+00:00",
+    "seoScore": 80,
+    "isAiGenerated": true
+  },
+  {
     "file": "en-cappadocia-winter-2026-guide.json",
     "slug": "cappadocia-winter-2026-guide",
     "title": "Cappadocia in Winter 2026 — Complete Travel Guide (Snow, Balloons, Hotels)",
