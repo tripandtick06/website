@@ -33,29 +33,6 @@ export interface BlogArticleMeta {
 
 export const ARTICLES: BlogArticleMeta[] = [
   {
-    "file": "az-best-time-cappadocia-balloon.json",
-    "slug": "best-time-cappadocia-balloon-az",
-    "title": "Kapadokya Balon Uçuşu Üçün Ən Yaxşı Zaman — Ay-Ay Bələdçi (2026)",
-    "metaTitle": "Kapadokya Balon Uçuşu Üçün Ən Yaxşı Zaman 2026: Ay-Ay | Trip and Tick",
-    "metaDescription": "Kapadokya isti hava balonu uçuşu üçün ən yaxşı zaman nədir? 2026-cı il üçün ay-ay uçuş günləri, hava, izdiham və qiymətlər. Aprel-İyun və Sentyabr-Oktyabr ideal dövrdür — tam məlumat burada.",
-    "excerpt": "Kapadokya balon uçuşu üçün ən yaxşı zaman aprel ayının sonlarından iyun ayına və sentyabr ayından oktyabr ayına qədərdir — yüksək uçuş günləri, mülayim günəş doğuşu temperaturu və sabit küləklər. Bu ay-ay bələdçi uçuş etibarlılığı, hava, izdiham və qiymətləri ətraflı şəkildə təqdim edir ki, mükəmməl tarixi seçə biləsiniz.",
-    "category": "balon-turlari",
-    "tags": [
-      "cappadocia",
-      "balloon",
-      "best time",
-      "when to go",
-      "2026",
-      "weather"
-    ],
-    "targetKeyword": "best time for cappadocia balloon",
-    "locale": "az",
-    "publishedAt": "2026-05-31T00:00:00.000Z",
-    "seoScore": 94,
-    "isAiGenerated": true,
-    "coverImage": "/images/blog/best-time-cappadocia-balloon.jpg"
-  },
-  {
     "file": "az-cappadocia-hot-air-balloon-price-2026.json",
     "slug": "cappadocia-hot-air-balloon-price-2026-az",
     "title": "Kapadokya İsti Hava Balonu Qiymətləri 2026 — Tam Bələdçi",
@@ -263,29 +240,6 @@ export const ARTICLES: BlogArticleMeta[] = [
     "coverImage": "/images/blog/kapadokya-otel-tavsiye-2026.jpg"
   },
   {
-    "file": "de-best-time-cappadocia-balloon.json",
-    "slug": "best-time-cappadocia-balloon-de",
-    "title": "Beste Zeit für einen Ballonflug in Kappadokien — Monat-für-Monat-Guide (2026)",
-    "metaTitle": "Beste Zeit für Ballonflug Kappadokien 2026: Monat für Monat | Trip and Tick",
-    "metaDescription": "Wann ist die beste Zeit für einen Heißluftballonflug in Kappadokien? Monat-für-Monat Flugtag-Raten, Wetter, Andrang und Preise für 2026. April-Juni und September-Oktober sind ideal — alle Daten im Detail.",
-    "excerpt": "Die beste Zeit für einen Ballonflug in Kappadokien ist Ende April bis Juni und September bis Oktober — hohe Flugtag-Raten, milde Temperaturen bei Sonnenaufgang und stabile Winde. Dieser Monat-für-Monat-Guide schlüsselt Flugzuverlässigkeit, Wetter, Andrang und Preise auf, damit Sie den perfekten Termin wählen können.",
-    "category": "balon-turlari",
-    "tags": [
-      "kappadokien",
-      "ballon",
-      "beste zeit",
-      "wann reisen",
-      "2026",
-      "wetter"
-    ],
-    "targetKeyword": "beste zeit kappadokien ballon",
-    "locale": "de",
-    "publishedAt": "2026-05-31T00:00:00.000Z",
-    "seoScore": 94,
-    "isAiGenerated": true,
-    "coverImage": "/images/blog/best-time-cappadocia-balloon.jpg"
-  },
-  {
     "file": "de-cappadocia-winter-2026-guide.json",
     "slug": "cappadocia-winter-2026-guide-de",
     "title": "Kappadokien im Winter 2026 — Kompletter Reiseführer (Schnee, Ballons, Hotels)",
@@ -471,27 +425,29 @@ export const ARTICLES: BlogArticleMeta[] = [
     "coverImage": "/images/blog/kapadokya-otel-tavsiye-2026.jpg"
   },
   {
-    "file": "en-best-time-cappadocia-balloon.json",
-    "slug": "best-time-cappadocia-balloon",
-    "title": "Best Time for a Cappadocia Balloon Flight — Month-by-Month Guide (2026)",
-    "metaTitle": "Best Time for Cappadocia Balloon Flight 2026: Month-by-Month | Trip and Tick",
-    "metaDescription": "When is the best time for a Cappadocia hot air balloon flight? Month-by-month fly-day rates, weather, crowds and prices for 2026. April-June and September-October are the sweet spot — full data inside.",
-    "excerpt": "The best time for a Cappadocia balloon flight is late April to June and September to October — high fly-day rates, mild sunrise temperatures, and stable winds. This month-by-month guide breaks down flight reliability, weather, crowds and prices so you can pick the perfect date.",
-    "category": "balon-turlari",
+    "file": "en-3-gunluk-kapadokya-gezi-plani.json",
+    "slug": "3-gunluk-kapadokya-gezi-plani-en",
+    "title": "3-Day Cappadocia Itinerary (2026)",
+    "metaTitle": "3-Day Cappadocia Itinerary 2026 | Trip and Tick",
+    "metaDescription": "3-day Cappadocia itinerary 2026: day-by-day balloon flight, Red/Green Tour, ATV and horseback riding, cave hotel picks. A complete guide with real booking links.",
+    "excerpt": "You can see Cappadocia in a balanced way over 3 days: one sunrise balloon flight, two full days of culture and nature touring, and flexible evening options. A day-by-day plan with real booking links and a budget summary.",
+    "category": "rehber",
     "tags": [
       "cappadocia",
-      "balloon",
-      "best time",
-      "when to go",
+      "itinerary",
+      "3-day",
+      "trip plan",
       "2026",
-      "weather"
+      "balloon",
+      "red tour",
+      "green tour"
     ],
-    "targetKeyword": "best time for cappadocia balloon",
+    "targetKeyword": "cappadocia 3 day itinerary",
     "locale": "en",
-    "publishedAt": "2026-05-31T00:00:00.000Z",
-    "seoScore": 94,
-    "isAiGenerated": false,
-    "coverImage": "/images/blog/best-time-cappadocia-balloon.jpg"
+    "publishedAt": "2026-08-29T00:00:00.000Z",
+    "seoScore": 90,
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/kapadokya-aktiviteler.jpg"
   },
   {
     "file": "en-cappadocia-hot-air-balloon-price-2026.json",
@@ -582,6 +538,29 @@ export const ARTICLES: BlogArticleMeta[] = [
     "seoScore": 90,
     "isAiGenerated": true,
     "coverImage": "/images/blog/kapadokya-aktiviteler.jpg"
+  },
+  {
+    "file": "en-kapadokya-balon-turu-guvenli-mi.json",
+    "slug": "kapadokya-balon-turu-guvenli-mi-en",
+    "title": "Is a Cappadocia Hot Air Balloon Ride Safe? (2026)",
+    "metaTitle": "Is a Cappadocia Hot Air Balloon Ride Safe? 2026 | Trip and Tick",
+    "metaDescription": "Is a Cappadocia balloon ride safe? SHGM licensing, €40 million insurance, weather cancellation policy, and an honest pros & cons breakdown for 2026.",
+    "excerpt": "Is a Cappadocia hot air balloon ride safe? Short answer: yes — SHGM-licensed operators, €40 million insurance, and strict weather protocols. This guide covers the real safety mechanisms, cancellation policy, and an honest set of pros and cons.",
+    "category": "balon-turlari",
+    "tags": [
+      "cappadocia",
+      "balloon tour",
+      "safety",
+      "SHGM",
+      "insurance",
+      "2026"
+    ],
+    "targetKeyword": "is cappadocia hot air balloon ride safe",
+    "locale": "en",
+    "publishedAt": "2026-08-29T00:00:00.000Z",
+    "seoScore": 90,
+    "isAiGenerated": true,
+    "coverImage": "/images/blog/best-time-cappadocia-balloon.jpg"
   },
   {
     "file": "en-kapadokya-dugun-fotografciligi-rehberi.json",
@@ -699,29 +678,6 @@ export const ARTICLES: BlogArticleMeta[] = [
     "seoScore": 91,
     "isAiGenerated": true,
     "coverImage": "/images/blog/kapadokya-otel-tavsiye-2026.jpg"
-  },
-  {
-    "file": "es-best-time-cappadocia-balloon.json",
-    "slug": "best-time-cappadocia-balloon-es",
-    "title": "La Mejor Época para Volar en Globo en Capadocia — Guía Mes a Mes (2026)",
-    "metaTitle": "Mejor Época para Volar en Globo en Capadocia 2026: Mes a Mes | Trip and Tick",
-    "metaDescription": "¿Cuál es la mejor época para un vuelo en globo aerostático en Capadocia? Tasas de días de vuelo mes a mes, clima, multitudes y precios para 2026. Abril-junio y septiembre-octubre son el punto óptimo — todos los datos dentro.",
-    "excerpt": "La mejor época para un vuelo en globo en Capadocia es de finales de abril a junio y de septiembre a octubre: altas tasas de días de vuelo, temperaturas suaves al amanecer y vientos estables. Esta guía mes a mes desglosa la fiabilidad de los vuelos, el clima, las multitudes y los precios para que elijas la fecha perfecta.",
-    "category": "balon-turlari",
-    "tags": [
-      "capadocia",
-      "globo",
-      "mejor época",
-      "cuándo ir",
-      "2026",
-      "clima"
-    ],
-    "targetKeyword": "mejor época para volar en globo en capadocia",
-    "locale": "es",
-    "publishedAt": "2026-05-31T00:00:00.000Z",
-    "seoScore": 94,
-    "isAiGenerated": true,
-    "coverImage": "/images/blog/best-time-cappadocia-balloon.jpg"
   },
   {
     "file": "es-cappadocia-winter-2026-guide.json",
@@ -909,29 +865,6 @@ export const ARTICLES: BlogArticleMeta[] = [
     "coverImage": "/images/blog/kapadokya-otel-tavsiye-2026.jpg"
   },
   {
-    "file": "fr-best-time-cappadocia-balloon.json",
-    "slug": "best-time-cappadocia-balloon-fr",
-    "title": "Meilleure période pour un vol en montgolfière en Cappadoce — Guide mois par mois (2026)",
-    "metaTitle": "Meilleure période montgolfière Cappadoce 2026 : mois par mois | Trip and Tick",
-    "metaDescription": "Quelle est la meilleure période pour un vol en montgolfière en Cappadoce ? Taux de vol, météo, affluence et prix mois par mois pour 2026. Avril-juin et septembre-octobre sont la période idéale — toutes les données à l'intérieur.",
-    "excerpt": "La meilleure période pour un vol en montgolfière en Cappadoce s'étend de fin avril à juin et de septembre à octobre — taux de vol élevés, températures douces au lever du soleil et vents stables. Ce guide mois par mois détaille la fiabilité des vols, la météo, l'affluence et les prix pour vous aider à choisir la date parfaite.",
-    "category": "balon-turlari",
-    "tags": [
-      "cappadoce",
-      "montgolfière",
-      "meilleure période",
-      "quand partir",
-      "2026",
-      "météo"
-    ],
-    "targetKeyword": "meilleure période montgolfière cappadoce",
-    "locale": "fr",
-    "publishedAt": "2026-05-31T00:00:00.000Z",
-    "seoScore": 94,
-    "isAiGenerated": true,
-    "coverImage": "/images/blog/best-time-cappadocia-balloon.jpg"
-  },
-  {
     "file": "fr-cappadocia-winter-2026-guide.json",
     "slug": "cappadocia-winter-2026-guide-fr",
     "title": "La Cappadoce en hiver 2026 — Guide de voyage complet (neige, montgolfières, hôtels)",
@@ -1117,29 +1050,6 @@ export const ARTICLES: BlogArticleMeta[] = [
     "coverImage": "/images/blog/kapadokya-otel-tavsiye-2026.jpg"
   },
   {
-    "file": "hi-best-time-cappadocia-balloon.json",
-    "slug": "best-time-cappadocia-balloon-hi",
-    "title": "कैपाडोसिया बैलून उड़ान के लिए सबसे अच्छा समय — महीने-दर-महीने गाइड (2026)",
-    "metaTitle": "कैपाडोसिया बैलून उड़ान का सबसे अच्छा समय 2026: महीने-दर-महीने | Trip and Tick",
-    "metaDescription": "कैपाडोसिया हॉट एयर बैलून उड़ान के लिए सबसे अच्छा समय कब है? 2026 के लिए महीने-दर-महीने उड़ान-दिवस दर, मौसम, भीड़ और कीमतें। अप्रैल-जून और सितंबर-अक्टूबर सबसे उपयुक्त समय है — पूरा डेटा अंदर।",
-    "excerpt": "कैपाडोसिया बैलून उड़ान के लिए सबसे अच्छा समय अप्रैल के अंत से जून और सितंबर से अक्टूबर है — ऊंची उड़ान-दिवस दर, हल्के सूर्योदय तापमान और स्थिर हवाएं। यह महीने-दर-महीने गाइड उड़ान विश्वसनीयता, मौसम, भीड़ और कीमतों को विभाजित करती है ताकि आप परफेक्ट तिथि चुन सकें।",
-    "category": "balon-turlari",
-    "tags": [
-      "कैपाडोसिया",
-      "बैलून",
-      "सबसे अच्छा समय",
-      "कब जाएं",
-      "2026",
-      "मौसम"
-    ],
-    "targetKeyword": "कैपाडोसिया बैलून का सबसे अच्छा समय",
-    "locale": "hi",
-    "publishedAt": "2026-05-31T00:00:00.000Z",
-    "seoScore": 94,
-    "isAiGenerated": true,
-    "coverImage": "/images/blog/best-time-cappadocia-balloon.jpg"
-  },
-  {
     "file": "hi-cappadocia-winter-2026-guide.json",
     "slug": "cappadocia-winter-2026-guide-hi",
     "title": "सर्दियों में कैपाडोसिया 2026 — पूरी यात्रा गाइड (बर्फ, बैलून, होटल)",
@@ -1323,29 +1233,6 @@ export const ARTICLES: BlogArticleMeta[] = [
     "seoScore": 91,
     "isAiGenerated": true,
     "coverImage": "/images/blog/kapadokya-otel-tavsiye-2026.jpg"
-  },
-  {
-    "file": "it-best-time-cappadocia-balloon.json",
-    "slug": "best-time-cappadocia-balloon-it",
-    "title": "Il momento migliore per un volo in mongolfiera in Cappadocia — Guida mese per mese (2026)",
-    "metaTitle": "Il momento migliore per un volo in mongolfiera in Cappadocia 2026: mese per mese | Trip and Tick",
-    "metaDescription": "Qual è il momento migliore per un volo in mongolfiera in Cappadocia? Tariffe giornaliere di volo mese per mese, meteo, affollamento e prezzi per il 2026. Aprile-Giugno e Settembre-Ottobre sono i periodi ideali — dati completi all'interno.",
-    "excerpt": "Il momento migliore per un volo in mongolfiera in Cappadocia va dalla fine di Aprile a Giugno e da Settembre a Ottobre — tariffe giornaliere di volo elevate, temperature miti all'alba e venti stabili. Questa guida mese per mese analizza l'affidabilità dei voli, il meteo, l'affollamento e i prezzi così puoi scegliere la data perfetta.",
-    "category": "balon-turlari",
-    "tags": [
-      "cappadocia",
-      "balloon",
-      "best time",
-      "when to go",
-      "2026",
-      "weather"
-    ],
-    "targetKeyword": "best time for cappadocia balloon",
-    "locale": "it",
-    "publishedAt": "2026-05-31T00:00:00.000Z",
-    "seoScore": 94,
-    "isAiGenerated": true,
-    "coverImage": "/images/blog/best-time-cappadocia-balloon.jpg"
   },
   {
     "file": "it-cappadocia-hot-air-balloon-price-2026.json",
@@ -1555,29 +1442,6 @@ export const ARTICLES: BlogArticleMeta[] = [
     "coverImage": "/images/blog/kapadokya-otel-tavsiye-2026.jpg"
   },
   {
-    "file": "ja-best-time-cappadocia-balloon.json",
-    "slug": "best-time-cappadocia-balloon-ja",
-    "title": "カッパドキアの気球フライトに最適な時期 — 月ごとのガイド (2026)",
-    "metaTitle": "カッパドキアの気球フライトに最適な時期 2026: 月ごとのガイド | Trip and Tick",
-    "metaDescription": "カッパドキアの熱気球フライトに最適な時期はいつですか？月ごとのフライトデータ、天候、混雑、価格を2026年のためにまとめました。4月から6月、9月から10月がベストシーズンです — 詳細は中にあります。",
-    "excerpt": "カッパドキアの気球フライトに最適な時期は、4月下旬から6月、9月から10月です — フライトデーの高い割合、穏やかな日の出の気温、安定した風が特徴です。この月ごとのガイドでは、フライトの信頼性、天候、混雑、価格を分かりやすく解説し、完璧な日付を選ぶ手助けをします。",
-    "category": "balon-turlari",
-    "tags": [
-      "cappadocia",
-      "balloon",
-      "best time",
-      "when to go",
-      "2026",
-      "weather"
-    ],
-    "targetKeyword": "best time for cappadocia balloon",
-    "locale": "ja",
-    "publishedAt": "2026-05-31T00:00:00.000Z",
-    "seoScore": 94,
-    "isAiGenerated": true,
-    "coverImage": "/images/blog/best-time-cappadocia-balloon.jpg"
-  },
-  {
     "file": "ja-cappadocia-hot-air-balloon-price-2026.json",
     "slug": "cappadocia-hot-air-balloon-price-2026-ja",
     "title": "カッパドキアの熱気球料金 2026年 — 完全ガイド",
@@ -1783,29 +1647,6 @@ export const ARTICLES: BlogArticleMeta[] = [
     "seoScore": 91,
     "isAiGenerated": true,
     "coverImage": "/images/blog/kapadokya-otel-tavsiye-2026.jpg"
-  },
-  {
-    "file": "ko-best-time-cappadocia-balloon.json",
-    "slug": "best-time-cappadocia-balloon-ko",
-    "title": "카파도키아 열기구 비행을 위한 최고의 시기 — 월별 가이드 (2026)",
-    "metaTitle": "카파도키아 열기구 비행을 위한 최고의 시기 2026: 월별 | Trip and Tick",
-    "metaDescription": "카파도키아 열기구 비행을 위한 최고의 시기는 언제인가요? 2026년 월별 비행일 요금, 날씨, 인파 및 가격. 4월-6월과 9월-10월이 최적의 시기입니다 — 자세한 내용은 내부를 확인하세요.",
-    "excerpt": "카파도키아 열기구 비행을 위한 최고의 시기는 4월 말부터 6월과 9월부터 10월까지입니다 — 높은 비행일 요금, 온화한 일출 기온 및 안정적인 바람이 특징입니다. 이 월별 가이드는 비행 신뢰성, 날씨, 인파 및 가격을 분석하여 완벽한 날짜를 선택할 수 있도록 도와줍니다.",
-    "category": "balon-turlari",
-    "tags": [
-      "cappadocia",
-      "balloon",
-      "best time",
-      "when to go",
-      "2026",
-      "weather"
-    ],
-    "targetKeyword": "best time for cappadocia balloon",
-    "locale": "ko",
-    "publishedAt": "2026-05-31T00:00:00.000Z",
-    "seoScore": 94,
-    "isAiGenerated": true,
-    "coverImage": "/images/blog/best-time-cappadocia-balloon.jpg"
   },
   {
     "file": "ko-cappadocia-hot-air-balloon-price-2026.json",
@@ -2015,29 +1856,6 @@ export const ARTICLES: BlogArticleMeta[] = [
     "coverImage": "/images/blog/kapadokya-otel-tavsiye-2026.jpg"
   },
   {
-    "file": "nl-best-time-cappadocia-balloon.json",
-    "slug": "best-time-cappadocia-balloon-nl",
-    "title": "Beste Tijd voor een Ballonvlucht in Cappadocië — Maand voor Maand Gids (2026)",
-    "metaTitle": "Beste Tijd Ballonvlucht Cappadocië 2026: Maand voor Maand | Trip and Tick",
-    "metaDescription": "Wanneer is de beste tijd voor een heteluchtballonvlucht in Cappadocië? Maand voor maand vluchtkansen, weer, drukte en prijzen voor 2026. April-juni en september-oktober zijn de sweet spot — volledige data binnenin.",
-    "excerpt": "De beste tijd voor een ballonvlucht in Cappadocië is eind april tot juni en september tot oktober — hoge vluchtkansen, milde temperaturen bij zonsopgang en stabiele winden. Deze maand-voor-maandgids beschrijft de vluchtbetrouwbaarheid, het weer, de drukte en de prijzen zodat u de perfecte datum kunt kiezen.",
-    "category": "balon-turlari",
-    "tags": [
-      "cappadocië",
-      "ballon",
-      "beste tijd",
-      "wanneer gaan",
-      "2026",
-      "weer"
-    ],
-    "targetKeyword": "beste tijd ballonvlucht cappadocië",
-    "locale": "nl",
-    "publishedAt": "2026-05-31T00:00:00.000Z",
-    "seoScore": 94,
-    "isAiGenerated": true,
-    "coverImage": "/images/blog/best-time-cappadocia-balloon.jpg"
-  },
-  {
     "file": "nl-cappadocia-winter-2026-guide.json",
     "slug": "cappadocia-winter-2026-guide-nl",
     "title": "Cappadocië in de Winter 2026 — Complete Reisgids (Sneeuw, Ballonnen, Hotels)",
@@ -2221,29 +2039,6 @@ export const ARTICLES: BlogArticleMeta[] = [
     "seoScore": 91,
     "isAiGenerated": true,
     "coverImage": "/images/blog/kapadokya-otel-tavsiye-2026.jpg"
-  },
-  {
-    "file": "pt-BR-best-time-cappadocia-balloon.json",
-    "slug": "best-time-cappadocia-balloon-pt-BR",
-    "title": "Melhor Época para um Voo de Balão na Cappadocia — Guia Mês a Mês (2026)",
-    "metaTitle": "Melhor Época para Voo de Balão na Cappadocia 2026: Mês a Mês | Trip and Tick",
-    "metaDescription": "Quando é a melhor época para um voo de balão na Cappadocia? Tarifas de voos mês a mês, clima, multidões e preços para 2026. Abril-Junho e Setembro-Outubro são os períodos ideais — dados completos dentro.",
-    "excerpt": "A melhor época para um voo de balão na Cappadocia é de final de abril a junho e de setembro a outubro — altas taxas de voos, temperaturas amenas ao amanhecer e ventos estáveis. Este guia mês a mês detalha a confiabilidade dos voos, clima, multidões e preços para que você possa escolher a data perfeita.",
-    "category": "balon-turlari",
-    "tags": [
-      "cappadocia",
-      "balloon",
-      "best time",
-      "when to go",
-      "2026",
-      "weather"
-    ],
-    "targetKeyword": "best time for cappadocia balloon",
-    "locale": "pt-BR",
-    "publishedAt": "2026-05-31T00:00:00.000Z",
-    "seoScore": 94,
-    "isAiGenerated": true,
-    "coverImage": "/images/blog/best-time-cappadocia-balloon.jpg"
   },
   {
     "file": "pt-BR-cappadocia-hot-air-balloon-price-2026.json",
@@ -2453,29 +2248,6 @@ export const ARTICLES: BlogArticleMeta[] = [
     "coverImage": "/images/blog/kapadokya-otel-tavsiye-2026.jpg"
   },
   {
-    "file": "pt-best-time-cappadocia-balloon.json",
-    "slug": "best-time-cappadocia-balloon-pt",
-    "title": "Melhor Época para um Voo de Balão na Capadócia — Guia Mês a Mês (2026)",
-    "metaTitle": "Melhor Época para Voo de Balão na Capadócia 2026: Mês a Mês | Trip and Tick",
-    "metaDescription": "Quando é a melhor época para um voo de balão de ar quente na Capadócia? Tarifas de voos, clima, multidões e preços mês a mês para 2026. Abril-Junho e Setembro-Outubro são os períodos ideais — dados completos dentro.",
-    "excerpt": "A melhor época para um voo de balão na Capadócia é de final de Abril a Junho e de Setembro a Outubro — altas taxas de voos, temperaturas amenas ao amanhecer e ventos estáveis. Este guia mês a mês detalha a fiabilidade dos voos, clima, multidões e preços para que você possa escolher a data perfeita.",
-    "category": "balon-turlari",
-    "tags": [
-      "cappadocia",
-      "balloon",
-      "best time",
-      "when to go",
-      "2026",
-      "weather"
-    ],
-    "targetKeyword": "best time for cappadocia balloon",
-    "locale": "pt",
-    "publishedAt": "2026-05-31T00:00:00.000Z",
-    "seoScore": 94,
-    "isAiGenerated": true,
-    "coverImage": "/images/blog/best-time-cappadocia-balloon.jpg"
-  },
-  {
     "file": "pt-cappadocia-hot-air-balloon-price-2026.json",
     "slug": "cappadocia-hot-air-balloon-price-2026-pt",
     "title": "Preços de Balões de Ar Quente na Capadócia 2026 — Guia Completo",
@@ -2681,29 +2453,6 @@ export const ARTICLES: BlogArticleMeta[] = [
     "seoScore": 91,
     "isAiGenerated": true,
     "coverImage": "/images/blog/kapadokya-otel-tavsiye-2026.jpg"
-  },
-  {
-    "file": "ru-best-time-cappadocia-balloon.json",
-    "slug": "best-time-cappadocia-balloon-ru",
-    "title": "Лучшее время для полета на воздушном шаре в Каппадокии — по месяцам (2026)",
-    "metaTitle": "Лучшее время для полета на воздушном шаре в Каппадокии 2026: по месяцам | Trip and Tick",
-    "metaDescription": "Когда лучше всего летать на воздушном шаре в Каппадокии? Цены на полеты по месяцам, погода, толпы и цены на 2026 год. Апрель-июнь и сентябрь-октябрь — идеальное время — полные данные внутри.",
-    "excerpt": "Лучшее время для полета на воздушном шаре в Каппадокии — с конца апреля по июнь и с сентября по октябрь — высокие цены на полеты, мягкие температуры на рассвете и стабильные ветры. Этот гид по месяцам разбивает надежность полетов, погоду, толпы и цены, чтобы вы могли выбрать идеальную дату.",
-    "category": "balon-turlari",
-    "tags": [
-      "cappadocia",
-      "balloon",
-      "best time",
-      "when to go",
-      "2026",
-      "weather"
-    ],
-    "targetKeyword": "best time for cappadocia balloon",
-    "locale": "ru",
-    "publishedAt": "2026-05-31T00:00:00.000Z",
-    "seoScore": 94,
-    "isAiGenerated": true,
-    "coverImage": "/images/blog/best-time-cappadocia-balloon.jpg"
   },
   {
     "file": "ru-cappadocia-hot-air-balloon-price-2026.json",
@@ -3147,29 +2896,6 @@ export const ARTICLES: BlogArticleMeta[] = [
     "coverImage": "/images/blog/kapadokya-otel-tavsiye-2026.jpg"
   },
   {
-    "file": "uk-best-time-cappadocia-balloon.json",
-    "slug": "best-time-cappadocia-balloon-uk",
-    "title": "Найкращий час для польоту на повітряній кулі в Каппадокії — покроковий гід по місяцях (2026)",
-    "metaTitle": "Найкращий час для польоту на повітряній кулі в Каппадокії 2026: покроковий гід | Trip and Tick",
-    "metaDescription": "Коли найкращий час для польоту на повітряній кулі в Каппадокії? Ціни на дні польотів по місяцях, погода, натовпи та ціни на 2026 рік. Квітень-червень та вересень-жовтень — найкращі місяці — всі дані всередині.",
-    "excerpt": "Найкращий час для польоту на повітряній кулі в Каппадокії — з кінця квітня до червня та з вересня до жовтня — високі ціни на дні польотів, помірні температури на світанку та стабільні вітри. Цей покроковий гід розкриває надійність польотів, погоду, натовпи та ціни, щоб ви могли вибрати ідеальну дату.",
-    "category": "balon-turlari",
-    "tags": [
-      "cappadocia",
-      "balloon",
-      "best time",
-      "when to go",
-      "2026",
-      "weather"
-    ],
-    "targetKeyword": "best time for cappadocia balloon",
-    "locale": "uk",
-    "publishedAt": "2026-05-31T00:00:00.000Z",
-    "seoScore": 94,
-    "isAiGenerated": true,
-    "coverImage": "/images/blog/best-time-cappadocia-balloon.jpg"
-  },
-  {
     "file": "uk-cappadocia-hot-air-balloon-price-2026.json",
     "slug": "cappadocia-hot-air-balloon-price-2026-uk",
     "title": "Ціни на повітряні кулі в Каппадокії 2026 — Повний посібник",
@@ -3377,29 +3103,6 @@ export const ARTICLES: BlogArticleMeta[] = [
     "coverImage": "/images/blog/kapadokya-otel-tavsiye-2026.jpg"
   },
   {
-    "file": "ur-best-time-cappadocia-balloon.json",
-    "slug": "best-time-cappadocia-balloon-ur",
-    "title": "Cappadocia بیلون پرواز کے لیے بہترین وقت — ماہ بہ ماہ گائیڈ (2026)",
-    "metaTitle": "Cappadocia بیلون پرواز کے لیے بہترین وقت 2026: ماہ بہ ماہ | Trip and Tick",
-    "metaDescription": "Cappadocia ہاٹ ایئر بیلون پرواز کے لیے بہترین وقت کب ہے؟ 2026 کے لیے ماہ بہ ماہ پرواز کے دنوں کی شرح، موسم، رش اور قیمتیں۔ اپریل-جون اور ستمبر-اکتوبر بہترین موقع ہیں — مکمل ڈیٹا اندر۔",
-    "excerpt": "Cappadocia بیلون پرواز کے لیے بہترین وقت اپریل کے آخر سے جون تک اور ستمبر سے اکتوبر تک ہے — پرواز کے دنوں کی زیادہ شرح، معتدل طلوعِ آفتاب درجہ حرارت، اور مستحکم ہوائیں۔ یہ ماہ بہ ماہ گائیڈ پرواز کی بھروسے مندی، موسم، رش اور قیمتوں کو تفصیل سے بیان کرتی ہے تاکہ آپ بہترین تاریخ منتخب کر سکیں۔",
-    "category": "balon-turlari",
-    "tags": [
-      "Cappadocia",
-      "بیلون",
-      "بہترین وقت",
-      "کب جائیں",
-      "2026",
-      "موسم"
-    ],
-    "targetKeyword": "Cappadocia بیلون کے لیے بہترین وقت",
-    "locale": "ur",
-    "publishedAt": "2026-05-31T00:00:00.000Z",
-    "seoScore": 94,
-    "isAiGenerated": true,
-    "coverImage": "/images/blog/best-time-cappadocia-balloon.jpg"
-  },
-  {
     "file": "ur-cappadocia-winter-2026-guide.json",
     "slug": "cappadocia-winter-2026-guide-ur",
     "title": "سردیوں میں Cappadocia 2026 — مکمل سفری گائیڈ (برف، غبارے، ہوٹل)",
@@ -3583,29 +3286,6 @@ export const ARTICLES: BlogArticleMeta[] = [
     "seoScore": 91,
     "isAiGenerated": true,
     "coverImage": "/images/blog/kapadokya-otel-tavsiye-2026.jpg"
-  },
-  {
-    "file": "zh-best-time-cappadocia-balloon.json",
-    "slug": "best-time-cappadocia-balloon-zh",
-    "title": "卡帕多奇亚热气球飞行的最佳时间 — 逐月指南（2026）",
-    "metaTitle": "卡帕多奇亚热气球飞行最佳时间 2026：逐月指南 | Trip and Tick",
-    "metaDescription": "卡帕多奇亚热气球飞行的最佳时间是何时？2026 年逐月可飞天数、天气、人流与价格。四至六月和九至十月是黄金时段——完整数据尽在文内。",
-    "excerpt": "卡帕多奇亚热气球飞行的最佳时间是四月下旬至六月以及九月至十月——高可飞率、温和的日出气温、稳定的风。本逐月指南拆解飞行可靠性、天气、人流与价格，助你选定完美日期。",
-    "category": "balon-turlari",
-    "tags": [
-      "卡帕多奇亚",
-      "热气球",
-      "最佳时间",
-      "何时去",
-      "2026",
-      "天气"
-    ],
-    "targetKeyword": "卡帕多奇亚热气球最佳时间",
-    "locale": "zh",
-    "publishedAt": "2026-05-31T00:00:00.000Z",
-    "seoScore": 94,
-    "isAiGenerated": true,
-    "coverImage": "/images/blog/best-time-cappadocia-balloon.jpg"
   },
   {
     "file": "zh-cappadocia-winter-2026-guide.json",
