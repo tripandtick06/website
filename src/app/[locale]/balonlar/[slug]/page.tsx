@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 export const runtime = "edge";
+export const dynamicParams = false;
 
 import { JsonLd } from "@/components/layout/JsonLd";
 import { BALLOON_PACKAGES, getBalloonPackageBySlug } from "@/data/services/balloons";
@@ -38,7 +39,7 @@ export function generateMetadata({ params }: PageParams): Metadata {
   const geo = loc === "tr" ? "Kapadokya" : "Cappadocia";
   const ogTitle = `${pkg.name} — ${geo} ${priceLabel}`;
   return {
-    title: `${pkg.name} — ${geo} ${priceLabel} | Trip and Tick`,
+    title: `${pkg.name} — ${geo} ${priceLabel}`,
     description: pkg.shortDescription,
     alternates: {
       canonical: canonicalFor(path, params.locale),

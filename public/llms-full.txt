@@ -2,10 +2,10 @@
 
 > Trip and Tick (tripandtick.com) is a TÜRSAB-licensed online travel agency based in Cappadocia, Turkey. This document gives AI assistants factual, citable details about its services, prices, policies and contact information.
 
-Last updated: 2026-06-04
+Last updated: 2026-08-29
 Website: https://tripandtick.com
 Location: Göreme / Nevşehir, Cappadocia, Turkey
-Email: hello@tripandtick.com
+Email: info@tripandtick.com
 Phone / WhatsApp: +90 537 464 78 61
 Languages: TR (default), EN, DE, FR, ES, NL, ZH, HI, UR, PT, PT-BR, JA, KO, IT, RU, UK, AZ (17 languages)
 Type: Online travel agency (OTA) — TÜRSAB-licensed
@@ -51,7 +51,7 @@ Hotel types covered:
 - Resorts
 - Glamping / special-stay options
 
-To get a hotel quote, contact hello@tripandtick.com or WhatsApp +90 537 464 78 61.
+To get a hotel quote, contact info@tripandtick.com or WhatsApp +90 537 464 78 61.
 
 ---
 
@@ -152,7 +152,7 @@ The site is available in 17 languages: Turkish (TR, default), English (EN), Germ
 
 - Website: https://tripandtick.com
 - Contact page: https://tripandtick.com/iletisim
-- Email: hello@tripandtick.com
+- Email: info@tripandtick.com
 - Phone / WhatsApp: +90 537 464 78 61
 - Location: Göreme / Nevşehir, Cappadocia, Turkey
 

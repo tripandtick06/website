@@ -9,38 +9,45 @@ import { generateHreflang } from "@/lib/hreflang";
 // Auto-consumed by Next.js → /sitemap.xml. No source-file importer.
 // Faz 4.1: TR canonical + alternates.languages for 9 locales.
 
+// Honest lastModified dates: each constant mirrors the real last-commit date
+// of its source file (`git log -1 --format=%cs -- <file>`), not build time.
+// Update the date here whenever the corresponding source file next changes.
+const BALLOONS_UPDATED_AT = new Date("2026-05-25"); // src/data/services/balloons.ts
+const CATALOG_UPDATED_AT = new Date("2026-06-03"); // src/data/services/catalog.ts (hotels/activities/tours/packages/transfers/pillars)
+const OPERATORS_UPDATED_AT = new Date("2026-05-15"); // src/data/services/operators.ts
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   const url = (p: string) => `${SITE_URL}${p === "/" ? "" : p}`;
   const alt = (p: string) => ({ languages: generateHreflang(p) });
 
   const staticPages: MetadataRoute.Sitemap = [
-    { url: url("/"), lastModified: now, changeFrequency: "daily", priority: 1.0, alternates: alt("/") },
-    { url: url("/balonlar"), lastModified: now, changeFrequency: "daily", priority: 0.9, alternates: alt("/balonlar") },
-    { url: url("/kapadokya"), lastModified: now, changeFrequency: "weekly", priority: 0.8, alternates: alt("/kapadokya") },
-    { url: url("/oteller"), lastModified: now, changeFrequency: "weekly", priority: 0.8, alternates: alt("/oteller") },
-    { url: url("/aktiviteler"), lastModified: now, changeFrequency: "weekly", priority: 0.8, alternates: alt("/aktiviteler") },
-    { url: url("/turlar"), lastModified: now, changeFrequency: "weekly", priority: 0.8, alternates: alt("/turlar") },
-    { url: url("/paketler"), lastModified: now, changeFrequency: "weekly", priority: 0.8, alternates: alt("/paketler") },
-    { url: url("/transferler"), lastModified: now, changeFrequency: "weekly", priority: 0.7, alternates: alt("/transferler") },
-    { url: url("/operatorler"), lastModified: now, changeFrequency: "weekly", priority: 0.7, alternates: alt("/operatorler") },
-    { url: url("/blog"), lastModified: now, changeFrequency: "daily", priority: 0.7, alternates: alt("/blog") },
-    { url: url("/sss"), lastModified: now, changeFrequency: "monthly", priority: 0.7, alternates: alt("/sss") },
-    { url: url("/yorum"), lastModified: now, changeFrequency: "weekly", priority: 0.5, alternates: alt("/yorum") },
-    { url: url("/hakkimizda"), lastModified: now, changeFrequency: "monthly", priority: 0.5, alternates: alt("/hakkimizda") },
-    { url: url("/iletisim"), lastModified: now, changeFrequency: "monthly", priority: 0.5, alternates: alt("/iletisim") },
-    { url: url("/gizlilik-politikasi"), lastModified: now, changeFrequency: "yearly", priority: 0.3, alternates: alt("/gizlilik-politikasi") },
-    { url: url("/kullanim-sartlari"), lastModified: now, changeFrequency: "yearly", priority: 0.3, alternates: alt("/kullanim-sartlari") },
-    { url: url("/iptal-iade-politikasi"), lastModified: now, changeFrequency: "yearly", priority: 0.3, alternates: alt("/iptal-iade-politikasi") },
-    { url: url("/cerez-politikasi"), lastModified: now, changeFrequency: "yearly", priority: 0.3, alternates: alt("/cerez-politikasi") },
-    { url: url("/kvkk"), lastModified: now, changeFrequency: "yearly", priority: 0.3, alternates: alt("/kvkk") },
-    { url: url("/gdpr"), lastModified: now, changeFrequency: "yearly", priority: 0.3, alternates: alt("/gdpr") },
-    { url: url("/impressum"), lastModified: now, changeFrequency: "yearly", priority: 0.3, alternates: alt("/impressum") },
+    { url: url("/"), lastModified: new Date("2026-06-03"), changeFrequency: "daily", priority: 1.0, alternates: alt("/") },
+    { url: url("/balonlar"), lastModified: new Date("2026-06-04"), changeFrequency: "daily", priority: 0.9, alternates: alt("/balonlar") },
+    { url: url("/kapadokya"), lastModified: new Date("2026-06-04"), changeFrequency: "weekly", priority: 0.8, alternates: alt("/kapadokya") },
+    { url: url("/oteller"), lastModified: new Date("2026-06-04"), changeFrequency: "weekly", priority: 0.8, alternates: alt("/oteller") },
+    { url: url("/aktiviteler"), lastModified: new Date("2026-06-04"), changeFrequency: "weekly", priority: 0.8, alternates: alt("/aktiviteler") },
+    { url: url("/turlar"), lastModified: new Date("2026-06-04"), changeFrequency: "weekly", priority: 0.8, alternates: alt("/turlar") },
+    { url: url("/paketler"), lastModified: new Date("2026-06-04"), changeFrequency: "weekly", priority: 0.8, alternates: alt("/paketler") },
+    { url: url("/transferler"), lastModified: new Date("2026-06-04"), changeFrequency: "weekly", priority: 0.7, alternates: alt("/transferler") },
+    { url: url("/operatorler"), lastModified: new Date("2026-06-03"), changeFrequency: "weekly", priority: 0.7, alternates: alt("/operatorler") },
+    { url: url("/blog"), lastModified: new Date("2026-06-03"), changeFrequency: "daily", priority: 0.7, alternates: alt("/blog") },
+    { url: url("/sss"), lastModified: new Date("2026-06-03"), changeFrequency: "monthly", priority: 0.7, alternates: alt("/sss") },
+    { url: url("/yorum"), lastModified: new Date("2026-06-03"), changeFrequency: "weekly", priority: 0.5, alternates: alt("/yorum") },
+    { url: url("/hakkimizda"), lastModified: new Date("2026-06-03"), changeFrequency: "monthly", priority: 0.5, alternates: alt("/hakkimizda") },
+    { url: url("/iletisim"), lastModified: new Date("2026-06-03"), changeFrequency: "monthly", priority: 0.5, alternates: alt("/iletisim") },
+    { url: url("/gizlilik-politikasi"), lastModified: new Date("2026-06-03"), changeFrequency: "yearly", priority: 0.3, alternates: alt("/gizlilik-politikasi") },
+    { url: url("/kullanim-sartlari"), lastModified: new Date("2026-06-03"), changeFrequency: "yearly", priority: 0.3, alternates: alt("/kullanim-sartlari") },
+    { url: url("/iptal-iade-politikasi"), lastModified: new Date("2026-06-03"), changeFrequency: "yearly", priority: 0.3, alternates: alt("/iptal-iade-politikasi") },
+    { url: url("/cerez-politikasi"), lastModified: new Date("2026-06-03"), changeFrequency: "yearly", priority: 0.3, alternates: alt("/cerez-politikasi") },
+    { url: url("/kvkk"), lastModified: new Date("2026-06-03"), changeFrequency: "yearly", priority: 0.3, alternates: alt("/kvkk") },
+    { url: url("/gdpr"), lastModified: new Date("2026-06-03"), changeFrequency: "yearly", priority: 0.3, alternates: alt("/gdpr") },
+    { url: url("/impressum"), lastModified: new Date("2026-06-03"), changeFrequency: "yearly", priority: 0.3, alternates: alt("/impressum") },
   ];
 
   const balloonPages: MetadataRoute.Sitemap = BALLOON_PACKAGES.map((pkg) => ({
     url: url(`/balonlar/${pkg.slug}`),
-    lastModified: now,
+    lastModified: BALLOONS_UPDATED_AT,
     changeFrequency: "weekly",
     priority: 0.9,
     alternates: alt(`/balonlar/${pkg.slug}`),
@@ -48,7 +55,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const hotelPages: MetadataRoute.Sitemap = HOTELS.map((h) => ({
     url: url(`/oteller/${h.slug}`),
-    lastModified: now,
+    lastModified: CATALOG_UPDATED_AT,
     changeFrequency: "weekly",
     priority: 0.7,
     alternates: alt(`/oteller/${h.slug}`),
@@ -56,7 +63,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const operatorPages: MetadataRoute.Sitemap = OPERATORS.map((op) => ({
     url: url(`/operatorler/${op.id}`),
-    lastModified: now,
+    lastModified: OPERATORS_UPDATED_AT,
     changeFrequency: "monthly",
     priority: 0.6,
     alternates: alt(`/operatorler/${op.id}`),
@@ -64,7 +71,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const pillarPages: MetadataRoute.Sitemap = KAPADOKYA_PILLARS.map((p) => ({
     url: url(`/blog/${p.slug}`),
-    lastModified: now,
+    lastModified: CATALOG_UPDATED_AT,
     changeFrequency: "weekly",
     priority: 0.7,
     alternates: alt(`/blog/${p.slug}`),
@@ -87,7 +94,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ): MetadataRoute.Sitemap =>
     items.map((it) => ({
       url: url(`${base}/${it.slug}`),
-      lastModified: now,
+      lastModified: CATALOG_UPDATED_AT,
       changeFrequency: "weekly" as const,
       priority,
       alternates: alt(`${base}/${it.slug}`),

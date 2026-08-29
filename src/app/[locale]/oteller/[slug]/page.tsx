@@ -16,6 +16,7 @@ import { serverDict } from "@/lib/i18n/serverDict";
 import { OtelDetayContent } from "./OtelDetayContent";
 
 export const runtime = "edge";
+export const dynamicParams = false;
 
 interface PageParams {
   params: { locale: string; slug: string };
@@ -35,7 +36,7 @@ export function generateMetadata({ params }: PageParams): Metadata {
   const cta = loc === "tr" ? "Bilgi & rezervasyon için bize ulaşın." : "Contact us for info & booking.";
   const enrichedDesc = `${hotel.name} — ${geo}. ${hotel.shortDescription} ${cta}`.slice(0, 154);
   return {
-    title: `${hotel.name} — ${geo} | Trip and Tick`,
+    title: `${hotel.name} — ${geo}`,
     description: enrichedDesc,
     alternates: { canonical: canonicalFor(path, params.locale), languages: generateHreflang(path) },
     openGraph: {

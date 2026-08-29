@@ -4,7 +4,7 @@
 
 Website: https://tripandtick.com
 Contact: https://tripandtick.com/iletisim
-Email: hello@tripandtick.com
+Email: info@tripandtick.com
 Phone / WhatsApp: +90 537 464 78 61
 Location: Göreme / Nevşehir, Cappadocia, Turkey
 Languages: TR (default), EN, DE, FR, ES, NL, ZH, HI, UR, PT, PT-BR, JA, KO, IT, RU, UK, AZ (17 total)

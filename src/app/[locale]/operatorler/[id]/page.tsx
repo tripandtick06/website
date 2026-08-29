@@ -11,6 +11,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 export const runtime = "edge";
+export const dynamicParams = false;
 
 import { JsonLd } from "@/components/layout/JsonLd";
 import { OPERATORS, getOperatorById } from "@/data/services/operators";
@@ -30,12 +31,10 @@ export async function generateMetadata({
   params: { locale: string; id: string };
 }): Promise<Metadata> {
   const op = getOperatorById(params.id);
-  if (!op) return { title: "Operator bulunamadı | Trip and Tick" };
+  if (!op) return { title: "Operator bulunamadı" };
   return {
-    title: `${op.name} — Kapadokya Balon Operatörü | Trip and Tick`,
-    description:
-      op.tagline ??
-      `${op.name} — ${op.founded} kuruluş, SHGM lisanslı, ${op.reviewCount.toLocaleString("tr-TR")}+ yorum. ${op.description.slice(0, 100)}...`,
+    title: `${op.name} — Kapadokya Balon Operatörü`,
+    description: `${op.name} — ${op.founded} kuruluş, SHGM lisans no ${op.licenseNo}, ${op.reviewCount.toLocaleString("tr-TR")}+ yorum, ${op.rating.toFixed(1)}/5 puan. ${op.description.slice(0, 100)}...`,
     alternates: {
       canonical: canonicalFor(`/operatorler/${op.id}`, params.locale),
       languages: generateHreflang(`/operatorler/${op.id}`),

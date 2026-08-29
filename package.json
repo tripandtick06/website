@@ -9,6 +9,7 @@
     "start": "next start",
     "psi": "node scripts/psi-audit.cjs",
     "validate:hreflang": "node scripts/validate-hreflang.cjs",
+    "check:seo": "node scripts/seo-guards.mjs",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",

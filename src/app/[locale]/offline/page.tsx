@@ -9,7 +9,7 @@ export const runtime = "edge";
 // No data file I/O. Static page.
 
 export const metadata: Metadata = {
-  title: "Çevrimdışı — İnternet Bağlantısı Yok | Trip and Tick",
+  title: "Çevrimdışı — İnternet Bağlantısı Yok",
   description:
     "İnternet bağlantınız bulunamadı. Daha önce ziyaret ettiğiniz sayfalar önbellekten görüntülenebilir.",
   robots: { index: false, follow: false },

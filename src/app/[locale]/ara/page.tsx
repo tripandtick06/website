@@ -27,7 +27,7 @@ interface PageProps {
 export function generateMetadata({ searchParams }: PageProps): Metadata {
   const q = (searchParams?.q ?? "").trim();
   return {
-    title: q ? `Arama: "${q}" — Trip and Tick` : "Arama — Trip and Tick",
+    title: q ? `Arama: "${q}"` : "Arama",
     description:
       "Trip and Tick katalogunda balon turu, otel, aktivite, gezi turu, paket ve transfer arayın. Fiyat, puan, süre ve para birimine göre filtreleyin.",
     robots: { index: false, follow: true },

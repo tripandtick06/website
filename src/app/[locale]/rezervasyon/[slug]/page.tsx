@@ -6,6 +6,7 @@ import { ACTIVITIES, TOURS, HOTELS, PACKAGES, TRANSFERS, type ServiceItem } from
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { serverDict } from "@/lib/i18n/serverDict";
 import { tBalloon, tService } from "@/lib/i18n/localizeData";
+import { canonicalFor } from "@/lib/hreflang";
 import { BookingClient, type BookingService } from "./BookingClient";
 
 type Params = { locale: string; slug: string };
@@ -71,6 +72,9 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   return {
     title: d.meta_title_template.replace("{name}", service.name),
     description: d.meta_desc_template.replace("{name}", service.name).replace("{desc}", service.shortDescription),
+    alternates: {
+      canonical: canonicalFor(`/rezervasyon/${params.slug}`, params.locale),
+    },
     robots: { index: false, follow: true },
   };
 }
