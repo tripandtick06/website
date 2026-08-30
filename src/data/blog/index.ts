@@ -450,6 +450,26 @@ export const ARTICLES: BlogArticleMeta[] = [
     "coverImage": "/images/blog/kapadokya-aktiviteler.jpg"
   },
   {
+    "file": "en-cappadocia-balloon-price-breakdown-en.json",
+    "slug": "cappadocia-balloon-price-breakdown-en",
+    "title": "Cappadocia Balloon Flight Prices Explained — Season Tier + Seat Availability + Flight Type",
+    "metaTitle": "Cappadocia Balloon Price Breakdown | Live 7-Day Calendar | Trip and Tick",
+    "metaDescription": "Cappadocia balloon price breakdown: how season tier, seat availability and flight type set your fare, and how to read the live 7-day Göreme calendar.",
+    "excerpt": "Why does the same sunrise flight over Göreme cost one thing today and another thing next Tuesday? A transparent breakdown of Cappadocia balloon pricing — season tier, seat availability and flight type — and how to read the live 7-day calendar before you reserve.",
+    "category": "blog",
+    "tags": [
+      "cappadocia",
+      "balloon",
+      "price",
+      "breakdown"
+    ],
+    "targetKeyword": "Publish dynamic pricing breakdown page: \"Price = [season tier] + [seat availability] + [flight type]\"; show live 7-day calendar",
+    "locale": "en",
+    "publishedAt": "2026-08-30T17:04:56.177787+00:00",
+    "seoScore": 80,
+    "isAiGenerated": true
+  },
+  {
     "file": "en-cappadocia-hot-air-balloon-price-2026.json",
     "slug": "cappadocia-hot-air-balloon-price-2026",
     "title": "Cappadocia Hot Air Balloon Prices 2026 — Complete Guide",
