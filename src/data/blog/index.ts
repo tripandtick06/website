@@ -531,6 +531,27 @@ export const ARTICLES: BlogArticleMeta[] = [
     "isAiGenerated": true
   },
   {
+    "file": "en-cappadocia-kaya-balon-rock-valley-flights-en.json",
+    "slug": "cappadocia-kaya-balon-rock-valley-flights-en",
+    "title": "Kaya Balon: What a Rock-Valley Balloon Flight Over Göreme Really Looks Like",
+    "metaTitle": "Kaya Balon Cappadocia | Rock Valley Balloon Flights | Trip and Tick",
+    "metaDescription": "Kaya balon explained: what a rock-valley balloon flight over Göreme and Uçhisar involves, why it launches at dawn, and how to pick your sunrise slot.",
+    "excerpt": "“Kaya balon” is what people here call a balloon flight over Cappadocia’s rock landscape. Here is what that means from inside the basket: which valleys you drift over between Göreme, Uçhisar and Çavuşin, why every flight lifts off in the dark, and what to check before you reserve a sunrise seat.",
+    "category": "blog",
+    "tags": [
+      "cappadocia",
+      "kaya",
+      "balon",
+      "rock",
+      "valley"
+    ],
+    "targetKeyword": "kaya balon",
+    "locale": "en",
+    "publishedAt": "2026-08-31T11:37:49.453039+00:00",
+    "seoScore": 80,
+    "isAiGenerated": true
+  },
+  {
     "file": "en-cappadocia-winter-2026-guide.json",
     "slug": "cappadocia-winter-2026-guide",
     "title": "Cappadocia in Winter 2026 — Complete Travel Guide (Snow, Balloons, Hotels)",
