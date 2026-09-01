@@ -531,6 +531,26 @@ export const ARTICLES: BlogArticleMeta[] = [
     "isAiGenerated": true
   },
   {
+    "file": "en-cappadocia-how-many-people-fit-in-a-hot-air-balloon-en.json",
+    "slug": "cappadocia-how-many-people-fit-in-a-hot-air-balloon-en",
+    "title": "How Many People Can Ride in a Hot Air Balloon in Cappadocia?",
+    "metaTitle": "How Many People Fit in a Balloon? | Cappadocia | Trip and Tick",
+    "metaDescription": "How many people can ride in a hot air balloon over Cappadocia? Basket sizes from private two-seaters to twenty-plus shared baskets, and how to choose.",
+    "excerpt": "“How many people can ride in a balloon?” has no single answer in Cappadocia: baskets over Göreme range from private two-person flights to large shared ones carrying twenty or more. Here is what sets the limit, how standard, comfort and private baskets differ, and what to check before you reserve a sunrise seat.",
+    "category": "blog",
+    "tags": [
+      "cappadocia",
+      "many",
+      "people",
+      "balloon"
+    ],
+    "targetKeyword": "balona kaç kişi binebilir",
+    "locale": "en",
+    "publishedAt": "2026-09-01T11:38:54.035271+00:00",
+    "seoScore": 80,
+    "isAiGenerated": true
+  },
+  {
     "file": "en-cappadocia-kaya-balon-rock-valley-flights-en.json",
     "slug": "cappadocia-kaya-balon-rock-valley-flights-en",
     "title": "Kaya Balon: What a Rock-Valley Balloon Flight Over Göreme Really Looks Like",
