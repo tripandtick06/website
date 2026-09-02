@@ -531,6 +531,27 @@ export const ARTICLES: BlogArticleMeta[] = [
     "isAiGenerated": true
   },
   {
+    "file": "en-cappadocia-hotel-recommendations-where-to-stay-en.json",
+    "slug": "cappadocia-hotel-recommendations-where-to-stay-en",
+    "title": "Cappadocia Hotel Recommendations: Where to Stay in Göreme, Uçhisar and Ürgüp",
+    "metaTitle": "Cappadocia Hotel Recommendations | Where to Stay | Trip and Tick",
+    "metaDescription": "Cappadocia hotel recommendations: how Göreme, Uçhisar, Ürgüp and Ortahisar compare, what a cave hotel is really like, and how to book a balloon-view room.",
+    "excerpt": "Choosing a hotel in Cappadocia is really choosing a village. Göreme, Uçhisar, Ürgüp, Ortahisar and Avanos sit minutes apart but feel nothing alike, and a cave room can be a vaulted suite or a windowless nook. Here is how the areas compare, what to ask before you reserve, and how to line your hotel up with a sunrise balloon flight.",
+    "category": "blog",
+    "tags": [
+      "cappadocia",
+      "hotel",
+      "recommendations",
+      "where",
+      "stay"
+    ],
+    "targetKeyword": "카파도키아 호텔 추천",
+    "locale": "en",
+    "publishedAt": "2026-09-02T11:44:33.721732+00:00",
+    "seoScore": 80,
+    "isAiGenerated": true
+  },
+  {
     "file": "en-cappadocia-how-many-people-fit-in-a-hot-air-balloon-en.json",
     "slug": "cappadocia-how-many-people-fit-in-a-hot-air-balloon-en",
     "title": "How Many People Can Ride in a Hot Air Balloon in Cappadocia?",
