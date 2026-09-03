@@ -470,6 +470,27 @@ export const ARTICLES: BlogArticleMeta[] = [
     "isAiGenerated": true
   },
   {
+    "file": "en-cappadocia-guide-balloons-valleys-and-when-to-go-en.json",
+    "slug": "cappadocia-guide-balloons-valleys-and-when-to-go-en",
+    "title": "Cappadocia (Кападокія): Balloons, Valleys and the Best Time to Go",
+    "metaTitle": "Cappadocia (Кападокія) Guide | Balloons & Valleys | Trip and Tick",
+    "metaDescription": "Cappadocia (Кападокія) guide: where the region is, why balloons fly at sunrise, the best months to visit, and how to plan a Göreme trip that works.",
+    "excerpt": "Cappadocia is a region, not a town: volcanic rock carved into churches and underground cities, five villages minutes apart, and one hour of sunrise flying that the weather decides. Here is where it is, when to come, which valleys are worth your day, and how to plan around a cancelled morning.",
+    "category": "blog",
+    "tags": [
+      "cappadocia",
+      "кападокія",
+      "hot air balloon",
+      "göreme",
+      "turkey travel"
+    ],
+    "targetKeyword": "кападокія",
+    "locale": "en",
+    "publishedAt": "2026-09-03T00:00:00.000Z",
+    "seoScore": 80,
+    "isAiGenerated": true
+  },
+  {
     "file": "en-cappadocia-hot-air-balloon-price-2026.json",
     "slug": "cappadocia-hot-air-balloon-price-2026",
     "title": "Cappadocia Hot Air Balloon Prices 2026 — Complete Guide",
