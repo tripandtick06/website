@@ -822,6 +822,27 @@ export const ARTICLES: BlogArticleMeta[] = [
     "coverImage": "/images/blog/kapadokya-otel-tavsiye-2026.jpg"
   },
   {
+    "file": "en-universal-balon-cappadocia-hot-air-balloon-flights-en.json",
+    "slug": "universal-balon-cappadocia-hot-air-balloon-flights-en",
+    "title": "Universal Balon: How Cappadocia Hot Air Balloon Flights Really Work",
+    "metaTitle": "Universal Balon | Cappadocia Balloon Flights in Göreme | Trip and Tick",
+    "metaDescription": "Searching “universal balon”? How Cappadocia hot air balloon flights work in Göreme, what to compare before booking, and when to fly at sunrise.",
+    "excerpt": "“Universal balon” is how a Cappadocia balloon search usually gets typed: half English, half Turkish. Here is what it means on the ground in Göreme — how sunrise flights are cleared and flown, what separates one basket from another, when to come, and how to plan around a cancelled morning.",
+    "category": "blog",
+    "tags": [
+      "universal",
+      "balon",
+      "cappadocia",
+      "balloon",
+      "flights"
+    ],
+    "targetKeyword": "universal balon",
+    "locale": "en",
+    "publishedAt": "2026-09-04T11:42:29.223732+00:00",
+    "seoScore": 80,
+    "isAiGenerated": true
+  },
+  {
     "file": "es-cappadocia-winter-2026-guide.json",
     "slug": "cappadocia-winter-2026-guide-es",
     "title": "Capadocia en Invierno 2026 — Guía de Viaje Completa (Nieve, Globos, Hoteles)",
