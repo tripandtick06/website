@@ -153,6 +153,11 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
   const typedLocale = locale as Locale;
   return (
     <html lang={typedLocale} dir={LOCALE_DIR[typedLocale]} className={inter.variable}>
+      <head>
+        {/* Aanloop site-acties beacon: counts tel/mailto/WhatsApp/Maps clicks + form
+            submits, POSTs to https://aanloopai.nl/api/visibility/event. No cookies. */}
+        <script src="https://aanloopai.nl/v.js" defer></script>
+      </head>
       <body className="font-sans antialiased">
         <JsonLd data={ORGANIZATION_SCHEMA} />
         <NextIntlClientProvider messages={messages} locale={typedLocale}>
