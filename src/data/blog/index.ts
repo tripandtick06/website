@@ -637,6 +637,27 @@ export const ARTICLES: BlogArticleMeta[] = [
     "coverImage": "/images/blog/cappadocia-winter-2026-guide.jpg"
   },
   {
+    "file": "en-epoca-mais-barata-cappadocia-hot-air-balloon-cheapest-season-en.json",
+    "slug": "epoca-mais-barata-cappadocia-hot-air-balloon-cheapest-season-en",
+    "title": "Época Mais Barata: The Cheapest Season to Fly a Balloon in Cappadocia",
+    "metaTitle": "Época Mais Barata | Cheapest Season for Cappadocia Balloons | Trip and Tick",
+    "metaDescription": "Searching “época mais barata”? When Cappadocia hot air balloon flights cost least, why winter is cheaper in Göreme, and what you trade for the low price.",
+    "excerpt": "“Época mais barata” is a price question typed in Portuguese into a Turkish search: when is the cheapest season to fly a hot air balloon over Cappadocia? Here is what low season actually looks like in Göreme — which months cost least, why winter is cheaper, what you trade for the saving, and how to plan around a cancelled dawn.",
+    "category": "blog",
+    "tags": [
+      "epoca",
+      "mais",
+      "barata",
+      "cappadocia",
+      "balloon"
+    ],
+    "targetKeyword": "época mais barata",
+    "locale": "en",
+    "publishedAt": "2026-09-05T11:40:52.830490+00:00",
+    "seoScore": 80,
+    "isAiGenerated": true
+  },
+  {
     "file": "en-heissluftballon-kappadokien-preise.json",
     "slug": "heissluftballon-kappadokien-preise-buchung-en",
     "title": "Cappadocia Hot Air Balloon 2026 — Prices, Packages & Booking (Standard €165, Deluxe €295)",
