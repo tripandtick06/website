@@ -680,6 +680,27 @@ export const ARTICLES: BlogArticleMeta[] = [
     "coverImage": "/images/blog/heissluftballon-kappadokien-preise-buchung.jpg"
   },
   {
+    "file": "en-international-trip-planning-checklist-cappadocia-hot-air-balloon-en.json",
+    "slug": "international-trip-planning-checklist-cappadocia-hot-air-balloon-en",
+    "title": "International Trip Planning Checklist: From Passport to a Cappadocia Sunrise",
+    "metaTitle": "International Trip Planning Checklist | Cappadocia | Trip and Tick",
+    "metaDescription": "International trip planning checklist for Cappadocia: documents, insurance, flights to Göreme, and booking a sunrise hot air balloon that weather can move.",
+    "excerpt": "An international trip planning checklist is really an order of operations: documents first, then the bookings that cannot move, then everything flexible. Here is that order applied to Cappadocia — passport and e-Visa rules for Türkiye, getting from a long-haul airport to Göreme, insurance wording that matters for a balloon flight, and why a weather-dependent sunrise should be the first thing you reserve.",
+    "category": "blog",
+    "tags": [
+      "international",
+      "trip",
+      "planning",
+      "checklist",
+      "cappadocia"
+    ],
+    "targetKeyword": "international trip planning checklist",
+    "locale": "en",
+    "publishedAt": "2026-09-06T11:41:27.521178+00:00",
+    "seoScore": 80,
+    "isAiGenerated": true
+  },
+  {
     "file": "en-kapadokya-aktiviteler.json",
     "slug": "kapadokya-aktiviteler-en",
     "title": "25 Things to Do in Cappadocia — 2026 Activity Guide",
