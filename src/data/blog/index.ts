@@ -864,6 +864,27 @@ export const ARTICLES: BlogArticleMeta[] = [
     "coverImage": "/images/blog/kapadokya-otel-tavsiye-2026.jpg"
   },
   {
+    "file": "en-travel-planning-checklist-template-cappadocia-hot-air-balloon-en.json",
+    "slug": "travel-planning-checklist-template-cappadocia-hot-air-balloon-en",
+    "title": "Travel Planning Checklist Template: A Copy-and-Adapt List Built Around a Cappadocia Sunrise",
+    "metaTitle": "Travel Planning Checklist Template | Cappadocia | Trip and Tick",
+    "metaDescription": "Travel planning checklist template for Cappadocia: a copy-and-adapt list for documents, flights to Göreme, packing and a weather-dependent balloon flight.",
+    "excerpt": "A travel planning checklist template is only useful if it tells you what to do this week, not everything you will ever need to do. Here is one sorted by time window and filled in for Cappadocia — passport and e-Visa rules for Türkiye, the connection through Kayseri or Nevşehir to Göreme, a packing block for cold dawns, and why the sunrise hot air balloon flight is the first line you complete.",
+    "category": "blog",
+    "tags": [
+      "travel",
+      "planning",
+      "checklist",
+      "template",
+      "cappadocia"
+    ],
+    "targetKeyword": "travel planning checklist template",
+    "locale": "en",
+    "publishedAt": "2026-09-09T11:51:07.188831+00:00",
+    "seoScore": 80,
+    "isAiGenerated": true
+  },
+  {
     "file": "en-universal-balon-cappadocia-hot-air-balloon-flights-en.json",
     "slug": "universal-balon-cappadocia-hot-air-balloon-flights-en",
     "title": "Universal Balon: How Cappadocia Hot Air Balloon Flights Really Work",
