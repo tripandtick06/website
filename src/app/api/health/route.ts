@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { supabaseAdmin, supabaseEnabled } from "@/lib/supabase";
+import { telegramChatIds, telegramPing } from "@/lib/telegram";
 
 export const runtime = "edge";
 export const dynamic = "force-dynamic";
@@ -43,13 +44,16 @@ async function pingBrevo(): Promise<"ok" | "fail" | "disabled"> {
 }
 
 export async function GET() {
-  const [supabasePing, brevoPing] = await Promise.all([pingSupabase(), pingBrevo()]);
+  const [supabasePing, brevoPing, tgPing] = await Promise.all([pingSupabase(), pingBrevo(), telegramPing()]);
 
   const integrations = {
     stripe: stripeMode(),
     stripeWebhook: has("STRIPE_WEBHOOK_SECRET"),
     brevo: has("BREVO_API_KEY"),
     brevoPing,
+    telegram: has("TELEGRAM_BOT_TOKEN") && telegramChatIds().length > 0,
+    telegramChats: telegramChatIds().length,
+    telegramPing: tgPing,
     supabase: has("NEXT_PUBLIC_SUPABASE_URL") && has("NEXT_PUBLIC_SUPABASE_ANON_KEY"),
     supabaseAdmin: has("SUPABASE_SERVICE_ROLE_KEY"),
     supabasePing,
@@ -70,6 +74,7 @@ export async function GET() {
     if (!integrations.supabase) criticalMissing.push("SUPABASE_URL/ANON_KEY");
     if (!integrations.supabaseAdmin) criticalMissing.push("SUPABASE_SERVICE_ROLE_KEY");
     if (!integrations.brevo) criticalMissing.push("BREVO_API_KEY");
+    if (!integrations.telegram) criticalMissing.push("TELEGRAM_BOT_TOKEN/TELEGRAM_CHAT_IDS");
   }
 
   return NextResponse.json({

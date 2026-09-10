@@ -8,6 +8,8 @@
 
 import { NextResponse, type NextRequest } from "next/server";
 import { z } from "zod";
+import { notifyLead } from "@/lib/telegram";
+import { persistLead } from "@/lib/leads";
 
 export const runtime = "edge";
 export const dynamic = "force-dynamic";
@@ -59,6 +61,55 @@ export async function POST(req: NextRequest) {
 
     const d = parsed.data;
     const inquiryId = `HI-${Date.now().toString(36).toUpperCase()}-${Math.random().toString(36).slice(2, 6).toUpperCase()}`;
+
+    // Telegram: birincil lead kanali (Murat + owner). Brevo ile paralel, hata lead'i bozmaz.
+    const telegramSend = notifyLead({
+      source: "hotel",
+      title: `Otel bilgi talebi — ${d.hotelName}`,
+      fields: [
+        ["Ref", inquiryId],
+        ["Müşteri", d.name],
+        ["Telefon", d.phone],
+        ["E-posta", d.email],
+        ["Otel", d.hotelName],
+        ["Segment", tierLabel(d.tier)],
+        ["Bölge", d.region],
+        ["Giriş", d.checkIn],
+        ["Çıkış", d.checkOut],
+        ["Misafir", `${d.adults} yetişkin${d.children ? ` + ${d.children} çocuk` : ""}`],
+        ["Bütçe", d.budget],
+        ["Not", d.preferences],
+      ],
+      note: "Aksiyon: müşteriyi ara, uygun otel + fiyat teklifi gönder.",
+    });
+    const finish = async (emailOk: boolean) => {
+      const telegram = await telegramSend;
+      const persisted = await persistLead({
+        source: "hotel",
+        ref: inquiryId,
+        name: d.name,
+        email: d.email,
+        phone: d.phone,
+        payload: {
+          hotelSlug: d.hotelSlug,
+          hotelName: d.hotelName,
+          tier: d.tier,
+          region: d.region,
+          checkIn: d.checkIn,
+          checkOut: d.checkOut,
+          adults: d.adults,
+          children: d.children,
+          budget: d.budget,
+          preferences: d.preferences,
+        },
+        telegramOk: telegram.ok,
+        emailOk,
+      });
+      if (!telegram.ok && !emailOk && !persisted) {
+        console.error("[api/hotel-inquiry] LEAD HICBIR KANALA ULASMADI", inquiryId, JSON.stringify({ name: d.name, phone: d.phone, email: d.email }));
+      }
+      return { telegram: telegram.ok, email: emailOk };
+    };
 
     const adminHtml = `
       <h2>Yeni Otel Bilgi Talebi (${escapeHtml(inquiryId)})</h2>
@@ -125,20 +176,24 @@ export async function POST(req: NextRequest) {
         customerHtml
       );
 
+      const notified = await finish(adminOk);
       return NextResponse.json({
         success: true,
         inquiryId,
         emailSent: { admin: adminOk, customer: customerOk },
+        notified,
         message: "Talebiniz alındı. 24 saat içinde size dönüş yapılacak.",
       });
     }
 
     console.info("[api/hotel-inquiry] BREVO_API_KEY yok — sadece log", JSON.stringify({ inquiryId, ...d }));
+    const notified = await finish(false);
     return NextResponse.json({
       success: true,
       inquiryId,
       emailSent: { admin: false, customer: false },
-      message: "Talebiniz alındı (demo log).",
+      notified,
+      message: "Talebiniz alındı. 24 saat içinde size dönüş yapılacak.",
     });
   } catch (err) {
     console.error("[api/hotel-inquiry] error", err);

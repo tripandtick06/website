@@ -10,6 +10,7 @@ import {
 import { persistBooking } from "@/lib/db/bookings";
 import { upsertCustomer } from "@/lib/db/customers";
 import { supabaseEnabled } from "@/lib/supabase";
+import { notifyLead } from "@/lib/telegram";
 
 export const runtime = "edge";
 export const dynamic = "force-dynamic";
@@ -213,16 +214,47 @@ export async function POST(req: NextRequest) {
       tag: "admin",
     });
 
+    // Telegram: Murat + owner'a aninda rezervasyon bildirimi (Brevo ile paralel).
+    const pax = parsed.data.adults + parsed.data.children;
+    const telegramSend = notifyLead({
+      source: "booking",
+      title: `YENİ REZERVASYON — ${parsed.data.serviceName}`,
+      fields: [
+        ["Rezervasyon", bookingId],
+        ["Tarih", parsed.data.date],
+        ["Kişi", `${pax} (${parsed.data.adults} yetişkin${parsed.data.children ? ` + ${parsed.data.children} çocuk` : ""})`],
+        ["Tutar", `${parsed.data.totalPrice} ${parsed.data.currency}`],
+        ["Ödeme", parsed.data.paymentSessionId ? "Stripe oturumu var" : "bekliyor"],
+        ["Müşteri", leadPax.fullName],
+        ["Telefon", leadPax.phone],
+        ["E-posta", leadPax.email],
+        ["Uyruk", leadPax.nationality],
+        ["Konaklama", leadPax.accommodation],
+        ["Sigorta", parsed.data.insurance ? "evet" : "hayır"],
+        ["Promo", parsed.data.promoCode],
+        ["Özel istek", parsed.data.specialRequests],
+      ],
+      note: "Aksiyon: ödeme/onay durumunu admin panelden kontrol et, müşteriyi ara.",
+    });
+
     // Paralel — hata olsa bile booking 200 doner
-    const [customerResult, adminResult] = await Promise.allSettled([customerSend, adminSend]);
+    const [customerResult, adminResult, telegramResult] = await Promise.allSettled([
+      customerSend,
+      adminSend,
+      telegramSend,
+    ]);
 
     const emailStatus = {
       customer: customerResult.status === "fulfilled" ? customerResult.value.ok : false,
       admin: adminResult.status === "fulfilled" ? adminResult.value.ok : false,
     };
+    const telegramOk = telegramResult.status === "fulfilled" ? telegramResult.value.ok : false;
 
     if (!emailStatus.customer || !emailStatus.admin) {
       console.warn("[api/booking] Mail gonderim kismi/tam hata", JSON.stringify(emailStatus));
+    }
+    if (!telegramOk) {
+      console.warn("[api/booking] Telegram bildirimi gitmedi", bookingId);
     }
 
     return NextResponse.json({
@@ -230,6 +262,7 @@ export async function POST(req: NextRequest) {
       status: "pending",
       createdAt,
       emailSent: emailStatus,
+      notified: { telegram: telegramOk, email: emailStatus.admin },
       message: emailStatus.customer
         ? "Rezervasyonunuz alındı. Onay e-postası iletildi."
         : "Rezervasyonunuz alındı. E-posta gönderiminde gecikme olabilir — kodunuzu not edin.",

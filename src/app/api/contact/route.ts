@@ -1,5 +1,7 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { z } from "zod";
+import { notifyLead } from "@/lib/telegram";
+import { persistLead } from "@/lib/leads";
 
 export const runtime = "edge";
 export const dynamic = "force-dynamic";
@@ -34,7 +36,24 @@ export async function POST(req: NextRequest) {
     }
 
     const { name, email, phone, subject, message } = parsed.data;
+    const ref = `CT-${Date.now().toString(36).toUpperCase()}`;
 
+    // Telegram: birincil lead kanali (Murat + owner). Brevo ile paralel, hata lead'i bozmaz.
+    const telegramSend = notifyLead({
+      source: "contact",
+      title: `Yeni iletişim formu — ${subject}`,
+      fields: [
+        ["Ref", ref],
+        ["Ad", name],
+        ["Telefon", phone],
+        ["E-posta", email],
+        ["Konu", subject],
+        ["Mesaj", message],
+      ],
+      note: "Aksiyon: müşteriyi 24 saat içinde ara veya yaz.",
+    });
+
+    let emailOk = false;
     if (BREVO_API_KEY) {
       try {
         const res = await fetch("https://api.brevo.com/v3/smtp/email", {
@@ -64,6 +83,7 @@ export async function POST(req: NextRequest) {
           const errText = await res.text();
           console.error("[api/contact] Brevo gonderim hatasi", res.status, errText);
         }
+        emailOk = res.ok;
       } catch (err) {
         console.error("[api/contact] Brevo fetch error", err);
       }
@@ -71,7 +91,27 @@ export async function POST(req: NextRequest) {
       console.info("[api/contact] BREVO_API_KEY yok — sadece log", JSON.stringify({ name, email, phone, subject, message }));
     }
 
-    return NextResponse.json({ success: true, message: "Mesajınız alındı. 24 saat içinde geri dönüş yapılacak." });
+    const telegram = await telegramSend;
+    const persisted = await persistLead({
+      source: "contact",
+      ref,
+      name,
+      email,
+      phone,
+      payload: { subject, message },
+      telegramOk: telegram.ok,
+      emailOk,
+    });
+    if (!telegram.ok && !emailOk && !persisted) {
+      console.error("[api/contact] LEAD HICBIR KANALA ULASMADI", ref, JSON.stringify({ name, email, phone, subject }));
+    }
+
+    return NextResponse.json({
+      success: true,
+      ref,
+      notified: { telegram: telegram.ok, email: emailOk },
+      message: "Mesajınız alındı. 24 saat içinde geri dönüş yapılacak.",
+    });
   } catch (err) {
     console.error("[api/contact] error", err);
     return NextResponse.json(
