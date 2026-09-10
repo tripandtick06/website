@@ -25,7 +25,17 @@ tablosuna kalici kayit — bildirim dusse de lead kaybolmaz).
    Cikan `message.chat.id` degerlerini not al. Grup icin: botu gruba ekle, grupta bir mesaj at,
    ayni komut negatif id verir (`-100...`).
 3. **Cloudflare Pages env** (Production): `TELEGRAM_BOT_TOKEN` (secret) +
-   `TELEGRAM_CHAT_IDS` = `id1,id2`. Yeni deploy tetikle (env degisikligi otomatik build ETMEZ).
+   `TELEGRAM_CHAT_IDS` (**secret**) = `id1,id2`. Yeni deploy tetikle (env degisikligi otomatik
+   build ETMEZ).
+
+   **Tuzak (2026-09-10'da yasandi):** Pages build `wrangler.toml [vars]`'i kaynak sayar ve orada
+   olmayan **plain-text** env'leri her deploy'da SILER. Bu yuzden proje env'inde plain-text olarak
+   sadece `NEXT_PUBLIC_SITE_URL` + `NEXT_PUBLIC_DEFAULT_LOCALE` yasar; geri kalan her sey
+   (ADMIN_EMAIL dahil) secret. `TELEGRAM_CHAT_IDS`'i daima **secret** olarak kaydet.
+
+   **Farkli bot ile yazma:** hedef `<chat_id>@<bot_token>` yazilirsa o chat'e o bot yazar.
+   Ornek: owner'a AGA'nin Marco botu (`@AlfaReclameBot`, zaten /start'li), Murat'a `@Trip_tickbot`:
+   `8570770483,1108861114@<marco_token>`. Token icerdigi icin secret zorunlu.
 4. **Supabase**: `supabase/migrations/0005_leads.sql` SQL editorde calistir (leads tablosu).
    Tablo yoksa kod loglar, patlamaz.
 

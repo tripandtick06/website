@@ -7,8 +7,10 @@
 //   - src/app/api/b2b/apply/route.ts      (B2B acente basvurusu)
 //   - src/app/api/admin/telegram-test/route.ts (manuel dogrulama)
 //   - src/app/api/health/route.ts         (getMe ping)
-// Env: TELEGRAM_BOT_TOKEN (BotFather), TELEGRAM_CHAT_IDS (virgulle ayrilmis chat id listesi;
-//      ornek "123456789,-1001234567890" — Murat + owner + istege bagli grup).
+// Env: TELEGRAM_BOT_TOKEN (BotFather, varsayilan bot), TELEGRAM_CHAT_IDS (virgulle ayrilmis
+//      hedef listesi). Her hedef `<chat_id>` (varsayilan bot) veya `<chat_id>@<bot_token>`
+//      (o chat'e baska bir bot yazar — ornek: owner'a AGA/Marco botu, Murat'a Trip_tickbot).
+//      Ornek: "8570770483,1108861114@123456:AAAA..." — token icerdiginde SECRET olarak sakla.
 // Demo fallback: env yoksa stdout log + result.demoLogged=true. Hicbir zaman throw ETMEZ —
 // lead akisi Telegram kapali/bozuk olsa da 200 doner.
 
@@ -49,16 +51,44 @@ function botToken(): string | undefined {
   return t ? t : undefined;
 }
 
-export function telegramChatIds(): string[] {
+export interface TelegramTarget {
+  chatId: string;
+  // undefined = varsayilan TELEGRAM_BOT_TOKEN; yoksa hedef atlanir.
+  token: string | undefined;
+}
+
+const CHAT_ID_RE = /^-?\d+$/;
+const BOT_TOKEN_RE = /^\d+:[A-Za-z0-9_-]{20,}$/;
+
+// Hedefleri coz. Gecersiz girdiler (bozuk id/token) sessizce atlanir, log'lanir.
+export function telegramTargets(): TelegramTarget[] {
   const raw = process.env.TELEGRAM_CHAT_IDS ?? "";
-  return raw
-    .split(/[,\s;]+/)
-    .map((s) => s.trim())
-    .filter((s) => /^-?\d+$/.test(s));
+  const defaultToken = botToken();
+  const targets: TelegramTarget[] = [];
+  for (const entry of raw.split(/[,\s;]+/)) {
+    const e = entry.trim();
+    if (!e) continue;
+    const at = e.indexOf("@");
+    const chatId = at === -1 ? e : e.slice(0, at);
+    const ownToken = at === -1 ? undefined : e.slice(at + 1);
+    if (!CHAT_ID_RE.test(chatId)) continue;
+    if (ownToken !== undefined && !BOT_TOKEN_RE.test(ownToken)) {
+      console.error("[lib/telegram] gecersiz bot token formati, hedef atlandi", chatId);
+      continue;
+    }
+    const token = ownToken ?? defaultToken;
+    if (!token) continue;
+    targets.push({ chatId, token });
+  }
+  return targets;
+}
+
+export function telegramChatIds(): string[] {
+  return telegramTargets().map((t) => t.chatId);
 }
 
 export function telegramEnabled(): boolean {
-  return Boolean(botToken()) && telegramChatIds().length > 0;
+  return telegramTargets().length > 0;
 }
 
 export function escapeTelegramHtml(s: string): string {
@@ -140,15 +170,14 @@ async function sendToChat(token: string, chatId: string, text: string): Promise<
 }
 
 export async function sendTelegramText(text: string): Promise<TelegramSendResult> {
-  const token = botToken();
-  const chatIds = telegramChatIds();
-  if (!token || chatIds.length === 0) {
+  const targets = telegramTargets();
+  if (targets.length === 0) {
     console.info("[lib/telegram] TELEGRAM_BOT_TOKEN/TELEGRAM_CHAT_IDS yok — demo log", {
       preview: text.slice(0, 120),
     });
     return { ok: false, sent: 0, failed: 0, demoLogged: true };
   }
-  const outcomes = await Promise.all(chatIds.map((id) => sendToChat(token, id, text)));
+  const outcomes = await Promise.all(targets.map((t) => sendToChat(t.token as string, t.chatId, text)));
   const errors = outcomes.filter((e): e is string => e !== null);
   const sent = outcomes.length - errors.length;
   return {
@@ -170,16 +199,22 @@ export async function notifyLead(n: LeadNotification): Promise<TelegramSendResul
   }
 }
 
-// Health ping: bot token gecerli mi (getMe). Chat id dogrulamaz.
+// Health ping: kullanilan her bot token'i gecerli mi (getMe). Chat id dogrulamaz.
 export async function telegramPing(): Promise<"ok" | "fail" | "disabled"> {
-  const token = botToken();
-  if (!token) return "disabled";
+  const tokens = new Set<string>();
+  const def = botToken();
+  if (def) tokens.add(def);
+  for (const t of telegramTargets()) if (t.token) tokens.add(t.token);
+  if (tokens.size === 0) return "disabled";
   try {
-    const res = await fetch(`https://api.telegram.org/bot${token}/getMe`, {
-      method: "GET",
-      signal: timeoutSignal(),
-    });
-    return res.ok ? "ok" : "fail";
+    const results = await Promise.all(
+      [...tokens].map((token) =>
+        fetch(`https://api.telegram.org/bot${token}/getMe`, { method: "GET", signal: timeoutSignal() })
+          .then((r) => r.ok)
+          .catch(() => false)
+      )
+    );
+    return results.every(Boolean) ? "ok" : "fail";
   } catch {
     return "fail";
   }
