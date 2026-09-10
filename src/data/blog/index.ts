@@ -864,6 +864,27 @@ export const ARTICLES: BlogArticleMeta[] = [
     "coverImage": "/images/blog/kapadokya-otel-tavsiye-2026.jpg"
   },
   {
+    "file": "en-packing-checklist-app-for-iphone-cappadocia-hot-air-balloon-en.json",
+    "slug": "packing-checklist-app-for-iphone-cappadocia-hot-air-balloon-en",
+    "title": "Packing Checklist App for iPhone: How to Set One Up for a Cappadocia Balloon Trip",
+    "metaTitle": "Packing Checklist App for iPhone | Cappadocia | Trip and Tick",
+    "metaDescription": "Packing checklist app for iPhone: how to set one up in Reminders or a dedicated app, with a ready-made Cappadocia list for cold dawn balloon flights.",
+    "excerpt": "A packing checklist app for iPhone only earns its place if it shows you the right list at the right moment. Here is how to set one up in Apple Reminders or a dedicated packing app, filled in for Cappadocia: documents and the e-Visa for Türkiye, clothing for a high plateau that is hot by noon and cold at dawn, and a separate balloon-morning group that rings the evening before your pre-dawn pickup in Göreme.",
+    "category": "blog",
+    "tags": [
+      "packing",
+      "checklist",
+      "iphone",
+      "cappadocia",
+      "balloon"
+    ],
+    "targetKeyword": "packing checklist app for iphone",
+    "locale": "en",
+    "publishedAt": "2026-09-10T11:49:38.012834+00:00",
+    "seoScore": 80,
+    "isAiGenerated": true
+  },
+  {
     "file": "en-travel-planning-checklist-template-cappadocia-hot-air-balloon-en.json",
     "slug": "travel-planning-checklist-template-cappadocia-hot-air-balloon-en",
     "title": "Travel Planning Checklist Template: A Copy-and-Adapt List Built Around a Cappadocia Sunrise",
