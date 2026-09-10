@@ -53,12 +53,34 @@ afterEach(() => {
   vi.restoreAllMocks();
 });
 
-describe("telegramChatIds", () => {
-  it("parses comma/space separated numeric ids incl. negative group ids", async () => {
+describe("telegramTargets / telegramChatIds", () => {
+  it("without default token: plain ids are skipped, enabled=false", async () => {
+    process.env.TELEGRAM_CHAT_IDS = " 123, -1001234567890 ;abc, 42 ";
+    const { telegramChatIds, telegramEnabled } = await import("@/lib/telegram");
+    expect(telegramChatIds()).toEqual([]);
+    expect(telegramEnabled()).toBe(false);
+  });
+
+  it("with default token: parses comma/space separated numeric ids incl. negative group ids", async () => {
+    process.env.TELEGRAM_BOT_TOKEN = "1:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
     process.env.TELEGRAM_CHAT_IDS = " 123, -1001234567890 ;abc, 42 ";
     const { telegramChatIds, telegramEnabled } = await import("@/lib/telegram");
     expect(telegramChatIds()).toEqual(["123", "-1001234567890", "42"]);
-    expect(telegramEnabled()).toBe(false); // token yok
+    expect(telegramEnabled()).toBe(true);
+  });
+
+  it("per-target bot token via chat@token; bad token format skipped", async () => {
+    const other = "999:BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB";
+    process.env.TELEGRAM_CHAT_IDS = `111@${other},222@bad,333`;
+    const { telegramTargets, telegramEnabled } = await import("@/lib/telegram");
+    // default token yok: 333 atlanir, 222 bozuk token atlanir, 111 kendi token'i ile gider
+    expect(telegramTargets()).toEqual([{ chatId: "111", token: other }]);
+    expect(telegramEnabled()).toBe(true);
+    process.env.TELEGRAM_BOT_TOKEN = "1:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+    expect(telegramTargets()).toEqual([
+      { chatId: "111", token: other },
+      { chatId: "333", token: "1:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" },
+    ]);
   });
 });
 
@@ -130,6 +152,22 @@ describe("notifyLead", () => {
         expect(c.body.parse_mode).toBe("HTML");
         expect(String(c.body.text)).toContain("<b>Ad:</b> Ali");
       }
+    } finally {
+      stub.restore();
+    }
+  });
+
+  it("routes each target to its own bot token URL", async () => {
+    process.env.TELEGRAM_BOT_TOKEN = "123:ABC";
+    process.env.TELEGRAM_CHAT_IDS = "111,222@999:BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB";
+    const { notifyLead } = await import("@/lib/telegram");
+    const stub = captureFetch([jsonRes({ ok: true }), jsonRes({ ok: true })]);
+    try {
+      const r = await notifyLead({ source: "contact", title: "t", fields: [] });
+      expect(r.sent).toBe(2);
+      const byChat = Object.fromEntries(stub.calls.map((c) => [String(c.body.chat_id), c.url]));
+      expect(byChat["111"]).toBe("https://api.telegram.org/bot123:ABC/sendMessage");
+      expect(byChat["222"]).toBe("https://api.telegram.org/bot999:BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB/sendMessage");
     } finally {
       stub.restore();
     }

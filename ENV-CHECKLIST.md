@@ -52,7 +52,7 @@ Bu liste Cloudflare Pages Dashboard → Project → **Settings → Environment V
 | Key | Tip | Aciklama |
 |---|---|---|
 | `TELEGRAM_BOT_TOKEN` | **secret** | BotFather token (`@Trip_tickbot`). Repo'ya ASLA yazma. |
-| `TELEGRAM_CHAT_IDS` | plain | Virgulle ayrilmis chat id listesi: `<murat_id>,<owner_id>[,<grup_id>]`. Grup id'leri negatiftir. |
+| `TELEGRAM_CHAT_IDS` | **secret** | Virgulle ayrilmis hedefler: `<chat_id>` veya `<chat_id>@<bot_token>` (o chat'e baska bot yazar). Grup id'leri negatiftir. Plain-text yapma: Pages build `wrangler.toml [vars]` disindaki plain env'i siler. |
 
 Kurulum: bkz. `docs/telegram-leads.md`. Dogrulama: `GET/POST /api/admin/telegram-test`
 (`x-admin-token`), `/api/health` → `integrations.telegram*`. Lead kaydi: `supabase/migrations/0005_leads.sql`.
