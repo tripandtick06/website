@@ -13,6 +13,8 @@
 
 import { NextResponse, type NextRequest } from "next/server";
 import { z } from "zod";
+import { notifyLead } from "@/lib/telegram";
+import { persistLead } from "@/lib/leads";
 
 export const runtime = "edge";
 export const dynamic = "force-dynamic";
@@ -73,6 +75,23 @@ export async function POST(req: NextRequest) {
   const { name, email, phone, company, license, country } = parsed.data;
   const applicationId = `B2B-APP-${Date.now().toString(36).toUpperCase()}`;
 
+  // Telegram: birincil lead kanali (Murat + owner). Brevo ile paralel, hata lead'i bozmaz.
+  const telegramSend = notifyLead({
+    source: "b2b",
+    title: `B2B acente başvurusu — ${company}`,
+    fields: [
+      ["Ref", applicationId],
+      ["Şirket", company],
+      ["Yetkili", name],
+      ["Telefon", phone],
+      ["E-posta", email],
+      ["Ülke", country],
+      ["Lisans No", license],
+    ],
+    note: "Aksiyon: 24 saat içinde geri dönüş.",
+  });
+  let emailOk = false;
+
   if (BREVO_API_KEY) {
     try {
       const res = await fetch("https://api.brevo.com/v3/smtp/email", {
@@ -106,6 +125,7 @@ export async function POST(req: NextRequest) {
         const errText = await res.text();
         console.error("[api/b2b/apply] Brevo gonderim hatasi", res.status, errText);
       }
+      emailOk = res.ok;
     } catch (err) {
       console.error("[api/b2b/apply] Brevo fetch error", err);
     }
@@ -116,8 +136,23 @@ export async function POST(req: NextRequest) {
     );
   }
 
+  const telegram = await telegramSend;
+  const persisted = await persistLead({
+    source: "b2b",
+    ref: applicationId,
+    name,
+    email,
+    phone,
+    payload: { company, license, country },
+    telegramOk: telegram.ok,
+    emailOk,
+  });
+  if (!telegram.ok && !emailOk && !persisted) {
+    console.error("[api/b2b/apply] LEAD HICBIR KANALA ULASMADI", applicationId, JSON.stringify({ name, email, phone, company }));
+  }
+
   return NextResponse.json({
-    data: { applicationId, status: "pending" },
+    data: { applicationId, status: "pending", notified: { telegram: telegram.ok, email: emailOk } },
     error: null,
   });
 }

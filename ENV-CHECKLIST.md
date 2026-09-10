@@ -47,6 +47,16 @@ Bu liste Cloudflare Pages Dashboard → Project → **Settings → Environment V
 
 **DNS verify (kritik)**: Brevo Dashboard → Senders → `tripandtick.com` domain ekle → DKIM `mail._domainkey` TXT + SPF + DMARC kayitlarini Cloudflare DNS'e ekle. Onaylanana kadar mailler spam'e duser.
 
+## 5b. Telegram lead bildirimi (birincil kanal — Murat + owner)
+
+| Key | Tip | Aciklama |
+|---|---|---|
+| `TELEGRAM_BOT_TOKEN` | **secret** | BotFather token (`@Trip_tickbot`). Repo'ya ASLA yazma. |
+| `TELEGRAM_CHAT_IDS` | plain | Virgulle ayrilmis chat id listesi: `<murat_id>,<owner_id>[,<grup_id>]`. Grup id'leri negatiftir. |
+
+Kurulum: bkz. `docs/telegram-leads.md`. Dogrulama: `GET/POST /api/admin/telegram-test`
+(`x-admin-token`), `/api/health` → `integrations.telegram*`. Lead kaydi: `supabase/migrations/0005_leads.sql`.
+
 ## 6. Supabase (zorunlu prod — yoksa in-memory fallback restart'ta data-kaybi)
 
 | Key | Tip | Aciklama |
