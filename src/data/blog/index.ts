@@ -864,6 +864,27 @@ export const ARTICLES: BlogArticleMeta[] = [
     "coverImage": "/images/blog/kapadokya-otel-tavsiye-2026.jpg"
   },
   {
+    "file": "en-overseas-trip-planning-checklist-cappadocia-en.json",
+    "slug": "overseas-trip-planning-checklist-cappadocia-en",
+    "title": "Overseas Trip Planning Checklist: Step by Step for a Cappadocia Balloon Holiday",
+    "metaTitle": "Overseas Trip Planning Checklist | Cappadocia | Trip and Tick",
+    "metaDescription": "Overseas trip planning checklist in order: passport and e-Visa, flights to Kayseri, a cave hotel in Göreme and booking your Cappadocia balloon early.",
+    "excerpt": "An overseas trip planning checklist only helps if it puts the slow, sell-out items first. Here is one in the right order, filled in for Cappadocia: passport validity and the e-Visa for Türkiye, flights via Istanbul to Kayseri or Nevşehir, a cave hotel in Göreme, and the sunrise hot air balloon flight that you should book before almost anything else.",
+    "category": "blog",
+    "tags": [
+      "overseas",
+      "trip",
+      "planning",
+      "checklist",
+      "cappadocia"
+    ],
+    "targetKeyword": "overseas trip planning checklist",
+    "locale": "en",
+    "publishedAt": "2026-09-11T11:51:16.892435+00:00",
+    "seoScore": 80,
+    "isAiGenerated": true
+  },
+  {
     "file": "en-packing-checklist-app-for-iphone-cappadocia-hot-air-balloon-en.json",
     "slug": "packing-checklist-app-for-iphone-cappadocia-hot-air-balloon-en",
     "title": "Packing Checklist App for iPhone: How to Set One Up for a Cappadocia Balloon Trip",
