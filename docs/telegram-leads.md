@@ -64,3 +64,22 @@ Form yanitlarinda `notified: { telegram: bool, email: bool }` alani gonderim son
 - Dogrudan `hello@`/`info@tripandtick.com` adresine gelen mailler bu akisin DISINDA — domainde MX
   kaydi yok (2026-09-10 tespiti). Cloudflare Email Routing + Email Worker ile Telegram'a
   yonlendirilebilir; DNS/Email Routing yetkili token gerekir.
+
+## WhatsApp FAB tiklamasi (2026-09-14)
+
+- **Neden:** wa.me linki musteriyi DOGRUDAN Murat'in telefonuna (+90 537 464 78 61) goturur;
+  site sunucusu konusmayi hic gormez → Telegram'a hicbir sey dusmuyordu (Brezilyali musteri
+  00:38'de FAB prefill'iyle yazdi, Telegram sessizdi).
+- **Simdi:** `src/components/booking/WhatsAppFAB.tsx` tiklamada `navigator.sendBeacon` ile
+  `POST /api/whatsapp-click` `{path, locale}` gonderir (oturum basina 1 kez, navigasyonu
+  bloklamaz). Route `notifyLead({source:"whatsapp"})` → Telegram'a 💬 "WhatsApp'a tiklandi"
+  (sayfa URL'si, site dili, tarayici dili, `cf-ipcountry`, cihaz, TR saati). Crawler UA + honeypot
+  atlanir; middleware per-IP rate-limit. `leads` tablosuna YAZILMAZ (isim/e-posta yok).
+- **Prefill:** `src/lib/whatsapp.ts` — 17 locale'de selamlama (bilinmeyen → EN) + `📍 <sayfa URL>`
+  eki; Murat mesajin hangi sayfadan geldigini gorur.
+- **Sinir:** Musterinin WhatsApp'ta YAZDIGI metin Telegram'a gelmez — sadece 'birisi WhatsApp'a
+  gecti' sinyali. Mesaj icerigi icin numaranin Meta Cloud API'ye tasinmasi (Murat'in kisisel
+  WhatsApp'ini keser) veya bagli-cihaz koprusu (Hetzner OpenClaw/Baileys, FTH'de kullanilan
+  desen; Murat QR taratir) gerekir — owner karari.
+- **Dogrulama:** `curl -X POST https://tripandtick.com/api/whatsapp-click -H 'content-type: application/json'
+  -d '{"path":"/en/contact","locale":"en"}'` → `{ok:true, ref:"WA-…", notified:{telegram:true}}`.

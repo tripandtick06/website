@@ -5,6 +5,7 @@
 //   - src/app/api/booking/route.ts        (yeni rezervasyon — admin tarafi)
 //   - src/app/api/hotel-inquiry/route.ts  (otel bilgi talebi)
 //   - src/app/api/b2b/apply/route.ts      (B2B acente basvurusu)
+//   - src/app/api/whatsapp-click/route.ts (WhatsApp FAB tiklamasi — sohbet Murat'in telefonunda)
 //   - src/app/api/admin/telegram-test/route.ts (manuel dogrulama)
 //   - src/app/api/health/route.ts         (getMe ping)
 // Env: TELEGRAM_BOT_TOKEN (BotFather, varsayilan bot), TELEGRAM_CHAT_IDS (virgulle ayrilmis
@@ -14,7 +15,7 @@
 // Demo fallback: env yoksa stdout log + result.demoLogged=true. Hicbir zaman throw ETMEZ —
 // lead akisi Telegram kapali/bozuk olsa da 200 doner.
 
-export type LeadSource = "contact" | "booking" | "hotel" | "b2b" | "test";
+export type LeadSource = "contact" | "booking" | "hotel" | "b2b" | "whatsapp" | "test";
 
 export type LeadField = [label: string, value: string | number | null | undefined];
 
@@ -43,6 +44,7 @@ const SOURCE_EMOJI: Record<LeadSource, string> = {
   booking: "🎈",
   hotel: "🏨",
   b2b: "🤝",
+  whatsapp: "💬",
   test: "🧪",
 };
 
