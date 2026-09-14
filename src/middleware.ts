@@ -83,14 +83,15 @@ export async function middleware(req: NextRequest) {
     return res;
   }
 
-  // Rate-limit /api/seo-agent + /api/checkout + /api/contact + /api/availability + /api/cancel + /api/b2b
+  // Rate-limit /api/seo-agent + /api/checkout + /api/contact + /api/availability + /api/cancel + /api/b2b + /api/whatsapp-click
   const rateLimited =
     pathname.startsWith("/api/seo-agent") ||
     pathname.startsWith("/api/checkout") ||
     pathname.startsWith("/api/contact") ||
     pathname.startsWith("/api/availability") ||
     pathname.startsWith("/api/cancel") ||
-    pathname.startsWith("/api/b2b");
+    pathname.startsWith("/api/b2b") ||
+    pathname.startsWith("/api/whatsapp-click");
 
   if (rateLimited) {
     const rl = await checkRateLimit(`${ip}:${pathname}`, RATE_LIMIT_MAX, RATE_LIMIT_WINDOW_MS);

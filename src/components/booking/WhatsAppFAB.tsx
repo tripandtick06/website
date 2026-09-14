@@ -1,7 +1,52 @@
 "use client";
 
-const WHATSAPP_HREF =
-  "https://wa.me/905374647861?text=Merhaba,%20Trip%20and%20Tick%20hakkinda%20bilgi%20almak%20istiyorum.";
+import { useMemo } from "react";
+import { usePathname } from "next/navigation";
+import { useLocale } from "@/lib/i18n/I18nProvider";
+import { buildWhatsAppHref } from "@/lib/whatsapp";
+
+// Ayni oturumda ikinci tiklama Telegram'a tekrar dusmesin (gurultu). sessionStorage
+// sekme kapaninca silinir; erisilemezse (private mode) her tiklama bildirilir — kabul.
+const SESSION_KEY = "tt_wa_notified";
+
+function alreadyNotified(): boolean {
+  try {
+    return window.sessionStorage.getItem(SESSION_KEY) === "1";
+  } catch {
+    return false;
+  }
+}
+
+function markNotified(): void {
+  try {
+    window.sessionStorage.setItem(SESSION_KEY, "1");
+  } catch {
+    /* sessionStorage kapali — yoksay */
+  }
+}
+
+// Tiklama → /api/whatsapp-click → Telegram. Navigasyonu ASLA bloklamaz: sendBeacon
+// sayfa gitse de gonderir; yoksa keepalive fetch. Hata sessizce yutulur — musteri
+// WhatsApp'a her halukarda gecmeli.
+function reportClick(path: string, locale: string): void {
+  if (alreadyNotified()) return;
+  markNotified();
+  const payload = JSON.stringify({ path, locale });
+  try {
+    if (typeof navigator !== "undefined" && typeof navigator.sendBeacon === "function") {
+      const blob = new Blob([payload], { type: "application/json" });
+      if (navigator.sendBeacon("/api/whatsapp-click", blob)) return;
+    }
+    void fetch("/api/whatsapp-click", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: payload,
+      keepalive: true,
+    }).catch(() => {});
+  } catch {
+    /* bildirim basarisiz — musteri akisini etkilemez */
+  }
+}
 
 // Orijinal WhatsApp logosu (simple-icons), icon-only kullanim.
 function WhatsAppIcon({ className }: { className?: string }) {
@@ -18,12 +63,17 @@ function WhatsAppIcon({ className }: { className?: string }) {
 }
 
 export function WhatsAppFAB() {
+  const { locale } = useLocale();
+  const pathname = usePathname() ?? "/";
+  const href = useMemo(() => buildWhatsAppHref(locale, pathname), [locale, pathname]);
+
   return (
     <a
-      href={WHATSAPP_HREF}
+      href={href}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="WhatsApp"
+      onClick={() => reportClick(pathname, locale)}
       className="fixed right-5 bottom-[80px] sm:bottom-6 z-40 w-14 h-14 rounded-full flex items-center justify-center text-white shadow-elevated transition-transform duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#25D366]"
       style={{ backgroundColor: "#25D366" }}
     >

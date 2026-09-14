@@ -12,7 +12,8 @@
 import type { LeadSource } from "./telegram";
 
 export interface LeadRecord {
-  source: Exclude<LeadSource, "test">;
+  // "whatsapp" tiklamasi lead kaydi DEGIL (isim/e-posta yok; DB check kisiti da izin vermez).
+  source: Exclude<LeadSource, "test" | "whatsapp">;
   ref: string;
   name: string;
   email: string;
