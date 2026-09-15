@@ -407,8 +407,15 @@ export function BookingClient({ service }: { service: BookingService }) {
         const err = await res.json().catch(() => ({}));
         throw new Error(err?.error ?? t.component.booking.booking_client.error_payment_start.replace("{status}", String(res.status)));
       }
-      const data = (await res.json()) as { url?: string };
+      const data = (await res.json()) as { url?: string; request?: boolean; demo?: boolean };
       if (!data.url) throw new Error(t.component.booking.booking_client.error_payment_url);
+      if (data.request || data.demo) {
+        // Request mode (no payment provider yet): record the booking request now
+        // so the team is notified (Telegram) before the customer sees the page.
+        const bookingId = await sendBookingEmail();
+        window.location.href = bookingId ? `${data.url}&bookingId=${encodeURIComponent(bookingId)}` : data.url;
+        return;
+      }
       window.location.href = data.url;
     } catch (err) {
       console.error("[booking] checkout failed", err);
@@ -423,7 +430,7 @@ export function BookingClient({ service }: { service: BookingService }) {
     );
   }
 
-  async function sendBookingEmail(): Promise<void> {
+  async function sendBookingEmail(): Promise<string | null> {
     setEmailStatus("pending");
     setEmailError(null);
     try {
@@ -479,11 +486,13 @@ export function BookingClient({ service }: { service: BookingService }) {
         setEmailError(t.component.booking.booking_client.error_email_provider_unavailable);
       }
       setEmailSent(true);
+      return data.bookingId ?? null;
     } catch (err) {
       console.error("[booking] sendBookingEmail failed", err);
       setEmailStatus("error");
       setEmailError(err instanceof Error ? err.message : t.component.booking.booking_client.error_unknown);
       setEmailSent(true);
+      return null;
     }
   }
 
