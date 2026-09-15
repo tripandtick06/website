@@ -125,17 +125,17 @@ export function BasariliClient(props: Props) {
     <main className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-emerald-50 flex items-center justify-center py-10 px-4 pt-[88px]">
       <div className="max-w-2xl w-full bg-white rounded-3xl shadow-xl p-8 lg:p-12 text-center">
         {isDemo && (
-          <div className="bg-rose-50 border-2 border-rose-300 rounded-2xl p-4 mb-6 text-left flex items-start gap-3">
-            <AlertTriangle className="w-6 h-6 text-rose-600 flex-shrink-0 mt-0.5" />
+          <div className="bg-amber-50 border-2 border-amber-300 rounded-2xl p-4 mb-6 text-left flex items-start gap-3">
+            <AlertTriangle className="w-6 h-6 text-amber-600 flex-shrink-0 mt-0.5" />
             <div>
-              <p className="font-bold text-rose-900 text-sm">{ns.demo_badge}</p>
-              <p className="text-xs text-rose-800 mt-1">
+              <p className="font-bold text-amber-900 text-sm">{ns.demo_badge}</p>
+              <p className="text-xs text-amber-800 mt-1">
                 {ns.demo_description}{" "}
                 <a href="tel:+905374647861" className="font-semibold underline">+90 537 464 78 61</a>
                 {" / "}
                 <a href="https://wa.me/905374647861" className="font-semibold underline" target="_blank" rel="noreferrer">WhatsApp</a>.
               </p>
-              <p className="text-[10px] text-rose-700 mt-2">
+              <p className="text-[10px] text-amber-700 mt-2">
                 {ns.demo_admin_note}
               </p>
             </div>

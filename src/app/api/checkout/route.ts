@@ -72,13 +72,20 @@ export async function POST(req: NextRequest) {
     const stripeKey = process.env.STRIPE_SECRET_KEY;
 
     if (!stripeKey || stripeKey === "sk_test_dummy" || stripeKey.startsWith("dummy")) {
-      console.warn("[api/checkout] DEMO MODE — STRIPE_SECRET_KEY env-var yok");
-      const demoUrl = `${SITE_URL}${lp}/rezervasyon/basarili?demo=1&total=${serverTotal}&currency=${currency}&slug=${encodeURIComponent(serviceSlug)}`;
+      // REQUEST MODE (2026-09-16). Until Stripe is configured a booking is a
+      // *request*: the client posts the full passenger payload to /api/booking
+      // (Telegram to Murat + owner, bookings table) and lands on the success
+      // page in request mode ("we confirm and send the payment link"). The old
+      // behaviour sent real customers to a page titled "TEST / DEMO MODE — no
+      // real booking was created" and notified nobody.
+      console.warn("[api/checkout] REQUEST MODE — STRIPE_SECRET_KEY env-var yok");
+      const requestUrl = `${SITE_URL}${lp}/rezervasyon/basarili?request=1&total=${serverTotal}&currency=${currency}&slug=${encodeURIComponent(serviceSlug)}`;
       return NextResponse.json({
-        url: demoUrl,
+        url: requestUrl,
         demo: true,
+        request: true,
         serverTotal,
-        message: "Demo mode — Stripe env-var Cloudflare'de set degil.",
+        message: "Request mode — Stripe env-var Cloudflare'de set degil; rezervasyon talebi olarak islenir.",
       });
     }
 

@@ -28,13 +28,15 @@ export default function SuccessPage({
   searchParams: {
     session_id?: string;
     demo?: string;
+    request?: string;
     slug?: string;
     total?: string;
     currency?: string;
     bookingId?: string;
   };
 }) {
-  const isDemo = searchParams?.demo === "1";
+  // request=1: booking request without payment (no Stripe yet) — see /api/checkout
+  const isDemo = searchParams?.demo === "1" || searchParams?.request === "1";
   return (
     <BasariliClient
       isDemo={isDemo}
