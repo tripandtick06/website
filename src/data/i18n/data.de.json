@@ -1063,7 +1063,7 @@
   "faq": {
     "f0": {
       "question": "Was kostet eine Ballonfahrt in Kappadokien?",
-      "answer": "Bei Trip and Tick beginnen die Preise für eine Ballonfahrt in Kappadokien bei 165 € pro Person. Standard 165 €, Komfort 215 €, Deluxe 295 €, Romantischer Privatballon 580 €. In allen Preisen sind Hoteltransfer, Frühstück, eine Versicherung über 40 Millionen Euro, Zertifikat und Champagnerservice inbegriffen."
+      "answer": "Bei Trip and Tick beginnen die Preise für eine Ballonfahrt in Kappadokien bei 165 € pro Person. Standard 165 €, Deluxe 295 €, Romantischer Privatballon 580 €. In allen Preisen sind Hoteltransfer, Frühstück, eine Versicherung über 40 Millionen Euro, Zertifikat und Champagnerservice inbegriffen."
     },
     "f1": {
       "question": "Ab welchem Alter darf man in Kappadokien Ballon fahren?",
@@ -1100,6 +1100,22 @@
     "f9": {
       "question": "Warum ist Trip and Tick günstiger als andere Anbieter?",
       "answer": "Wir haben direkte Agenturverträge mit über 9 Betreibern; es fallen keine Vermittlerprovisionen an. Unsere Bestpreisgarantie: Wenn Sie ein günstigeres Angebot finden, buchen Sie 5 % unter diesem Preis (gleiches Datum + Paket + Nachweis)."
+    },
+    "f10": {
+      "question": "Was kostet die Ballonfahrt pro Person, und kann ich in Lira zahlen?",
+      "answer": "Die Standardfahrt kostet 165 € pro Person, Deluxe 295 €; der romantische Privatkorb wird auf Anfrage kalkuliert. Preise in Euro; die Währungsauswahl der Seite zeigt den TRY- und USD-Gegenwert zum Tageskurs. Bei Terminen innerhalb von 7 Tagen kann der Preis je nach Wetter und Nachfrage täglich schwanken."
+    },
+    "f11": {
+      "question": "Wie lange dauert die Ballonfahrt und wann beginnt sie?",
+      "answer": "Die Fahrt dauert etwa 60 Minuten (romantisch privat 60-90 Minuten). Ballons fahren nur zum Sonnenaufgang; die Hotelabholung ist etwa eine Stunde davor, die genaue Zeit wird am Vortag bestätigt. Die Windprognose für heute finden Sie auf der Seite „Fliegen die Ballons heute?“."
+    },
+    "f12": {
+      "question": "Wie viele Personen passen in einen Ballon, gibt es einen Ballon für zwei?",
+      "answer": "Der Standardkorb fasst 16-20 Passagiere, der Deluxe-Korb bis zu 16. Einen Privatkorb nur für zwei gibt es mit dem Paket „Romantische Privatfahrt“ – beliebt für Anträge und Jahrestage."
+    },
+    "f13": {
+      "question": "Welcher Monat ist für eine Ballonfahrt in Kappadokien am besten?",
+      "answer": "Ballons fahren das ganze Jahr. April-Juni und September-Oktober sind am ausgewogensten: ruhige Morgen, milde Temperaturen. Im Winter sind die verschneiten Feenkamine eindrucksvoll, aber Wind und Nebel machen Absagen wahrscheinlicher als im Sommer."
     }
   },
   "reviews": {

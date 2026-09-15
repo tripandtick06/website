@@ -8,7 +8,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     category: "balon",
     question: "Kapadokya balon turu kaç para?",
-    answer: "Trip and Tick'te Kapadokya balon turu fiyatları kişi başı €165'ten başlar. Standart €165, Konfor €215, Deluxe €295, Romantik özel €580. Tüm fiyatlara otel transferi, kahvaltı, 40 milyon Euro sigorta, sertifika ve şampanya servisi dahildir.",
+    answer: "Trip and Tick'te Kapadokya balon turu fiyatları kişi başı €165'ten başlar. Standart €165, Deluxe €295; Romantik özel sepet teklife göre fiyatlandırılır. Tüm fiyatlara otel transferi, kahvaltı, 40 milyon Euro sigorta, sertifika ve şampanya servisi dahildir.",
   },
   {
     category: "balon",
@@ -54,5 +54,28 @@ export const FAQ_ITEMS: FAQItem[] = [
     category: "genel",
     question: "Trip and Tick neden diğer sitelerden daha ucuz?",
     answer: "9+ operatörle doğrudan acentelik sözleşmemiz var; aracı komisyonu yok. En düşük fiyat garantimiz: daha ucuz teklif bulursanız o fiyatın %5 altında rezervasyon (aynı tarih + paket + kanıt).",
+  },
+  // 2026-09-16: intent FAQs from Google Autocomplete (kişi başı / TL, kaç dk,
+  // saat kaçta, kaç kişi / 2 kişilik, en iyi ay). Index-keyed translations live in
+  // src/data/i18n/data.<locale>.json under faq.f10..f13.
+  {
+    category: "balon",
+    question: "Balon turu kişi başı ne kadar, TL ile ödenebilir mi?",
+    answer: "Standart uçuş kişi başı €165, Deluxe €295; Romantik özel sepet teklife göre fiyatlandırılır. Fiyatlar Euro bazlıdır; TL ve USD karşılığını sitedeki para birimi seçiciyle o günkü kurdan görebilirsiniz. 7 gün içindeki tarihlerde fiyat hava ve doluluğa göre günlük değişebilir.",
+  },
+  {
+    category: "balon",
+    question: "Balon turu kaç dakika sürer, saat kaçta başlar?",
+    answer: "Uçuş yaklaşık 60 dakika sürer (Romantik özel 60-90 dakika). Balonlar yalnızca gün doğumunda uçar; otelden alış gün doğumundan yaklaşık bir saat önce olur ve kesin saat bir gün önceden bildirilir. Bugünkü rüzgâr tahmini için 'Bugün balonlar uçuyor mu?' sayfasına bakın.",
+  },
+  {
+    category: "balon",
+    question: "Balona kaç kişi biner, 2 kişilik özel balon var mı?",
+    answer: "Standart sepet 16-20, Deluxe sepet en fazla 16 yolcu alır. Yalnızca iki kişilik özel sepet Romantik Özel Balon paketiyle mümkündür; evlilik teklifi ve yıl dönümü için tercih edilir.",
+  },
+  {
+    category: "balon",
+    question: "Kapadokya balon turu için en iyi ay hangisi?",
+    answer: "Balonlar yıl boyunca uçar. Nisan-Haziran ve Eylül-Ekim en dengeli dönemdir: sabahlar sakin, hava ılık. Kışın karlı peri bacaları etkileyicidir ama rüzgâr ve sis nedeniyle iptal ihtimali yaz aylarına göre daha yüksektir.",
   },
 ];
