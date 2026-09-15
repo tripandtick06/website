@@ -56,7 +56,7 @@ export function makeServiceDetailPage(cfg: ServiceDetailConfig) {
   function generateMetadata({ params }: RouteParams): Metadata {
     const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
     const raw = find(params.slug);
-    if (!raw) return { title: "Bulunamadı | Trip and Tick" };
+    if (!raw) return { title: "Bulunamadı" };
     const item = tService(raw, loc);
     const path = `${cfg.categoryPath}/${item.slug}`;
     const geo = loc === "tr" ? "Kapadokya" : "Cappadocia";
@@ -67,7 +67,10 @@ export function makeServiceDetailPage(cfg: ServiceDetailConfig) {
       : formatPrice(item.adultPrice, item.currency);
     const ogTitle = `${item.name} — ${geo} ${priceLabel}`;
     return {
-      title: `${ogTitle} | Trip and Tick`,
+      // root layout title.template appends the brand — a hardcoded suffix here
+      // rendered "… | Trip and Tick | Trip and Tick" on every activity/tour/
+      // transfer page (live audit 2026-09-16).
+      title: ogTitle,
       description: item.shortDescription,
       alternates: {
         canonical: canonicalFor(path, loc),
