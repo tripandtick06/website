@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { BALLOON_PACKAGES } from "@/data/services/balloons";
 import { KAPADOKYA_PILLARS, HOTELS, ACTIVITIES, TOURS, PACKAGES, TRANSFERS } from "@/data/services/catalog";
 import { OPERATORS } from "@/data/services/operators";
-import { ARTICLES } from "@/data/blog";
+import { blogAlternates, blogArticleUrl, sitemapArticles } from "@/lib/blog-alternates";
 import { SITE_URL } from "@/lib/schema";
 import { generateHreflang } from "@/lib/hreflang";
 
@@ -77,14 +77,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     alternates: alt(`/blog/${p.slug}`),
   }));
 
-  // Blog canonical: TR unprefixed (matches other dynamic pages); hreflang
-  // alternates cover EN/DE/other locales — keeps sitemap canonical consistent.
-  const blogPages: MetadataRoute.Sitemap = ARTICLES.map((a) => ({
-    url: url(`/blog/${a.slug}`),
+  // Blog: one entry per article at its REAL URL (/<locale>/blog/<slug>; tr
+  // unprefixed), indexable locales only, alternates = actual translations.
+  // Live audit 2026-09-15: the old /blog/<slug> shape 404'd for 154 of 251
+  // sitemap URLs. Guard: tests/lib/blog-alternates.test.ts.
+  const blogPages: MetadataRoute.Sitemap = sitemapArticles().map((a) => ({
+    url: blogArticleUrl(a),
     lastModified: a.publishedAt ? new Date(a.publishedAt) : now,
     changeFrequency: "weekly",
     priority: 0.6,
-    alternates: alt(`/blog/${a.slug}`),
+    alternates: { languages: blogAlternates(a) },
   }));
 
   const mk = (

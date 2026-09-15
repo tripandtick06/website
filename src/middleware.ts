@@ -5,7 +5,31 @@ import { ADMIN_COOKIE_NAME, verifyAdminCookieValue } from "@/lib/admin-auth";
 import { checkRateLimit } from "@/lib/rate-limit";
 import { isNoindexPath } from "@/lib/locale-index";
 
+// Locale auto-detection (Accept-Language / NEXT_LOCALE cookie) ONLY on the
+// root URL. Deep links keep the language they were shared in: the old
+// site-wide detection 307'd every /blog/<tr-slug> to /<lang>/blog/<tr-slug>,
+// which does not exist (blog slugs are per-locale) -> 404 for every non-TR
+// visitor (live audit 2026-09-15). Google also advises against redirecting
+// crawlable URLs by Accept-Language. Guard: tests/lib/middleware-locale.test.ts
 const intlMiddleware = createIntlMiddleware(routing);
+const intlMiddlewareNoDetect = createIntlMiddleware(routing, { localeDetection: false });
+
+// "/BALONLAR" served 200 while "/balonlar/" and "www." were normalised (live
+// audit): fold uppercase paths onto the lowercase canonical with a 308.
+// The locale segment keeps its canonical casing ("pt-BR" is mixed-case and
+// next-intl matches it case-sensitively): "/PT-BR/Hotels" -> "/pt-BR/hotels",
+// "/pt-BR/hotels" -> unchanged.
+export function lowercaseRedirectTarget(pathname: string): string | null {
+  if (pathname.startsWith("/api/") || pathname.startsWith("/_next")) return null;
+  const [, first = "", ...rest] = pathname.split("/");
+  const canonicalLocale = routing.locales.find(
+    (l) => l.toLowerCase() === first.toLowerCase()
+  );
+  const head = canonicalLocale ?? first.toLowerCase();
+  const tail = rest.map((seg) => seg.toLowerCase());
+  const target = "/" + [head, ...tail].join("/");
+  return target !== pathname ? target : null;
+}
 
 const RATE_LIMIT_MAX = 10; // requests / window
 const RATE_LIMIT_WINDOW_MS = 60 * 1000; // 1 dakika
@@ -46,7 +70,13 @@ export async function middleware(req: NextRequest) {
     // Upgrading to 308 (permanent) makes browsers + shared caches pin the first
     // detected locale forever, breaking device-language auto-detection. So pass
     // next-intl's response through unchanged.
-    const res = intlMiddleware(req);
+    const lower = lowercaseRedirectTarget(pathname);
+    if (lower) {
+      const url = req.nextUrl.clone();
+      url.pathname = lower;
+      return NextResponse.redirect(url, 308);
+    }
+    const res = pathname === "/" ? intlMiddleware(req) : intlMiddlewareNoDetect(req);
     // 2026-09-15 locale prune: header-level noindex for the ten pruned locales.
     // Independent of page metadata (some pages set robots themselves), so a
     // future page-level `index: true` cannot silently re-open a pruned locale.

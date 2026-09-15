@@ -4,7 +4,8 @@ import fs from "node:fs";
 import path from "node:path";
 import { SITE_URL, articleSchema, breadcrumbSchema, faqPageSchema } from "@/lib/schema";
 import { ogImageUrl, canonicalFor, ogLocale } from "@/lib/hreflang";
-import { INDEXABLE_LOCALES, robotsForLocale } from "@/lib/locale-index";
+import { robotsForLocale } from "@/lib/locale-index";
+import { blogAlternates, stripBrandSuffix } from "@/lib/blog-alternates";
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { serverDict } from "@/lib/i18n/serverDict";
 import { ARTICLES, type BlogArticle, type BlogArticleMeta } from "@/data/blog";
@@ -47,33 +48,14 @@ export async function generateMetadata({
   if (!article) return { title: "Yazı Bulunamadı" };
 
   const path = `/blog/${article.slug}`;
-  const title = article.metaTitle || article.title;
+  // Article metaTitles often already end with the brand suffix; the layout's
+  // title.template appends the brand again (doubled brand on 7/7 sampled
+  // live articles, audit 2026-09-15). Strip a trailing brand here.
+  const title = stripBrandSuffix(article.metaTitle || article.title);
 
-  // Per-locale hreflang for blog detail: each locale owns a DISTINCT slug
-  // (e.g. `-de`, `-en`); some tr/en slugs are bare (no suffix). Derive the
-  // shared base by stripping any trailing locale suffix, then resolve each
-  // locale to its own article slug (suffixed OR bare). Only emit locales that
-  // actually have a translation. x-default points to the tr version.
-  // 2026-09-15 locale prune: hreflang cluster = indexable locales only.
-  const SUPPORTED = INDEXABLE_LOCALES;
-  const TAG: Record<string, string> = {
-    tr: "tr-TR", en: "en", de: "de", fr: "fr", es: "es",
-    nl: "nl", zh: "zh-Hans", hi: "hi", ur: "ur",
-    pt: "pt-PT", "pt-BR": "pt-BR", ja: "ja", ko: "ko", it: "it",
-    ru: "ru", uk: "uk", az: "az",
-  };
-  // pt-BR once (uzun) eslesir; anchored $ oldugu icin sira onemsiz ama acik tutuldu.
-  const base = article.slug.replace(/-(pt-BR|tr|en|de|fr|es|nl|zh|hi|ur|pt|ja|ko|it|ru|uk|az)$/, "");
-  const languages: Record<string, string> = {};
-  for (const loc of SUPPORTED) {
-    const match = ARTICLES.find(
-      (a) => a.locale === loc && (a.slug === `${base}-${loc}` || a.slug === base)
-    );
-    if (!match) continue;
-    const href = `${SITE_URL}${loc === "tr" ? "" : `/${loc}`}/blog/${match.slug}`;
-    languages[TAG[loc]] = href;
-    if (loc === "tr") languages["x-default"] = href;
-  }
+  // hreflang cluster: translations of this article in indexable locales
+  // (src/lib/blog-alternates.ts — shared with sitemap.ts).
+  const languages = blogAlternates(article);
 
   return {
     title,
