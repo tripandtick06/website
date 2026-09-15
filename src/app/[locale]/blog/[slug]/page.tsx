@@ -5,6 +5,7 @@ import path from "node:path";
 import { SITE_URL, articleSchema, breadcrumbSchema, faqPageSchema } from "@/lib/schema";
 import { FOUNDER } from "@/data/founder";
 import { ogImageUrl, canonicalFor, ogLocale } from "@/lib/hreflang";
+import { INDEXABLE_LOCALES, robotsForLocale } from "@/lib/locale-index";
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { serverDict } from "@/lib/i18n/serverDict";
 import { ARTICLES, type BlogArticle, type BlogArticleMeta } from "@/data/blog";
@@ -54,7 +55,8 @@ export async function generateMetadata({
   // shared base by stripping any trailing locale suffix, then resolve each
   // locale to its own article slug (suffixed OR bare). Only emit locales that
   // actually have a translation. x-default points to the tr version.
-  const SUPPORTED = ["tr", "en", "de", "fr", "es", "nl", "zh", "hi", "ur", "pt", "pt-BR", "ja", "ko", "it", "ru", "uk", "az"] as const;
+  // 2026-09-15 locale prune: hreflang cluster = indexable locales only.
+  const SUPPORTED = INDEXABLE_LOCALES;
   const TAG: Record<string, string> = {
     tr: "tr-TR", en: "en", de: "de", fr: "fr", es: "es",
     nl: "nl", zh: "zh-Hans", hi: "hi", ur: "ur",
@@ -77,7 +79,7 @@ export async function generateMetadata({
   return {
     title,
     description: article.metaDescription,
-    robots: { index: true, follow: true },
+    robots: robotsForLocale(params.locale),
     alternates: {
       canonical: canonicalFor(path, params.locale),
       languages,

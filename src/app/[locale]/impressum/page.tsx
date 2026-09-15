@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SITE_URL } from "@/lib/schema";
 import { generateHreflang, ogImageUrl, canonicalFor } from "@/lib/hreflang";
+import { robotsForLocale } from "@/lib/locale-index";
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { serverDict } from "@/lib/i18n/serverDict";
 import { ImpressumContent } from "./ImpressumContent";
@@ -35,7 +36,7 @@ export async function generateMetadata({
         },
       ],
     },
-    robots: { index: true, follow: true },
+    robots: robotsForLocale(params.locale),
   };
 }
 
