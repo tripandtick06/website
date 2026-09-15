@@ -13,7 +13,6 @@ import { MapPin, ChevronRight } from "lucide-react";
 import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
-import { ReviewScore } from "@/components/ui/ReviewScore";
 import { AmenityChips } from "@/components/ui/AmenityChips";
 import { useUiText } from "@/lib/i18n/uiText";
 import type { ServiceItem } from "@/data/services/catalog";
@@ -67,10 +66,6 @@ export function HotelCard({ item, priority = false }: { item: ServiceItem; prior
             <MapPin className="h-3.5 w-3.5 text-booking-600" aria-hidden /> {item.region}
           </p>
         )}
-
-        <div className="mt-2.5">
-          <ReviewScore rating={item.rating} count={item.reviewCount} format="ten" size="sm" />
-        </div>
 
         <p className="mt-3 line-clamp-2 flex-1 text-sm leading-relaxed text-slate-600">
           {item.shortDescription}

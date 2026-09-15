@@ -55,12 +55,6 @@ export const ORGANIZATION_SCHEMA = {
       contactType: "billing support",
     },
   ],
-  founder: {
-    "@type": "Person",
-    name: FOUNDER.name,
-    jobTitle: FOUNDER.title,
-    email: FOUNDER.email,
-  },
   sameAs: [
     COMPANY.social.instagram,
     COMPANY.social.facebook,
@@ -99,6 +93,12 @@ export function breadcrumbSchema(items: { name: string; href: string }[]) {
   };
 }
 
+// 2026-09-15 trust cleanup: NO aggregateRating / review nodes anywhere.
+// Every rating/reviewCount in src/data/services/* is placeholder data and
+// src/data/reviews.ts is mock — emitting them as schema.org facts is the
+// "spammy structured markup" class Google issues manual actions for. The
+// input fields stay optional so callers compile; they are deliberately unused.
+// Re-adding ratings requires a real, moderated review dataset behind them.
 export interface TouristTripInput {
   slug: string;
   name: string;
@@ -106,8 +106,8 @@ export interface TouristTripInput {
   duration: string;
   price: number;
   currency: string;
-  rating: number;
-  reviewCount: number;
+  rating?: number;
+  reviewCount?: number;
   image?: string;
   /** Absolute, locale-aware URL for url/offers.url. Default /balonlar/<slug>. */
   urlPath?: string;
@@ -145,13 +145,6 @@ export function touristTripSchema(p: TouristTripInput) {
       validFrom: new Date().toISOString().split("T")[0],
     },
     provider: { "@id": ORG_ID },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: p.rating.toString(),
-      reviewCount: p.reviewCount.toString(),
-      bestRating: "5",
-      worstRating: "1",
-    },
   };
 }
 
@@ -186,11 +179,13 @@ export interface ArticleInput {
 }
 
 export function articleSchema(a: ArticleInput) {
+  // Person author only when a real named author is supplied; the placeholder
+  // FOUNDER ("Trip and Tick Ekibi") must never be emitted as a Person.
   const authorNode =
-    a.authorType === "Person"
+    a.authorType === "Person" && a.author
       ? {
           "@type": "Person",
-          name: a.author || FOUNDER.name,
+          name: a.author,
           ...(a.authorUrl ? { url: a.authorUrl } : {}),
         }
       : {
@@ -228,8 +223,8 @@ export interface ServiceInput {
   description: string;
   price: number;
   currency: string;
-  rating: number;
-  reviewCount: number;
+  rating?: number;
+  reviewCount?: number;
 }
 
 export function serviceSchema(s: ServiceInput) {
@@ -247,13 +242,6 @@ export function serviceSchema(s: ServiceInput) {
       price: s.price.toString(),
       priceCurrency: s.currency,
       availability: "https://schema.org/InStock",
-    },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: s.rating.toString(),
-      reviewCount: s.reviewCount.toString(),
-      bestRating: "5",
-      worstRating: "1",
     },
   };
 }
@@ -292,19 +280,20 @@ export interface ProductSchemaInput {
   image?: string;
   price: number;
   currency: string;
-  rating: number;
-  reviewCount: number;
+  rating?: number;
+  reviewCount?: number;
   category?: string;
   /** Absolute URL or path. Absolute (starts http) used verbatim; else prefixed with SITE_URL. Default /balonlar/<slug>. */
   urlPath?: string;
+  /** Ignored since 2026-09-15 (mock reviews must not reach schema). */
   reviews?: ReviewInput[];
   /** Price hidden in UI (quote-based) — omit numeric price from Offer. */
   priceOnRequest?: boolean;
 }
 
 /**
- * Product + Offer + AggregateRating + Review — strongest commerce signal for
- * AI assistants and Google rich results. Refund guarantee surfaced via
+ * Product + Offer — commerce signal for AI assistants and Google rich results
+ * (no rating/review nodes: see trust-cleanup note above). Refund guarantee surfaced via
  * hasMerchantReturnPolicy (trust cue LLMs cite).
  */
 export function productSchema(p: ProductSchemaInput) {
@@ -344,16 +333,6 @@ export function productSchema(p: ProductSchemaInput) {
         returnFees: "https://schema.org/FreeReturn",
       },
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: p.rating.toString(),
-      reviewCount: p.reviewCount.toString(),
-      bestRating: "5",
-      worstRating: "1",
-    },
-    ...(p.reviews && p.reviews.length
-      ? { review: p.reviews.map(reviewSchema) }
-      : {}),
   };
 }
 
@@ -361,8 +340,8 @@ export interface LodgingInput {
   slug: string;
   name: string;
   description: string;
-  rating: number;
-  reviewCount: number;
+  rating?: number;
+  reviewCount?: number;
   region?: string;
   amenities?: string[];
   priceRange?: string;
@@ -372,8 +351,8 @@ export interface LodgingInput {
 
 /**
  * Hotel (LodgingBusiness) schema — info-only hotel pages (no online price).
- * aggregateRating + amenityFeature give AI assistants citable "best cave
- * hotel" answer material.
+ * amenityFeature gives AI assistants citable "best cave hotel" answer material
+ * (no aggregateRating: see trust-cleanup note above).
  */
 export function lodgingSchema(h: LodgingInput) {
   return {
@@ -393,13 +372,6 @@ export function lodgingSchema(h: LodgingInput) {
         }
       : {}),
     ...(h.priceRange ? { priceRange: h.priceRange } : {}),
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: h.rating.toString(),
-      reviewCount: h.reviewCount.toString(),
-      bestRating: "5",
-      worstRating: "1",
-    },
     ...(h.amenities && h.amenities.length
       ? {
           amenityFeature: h.amenities.map((a) => ({

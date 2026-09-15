@@ -2,20 +2,38 @@
 
 import { useT } from "@/lib/i18n/I18nProvider";
 import { Link } from "@/i18n/routing";
-import { Star, MapPin, Calendar, Users as UsersIcon, ShieldCheck } from "lucide-react";
+import { MapPin, Calendar, Users as UsersIcon, ShieldCheck } from "lucide-react";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { PageHero } from "@/components/layout/PageHero";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { OPERATORS } from "@/data/services/operators";
 import { breadcrumbSchema, SITE_URL } from "@/lib/schema";
 
+// Fabrike edilmis rating/review-count icermeyen cumleyi cikarir — placeholder
+// oncesindeki son cumle-sonu isaretine (nokta/ideografik nokta/vb) kadar keser.
+// Locale'ler arasi cumle sirasi/isaretleme farkli olabilir; bu yuzden sabit
+// string-slice yerine placeholder-index temelli genel bir yaklasim kullanilir.
+function stripFabricatedRatingSentence(text: string): string {
+  const indices = ["{rating}", "{reviews}"]
+    .map((token) => text.indexOf(token))
+    .filter((i) => i !== -1);
+  if (indices.length === 0) return text;
+  const cutBefore = Math.min(...indices);
+  const delimiters = new Set([".", "。", "!", "?", "۔"]);
+  let cut = -1;
+  for (let i = cutBefore; i >= 0; i--) {
+    if (delimiters.has(text[i])) {
+      cut = i;
+      break;
+    }
+  }
+  return cut === -1 ? "" : text.slice(0, cut + 1).trim();
+}
+
 export function OperatorlerContent() {
   const t = useT();
 
-  const sorted = [...OPERATORS].sort((a, b) => b.rating - a.rating);
-  const avgRating =
-    OPERATORS.reduce((sum, o) => sum + o.rating, 0) / OPERATORS.length;
-  const totalReviews = OPERATORS.reduce((sum, o) => sum + o.reviewCount, 0);
+  const sorted = [...OPERATORS].sort((a, b) => a.name.localeCompare(b.name));
 
   const breadcrumbItems = [{ name: t.page.operatorler.breadcrumb_name, href: "/operatorler" }];
 
@@ -23,10 +41,9 @@ export function OperatorlerContent() {
     "{count}",
     String(OPERATORS.length)
   );
-  const heroDescription = t.page.operatorler.pagehero_description_dynamic
-    .replace("{count}", String(OPERATORS.length))
-    .replace("{rating}", avgRating.toFixed(2))
-    .replace("{reviews}", totalReviews.toLocaleString("tr-TR"));
+  const heroDescription = stripFabricatedRatingSentence(
+    t.page.operatorler.pagehero_description_dynamic
+  ).replace("{count}", String(OPERATORS.length));
 
   return (
     <>
@@ -58,11 +75,7 @@ export function OperatorlerContent() {
                 className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-shadow"
               >
                 <div className="bg-gradient-to-br from-primary via-primary-light to-accent text-white p-5 relative">
-                  <div className="absolute top-3 right-3 bg-white/95 text-primary px-2.5 py-1 rounded-md text-sm font-bold flex items-center gap-1">
-                    <Star className="w-3.5 h-3.5 fill-warning text-warning" />
-                    {op.rating.toFixed(2)}
-                  </div>
-                  <h3 className="text-xl font-bold mb-1 pr-16">{op.name}</h3>
+                  <h3 className="text-xl font-bold mb-1">{op.name}</h3>
                   <p className="text-xs uppercase tracking-wider opacity-90">
                     {t.page.operatorler.lisans_prefix} {op.licenseNo}
                   </p>
@@ -75,10 +88,6 @@ export function OperatorlerContent() {
                     <div className="flex items-center gap-1.5">
                       <Calendar className="w-3.5 h-3.5" />
                       {op.founded} ({new Date().getFullYear() - op.founded}{t.page.operatorler.yil}
-                    </div>
-                    <div className="flex items-center gap-1.5">
-                      <Star className="w-3.5 h-3.5" />
-                      {op.reviewCount.toLocaleString("tr-TR")} {t.page.operatorler.yorum_suffix}
                     </div>
                     {op.fleetSize && (
                       <div className="flex items-center gap-1.5">

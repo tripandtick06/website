@@ -15,7 +15,6 @@ import { MapPin, Phone, MessageSquare, Mail } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 import { Banner } from "@/components/ui/Banner";
 import { Button } from "@/components/ui/Button";
-import { ReviewScore } from "@/components/ui/ReviewScore";
 import { AmenityChips } from "@/components/ui/AmenityChips";
 import type { ServiceItem } from "@/data/services/catalog";
 
@@ -90,7 +89,6 @@ export function OtelDetayContent({ hotel: hotelRaw }: OtelDetayContentProps) {
                         <MapPin className="h-4 w-4 text-booking-600" aria-hidden /> {hotel.region}
                       </span>
                     )}
-                    <ReviewScore rating={hotel.rating} count={hotel.reviewCount} format="ten" size="sm" />
                   </div>
                   <h1 className="mb-2 text-3xl font-bold text-slate-900">{hotel.name}</h1>
                   <p className="leading-relaxed text-slate-600">{hotel.shortDescription}</p>

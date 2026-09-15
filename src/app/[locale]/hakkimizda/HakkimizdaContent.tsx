@@ -5,7 +5,6 @@ import { Link } from "@/i18n/routing";
 import {
   Shield,
   Users,
-  Star,
   Award,
   Heart,
   Target,
@@ -26,9 +25,8 @@ export function HakkimizdaContent() {
   const t = useT();
   const d = t.page.hakkimizda;
 
+  // 2026-09-15: customer-count / rating stats removed (no dataset backs them).
   const STATS = [
-    { icon: Users, value: "12.000+", label: d.stat_label_mutlu_musteri },
-    { icon: Star, value: "4.9 / 5", label: d.stat_label_musteri_puani },
     { icon: Shield, value: "9+", label: d.stat_label_lisansli_operator },
     { icon: Award, value: "%100", label: d.stat_label_iade_garantisi },
   ];

@@ -5,7 +5,6 @@ import NextImage from "next/image";
 import {
   Clock,
   Users,
-  Star,
   Wind,
   Heart,
   Zap,
@@ -158,7 +157,6 @@ export function PackagesSection() {
             meta={[
               { icon: <Clock className="w-4 h-4" />, text: ps.standart_meta_sure },
               { icon: <Users className="w-4 h-4" />, text: ps.standart_meta_kisi },
-              { icon: <Star className="w-4 h-4" />, text: "4.9" },
             ]}
             includes={[
               ps.standart_include_transfer,
@@ -186,7 +184,6 @@ export function PackagesSection() {
             meta={[
               { icon: <Wind className="w-4 h-4" />, text: ps.balayi_meta_balon },
               { icon: <Clock className="w-4 h-4" />, text: ps.balayi_meta_otel },
-              { icon: <Star className="w-4 h-4" />, text: "5.0" },
             ]}
             includes={[
               ps.balayi_include_delux_ucus,
@@ -214,7 +211,6 @@ export function PackagesSection() {
             meta={[
               { icon: <Wind className="w-4 h-4" />, text: ps.macera_meta_balon },
               { icon: <Zap className="w-4 h-4" />, text: ps.macera_meta_atv },
-              { icon: <Star className="w-4 h-4" />, text: "4.8" },
             ]}
             includes={[
               ps.macera_include_standart_ucus,

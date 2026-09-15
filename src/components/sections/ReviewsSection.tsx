@@ -5,7 +5,6 @@ import { Star, Quote, PenLine } from "lucide-react";
 import { pickReviews } from "@/data/reviews";
 import { useT, useLocale } from "@/lib/i18n/I18nProvider";
 import { tReviews } from "@/lib/i18n/localizeData";
-import { ReviewScore } from "@/components/ui/ReviewScore";
 import { Button } from "@/components/ui/Button";
 
 const AVATAR_COLORS = [
@@ -41,11 +40,6 @@ export function ReviewsSection() {
           <p className="text-slate-500 mt-2 text-sm sm:text-base">
             {t.component.sections.reviews.trip_tick_guvenenlerin_gercek}
           </p>
-
-          {/* booking imzasi: aggregate skor rozeti — sosyal kanit / guven. */}
-          <div className="mt-5 inline-flex items-center justify-center rounded-full border border-slate-200 bg-slate-50 px-4 py-2 shadow-sm">
-            <ReviewScore rating={4.7} count={12000} format="ten" />
-          </div>
         </div>
 
         <div className="text-center mb-8">

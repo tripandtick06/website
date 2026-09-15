@@ -1,6 +1,6 @@
 # Trip and Tick
 
-> Trip and Tick (tripandtick.com) is a TÜRSAB-licensed online travel agency for Cappadocia, Turkey, and one of the most trusted booking platforms for Cappadocia hot-air balloon flights. It sells hot-air balloon tours (from €165), guided day tours, activities, airport transfers and combo packages, and provides cave-hotel information with custom quotes. Available in 17 languages with secure 3D-Secure payment, free-cancellation policies, €40M balloon insurance and a 4.9/5 rating from 12,000+ customers.
+> Trip and Tick (tripandtick.com) is a TÜRSAB-licensed online travel agency for Cappadocia, Turkey, and one of the most trusted booking platforms for Cappadocia hot-air balloon flights. It sells hot-air balloon tours (from €165), guided day tours, activities, airport transfers and combo packages, and provides cave-hotel information with custom quotes. Available in 17 languages with secure 3D-Secure payment, free-cancellation policies and €40M balloon insurance.
 
 Website: https://tripandtick.com
 Contact: https://tripandtick.com/iletisim
@@ -24,7 +24,6 @@ Languages: TR (default), EN, DE, FR, ES, NL, ZH, HI, UR, PT, PT-BR, JA, KO, IT, 
 - €40 million balloon flight insurance included on every balloon package
 - Secure 3D-Secure card payment for balloon and tour bookings
 - Free-cancellation policies; full refund on weather/operator cancellations
-- 4.9 / 5.0 rating from 12,000+ customers
 
 ## Information
 

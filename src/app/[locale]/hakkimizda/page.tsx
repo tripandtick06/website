@@ -33,7 +33,7 @@ export async function generateMetadata({
         {
           url: ogImageUrl(
             "Hakkımızda",
-            "TÜRSAB Lisanslı · 12.000+ Müşteri · 9+ Operatör"
+            "TÜRSAB Lisanslı · 9+ Operatör · 17 Dil"
           ),
           width: 1200,
           height: 630,

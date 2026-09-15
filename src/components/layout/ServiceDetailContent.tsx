@@ -7,7 +7,7 @@
 import type { ComponentProps } from "react";
 import NextImage from "next/image";
 import { Link } from "@/i18n/routing";
-import { Star, Clock, Check, Sparkles } from "lucide-react";
+import { Clock, Check, Sparkles } from "lucide-react";
 import { formatPrice } from "@/lib/utils";
 import { useT } from "@/lib/i18n/I18nProvider";
 import { useUiText } from "@/lib/i18n/uiText";
@@ -79,11 +79,6 @@ export function ServiceDetailContent({
             </h1>
 
             <div className="flex flex-wrap items-center gap-4 text-sm text-slate-600 mb-5">
-              <span className="flex items-center gap-1">
-                <Star className="w-4 h-4 fill-warning text-warning" />
-                {item.rating} · {item.reviewCount.toLocaleString("tr-TR")}{" "}
-                {t.component.layout.service_card.degerlendirme}
-              </span>
               <span className="flex items-center gap-1">
                 <Clock className="w-4 h-4" />
                 {item.duration}

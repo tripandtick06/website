@@ -34,7 +34,7 @@ export async function generateMetadata({
   if (!op) return { title: "Operator bulunamadı" };
   return {
     title: `${op.name} — Kapadokya Balon Operatörü`,
-    description: `${op.name} — ${op.founded} kuruluş, SHGM lisans no ${op.licenseNo}, ${op.reviewCount.toLocaleString("tr-TR")}+ yorum, ${op.rating.toFixed(1)}/5 puan. ${op.description.slice(0, 100)}...`,
+    description: `${op.name} Kapadokya balon uçuşları: paketler, fiyatlar ve Trip and Tick üzerinden rezervasyon. ${op.description.slice(0, 90)}...`,
     alternates: {
       canonical: canonicalFor(`/operatorler/${op.id}`, params.locale),
       languages: generateHreflang(`/operatorler/${op.id}`),
@@ -86,13 +86,6 @@ export default function OperatorDetailPage({
                 }
               : undefined,
             telephone: op.phone,
-            aggregateRating: {
-              "@type": "AggregateRating",
-              ratingValue: op.rating,
-              reviewCount: op.reviewCount,
-              bestRating: 5,
-              worstRating: 1,
-            },
           },
         ]}
       />

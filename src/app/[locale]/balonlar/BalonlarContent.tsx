@@ -2,7 +2,7 @@
 
 import NextImage from "next/image";
 import { Link } from "@/i18n/routing";
-import { Wind, Star, Clock, Users, Check, Shield } from "lucide-react";
+import { Wind, Clock, Users, Check, Shield } from "lucide-react";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { PageHero } from "@/components/layout/PageHero";
 import { OPERATORS } from "@/data/services/operators";
@@ -71,10 +71,6 @@ export function BalonlarContent() {
                   >
                     {pkg.badge}
                   </span>
-                  <div className="absolute top-4 right-4 bg-white/95 text-primary px-2.5 py-1 rounded-md text-sm font-bold flex items-center gap-1 z-10">
-                    <Star className="w-3.5 h-3.5 fill-warning text-warning" />
-                    {pkg.rating}
-                  </div>
                 </div>
 
                 <div className="p-6 flex flex-col flex-1">
@@ -168,11 +164,6 @@ export function BalonlarContent() {
                 <Wind className="w-8 h-8 text-primary mx-auto mb-2" />
                 <h4 className="font-bold text-slate-900 text-sm mb-1">{op.name}</h4>
                 <div className="text-[10px] text-slate-500 mb-1.5">{b.lisans_prefix} {op.licenseNo}</div>
-                <div className="flex items-center justify-center gap-1 text-xs">
-                  <Star className="w-3 h-3 fill-warning text-warning" />
-                  <span className="font-semibold text-slate-700">{op.rating}</span>
-                  <span className="text-slate-400">({op.reviewCount.toLocaleString("tr-TR")})</span>
-                </div>
               </div>
             ))}
           </div>
