@@ -8,7 +8,6 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import CookieConsentMount from "@/components/booking/CookieConsentMount";
 import { WhatsAppFAB } from "@/components/booking/WhatsAppFAB";
-import { SocialProofPopup } from "@/components/booking/SocialProofPopup";
 import { I18nProvider } from "@/lib/i18n/I18nProvider";
 import { CurrencyProvider } from "@/lib/currency";
 import { JsonLd } from "@/components/layout/JsonLd";
@@ -169,7 +168,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
               <main className="min-h-screen">{children}</main>
               <Footer />
               <WhatsAppFAB />
-              <SocialProofPopup />
+              {/* SocialProofPopup removed 2026-09-15: fabricated 'X just booked' notices (UCPD-class deceptive pattern). */}
               <CookieConsentMount />
             </CurrencyProvider>
           </I18nProvider>

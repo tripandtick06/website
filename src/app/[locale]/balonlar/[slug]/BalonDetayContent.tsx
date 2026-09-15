@@ -6,7 +6,6 @@ import {
   Wind,
   Clock,
   Users,
-  Star,
   Check,
   X,
   AlertTriangle,
@@ -78,10 +77,6 @@ export function BalonDetayContent({
                 )}
                 <div className="absolute top-4 left-4 bg-white text-primary px-3 py-1.5 rounded-full text-xs font-bold uppercase shadow-md">
                   {pkg.badge}
-                </div>
-                <div className="absolute top-4 right-4 bg-white/95 text-primary px-3 py-1.5 rounded-md font-bold flex items-center gap-1.5">
-                  <Star className="w-4 h-4 fill-warning text-warning" />
-                  {pkg.rating} ({pkg.reviewCount.toLocaleString("tr-TR")})
                 </div>
               </div>
 
@@ -182,10 +177,6 @@ export function BalonDetayContent({
                       <div className="text-xs text-slate-500">
                         {s.lisans_prefix} {op.licenseNo} · {op.founded}{s.beri}
                       </div>
-                    </div>
-                    <div className="flex items-center gap-1 text-xs">
-                      <Star className="w-3.5 h-3.5 fill-warning text-warning" />
-                      <span className="font-bold">{op.rating}</span>
                     </div>
                   </div>
                 ))}

@@ -3,7 +3,7 @@
 import type { ComponentProps } from "react";
 import NextImage from "next/image";
 import { Link } from "@/i18n/routing";
-import { Star, Clock, Check, Hotel, MountainSnow, TreePine, Package, Car, Wind } from "lucide-react";
+import { Clock, Check, Hotel, MountainSnow, TreePine, Package, Car, Wind } from "lucide-react";
 import { formatPrice } from "@/lib/utils";
 import { useT } from "@/lib/i18n/I18nProvider";
 import { useUiText } from "@/lib/i18n/uiText";
@@ -110,10 +110,6 @@ export function ServiceCard({ item, ctaHref }: ServiceCardProps) {
             {item.badge}
           </span>
         )}
-        <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-sm text-primary px-2 py-1 rounded-md text-xs font-bold flex items-center gap-1 z-10">
-          <Star className="w-3 h-3 fill-warning text-warning" />
-          {item.rating}
-        </div>
       </div>
 
       <div className="p-5 flex flex-col flex-1">
@@ -129,8 +125,6 @@ export function ServiceCard({ item, ctaHref }: ServiceCardProps) {
             <Clock className="w-3.5 h-3.5" />
             {item.duration}
           </span>
-          <span>·</span>
-          <span>{item.reviewCount.toLocaleString("tr-TR")} {t.component.layout.service_card.degerlendirme}</span>
         </div>
 
         <ul className="text-xs text-slate-600 space-y-1 mb-4">

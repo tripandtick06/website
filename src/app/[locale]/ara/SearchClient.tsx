@@ -21,7 +21,6 @@ import { Link } from "@/i18n/routing";
 import {
   Search as SearchIcon,
   X as XIcon,
-  Star,
   Clock,
   Wind,
   MountainSnow,
@@ -247,12 +246,6 @@ function ResultCard({ result }: { result: SearchResult }) {
         </p>
         <div className="flex items-center justify-between gap-2 pt-2 border-t border-slate-100">
           <div className="flex items-center gap-2 text-xs text-slate-500">
-            {result.rating && (
-              <span className="flex items-center gap-1">
-                <Star className="w-3 h-3 fill-warning text-warning" />
-                {result.rating}
-              </span>
-            )}
             {result.duration && (
               <span className="flex items-center gap-1">
                 <Clock className="w-3 h-3" />

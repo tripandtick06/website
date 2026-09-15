@@ -91,13 +91,6 @@ export function OperatorDetayContent({
               </p>
             )}
             <div className="flex flex-wrap items-center gap-3">
-              <span className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur px-3 py-1.5 rounded-lg text-sm font-semibold">
-                <Star className="w-4 h-4 fill-warning text-warning" />
-                {op.rating.toFixed(2)} / 5.0
-              </span>
-              <span className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur px-3 py-1.5 rounded-lg text-sm">
-                {op.reviewCount.toLocaleString("tr-TR")} {ti.yorum}
-              </span>
               <span className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur px-3 py-1.5 rounded-lg text-sm">
                 <Calendar className="w-4 h-4" /> {op.founded} ({yearsActive}{ti.yil}
               </span>
@@ -173,10 +166,6 @@ export function OperatorDetayContent({
                           )}
                         >
                           {pkg.badge}
-                        </span>
-                        <span className="text-xs flex items-center gap-0.5 text-slate-500">
-                          <Star className="w-3 h-3 fill-amber-500 text-amber-500" />
-                          {pkg.rating}
                         </span>
                       </div>
                       <h3 className="font-bold text-slate-900 mb-1">{pkg.name}</h3>

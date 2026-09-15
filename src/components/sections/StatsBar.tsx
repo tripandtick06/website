@@ -8,13 +8,13 @@ export function StatsBar({ stats }: { stats?: Stat[] }) {
   const t = useT();
 
   // If no prop override, build from i18n dictionary.
+  // 2026-09-15: customer-count and rating stats removed — no dataset backs
+  // them (first real sale was 2026-09-15). Only verifiable figures stay.
   const finalStats: Stat[] =
     stats ?? [
       { num: "9+", label: t.stats.operators },
-      { num: "12.000+", label: t.stats.customers },
-      { num: "4.9", label: t.stats.rating },
       { num: "%100", label: t.stats.refund },
-      { num: "9", label: t.stats.langs },
+      { num: "17", label: t.stats.langs },
     ];
 
   return (

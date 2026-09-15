@@ -12,7 +12,6 @@ import { CategoriesSection } from "@/components/sections/CategoriesSection";
 import { PackagesSection } from "@/components/sections/PackagesSection";
 import { GuaranteeSection } from "@/components/sections/GuaranteeSection";
 import { StepsSection } from "@/components/sections/StepsSection";
-import { ReviewsSection } from "@/components/sections/ReviewsSection";
 import { NewsletterSection } from "@/components/sections/NewsletterSection";
 import { LoyaltySection } from "@/components/sections/LoyaltySection";
 import { StatsBar } from "@/components/sections/StatsBar";
@@ -79,7 +78,7 @@ export default function HomePage({
       <PackagesSection />
       <GuaranteeSection />
       <StepsSection />
-      <ReviewsSection />
+      {/* ReviewsSection removed 2026-09-15: testimonials were mock data (src/data/reviews.ts). Re-add when moderated real reviews exist. */}
       <NewsletterSection />
       <LoyaltySection />
 

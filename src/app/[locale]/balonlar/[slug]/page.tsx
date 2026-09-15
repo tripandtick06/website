@@ -7,7 +7,6 @@ export const dynamicParams = false;
 import { JsonLd } from "@/components/layout/JsonLd";
 import { BALLOON_PACKAGES, getBalloonPackageBySlug } from "@/data/services/balloons";
 import { OPERATORS } from "@/data/services/operators";
-import { REVIEWS } from "@/data/reviews";
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { serverDict } from "@/lib/i18n/serverDict";
 import { tFaq } from "@/lib/i18n/localizeData";
@@ -71,18 +70,6 @@ export default function BalonDetayPage({ params }: PageParams) {
   const detailUrl = canonicalFor(`/balonlar/${pkg.slug}`, loc);
   const operators = OPERATORS.filter((op) => pkg.operatorIds.includes(op.id));
   const balonFaqs = tFaq(loc).filter((f) => f.category === "balon");
-  const balonReviews = REVIEWS.filter(
-    (r) => r.service === "Balon" && r.rating >= 4
-  )
-    .slice(0, 5)
-    .map((r) => ({
-      author: r.name,
-      rating: r.rating,
-      text: r.textEn ?? r.text,
-      date: r.date,
-      itemName: pkg.name,
-    }));
-
   return (
     <>
       <BalonDetayContent pkg={pkg} operators={operators} balonFaqs={balonFaqs} />
@@ -115,7 +102,6 @@ export default function BalonDetayPage({ params }: PageParams) {
             reviewCount: pkg.reviewCount,
             category: "Kapadokya Balon Turu",
             urlPath: detailUrl,
-            reviews: balonReviews,
             priceOnRequest: pkg.priceOnRequest,
           }),
           faqPageSchema(balonFaqs.map((f) => ({ question: f.question, answer: f.answer }))),

@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import fs from "node:fs";
 import path from "node:path";
 import { SITE_URL, articleSchema, breadcrumbSchema, faqPageSchema } from "@/lib/schema";
-import { FOUNDER } from "@/data/founder";
 import { ogImageUrl, canonicalFor, ogLocale } from "@/lib/hreflang";
 import { INDEXABLE_LOCALES, robotsForLocale } from "@/lib/locale-index";
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
@@ -158,9 +157,9 @@ export default async function BlogArticlePage({
     image: article.coverImage,
     datePublished: article.publishedAt,
     dateModified: article.publishedAt,
-    author: FOUNDER.name,
-    authorType: "Person",
-    authorUrl: canonicalFor("/hakkimizda", loc),
+    // Organization author: there is no named human author behind these
+    // articles (2026-09-15 trust cleanup — no placeholder Person nodes).
+    authorType: "Organization",
     keywords: article.tags,
     urlPath: articleUrl,
   });
