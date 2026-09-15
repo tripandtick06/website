@@ -117,9 +117,9 @@ export const TRANSFERS: ServiceItem[] = [
 ];
 
 export const KAPADOKYA_PILLARS = [
-  { slug: "kapadokya-balon-turu-rehberi", title: "Kapadokya Balon Turu Rehberi 2026", desc: "Fiyatlar, en iyi mevsim, operatör karşılaştırma, ipuçları." },
+  { slug: "kapadokya-balon-turu-fiyat-2026", title: "Kapadokya Balon Turu Fiyatları 2026", desc: "Fiyatlar, en iyi mevsim, operatör karşılaştırma, ipuçları." },
   { slug: "kapadokya-ne-zaman-gidilir", title: "Kapadokya Ne Zaman Gidilir?", desc: "Mevsim mevsim analiz, hava durumu, balon uçuş oranları." },
-  { slug: "kapadokya-otel-tavsiye", title: "Kapadokya Otel Tavsiye", desc: "Mağara oteller, butik konaklamalar, fiyat-performans." },
+  { slug: "kapadokya-otel-tavsiye-2026", title: "Kapadokya Otel Tavsiye 2026", desc: "Mağara oteller, butik konaklamalar, fiyat-performans." },
   { slug: "kapadokya-aktiviteler", title: "Kapadokya'da Yapılacak 25 Aktivite", desc: "ATV, at binme, tur seçenekleri ve fiyatları." },
   { slug: "kapadokya-fotograf-noktalari", title: "Kapadokya Fotoğraf Noktaları", desc: "En iyi Instagram spotları ve çekim saatleri." },
 ];

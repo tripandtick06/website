@@ -16,18 +16,29 @@ const intlMiddlewareNoDetect = createIntlMiddleware(routing, { localeDetection: 
 
 // "/BALONLAR" served 200 while "/balonlar/" and "www." were normalised (live
 // audit): fold uppercase paths onto the lowercase canonical with a 308.
-// The locale segment keeps its canonical casing ("pt-BR" is mixed-case and
-// next-intl matches it case-sensitively): "/PT-BR/Hotels" -> "/pt-BR/hotels",
-// "/pt-BR/hotels" -> unchanged.
+// Scope: ONLY the locale segment and the first content segment (the category:
+// /balonlar, /balloon-tours, /blog, ...). Deeper segments are item slugs and
+// may legitimately carry mixed case — pt-BR blog slugs end in "-pt-BR"; a
+// blanket lowercase 308'd all nine of them into 404s on 2026-09-16 (caught by
+// the post-deploy sitemap sweep, fixed within the hour).
+//   "/BALONLAR"           -> "/balonlar"
+//   "/PT-BR/Hotels"       -> "/pt-BR/hotels"  (locale keeps canonical casing:
+//                                              next-intl matches it case-sensitively)
+//   "/pt-BR/blog/x-pt-BR" -> unchanged
 export function lowercaseRedirectTarget(pathname: string): string | null {
   if (pathname.startsWith("/api/") || pathname.startsWith("/_next")) return null;
   const [, first = "", ...rest] = pathname.split("/");
   const canonicalLocale = routing.locales.find(
     (l) => l.toLowerCase() === first.toLowerCase()
   );
-  const head = canonicalLocale ?? first.toLowerCase();
-  const tail = rest.map((seg) => seg.toLowerCase());
-  const target = "/" + [head, ...tail].join("/");
+  const segs: string[] = [];
+  if (canonicalLocale) {
+    segs.push(canonicalLocale);
+    if (rest.length) segs.push(rest[0].toLowerCase(), ...rest.slice(1));
+  } else {
+    segs.push(first.toLowerCase(), ...rest);
+  }
+  const target = "/" + segs.join("/");
   return target !== pathname ? target : null;
 }
 

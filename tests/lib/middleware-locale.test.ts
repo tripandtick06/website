@@ -33,6 +33,14 @@ describe("middleware locale policy", () => {
     expect(lowercaseRedirectTarget("/")).toBeNull();
   });
 
+  it("item slugs beyond the category segment are never case-folded (pt-BR blog slugs end in -pt-BR)", () => {
+    // 2026-09-16 regression: a blanket lowercase turned all nine pt-BR articles into 404s.
+    expect(lowercaseRedirectTarget("/pt-BR/blog/kapadokya-ne-zaman-gidilir-pt-BR")).toBeNull();
+    expect(lowercaseRedirectTarget("/blog/Some-Slug")).toBeNull();
+    expect(lowercaseRedirectTarget("/en/Blog/Some-Slug")).toBe("/en/blog/Some-Slug");
+    expect(lowercaseRedirectTarget("/BALONLAR/deluxe-balon-ucusu")).toBe("/balonlar/deluxe-balon-ucusu");
+  });
+
   it("source: detection-enabled middleware is used for '/' only", () => {
     const src = fs.readFileSync(path.resolve(__dirname, "../../src/middleware.ts"), "utf8");
     expect(src).toContain('createIntlMiddleware(routing, { localeDetection: false })');
