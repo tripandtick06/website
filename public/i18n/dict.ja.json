@@ -17,6 +17,12 @@
     "contact": "お問い合わせ",
     "faq": "よくある質問"
   },
+  "nav_extra": {
+    "flying_today": "今日、気球は飛ぶ？",
+    "kapadokya_guide": "カッパドキアガイド",
+    "transfers": "送迎",
+    "operators": "オペレーター"
+  },
   "hero": {
     "badge": "ネヴシェヒル / カッパドキア",
     "title1": "カッパドキアの",

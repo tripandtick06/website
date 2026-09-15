@@ -83,6 +83,12 @@ const BASE_DICTIONARIES = {
       contact: "İletişim",
       faq: "SSS",
     },
+    nav_extra: {
+      flying_today: "Bugün balonlar uçuyor mu?",
+      kapadokya_guide: "Kapadokya Rehberi",
+      transfers: "Transferler",
+      operators: "Operatörler",
+    },
     hero: {
       badge: "Nevşehir / Kapadokya",
       title1: "Kapadokya'nın",
@@ -1664,6 +1670,12 @@ const BASE_DICTIONARIES = {
       about: "About",
       contact: "Contact",
       faq: "FAQ",
+    },
+    nav_extra: {
+      flying_today: "Are balloons flying today?",
+      kapadokya_guide: "Cappadocia Guide",
+      transfers: "Transfers",
+      operators: "Operators",
     },
     hero: {
       badge: "Nevşehir / Cappadocia",
@@ -3247,6 +3259,12 @@ const BASE_DICTIONARIES = {
       contact: "Kontakt",
       faq: "FAQ",
     },
+    nav_extra: {
+      flying_today: "Fliegen die Ballons heute?",
+      kapadokya_guide: "Kappadokien-Guide",
+      transfers: "Transfers",
+      operators: "Veranstalter",
+    },
     hero: {
       badge: "Nevşehir / Kappadokien",
       title1: "Kappadokiens",
@@ -4828,6 +4846,12 @@ const BASE_DICTIONARIES = {
       about: "À propos",
       contact: "Contact",
       faq: "FAQ",
+    },
+    nav_extra: {
+      flying_today: "Les montgolfières volent-elles aujourd'hui ?",
+      kapadokya_guide: "Guide Cappadoce",
+      transfers: "Transferts",
+      operators: "Opérateurs",
     },
     hero: {
       badge: "Nevşehir / Cappadoce",
@@ -6411,6 +6435,12 @@ const BASE_DICTIONARIES = {
       contact: "Contacto",
       faq: "Preguntas frecuentes",
     },
+    nav_extra: {
+      flying_today: "¿Vuelan los globos hoy?",
+      kapadokya_guide: "Guía de Capadocia",
+      transfers: "Traslados",
+      operators: "Operadores",
+    },
     hero: {
       badge: "Nevşehir / Capadocia",
       title1: "Las mejores",
@@ -7992,6 +8022,12 @@ const BASE_DICTIONARIES = {
       about: "Over ons",
       contact: "Contact",
       faq: "Veelgestelde vragen",
+    },
+    nav_extra: {
+      flying_today: "Vliegen de ballonnen vandaag?",
+      kapadokya_guide: "Cappadocië-gids",
+      transfers: "Transfers",
+      operators: "Operators",
     },
     hero: {
       badge: "Nevşehir / Cappadocië",
@@ -9575,6 +9611,12 @@ const BASE_DICTIONARIES = {
       contact: "联系我们",
       faq: "常见问题",
     },
+    nav_extra: {
+      flying_today: "今天热气球飞吗？",
+      kapadokya_guide: "卡帕多奇亚指南",
+      transfers: "接送",
+      operators: "运营商",
+    },
     hero: {
       badge: "内夫谢希尔 / 卡帕多奇亚",
       title1: "卡帕多奇亚的",
@@ -11157,6 +11199,12 @@ const BASE_DICTIONARIES = {
       contact: "संपर्क",
       faq: "अक्सर पूछे जाने वाले प्रश्न",
     },
+    nav_extra: {
+      flying_today: "क्या आज गुब्बारे उड़ रहे हैं?",
+      kapadokya_guide: "कप्पाडोसिया गाइड",
+      transfers: "ट्रांसफर",
+      operators: "ऑपरेटर",
+    },
     hero: {
       badge: "नेवशेहिर / कप्पाडोकिया",
       title1: "कप्पाडोकिया के",
@@ -12738,6 +12786,12 @@ const BASE_DICTIONARIES = {
       about: "ہمارے بارے میں",
       contact: "رابطہ",
       faq: "اکثر پوچھے گئے سوالات",
+    },
+    nav_extra: {
+      flying_today: "کیا آج غبارے اڑ رہے ہیں؟",
+      kapadokya_guide: "کیپاڈوکیا گائیڈ",
+      transfers: "ٹرانسفر",
+      operators: "آپریٹرز",
     },
     hero: {
       badge: "نَوشہر / کیپاڈوکیا",

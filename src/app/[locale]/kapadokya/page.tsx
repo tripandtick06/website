@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/layout/JsonLd";
-import { breadcrumbSchema } from "@/lib/schema";
+import { breadcrumbSchema, itemListSchema } from "@/lib/schema";
 import { generateHreflang, ogImageUrl, canonicalFor, ogLocale } from "@/lib/hreflang";
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { serverDict } from "@/lib/i18n/serverDict";
+import { KAPADOKYA_PILLARS } from "@/data/services/catalog";
 import { KapadokyaContent } from "./KapadokyaContent";
 
 export const runtime = "edge";
@@ -52,7 +53,18 @@ export default function KapadokyaPage({
   return (
     <>
       <KapadokyaContent />
-      <JsonLd data={breadcrumbSchema([{ name: "Kapadokya", href: canonicalFor("/kapadokya", loc) }])} />
+      <JsonLd
+        data={[
+          breadcrumbSchema([{ name: "Kapadokya", href: canonicalFor("/kapadokya", loc) }]),
+          itemListSchema(
+            KAPADOKYA_PILLARS.map((p) => ({
+              name: p.title,
+              urlPath: canonicalFor(`/blog/${p.slug}`, loc),
+            })),
+            "Kapadokya Rehberi"
+          ),
+        ]}
+      />
     </>
   );
 }

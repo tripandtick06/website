@@ -17,6 +17,12 @@
     "contact": "Əlaqə",
     "faq": "Tez-tez verilən suallar"
   },
+  "nav_extra": {
+    "flying_today": "Bu gün şarlar uçur?",
+    "kapadokya_guide": "Kapadokya bələdçisi",
+    "transfers": "Transferlər",
+    "operators": "Operatorlar"
+  },
   "hero": {
     "badge": "Nevşehir / Kapadokya",
     "title1": "Kapadokyanın",

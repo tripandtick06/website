@@ -17,5 +17,6 @@
   ],
   "publishedAt": "2026-09-09T11:51:07.188831+00:00",
   "seoScore": 80,
-  "isAiGenerated": true
+  "isAiGenerated": true,
+  "noindex": true
 }

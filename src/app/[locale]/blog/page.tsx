@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import { SITE_URL } from "@/lib/schema";
+import { JsonLd } from "@/components/layout/JsonLd";
+import { SITE_URL, breadcrumbSchema, itemListSchema } from "@/lib/schema";
 import { generateHreflang, ogImageUrl, canonicalFor, ogLocale } from "@/lib/hreflang";
 import { ARTICLES, type BlogArticleMeta } from "@/data/blog";
+import { blogArticleUrl } from "@/lib/blog-alternates";
 import { serverDict } from "@/lib/i18n/serverDict";
 import { BlogContent } from "./BlogContent";
 
@@ -60,5 +62,22 @@ export default async function BlogPage({
   const all = await getBlogArticles();
   // Sadece aktif dilin makaleleri (her konu 9 dile cevrildi).
   const articles = all.filter((a) => a.locale === loc);
-  return <BlogContent articles={articles} />;
+  const d = serverDict(loc);
+  // JSON-LD ItemList: indexable articles only (noindex pages stay reachable
+  // in the UI list per item 6, but must not be claimed as a citable catalogue).
+  const indexableArticles = articles.filter((a) => !a.noindex);
+  return (
+    <>
+      <BlogContent articles={articles} />
+      <JsonLd
+        data={[
+          breadcrumbSchema([{ name: d.nav.blog, href: canonicalFor("/blog", loc) }]),
+          itemListSchema(
+            indexableArticles.map((a) => ({ name: a.title, urlPath: blogArticleUrl(a) })),
+            d.page.blog.meta_title
+          ),
+        ]}
+      />
+    </>
+  );
 }

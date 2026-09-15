@@ -31,6 +31,7 @@ const metas = files.map((file) => {
     publishedAt: a.publishedAt,
     seoScore: a.seoScore ?? 0,
     isAiGenerated: a.isAiGenerated ?? false,
+    noindex: a.noindex === true,
     coverImage: a.coverImage,
   };
 });
@@ -65,6 +66,9 @@ export interface BlogArticleMeta {
   publishedAt: string;
   seoScore: number;
   isAiGenerated?: boolean;
+  /** Editorial decision: page stays reachable but is noindex,follow, out of
+   *  the sitemap and out of hreflang clusters (EN cannibalisation cleanup 2026-09-16). */
+  noindex?: boolean;
   coverImage?: string;
 }
 
