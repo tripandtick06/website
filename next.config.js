@@ -51,6 +51,11 @@ const BLOG_SLUG_REDIRECTS_PER_LOCALE = [
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
+    // Cloudflare Pages has no image optimizer (/_next/image returned the
+    // original JPEG). Pre-generated WebP variants + custom loader instead —
+    // see scripts/gen-image-variants.mjs and src/lib/image-loader.ts.
+    loader: "custom",
+    loaderFile: "./src/lib/image-loader.ts",
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 2592000,
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
