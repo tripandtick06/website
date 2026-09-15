@@ -74,9 +74,9 @@ export function sitemapArticles(
   return articles.filter((a) => isIndexableLocale(a.locale) && !a.noindex);
 }
 
-// Article metaTitles often already end in "| Trip and Tick"; the layout's
-// title.template appends the brand again -> "… | Trip and Tick | Trip and Tick"
-// (live audit 2026-09-15, 7/7 sampled). Strip one trailing brand.
+// Article metaTitles often already end with the brand suffix; the layout's
+// title.template appends the brand again (doubled brand on 7/7 sampled live
+// articles, audit 2026-09-15). Strip one trailing brand.
 const BRAND_SUFFIX_RE = /\s*[|\-–—]\s*Trip\s*(?:and|&)\s*Tick\s*$/i;
 export function stripBrandSuffix(title: string): string {
   return title.replace(BRAND_SUFFIX_RE, "").trim();

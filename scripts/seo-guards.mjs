@@ -79,10 +79,12 @@ for (const file of pageFiles) {
 }
 
 // --- Guard (b): no hardcoded "| Trip and Tick" title suffix ---
-const candidateFiles = walk(
-  LOCALE_APP_DIR,
-  (p) => (p.endsWith(".tsx") || p.endsWith(".ts")) && !p.endsWith(`${sep}layout.tsx`)
-);
+// Also scan src/lib: shared page factories (service-detail-page.tsx) build
+// metadata too — the doubled brand lived there unnoticed until 2026-09-16.
+const candidateFiles = [
+  ...walk(LOCALE_APP_DIR, (p) => (p.endsWith(".tsx") || p.endsWith(".ts")) && !p.endsWith(`${sep}layout.tsx`)),
+  ...walk(join(ROOT, "src", "lib"), (p) => p.endsWith(".tsx") || p.endsWith(".ts")),
+];
 
 const SUFFIX = "| Trip and Tick";
 for (const file of candidateFiles) {

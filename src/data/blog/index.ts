@@ -3137,7 +3137,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "file": "tr-kapadokya-balon-turu-fiyat-2026.json",
     "slug": "kapadokya-balon-turu-fiyat-2026",
     "title": "Kapadokya Balon Turu Fiyatları 2026 — En Güncel Rehber",
-    "metaTitle": "Kapadokya Balon Turu Fiyatları 2026 | Trip and Tick",
+    "metaTitle": "Kapadokya Balon Fiyatları 2026: Kişi Başı, Sezon ve Paket Farkları",
     "metaDescription": "Kapadokya balon turu fiyatları 2026: Standart €165, Konfor €215, Deluxe €295, Romantik €580. 9+ operatörle en uygun fiyat garantisi.",
     "excerpt": "Kapadokya balon turu fiyatları 2026 yılında kişi başı €165'ten başlıyor. 4 paket, 9+ operatör, %100 iade garantisi — tam fiyat dökümü ve rezervasyon ipuçları.",
     "category": "balon-turlari",

@@ -1502,7 +1502,7 @@ const BASE_DICTIONARIES = {
         slug: {
           loading: "Yükleniyor...",
           meta_desc_template: "{name} için online rezervasyon. {desc}",
-          meta_title_not_found: "Rezervasyon Bulunamadı | Trip and Tick",
+          meta_title_not_found: "Rezervasyon Bulunamadı",
           meta_title_template: "Rezervasyon | {name} - Trip and Tick",
         },
       },
@@ -3090,7 +3090,7 @@ const BASE_DICTIONARIES = {
         slug: {
           loading: "Loading...",
           meta_desc_template: "Online booking for {name}. {desc}",
-          meta_title_not_found: "Booking Not Found | Trip and Tick",
+          meta_title_not_found: "Booking Not Found",
           meta_title_template: "Booking | {name} - Trip and Tick",
         },
       },
@@ -4678,7 +4678,7 @@ const BASE_DICTIONARIES = {
         slug: {
           loading: "Lädt...",
           meta_desc_template: "Online-Buchung für {name}. {desc}",
-          meta_title_not_found: "Buchung nicht gefunden | Trip and Tick",
+          meta_title_not_found: "Buchung nicht gefunden",
           meta_title_template: "Buchung | {name} - Trip and Tick",
         },
       },
@@ -6266,7 +6266,7 @@ const BASE_DICTIONARIES = {
         slug: {
           loading: "Chargement...",
           meta_desc_template: "Réservation en ligne pour {name}. {desc}",
-          meta_title_not_found: "Réservation introuvable | Trip and Tick",
+          meta_title_not_found: "Réservation introuvable",
           meta_title_template: "Réservation | {name} - Trip and Tick",
         },
       },
@@ -7854,7 +7854,7 @@ const BASE_DICTIONARIES = {
         slug: {
           loading: "Cargando...",
           meta_desc_template: "Reserva online para {name}. {desc}",
-          meta_title_not_found: "Reserva no encontrada | Trip and Tick",
+          meta_title_not_found: "Reserva no encontrada",
           meta_title_template: "Reserva | {name} - Trip and Tick",
         },
       },
@@ -9442,7 +9442,7 @@ const BASE_DICTIONARIES = {
         slug: {
           loading: "Laden...",
           meta_desc_template: "Online boeking voor {name}. {desc}",
-          meta_title_not_found: "Boeking niet gevonden | Trip and Tick",
+          meta_title_not_found: "Boeking niet gevonden",
           meta_title_template: "Boeking | {name} - Trip and Tick",
         },
       },
@@ -11030,7 +11030,7 @@ const BASE_DICTIONARIES = {
         slug: {
           loading: "加载中...",
           meta_desc_template: "{name} 在线预订。{desc}",
-          meta_title_not_found: "未找到预订 | Trip and Tick",
+          meta_title_not_found: "未找到预订",
           meta_title_template: "预订 | {name} - Trip and Tick",
         },
       },
@@ -12618,7 +12618,7 @@ const BASE_DICTIONARIES = {
         slug: {
           loading: "लोड हो रहा है...",
           meta_desc_template: "{name} के लिए ऑनलाइन बुकिंग। {desc}",
-          meta_title_not_found: "बुकिंग नहीं मिली | Trip and Tick",
+          meta_title_not_found: "बुकिंग नहीं मिली",
           meta_title_template: "बुकिंग | {name} - Trip and Tick",
         },
       },
@@ -14206,7 +14206,7 @@ const BASE_DICTIONARIES = {
         slug: {
           loading: "لوڈ ہو رہا ہے...",
           meta_desc_template: "{name} کے لیے آن لائن بکنگ۔ {desc}",
-          meta_title_not_found: "بکنگ نہیں ملی | Trip and Tick",
+          meta_title_not_found: "بکنگ نہیں ملی",
           meta_title_template: "بکنگ | {name} - Trip and Tick",
         },
       },
