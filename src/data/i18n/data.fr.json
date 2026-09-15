@@ -1063,7 +1063,7 @@
   "faq": {
     "f0": {
       "question": "Combien coûte un vol en montgolfière en Cappadoce ?",
-      "answer": "Chez Trip and Tick, les tarifs des vols en montgolfière en Cappadoce démarrent à 165 € par personne. Standard 165 €, Confort 215 €, Deluxe 295 €, Privé romantique 580 €. Tous les tarifs incluent le transfert depuis l'hôtel, le petit-déjeuner, l'assurance de 40 millions d'euros, le certificat et le service de champagne."
+      "answer": "Chez Trip and Tick, les tarifs des vols en montgolfière en Cappadoce démarrent à 165 € par personne. Standard 165 €, Deluxe 295 €, Privé romantique 580 €. Tous les tarifs incluent le transfert depuis l'hôtel, le petit-déjeuner, l'assurance de 40 millions d'euros, le certificat et le service de champagne."
     },
     "f1": {
       "question": "À partir de quel âge peut-on monter en montgolfière en Cappadoce ?",
@@ -1099,7 +1099,23 @@
     },
     "f9": {
       "question": "Pourquoi Trip and Tick est-il moins cher que les autres sites ?",
-      "answer": "Nous avons un contrat d'agence direct avec plus de 9 opérateurs ; aucune commission d'intermédiaire. Notre garantie du meilleur prix : si vous trouvez une offre moins chère, nous réservons à 5 % en dessous de ce prix (mêmes date + forfait + preuve à l'appui)."
+      "answer": "Nous avons un contrat d'agence direct avec plus de 9 opérateurs; aucune commission d'intermédiaire. Notre garantie du meilleur prix : si vous trouvez une offre moins chère, nous réservons à 5 % en dessous de ce prix (mêmes date + forfait + preuve à l'appui)."
+    },
+    "f10": {
+      "question": "Combien coûte le vol par personne, et peut-on payer en livres turques ?",
+      "answer": "Le vol Standard coûte 165 € par personne, le Deluxe 295 €; la nacelle privée Romantique est sur devis. Les prix sont en euros; le sélecteur de devise du site affiche l'équivalent en TRY et USD au taux du jour. Pour les dates à moins de 7 jours, le prix peut varier chaque jour selon la météo et la demande."
+    },
+    "f11": {
+      "question": "Combien de temps dure le vol et à quelle heure commence-t-il ?",
+      "answer": "Le vol dure environ 60 minutes (Romantique privé 60-90 minutes). Les montgolfières ne volent qu'au lever du soleil; la prise en charge à l'hôtel a lieu environ une heure avant, l'heure exacte est confirmée la veille. Consultez la page « Les montgolfières volent-elles aujourd'hui ? » pour la prévision du jour."
+    },
+    "f12": {
+      "question": "Combien de personnes dans une nacelle, et existe-t-il un vol privé pour deux ?",
+      "answer": "La nacelle Standard accueille 16-20 passagers, la Deluxe jusqu'à 16. Une nacelle privée pour deux seulement est proposée avec le forfait Romantique privé, prisé pour les demandes en mariage et les anniversaires."
+    },
+    "f13": {
+      "question": "Quel est le meilleur mois pour un vol en Cappadoce ?",
+      "answer": "Les montgolfières volent toute l'année. Avril-juin et septembre-octobre sont les périodes les plus équilibrées : matins calmes, températures douces. L'hiver offre des cheminées de fées enneigées, mais le vent et le brouillard rendent les annulations plus probables qu'en été."
     }
   },
   "reviews": {

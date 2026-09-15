@@ -1063,7 +1063,7 @@
   "faq": {
     "f0": {
       "question": "Hoeveel kost een ballontour in Cappadocië?",
-      "answer": "Bij Trip and Tick beginnen de prijzen voor een ballontour in Cappadocië vanaf €165 per persoon. Standaard €165, Comfort €215, Deluxe €295, Romantisch privé €580. Bij alle prijzen zijn de hoteltransfer, het ontbijt, een verzekering van 40 miljoen euro, het certificaat en de champagneservice inbegrepen."
+      "answer": "Bij Trip and Tick beginnen de prijzen voor een ballontour in Cappadocië vanaf €165 per persoon. Standaard €165, Deluxe €295, Romantisch privé €580. Bij alle prijzen zijn de hoteltransfer, het ontbijt, een verzekering van 40 miljoen euro, het certificaat en de champagneservice inbegrepen."
     },
     "f1": {
       "question": "Vanaf welke leeftijd mag je mee in een ballon in Cappadocië?",
@@ -1100,6 +1100,22 @@
     "f9": {
       "question": "Waarom is Trip and Tick goedkoper dan andere sites?",
       "answer": "Wij hebben rechtstreekse agentschapscontracten met 9+ operators; er is geen tussenpersoonscommissie. Onze laagsteprijsgarantie: vindt u een goedkoper aanbod, dan reserveert u bij ons 5% onder die prijs (zelfde datum + pakket + bewijs)."
+    },
+    "f10": {
+      "question": "How much is the balloon tour per person, and can I pay in Turkish lira?",
+      "answer": "The Standard flight is €165 per person, Deluxe €295; the Romantic private basket is priced on request. Prices are in euros; the site's currency selector shows the TRY and USD equivalent at that day's rate. For dates within 7 days the price can change daily with weather and demand."
+    },
+    "f11": {
+      "question": "How long is the balloon flight and what time does it start?",
+      "answer": "The flight lasts about 60 minutes (Romantic private 60-90 minutes). Balloons only fly at sunrise; hotel pickup is about an hour before sunrise and the exact time is confirmed the day before. See the 'Are balloons flying today?' page for today's wind outlook."
+    },
+    "f12": {
+      "question": "How many people fit in a balloon, and is there a private balloon for two?",
+      "answer": "The Standard basket carries 16-20 passengers, the Deluxe basket up to 16. A private basket for two only is available with the Romantic Private Balloon package, popular for proposals and anniversaries."
+    },
+    "f13": {
+      "question": "Which month is best for a Cappadocia balloon flight?",
+      "answer": "Balloons fly all year. April-June and September-October are the most balanced: calm mornings and mild temperatures. Winter offers snow-covered fairy chimneys, but wind and fog make cancellations more likely than in summer."
     }
   },
   "reviews": {

@@ -1063,7 +1063,7 @@
   "faq": {
     "f0": {
       "question": "Cappadocia बैलून टूर कितने का है?",
-      "answer": "Trip and Tick पर Cappadocia बैलून टूर की कीमतें प्रति व्यक्ति €165 से शुरू होती हैं। स्टैंडर्ड €165, कम्फर्ट €215, डीलक्स €295, रोमांटिक प्राइवेट €580। सभी कीमतों में होटल ट्रांसफर, नाश्ता, 40 मिलियन यूरो का बीमा, प्रमाणपत्र और शैम्पेन सेवा शामिल है।"
+      "answer": "Trip and Tick पर Cappadocia बैलून टूर की कीमतें प्रति व्यक्ति €165 से शुरू होती हैं। स्टैंडर्ड €165, डीलक्स €295, रोमांटिक प्राइवेट €580। सभी कीमतों में होटल ट्रांसफर, नाश्ता, 40 मिलियन यूरो का बीमा, प्रमाणपत्र और शैम्पेन सेवा शामिल है।"
     },
     "f1": {
       "question": "Cappadocia में बैलून पर किस उम्र से बैठा जा सकता है?",
@@ -1100,6 +1100,22 @@
     "f9": {
       "question": "Trip and Tick अन्य साइटों से सस्ता क्यों है?",
       "answer": "हमारे पास 9+ ऑपरेटरों के साथ सीधा एजेंसी अनुबंध है; कोई बिचौलिया कमीशन नहीं। हमारी सबसे कम कीमत की गारंटी: अगर आपको सस्ता प्रस्ताव मिले तो उस कीमत से 5% कम पर बुकिंग (वही तारीख + पैकेज + प्रमाण)।"
+    },
+    "f10": {
+      "question": "How much is the balloon tour per person, and can I pay in Turkish lira?",
+      "answer": "The Standard flight is €165 per person, Deluxe €295; the Romantic private basket is priced on request. Prices are in euros; the site's currency selector shows the TRY and USD equivalent at that day's rate. For dates within 7 days the price can change daily with weather and demand."
+    },
+    "f11": {
+      "question": "How long is the balloon flight and what time does it start?",
+      "answer": "The flight lasts about 60 minutes (Romantic private 60-90 minutes). Balloons only fly at sunrise; hotel pickup is about an hour before sunrise and the exact time is confirmed the day before. See the 'Are balloons flying today?' page for today's wind outlook."
+    },
+    "f12": {
+      "question": "How many people fit in a balloon, and is there a private balloon for two?",
+      "answer": "The Standard basket carries 16-20 passengers, the Deluxe basket up to 16. A private basket for two only is available with the Romantic Private Balloon package, popular for proposals and anniversaries."
+    },
+    "f13": {
+      "question": "Which month is best for a Cappadocia balloon flight?",
+      "answer": "Balloons fly all year. April-June and September-October are the most balanced: calm mornings and mild temperatures. Winter offers snow-covered fairy chimneys, but wind and fog make cancellations more likely than in summer."
     }
   },
   "reviews": {

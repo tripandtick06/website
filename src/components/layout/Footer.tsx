@@ -78,6 +78,7 @@ export function Footer() {
 
   const FOOTER_SERVICES = [
     { href: "/balonlar", label: t.nav.balloons },
+    { href: "/balonlar/bugun-ucuyor-mu", label: t.nav_extra.flying_today },
     { href: "/oteller", label: t.nav.hotels },
     { href: "/aktiviteler", label: t.nav.activities },
     { href: "/turlar", label: t.nav.tours },
@@ -87,6 +88,7 @@ export function Footer() {
 
   const FOOTER_COMPANY = [
     { href: "/hakkimizda", label: t.nav.about },
+    { href: "/kapadokya", label: t.nav_extra.kapadokya_guide },
     { href: "/operatorler", label: f.company_operatorler },
     { href: "/yorum", label: f.company_yorum_yaz },
     { href: "/blog", label: t.nav.blog },

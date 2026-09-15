@@ -54,7 +54,10 @@ export function blogAlternates(
   const languages: Record<string, string> = {};
   for (const loc of INDEXABLE_LOCALES) {
     const match = articles.find(
-      (x) => x.locale === loc && (x.slug === `${base}-${loc}` || x.slug === base)
+      (x) =>
+        x.locale === loc &&
+        !(x as { noindex?: boolean }).noindex &&
+        (x.slug === `${base}-${loc}` || x.slug === base)
     );
     if (!match) continue;
     const href = blogArticleUrl(match);
@@ -68,7 +71,7 @@ export function blogAlternates(
 export function sitemapArticles(
   articles: readonly BlogArticleMeta[] = ARTICLES
 ): BlogArticleMeta[] {
-  return articles.filter((a) => isIndexableLocale(a.locale));
+  return articles.filter((a) => isIndexableLocale(a.locale) && !a.noindex);
 }
 
 // Article metaTitles often already end in "| Trip and Tick"; the layout's

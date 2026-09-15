@@ -25,6 +25,25 @@ function getCategoryLabel(
   return typeof blogDict[key] === "string" ? (blogDict[key] as string) : cat;
 }
 
+// Internal linking (2026-09-16 audit): route the article's category into one
+// relevant money page. Order matters — first match wins.
+function getCategoryServiceLink(
+  category: string,
+  t: ReturnType<typeof useT>
+): { href: "/oteller" | "/turlar" | "/transferler" | "/kapadokya"; label: string } {
+  const cat = category.toLowerCase();
+  if (cat.includes("konaklama") || cat.includes("otel") || cat.includes("hotel")) {
+    return { href: "/oteller", label: t.nav.hotels };
+  }
+  if (cat.includes("tur") || cat.includes("aktivite")) {
+    return { href: "/turlar", label: t.nav.tours };
+  }
+  if (cat.includes("transfer") || cat.includes("ulaşım") || cat.includes("ulasim") || cat.includes("istanbul")) {
+    return { href: "/transferler", label: t.nav_extra.transfers };
+  }
+  return { href: "/kapadokya", label: t.nav_extra.kapadokya_guide };
+}
+
 interface BlogArticleContentProps {
   article: BlogArticle;
   related: BlogArticleMeta[];
@@ -41,6 +60,12 @@ export function BlogArticleContent({
   const t = useT();
   const slugDict = t.page.blog.slug;
   const blogDict = t.page.blog as unknown as Record<string, unknown>;
+  const categoryLink = getCategoryServiceLink(article.category, t);
+  const relatedServiceLinks = [
+    { href: "/balonlar" as const, label: t.nav.balloons },
+    { href: "/balonlar/bugun-ucuyor-mu" as const, label: t.nav_extra.flying_today },
+    categoryLink,
+  ];
 
   return (
     <main className="min-h-screen bg-slate-50">
@@ -122,8 +147,21 @@ export function BlogArticleContent({
           </div>
         )}
 
+        {/* Related services */}
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {relatedServiceLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="bg-white rounded-xl border border-slate-200 p-5 text-center hover:shadow-card hover:border-primary/30 transition-all"
+            >
+              <span className="text-sm font-bold text-slate-900">{link.label}</span>
+            </Link>
+          ))}
+        </div>
+
         {/* CTA Box */}
-        <div className="mt-10 bg-gradient-to-r from-primary to-[#2A1A4A] rounded-2xl p-6 sm:p-8 text-white text-center">
+        <div className="mt-6 bg-gradient-to-r from-primary to-[#2A1A4A] rounded-2xl p-6 sm:p-8 text-white text-center">
           <h3 className="text-xl font-bold mb-2">
             {slugDict.kapadokya_yi_kesfetmeye_hazir}
           </h3>
@@ -131,7 +169,7 @@ export function BlogArticleContent({
             {slugDict.en_uygun_fiyatlarla_balon_turu}
           </p>
           <Link
-            href="/"
+            href="/balonlar"
             className="inline-block px-6 py-3 bg-accent hover:bg-accent/90 text-white font-bold rounded-xl transition-colors"
           >
             {slugDict.hemen_rezervasyon_yap}

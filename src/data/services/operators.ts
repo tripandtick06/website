@@ -74,15 +74,15 @@ const STANDARD_EN =
 
 const DELUXE_TR =
   "Trip and Tick üzerinden bu operatörle Deluxe Balon Uçuşu rezervasyonu " +
-  "yapabilirsiniz: daha küçük sepet, daha uzun uçuş süresi ve kahvaltı, şampanya, " +
-  "sertifika, sigorta ve otel transferi dahil. Güncel fiyat aşağıdaki paket " +
-  "kartındadır.";
+  "yapabilirsiniz: en fazla 16 yolculuk daha küçük sepet, yaklaşık 60 dakikalık uçuş, " +
+  "gourmet kahvaltı, VIP transfer, şampanya, sertifika ve sigorta dahil. Güncel fiyat " +
+  "aşağıdaki paket kartındadır.";
 
 const DELUXE_EN =
   "Through Trip and Tick you can book the Deluxe Balloon Flight with this " +
-  "operator: a smaller basket and a longer flight, with breakfast, champagne, " +
-  "certificate, insurance and hotel transfer included. The live price is on the " +
-  "package card below.";
+  "operator: a smaller basket (max 16 passengers), about 60 minutes in the air, " +
+  "gourmet breakfast, VIP transfer, champagne, certificate and insurance included. " +
+  "The live price is on the package card below.";
 
 const ROMANTIC_TR =
   "Ayrıca Romantik Özel Balon paketi (yalnızca iki kişilik özel sepet, evlilik " +

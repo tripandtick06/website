@@ -158,6 +158,18 @@ export function Header() {
           >
             {t.nav.blog}
           </Link>
+          <Link
+            href="/kapadokya"
+            className="px-4 py-2 rounded-lg text-sm font-medium text-white/75 hover:text-white hover:bg-white/[0.08] transition-all"
+          >
+            {t.nav_extra.kapadokya_guide}
+          </Link>
+          <Link
+            href="/operatorler"
+            className="px-4 py-2 rounded-lg text-sm font-medium text-white/75 hover:text-white hover:bg-white/[0.08] transition-all"
+          >
+            {t.nav_extra.operators}
+          </Link>
         </nav>
 
         {/* Right Side */}
@@ -289,6 +301,20 @@ export function Header() {
             className="flex items-center gap-3 px-4 py-3 text-white/80 hover:text-white hover:bg-white/[0.06] rounded-lg transition-all"
           >
             <span className="font-medium">{t.nav.blog}</span>
+          </Link>
+          <Link
+            href="/kapadokya"
+            onClick={() => setMobileOpen(false)}
+            className="flex items-center gap-3 px-4 py-3 text-white/80 hover:text-white hover:bg-white/[0.06] rounded-lg transition-all"
+          >
+            <span className="font-medium">{t.nav_extra.kapadokya_guide}</span>
+          </Link>
+          <Link
+            href="/operatorler"
+            onClick={() => setMobileOpen(false)}
+            className="flex items-center gap-3 px-4 py-3 text-white/80 hover:text-white hover:bg-white/[0.06] rounded-lg transition-all"
+          >
+            <span className="font-medium">{t.nav_extra.operators}</span>
           </Link>
           <Link
             href="/hesabim"

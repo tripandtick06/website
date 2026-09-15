@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "predev": "node scripts/gen-image-variants.mjs",
     "dev": "next dev",
+    "prebuild": "node scripts/gen-image-variants.mjs",
     "build": "next build",
     "postbuild": "npx tsx scripts/indexnow-postbuild.ts",
     "start": "next start",

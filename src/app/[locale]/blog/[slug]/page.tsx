@@ -60,7 +60,7 @@ export async function generateMetadata({
   return {
     title,
     description: article.metaDescription,
-    robots: robotsForLocale(params.locale),
+    robots: article.noindex ? { index: false, follow: true } : robotsForLocale(params.locale),
     alternates: {
       canonical: canonicalFor(path, params.locale),
       languages,

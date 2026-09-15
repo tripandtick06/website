@@ -1063,7 +1063,7 @@
   "faq": {
     "f0": {
       "question": "Qual é o preço do passeio de balão em Cappadocia?",
-      "answer": "Os preços do passeio de balão em Cappadocia na Trip and Tick começam a partir de €165 por pessoa. Standard €165, Conforto €215, Deluxe €295, Romântico especial €580. Todos os preços incluem transfer do hotel, café da manhã, seguro de 40 milhões de euros, certificado e serviço de champanhe."
+      "answer": "Os preços do passeio de balão em Cappadocia na Trip and Tick começam a partir de €165 por pessoa. Standard €165, Deluxe €295, Romântico especial €580. Todos os preços incluem transfer do hotel, café da manhã, seguro de 40 milhões de euros, certificado e serviço de champanhe."
     },
     "f1": {
       "question": "A partir de que idade crianças podem voar de balão em Cappadocia?",
@@ -1100,6 +1100,22 @@
     "f9": {
       "question": "Por que a Trip and Tick é mais barata do que outros sites?",
       "answer": "Temos contratos diretos com mais de 9 operadores; sem comissão de intermediários. Nossa garantia de melhor preço: se você encontrar uma oferta mais barata, reservamos por 5% a menos (mesma data + pacote + comprovante)."
+    },
+    "f10": {
+      "question": "Quanto custa o balão por pessoa, e posso pagar em lira turca?",
+      "answer": "O voo Standard custa €165 por pessoa, o Deluxe €295; o cesto privativo Romântico é orçado sob consulta. Os preços são em euros; o seletor de moeda do site mostra o valor em TRY e USD pelo câmbio do dia. Para datas em até 7 dias o preço pode mudar diariamente conforme o tempo e a demanda."
+    },
+    "f11": {
+      "question": "Quanto tempo dura o voo e a que horas começa?",
+      "answer": "O voo dura cerca de 60 minutos (Romântico privativo 60-90 minutos). Os balões só voam ao nascer do sol; a busca no hotel é cerca de uma hora antes e o horário exato é confirmado no dia anterior. Veja a página 'Os balões vão voar hoje?' para a previsão de vento de hoje."
+    },
+    "f12": {
+      "question": "Quantas pessoas cabem no balão, e existe balão privativo para dois?",
+      "answer": "O cesto Standard leva 16-20 passageiros, o Deluxe até 16. Um cesto privativo só para dois existe no pacote Balão Romântico Privativo, muito procurado para pedidos de casamento e aniversários."
+    },
+    "f13": {
+      "question": "Qual é o melhor mês para voar de balão na Capadócia?",
+      "answer": "Os balões voam o ano inteiro. Abril-junho e setembro-outubro são os períodos mais equilibrados: manhãs calmas e temperatura amena. No inverno as chaminés de fada cobertas de neve são impressionantes, mas vento e neblina tornam os cancelamentos mais prováveis que no verão."
     }
   },
   "reviews": {

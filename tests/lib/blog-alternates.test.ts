@@ -74,3 +74,23 @@ describe("blog URLs + alternates", () => {
     expect(stripBrandSuffix("Plain title")).toBe("Plain title");
   });
 });
+
+describe("editorial noindex (EN cannibalisation cleanup 2026-09-16)", () => {
+  it("noindexed articles are out of the sitemap and out of every hreflang cluster", () => {
+    const flagged = ARTICLES.filter((a) => a.noindex);
+    expect(flagged.length).toBe(12);
+    for (const a of flagged) expect(a.locale).toBe("en");
+    const sitemapUrls = new Set(sitemapArticles().map((a) => blogArticleUrl(a)));
+    for (const a of flagged) {
+      expect(sitemapUrls.has(blogArticleUrl(a)), a.slug).toBe(false);
+      const alt = blogAlternates(a);
+      expect(Object.values(alt)).not.toContain(blogArticleUrl(a));
+    }
+  });
+
+  it("no article carries a leaked generation instruction as targetKeyword", () => {
+    for (const a of ARTICLES) {
+      expect(a.targetKeyword.toLowerCase(), a.slug).not.toMatch(/^(publish|write|create|generate)\b/);
+    }
+  });
+});

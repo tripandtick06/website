@@ -36,6 +36,20 @@ export function BalonlarContent() {
 
       <Breadcrumb items={[{ name: b.pagehero_tag_balon_turlari, href: "/balonlar" }]} />
 
+      {/* Flying-today callout */}
+      <div className="container-main pt-6">
+        <Link
+          href="/balonlar/bugun-ucuyor-mu"
+          className="flex items-center justify-between gap-3 bg-accent/10 border border-accent/30 rounded-xl px-5 py-3 text-sm font-semibold text-primary hover:bg-accent/15 transition-colors"
+        >
+          <span className="flex items-center gap-2">
+            <Wind className="w-4 h-4 text-accent" />
+            {t.nav_extra.flying_today}
+          </span>
+          <span aria-hidden="true">&rarr;</span>
+        </Link>
+      </div>
+
       {/* Packages grid */}
       <section className="section-padding bg-slate-50">
         <div className="container-main">

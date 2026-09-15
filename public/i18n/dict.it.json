@@ -17,6 +17,12 @@
     "contact": "Contatto",
     "faq": "FAQ"
   },
+  "nav_extra": {
+    "flying_today": "I palloni volano oggi?",
+    "kapadokya_guide": "Guida alla Cappadocia",
+    "transfers": "Transfer",
+    "operators": "Operatori"
+  },
   "hero": {
     "badge": "Nevşehir / Cappadocia",
     "title1": "Le",

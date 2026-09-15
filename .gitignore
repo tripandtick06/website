@@ -54,3 +54,8 @@ scripts/logs/
 scripts/i18n/_chunks/
 scripts/i18n/translations/_part-*.json
 scripts/i18n/dictionaries.preview.ts
+
+# generated responsive variants (scripts/gen-image-variants.mjs, runs in prebuild)
+public/images/**/*-640.webp
+public/images/**/*-1080.webp
+public/images/**/*-1920.webp
