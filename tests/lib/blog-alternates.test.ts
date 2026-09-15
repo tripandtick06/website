@@ -59,9 +59,8 @@ describe("blog URLs + alternates", () => {
     const entries = sitemap().filter((e) => e.url.includes("/blog/"));
     expect(entries.length).toBeGreaterThan(20);
     for (const e of entries) {
-      // pillar pages (/blog/<pillar>) are TR catalog pages, not articles
-      const isPillar = !ARTICLES.some((a) => e.url.endsWith(`/blog/${a.slug}`));
-      if (isPillar) continue;
+      // every /blog/ URL in the sitemap — pillar links included — must be a
+      // generated article page (2 pillar slugs 404'd live on 2026-09-16)
       expect(real.has(e.url), e.url).toBe(true);
       // the broken shape: TR-unprefixed path carrying a foreign-locale suffix
       expect(e.url).not.toMatch(/^https:\/\/tripandtick\.com\/blog\/.*-(de|fr|ja|ko|pt-BR|en|es|nl|zh|hi|ur|pt|it|ru|uk|az)$/);
