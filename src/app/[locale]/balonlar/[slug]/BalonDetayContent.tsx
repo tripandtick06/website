@@ -19,6 +19,7 @@ import { useT, useLocale } from "@/lib/i18n/I18nProvider";
 import { tBalloon, tFaq } from "@/lib/i18n/localizeData";
 import { FAQ_ITEMS } from "@/data/faq";
 import type { BalloonPackage } from "@/data/services/balloons";
+import { operatorTagline } from "@/data/services/operators";
 import type { Operator } from "@/data/services/operators";
 import type { FAQItem } from "@/data/faq";
 
@@ -174,8 +175,8 @@ export function BalonDetayContent({
                     </div>
                     <div className="flex-1">
                       <h4 className="font-bold text-slate-900 text-sm">{op.name}</h4>
-                      <div className="text-xs text-slate-500">
-                        {s.lisans_prefix} {op.licenseNo} · {op.founded}{s.beri}
+                      <div className="text-xs text-slate-500 line-clamp-1">
+                        {operatorTagline(op, locale)}
                       </div>
                     </div>
                   </div>

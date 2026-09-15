@@ -28,6 +28,20 @@ const pathnames = {
     ur: "/balloon-tours",
     ...EXTRA("/balloon-tours"),
   },
+  // Daily flight outlook page (2026-09-16). Static entry sits before the
+  // dynamic [slug] template so next-intl matches it first.
+  "/balonlar/bugun-ucuyor-mu": {
+    tr: "/balonlar/bugun-ucuyor-mu",
+    en: "/balloon-tours/flying-today",
+    de: "/heissluftballonfahrten/fliegen-heute",
+    fr: "/vols-montgolfiere/vol-aujourd-hui",
+    es: "/vuelos-en-globo/vuelan-hoy",
+    nl: "/ballonvaarten/vliegen-vandaag",
+    zh: "/balloon-tours/flying-today",
+    hi: "/balloon-tours/flying-today",
+    ur: "/balloon-tours/flying-today",
+    ...EXTRA("/balloon-tours/flying-today"),
+  },
   "/balonlar/[slug]": {
     tr: "/balonlar/[slug]",
     en: "/balloon-tours/[slug]",

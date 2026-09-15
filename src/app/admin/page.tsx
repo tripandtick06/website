@@ -1003,7 +1003,7 @@ function OperatorsTab() {
           <thead className="bg-slate-50 text-left text-slate-600 border-b border-slate-200">
             <tr>
               <th className="p-3">Ad</th>
-              <th className="p-3">Lisans No</th>
+              <th className="p-3">Web Sitesi</th>
               <th className="p-3 text-right">Kapasite</th>
               <th className="p-3 text-right">Komisyon %</th>
               <th className="p-3 text-right">Durum</th>
@@ -1013,7 +1013,7 @@ function OperatorsTab() {
             {OPERATORS.map((o, i) => (
               <tr key={o.id} className="border-b border-slate-100 hover:bg-slate-50">
                 <td className="p-3 font-medium">{o.name}</td>
-                <td className="p-3 font-mono text-xs">{o.licenseNo}</td>
+                <td className="p-3 font-mono text-xs">{o.website ?? "—"}</td>
                 <td className="p-3 text-right">{12 + (i % 8)}</td>
                 <td className="p-3 text-right">15%</td>
                 <td className="p-3 text-right">

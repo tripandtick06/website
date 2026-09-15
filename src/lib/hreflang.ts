@@ -29,6 +29,15 @@ const SEGMENT_MAP: Record<string, Record<string, string>> = (() => {
  */
 function localizePath(path: string, locale: string): string {
   if (path === "/" || path === "") return "";
+  // Full-path entries (e.g. "/balonlar/bugun-ucuyor-mu") localize every
+  // segment; they must win over the first-segment map below, otherwise the
+  // canonical/hreflang would point at "/en/balloon-tours/bugun-ucuyor-mu",
+  // which next-intl never serves.
+  const full = (routing.pathnames as Record<string, unknown>)[path];
+  if (full && typeof full === "object") {
+    const localized = (full as Record<string, string>)[locale];
+    if (localized) return localized;
+  }
   const firstSlash = path.indexOf("/", 1);
   const firstSeg = firstSlash === -1 ? path : path.slice(0, firstSlash);
   const rest = firstSlash === -1 ? "" : path.slice(firstSlash);

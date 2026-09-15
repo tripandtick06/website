@@ -55,7 +55,7 @@ export interface Operator {
   id: string;
   name: string;
   logo: string;
-  licenseNo: string;
+  licenseNo?: string;
   commissionRate: number;
   contactEmail: string;
   contactPhone: string;

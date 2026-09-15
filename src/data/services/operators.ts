@@ -1,232 +1,236 @@
-// Anlasmali balon operatorleri — Faz 2'de admin paneli yonetimine gecer.
+// Trip and Tick — Kapadokya balon operatörleri (tek kaynak).
 //
-// Importers (mevcut):
-//   - src/app/admin/page.tsx:23 (operatorler tab listesi)
-//   - src/app/balonlar/[slug]/page.tsx:18 (paket sayfasi operatorIds eslestirme)
-//   - src/app/balonlar/page.tsx:8 (paket listeleme)
-// Importers (yeni, bu commit):
-//   - src/app/operatorler/page.tsx (operator listeleme)
-//   - src/app/operatorler/[id]/page.tsx (operator detay SSG)
-// Affected: SEO operator detay sayfa + admin operator overview.
-// Data: Operator { id, name, licenseNo, rating, reviewCount, founded,
-//       description (200+ kelime), tagline?, address?, phone?, website?,
-//       establishedYear?, fleetSize?, pilotCount?, languages?, specialties? }
-// User verbatim: "devam et"
+// 2026-09-15 rewrite (trust cleanup). The previous file carried invented
+// specifics about REAL third-party companies: licence numbers, founding years,
+// fleet/pilot counts, phone numbers in an obvious pattern (271 0000 / 2200 /
+// 3300 / 4488 / 5500 / 6677), Tripadvisor awards, passenger volumes. None of
+// it had a source. Publishing fabricated facts about real businesses is both a
+// legal exposure and the "scaled / deceptive content" class Google demoted
+// this site for in the August 2026 spam update.
+//
+// Rule for this file: every field must be verifiable by us.
+//   - name / aliases: how the company is actually searched (GSC 2026-09:
+//     "asiana balon", "kaya balon", "universal balon", "istanbul balon
+//     kapadokya", "urgup balon", "voyager balon", "air kapadokya").
+//   - website: only when we fetched it live on 2026-09-15 (see `verifiedAt`).
+//     asiana / aircappadocia have no verified site -> omitted.
+//   - description / descriptionEn: what Trip and Tick itself offers with the
+//     operator (packages come from balloons.ts operatorIds), plus the flight
+//     facts that hold for every Cappadocia balloon flight (sunrise slot, daily
+//     civil-aviation weather approval, hotel pickup). No numbers we cannot
+//     back. Fleet size, founding year etc. are the operator's own claims —
+//     link to their site instead of restating them.
+//
+// Importers: operatorler/page.tsx, operatorler/[id]/page.tsx,
+//   OperatorlerContent.tsx, OperatorDetayContent.tsx, BalonlarContent.tsx,
+//   BalonDetayContent.tsx, balonlar/[slug]/page.tsx, sitemap.ts, search.ts,
+//   admin/page.tsx. balloons.ts references operators by `id` (operatorIds).
 
 export interface Operator {
   id: string;
+  /** Display name as searched in Turkish (e.g. "Asiana Balon"). */
   name: string;
-  licenseNo: string;
-  rating: number;
-  reviewCount: number;
-  founded: number;
-  /** Detayli kurum aciklamasi — 200+ kelime (SEO icin). */
+  /** Other spellings people search / the company's own English name. */
+  aliases: string[];
+  /** One-line, verifiable positioning (what WE sell with them). */
+  tagline: string;
+  taglineEn: string;
+  /** Honest long description — Turkish. */
   description: string;
-  /** Kisa tek-cumle aciklama (kart icin kullanilir). */
-  tagline?: string;
-  address?: string;
-  phone?: string;
+  /** Honest long description — English (used for every non-TR locale). */
+  descriptionEn: string;
+  /** Operator's own site, only if fetched live by us. */
   website?: string;
-  establishedYear?: number;
-  fleetSize?: number;
-  pilotCount?: number;
-  languages?: string[];
-  specialties?: string[];
+  /** ISO date we last verified `website` responds. */
+  verifiedAt?: string;
 }
+
+const FLIGHT_FACTS_TR =
+  "Kapadokya'daki her balon uçuşu gibi bu uçuşlar da gün doğumu saatinde yapılır; " +
+  "kalkış kararı her sabah Sivil Havacılık Genel Müdürlüğü'nün rüzgâr ve görüş " +
+  "değerlendirmesine bağlıdır. Operatör hava nedeniyle iptal ederse ödemenizin " +
+  "tamamı iade edilir veya uçuş başka bir güne alınır. Otelden alış ve otele " +
+  "bırakış fiyata dahildir.";
+
+const FLIGHT_FACTS_EN =
+  "Like every balloon flight in Cappadocia, these flights take off around sunrise; " +
+  "the go/no-go decision is made each morning by the Turkish civil aviation " +
+  "authority based on wind and visibility. If the operator cancels for weather you " +
+  "get a full refund or a new date. Hotel pickup and drop-off are included.";
+
+const STANDARD_TR =
+  "Trip and Tick üzerinden bu operatörle Standart Balon Uçuşu rezervasyonu " +
+  "yapabilirsiniz: yaklaşık 60 dakikalık uçuş, 16-20 kişilik sepet, uçuş öncesi " +
+  "hafif kahvaltı, iniş sonrası şampanyalı kutlama, uçuş sertifikası ve madalya, " +
+  "40 milyon Euro yolcu sigortası dahildir. Güncel fiyat aşağıdaki paket kartında " +
+  "görünür; 7 gün içindeki tarihlerde fiyat hava ve doluluğa göre günlük değişebilir.";
+
+const STANDARD_EN =
+  "Through Trip and Tick you can book the Standard Balloon Flight with this " +
+  "operator: about 60 minutes in the air, 16-20 passenger basket, light " +
+  "pre-flight breakfast, champagne toast after landing, flight certificate and " +
+  "medal, and EUR 40M passenger insurance. The live price is shown on the package " +
+  "card below; for dates within 7 days it can change daily with weather and demand.";
+
+const DELUXE_TR =
+  "Trip and Tick üzerinden bu operatörle Deluxe Balon Uçuşu rezervasyonu " +
+  "yapabilirsiniz: daha küçük sepet, daha uzun uçuş süresi ve kahvaltı, şampanya, " +
+  "sertifika, sigorta ve otel transferi dahil. Güncel fiyat aşağıdaki paket " +
+  "kartındadır.";
+
+const DELUXE_EN =
+  "Through Trip and Tick you can book the Deluxe Balloon Flight with this " +
+  "operator: a smaller basket and a longer flight, with breakfast, champagne, " +
+  "certificate, insurance and hotel transfer included. The live price is on the " +
+  "package card below.";
+
+const ROMANTIC_TR =
+  "Ayrıca Romantik Özel Balon paketi (yalnızca iki kişilik özel sepet, evlilik " +
+  "teklifi ve yıl dönümü için) bu operatörle talep üzerine fiyatlandırılır.";
+
+const ROMANTIC_EN =
+  "The Romantic Private Balloon package (a basket for two only, popular for " +
+  "proposals and anniversaries) is also arranged with this operator and priced on " +
+  "request.";
+
+const NO_PACKAGE_TR =
+  "Trip and Tick şu anda bu operatörle satışta olan bir paket sunmuyor; sayfayı " +
+  "operatörü arayan ziyaretçiler için bilgi amaçlı tutuyoruz. Aynı gün doğumu " +
+  "uçuşunu Standart veya Deluxe paketlerimizle, anlaşmalı diğer operatörlerle " +
+  "rezerve edebilirsiniz.";
+
+const NO_PACKAGE_EN =
+  "Trip and Tick does not currently sell a package with this operator; this page " +
+  "is kept for visitors looking them up. You can book the same sunrise flight " +
+  "with our Standard or Deluxe packages through our partner operators.";
+
+const introTr = (name: string) =>
+  `${name}, Kapadokya'da gün doğumu sıcak hava balonu uçuşları düzenleyen operatörlerden biridir.`;
+const introEn = (name: string) =>
+  `${name} is one of the hot-air balloon operators flying sunrise flights over Cappadocia.`;
+
+const OWN_TR =
+  " Filo büyüklüğü, kuruluş yılı ve pilot kadrosu gibi bilgiler için operatörün kendi sitesine bakın.";
+const OWN_EN = " For fleet size, founding year and pilot details see the operator's own site.";
 
 export const OPERATORS: Operator[] = [
   {
     id: "kaya",
     name: "Kaya Balon",
-    licenseNo: "A-2348",
-    rating: 4.8,
-    reviewCount: 1843,
-    founded: 2008,
-    tagline: "Kapadokya'nın en köklü operatörlerinden — geniş filo ve güvenilirlik.",
-    address: "Göreme, Nevşehir 50180",
-    phone: "+90 384 271 0000",
-    website: "https://www.kayaballoons.com",
-    establishedYear: 2008,
-    fleetSize: 12,
-    pilotCount: 14,
-    languages: ["Türkçe", "İngilizce", "Almanca"],
-    specialties: ["Standart uçuş", "Konfor uçuş", "Grup uçuşları"],
-    description:
-      "Kaya Balon, 2008 yılında Göreme'de kurulan ve Kapadokya'nın en köklü sıcak hava balonu operatörlerinden biridir. SHGM (Sivil Havacılık Genel Müdürlüğü) lisansı altında 12 balonluk geniş bir filo ile faaliyet gösteren şirket, 14 deneyimli ticari pilot kadrosuyla yıllık 40.000'in üzerinde yolcu taşımaktadır. Kaya Balon, standart, konfor ve grup uçuşları kategorilerinde Avrupa Sivil Havacılık Otoritesi (EASA) ve TURSAB standartlarında hizmet sunar; tüm balonları yıllık bakım programına tabi olup, her uçuş öncesi rüzgar/sıcaklık/görüş mesafesi kontrolleri pilot brifinginde değerlendirilir. 16 sepetli geniş balonlar ile 20 kişilik grup uçuşları, 12 sepetli orta boy balonlar ile konfor segmentindeki çiftler ve aileler, 8 sepetli özel balonlar ile butik deneyim sunulmaktadır. Şirket, Tripadvisor Excellence Award 5 yıl üst üste sahibi olup, çoklu dil rehberlik (Türkçe, İngilizce, Almanca) sağlar. Tüm yolculara seyahat sigortası, kahvaltı, uçuş sertifikası ve şampanya servisi dahil edilir; otel transferi Göreme, Ürgüp, Uçhisar ve Çavuşin bölgelerinden ücretsiz sağlanır. Kaya Balon, kötü hava nedeniyle yapılan iptallerde %100 iade veya tarih değişikliği taahhüt eder.",
+    aliases: ["Kaya Balloons", "Kapadokya Kaya Balloons"],
+    tagline: "Standart Balon Uçuşu — Trip and Tick üzerinden rezervasyon.",
+    taglineEn: "Standard Balloon Flight — bookable through Trip and Tick.",
+    description: `${introTr("Kaya Balon (Kaya Balloons)")} ${STANDARD_TR} ${FLIGHT_FACTS_TR}${OWN_TR}`,
+    descriptionEn: `${introEn("Kaya Balloons (Kapadokya Kaya Balloons)")} ${STANDARD_EN} ${FLIGHT_FACTS_EN}${OWN_EN}`,
+    website: "https://kapadokyakayaballoons.com",
+    verifiedAt: "2026-09-15",
   },
   {
     id: "istanbul",
     name: "İstanbul Balon",
-    licenseNo: "A-2410",
-    rating: 4.85,
-    reviewCount: 2104,
-    founded: 2005,
-    tagline: "20 yılı aşkın deneyim — standart ve konfor uçuşların öncüsü.",
-    address: "Göreme, Nevşehir 50180",
-    phone: "+90 384 271 2200",
+    aliases: ["Istanbul Balloons", "İstanbul Balloons Kapadokya"],
+    tagline: "Standart Balon Uçuşu — Trip and Tick üzerinden rezervasyon.",
+    taglineEn: "Standard Balloon Flight — bookable through Trip and Tick.",
+    description: `${introTr("İstanbul Balon (İstanbul Balloons)")} Adına rağmen uçuşlar İstanbul'da değil Kapadokya'da, Göreme çevresinde yapılır. ${STANDARD_TR} ${FLIGHT_FACTS_TR}${OWN_TR}`,
+    descriptionEn: `${introEn("İstanbul Balloons")} Despite the name, flights take place in Cappadocia around Göreme, not in Istanbul. ${STANDARD_EN} ${FLIGHT_FACTS_EN}${OWN_EN}`,
     website: "https://www.istanbulballoons.com",
-    establishedYear: 2005,
-    fleetSize: 15,
-    pilotCount: 18,
-    languages: ["Türkçe", "İngilizce", "Rusça", "Çince"],
-    specialties: ["Standart uçuş", "Konfor uçuş", "Çok dilli rehberlik"],
-    description:
-      "İstanbul Balon, 2005 yılından bu yana Kapadokya semalarında uçuş gerçekleştiren ve sektörün en köklü operatörlerinden biri olarak kabul edilen şirkettir. 15 balon ve 18 pilotluk kapasitesiyle Türkiye'nin en büyük sıcak hava balonu filolarından birine sahiptir. SHGM lisansı A-2410 altında faaliyet gösteren şirket, EASA Part-BOP (Balloon Operations) standartlarına tam uyumlu olarak çalışır ve yılda 60.000'e yakın yolcuyu güvenle taşır. Filosu 16 sepetli premium uçuşlardan 8 sepetli butik deneyimlere kadar geniş bir yelpaze sunar. İstanbul Balon, çok dilli rehberlik (İngilizce, Almanca, Rusça, Mandarin) konusunda sektör öncüsüdür; özellikle Asya pazarına yönelik özel programlar düzenler. Şirket, uluslararası ödüller arasında World Travel Awards (2020-2024 Türkiye'nin En İyi Balon Operatörü) ve TripAdvisor Travelers' Choice (2018-2025) bulunur. Tüm uçuşlar 1 saat (standart) veya 1.5 saat (konfor) süreli olup, peri bacaları, Aşk Vadisi, Kızıl Vadi ve Güllüdere üzerinde uçuş rotaları çizer. Yolculara kahvaltı, sertifika, transfer, şampanya toast servisi ve isteğe bağlı profesyonel fotoğraf paketi sunulur.",
+    verifiedAt: "2026-09-15",
   },
   {
     id: "urgup",
     name: "Ürgüp Balon",
-    licenseNo: "A-2456",
-    rating: 4.9,
-    reviewCount: 1521,
-    founded: 2010,
-    tagline: "Ürgüp merkezli butik operatör — küçük gruplar için ideal.",
-    address: "Ürgüp, Nevşehir 50400",
-    phone: "+90 384 341 3300",
+    aliases: ["Urgup Balloons", "Ürgüp Balloons"],
+    tagline: "Ürgüp merkezli operatör — bilgi sayfası.",
+    taglineEn: "Ürgüp-based operator — information page.",
+    description: `${introTr("Ürgüp Balon (Ürgüp Balloons)")} ${NO_PACKAGE_TR} ${FLIGHT_FACTS_TR}${OWN_TR}`,
+    descriptionEn: `${introEn("Ürgüp Balloons")} ${NO_PACKAGE_EN} ${FLIGHT_FACTS_EN}${OWN_EN}`,
     website: "https://www.urgupballoons.com",
-    establishedYear: 2010,
-    fleetSize: 8,
-    pilotCount: 10,
-    languages: ["Türkçe", "İngilizce", "Fransızca"],
-    specialties: ["Butik grup", "Romantik", "Küçük sepet"],
-    description:
-      "Ürgüp Balon, 2010 yılında butik segmentte hizmet vermek üzere kurulmuş olup Kapadokya'nın daha kalabalık operatörlerine alternatif arayan misafirler için ideal bir seçimdir. Ürgüp merkezli operasyon merkezi sayesinde Pancarlık Vadisi, Üç Güzeller ve Asmazlar bölgelerinde özel uçuş rotaları sunar. 8 balon ve 10 pilotluk kompakt filosuyla, yıllık 18.000'i aşan yolcu kapasitesinde küçük ve butik bir deneyim taahhüt eder. SHGM lisansı A-2456 altında faaliyet gösteren şirket, EASA Part-BOP sertifikalı tüm balonlarını 12 sepetli ve 8 sepetli olmak üzere iki kategoride sunar; özellikle 8 sepetli butik uçuşlar romantik balayı çiftleri ve evlilik teklifi etkinlikleri için tercih edilmektedir. Şirket, sektörde nadir görülen Fransızca rehberlik hizmetini sürekli kadrosunda bulundurur ve Avrupa Birliği ülkelerinden gelen yolculara daha kişiselleştirilmiş bir deneyim sunar. Tüm uçuşlar şafak vakti başlar, 60-75 dakika sürer; uçuş sonrası geleneksel şampanya toast, sertifika, kahvaltı ve Ürgüp/Göreme transfer dahildir. Ürgüp Balon, kötü hava iptallerinde %100 geri ödeme garantisi ve esnek tarih değişikliği politikası sunar.",
+    verifiedAt: "2026-09-15",
   },
   {
     id: "butterfly",
     name: "Butterfly Balloons",
-    licenseNo: "A-2287",
-    rating: 4.95,
-    reviewCount: 3210,
-    founded: 2002,
-    tagline: "Premium segmentin lideri — deluxe ve romantik uçuşlar.",
-    address: "Göreme, Nevşehir 50180",
-    phone: "+90 384 271 4488",
+    aliases: ["Butterfly Balon", "Butterfly Balloons Göreme"],
+    tagline: "Standart, Deluxe ve Romantik Özel uçuşlar — Trip and Tick üzerinden.",
+    taglineEn: "Standard, Deluxe and Romantic Private flights — through Trip and Tick.",
+    description: `${introTr("Butterfly Balloons")} ${STANDARD_TR} ${DELUXE_TR} ${ROMANTIC_TR} ${FLIGHT_FACTS_TR}${OWN_TR}`,
+    descriptionEn: `${introEn("Butterfly Balloons")} ${STANDARD_EN} ${DELUXE_EN} ${ROMANTIC_EN} ${FLIGHT_FACTS_EN}${OWN_EN}`,
     website: "https://www.butterflyballoons.com",
-    establishedYear: 2002,
-    fleetSize: 10,
-    pilotCount: 12,
-    languages: ["Türkçe", "İngilizce", "Almanca", "İspanyolca"],
-    specialties: ["Deluxe uçuş", "Romantik", "VIP"],
-    description:
-      "Butterfly Balloons, 2002 yılında premium segmenti hedefleyerek kurulmuş olup Kapadokya'nın en eski ticari balon operatörlerinden biridir. SHGM lisansı A-2287 altında 10 balon ve 12 pilotluk seçkin bir kadroyla faaliyet gösteren şirket, sektördeki en yüksek müşteri memnuniyet puanlarından biri olan 4.95 ortalamayla 3.200'ü aşkın doğrulanmış yorumda zirvede yer alır. Filosunun çoğu 12 sepetli orta boy balonlardan oluşur; bu da daha az kalabalık bir uçuş deneyimi anlamına gelir. Butterfly Balloons, özellikle balayı çiftleri, evlilik teklifi planlayanlar ve VIP misafirler için özel hazırlanmış deluxe uçuşlarda Türkiye'nin önde gelen operatörüdür. Tüm uçuşlar 1.5 saat süreli olup, Güllüdere ve Kızıl Vadi üzerinden başlayıp Aktepe panoraması ile sonlanır. Şirket, EASA Part-BOP sertifikalı pilotları ve yıllık bakım programıyla uluslararası en yüksek güvenlik standartlarına uyar. Çok dilli rehberlik (İngilizce, Almanca, İspanyolca), profesyonel fotoğraf paketi, premium şampanya servisi (Veuve Clicquot opsiyonu), gourmet kahvaltı ve VIP transfer dahildir. Butterfly Balloons, Condé Nast Traveler ve Travel + Leisure dergilerinde 'Best Hot Air Balloon Operators in the World' listelerinde sürekli yer alır.",
+    verifiedAt: "2026-09-15",
   },
   {
     id: "asiana",
     name: "Asiana Balon",
-    licenseNo: "A-2512",
-    rating: 4.75,
-    reviewCount: 987,
-    founded: 2014,
-    tagline: "Asya pazarına odaklı — çok dilli rehberlik.",
-    address: "Göreme, Nevşehir 50180",
-    phone: "+90 384 271 5500",
-    website: "https://www.asianaballoons.com",
-    establishedYear: 2014,
-    fleetSize: 6,
-    pilotCount: 8,
-    languages: ["Türkçe", "İngilizce", "Çince", "Japonca", "Korece"],
-    specialties: ["Çok dilli", "Asya grup", "Standart"],
-    description:
-      "Asiana Balon, 2014 yılında özellikle Doğu Asya pazarına yönelik hizmet vermek amacıyla kurulmuş ve Kapadokya'da Çince, Japonca ve Korece dillerinde sürekli rehberlik sağlayan tek operatördür. SHGM lisansı A-2512 altında 6 balon ve 8 pilotluk kadrosuyla yıllık 22.000'in üzerinde yolcu taşıyan şirket, Asya turizm acenteleri ile uzun süreli ortaklıklara sahiptir. Filosu 16 sepetli standart balonlardan oluşur ve grup uçuşları için optimize edilmiştir. Asiana Balon, EASA Part-BOP sertifikalı tüm pilotları, yıllık bakım programlı balonları ve özel uçuş öncesi briefing protokolü ile sektörde güvenlik referansı olarak tanınır. Şirket, özellikle çoklu dil dijital broşürleri, çince-japonca-korece WeChat/LINE/KakaoTalk üzerinden müşteri hizmetleri ve Asya banka kartlarıyla (Alipay, WeChat Pay, JCB) ödeme desteği sunar. Tüm uçuşlar 60 dakika süreli olup, Sword Valley, Kızıl Vadi ve Aşk Vadisi üzerinden gerçekleşir. Misafirlere kahvaltı, sertifika, geleneksel şampanya toast (alternatif olarak meyve suyu seçeneği), profesyonel grup fotoğrafı ve Göreme/Ürgüp transfer dahildir. Asiana Balon, Çince ve Korece sosyal medya hesaplarında 500.000'i aşan takipçi tabanına sahiptir.",
+    aliases: ["Asiana Balloons", "Assiana Balon", "Asiana Balloons Kapadokya"],
+    tagline: "Standart Balon Uçuşu — Trip and Tick üzerinden rezervasyon.",
+    taglineEn: "Standard Balloon Flight — bookable through Trip and Tick.",
+    description: `${introTr("Asiana Balon (Asiana Balloons)")} ${STANDARD_TR} ${FLIGHT_FACTS_TR}`,
+    descriptionEn: `${introEn("Asiana Balloons")} ${STANDARD_EN} ${FLIGHT_FACTS_EN}`,
   },
   {
     id: "turkiye",
     name: "Türkiye Balon",
-    licenseNo: "A-2398",
-    rating: 4.8,
-    reviewCount: 1456,
-    founded: 2009,
-    tagline: "Güvenilir aile şirketi — orta-üst segment.",
-    address: "Avanos, Nevşehir 50500",
-    phone: "+90 384 511 2200",
+    aliases: ["Turkiye Balloons", "Türkiye Balloons"],
+    tagline: "Standart Balon Uçuşu — Trip and Tick üzerinden rezervasyon.",
+    taglineEn: "Standard Balloon Flight — bookable through Trip and Tick.",
+    description: `${introTr("Türkiye Balon (Türkiye Balloons)")} ${STANDARD_TR} ${FLIGHT_FACTS_TR}${OWN_TR}`,
+    descriptionEn: `${introEn("Türkiye Balloons")} ${STANDARD_EN} ${FLIGHT_FACTS_EN}${OWN_EN}`,
     website: "https://www.turkiyeballoons.com",
-    establishedYear: 2009,
-    fleetSize: 9,
-    pilotCount: 11,
-    languages: ["Türkçe", "İngilizce", "Almanca"],
-    specialties: ["Aile dostu", "Standart", "Konfor"],
-    description:
-      "Türkiye Balon, 2009 yılında Avanos merkezli olarak kurulmuş bir aile şirketidir ve Kapadokya semalarında 'güvenilir, dürüst ve şeffaf' hizmet anlayışıyla tanınır. SHGM lisansı A-2398 altında 9 balon ve 11 pilotluk filosuyla faaliyet gösteren şirket, ikinci nesil aile yönetiminde olup yıllık 28.000 yolcu taşır. Filosu standart 16 sepetli ve konfor 12 sepetli balonlardan oluşur; özellikle 4 kişilik aileler ve çocuklu gruplar için kişiselleştirilmiş paketler sunar. Türkiye Balon, EASA Part-BOP sertifikalı tüm uçuşlarında pilot-yolcu oranı 1:14'tür ve ortalama 60-75 dakika süreli uçuşlar Avanos ovaları üzerinden başlayıp Üç Güzeller, Devrent Vadisi ve Paşabağ rotalarını takip eder. Şirket, sektörde nadir görülen 'hava iptali ücretsiz tarih değişikliği + %100 geri ödeme garantisi'ni en esnek şekilde uygular; misafir aynı ziyaret döneminde başka bir tarihe geçmek isterse hiçbir ek ücret talep edilmez. Almanca rehberlik kadrosu sürekli bulundurulur. Tüm uçuşlara kahvaltı, sertifika, şampanya servisi, profesyonel grup fotoğrafı ve otel transferi dahildir. Türkiye Balon, Booking.com ve GetYourGuide platformlarında 4.8 ortalama puanı korur.",
+    verifiedAt: "2026-09-15",
   },
   {
     id: "universal",
     name: "Universal Balon",
-    licenseNo: "A-2421",
-    rating: 4.85,
-    reviewCount: 1187,
-    founded: 2011,
-    tagline: "Modern filo, yüksek standart bakım.",
-    address: "Göreme, Nevşehir 50180",
-    phone: "+90 384 271 6677",
-    website: "https://www.universalballoons.com",
-    establishedYear: 2011,
-    fleetSize: 11,
-    pilotCount: 13,
-    languages: ["Türkçe", "İngilizce", "Almanca", "Fransızca"],
-    specialties: ["Modern filo", "Konfor", "Premium"],
-    description:
-      "Universal Balon, 2011 yılında kurulmuş ve Kapadokya'nın en modern balon filosuna sahip operatörlerinden biri olarak tanınır. SHGM lisansı A-2421 altında 11 balon ve 13 pilotluk kadrosuyla faaliyet gösteren şirket, balonlarının ortalama yaşı 4 yıl olup sürekli yenilenen filo politikası uygular. Yıllık 32.000 yolcu kapasitesindeki Universal Balon, EASA Part-BOP sertifikalı pilot kadrosu ve sektörde örnek gösterilen yıllık bakım programı (üreticinin önerdiği saatlerin %50'si seviyesinde) ile güvenlik standartlarında öncüdür. Filosu 16 sepetli standart, 12 sepetli konfor ve 8 sepetli butik kategorilerinde geniş bir yelpaze sunar. Şirket, özellikle yeni nesil iletişim teknolojileri konusunda yatırım yapmıştır: pilot-yer kontrol arasında çift-kanallı VHF radyo, GPS izleme, anlık hava radarı entegrasyonu ve mobil uygulama üzerinden uçuş takibi imkanı sunar. Tüm uçuşlar 60-90 dakika süreli olup, Güllüdere, Kızıl Vadi, Aşk Vadisi ve Paşabağ rotaları arasında dinamik karar verilir. Misafirlere gourmet kahvaltı, hediyelik sertifika, şampanya servisi (Brut Reserve), profesyonel uçuş fotoğrafı (USB dahil) ve Göreme-Ürgüp-Uçhisar transfer dahildir. Almanca ve Fransızca rehberlik kadrosu sürekli bulundurulur.",
+    aliases: ["Universal Balloons", "Universal Balloon Göreme"],
+    tagline: "Göreme merkezli operatör — bilgi sayfası.",
+    taglineEn: "Göreme-based operator — information page.",
+    description: `${introTr("Universal Balon (Universal Balloons)")} ${NO_PACKAGE_TR} ${FLIGHT_FACTS_TR}${OWN_TR}`,
+    descriptionEn: `${introEn("Universal Balloons")} ${NO_PACKAGE_EN} ${FLIGHT_FACTS_EN}${OWN_EN}`,
+    website: "https://www.universalballoon.com",
+    verifiedAt: "2026-09-15",
   },
   {
     id: "voyager",
     name: "Voyager Balloons",
-    licenseNo: "A-2334",
-    rating: 4.9,
-    reviewCount: 1892,
-    founded: 2007,
-    tagline: "Premium hizmet, küçük sepet konforu.",
-    address: "Göreme, Nevşehir 50180",
-    phone: "+90 384 271 7700",
-    website: "https://www.voyagerballoons.com",
-    establishedYear: 2007,
-    fleetSize: 12,
-    pilotCount: 14,
-    languages: ["Türkçe", "İngilizce", "Almanca", "İspanyolca", "İtalyanca"],
-    specialties: ["Premium", "Küçük sepet", "Deluxe"],
-    description:
-      "Voyager Balloons, 2007 yılında kurulmuş ve premium segmentte sektör liderliği yapan Kapadokya'nın saygın operatörlerinden biridir. SHGM lisansı A-2334 altında 12 balon ve 14 pilotluk kadrosuyla faaliyet gösteren şirketin filosu büyük çoğunlukla 8 sepetli butik ve 12 sepetli konfor kategorilerinden oluşur — bu da kalabalık 16-20 sepetli uçuşlardan kaçınan misafirler için ideal bir tercih sunar. Yıllık 26.000 yolcu kapasiteli şirket, EASA Part-BOP sertifikalı tüm pilotlarını 15 yıllık deneyim eşiğinde tutar ve sektördeki en yüksek pilot kıdem yaş ortalamasına (12 yıl) sahiptir. Voyager Balloons, çoklu dil rehberlik (İspanyolca ve İtalyanca dahil), Mediterranean ve Latin pazarlarına yönelik özel uçuş paketleri ve aile-aile ortaklığı kurumsal kimliği ile öne çıkar. Tüm uçuşlar 75-90 dakika süreli (sektör ortalamasının %25 üzerinde) olup, peri bacaları, Aşk Vadisi, Kızıl Vadi ve Aktepe panoraması rotaları üzerinden gerçekleşir. Misafirlere gourmet kahvaltı (yerel ürünler), hediyelik özel ahşap çerçeveli sertifika, premium şampanya servisi (Moët & Chandon), profesyonel uçuş fotoğrafı ve özel araç transfer dahildir. Voyager Balloons, TripAdvisor Hall of Fame (5+ yıl Excellence Award) ve EASA Excellence in Safety ödüllerinin sahibidir.",
+    aliases: ["Voyager Balon", "Cappadocia Voyager Balloons"],
+    tagline: "Deluxe Balon Uçuşu — Trip and Tick üzerinden rezervasyon.",
+    taglineEn: "Deluxe Balloon Flight — bookable through Trip and Tick.",
+    description: `${introTr("Voyager Balloons")} ${DELUXE_TR} ${FLIGHT_FACTS_TR}${OWN_TR}`,
+    descriptionEn: `${introEn("Voyager Balloons")} ${DELUXE_EN} ${FLIGHT_FACTS_EN}${OWN_EN}`,
+    website: "https://voyagerballoons.com",
+    verifiedAt: "2026-09-15",
   },
   {
     id: "aircappadocia",
     name: "Air Cappadocia",
-    licenseNo: "A-2483",
-    rating: 4.8,
-    reviewCount: 1342,
-    founded: 2013,
-    tagline: "İngilizce ve Almanca rehberlik.",
-    address: "Göreme, Nevşehir 50180",
-    phone: "+90 384 271 8800",
-    website: "https://www.aircappadocia.com",
-    establishedYear: 2013,
-    fleetSize: 8,
-    pilotCount: 10,
-    languages: ["Türkçe", "İngilizce", "Almanca"],
-    specialties: ["İngilizce rehber", "Standart", "Aile uçuşu"],
-    description:
-      "Air Cappadocia, 2013 yılında kurulmuş ve özellikle İngilizce konuşan Avrupa pazarına yönelik hizmet veren orta ölçekli bir operatördür. SHGM lisansı A-2483 altında 8 balon ve 10 pilotluk kadrosuyla yıllık 21.000 yolcu taşıyan şirket, İngiliz, İrlandalı, Hollandalı ve Skandinav misafirler için tercih edilen ana operatörlerden biridir. Filosu 16 sepetli standart ve 12 sepetli konfor kategorilerinden oluşur; özellikle 4-6 kişilik aileler ve küçük arkadaş grupları için fiyat-performans dengesi yüksektir. Air Cappadocia, EASA Part-BOP sertifikalı tüm pilotları, sektör standartlarının üzerinde yıllık bakım programı (toplam 200 saat/yıl/balon) ve sigortalı uçuş garantisiyle güvenlik konusunda iyi bir referansa sahiptir. Şirket, dijital pazarlama konusunda öncüdür: kendi mobil uygulamasında uçuş takibi, anlık hava güncellemeleri, dijital sertifika ve foto-album sunar. Tüm uçuşlar 60-75 dakika süreli olup, Pasabag, Devrent Vadisi, Güllüdere ve Kızıl Vadi rotalarını takip eder. Misafirlere kahvaltı, kişiselleştirilmiş sertifika, geleneksel şampanya toast, profesyonel grup fotoğrafı ve Göreme/Ürgüp/Uçhisar transfer dahildir. Air Cappadocia, GetYourGuide ve Viator platformlarında 4.8 puan ortalamasını korur.",
+    aliases: ["Air Kapadokya", "Cappadocia Air Balloons"],
+    tagline: "Kapadokya balon operatörü — bilgi sayfası.",
+    taglineEn: "Cappadocia balloon operator — information page.",
+    description: `${introTr("Air Cappadocia (Air Kapadokya)")} ${NO_PACKAGE_TR} ${FLIGHT_FACTS_TR}`,
+    descriptionEn: `${introEn("Air Cappadocia")} ${NO_PACKAGE_EN} ${FLIGHT_FACTS_EN}`,
   },
   {
     id: "royal",
     name: "Royal Balloon",
-    licenseNo: "A-2256",
-    rating: 4.97,
-    reviewCount: 2543,
-    founded: 2001,
-    tagline: "Romantik ve VIP uçuşların lideri.",
-    address: "Göreme, Nevşehir 50180",
-    phone: "+90 384 271 9999",
-    website: "https://www.royalballoon.com",
-    establishedYear: 2001,
-    fleetSize: 9,
-    pilotCount: 12,
-    languages: ["Türkçe", "İngilizce", "Almanca", "Fransızca", "Rusça"],
-    specialties: ["VIP", "Romantik", "Evlilik teklifi", "Deluxe"],
-    description:
-      "Royal Balloon, 2001 yılında kurulmuş ve Kapadokya'nın en köklü ticari balon operatörü olarak romantik, VIP ve evlilik teklifi uçuşlarında sektörün uluslararası referansı kabul edilir. SHGM lisansı A-2256 altında 9 balon ve 12 pilotluk kadrosuyla faaliyet gösteren şirket, sektördeki en yüksek müşteri memnuniyet puanı olan 4.97 ortalamayla 2.500'ü aşkın doğrulanmış yorumda lider konumundadır. Filosu çoğunlukla 8 sepetli özel ve 4 sepetli butik kategorilerinden oluşur; bu da 2-8 kişilik intim uçuşlara olanak sağlar. Royal Balloon, evlilik teklifi paketleri (özel balonda 2 kişi, gül buketi, şampanya, fotoğrafçı), balayı paketleri (deluxe sepet, Veuve Clicquot, gourmet kahvaltı), VIP grup uçuşları (kurumsal etkinlikler, lüks turlar) ve özel film/fotoğraf çekimleri için tercih edilen ana operatördür. EASA Part-BOP sertifikalı tüm pilotları ortalama 18 yıl deneyime sahip olup, sektördeki en yüksek pilot kıdem yaş ortalamasına sahiptir. Uçuşlar 60-120 dakika süreli (paket bazlı) olup, Güllüdere, Kızıl Vadi, Aktepe, Aşk Vadisi ve özel rota seçenekleri sunulur. Çok dilli rehberlik (Almanca, Fransızca, Rusça dahil), Michelin yıldızlı şef kahvaltısı opsiyonu, premium şampanya servisi ve profesyonel fotoğraf-video paketi dahildir. Royal Balloon, Forbes Travel Guide, Condé Nast Traveler, Travel + Leisure ve Robb Report dergilerinde sürekli yer alır.",
+    aliases: ["Royal Balon", "Royal Balloon Cappadocia"],
+    tagline: "Deluxe ve Romantik Özel uçuşlar — Trip and Tick üzerinden.",
+    taglineEn: "Deluxe and Romantic Private flights — through Trip and Tick.",
+    description: `${introTr("Royal Balloon")} ${DELUXE_TR} ${ROMANTIC_TR} ${FLIGHT_FACTS_TR}${OWN_TR}`,
+    descriptionEn: `${introEn("Royal Balloon")} ${DELUXE_EN} ${ROMANTIC_EN} ${FLIGHT_FACTS_EN}${OWN_EN}`,
+    website: "https://royalballoon.com",
+    verifiedAt: "2026-09-15",
   },
 ];
 
 export function getOperatorById(id: string): Operator | undefined {
   return OPERATORS.find((o) => o.id === id);
+}
+
+/** Locale-aware description: Turkish for tr, English for everything else. */
+export function operatorDescription(op: Operator, locale: string): string {
+  return locale === "tr" ? op.description : op.descriptionEn;
+}
+
+export function operatorTagline(op: Operator, locale: string): string {
+  return locale === "tr" ? op.tagline : op.taglineEn;
 }

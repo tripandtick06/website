@@ -8,29 +8,20 @@
 import NextImage from "next/image";
 import { Link } from "@/i18n/routing";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
-import { useT } from "@/lib/i18n/I18nProvider";
+import { useT, useLocale } from "@/lib/i18n/I18nProvider";
 import { formatPrice, cn } from "@/lib/utils";
-import {
-  Star,
-  MapPin,
-  Phone,
-  Globe,
-  Calendar,
-  Users as UsersIcon,
-  ShieldCheck,
-  Award,
-  Languages,
-  CheckCircle2,
-} from "lucide-react";
+import { Star, Globe, ChevronDown } from "lucide-react";
+import { operatorDescription, operatorTagline } from "@/data/services/operators";
 import type { Operator } from "@/data/services/operators";
 import type { BalloonPackage } from "@/data/services/balloons";
 import type { Review } from "@/data/reviews";
+import type { OperatorFaqItem } from "@/lib/operator-faq";
 
 interface OperatorDetayContentProps {
   op: Operator;
   packages: BalloonPackage[];
   reviews: Review[];
-  yearsActive: number;
+  faqs: OperatorFaqItem[];
 }
 
 function KeyValue({
@@ -59,10 +50,14 @@ export function OperatorDetayContent({
   op,
   packages,
   reviews,
-  yearsActive,
+  faqs,
 }: OperatorDetayContentProps) {
   const t = useT();
   const ti = t.page.operatorler.id;
+  const { locale } = useLocale();
+  const description = operatorDescription(op, locale);
+  const tagline = operatorTagline(op, locale);
+  const faqHeading = t.page.balonlar.slug.sik_sorulan_sorular;
 
   return (
     <>
@@ -79,27 +74,14 @@ export function OperatorDetayContent({
         <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary-light/90 to-primary-dark/95" />
         <div className="container-main py-14 sm:py-20 relative z-10">
           <div className="max-w-3xl">
-            <span className="inline-block bg-white/[0.08] text-white/90 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 backdrop-blur-sm border border-white/10">
-              {ti.operator_lisans} {op.licenseNo}
-            </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">
               {op.name}
             </h1>
-            {op.tagline && (
+            {tagline && (
               <p className="text-lg sm:text-xl text-white/85 leading-relaxed mb-6">
-                {op.tagline}
+                {tagline}
               </p>
             )}
-            <div className="flex flex-wrap items-center gap-3">
-              <span className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur px-3 py-1.5 rounded-lg text-sm">
-                <Calendar className="w-4 h-4" /> {op.founded} ({yearsActive}{ti.yil}
-              </span>
-              {op.fleetSize && (
-                <span className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur px-3 py-1.5 rounded-lg text-sm">
-                  <ShieldCheck className="w-4 h-4" /> {op.fleetSize} {ti.balon_kelimesi}
-                </span>
-              )}
-            </div>
           </div>
         </div>
       </section>
@@ -119,70 +101,69 @@ export function OperatorDetayContent({
                 {op.name} {ti.hakkinda}
               </h2>
               <p className="text-slate-700 leading-relaxed whitespace-pre-line">
-                {op.description}
+                {description}
               </p>
-              {op.specialties && op.specialties.length > 0 && (
-                <div className="mt-6">
-                  <h3 className="font-semibold text-slate-900 mb-2">
-                    {ti.uzmanlik_alanlari}
-                  </h3>
-                  <div className="flex flex-wrap gap-2">
-                    {op.specialties.map((s) => (
-                      <span
-                        key={s}
-                        className="inline-flex items-center px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-xs font-semibold"
+            </section>
+
+            <section className="bg-white rounded-2xl shadow-sm p-6 sm:p-8">
+              <h2 className="text-2xl font-bold text-slate-900 mb-4">
+                {op.name} {ti.balon_paketleri}
+              </h2>
+              {packages.length > 0 ? (
+                <>
+                  <p className="text-slate-600 text-sm mb-6">
+                    {ti.operatorun_gerceklestirdigi} {packages.length} {ti.paket_arasindan_secim}
+                  </p>
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    {packages.map((pkg) => (
+                      <Link
+                        key={pkg.slug}
+                        href={{ pathname: "/balonlar/[slug]", params: { slug: pkg.slug } }}
+                        className="border border-slate-200 rounded-xl p-4 hover:border-amber-400 hover:shadow-md transition-all flex flex-col"
                       >
-                        {s}
-                      </span>
+                        <div className="flex items-center justify-between mb-2">
+                          <span
+                            className={cn(
+                              "text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full",
+                              pkg.badgeColor === "accent" && "bg-amber-100 text-amber-700",
+                              pkg.badgeColor === "success" && "bg-emerald-100 text-emerald-700",
+                              pkg.badgeColor === "warning" && "bg-rose-100 text-rose-700",
+                              pkg.badgeColor === "primary" && "bg-indigo-100 text-indigo-700"
+                            )}
+                          >
+                            {pkg.badge}
+                          </span>
+                        </div>
+                        <h3 className="font-bold text-slate-900 mb-1">{pkg.name}</h3>
+                        <p className="text-xs text-slate-600 line-clamp-2 mb-3 flex-1">
+                          {pkg.shortDescription}
+                        </p>
+                        <div className="flex items-baseline justify-between pt-3 border-t border-slate-100">
+                          <span className="text-xs text-slate-500">{pkg.duration}</span>
+                          <span className="font-bold text-amber-600">
+                            {formatPrice(pkg.adultPrice, pkg.currency)}
+                          </span>
+                        </div>
+                      </Link>
                     ))}
                   </div>
+                </>
+              ) : (
+                <div className="rounded-xl border border-dashed border-slate-300 bg-slate-50 p-6 text-center">
+                  <p className="text-slate-600 text-sm mb-4">
+                    {locale === "tr"
+                      ? `Trip and Tick şu anda ${op.name} ile satışta olan bir paket sunmuyor.`
+                      : `Trip and Tick does not currently sell a package with ${op.aliases[0] ?? op.name}.`}
+                  </p>
+                  <Link
+                    href="/balonlar"
+                    className="inline-flex items-center justify-center px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white rounded-lg text-sm font-semibold transition-colors"
+                  >
+                    {ti.paketleri_gor}
+                  </Link>
                 </div>
               )}
             </section>
-
-            {packages.length > 0 && (
-              <section className="bg-white rounded-2xl shadow-sm p-6 sm:p-8">
-                <h2 className="text-2xl font-bold text-slate-900 mb-4">
-                  {op.name} {ti.balon_paketleri}
-                </h2>
-                <p className="text-slate-600 text-sm mb-6">
-                  {ti.operatorun_gerceklestirdigi} {packages.length} {ti.paket_arasindan_secim}
-                </p>
-                <div className="grid sm:grid-cols-2 gap-4">
-                  {packages.map((pkg) => (
-                    <Link
-                      key={pkg.slug}
-                      href={{ pathname: "/balonlar/[slug]", params: { slug: pkg.slug } }}
-                      className="border border-slate-200 rounded-xl p-4 hover:border-amber-400 hover:shadow-md transition-all flex flex-col"
-                    >
-                      <div className="flex items-center justify-between mb-2">
-                        <span
-                          className={cn(
-                            "text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full",
-                            pkg.badgeColor === "accent" && "bg-amber-100 text-amber-700",
-                            pkg.badgeColor === "success" && "bg-emerald-100 text-emerald-700",
-                            pkg.badgeColor === "warning" && "bg-rose-100 text-rose-700",
-                            pkg.badgeColor === "primary" && "bg-indigo-100 text-indigo-700"
-                          )}
-                        >
-                          {pkg.badge}
-                        </span>
-                      </div>
-                      <h3 className="font-bold text-slate-900 mb-1">{pkg.name}</h3>
-                      <p className="text-xs text-slate-600 line-clamp-2 mb-3 flex-1">
-                        {pkg.shortDescription}
-                      </p>
-                      <div className="flex items-baseline justify-between pt-3 border-t border-slate-100">
-                        <span className="text-xs text-slate-500">{pkg.duration}</span>
-                        <span className="font-bold text-amber-600">
-                          {formatPrice(pkg.adultPrice, pkg.currency)}
-                        </span>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </section>
-            )}
 
             <section className="bg-white rounded-2xl shadow-sm p-6 sm:p-8">
               <h2 className="text-2xl font-bold text-slate-900 mb-2">
@@ -228,48 +209,10 @@ export function OperatorDetayContent({
           </div>
 
           <aside className="lg:sticky lg:top-6 h-fit space-y-4">
-            <div className="bg-white rounded-2xl shadow-sm p-6">
-              <h3 className="font-bold text-slate-900 mb-4">{ti.kunye}</h3>
-              <div className="space-y-3 text-sm">
-                <KeyValue
-                  label={ti.keyvalue_label_shgm_lisansi}
-                  value={op.licenseNo}
-                  icon={<Award className="w-4 h-4" />}
-                />
-                <KeyValue
-                  label={ti.keyvalue_label_kurulus}
-                  value={`${op.founded} (${yearsActive}${ti.yil}`}
-                  icon={<Calendar className="w-4 h-4" />}
-                />
-                {op.fleetSize && (
-                  <KeyValue
-                    label={ti.keyvalue_label_filo}
-                    value={`${op.fleetSize} ${ti.balon_kelimesi}`}
-                    icon={<ShieldCheck className="w-4 h-4" />}
-                  />
-                )}
-                {op.pilotCount && (
-                  <KeyValue
-                    label={ti.keyvalue_label_pilot_kadrosu}
-                    value={`${op.pilotCount} ${ti.pilot_kelimesi}`}
-                    icon={<UsersIcon className="w-4 h-4" />}
-                  />
-                )}
-                {op.address && (
-                  <KeyValue
-                    label={ti.keyvalue_label_adres}
-                    value={op.address}
-                    icon={<MapPin className="w-4 h-4" />}
-                  />
-                )}
-                {op.phone && (
-                  <KeyValue
-                    label={ti.keyvalue_label_telefon}
-                    value={op.phone}
-                    icon={<Phone className="w-4 h-4" />}
-                  />
-                )}
-                {op.website && (
+            {op.website && (
+              <div className="bg-white rounded-2xl shadow-sm p-6">
+                <h3 className="font-bold text-slate-900 mb-4">{ti.kunye}</h3>
+                <div className="space-y-3 text-sm">
                   <KeyValue
                     label={ti.keyvalue_label_web}
                     value={
@@ -284,16 +227,9 @@ export function OperatorDetayContent({
                     }
                     icon={<Globe className="w-4 h-4" />}
                   />
-                )}
-                {op.languages && op.languages.length > 0 && (
-                  <KeyValue
-                    label={ti.keyvalue_label_diller}
-                    value={op.languages.join(", ")}
-                    icon={<Languages className="w-4 h-4" />}
-                  />
-                )}
+                </div>
               </div>
-            </div>
+            )}
 
             <div className="bg-gradient-to-br from-amber-500 to-orange-500 text-white rounded-2xl p-6 shadow-sm">
               <h3 className="font-bold text-lg mb-2">{ti.rezervasyon}</h3>
@@ -307,20 +243,27 @@ export function OperatorDetayContent({
                 {ti.paketleri_gor}
               </Link>
             </div>
-
-            <div className="bg-white rounded-2xl shadow-sm p-6">
-              <h3 className="font-bold text-slate-900 mb-3 flex items-center gap-2">
-                <CheckCircle2 className="w-5 h-5 text-emerald-500" />
-                {ti.sertifikalar}
-              </h3>
-              <ul className="space-y-2 text-sm text-slate-700">
-                <li>{ti.shgm_ticari_hava_araci_isletme}</li>
-                <li>{ti.easa_part_bop_balloon_operations}</li>
-                <li>{ti.tursab_uyeligi}</li>
-                <li>{ti["40m_eur_ucuncu_sahis_sorumluluk"]}</li>
-              </ul>
-            </div>
           </aside>
+        </div>
+
+        <div className="container-main pb-12">
+          <section className="bg-white rounded-2xl shadow-sm p-6 sm:p-8 max-w-3xl">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">{faqHeading}</h2>
+            <div className="space-y-3">
+              {faqs.map((f) => (
+                <details
+                  key={f.question}
+                  className="group bg-slate-50 rounded-xl border border-slate-200 p-4"
+                >
+                  <summary className="font-bold text-slate-900 cursor-pointer flex items-center justify-between list-none">
+                    {f.question}
+                    <ChevronDown className="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform" />
+                  </summary>
+                  <p className="text-sm text-slate-600 mt-3 leading-relaxed">{f.answer}</p>
+                </details>
+              ))}
+            </div>
+          </section>
         </div>
       </div>
     </>
