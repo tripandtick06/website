@@ -3,6 +3,7 @@ import createIntlMiddleware from "next-intl/middleware";
 import { routing } from "@/i18n/routing";
 import { ADMIN_COOKIE_NAME, verifyAdminCookieValue } from "@/lib/admin-auth";
 import { checkRateLimit } from "@/lib/rate-limit";
+import { isNoindexPath } from "@/lib/locale-index";
 
 const intlMiddleware = createIntlMiddleware(routing);
 
@@ -45,7 +46,14 @@ export async function middleware(req: NextRequest) {
     // Upgrading to 308 (permanent) makes browsers + shared caches pin the first
     // detected locale forever, breaking device-language auto-detection. So pass
     // next-intl's response through unchanged.
-    return intlMiddleware(req);
+    const res = intlMiddleware(req);
+    // 2026-09-15 locale prune: header-level noindex for the ten pruned locales.
+    // Independent of page metadata (some pages set robots themselves), so a
+    // future page-level `index: true` cannot silently re-open a pruned locale.
+    if (isNoindexPath(pathname)) {
+      res.headers.set("X-Robots-Tag", "noindex, follow");
+    }
+    return res;
   }
 
   // Stripe webhook bypass — Stripe IP'lerinden gelir, signature verify yeterli koruma.

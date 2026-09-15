@@ -4,6 +4,7 @@
 
 import { SITE_URL } from "@/lib/schema";
 import { routing } from "@/i18n/routing";
+import { isIndexableLocale } from "@/lib/locale-index";
 
 const DEFAULT_LOCALE = routing.defaultLocale; // "tr"
 
@@ -35,7 +36,10 @@ function localizePath(path: string, locale: string): string {
   return `${translated ?? firstSeg}${rest}`;
 }
 
-const HREFLANG_LOCALES: { locale: string; tag: string }[] = [
+// 2026-09-15 locale prune: only indexable locales form the hreflang cluster
+// (see src/lib/locale-index.ts). A noindex page inside a cluster is a mixed
+// signal Google resolves by dropping the whole set.
+const HREFLANG_LOCALES: { locale: string; tag: string }[] = ([
   { locale: "tr", tag: "tr-TR" },
   { locale: "en", tag: "en" },
   { locale: "de", tag: "de" },
@@ -53,7 +57,7 @@ const HREFLANG_LOCALES: { locale: string; tag: string }[] = [
   { locale: "ru", tag: "ru" },
   { locale: "uk", tag: "uk" },
   { locale: "az", tag: "az" },
-];
+] as { locale: string; tag: string }[]).filter((l) => isIndexableLocale(l.locale));
 
 /**
  * Build hreflang `alternates.languages` map for a given path.

@@ -7,17 +7,18 @@ beforeAll(() => {
 import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
 
 describe("generateHreflang", () => {
-  it("returns 17 locales + x-default", () => {
+  // 2026-09-15 locale prune: the cluster is the seven indexable locales only
+  // (src/lib/locale-index.ts). Pruned locales are noindex and MUST NOT appear.
+  it("returns the 7 indexable locales + x-default, never a pruned locale", () => {
     const out = generateHreflang("/balonlar");
     const keys = Object.keys(out);
-    for (const t of [
-      "tr-TR", "en", "de", "fr", "es", "nl", "zh-Hans", "hi", "ur",
-      "pt-PT", "pt-BR", "ja", "ko", "it", "ru", "uk", "az",
-      "x-default",
-    ]) {
+    for (const t of ["tr-TR", "en", "de", "fr", "pt-BR", "ja", "ko", "x-default"]) {
       expect(keys).toContain(t);
     }
-    expect(keys).toHaveLength(18);
+    for (const t of ["es", "nl", "zh-Hans", "hi", "ur", "pt-PT", "it", "ru", "uk", "az"]) {
+      expect(keys).not.toContain(t);
+    }
+    expect(keys).toHaveLength(8);
   });
 
   it("normalizes paths missing leading slash", () => {
@@ -31,15 +32,15 @@ describe("generateHreflang", () => {
     expect(out["tr-TR"]).toBe("https://tripandtick.com/balonlar");
     expect(out.en).toBe("https://tripandtick.com/en/balloon-tours");
     expect(out.de).toBe("https://tripandtick.com/de/heissluftballonfahrten");
-    expect(out["zh-Hans"]).toBe("https://tripandtick.com/zh/balloon-tours");
+    expect(out.ja).toBe("https://tripandtick.com/ja/balloon-tours");
     expect(out["x-default"]).toBe("https://tripandtick.com/balonlar");
   });
 
   it("localizes known TR slugs to per-locale equivalents", () => {
     const out = generateHreflang("/oteller");
     expect(out.en).toBe("https://tripandtick.com/en/hotels");
-    expect(out.es).toBe("https://tripandtick.com/es/hoteles");
-    expect(out.nl).toBe("https://tripandtick.com/nl/hotels");
+    expect(out.fr).toBe("https://tripandtick.com/fr/hotels");
+    expect(out.de).toBe("https://tripandtick.com/de/hotels");
   });
 
   it("handles root path without double slash", () => {

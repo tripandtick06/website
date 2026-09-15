@@ -16,6 +16,7 @@ import { Analytics } from "@/components/analytics/Analytics";
 import { RegisterSW } from "@/components/sw/RegisterSW";
 import { ORGANIZATION_SCHEMA, SITE_URL } from "@/lib/schema";
 import { generateHreflang, canonicalFor } from "@/lib/hreflang";
+import { robotsForLocale } from "@/lib/locale-index";
 import { LOCALE_DIR, isLocale, type Locale } from "@/lib/i18n/dictionaries";
 import { routing } from "@/i18n/routing";
 
@@ -107,7 +108,8 @@ export async function generateMetadata({
     card: "summary_large_image",
     images: [DEFAULT_OG_IMAGE],
   },
-  robots: { index: true, follow: true },
+  // 2026-09-15 locale prune: noindex,follow for the ten low-signal locales.
+  robots: robotsForLocale(typedLocale),
   verification: {
     google: process.env.NEXT_PUBLIC_GSC_VERIFICATION || undefined,
     yandex: process.env.NEXT_PUBLIC_YANDEX_VERIFICATION || "4e0712c04a695041",
