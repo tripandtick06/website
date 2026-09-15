@@ -5,7 +5,7 @@ import { Link } from "@/i18n/routing";
 import { Wind, Clock, Users, Check, Shield } from "lucide-react";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { PageHero } from "@/components/layout/PageHero";
-import { OPERATORS } from "@/data/services/operators";
+import { OPERATORS, operatorTagline } from "@/data/services/operators";
 import { formatPrice } from "@/lib/utils";
 import { useT, useLocale } from "@/lib/i18n/I18nProvider";
 import { tBalloons, tFaq } from "@/lib/i18n/localizeData";
@@ -163,7 +163,9 @@ export function BalonlarContent() {
               >
                 <Wind className="w-8 h-8 text-primary mx-auto mb-2" />
                 <h4 className="font-bold text-slate-900 text-sm mb-1">{op.name}</h4>
-                <div className="text-[10px] text-slate-500 mb-1.5">{b.lisans_prefix} {op.licenseNo}</div>
+                <div className="text-[10px] text-slate-500 mb-1.5 line-clamp-2">
+                  {operatorTagline(op, locale)}
+                </div>
               </div>
             ))}
           </div>
