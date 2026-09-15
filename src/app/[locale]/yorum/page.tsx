@@ -16,6 +16,10 @@ import { YorumContent } from "./YorumContent";
 // request (Lighthouse: ~0.9 s TTFB on every listing page). Live prices stay
 // client-side. Guard: tests/lib/static-listing-pages.test.ts
 export const dynamic = "force-static";
+// next-on-pages: without dynamicParams=false the route is SSG-with-fallback
+// and the Cloudflare build refuses it ("not configured to run with the Edge
+// Runtime"). Locales come from the layout's generateStaticParams.
+export const dynamicParams = false;
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;

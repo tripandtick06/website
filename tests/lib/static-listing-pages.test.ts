@@ -20,6 +20,7 @@ describe("static listing pages", () => {
       // strip line comments so the explanatory note above the export does not trip the check
       const code = src.replace(/^\s*\/\/.*$/gm, "");
       expect(code).toMatch(/export const dynamic = "force-static"/);
+      expect(code).toMatch(/export const dynamicParams = false/);
       expect(code).not.toMatch(/export const runtime = "edge"/);
       expect(code).not.toMatch(/\bheaders\(\)|\bcookies\(\)|searchParams/);
     });
