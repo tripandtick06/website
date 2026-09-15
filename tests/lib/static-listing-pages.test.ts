@@ -17,9 +17,11 @@ describe("static listing pages", () => {
   for (const seg of STATIC_PAGES) {
     it(`/${seg || "(home)"} is force-static and not edge`, () => {
       const src = fs.readFileSync(path.join(root, seg, "page.tsx"), "utf8");
-      expect(src).toMatch(/export const dynamic = "force-static"/);
-      expect(src).not.toMatch(/export const runtime = "edge"/);
-      expect(src).not.toMatch(/\bheaders\(\)|\bcookies\(\)|searchParams/);
+      // strip line comments so the explanatory note above the export does not trip the check
+      const code = src.replace(/^\s*\/\/.*$/gm, "");
+      expect(code).toMatch(/export const dynamic = "force-static"/);
+      expect(code).not.toMatch(/export const runtime = "edge"/);
+      expect(code).not.toMatch(/\bheaders\(\)|\bcookies\(\)|searchParams/);
     });
   }
 });
