@@ -47,6 +47,9 @@ jobs:
       - name: Test
         run: npm test
 
+      - name: SEO guards
+        run: npm run check:seo
+
       - name: Build
         run: npm run build
 
