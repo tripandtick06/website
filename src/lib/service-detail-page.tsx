@@ -65,7 +65,11 @@ export function makeServiceDetailPage(cfg: ServiceDetailConfig) {
         ? "Özel Fiyat"
         : "Custom Price"
       : formatPrice(item.adultPrice, item.currency);
-    const ogTitle = `${item.name} — ${geo} ${priceLabel}`;
+    // Do not repeat the region when the item name already carries it
+    // ("Kapadokya Kırmızı Tur — Kapadokya €45" read as keyword stuffing and
+    // pushed titles past 60 chars; final audit 2026-09-16).
+    const hasGeo = /kapadokya|cappadocia|kappadokien|cappadoce|capadocia|capadócia|カッパドキア|카파도키아/i.test(item.name);
+    const ogTitle = hasGeo ? `${item.name} — ${priceLabel}` : `${item.name} — ${geo} ${priceLabel}`;
     return {
       // root layout title.template appends the brand — a hardcoded suffix here
       // rendered "… | Trip and Tick | Trip and Tick" on every activity/tour/
