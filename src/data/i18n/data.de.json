@@ -3,7 +3,7 @@
     "standart-balon-ucusu": {
       "name": "Standard-Ballonfahrt",
       "shortDescription": "Die günstigste Ballonfahrt. 60 Min. Flug, großer Korb, 100 % Erstattung bei wetterbedingter Absage.",
-      "longDescription": "Die preiswerteste Möglichkeit, um die legendären Feenkamine von Kappadokien aus der Vogelperspektive zu erleben. Der Standardkorb bietet Platz für 16-20 Passagiere und ermöglicht einen 60-minütigen Flug in Begleitung professioneller Piloten. Hoteltransfer, leichtes Frühstück, eine Versicherung über 40 Millionen Euro, Flugzertifikat und Medaille sowie eine Landefeier mit Champagner – all das ist im Preis inbegriffen. Die Preise können je nach Wetterlage und Auslastung täglich variieren – für Termine, die mehr als 7 Tage entfernt sind, gilt der Katalogpreis, für Termine innerhalb von 7 Tagen der aktuelle Tagespreis.",
+      "longDescription": "Die günstigste Art, Kappadokiens Feenkamine, Täler und den Sonnenaufgang aus der Luft zu sehen. Die Fahrt dauert etwa 60 Minuten in einem geräumigen Korb für 16-20 Passagiere mit professionellem Piloten. Hotelabholung etwa eine Stunde vor Sonnenaufgang; leichtes Frühstück am Startplatz, Sektempfang nach der Landung, Flugzertifikat und Medaille, 40 Mio. € Passagierversicherung und der Rücktransfer zum Hotel sind inklusive. Dieses Paket fahren wir mit Kaya, İstanbul, Butterfly, Asiana und Türkiye Balloons; der Veranstalter wird nach Datum und Verfügbarkeit zugeteilt. Kinder unter 6 Jahren, Schwangere und Personen mit ernsten Herz- oder Gesundheitsproblemen dürfen nicht fahren. Die Freigabe erteilt jeden Morgen die Zivilluftfahrtbehörde; bei wetterbedingter Absage volle Erstattung oder neuer Termin. Für Termine über 7 Tage im Voraus gilt der Katalogpreis, innerhalb von 7 Tagen der Tagespreis nach Wetter und Nachfrage.",
       "badge": "Am beliebtesten",
       "includes": [
         "Hoteltransfer",
@@ -33,7 +33,7 @@
     "deluxe-balon-ucusu": {
       "name": "Deluxe-Ballonfahrt",
       "shortDescription": "Kleiner Korb (max. 16 Personen), 60 Minuten Luxuserlebnis + Zertifikat in Kartonform.",
-      "longDescription": "Das Premium-Ballonerlebnis. Mit dem kleinen Korb (max. 16 Passagiere) genießen Sie einen geräumigeren 60-minütigen Flug, ein Flugzertifikat in Kartonform, ein Gourmet-Frühstück und einen VIP-Transfer. Wir arbeiten mit den renommiertesten Betreibern zusammen.",
+      "longDescription": "Für Gäste, die weniger Passagiere, mehr Platz und aufmerksameren Service wünschen. Auch die Deluxe-Fahrt dauert etwa 60 Minuten, der Korb fasst jedoch höchstens 16 Personen – jeder steht am Rand mit freiem Blick. VIP-Hoteltransfer, Gourmet-Frühstück am Startplatz, Premium-Champagner nach der Landung, Flugzertifikat auf Karton, professionelles Fotoshooting und 40 Mio. € Passagierversicherung sind inklusive. Dieses Paket fahren wir mit Royal Balloon, Butterfly Balloons und Voyager Balloons. Kinder unter 6 Jahren, Schwangere und Personen mit ernsten Herz- oder Gesundheitsproblemen dürfen nicht fahren. Die Freigabe erteilt jeden Morgen die Zivilluftfahrtbehörde; bei wetterbedingter Absage volle Erstattung oder neuer Termin. Die ausgewogenste Wahl zwischen Standard und Romantik-Privat für Flitterwochen, Geburtstage und kleine Gruppen.",
       "badge": "Deluxe",
       "includes": [
         "VIP-Hoteltransfer",
@@ -60,7 +60,7 @@
     "romantik-ozel-balon": {
       "name": "Romantischer Privatballon",
       "shortDescription": "Privatkorb nur für Paare. Heiratsantrag, Flitterwochen, Jahrestag. Fragen Sie nach unserem Sonderpreis.",
-      "longDescription": "Ein Privatkorb für nur 2 Personen oder eine kleine Gruppe (max. 8). Gestaltet für die schönsten Momente des Lebens. Individuelle Dekoration, Überraschungsorganisation, Fotograf, Premium-Champagner und ein personalisiertes Zertifikat. Da jede Organisation individuell vorbereitet wird, erfolgt die Preisgestaltung auf Anfrage – kontaktieren Sie uns.",
+      "longDescription": "Nur Sie und Ihr Pilot im Korb: eine Privatfahrt für Heiratsanträge, Flitterwochen, Jahrestage und Überraschungen. Wählen Sie einen Korb für zwei oder eine kleine Gruppe bis 8 Personen; die Fahrt dauert 60-90 Minuten. VIP-Hoteltransfer, Gourmet-Frühstück am Startplatz, Premium-Champagner nach der Landung, personalisiertes Zertifikat, professioneller Fotograf, auf Wunsch Dekoration und Überraschungsarrangement sowie 40 Mio. € Passagierversicherung sind inklusive. Wir organisieren dieses Paket mit Royal Balloon und Butterfly Balloons. Da jede Fahrt individuell geplant wird, erhalten Sie den Preis auf Anfrage – Datum und Wünsche per WhatsApp senden, Angebot am selben Tag. Kinder unter 6 Jahren, Schwangere und Personen mit ernsten Herz- oder Gesundheitsproblemen dürfen nicht fahren. Die Freigabe erteilt jeden Morgen die Zivilluftfahrtbehörde; bei wetterbedingter Absage volle Erstattung oder Verschiebung auf einen anderen Morgen Ihres Aufenthalts.",
       "badge": "Romantisch",
       "includes": [
         "VIP-Transfer",

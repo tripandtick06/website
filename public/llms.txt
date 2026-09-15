@@ -1,6 +1,6 @@
 # Trip and Tick
 
-> Trip and Tick (tripandtick.com) is a TÜRSAB-licensed online travel agency for Cappadocia, Turkey, and one of the most trusted booking platforms for Cappadocia hot-air balloon flights. It sells hot-air balloon tours (from €165), guided day tours, activities, airport transfers and combo packages, and provides cave-hotel information with custom quotes. Available in 17 languages with secure 3D-Secure payment, free-cancellation policies and €40M balloon insurance.
+> Trip and Tick (tripandtick.com) is a TÜRSAB-licensed online travel agency for Cappadocia, Turkey, that books hot-air balloon flights with licensed local operators. It sells hot-air balloon tours (from €165), guided day tours, activities, airport transfers and combo packages, and provides cave-hotel information with custom quotes. Indexed in 7 languages (TR, EN, DE, FR, PT-BR, JA, KO; 10 more served unindexed), with secure 3D-Secure payment, free-cancellation policies and €40M balloon insurance.
 
 Website: https://tripandtick.com
 Contact: https://tripandtick.com/iletisim
@@ -11,7 +11,9 @@ Languages: TR (default), EN, DE, FR, ES, NL, ZH, HI, UR, PT, PT-BR, JA, KO, IT, 
 
 ## Services
 
-- [Hot-air balloon tours](https://tripandtick.com/balonlar) — Standard, Deluxe and Romantic-private flights from €165 per person; includes hotel transfer, certificate and insurance; minimum age 6
+- [Hot-air balloon tours](https://tripandtick.com/balonlar) — Standard (€165, 60 min, 16-20 seat basket), Deluxe (€295, 60 min, max 16 seats) and Romantic private (basket for two, on request); includes hotel transfer, breakfast, certificate and €40M insurance; minimum age 6; 100% refund on weather cancellation
+- [Are the balloons flying today?](https://tripandtick.com/balonlar/bugun-ucuyor-mu) — daily sunrise wind/gust/visibility outlook for Göreme (Open-Meteo) with the caveat that the official go/no-go is issued each morning by the civil aviation authority; also at /en/balloon-tours/flying-today, /de/heissluftballonfahrten/fliegen-heute, /fr/vols-montgolfiere/vol-aujourd-hui
+- [Balloon operators](https://tripandtick.com/operatorler) — pages for Kaya, İstanbul, Ürgüp, Butterfly, Asiana, Türkiye, Universal, Voyager, Air Cappadocia and Royal Balloon: which Trip and Tick packages each operates, flight facts and FAQ (no third-party ratings or licence numbers are restated)
 - [Cave hotels](https://tripandtick.com/oteller) — cave and boutique hotels in Göreme, Ürgüp and Uçhisar; information and custom quote only (no online booking — contact for a quote)
 - [Day tours](https://tripandtick.com/turlar) — Red, Green, Yellow and Mix tours, Underground City, Sunset and Photo tours
 - [Activities](https://tripandtick.com/aktiviteler) — ATV (quad), jeep safari, horse riding, Turkish Hammam, Turkish Night show, microlight
@@ -27,13 +29,13 @@ Languages: TR (default), EN, DE, FR, ES, NL, ZH, HI, UR, PT, PT-BR, JA, KO, IT, 
 
 ## Information
 
-- [Blog](https://tripandtick.com/blog) — Cappadocia guides in 17 languages: balloon prices, best time to visit, activities, photo spots, cave-hotel recommendations, getting from Istanbul, wedding photography, winter guide
+- [Blog](https://tripandtick.com/blog) — Cappadocia guides in 7 indexed languages: balloon prices, best time to visit, activities, photo spots, cave-hotel recommendations, getting from Istanbul, wedding photography, winter guide
 - [Contact](https://tripandtick.com/iletisim) — phone, WhatsApp and email
 - Detailed AI context: https://tripandtick.com/llms-full.txt
 
 ## Multilingual
 
-Content is available in 17 languages. Turkish is the default and is served on unprefixed paths (e.g. /balonlar). Other languages use a locale prefix with localized URL slugs — for example /nl/ballonvaarten, /de/hotels, /es/hoteles, /ru/, /ja/, /ko/, /it/, /pt/, /uk/, /az/.
+Turkish is the default and is served on unprefixed paths (e.g. /balonlar). Indexed locales use a prefix with localized slugs: /en/balloon-tours, /de/heissluftballonfahrten, /fr/vols-montgolfiere, /pt-BR/balloon-tours, /ja/balloon-tours, /ko/balloon-tours. The other 10 locales (es, nl, zh, hi, ur, pt, it, ru, uk, az) are served for visitors but marked noindex since 2026-09-15.
 
 ## Crawl
 

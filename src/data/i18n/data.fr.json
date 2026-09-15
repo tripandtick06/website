@@ -3,7 +3,7 @@
     "standart-balon-ucusu": {
       "name": "Vol en montgolfière Standard",
       "shortDescription": "Le vol en montgolfière le plus économique. 60 min de vol, grande nacelle, remboursement à 100 % en cas d'annulation météo.",
-      "longDescription": "L'option la plus abordable pour admirer à vol d'oiseau les légendaires cheminées de fées de la Cappadoce. La nacelle standard, d'une capacité de 16 à 20 passagers, offre 60 minutes de vol accompagné de pilotes professionnels. Transfert depuis l'hôtel, petit-déjeuner léger, assurance de 40 millions d'euros, certificat de vol et médaille, célébration de l'atterrissage au champagne — tout est compris dans le prix. Les tarifs peuvent varier au quotidien selon les conditions météo et l'affluence — le prix catalogue s'applique aux dates situées à plus de 7 jours, et le prix actualisé pour les dates dans les 7 jours.",
+      "longDescription": "Le moyen le plus abordable de voir les cheminées de fées, les vallées et le lever du soleil de Cappadoce depuis le ciel. Le vol dure environ 60 minutes dans une nacelle spacieuse de 16 à 20 passagers, avec un pilote professionnel. Prise en charge à l'hôtel environ une heure avant le lever du soleil ; petit-déjeuner léger sur le site de décollage, toast au champagne après l'atterrissage, certificat de vol et médaille, assurance passagers de 40 M€ et retour à l'hôtel inclus. Nous opérons ce forfait avec Kaya, İstanbul, Butterfly, Asiana et Türkiye Balloons ; l'opérateur est attribué selon la date et les disponibilités. Les enfants de moins de 6 ans, les femmes enceintes et les personnes souffrant de problèmes cardiaques ou de santé graves ne peuvent pas voler. L'autorisation de vol est donnée chaque matin par l'autorité de l'aviation civile ; en cas d'annulation météo, remboursement intégral ou nouvelle date. Prix catalogue à plus de 7 jours ; à moins de 7 jours, prix du jour selon la météo et la demande.",
       "badge": "Le plus populaire",
       "includes": [
         "Transfert depuis l'hôtel",
@@ -33,7 +33,7 @@
     "deluxe-balon-ucusu": {
       "name": "Vol en montgolfière Deluxe",
       "shortDescription": "Petite nacelle (max 16 personnes), expérience de luxe de 60 minutes + certificat cartonné.",
-      "longDescription": "Une expérience de vol en montgolfière premium. Avec une petite nacelle (max 16 passagers), profitez de 60 minutes de vol plus spacieux, d'un certificat de vol cartonné, d'un petit-déjeuner gourmet et d'un transfert VIP. Nous collaborons avec les opérateurs les plus prestigieux.",
+      "longDescription": "Pour ceux qui veulent moins de passagers, plus d'espace et un service plus attentif. Le vol Deluxe dure lui aussi environ 60 minutes, mais la nacelle accueille au maximum 16 personnes : chacun est au bord, face au paysage. Transfert VIP depuis l'hôtel, petit-déjeuner gastronomique sur le site de décollage, champagne premium à l'atterrissage, certificat de vol cartonné, séance photo professionnelle et assurance passagers de 40 M€ inclus. Nous opérons ce forfait avec Royal Balloon, Butterfly Balloons et Voyager Balloons. Les enfants de moins de 6 ans, les femmes enceintes et les personnes souffrant de problèmes cardiaques ou de santé graves ne peuvent pas voler. L'autorisation de vol est donnée chaque matin par l'autorité de l'aviation civile ; en cas d'annulation météo, remboursement intégral ou nouvelle date. Le choix le plus équilibré entre Standard et Romantique privé pour les lunes de miel, anniversaires et petits groupes.",
       "badge": "Deluxe",
       "includes": [
         "Transfert VIP depuis l'hôtel",
@@ -60,7 +60,7 @@
     "romantik-ozel-balon": {
       "name": "Montgolfière privée Romantique",
       "shortDescription": "Nacelle privée réservée aux couples. Demande en mariage, lune de miel, anniversaire. Demandez votre tarif sur mesure.",
-      "longDescription": "Nacelle privée pour 2 personnes seulement ou petit groupe (max 8). Conçue pour les moments les plus précieux de la vie. Décoration spéciale, organisation surprise, photographe, champagne premium, certificat personnalisé. Chaque organisation étant préparée sur mesure, la tarification se fait sur devis — contactez-nous.",
+      "longDescription": "Rien que vous et votre pilote dans la nacelle : un vol privé conçu pour les demandes en mariage, lunes de miel, anniversaires et surprises. Nacelle pour deux ou petit groupe jusqu'à 8 personnes ; le vol dure 60 à 90 minutes. Transfert VIP depuis l'hôtel, petit-déjeuner gastronomique, champagne premium à l'atterrissage, certificat personnalisé, photographe professionnel, décoration et organisation surprise sur demande, et assurance passagers de 40 M€ inclus. Nous organisons ce forfait avec Royal Balloon et Butterfly Balloons. Chaque vol étant préparé sur mesure, le prix est communiqué sur devis : envoyez votre date et vos souhaits sur WhatsApp et recevez un devis le jour même. Les enfants de moins de 6 ans, les femmes enceintes et les personnes souffrant de problèmes cardiaques ou de santé graves ne peuvent pas voler. L'autorisation de vol est donnée chaque matin par l'autorité de l'aviation civile ; en cas d'annulation météo, remboursement intégral ou report à un autre matin de votre séjour.",
       "badge": "Romantique",
       "includes": [
         "Transfert VIP",
