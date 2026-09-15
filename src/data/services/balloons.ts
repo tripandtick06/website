@@ -37,7 +37,7 @@ export const BALLOON_PACKAGES: BalloonPackage[] = [
     name: "Standart Balon Uçuşu",
     shortDescription: "En ekonomik balon turu. 60 dk uçuş, geniş sepet, %100 hava iptali iadesi.",
     longDescription:
-      "Kapadokya'nın efsanevi peri bacalarını kuş bakışı izlemek için en uygun fiyatlı seçenek. Standart sepet 16-20 yolcu kapasiteli olup, profesyonel pilotlar eşliğinde 60 dakika uçuş sunar. Otel transferi, hafif kahvaltı, 40 milyon Euro sigorta, uçuş sertifikası ve madalya, şampanya ile iniş kutlaması — hepsi fiyata dahildir. Fiyatlar hava şartları ve yoğunluğa göre günlük değişebilir — 7 günden uzak tarihler için katalog fiyatı, 7 gün içi için güncel fiyat geçerlidir.",
+      "Kapadokya'nın peri bacalarını, vadilerini ve gün doğumunu kuş bakışı görmenin en uygun fiyatlı yolu. Uçuş yaklaşık 60 dakika sürer; 16-20 kişilik geniş sepette profesyonel pilot eşliğinde uçarsınız. Otelden alış gün doğumundan yaklaşık bir saat önce yapılır; kalkış alanında hafif kahvaltı, iniş sonrası şampanyalı kutlama, uçuş sertifikası ve madalya, 40 milyon Euro yolcu sigortası ve otele dönüş transferi fiyata dahildir. Bu paketi Kaya, İstanbul, Butterfly, Asiana ve Türkiye Balon ile uçuruyoruz; operatör, uçuş gününe ve doluluğa göre atanır. 6 yaş altı çocuklar, hamileler ve ciddi kalp/sağlık sorunu olanlar uçamaz. Kalkış kararı her sabah sivil havacılık otoritesi tarafından verilir; hava nedeniyle iptalde ödemenin tamamı iade edilir veya uçuş başka bir güne alınır. 7 günden uzak tarihlerde katalog fiyatı, 7 gün içinde hava ve doluluğa göre güncel fiyat geçerlidir.",
     duration: "60 dk",
     durationMinutes: 60,
     capacity: { min: 16, max: 20 },
@@ -76,7 +76,7 @@ export const BALLOON_PACKAGES: BalloonPackage[] = [
     name: "Deluxe Balon Uçuşu",
     shortDescription: "Küçük sepet (max 16 kişi), 60 dakika lüks deneyim + karton sertifika.",
     longDescription:
-      "Premium balon deneyimi. Küçük sepet (max 16 yolcu) ile daha ferah 60 dakika uçuş, karton uçuş sertifikası, gourmet kahvaltı ve VIP transfer. En seçkin operatörlerle çalışılır.",
+      "Daha az yolcu, daha çok yer ve daha özenli servis isteyenler için. Deluxe uçuş da yaklaşık 60 dakika sürer ama sepet en fazla 16 kişiliktir; herkes kenarda, manzaraya dönük durur. Otelden VIP transferle alınır, kalkış alanında gourmet kahvaltı sunulur, inişte premium şampanya açılır; karton uçuş sertifikası, profesyonel fotoğraf çekimi ve 40 milyon Euro yolcu sigortası dahildir. Bu paketi Royal Balloon, Butterfly Balloons ve Voyager Balloons ile uçuruyoruz. 6 yaş altı çocuklar, hamileler ve ciddi kalp/sağlık sorunu olanlar uçamaz. Kalkış kararı her sabah sivil havacılık otoritesi tarafından verilir; hava nedeniyle iptalde ödemenin tamamı iade edilir veya uçuş başka bir güne alınır. Balayı, doğum günü ve küçük gruplar için Standart ile Romantik Özel arasındaki en dengeli seçenektir.",
     duration: "60 dk",
     durationMinutes: 60,
     capacity: { min: 8, max: 16 },
@@ -112,7 +112,7 @@ export const BALLOON_PACKAGES: BalloonPackage[] = [
     name: "Romantik Özel Balon",
     shortDescription: "Sadece çiftler için özel sepet. Evlilik teklifi, balayı, yıldönümü. Özel fiyat sorunuz.",
     longDescription:
-      "Sadece 2 kişilik özel sepet veya küçük grup (max 8). Hayatın en özel anları için tasarlandı. Özel dekor, sürpriz organizasyon, fotoğrafçı, premium şampanya, kişiselleştirilmiş sertifika. Her organizasyon kişiye özel hazırlandığı için fiyatlandırma teklife göre yapılır — bizimle iletişime geçin.",
+      "Sepette yalnızca siz ve pilotunuz: evlilik teklifi, balayı, yıl dönümü veya sürpriz kutlama için tasarlanmış özel uçuş. İki kişilik özel sepet ya da en fazla 8 kişilik küçük grup seçilebilir; uçuş 60-90 dakika sürer. Otelden VIP transfer, kalkış alanında gourmet kahvaltı, inişte premium şampanya, kişiselleştirilmiş sertifika, profesyonel fotoğrafçı, isteğe göre özel dekor ve sürpriz organizasyon ile 40 milyon Euro yolcu sigortası dahildir. Bu paketi Royal Balloon ve Butterfly Balloons ile düzenliyoruz. Her organizasyon kişiye özel hazırlandığı için fiyat teklif üzerine verilir; tarihinizi ve isteğinizi WhatsApp'tan yazın, aynı gün teklif alın. 6 yaş altı çocuklar, hamileler ve ciddi kalp/sağlık sorunu olanlar uçamaz. Kalkış kararı her sabah sivil havacılık otoritesi tarafından verilir; hava nedeniyle iptalde ödemenin tamamı iade edilir veya uçuş konaklamanızdaki başka bir güne alınır.",
     duration: "60-90 dk",
     durationMinutes: 75,
     capacity: { min: 2, max: 8 },
