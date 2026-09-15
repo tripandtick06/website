@@ -8,6 +8,7 @@ import { TRANSFERS } from "@/data/services/catalog";
 import { tServiceList } from "@/lib/i18n/localizeData";
 import { getPageFaqs } from "@/data/i18n/pageFaqs";
 import { TransferlerContent } from "./TransferlerContent";
+import { routing } from "@/i18n/routing";
 
 // Static prerender (2026-09-16): this page reads only dictionaries/catalog —
 // no headers()/cookies()/searchParams — so it is built once per locale and
@@ -19,6 +20,13 @@ export const dynamic = "force-static";
 // and the Cloudflare build refuses it ("not configured to run with the Edge
 // Runtime"). Locales come from the layout's generateStaticParams.
 export const dynamicParams = false;
+// Own generateStaticParams (not only the layout's): next-on-pages only treats
+// a route as prerendered when the page itself enumerates its params — the
+// detail pages already do this; without it the Cloudflare build fails with
+// "not configured to run with the Edge Runtime".
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 export async function generateMetadata({
   params,
