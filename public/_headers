@@ -27,5 +27,9 @@
 /*.png
   Cache-Control: public, max-age=31536000, immutable
 
+/videos/*
+  Cache-Control: public, max-age=2592000
+  Accept-Ranges: bytes
+
 /_next/static/*
   Cache-Control: public, max-age=31536000, immutable

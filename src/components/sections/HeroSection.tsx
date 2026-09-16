@@ -3,22 +3,16 @@
 import NextImage from "next/image";
 import { MapPin, ShieldCheck, Wallet, Users } from "lucide-react";
 import { useT } from "@/lib/i18n/I18nProvider";
+import { HeroVideo } from "@/components/media/HeroVideo";
 
 export function HeroSection() {
   const t = useT();
 
   return (
     <section className="relative min-h-[100dvh] flex flex-col items-center justify-center bg-[#0F1B4D] overflow-hidden px-4 pt-[100px] pb-16">
-      {/* Arka plan: etkileyici Kapadokya balon fotosu + koyu gradient overlay (metin okunur) */}
-      <NextImage
-        src="/images/hero/homepage.jpg"
-        alt="Kapadokya sıcak hava balonları gün doğumu"
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover"
-      />
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0F1B4D]/85 via-primary/75 to-[#2A1A4A]/85" />
+      {/* Arka plan: poster foto (LCP) + uzerine sessiz loop video + koyu gradient overlay (metin okunur) */}
+      <HeroVideo alt="Kapadokya sıcak hava balonları gün doğumu" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0F1B4D]/75 via-primary/60 to-[#2A1A4A]/75" />
 
       {/* Badge */}
       <div className="relative inline-flex items-center gap-2 bg-accent/15 border border-accent/25 rounded-full px-5 py-2 mb-7">

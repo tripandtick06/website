@@ -14,6 +14,8 @@ import { useUiText } from "@/lib/i18n/uiText";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { LivePrice } from "@/components/pricing/LivePrice";
 import type { ServiceItem } from "@/data/services/catalog";
+import { getServiceVideo } from "@/data/services/videos";
+import { ServiceVideo } from "@/components/media/ServiceVideo";
 
 export interface ServiceDetailContentProps {
   /** Lokalize edilmis ServiceItem. */
@@ -39,6 +41,7 @@ export function ServiceDetailContent({
   const ui = useUiText();
   const reserveHref = `/rezervasyon/${item.slug}`;
   const showPrice = !item.priceOnRequest;
+  const video = getServiceVideo(item.slug);
 
   return (
     <>
@@ -51,9 +54,11 @@ export function ServiceDetailContent({
 
       <section className="section-padding bg-white">
         <div className="container-main grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-          {/* Gorsel */}
+          {/* Gorsel: video varsa (aile klibi) muted-loop video + ses dugmesi; yoksa foto */}
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-booking bg-slate-100">
-            {item.photoUrl ? (
+            {video ? (
+              <ServiceVideo video={video} alt={`${item.name} — Kapadokya`} />
+            ) : item.photoUrl ? (
               <NextImage
                 src={item.photoUrl}
                 alt={`${item.name} — Kapadokya`}
