@@ -18,6 +18,8 @@ import { LivePrice } from "@/components/pricing/LivePrice";
 import { useT, useLocale } from "@/lib/i18n/I18nProvider";
 import { tBalloon, tFaq } from "@/lib/i18n/localizeData";
 import { FAQ_ITEMS } from "@/data/faq";
+import { getServiceVideo } from "@/data/services/videos";
+import { ServiceVideo } from "@/components/media/ServiceVideo";
 import type { BalloonPackage } from "@/data/services/balloons";
 import { operatorTagline } from "@/data/services/operators";
 import type { Operator } from "@/data/services/operators";
@@ -39,6 +41,7 @@ export function BalonDetayContent({
   const s = t.page.balonlar.slug;
 
   const pkg = tBalloon(pkgRaw, locale);
+  const video = getServiceVideo(pkg.slug);
   // tFaq(locale) base FAQ_ITEMS ile ayni sira/uzunlukta; base TR question -> cevrili item map.
   const localizedFaqs = tFaq(locale);
   const faqByBaseQuestion = new Map(
@@ -62,9 +65,11 @@ export function BalonDetayContent({
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             {/* Main */}
             <div className="lg:col-span-2">
-              {/* Hero / gallery — gercek foto (pkg.images[0]); yoksa gradient + Wind fallback */}
+              {/* Hero / gallery — video (aile klibi) > gercek foto (pkg.images[0]) > gradient + Wind fallback */}
               <div className={`relative h-72 lg:h-96 rounded-2xl flex items-center justify-center mb-8 overflow-hidden ${pkg.images[0] ? "bg-slate-100" : "bg-gradient-to-br from-primary via-primary-light to-accent"}`}>
-                {pkg.images[0] ? (
+                {video ? (
+                  <ServiceVideo video={video} alt={`${pkg.name} — Kapadokya`} />
+                ) : pkg.images[0] ? (
                   <NextImage
                     src={pkg.images[0]}
                     alt={`${pkg.name} — Kapadokya`}
