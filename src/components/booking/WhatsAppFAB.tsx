@@ -28,7 +28,7 @@ function markNotified(): void {
 // Tiklama → /api/whatsapp-click → Telegram. Navigasyonu ASLA bloklamaz: sendBeacon
 // sayfa gitse de gonderir; yoksa keepalive fetch. Hata sessizce yutulur — musteri
 // WhatsApp'a her halukarda gecmeli.
-function reportClick(path: string, locale: string): void {
+export function reportClick(path: string, locale: string): void {
   if (alreadyNotified()) return;
   markNotified();
   const payload = JSON.stringify({ path, locale });
@@ -49,7 +49,7 @@ function reportClick(path: string, locale: string): void {
 }
 
 // Orijinal WhatsApp logosu (simple-icons), icon-only kullanim.
-function WhatsAppIcon({ className }: { className?: string }) {
+export function WhatsAppIcon({ className }: { className?: string }) {
   return (
     <svg
       viewBox="0 0 24 24"

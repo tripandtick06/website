@@ -20,6 +20,7 @@ import { tBalloon, tFaq } from "@/lib/i18n/localizeData";
 import { FAQ_ITEMS } from "@/data/faq";
 import { getServiceVideo } from "@/data/services/videos";
 import { ServiceVideo } from "@/components/media/ServiceVideo";
+import { WhatsAppAskLink } from "@/components/booking/WhatsAppAskLink";
 import type { BalloonPackage } from "@/data/services/balloons";
 import { operatorTagline } from "@/data/services/operators";
 import type { Operator } from "@/data/services/operators";
@@ -240,12 +241,8 @@ export function BalonDetayContent({
                 <p className="text-xs text-center text-slate-500 mb-3">
                   {s.tarih_seciminde_gunluk_doluluk}
                 </p>
-                <Link
-                  href="/iletisim"
-                  className="block text-center text-sm font-semibold text-primary hover:underline"
-                >
-                  {s.soru_sor_whatsapp_email}
-                </Link>
+                {/* Soru = tek tik WhatsApp (iletisim sayfasi ara adimi kaldirildi) */}
+                <WhatsAppAskLink className="w-full" />
 
                 <hr className="my-5 border-slate-200" />
 

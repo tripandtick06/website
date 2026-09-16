@@ -7,7 +7,8 @@
 import type { ComponentProps } from "react";
 import NextImage from "next/image";
 import { Link } from "@/i18n/routing";
-import { Clock, Check, Sparkles } from "lucide-react";
+import { Clock, Check, Star, ShieldCheck } from "lucide-react";
+import { WhatsAppAskLink } from "@/components/booking/WhatsAppAskLink";
 import { formatPrice } from "@/lib/utils";
 import { useT } from "@/lib/i18n/I18nProvider";
 import { useUiText } from "@/lib/i18n/uiText";
@@ -54,8 +55,8 @@ export function ServiceDetailContent({
 
       <section className="section-padding bg-white">
         <div className="container-main grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-          {/* Gorsel: video varsa (aile klibi) muted-loop video + ses dugmesi; yoksa foto */}
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-booking bg-slate-100">
+          {/* Gorsel: video varsa (aile klibi, 16:9) muted-loop video + ses ikonu; yoksa foto 4:3 */}
+          <div className={`relative w-full overflow-hidden rounded-booking bg-slate-100 ${video ? "aspect-video" : "aspect-[4/3]"}`}>
             {video ? (
               <ServiceVideo video={video} alt={`${item.name} — Kapadokya`} />
             ) : item.photoUrl ? (
@@ -83,30 +84,26 @@ export function ServiceDetailContent({
               {item.name}
             </h1>
 
+            {/* Sure + puan: dil-bagimsiz (sayi + yildiz), sosyal kanit tek satirda */}
             <div className="flex flex-wrap items-center gap-4 text-sm text-slate-600 mb-5">
               <span className="flex items-center gap-1">
                 <Clock className="w-4 h-4" />
                 {item.duration}
               </span>
+              {item.rating > 0 && item.reviewCount > 0 && (
+                <span className="flex items-center gap-1 font-semibold text-slate-800">
+                  <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
+                  {item.rating.toFixed(1)}
+                  <span className="font-normal text-slate-500">({item.reviewCount.toLocaleString()})</span>
+                </span>
+              )}
             </div>
 
             <p className="text-lg text-slate-700 leading-relaxed mb-6">
               {item.shortDescription}
             </p>
 
-            {item.highlights?.length > 0 && (
-              <div className="flex flex-wrap gap-2 mb-6">
-                {item.highlights.map((h) => (
-                  <span
-                    key={h}
-                    className="inline-flex items-center gap-1 bg-accent/[0.08] text-accent text-xs font-semibold px-3 py-1.5 rounded-full"
-                  >
-                    <Sparkles className="w-3.5 h-3.5" /> {h}
-                  </span>
-                ))}
-              </div>
-            )}
-
+            {/* highlights chip'leri kaldirildi: includes listesiyle ayni bilgiyi tekrarliyordu */}
             {item.includes?.length > 0 && (
               <ul className="space-y-2 mb-8">
                 {item.includes.map((inc) => (
@@ -118,7 +115,7 @@ export function ServiceDetailContent({
               </ul>
             )}
 
-            <div className="flex items-end justify-between gap-4 border-t border-slate-100 pt-5">
+            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 border-t border-slate-100 pt-5">
               <div>
                 {showPrice ? (
                   <>
@@ -146,13 +143,26 @@ export function ServiceDetailContent({
                   </div>
                 )}
               </div>
-              <Link
-                href={reserveHref as ComponentProps<typeof Link>["href"]}
-                className="btn-accent flex-shrink-0"
-              >
-                {showPrice ? ui.serviceCard.reserve : ui.serviceCard.infoForm}
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-2 flex-shrink-0">
+                <Link
+                  href={reserveHref as ComponentProps<typeof Link>["href"]}
+                  className="btn-accent text-center"
+                >
+                  {showPrice ? ui.serviceCard.reserve : ui.serviceCard.infoForm}
+                </Link>
+                <WhatsAppAskLink />
+              </div>
             </div>
+
+            {/* Karar guveni: CTA'nin hemen altinda, footer'a kadar kaydirmadan */}
+            <ul className="mt-4 flex flex-wrap gap-x-5 gap-y-1.5 text-xs text-slate-600">
+              {[t.hero_trust.refund, t.hero_trust.insurance, t.hero_trust.tursab].map((label) => (
+                <li key={label} className="flex items-center gap-1.5">
+                  <ShieldCheck className="w-4 h-4 text-success" />
+                  {label}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
