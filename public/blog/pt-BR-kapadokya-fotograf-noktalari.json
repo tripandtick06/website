@@ -19,5 +19,7 @@
   "publishedAt": "2026-05-15T00:00:00.000Z",
   "isAiGenerated": true,
   "seoScore": 90,
-  "coverImage": "/images/blog/kapadokya-fotograf-noktalari.jpg"
+  "coverImage": "/images/blog/kapadokya-fotograf-noktalari.jpg",
+  "noindex": true,
+  "noindexReason": "2026-09-19 GSC 90 gün 0 gösterim (makine çevirisi; Ağustos 2026 spam update sonrası budama)"
 }

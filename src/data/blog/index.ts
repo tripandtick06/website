@@ -295,7 +295,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-25T00:00:00.000Z",
     "seoScore": 93,
     "isAiGenerated": false,
-    "noindex": false,
+    "noindex": true,
     "coverImage": "/images/blog/heissluftballon-kappadokien-preise-buchung.jpg"
   },
   {
@@ -343,7 +343,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-25T00:00:00.000Z",
     "seoScore": 92,
     "isAiGenerated": true,
-    "noindex": false,
+    "noindex": true,
     "coverImage": "/images/blog/kapadokya-dugun-fotografciligi-rehberi.jpg"
   },
   {
@@ -417,7 +417,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 92,
     "isAiGenerated": true,
-    "noindex": false,
+    "noindex": true,
     "coverImage": "/images/blog/kapadokya-ne-zaman-gidilir.jpg"
   },
   {
@@ -1205,7 +1205,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-25T00:00:00.000Z",
     "seoScore": 93,
     "isAiGenerated": true,
-    "noindex": false,
+    "noindex": true,
     "coverImage": "/images/blog/cappadocia-winter-2026-guide.jpg"
   },
   {
@@ -1228,7 +1228,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-25T00:00:00.000Z",
     "seoScore": 93,
     "isAiGenerated": true,
-    "noindex": false,
+    "noindex": true,
     "coverImage": "/images/blog/heissluftballon-kappadokien-preise-buchung.jpg"
   },
   {
@@ -1252,7 +1252,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 90,
     "isAiGenerated": true,
-    "noindex": false,
+    "noindex": true,
     "coverImage": "/images/blog/kapadokya-aktiviteler.jpg"
   },
   {
@@ -1276,7 +1276,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-25T00:00:00.000Z",
     "seoScore": 92,
     "isAiGenerated": true,
-    "noindex": false,
+    "noindex": true,
     "coverImage": "/images/blog/kapadokya-dugun-fotografciligi-rehberi.jpg"
   },
   {
@@ -1300,7 +1300,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 90,
     "isAiGenerated": true,
-    "noindex": false,
+    "noindex": true,
     "coverImage": "/images/blog/kapadokya-fotograf-noktalari.jpg"
   },
   {
@@ -1326,7 +1326,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 91,
     "isAiGenerated": true,
-    "noindex": false,
+    "noindex": true,
     "coverImage": "/images/blog/kapadokya-istanbuldan-nasil-gidilir.jpg"
   },
   {
@@ -1374,7 +1374,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 91,
     "isAiGenerated": true,
-    "noindex": false,
+    "noindex": true,
     "coverImage": "/images/blog/kapadokya-otel-tavsiye-2026.jpg"
   },
   {
@@ -1806,7 +1806,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 92,
     "isAiGenerated": true,
-    "noindex": false,
+    "noindex": true,
     "coverImage": "/images/blog/cappadocia-hot-air-balloon-price-2026.jpg"
   },
   {
@@ -1830,7 +1830,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-25T00:00:00.000Z",
     "seoScore": 93,
     "isAiGenerated": true,
-    "noindex": false,
+    "noindex": true,
     "coverImage": "/images/blog/cappadocia-winter-2026-guide.jpg"
   },
   {
@@ -1853,7 +1853,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-25T00:00:00.000Z",
     "seoScore": 93,
     "isAiGenerated": true,
-    "noindex": false,
+    "noindex": true,
     "coverImage": "/images/blog/heissluftballon-kappadokien-preise-buchung.jpg"
   },
   {
@@ -1877,7 +1877,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 90,
     "isAiGenerated": true,
-    "noindex": false,
+    "noindex": true,
     "coverImage": "/images/blog/kapadokya-aktiviteler.jpg"
   },
   {
@@ -1925,7 +1925,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 90,
     "isAiGenerated": true,
-    "noindex": false,
+    "noindex": true,
     "coverImage": "/images/blog/kapadokya-fotograf-noktalari.jpg"
   },
   {
@@ -1975,7 +1975,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 92,
     "isAiGenerated": true,
-    "noindex": false,
+    "noindex": true,
     "coverImage": "/images/blog/kapadokya-ne-zaman-gidilir.jpg"
   },
   {
@@ -2022,7 +2022,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 92,
     "isAiGenerated": true,
-    "noindex": false,
+    "noindex": true,
     "coverImage": "/images/blog/cappadocia-hot-air-balloon-price-2026.jpg"
   },
   {
@@ -2046,7 +2046,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-25T00:00:00.000Z",
     "seoScore": 93,
     "isAiGenerated": true,
-    "noindex": false,
+    "noindex": true,
     "coverImage": "/images/blog/cappadocia-winter-2026-guide.jpg"
   },
   {
@@ -2069,7 +2069,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-25T00:00:00.000Z",
     "seoScore": 93,
     "isAiGenerated": true,
-    "noindex": false,
+    "noindex": true,
     "coverImage": "/images/blog/heissluftballon-kappadokien-preise-buchung.jpg"
   },
   {
@@ -2093,7 +2093,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 90,
     "isAiGenerated": true,
-    "noindex": false,
+    "noindex": true,
     "coverImage": "/images/blog/kapadokya-aktiviteler.jpg"
   },
   {
@@ -2117,7 +2117,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-25T00:00:00.000Z",
     "seoScore": 92,
     "isAiGenerated": true,
-    "noindex": false,
+    "noindex": true,
     "coverImage": "/images/blog/kapadokya-dugun-fotografciligi-rehberi.jpg"
   },
   {
@@ -2191,7 +2191,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 92,
     "isAiGenerated": true,
-    "noindex": false,
+    "noindex": true,
     "coverImage": "/images/blog/kapadokya-ne-zaman-gidilir.jpg"
   },
   {
@@ -2431,7 +2431,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 92,
     "isAiGenerated": true,
-    "noindex": false,
+    "noindex": true,
     "coverImage": "/images/blog/cappadocia-hot-air-balloon-price-2026.jpg"
   },
   {
@@ -2455,7 +2455,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-25T00:00:00.000Z",
     "seoScore": 93,
     "isAiGenerated": true,
-    "noindex": false,
+    "noindex": true,
     "coverImage": "/images/blog/cappadocia-winter-2026-guide.jpg"
   },
   {
@@ -2478,7 +2478,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-25T00:00:00.000Z",
     "seoScore": 93,
     "isAiGenerated": true,
-    "noindex": false,
+    "noindex": true,
     "coverImage": "/images/blog/heissluftballon-kappadokien-preise-buchung.jpg"
   },
   {
@@ -2502,7 +2502,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 90,
     "isAiGenerated": true,
-    "noindex": false,
+    "noindex": true,
     "coverImage": "/images/blog/kapadokya-aktiviteler.jpg"
   },
   {
@@ -2526,7 +2526,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-25T00:00:00.000Z",
     "seoScore": 92,
     "isAiGenerated": true,
-    "noindex": false,
+    "noindex": true,
     "coverImage": "/images/blog/kapadokya-dugun-fotografciligi-rehberi.jpg"
   },
   {
@@ -2550,7 +2550,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 90,
     "isAiGenerated": true,
-    "noindex": false,
+    "noindex": true,
     "coverImage": "/images/blog/kapadokya-fotograf-noktalari.jpg"
   },
   {
@@ -2624,7 +2624,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "publishedAt": "2026-05-15T00:00:00.000Z",
     "seoScore": 91,
     "isAiGenerated": true,
-    "noindex": false,
+    "noindex": true,
     "coverImage": "/images/blog/kapadokya-otel-tavsiye-2026.jpg"
   },
   {
