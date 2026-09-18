@@ -2,6 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import { z } from "zod";
 import { notifyLead } from "@/lib/telegram";
 import { sitePageUrl, WHATSAPP_NUMBER_DISPLAY } from "@/lib/whatsapp";
+import { deviceOf, recordWaLead } from "@/lib/analytics/events";
 
 // WhatsApp FAB tiklama bildirimi → Telegram (Murat + owner).
 // Konusmanin kendisi Murat'in telefonunda kalir (wa.me); burasi sadece "biri WhatsApp'a
@@ -15,6 +16,8 @@ export const dynamic = "force-dynamic";
 const clickSchema = z.object({
   path: z.string().min(1).max(400),
   locale: z.string().max(10).optional(),
+  sid: z.string().regex(/^[a-z0-9]{8,32}$/).optional(),
+  product: z.string().max(80).optional(),
   _hp: z.string().optional(),
 });
 
@@ -91,6 +94,18 @@ export async function POST(req: NextRequest) {
   if (!telegram.ok) {
     console.info("[api/whatsapp-click] Telegram iletilemedi", ref, JSON.stringify(telegram.errors ?? []));
   }
+
+  // Atıf döngüsü: lead'i analytics DB'ye yaz (Murat /admin/analiz'de sonucu işaretler).
+  // Telegram'dan bağımsız; başarısızlık sessiz (müşteri akışını etkilemez).
+  await recordWaLead({
+    ref,
+    path: parsed.data.path,
+    locale: parsed.data.locale ?? null,
+    country: country ?? null,
+    device: deviceOf(ua),
+    product: parsed.data.product ?? null,
+    sid: parsed.data.sid ?? null,
+  });
 
   return NextResponse.json({ ok: true, ref, notified: { telegram: telegram.ok } });
 }

@@ -272,3 +272,24 @@ drop function if exists public.analytics_prune(int);
 grant execute on function public.analytics_ingest(text, jsonb)       to anon;
 grant execute on function public.analytics_summary_auth(text, int)   to anon;
 grant execute on function public.analytics_prune_auth(text, int)     to anon;
+-- ---------------------------------------------------------------------------
+-- WhatsApp lead'leri + satış sonucu (atıf döngüsü, 2026-09-19). Analytics projesine
+-- uygulandı (migration "wa_leads_outcomes"). Yazan: /api/whatsapp-click → analytics_wa_lead;
+-- işaretleyen: /admin/analiz → analytics_wa_outcome; okuyan: analytics_wa_list.
+create table if not exists public.wa_leads (
+  ref        text primary key,                -- Telegram'daki WA-XXXX
+  ts         timestamptz not null default now(),
+  path       text, locale text, country text, device text, product text,
+  sid        text,                            -- events.sid ile bağ (aynı oturum)
+  ref_host   text,
+  outcome    text check (outcome in ('sold','not_sold','no_reply','spam')),
+  source     text,                            -- Murat'ın müşteriden duyduğu kaynak
+  amount_eur numeric, note text, marked_at timestamptz, marked_by text
+);
+create index if not exists wa_leads_ts_idx on public.wa_leads (ts desc);
+alter table public.wa_leads enable row level security;
+drop policy if exists "wa_leads no public access" on public.wa_leads;
+create policy "wa_leads no public access" on public.wa_leads for all to anon, authenticated using (false) with check (false);
+-- Fonksiyonlar: analytics_wa_lead(p_token, p_row jsonb) · analytics_wa_outcome(p_token, p_ref, p_outcome,
+-- p_source, p_amount, p_note, p_by) · analytics_wa_list(p_token, p_days) — hepsi token kontrollü,
+-- security definer, yalnız anon'a execute. Gövdeleri analytics projesindeki migration'da.

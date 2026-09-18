@@ -31,7 +31,16 @@ function markNotified(): void {
 export function reportClick(path: string, locale: string): void {
   if (alreadyNotified()) return;
   markNotified();
-  const payload = JSON.stringify({ path, locale });
+  // Atıf döngüsü: aynı oturumun analytics sid'i + sayfadaki ürün → wa_leads satırı
+  // /admin/analiz'de "satıldı/kaynak" işaretlenebilsin. Yoksa boş gider, akış değişmez.
+  let sid: string | undefined;
+  try {
+    sid = window.sessionStorage.getItem("tt:sid") ?? undefined;
+  } catch {
+    /* sessionStorage kapalı */
+  }
+  const product = document.querySelector<HTMLElement>("[data-tt-product]")?.dataset.ttProduct;
+  const payload = JSON.stringify({ path, locale, sid, product });
   try {
     if (typeof navigator !== "undefined" && typeof navigator.sendBeacon === "function") {
       const blob = new Blob([payload], { type: "application/json" });

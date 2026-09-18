@@ -8,22 +8,15 @@
 // User verbatim: "devam et"
 
 import { NextResponse, type NextRequest } from "next/server";
+import { isAdminRequest } from "@/lib/admin-auth";
 import { z } from "zod";
 import { deleteReview, setReviewStatus } from "@/lib/reviews-store";
 
 export const runtime = "edge";
 export const dynamic = "force-dynamic";
 
-function isAdmin(req: NextRequest): boolean {
-  const token = req.headers.get("x-admin-token");
-  if (!token) return false;
-  const envToken = process.env.ADMIN_TOKEN;
-  if (envToken && token === envToken) return true;
-  if (process.env.NODE_ENV !== "production" || !envToken) {
-    return token.startsWith("demo-");
-  }
-  return false;
-}
+// Auth: src/lib/admin-auth.ts isAdminRequest (cookie veya ADMIN_API_TOKEN; prod'da demo- yok).
+const isAdmin = (req: NextRequest): boolean => isAdminRequest(req);
 
 const patchSchema = z.object({
   id: z.string().min(2).max(60),

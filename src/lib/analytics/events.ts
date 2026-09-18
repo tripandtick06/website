@@ -148,3 +148,62 @@ export async function analyticsPrune(env?: AnalyticsEnv): Promise<void> {
   if (!cfg) return;
   await rpc(cfg, "analytics_prune_auth", { p_token: cfg.token, p_keep_days: 90 }).catch(() => {});
 }
+
+// ---- WhatsApp lead atıf döngüsü (wa_leads) -------------------------------------
+// /api/whatsapp-click her bildirimi Telegram'a yolladıktan sonra buraya da yazar; Murat
+// /admin/analiz'de sonucu (satıldı/satılmadı/cevap yok/spam) + müşterinin söylediği
+// kaynağı işaretler → "ziyaret → WhatsApp → satış" zinciri kapanır.
+
+export interface WaLeadRow {
+  ref: string;
+  path: string;
+  locale?: string | null;
+  country?: string | null;
+  device?: string | null;
+  product?: string | null;
+  sid?: string | null;
+  ref_host?: string | null;
+}
+
+export async function recordWaLead(row: WaLeadRow, env?: AnalyticsEnv): Promise<boolean> {
+  const cfg = envOf(env);
+  if (!cfg) return false;
+  try {
+    const res = await rpc(cfg, "analytics_wa_lead", { p_token: cfg.token, p_row: row });
+    if (!res.ok) console.error("[analytics] wa_lead hata", res.status);
+    return res.ok;
+  } catch (err) {
+    console.error("[analytics] wa_lead fetch error (non-fatal)", err);
+    return false;
+  }
+}
+
+export const WA_OUTCOMES = ["sold", "not_sold", "no_reply", "spam"] as const;
+export type WaOutcome = (typeof WA_OUTCOMES)[number];
+
+export async function waLeadList(days: number, env?: AnalyticsEnv): Promise<unknown | null> {
+  const cfg = envOf(env);
+  if (!cfg) return null;
+  const res = await rpc(cfg, "analytics_wa_list", { p_token: cfg.token, p_days: days });
+  if (!res.ok) throw new Error(`analytics_wa_list ${res.status}`);
+  return res.json();
+}
+
+export async function waLeadOutcome(
+  input: { ref: string; outcome: WaOutcome; source?: string | null; amountEur?: number | null; note?: string | null; by?: string | null },
+  env?: AnalyticsEnv,
+): Promise<boolean> {
+  const cfg = envOf(env);
+  if (!cfg) return false;
+  const res = await rpc(cfg, "analytics_wa_outcome", {
+    p_token: cfg.token,
+    p_ref: input.ref,
+    p_outcome: input.outcome,
+    p_source: input.source ?? null,
+    p_amount: input.amountEur ?? null,
+    p_note: input.note ?? null,
+    p_by: input.by ?? null,
+  });
+  if (!res.ok) throw new Error(`analytics_wa_outcome ${res.status}`);
+  return (await res.json()) === true;
+}

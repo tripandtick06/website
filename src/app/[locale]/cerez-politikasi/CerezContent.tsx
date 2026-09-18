@@ -151,6 +151,8 @@ export function CerezContent() {
             <li>{cp.cloudflare_guvenlik_performans}</li>
             <li>{cp.brevo_posta_acma_takibi}</li>
           </ul>
+          {/* Çerezsiz birinci-taraf ölçüm beyanı (2026-09-19, /api/event) */}
+          <p className="text-slate-700 leading-relaxed mb-6">{cp.birinci_taraf_olcum}</p>
 
           <h2 className="text-2xl font-extrabold text-slate-900 mt-10 mb-3">
             {cp.degisiklikler}
