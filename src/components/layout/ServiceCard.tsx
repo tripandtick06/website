@@ -4,11 +4,13 @@ import type { ComponentProps } from "react";
 import NextImage from "next/image";
 import { Link } from "@/i18n/routing";
 import { Clock, Check, Hotel, MountainSnow, TreePine, Package, Car, Wind } from "lucide-react";
-import { formatPrice } from "@/lib/utils";
 import { useT } from "@/lib/i18n/I18nProvider";
 import { useUiText } from "@/lib/i18n/uiText";
-import { LivePrice } from "@/components/pricing/LivePrice";
+import { FromPrice } from "@/components/pricing/FromPrice";
+import { WhatsAppAskLink } from "@/components/booking/WhatsAppAskLink";
+import { HoverVideo } from "@/components/media/HoverVideo";
 import type { ServiceItem } from "@/data/services/catalog";
+import { getServiceVideo } from "@/data/services/videos";
 
 const CATEGORY_ICON: Record<ServiceItem["category"], typeof Wind> = {
   activity: MountainSnow,
@@ -86,20 +88,27 @@ export function ServiceCard({ item, ctaHref }: ServiceCardProps) {
   ) as ComponentProps<typeof Link>["href"];
   const ctaLabel = isHotelInfoOnly
     ? ui.serviceCard.infoForm
-    : ui.serviceCard.reserve;
+    : item.priceOnRequest
+      ? ui.serviceCard.askPrice
+      : ui.serviceCard.reserve;
+  // Hover'da aile klibi oynar (otelde video yok — AI video gercek oteli yaniltir).
+  const video = getServiceVideo(item.slug);
 
   return (
     <article className="group/card overflow-hidden flex flex-col h-full rounded-booking border border-slate-200 bg-white shadow-booking-card transition-[transform,box-shadow] duration-200 ease-out-strong hover:-translate-y-0.5 hover:shadow-booking-hover">
-      {/* Hero — photoUrl varsa Next/Image, yoksa gradient + emoji/icon fallback */}
+      {/* Hero — photoUrl varsa Next/Image (+ hover video), yoksa gradient + emoji/icon fallback */}
       <div className={`relative h-48 ${item.photoUrl ? "bg-slate-100" : `bg-gradient-to-br ${gradient} flex items-center justify-center`}`}>
         {item.photoUrl ? (
-          <NextImage
-            src={item.photoUrl}
-            alt={`${item.name} — Kapadokya`}
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-cover transition-transform duration-[900ms] ease-out-strong group-hover/card:scale-105"
-          />
+          <>
+            <NextImage
+              src={item.photoUrl}
+              alt={`${item.name} — Kapadokya`}
+              fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              className="object-cover transition-transform duration-[900ms] ease-out-strong group-hover/card:scale-105"
+            />
+            {video && <HoverVideo src={video.src} />}
+          </>
         ) : emoji ? (
           <span className="text-7xl opacity-90 drop-shadow-lg" aria-hidden="true">{emoji}</span>
         ) : (
@@ -136,39 +145,34 @@ export function ServiceCard({ item, ctaHref }: ServiceCardProps) {
           ))}
         </ul>
 
-        <div className="flex items-end justify-between gap-3 mt-auto pt-3 border-t border-slate-100">
-          <div>
+        {/* Fiyat satiri: net fiyat yok — baslangic fiyati; her fiyatin yaninda WhatsApp (Murat) */}
+        <div className="mt-auto pt-3 border-t border-slate-100">
+          <div className="mb-3 min-h-[2.25rem]">
             {item.priceOnRequest ? (
               <>
                 <div className="text-lg font-extrabold text-primary leading-tight">
-                  {t.component.layout.service_card.bilgi_al}
+                  {isHotelInfoOnly ? t.component.layout.service_card.bilgi_al : ui.serviceCard.askPrice}
                 </div>
-                <div className="text-[10px] text-slate-500 mt-1">{t.component.layout.service_card.telefon_posta}</div>
+                {isHotelInfoOnly && (
+                  <div className="text-[10px] text-slate-500 mt-1">{t.component.layout.service_card.telefon_posta}</div>
+                )}
               </>
             ) : (
               <>
-                {item.marketPrice && item.marketPrice > item.adultPrice && (
-                  <div className="text-xs text-slate-400 line-through leading-none mb-0.5">
-                    {formatPrice(item.marketPrice, item.currency)}
-                  </div>
-                )}
-                <div className="text-2xl font-extrabold text-primary leading-none">
-                  <LivePrice
-                    slug={item.slug}
-                    fallback={item.adultPrice}
-                    format={(n) => formatPrice(n, item.currency)}
-                  />
-                </div>
+                <FromPrice slug={item.slug} price={item.adultPrice} currency={item.currency} priceClassName="text-2xl" labelClassName="text-xs" />
                 <div className="text-[10px] text-slate-500 mt-1">{item.priceUnit === "couple" ? ui.serviceCard.perCouple : t.component.layout.service_card.kisi_basi}</div>
               </>
             )}
           </div>
-          <Link
-            href={href}
-            className="btn-accent text-sm !py-2 !px-4 flex-shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-booking/[0.45] focus-visible:ring-offset-1"
-          >
-            {ctaLabel}
-          </Link>
+          <div className="flex items-center gap-2">
+            <Link
+              href={href}
+              className="btn-accent text-sm !py-2 !px-4 flex-1 text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-booking/[0.45] focus-visible:ring-offset-1"
+            >
+              {ctaLabel}
+            </Link>
+            <WhatsAppAskLink compact subject={item.name} className="flex-shrink-0" />
+          </div>
         </div>
       </div>
     </article>

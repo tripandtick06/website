@@ -9,11 +9,10 @@ import NextImage from "next/image";
 import { Link } from "@/i18n/routing";
 import { Clock, Check, Star, ShieldCheck } from "lucide-react";
 import { WhatsAppAskLink } from "@/components/booking/WhatsAppAskLink";
-import { formatPrice } from "@/lib/utils";
 import { useT } from "@/lib/i18n/I18nProvider";
 import { useUiText } from "@/lib/i18n/uiText";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
-import { LivePrice } from "@/components/pricing/LivePrice";
+import { FromPrice } from "@/components/pricing/FromPrice";
 import type { ServiceItem } from "@/data/services/catalog";
 import { getServiceVideo } from "@/data/services/videos";
 import { ServiceVideo } from "@/components/media/ServiceVideo";
@@ -119,18 +118,8 @@ export function ServiceDetailContent({
               <div>
                 {showPrice ? (
                   <>
-                    {item.marketPrice && item.marketPrice > item.adultPrice && (
-                      <div className="text-sm text-slate-400 line-through">
-                        {formatPrice(item.marketPrice, item.currency)}
-                      </div>
-                    )}
-                    <div className="text-3xl font-extrabold text-primary leading-none">
-                      <LivePrice
-                        slug={item.slug}
-                        fallback={item.adultPrice}
-                        format={(n) => formatPrice(n, item.currency)}
-                      />
-                    </div>
+                    {/* Net fiyat yok — baslangic fiyati (guncel fiyat WhatsApp'tan) */}
+                    <FromPrice slug={item.slug} price={item.adultPrice} currency={item.currency} priceClassName="text-3xl" labelClassName="text-sm" />
                     <div className="text-xs text-slate-500 mt-1">
                       {item.priceUnit === "couple"
                         ? ui.serviceCard.perCouple
@@ -139,7 +128,7 @@ export function ServiceDetailContent({
                   </>
                 ) : (
                   <div className="text-2xl font-extrabold text-primary">
-                    {t.component.layout.service_card.bilgi_al}
+                    {item.category === "hotel" ? t.component.layout.service_card.bilgi_al : ui.serviceCard.askPrice}
                   </div>
                 )}
               </div>
@@ -150,7 +139,7 @@ export function ServiceDetailContent({
                 >
                   {showPrice ? ui.serviceCard.reserve : ui.serviceCard.infoForm}
                 </Link>
-                <WhatsAppAskLink />
+                <WhatsAppAskLink subject={item.name} />
               </div>
             </div>
 

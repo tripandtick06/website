@@ -62,27 +62,15 @@ const STANDARD_TR =
   "Trip and Tick üzerinden bu operatörle Standart Balon Uçuşu rezervasyonu " +
   "yapabilirsiniz: yaklaşık 60 dakikalık uçuş, 16-20 kişilik sepet, uçuş öncesi " +
   "hafif kahvaltı, iniş sonrası şampanyalı kutlama, uçuş sertifikası ve madalya, " +
-  "40 milyon Euro yolcu sigortası dahildir. Güncel fiyat aşağıdaki paket kartında " +
-  "görünür; 7 gün içindeki tarihlerde fiyat hava ve doluluğa göre günlük değişebilir.";
+  "40 milyon Euro yolcu sigortası dahildir. Fiyatlar 100 €'dan başlar; tarihinize " +
+  "göre güncel fiyatı WhatsApp'tan anında öğrenebilirsiniz.";
 
 const STANDARD_EN =
   "Through Trip and Tick you can book the Standard Balloon Flight with this " +
   "operator: about 60 minutes in the air, 16-20 passenger basket, light " +
   "pre-flight breakfast, champagne toast after landing, flight certificate and " +
-  "medal, and EUR 40M passenger insurance. The live price is shown on the package " +
-  "card below; for dates within 7 days it can change daily with weather and demand.";
-
-const DELUXE_TR =
-  "Trip and Tick üzerinden bu operatörle Deluxe Balon Uçuşu rezervasyonu " +
-  "yapabilirsiniz: en fazla 16 yolculuk daha küçük sepet, yaklaşık 60 dakikalık uçuş, " +
-  "gourmet kahvaltı, VIP transfer, şampanya, sertifika ve sigorta dahil. Güncel fiyat " +
-  "aşağıdaki paket kartındadır.";
-
-const DELUXE_EN =
-  "Through Trip and Tick you can book the Deluxe Balloon Flight with this " +
-  "operator: a smaller basket (max 16 passengers), about 60 minutes in the air, " +
-  "gourmet breakfast, VIP transfer, champagne, certificate and insurance included. " +
-  "The live price is on the package card below.";
+  "medal, and EUR 40M passenger insurance. Prices start from EUR 100; the current " +
+  "price for your date is confirmed on WhatsApp.";
 
 const ROMANTIC_TR =
   "Ayrıca Romantik Özel Balon paketi (yalnızca iki kişilik özel sepet, evlilik " +
@@ -96,13 +84,13 @@ const ROMANTIC_EN =
 const NO_PACKAGE_TR =
   "Trip and Tick şu anda bu operatörle satışta olan bir paket sunmuyor; sayfayı " +
   "operatörü arayan ziyaretçiler için bilgi amaçlı tutuyoruz. Aynı gün doğumu " +
-  "uçuşunu Standart veya Deluxe paketlerimizle, anlaşmalı diğer operatörlerle " +
+  "uçuşunu Standart paketimizle, anlaşmalı diğer operatörlerle " +
   "rezerve edebilirsiniz.";
 
 const NO_PACKAGE_EN =
   "Trip and Tick does not currently sell a package with this operator; this page " +
   "is kept for visitors looking them up. You can book the same sunrise flight " +
-  "with our Standard or Deluxe packages through our partner operators.";
+  "with our Standard package through our partner operators.";
 
 const introTr = (name: string) =>
   `${name}, Kapadokya'da gün doğumu sıcak hava balonu uçuşları düzenleyen operatörlerden biridir.`;
@@ -151,10 +139,10 @@ export const OPERATORS: Operator[] = [
     id: "butterfly",
     name: "Butterfly Balloons",
     aliases: ["Butterfly Balon", "Butterfly Balloons Göreme"],
-    tagline: "Standart, Deluxe ve Romantik Özel uçuşlar — Trip and Tick üzerinden.",
-    taglineEn: "Standard, Deluxe and Romantic Private flights — through Trip and Tick.",
-    description: `${introTr("Butterfly Balloons")} ${STANDARD_TR} ${DELUXE_TR} ${ROMANTIC_TR} ${FLIGHT_FACTS_TR}${OWN_TR}`,
-    descriptionEn: `${introEn("Butterfly Balloons")} ${STANDARD_EN} ${DELUXE_EN} ${ROMANTIC_EN} ${FLIGHT_FACTS_EN}${OWN_EN}`,
+    tagline: "Standart ve Romantik Özel uçuşlar — Trip and Tick üzerinden.",
+    taglineEn: "Standard and Romantic Private flights — through Trip and Tick.",
+    description: `${introTr("Butterfly Balloons")} ${STANDARD_TR} ${ROMANTIC_TR} ${FLIGHT_FACTS_TR}${OWN_TR}`,
+    descriptionEn: `${introEn("Butterfly Balloons")} ${STANDARD_EN} ${ROMANTIC_EN} ${FLIGHT_FACTS_EN}${OWN_EN}`,
     website: "https://www.butterflyballoons.com",
     verifiedAt: "2026-09-15",
   },
@@ -193,10 +181,10 @@ export const OPERATORS: Operator[] = [
     id: "voyager",
     name: "Voyager Balloons",
     aliases: ["Voyager Balon", "Cappadocia Voyager Balloons"],
-    tagline: "Deluxe Balon Uçuşu — Trip and Tick üzerinden rezervasyon.",
-    taglineEn: "Deluxe Balloon Flight — bookable through Trip and Tick.",
-    description: `${introTr("Voyager Balloons")} ${DELUXE_TR} ${FLIGHT_FACTS_TR}${OWN_TR}`,
-    descriptionEn: `${introEn("Voyager Balloons")} ${DELUXE_EN} ${FLIGHT_FACTS_EN}${OWN_EN}`,
+    tagline: "Kapadokya balon operatörü — bilgi sayfası.",
+    taglineEn: "Cappadocia balloon operator — information page.",
+    description: `${introTr("Voyager Balloons")} ${NO_PACKAGE_TR} ${FLIGHT_FACTS_TR}${OWN_TR}`,
+    descriptionEn: `${introEn("Voyager Balloons")} ${NO_PACKAGE_EN} ${FLIGHT_FACTS_EN}${OWN_EN}`,
     website: "https://voyagerballoons.com",
     verifiedAt: "2026-09-15",
   },
@@ -213,10 +201,10 @@ export const OPERATORS: Operator[] = [
     id: "royal",
     name: "Royal Balloon",
     aliases: ["Royal Balon", "Royal Balloon Cappadocia"],
-    tagline: "Deluxe ve Romantik Özel uçuşlar — Trip and Tick üzerinden.",
-    taglineEn: "Deluxe and Romantic Private flights — through Trip and Tick.",
-    description: `${introTr("Royal Balloon")} ${DELUXE_TR} ${ROMANTIC_TR} ${FLIGHT_FACTS_TR}${OWN_TR}`,
-    descriptionEn: `${introEn("Royal Balloon")} ${DELUXE_EN} ${ROMANTIC_EN} ${FLIGHT_FACTS_EN}${OWN_EN}`,
+    tagline: "Romantik Özel uçuşlar — Trip and Tick üzerinden.",
+    taglineEn: "Romantic Private flights — through Trip and Tick.",
+    description: `${introTr("Royal Balloon")} ${ROMANTIC_TR} ${FLIGHT_FACTS_TR}${OWN_TR}`,
+    descriptionEn: `${introEn("Royal Balloon")} ${ROMANTIC_EN} ${FLIGHT_FACTS_EN}${OWN_EN}`,
     website: "https://royalballoon.com",
     verifiedAt: "2026-09-15",
   },

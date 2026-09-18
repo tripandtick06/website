@@ -19,24 +19,9 @@
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
     </image:image>
     <image:image>
-      <image:loc>https://tripandtick.com/images/balloons/deluxe.svg</image:loc>
-      <image:caption>Deluxe Balon Uçuşu - Kapadokya balon paketi</image:caption>
-      <image:title>Deluxe Balon Uçuşu</image:title>
-      <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
-    </image:image>
-    <image:image>
       <image:loc>https://tripandtick.com/images/balloons/romantic.svg</image:loc>
       <image:caption>Romantik Özel Balon - Kapadokya balon paketi</image:caption>
       <image:title>Romantik Özel Balon</image:title>
-      <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://tripandtick.com/tr/balonlar/deluxe-balon-ucusu</loc>
-    <image:image>
-      <image:loc>https://tripandtick.com/images/balloons/deluxe-balon-ucusu.jpg</image:loc>
-      <image:caption>Deluxe Balon Uçuşu - Kapadokya sicak hava balon turu - Küçük sepet (max 16 kişi), 60 dakika lüks deneyim + karton sertifika.</image:caption>
-      <image:title>Deluxe Balon Uçuşu | Kapadokya balon turu</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
     </image:image>
   </url>
@@ -67,7 +52,7 @@
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
     </image:image>
     <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
+      <image:loc>https://tripandtick.com/images/hotels/magara-otel-urgup-aile.jpg</image:loc>
       <image:caption>Mağara Aile Süit (Ürgüp) - Kapadokya konaklama</image:caption>
       <image:title>Mağara Aile Süit (Ürgüp)</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
@@ -76,6 +61,18 @@
       <image:loc>https://tripandtick.com/images/hotels/magara-otel-goreme-honeymoon.jpg</image:loc>
       <image:caption>Honeymoon Mağara (Göreme) - Kapadokya konaklama</image:caption>
       <image:title>Honeymoon Mağara (Göreme)</image:title>
+      <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://tripandtick.com/images/hotels/resort-avanos-spa.jpg</image:loc>
+      <image:caption>Spa Resort (Avanos) - Kapadokya konaklama</image:caption>
+      <image:title>Spa Resort (Avanos)</image:title>
+      <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://tripandtick.com/images/hotels/resort-nevsehir-deluxe.jpg</image:loc>
+      <image:caption>Deluxe Resort (Nevşehir) - Kapadokya konaklama</image:caption>
+      <image:title>Deluxe Resort (Nevşehir)</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
     </image:image>
     <image:image>
@@ -91,6 +88,30 @@
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
     </image:image>
     <image:image>
+      <image:loc>https://tripandtick.com/images/hotels/magara-otel-urgup-king.jpg</image:loc>
+      <image:caption>Mağara King Oda (Ürgüp) - Kapadokya konaklama</image:caption>
+      <image:title>Mağara King Oda (Ürgüp)</image:title>
+      <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://tripandtick.com/images/hotels/magara-otel-urgup-cave.jpg</image:loc>
+      <image:caption>Heritage Cave Otel (Ürgüp) - Kapadokya konaklama</image:caption>
+      <image:title>Heritage Cave Otel (Ürgüp)</image:title>
+      <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://tripandtick.com/images/hotels/butik-otel-uchisar-deluxe.jpg</image:loc>
+      <image:caption>Uçhisar Butik Otel Deluxe - Kapadokya konaklama</image:caption>
+      <image:title>Uçhisar Butik Otel Deluxe</image:title>
+      <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://tripandtick.com/images/hotels/butik-otel-urgup-design.jpg</image:loc>
+      <image:caption>Design Butik Otel (Ürgüp) - Kapadokya konaklama</image:caption>
+      <image:title>Design Butik Otel (Ürgüp)</image:title>
+      <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
+    </image:image>
+    <image:image>
       <image:loc>https://tripandtick.com/images/hotels/butik-otel-uchisar-premium.jpg</image:loc>
       <image:caption>Premium Butik (Uçhisar) - Kapadokya konaklama</image:caption>
       <image:title>Premium Butik (Uçhisar)</image:title>
@@ -103,16 +124,52 @@
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
     </image:image>
     <image:image>
+      <image:loc>https://tripandtick.com/images/hotels/glamping-cadir-deluxe.jpg</image:loc>
+      <image:caption>Glamping Deluxe Çadır - Kapadokya konaklama</image:caption>
+      <image:title>Glamping Deluxe Çadır</image:title>
+      <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
+    </image:image>
+    <image:image>
       <image:loc>https://tripandtick.com/images/hotels/glamping-yurt-suit.jpg</image:loc>
       <image:caption>Yurt Süit Glamping - Kapadokya konaklama</image:caption>
       <image:title>Yurt Süit Glamping</image:title>
+      <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://tripandtick.com/images/hotels/magara-otel-goreme-standart.jpg</image:loc>
+      <image:caption>Mağara Standart (Göreme) - Kapadokya konaklama</image:caption>
+      <image:title>Mağara Standart (Göreme)</image:title>
+      <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://tripandtick.com/images/hotels/butik-otel-standart.jpg</image:loc>
+      <image:caption>Butik Otel Standart (Göreme) - Kapadokya konaklama</image:caption>
+      <image:title>Butik Otel Standart (Göreme)</image:title>
+      <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://tripandtick.com/images/hotels/butik-otel-goreme-loft.jpg</image:loc>
+      <image:caption>Loft Butik Otel (Göreme) - Kapadokya konaklama</image:caption>
+      <image:title>Loft Butik Otel (Göreme)</image:title>
+      <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://tripandtick.com/images/hotels/apart-daire-goreme-1.jpg</image:loc>
+      <image:caption>Apart Daire 1+1 (Göreme) - Kapadokya konaklama</image:caption>
+      <image:title>Apart Daire 1+1 (Göreme)</image:title>
+      <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://tripandtick.com/images/hotels/apart-daire-urgup-2.jpg</image:loc>
+      <image:caption>Apart Daire 2+1 (Ürgüp) - Kapadokya konaklama</image:caption>
+      <image:title>Apart Daire 2+1 (Ürgüp)</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
     </image:image>
   </url>
   <url>
     <loc>https://tripandtick.com/tr/oteller/magara-otel-urgup-aile</loc>
     <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
+      <image:loc>https://tripandtick.com/images/hotels/magara-otel-urgup-aile.jpg</image:loc>
       <image:caption>Mağara Aile Süit (Ürgüp) - Ailelere uygun 2 odalı mağara süit, çocuk yatak desteği, geniş alan.</image:caption>
       <image:title>Mağara Aile Süit (Ürgüp) | Kapadokya konaklama</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
@@ -130,7 +187,7 @@
   <url>
     <loc>https://tripandtick.com/tr/oteller/resort-avanos-spa</loc>
     <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
+      <image:loc>https://tripandtick.com/images/hotels/resort-avanos-spa.jpg</image:loc>
       <image:caption>Spa Resort (Avanos) - Termal spa resort — kapalı havuz, masaj, hamam, yarım pansiyon dahil.</image:caption>
       <image:title>Spa Resort (Avanos) | Kapadokya konaklama</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
@@ -139,7 +196,7 @@
   <url>
     <loc>https://tripandtick.com/tr/oteller/resort-nevsehir-deluxe</loc>
     <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
+      <image:loc>https://tripandtick.com/images/hotels/resort-nevsehir-deluxe.jpg</image:loc>
       <image:caption>Deluxe Resort (Nevşehir) - Tüm dahil deluxe resort — açık/kapalı havuz, fitness, akşam yemeği.</image:caption>
       <image:title>Deluxe Resort (Nevşehir) | Kapadokya konaklama</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
@@ -166,7 +223,7 @@
   <url>
     <loc>https://tripandtick.com/tr/oteller/magara-otel-urgup-king</loc>
     <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
+      <image:loc>https://tripandtick.com/images/hotels/magara-otel-urgup-king.jpg</image:loc>
       <image:caption>Mağara King Oda (Ürgüp) - Kingsize yatak, oyma mağara duvarları, mini bar dahil, vadi manzaralı.</image:caption>
       <image:title>Mağara King Oda (Ürgüp) | Kapadokya konaklama</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
@@ -175,7 +232,7 @@
   <url>
     <loc>https://tripandtick.com/tr/oteller/magara-otel-urgup-cave</loc>
     <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
+      <image:loc>https://tripandtick.com/images/hotels/magara-otel-urgup-cave.jpg</image:loc>
       <image:caption>Heritage Cave Otel (Ürgüp) - Restore edilmiş tarihi mağara konak, antika mobilya, bahçeli kahvaltı.</image:caption>
       <image:title>Heritage Cave Otel (Ürgüp) | Kapadokya konaklama</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
@@ -184,7 +241,7 @@
   <url>
     <loc>https://tripandtick.com/tr/oteller/butik-otel-uchisar-deluxe</loc>
     <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
+      <image:loc>https://tripandtick.com/images/hotels/butik-otel-uchisar-deluxe.jpg</image:loc>
       <image:caption>Uçhisar Butik Otel Deluxe - Uçhisar Kalesi panoramalı butik otel, terasta kahvaltı, modern banyo.</image:caption>
       <image:title>Uçhisar Butik Otel Deluxe | Kapadokya konaklama</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
@@ -193,7 +250,7 @@
   <url>
     <loc>https://tripandtick.com/tr/oteller/butik-otel-urgup-design</loc>
     <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
+      <image:loc>https://tripandtick.com/images/hotels/butik-otel-urgup-design.jpg</image:loc>
       <image:caption>Design Butik Otel (Ürgüp) - Tasarım odaklı butik otel, sanatçı koleksiyonu duvar, espresso bar.</image:caption>
       <image:title>Design Butik Otel (Ürgüp) | Kapadokya konaklama</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
@@ -220,7 +277,7 @@
   <url>
     <loc>https://tripandtick.com/tr/oteller/glamping-cadir-deluxe</loc>
     <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
+      <image:loc>https://tripandtick.com/images/hotels/glamping-cadir-deluxe.jpg</image:loc>
       <image:caption>Glamping Deluxe Çadır - Lüks safari çadırı — yatak, özel banyo, kamp ateşi, yıldız manzarası.</image:caption>
       <image:title>Glamping Deluxe Çadır | Kapadokya konaklama</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
@@ -238,7 +295,7 @@
   <url>
     <loc>https://tripandtick.com/tr/oteller/magara-otel-goreme-standart</loc>
     <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
+      <image:loc>https://tripandtick.com/images/hotels/magara-otel-goreme-standart.jpg</image:loc>
       <image:caption>Mağara Standart (Göreme) - Bütçe dostu mağara oda, temiz konfor, sabah balon kalkış manzarası.</image:caption>
       <image:title>Mağara Standart (Göreme) | Kapadokya konaklama</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
@@ -247,7 +304,7 @@
   <url>
     <loc>https://tripandtick.com/tr/oteller/butik-otel-standart</loc>
     <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
+      <image:loc>https://tripandtick.com/images/hotels/butik-otel-standart.jpg</image:loc>
       <image:caption>Butik Otel Standart (Göreme) - Modern dekor, konforlu butik otel, sabah açık büfe, merkez konum.</image:caption>
       <image:title>Butik Otel Standart (Göreme) | Kapadokya konaklama</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
@@ -256,7 +313,7 @@
   <url>
     <loc>https://tripandtick.com/tr/oteller/butik-otel-goreme-loft</loc>
     <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
+      <image:loc>https://tripandtick.com/images/hotels/butik-otel-goreme-loft.jpg</image:loc>
       <image:caption>Loft Butik Otel (Göreme) - İkili loft odalar, yüksek tavan, çatı katı manzaralı bar.</image:caption>
       <image:title>Loft Butik Otel (Göreme) | Kapadokya konaklama</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
@@ -265,7 +322,7 @@
   <url>
     <loc>https://tripandtick.com/tr/oteller/apart-daire-goreme-1</loc>
     <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
+      <image:loc>https://tripandtick.com/images/hotels/apart-daire-goreme-1.jpg</image:loc>
       <image:caption>Apart Daire 1+1 (Göreme) - Mutfaklı 1+1 apart daire — uzun konaklamalar için ideal, kendi başınıza yemek.</image:caption>
       <image:title>Apart Daire 1+1 (Göreme) | Kapadokya konaklama</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
@@ -274,7 +331,7 @@
   <url>
     <loc>https://tripandtick.com/tr/oteller/apart-daire-urgup-2</loc>
     <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
+      <image:loc>https://tripandtick.com/images/hotels/apart-daire-urgup-2.jpg</image:loc>
       <image:caption>Apart Daire 2+1 (Ürgüp) - Geniş 2+1 apart daire — gruplar/aileler için, balkonlu, otopark dahil.</image:caption>
       <image:title>Apart Daire 2+1 (Ürgüp) | Kapadokya konaklama</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
@@ -283,7 +340,7 @@
   <url>
     <loc>https://tripandtick.com/tr/aktiviteler/atv-standart</loc>
     <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
+      <image:loc>https://tripandtick.com/images/activities/atv-standart.jpg</image:loc>
       <image:caption>ATV Standart Tur - Gün içi herhangi saat 1-2 saatlik ATV — Sword Valley, Red &amp; Rose Valley, Çavuşin, Love Valley. Otel transferi dahil.</image:caption>
       <image:title>ATV Standart Tur | Kapadokya aktivite</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
@@ -292,9 +349,15 @@
   <url>
     <loc>https://tripandtick.com/tr/aktiviteler</loc>
     <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
+      <image:loc>https://tripandtick.com/images/activities/atv-standart.jpg</image:loc>
       <image:caption>ATV Standart Tur - Kapadokya</image:caption>
       <image:title>ATV Standart Tur</image:title>
+      <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://tripandtick.com/images/activities/atv-sunrise.jpg</image:loc>
+      <image:caption>Sunrise ATV Turu - Kapadokya</image:caption>
+      <image:title>Sunrise ATV Turu</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
     </image:image>
     <image:image>
@@ -304,9 +367,33 @@
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
     </image:image>
     <image:image>
+      <image:loc>https://tripandtick.com/images/activities/jeep-standart.jpg</image:loc>
+      <image:caption>Jeep Safari Standart - Kapadokya</image:caption>
+      <image:title>Jeep Safari Standart</image:title>
+      <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://tripandtick.com/images/activities/jeep-sunrise.jpg</image:loc>
+      <image:caption>Sunrise Jeep Safari - Kapadokya</image:caption>
+      <image:title>Sunrise Jeep Safari</image:title>
+      <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
+    </image:image>
+    <image:image>
       <image:loc>https://tripandtick.com/images/activities/jeep-sunset.jpg</image:loc>
       <image:caption>Sunset Jeep Safari - Kapadokya</image:caption>
       <image:title>Sunset Jeep Safari</image:title>
+      <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://tripandtick.com/images/activities/at-standart.jpg</image:loc>
+      <image:caption>At Binme Standart - Kapadokya</image:caption>
+      <image:title>At Binme Standart</image:title>
+      <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://tripandtick.com/images/activities/at-sunrise.jpg</image:loc>
+      <image:caption>Sunrise At Binme Turu - Kapadokya</image:caption>
+      <image:title>Sunrise At Binme Turu</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
     </image:image>
     <image:image>
@@ -322,6 +409,12 @@
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
     </image:image>
     <image:image>
+      <image:loc>https://tripandtick.com/images/activities/hamam-deluxe.jpg</image:loc>
+      <image:caption>Türk Hamamı Deluxe + Masaj - Kapadokya</image:caption>
+      <image:title>Türk Hamamı Deluxe + Masaj</image:title>
+      <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
+    </image:image>
+    <image:image>
       <image:loc>https://tripandtick.com/images/activities/turk-gecesi-yemekli.jpg</image:loc>
       <image:caption>Türk Gecesi (Yemekli + İçecek) - Kapadokya</image:caption>
       <image:title>Türk Gecesi (Yemekli + İçecek)</image:title>
@@ -333,11 +426,23 @@
       <image:title>Microlight Standart Uçuş</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
     </image:image>
+    <image:image>
+      <image:loc>https://tripandtick.com/images/activities/microlight-deluxe.jpg</image:loc>
+      <image:caption>Microlight Deluxe Uçuş - Kapadokya</image:caption>
+      <image:title>Microlight Deluxe Uçuş</image:title>
+      <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://tripandtick.com/images/activities/balon-flying-dress-cekimi.jpg</image:loc>
+      <image:caption>Balon + Flying Dress Fotoğraf Çekimi - Kapadokya</image:caption>
+      <image:title>Balon + Flying Dress Fotoğraf Çekimi</image:title>
+      <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
+    </image:image>
   </url>
   <url>
     <loc>https://tripandtick.com/tr/aktiviteler/atv-sunrise</loc>
     <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
+      <image:loc>https://tripandtick.com/images/activities/atv-sunrise.jpg</image:loc>
       <image:caption>Sunrise ATV Turu - 2 saatlik gün doğumu ATV — balon turuyla uyumlu, vadi sabah ışığında. Transfer dahil.</image:caption>
       <image:title>Sunrise ATV Turu | Kapadokya aktivite</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
@@ -355,7 +460,7 @@
   <url>
     <loc>https://tripandtick.com/tr/aktiviteler/jeep-standart</loc>
     <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
+      <image:loc>https://tripandtick.com/images/activities/jeep-standart.jpg</image:loc>
       <image:caption>Jeep Safari Standart - Gün içi herhangi saat 3-4 saatlik Jeep Safari — Göreme vadileri panorama turu.</image:caption>
       <image:title>Jeep Safari Standart | Kapadokya aktivite</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
@@ -364,7 +469,7 @@
   <url>
     <loc>https://tripandtick.com/tr/aktiviteler/jeep-sunrise</loc>
     <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
+      <image:loc>https://tripandtick.com/images/activities/jeep-sunrise.jpg</image:loc>
       <image:caption>Sunrise Jeep Safari - Gün doğumu Jeep Safari — Göreme vadilerinde sabah ışığı + balon manzarası.</image:caption>
       <image:title>Sunrise Jeep Safari | Kapadokya aktivite</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
@@ -382,7 +487,7 @@
   <url>
     <loc>https://tripandtick.com/tr/aktiviteler/at-standart</loc>
     <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
+      <image:loc>https://tripandtick.com/images/activities/at-standart.jpg</image:loc>
       <image:caption>At Binme Standart - Gün içi herhangi saat 1-2 saatlik at binme — Ürgüp vadileri.</image:caption>
       <image:title>At Binme Standart | Kapadokya aktivite</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
@@ -391,7 +496,7 @@
   <url>
     <loc>https://tripandtick.com/tr/aktiviteler/at-sunrise</loc>
     <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
+      <image:loc>https://tripandtick.com/images/activities/at-sunrise.jpg</image:loc>
       <image:caption>Sunrise At Binme Turu - 1 saatlik gün doğumu at binme — Ürgüp vadileri.</image:caption>
       <image:title>Sunrise At Binme Turu | Kapadokya aktivite</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
@@ -418,7 +523,7 @@
   <url>
     <loc>https://tripandtick.com/tr/aktiviteler/hamam-deluxe</loc>
     <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
+      <image:loc>https://tripandtick.com/images/activities/hamam-deluxe.jpg</image:loc>
       <image:caption>Türk Hamamı Deluxe + Masaj - Hamam paketi + 30 dakika İsveç yağ masajı + tam vücut mask. Premium spa deneyimi, transferli.</image:caption>
       <image:title>Türk Hamamı Deluxe + Masaj | Kapadokya aktivite</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
@@ -434,15 +539,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://tripandtick.com/tr/aktiviteler/turk-gecesi-yemeksiz</loc>
-    <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
-      <image:caption>Türk Gecesi (Yemeksiz) - Türk Gecesi şovu — semah, folklor, oryantal, Kafkas. Yemek/alkol dahil değil, sadece şov + transfer.</image:caption>
-      <image:title>Türk Gecesi (Yemeksiz) | Kapadokya aktivite</image:title>
-      <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
-    </image:image>
-  </url>
-  <url>
     <loc>https://tripandtick.com/tr/aktiviteler/microlight-standart</loc>
     <image:image>
       <image:loc>https://tripandtick.com/images/activities/microlight-standart.jpg</image:loc>
@@ -454,9 +550,18 @@
   <url>
     <loc>https://tripandtick.com/tr/aktiviteler/microlight-deluxe</loc>
     <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
+      <image:loc>https://tripandtick.com/images/activities/microlight-deluxe.jpg</image:loc>
       <image:caption>Microlight Deluxe Uçuş - 30-35 dakikalık tüm Kapadokya üzerinde microlight uçuşu — uzun rota, daha fazla nokta, premium fotoğraf paketi.</image:caption>
       <image:title>Microlight Deluxe Uçuş | Kapadokya aktivite</image:title>
+      <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tripandtick.com/tr/aktiviteler/balon-flying-dress-cekimi</loc>
+    <image:image>
+      <image:loc>https://tripandtick.com/images/activities/balon-flying-dress-cekimi.jpg</image:loc>
+      <image:caption>Balon + Flying Dress Fotoğraf Çekimi - Gün doğumu balon uçuşu + sepet içi/vadi profesyonel fotoğrafçı çekimi (30 dk, 20 düzenlenmiş kare). Flying dress elbise kiralama opsiyonel eklenebilir — Instagram/TikTok içerikleri için tek üründe.</image:caption>
+      <image:title>Balon + Flying Dress Fotoğraf Çekimi | Kapadokya aktivite</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
     </image:image>
   </url>
@@ -464,7 +569,7 @@
     <loc>https://tripandtick.com/tr/turlar/kirmizi-tur</loc>
     <image:image>
       <image:loc>https://tripandtick.com/images/tours/kirmizi-tur.jpg</image:loc>
-      <image:caption>Kapadokya Kırmızı Tur (Red Tour) - Göreme Açık Hava Müzesi, Uçhisar Kalesi, Zelve Açık Hava Müzesi, Paşabağ (Keşişler Vadisi), Devrent (Hayal) Vadisi, Avanos çömlek atölyesi, Aşk Vadisi, Güvercinlik Vadisi, Çavuşin, Deri atölyesi — profesyonel rehber + müze biletleri + öğle yemeği dahil.</image:caption>
+      <image:caption>Kapadokya Kırmızı Tur (Red Tour) - Zelve Açık Hava Müzesi, Uçhisar Kalesi, Paşabağ (Rahipler Vadisi), Avanos çömlek atölyesi, Devrent (Hayal Vadisi), Aşk Vadisi, deri mağazası, Göreme Panorama, Güvercinlik Vadisi — alış-bırakış transferi, profesyonel rehber, öğle yemeği ve müze giriş biletleri dahil.</image:caption>
       <image:title>Kapadokya Kırmızı Tur (Red Tour) | Kapadokya gezi turu</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
     </image:image>
@@ -484,15 +589,15 @@
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
     </image:image>
     <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
+      <image:loc>https://tripandtick.com/images/tours/mix-tur.jpg</image:loc>
       <image:caption>Kapadokya Mix Tur (Best of) - Kapadokya</image:caption>
       <image:title>Kapadokya Mix Tur (Best of)</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
     </image:image>
     <image:image>
-      <image:loc>https://tripandtick.com/images/tours/yeralti-turu.jpg</image:loc>
-      <image:caption>Yeraltı Şehirleri Turu - Kapadokya</image:caption>
-      <image:title>Yeraltı Şehirleri Turu</image:title>
+      <image:loc>https://tripandtick.com/images/tours/eco-yesil-tur.jpg</image:loc>
+      <image:caption>Eco Green Tur - Kapadokya</image:caption>
+      <image:title>Eco Green Tur</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
     </image:image>
     <image:image>
@@ -512,7 +617,7 @@
     <loc>https://tripandtick.com/tr/turlar/yesil-tur</loc>
     <image:image>
       <image:loc>https://tripandtick.com/images/tours/yesil-tur.jpg</image:loc>
-      <image:caption>Kapadokya Yeşil Tur (Green Tour) - Göreme panorama, Güvercinlik Vadisi, Derinkuyu Yeraltı Şehri, Ihlara Vadisi (panoramik cam teras + yürüyüş), Belisırma köyü öğle yemeği, Selime Katedrali, Narlıgöl, Yaprakhisar — profesyonel rehber + müze biletleri + Belisırma öğle yemeği dahil.</image:caption>
+      <image:caption>Kapadokya Yeşil Tur (Green Tour) - Yeraltı şehri, Zelve Açık Hava Müzesi, Uçhisar Kalesi, Paşabağ (Rahipler Vadisi), Avanos çömlek atölyesi, Devrent (Hayal Vadisi), Aşk Vadisi, deri mağazası, Göreme Panorama, Güvercinlik Vadisi — alış-bırakış transferi, profesyonel rehber, öğle yemeği ve müze giriş biletleri dahil.</image:caption>
       <image:title>Kapadokya Yeşil Tur (Green Tour) | Kapadokya gezi turu</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
     </image:image>
@@ -520,27 +625,18 @@
   <url>
     <loc>https://tripandtick.com/tr/turlar/mix-tur</loc>
     <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
+      <image:loc>https://tripandtick.com/images/tours/mix-tur.jpg</image:loc>
       <image:caption>Kapadokya Mix Tur (Best of) - Red + Green hibrit en iyileri — Göreme Açık Hava Müzesi, Uçhisar Kalesi, Zelve, Paşabağ, Devrent, Avanos çömlek, Aşk Vadisi, Özkonak veya Kaymaklı Yeraltı Şehri, Deri atölyesi. Tek günde en kapsamlı tur.</image:caption>
       <image:title>Kapadokya Mix Tur (Best of) | Kapadokya gezi turu</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
     </image:image>
   </url>
   <url>
-    <loc>https://tripandtick.com/tr/turlar/sari-tur</loc>
+    <loc>https://tripandtick.com/tr/turlar/eco-yesil-tur</loc>
     <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
-      <image:caption>Kapadokya Sarı Tur (Yellow Tour) - Soğanlı kiliseler, Sobesos antik kenti, Mustafapaşa Rum köyü, Kızılçukur Vadisi 2 km yürüyüş, Çavuşin Bizans kilisesi, Lavanta Bahçesi, halı atölyesi, Güvercinlik Vadisi — daha sakin daha derin rota.</image:caption>
-      <image:title>Kapadokya Sarı Tur (Yellow Tour) | Kapadokya gezi turu</image:title>
-      <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://tripandtick.com/tr/turlar/yeralti-turu</loc>
-    <image:image>
-      <image:loc>https://tripandtick.com/images/tours/yeralti-turu.jpg</image:loc>
-      <image:caption>Yeraltı Şehirleri Turu - Derinkuyu + Kaymaklı yeraltı şehirleri, Çavuşin Bizans kilisesi, Güvercinlik Vadisi — yarım gün detaylı tur. Profesyonel rehber + müze biletleri dahil.</image:caption>
-      <image:title>Yeraltı Şehirleri Turu | Kapadokya gezi turu</image:title>
+      <image:loc>https://tripandtick.com/images/tours/eco-yesil-tur.jpg</image:loc>
+      <image:caption>Eco Green Tur - Göreme Panorama, Güvercinlik Vadisi, oniks atölyesi, Kaymaklı ve Derinkuyu yeraltı şehirleri, Ihlara Vadisi&apos;nde yürüyüş, Nar Gölü ve yöresel lezzetlerin tadımı — profesyonel rehber, transfer, öğle yemeği ve müze giriş biletleri dahil. Saat 09.30-18.00.</image:caption>
+      <image:title>Eco Green Tur | Kapadokya gezi turu</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
     </image:image>
   </url>
@@ -548,7 +644,7 @@
     <loc>https://tripandtick.com/tr/turlar/gun-batimi-turu</loc>
     <image:image>
       <image:loc>https://tripandtick.com/images/tours/gun-batimi-turu.jpg</image:loc>
-      <image:caption>Gün Batımı Panorama Turu - Aktepe + Göreme panorama + Kızılçukur Vadisi gün batımı — şarap ikramı dahil.</image:caption>
+      <image:caption>Gün Batımı Panorama Turu - Aktepe + Göreme panorama + Kızılçukur Vadisi gün batımı — rehber ve transfer dahil.</image:caption>
       <image:title>Gün Batımı Panorama Turu | Kapadokya gezi turu</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
     </image:image>
@@ -586,7 +682,7 @@
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
     </image:image>
     <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
+      <image:loc>https://tripandtick.com/images/packages/macera-paketi.jpg</image:loc>
       <image:caption>Macera Paketi (2 Gün) - Kapadokya</image:caption>
       <image:title>Macera Paketi (2 Gün)</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
@@ -603,6 +699,12 @@
       <image:title>Evlilik Teklifi Lüks Paketi</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
     </image:image>
+    <image:image>
+      <image:loc>https://tripandtick.com/images/packages/kurumsal-paket.jpg</image:loc>
+      <image:caption>Kurumsal Etkinlik Paketi (10+ kişi) - Kapadokya</image:caption>
+      <image:title>Kurumsal Etkinlik Paketi (10+ kişi)</image:title>
+      <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
+    </image:image>
   </url>
   <url>
     <loc>https://tripandtick.com/tr/paketler/balayi-paketi</loc>
@@ -616,7 +718,7 @@
   <url>
     <loc>https://tripandtick.com/tr/paketler/macera-paketi</loc>
     <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
+      <image:loc>https://tripandtick.com/images/packages/macera-paketi.jpg</image:loc>
       <image:caption>Macera Paketi (2 Gün) - Balon + ATV Full Experience + At Binme + Jeep Safari + Otel 1 gece — genç ve aktif misafirler için.</image:caption>
       <image:title>Macera Paketi (2 Gün) | Kapadokya paketi</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
@@ -643,7 +745,7 @@
   <url>
     <loc>https://tripandtick.com/tr/paketler/kurumsal-paket</loc>
     <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
+      <image:loc>https://tripandtick.com/images/packages/kurumsal-paket.jpg</image:loc>
       <image:caption>Kurumsal Etkinlik Paketi (10+ kişi) - Şirket etkinliği için grup balon + tur + akşam yemeği + organizasyon — kişi başı fiyat (min 10 kişi).</image:caption>
       <image:title>Kurumsal Etkinlik Paketi (10+ kişi) | Kapadokya paketi</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
@@ -781,105 +883,6 @@
       <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
       <image:caption>Royal Balloon - Kapadokya balon operatoru</image:caption>
       <image:title>Royal Balloon | Kapadokya balon operatoru</image:title>
-      <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://tripandtick.com/tr/blog/heissluftballon-kappadokien-preise-buchung</loc>
-    <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
-      <image:caption>Ein Heißluftballonflug über die Feenkamine von Kappadokien gehört zu den meistgebuchten Bucket-List-Erlebnissen weltweit. Preise 2026 starten bei €165 pro Person. Dieser Guide erklärt alle Pakete, Inklusivleistungen, beste Reisezeit, Stornobedingungen und wie Sie 5% unter Marktpreis buchen.</image:caption>
-      <image:title>Heißluftballon Kappadokien 2026 — Preise, Pakete &amp; Buchung (Standard €165, Deluxe €295)</image:title>
-      <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://tripandtick.com/tr/blog/best-time-cappadocia-balloon</loc>
-    <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
-      <image:caption>The best time for a Cappadocia balloon flight is late April to June and September to October — high fly-day rates, mild sunrise temperatures, and stable winds. This month-by-month guide breaks down flight reliability, weather, crowds and prices so you can pick the perfect date.</image:caption>
-      <image:title>Best Time for a Cappadocia Balloon Flight — Month-by-Month Guide (2026)</image:title>
-      <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://tripandtick.com/tr/blog/cappadocia-hot-air-balloon-price-2026</loc>
-    <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
-      <image:caption>Cappadocia hot air balloon prices in 2026 start from €165 per person. Compare 4 packages from 9+ operators with our lowest price guarantee.</image:caption>
-      <image:title>Cappadocia Hot Air Balloon Prices 2026 — Complete Guide</image:title>
-      <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://tripandtick.com/tr/blog/cappadocia-winter-2026-guide</loc>
-    <image:image>
-      <image:loc>https://tripandtick.com/images/blog/cappadocia-winter-2026-guide.jpg</image:loc>
-      <image:caption>Cappadocia in winter 2026 is the most photogenic and most affordable season — snow-covered fairy chimneys, 30-40% off hotel rates, balloon flights still operating 70-80% of mornings, and cave hotels at their warmest natural 18-22°C. A full winter playbook with prices, clothing, balloon statistics and itineraries.</image:caption>
-      <image:title>Cappadocia in Winter 2026 — Complete Travel Guide (Snow, Balloons, Hotels)</image:title>
-      <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://tripandtick.com/tr/blog/kapadokya-aktiviteler</loc>
-    <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
-      <image:caption>Kapadokya&apos;da sadece balon değil — 25 farklı aktivite var. ATV, at binme, jeep safari, şarap turları, fotoğraf turları, gün doğumu yogası ve çok daha fazlası. Her aktivite için süre, fiyat ve operatör bilgisi.</image:caption>
-      <image:title>Kapadokya&apos;da Yapılacak 25 Şey — 2026 Aktivite Rehberi</image:title>
-      <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://tripandtick.com/tr/blog/kapadokya-balon-turu-fiyat-2026</loc>
-    <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
-      <image:caption>Kapadokya balon turu fiyatları 2026 yılında kişi başı €165&apos;ten başlıyor. 4 paket, 9+ operatör, %100 iade garantisi — tam fiyat dökümü ve rezervasyon ipuçları.</image:caption>
-      <image:title>Kapadokya Balon Turu Fiyatları 2026 — En Güncel Rehber</image:title>
-      <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://tripandtick.com/tr/blog/kapadokya-dugun-fotografciligi-rehberi</loc>
-    <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
-      <image:caption>Kapadokya&apos;da düğün ve nikah-öncesi (pre-wedding) fotoğraf çekimi son 5 yılda altın çağını yaşıyor. Peri bacaları, sıcak hava balonları, vadiler ve mağara otelleri dünya çapında bir kompozisyon paleti sunuyor. Bu rehberde top 10 lokasyon, izin prosedürü, sezonal renk paleti, balon-fotoğrafı için kritik ipuçları ve 2026 ortalama fiyatları detaylı paylaşıyoruz.</image:caption>
-      <image:title>Kapadokya Düğün Fotoğrafçılığı Rehberi 2026 — Top 10 Lokasyon, İzinler ve Balon Fotoğrafı İpuçları</image:title>
-      <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://tripandtick.com/tr/blog/kapadokya-fotograf-noktalari</loc>
-    <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
-      <image:caption>Kapadokya&apos;da en iyi fotoğraf hangi noktadan çekilir? Göreme Sunset Point, Aşk Vadisi, Esentepe, Aktepe, Uçhisar Kalesi… 15 ikonik nokta için tam çekim saati, ışık yönü ve ekipman tavsiyesi.</image:caption>
-      <image:title>Kapadokya&apos;nın En İyi 15 Fotoğraf Noktası — Çekim Saati, Yön ve Lens Rehberi 2026</image:title>
-      <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://tripandtick.com/tr/blog/kapadokya-istanbuldan-nasil-gidilir</loc>
-    <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
-      <image:caption>İstanbul&apos;dan Kapadokya&apos;ya nasıl gidilir? Uçak (Nevşehir/Kayseri), otobüs, tren (Doğu Ekspresi), özel araç ve rehberli tur — 5 seçenek için süre, fiyat ve avantajların tam karşılaştırması.</image:caption>
-      <image:title>İstanbul&apos;dan Kapadokya&apos;ya Nasıl Gidilir? 5 Seçenek — Süre, Fiyat ve Karşılaştırma 2026</image:title>
-      <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://tripandtick.com/tr/blog/kapadokya-ne-zaman-gidilir</loc>
-    <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
-      <image:caption>Kapadokya&apos;nın en iyi gezi zamanı hangisi? Ay ay sıcaklık, yağış, balon uçuş oranı, kalabalık seviyesi ve fiyat dalgalanmaları. Nisan-Haziran ve Eylül-Ekim altın sezon, kış ise romantiklerin tercihi.</image:caption>
-      <image:title>Kapadokya Ne Zaman Gidilir? Ay Ay Hava Durumu, Balon Uçuş Oranı ve Fiyat Rehberi 2026</image:title>
-      <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://tripandtick.com/tr/blog/kapadokya-otel-tavsiye-2026</loc>
-    <image:image>
-      <image:loc>https://tripandtick.com/images/og-default.svg</image:loc>
-      <image:caption>Kapadokya&apos;nın hangi otelinde kalmalı? Mağara otelleri, butik konseptler, glamping çadırları ve resort&apos;ların tam karşılaştırması — Göreme, Ürgüp ve Uçhisar arasındaki farklar, balayı paketleri ve fiyat-performans rehberi.</image:caption>
-      <image:title>Kapadokya Otel Tavsiyeleri 2026 — Mağara, Butik, Resort ve Glamping Karşılaştırma</image:title>
       <image:license>https://tripandtick.com/kullanim-sartlari</image:license>
     </image:image>
   </url>

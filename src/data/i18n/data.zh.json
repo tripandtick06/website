@@ -3,7 +3,7 @@
     "standart-balon-ucusu": {
       "name": "标准热气球飞行",
       "shortDescription": "最经济的热气球之旅。飞行 60 分钟，大容量吊篮，天气取消 100% 退款。",
-      "longDescription": "想从空中俯瞰卡帕多奇亚传奇般的精灵烟囱，这是性价比最高的选择。标准吊篮可容纳 16-20 名乘客，在专业飞行员陪同下提供 60 分钟飞行。酒店接送、简易早餐、4000 万欧元保险、飞行证书与奖章、香槟落地庆祝——全部包含在价格内。价格会根据天气状况和客流量每日变动——距出发 7 天以上的日期适用目录价，7 天以内则适用实时价格。",
+      "longDescription": "想从空中俯瞰卡帕多奇亚传奇般的精灵烟囱，这是性价比最高的选择。标准吊篮可容纳 16-20 名乘客，在专业飞行员陪同下提供 60 分钟飞行。酒店接送、简易早餐、4000 万欧元保险、飞行证书与奖章、香槟落地庆祝——全部包含在价格内。价格从€100起;具体日期、天气及可预订情况请通过WhatsApp联系我们获取当前报价。",
       "badge": "最受欢迎",
       "includes": [
         "酒店接送",
@@ -22,39 +22,12 @@
         "孕妇不可乘坐",
         "患有严重心脏病或健康问题者不可乘坐",
         "因天气原因取消——若运营方取消则 100% 退款",
-        "价格在 7 天以内可能每日变动（天气状况 + 客流量）"
+        "起始价格——具体日期及可预订情况的当前价格请通过WhatsApp咨询"
       ],
       "highlights": [
         "60 分钟",
         "含证书",
         "香槟服务"
-      ]
-    },
-    "deluxe-balon-ucusu": {
-      "name": "豪华热气球飞行",
-      "shortDescription": "小型吊篮（最多 16 人），60 分钟奢华体验 + 卡片式证书。",
-      "longDescription": "尊享热气球体验。小型吊篮（最多 16 名乘客）带来更宽敞的 60 分钟飞行，卡片式飞行证书、美食早餐及 VIP 接送。仅与最顶级的运营方合作。",
-      "badge": "豪华",
-      "includes": [
-        "VIP 酒店接送",
-        "美食早餐",
-        "4000 万欧元保险",
-        "卡片式飞行证书",
-        "尊享香槟",
-        "专业摄影拍摄"
-      ],
-      "excludes": [
-        "个人消费"
-      ],
-      "warnings": [
-        "6 岁以下儿童不可乘坐",
-        "孕妇不可乘坐",
-        "患有严重心脏病或健康问题者不可乘坐"
-      ],
-      "highlights": [
-        "60 分钟",
-        "小型吊篮（最多 16 人）",
-        "卡片式证书"
       ]
     },
     "romantik-ozel-balon": {
@@ -278,21 +251,6 @@
         "3 小时表演"
       ]
     },
-    "turk-gecesi-yemeksiz": {
-      "name": "土耳其之夜（不含餐）",
-      "shortDescription": "土耳其之夜表演——萨玛旋转舞、民俗舞、肚皮舞、高加索舞。不含餐食/酒水，仅含表演 + 接送。",
-      "includes": [
-        "萨玛旋转舞 + 民俗舞 + 肚皮舞",
-        "高加索舞表演",
-        "迎宾饮品",
-        "酒店接送"
-      ],
-      "highlights": [
-        "更实惠",
-        "仅含表演",
-        "含接送"
-      ]
-    },
     "microlight-standart": {
       "name": "超轻型飞机标准飞行",
       "shortDescription": "15-18 分钟，飞越卡帕多奇亚核心地带的动力超轻型飞机飞行——含专属接送、飞行证书、装备、摄影拍摄。",
@@ -328,40 +286,65 @@
         "尊享照片"
       ]
     },
-    "kirmizi-tur": {
-      "name": "卡帕多奇亚红线之旅（Red Tour）",
-      "shortDescription": "Göreme 露天博物馆、Uçhisar 城堡、Zelve 露天博物馆、Paşabağ（修士谷）、Devrent（梦幻谷）、Avanos 陶艺工坊、爱情谷、鸽子谷、Çavuşin、皮革工坊——含专业向导 + 博物馆门票 + 午餐。",
-      "badge": "最受欢迎",
+    "balon-flying-dress-cekimi": {
+      "name": "热气球 + Flying Dress 摄影跟拍",
+      "shortDescription": "日出热气球飞行 + 专业摄影师在吊篮内及山谷取景跟拍（30分钟，20张精修照片）。可选加购 Flying Dress 飘逸长裙租赁——一站式满足你的 Instagram/TikTok 内容需求。",
+      "badge": "热门",
       "includes": [
-        "专业导游（TR/EN/RU）",
-        "酒店接送",
-        "博物馆门票",
-        "午餐",
-        "所有税费"
+        "日出热气球飞行（标准吊篮）",
+        "专业摄影师跟拍（30分钟，吊篮内+山谷取景）",
+        "20张精修照片（数字交付）",
+        "酒店接送"
       ],
       "highlights": [
-        "10+ 个景点",
-        "Göreme 露天博物馆",
-        "Avanos 陶艺工坊",
-        "含博物馆门票"
+        "热气球+跟拍一站式服务",
+        "20张精修照片",
+        "可选长裙租赁"
+      ]
+    },
+    "kirmizi-tur": {
+      "name": "卡帕多西亚红色之旅 (Red Tour)",
+      "shortDescription": "泽尔维露天博物馆、于希萨尔城堡、帕夏巴阇(僧侣谷)、阿瓦诺斯陶艺工坊、代夫伦特(幻想谷)、爱情谷、皮革店、格雷梅全景、鸽子谷——含往返酒店接送、专业导游、午餐及博物馆门票。",
+      "badge": "最受欢迎",
+      "includes": [
+        "往返酒店接送",
+        "专业导游",
+        "午餐",
+        "博物馆门票"
+      ],
+      "highlights": [
+        "泽尔维露天博物馆",
+        "于希萨尔城堡",
+        "帕夏巴阇(僧侣谷)",
+        "阿瓦诺斯陶艺工坊",
+        "代夫伦特(幻想谷)",
+        "爱情谷",
+        "皮革店",
+        "格雷梅全景",
+        "鸽子谷"
       ]
     },
     "yesil-tur": {
-      "name": "卡帕多奇亚绿线之旅（Green Tour）",
-      "shortDescription": "Göreme 全景、鸽子谷、Derinkuyu 地下城、Ihlara 峡谷（全景玻璃观景台 + 徒步）、Belisırma 村午餐、Selime 大教堂、Narlıgöl、Yaprakhisar——含专业向导 + 博物馆门票 + Belisırma 午餐。",
-      "badge": "自然",
+      "name": "卡帕多西亚绿色之旅 (Green Tour)",
+      "shortDescription": "地下城、泽尔维露天博物馆、于希萨尔城堡、帕夏巴阇(僧侣谷)、阿瓦诺斯陶艺工坊、代夫伦特(幻想谷)、爱情谷、皮革店、格雷梅全景、鸽子谷——含往返酒店接送、专业导游、午餐及博物馆门票。",
+      "badge": "含地下城",
       "includes": [
+        "往返酒店接送",
         "专业导游",
-        "酒店接送",
-        "地下城 + 博物馆门票",
-        "Belisırma 午餐",
-        "所有税费"
+        "午餐",
+        "博物馆门票"
       ],
       "highlights": [
         "地下城",
-        "Ihlara 玻璃观景台",
-        "Belisırma 乡村午餐",
-        "Selime 大教堂"
+        "泽尔维露天博物馆",
+        "于希萨尔城堡",
+        "帕夏巴阇(僧侣谷)",
+        "阿瓦诺斯陶艺工坊",
+        "代夫伦特(幻想谷)",
+        "爱情谷",
+        "皮革店",
+        "格雷梅全景",
+        "鸽子谷"
       ]
     },
     "mix-tur": {
@@ -381,48 +364,36 @@
         "12+ 个景点"
       ]
     },
-    "sari-tur": {
-      "name": "卡帕多奇亚黄线之旅（Yellow Tour）",
-      "shortDescription": "Soğanlı 教堂群、Sobesos 古城、Mustafapaşa 希腊村、Kızılçukur 峡谷 2 公里徒步、Çavuşin 拜占庭教堂、薰衣草花园、地毯工坊、鸽子谷——更宁静、更深入的路线。",
+    "eco-yesil-tur": {
+      "name": "Eco Green Tour(生态绿色之旅)",
+      "shortDescription": "格雷梅全景、鸽子谷、缟玛瑙工坊、卡伊马克勒和德林库尤地下城、伊赫拉拉山谷徒步、纳尔湖及当地风味品鉴——含专业导游、接送、午餐及博物馆门票,09:30-18:00。",
+      "badge": "自然",
       "includes": [
         "专业导游",
         "接送",
-        "博物馆门票",
-        "午餐"
+        "午餐",
+        "博物馆门票"
       ],
       "highlights": [
-        "Soğanlı 教堂群",
-        "Kızılçukur 徒步",
-        "Mustafapaşa",
-        "宁静路线"
-      ]
-    },
-    "yeralti-turu": {
-      "name": "地下城之旅",
-      "shortDescription": "Derinkuyu + Kaymaklı 地下城、Çavuşin 拜占庭教堂、鸽子谷——半天深度之旅。含专业向导 + 博物馆门票。",
-      "includes": [
-        "专业向导",
-        "接送",
-        "2 座地下城入场",
-        "Çavuşin 教堂"
-      ],
-      "highlights": [
-        "2 座地下城",
-        "Çavuşin 拜占庭教堂",
-        "半天"
+        "格雷梅全景",
+        "鸽子谷",
+        "缟玛瑙",
+        "卡伊马克勒和德林库尤地下城",
+        "伊赫拉拉山谷徒步",
+        "纳尔湖",
+        "当地风味品鉴"
       ]
     },
     "gun-batimi-turu": {
       "name": "日落全景之旅",
-      "shortDescription": "Aktepe + Göreme 全景 + Kızılçukur 峡谷日落——含葡萄酒招待。",
+      "shortDescription": "阿克特佩+格雷梅全景+克孜勒丘库尔山谷日落——含导游及接送。",
       "includes": [
-        "向导",
-        "接送",
-        "葡萄酒招待"
+        "导游",
+        "接送"
       ],
       "highlights": [
         "日落",
-        "葡萄酒服务",
+        "克孜勒丘库尔山谷",
         "全景"
       ]
     },
@@ -1063,7 +1034,7 @@
   "faq": {
     "f0": {
       "question": "卡帕多奇亚热气球之旅多少钱？",
-      "answer": "在 Trip and Tick，卡帕多奇亚"
+      "answer": "在 Trip and Tick，卡帕多奇亚热气球之旅价格每人 €100 起。浪漫私人吊篮价格需咨询——请通过 WhatsApp 询问最新价格。所有价格均含酒店接送、早餐、4000 万欧元保险、证书及香槟服务。"
     },
     "f1": {
       "question": "卡帕多奇亚热气球几岁起可以乘坐？",
@@ -1103,7 +1074,7 @@
     },
     "f10": {
       "question": "How much is the balloon tour per person, and can I pay in Turkish lira?",
-      "answer": "The Standard flight is €165 per person, Deluxe €295; the Romantic private basket is priced on request. Prices are in euros; the site's currency selector shows the TRY and USD equivalent at that day's rate. For dates within 7 days the price can change daily with weather and demand."
+      "answer": "标准飞行每人 €100 起；浪漫私人吊篮价格需咨询。价格以欧元计；网站的货币选择器可显示当日汇率下的 TRY 和 USD 等值金额。请通过 WhatsApp 询问最新价格。"
     },
     "f11": {
       "question": "How long is the balloon flight and what time does it start?",
@@ -1111,7 +1082,7 @@
     },
     "f12": {
       "question": "How many people fit in a balloon, and is there a private balloon for two?",
-      "answer": "The Standard basket carries 16-20 passengers, the Deluxe basket up to 16. A private basket for two only is available with the Romantic Private Balloon package, popular for proposals and anniversaries."
+      "answer": "标准吊篮可载 16-20 名乘客。仅限两人的私人吊篮可通过浪漫私人热气球套餐预订，深受求婚和纪念日欢迎。"
     },
     "f13": {
       "question": "Which month is best for a Cappadocia balloon flight?",

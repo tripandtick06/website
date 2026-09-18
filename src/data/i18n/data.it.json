@@ -3,7 +3,7 @@
     "standart-balon-ucusu": {
       "name": "Volo in Mongolfiera Standard",
       "shortDescription": "Il tour in mongolfiera più economico. Volo di 60 minuti, cestello ampio, rimborso del 100% in caso di cancellazione per maltempo.",
-      "longDescription": "La soluzione più conveniente per ammirare le leggendarie formazioni rocciose della Cappadocia dall'alto. Il cestello standard ha una capacità di 16-20 passeggeri e offre un volo di 60 minuti con piloti professionisti. Il trasferimento dall'hotel, una leggera colazione, assicurazione di 40 milioni di Euro, certificato di volo e medaglia, celebrazione dell'atterraggio con champagne — tutto incluso nel prezzo. I prezzi possono variare quotidianamente in base alle condizioni meteorologiche e alla disponibilità — il prezzo del catalogo è valido per date oltre 7 giorni, il prezzo attuale è valido per date entro 7 giorni.",
+      "longDescription": "La soluzione più conveniente per ammirare le leggendarie formazioni rocciose della Cappadocia dall'alto. Il cestello standard ha una capacità di 16-20 passeggeri e offre un volo di 60 minuti con piloti professionisti. Il trasferimento dall'hotel, una leggera colazione, assicurazione di 40 milioni di Euro, certificato di volo e medaglia, celebrazione dell'atterraggio con champagne — tutto incluso nel prezzo. I prezzi partono da 100 €; scrivici su WhatsApp per conoscere il prezzo aggiornato in base alla data, al meteo e alla disponibilità.",
       "badge": "Più Popolare",
       "includes": [
         "Trasferimento dall'hotel",
@@ -22,39 +22,12 @@
         "Le donne in gravidanza non possono partecipare",
         "Chi ha gravi problemi cardiaci o di salute non può partecipare",
         "Cancellazione in base alle condizioni meteorologiche — rimborso del 100% in caso di cancellazione da parte dell'operatore",
-        "Il prezzo può variare quotidianamente (condizioni meteorologiche + disponibilità)"
+        "Prezzo di partenza — prezzo aggiornato in base alla data e alla disponibilità su WhatsApp"
       ],
       "highlights": [
         "60 minuti",
         "Incluso certificato",
         "Servizio champagne"
-      ]
-    },
-    "deluxe-balon-ucusu": {
-      "name": "Volo in Mongolfiera Deluxe",
-      "shortDescription": "Cestello piccolo (max 16 persone), 60 minuti di esperienza di lusso + certificato di cartone.",
-      "longDescription": "Un'esperienza premium in mongolfiera. Volo di 60 minuti più spazioso con cestello piccolo (max 16 passeggeri), certificato di volo in cartone, colazione gourmet e trasferimento VIP. Collaboriamo con i migliori operatori.",
-      "badge": "Deluxe",
-      "includes": [
-        "Trasferimento VIP dall'hotel",
-        "Colazione gourmet",
-        "Assicurazione 40M€",
-        "Certificato di volo in cartone",
-        "Champagne premium",
-        "Servizio fotografico professionale"
-      ],
-      "excludes": [
-        "Spese personali"
-      ],
-      "warnings": [
-        "I bambini sotto i 6 anni non possono partecipare",
-        "Le donne in gravidanza non possono partecipare",
-        "Chi ha gravi problemi cardiaci o di salute non può partecipare"
-      ],
-      "highlights": [
-        "60 minuti",
-        "Cestello piccolo (max 16)",
-        "Certificato di cartone"
       ]
     },
     "romantik-ozel-balon": {
@@ -278,21 +251,6 @@
         "3 ore di spettacolo"
       ]
     },
-    "turk-gecesi-yemeksiz": {
-      "name": "Serata Turca (Senza Cena)",
-      "shortDescription": "Spettacolo di serata turca — semah, folklore, danza orientale, danza caucasica. Cena/bevande non incluse, solo spettacolo + trasferimento.",
-      "includes": [
-        "Semah + folklore + danza orientale",
-        "Spettacolo di danza caucasica",
-        "Bevanda di benvenuto",
-        "Trasferimento dall'hotel"
-      ],
-      "highlights": [
-        "Più conveniente",
-        "Solo spettacolo",
-        "Trasferimento incluso"
-      ]
-    },
     "microlight-standart": {
       "name": "Volo Microlight Standard",
       "shortDescription": "Volo in microlight motorizzato di 15-18 minuti sopra il cuore della Cappadocia — trasferimento privato, certificato di volo, attrezzatura, servizio fotografico incluso.",
@@ -328,40 +286,65 @@
         "Foto premium"
       ]
     },
-    "kirmizi-tur": {
-      "name": "Tour Rosso di Cappadocia",
-      "shortDescription": "Museo all'aperto di Göreme, Castello di Uçhisar, Museo all'aperto di Zelve, Paşabağ (Valle dei Monaci), Valle di Devrent (Valle dei Sogni), laboratorio di ceramica di Avanos, Valle dell'Amore, Valle dei Piccioni, Çavuşin, laboratorio di pelle — guida professionale + biglietti per il museo + pranzo inclusi.",
-      "badge": "Il più Popolare",
+    "balon-flying-dress-cekimi": {
+      "name": "Servizio Fotografico Mongolfiera + Flying Dress",
+      "shortDescription": "Volo in mongolfiera all'alba + servizio fotografico professionale nel cesto e nella valle (30 min, 20 scatti editati). Noleggio dell'abito Flying Dress opzionale — un unico prodotto per i tuoi contenuti Instagram/TikTok.",
+      "badge": "Di tendenza",
       "includes": [
-        "Guida turistica professionale (TR/EN/RU)",
-        "Trasferimento dall'hotel",
-        "Biglietti d'ingresso al museo",
-        "Pranzo",
-        "Tutte le tasse"
+        "Volo in mongolfiera all'alba (cesto standard)",
+        "Fotografo professionista (30 min, cesto + valle)",
+        "20 scatti editati (consegna digitale)",
+        "Transfer dall'hotel"
       ],
       "highlights": [
-        "10+ fermate",
-        "Museo all'aperto di Göreme",
+        "Mongolfiera + servizio fotografico in un unico prodotto",
+        "20 scatti editati",
+        "Opzione noleggio abito"
+      ]
+    },
+    "kirmizi-tur": {
+      "name": "Tour Rosso della Cappadocia (Red Tour)",
+      "shortDescription": "Museo all'Aperto di Zelve, Castello di Uçhisar, Paşabağ (Valle dei Monaci), laboratorio di ceramica di Avanos, Devrent (Valle dell'Immaginazione), Valle dell'Amore, negozio di pelletteria, Panorama di Göreme, Valle dei Piccioni — transfer di andata e ritorno, guida professionale, pranzo e biglietti d'ingresso ai musei inclusi.",
+      "badge": "Più Popolare",
+      "includes": [
+        "Transfer di andata e ritorno",
+        "Guida turistica professionale",
+        "Pranzo",
+        "Biglietti d'ingresso ai musei"
+      ],
+      "highlights": [
+        "Museo all'Aperto di Zelve",
+        "Castello di Uçhisar",
+        "Paşabağ (Valle dei Monaci)",
         "Laboratorio di ceramica di Avanos",
-        "Biglietti per il museo inclusi"
+        "Devrent (Valle dell'Immaginazione)",
+        "Valle dell'Amore",
+        "Negozio di pelletteria",
+        "Panorama di Göreme",
+        "Valle dei Piccioni"
       ]
     },
     "yesil-tur": {
-      "name": "Tour Verde di Cappadocia",
-      "shortDescription": "Panorama di Göreme, Valle dei Piccioni, Città Sotterranea di Derinkuyu, Valle di Ihlara (terrazza panoramica + passeggiata), pranzo a Belisırma, Cattedrale di Selime, Lago di Narlı, Yaprakhisar — guida professionale + biglietti per i musei + pranzo a Belisırma inclusi.",
-      "badge": "Natura",
+      "name": "Tour Verde della Cappadocia (Green Tour)",
+      "shortDescription": "Città sotterranea, Museo all'Aperto di Zelve, Castello di Uçhisar, Paşabağ (Valle dei Monaci), laboratorio di ceramica di Avanos, Devrent (Valle dell'Immaginazione), Valle dell'Amore, negozio di pelletteria, Panorama di Göreme, Valle dei Piccioni — transfer di andata e ritorno, guida professionale, pranzo e biglietti d'ingresso ai musei inclusi.",
+      "badge": "Include la città sotterranea",
       "includes": [
+        "Transfer di andata e ritorno",
         "Guida turistica professionale",
-        "Trasferimento dall'hotel",
-        "Biglietti per la città sotterranea + musei",
-        "Pranzo a Belisırma",
-        "Tutte le tasse"
+        "Pranzo",
+        "Biglietti d'ingresso ai musei"
       ],
       "highlights": [
         "Città sotterranea",
-        "Terrazza di Ihlara",
-        "Pranzo a Belisırma",
-        "Cattedrale di Selime"
+        "Museo all'Aperto di Zelve",
+        "Castello di Uçhisar",
+        "Paşabağ (Valle dei Monaci)",
+        "Laboratorio di ceramica di Avanos",
+        "Devrent (Valle dell'Immaginazione)",
+        "Valle dell'Amore",
+        "Negozio di pelletteria",
+        "Panorama di Göreme",
+        "Valle dei Piccioni"
       ]
     },
     "mix-tur": {
@@ -381,48 +364,36 @@
         "12+ fermate"
       ]
     },
-    "sari-tur": {
-      "name": "Tour Giallo di Cappadocia",
-      "shortDescription": "Chiese di Soğanlı, antica città di Sobesos, villaggio greco di Mustafapaşa, passeggiata di 2 km nella Valle di Kızılçukur, chiesa bizantina di Çavuşin, Giardino di Lavanda, laboratorio di tappeti, Valle dei Piccioni — un percorso più tranquillo e profondo.",
+    "eco-yesil-tur": {
+      "name": "Eco Green Tour",
+      "shortDescription": "Panorama di Göreme, Valle dei Piccioni, laboratorio dell'onice, città sotterranee di Kaymaklı e Derinkuyu, escursione nella Valle di Ihlara, Lago Nar e degustazione di sapori locali — guida professionale, transfer, pranzo e biglietti d'ingresso ai musei inclusi. Dalle 9:30 alle 18:00.",
+      "badge": "Natura",
       "includes": [
         "Guida turistica professionale",
-        "Trasferimento",
-        "Biglietti per i musei",
-        "Pranzo"
+        "Transfer",
+        "Pranzo",
+        "Biglietti d'ingresso ai musei"
       ],
       "highlights": [
-        "Chiese di Soğanlı",
-        "Passeggiata a Kızılçukur",
-        "Mustafapaşa",
-        "Percorso tranquillo"
-      ]
-    },
-    "yeralti-turu": {
-      "name": "Tour delle Città Sotterranee",
-      "shortDescription": "Città sotterranee di Derinkuyu + Kaymaklı, chiesa bizantina di Çavuşin, Valle dei Piccioni — tour dettagliato di mezza giornata. Guida professionale + biglietti per i musei inclusi.",
-      "includes": [
-        "Guida professionale",
-        "Trasferimento",
-        "Ingresso a 2 città sotterranee",
-        "Chiesa di Çavuşin"
-      ],
-      "highlights": [
-        "2 città sotterranee",
-        "Chiesa bizantina di Çavuşin",
-        "Mezza giornata"
+        "Panorama di Göreme",
+        "Valle dei Piccioni",
+        "Onice",
+        "Città sotterranee di Kaymaklı e Derinkuyu",
+        "Escursione nella Valle di Ihlara",
+        "Lago Nar",
+        "Degustazione di sapori locali"
       ]
     },
     "gun-batimi-turu": {
-      "name": "Tour Panorama del Tramonto",
-      "shortDescription": "Aktepe + panorama di Göreme + tramonto nella Valle di Kızılçukur — include degustazione di vino.",
+      "name": "Tour Panoramico al Tramonto",
+      "shortDescription": "Aktepe + panorama di Göreme + Valle di Kızılçukur al tramonto — guida e transfer inclusi.",
       "includes": [
         "Guida",
-        "Trasferimento",
-        "Degustazione di vino"
+        "Transfer"
       ],
       "highlights": [
         "Tramonto",
-        "Servizio di vino",
+        "Valle di Kızılçukur",
         "Panorama"
       ]
     },
@@ -1063,7 +1034,7 @@
   "faq": {
     "f0": {
       "question": "Quanto costa il tour in mongolfiera a Cappadocia?",
-      "answer": "I prezzi per il tour in mongolfiera a Cappadocia su Trip and Tick partono da €165 a persona. Standard €165, Deluxe €295, Romantico speciale €580. Tutti i prezzi includono trasferimento dall'hotel, colazione, assicurazione da 40 milioni di Euro, certificato e servizio di champagne."
+      "answer": "I prezzi per il tour in mongolfiera a Cappadocia su Trip and Tick partono da €100 a persona. Il cesto privato Romantico è quotato su richiesta — chiedeteci il prezzo attuale su WhatsApp. Tutti i prezzi includono trasferimento dall'hotel, colazione, assicurazione da 40 milioni di Euro, certificato e servizio di champagne."
     },
     "f1": {
       "question": "A che età si può volare in mongolfiera a Cappadocia?",
@@ -1103,7 +1074,7 @@
     },
     "f10": {
       "question": "How much is the balloon tour per person, and can I pay in Turkish lira?",
-      "answer": "The Standard flight is €165 per person, Deluxe €295; the Romantic private basket is priced on request. Prices are in euros; the site's currency selector shows the TRY and USD equivalent at that day's rate. For dates within 7 days the price can change daily with weather and demand."
+      "answer": "Il volo Standard parte da €100 a persona; il cesto privato Romantico è quotato su richiesta. I prezzi sono in euro; il selettore di valuta del sito mostra l'equivalente in TRY e USD al tasso del giorno. Chiedeteci il prezzo attuale su WhatsApp."
     },
     "f11": {
       "question": "How long is the balloon flight and what time does it start?",
@@ -1111,7 +1082,7 @@
     },
     "f12": {
       "question": "How many people fit in a balloon, and is there a private balloon for two?",
-      "answer": "The Standard basket carries 16-20 passengers, the Deluxe basket up to 16. A private basket for two only is available with the Romantic Private Balloon package, popular for proposals and anniversaries."
+      "answer": "Il cesto Standard trasporta 16-20 passeggeri. Un cesto privato solo per due è disponibile con il pacchetto Mongolfiera Privata Romantica, molto richiesto per proposte di matrimonio e anniversari."
     },
     "f13": {
       "question": "Which month is best for a Cappadocia balloon flight?",

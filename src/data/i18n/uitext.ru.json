@@ -32,7 +32,9 @@
   "serviceCard": {
     "infoForm": "Информация и форма",
     "reserve": "Забронировать сейчас",
-    "perCouple": "на пару"
+    "perCouple": "на пару",
+    "fromPrice": "От {price}",
+    "askPrice": "Узнать цену"
   },
   "reviewScore": {
     "excellent": "Отлично",

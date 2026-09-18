@@ -18,7 +18,7 @@ import {
   canonicalFor,
   ogLocale,
 } from "@/lib/hreflang";
-import { formatPrice } from "@/lib/utils";
+import { fromPriceShort } from "@/lib/price-label";
 
 type NavKey = "activities" | "tours" | "packages";
 
@@ -64,7 +64,7 @@ export function makeServiceDetailPage(cfg: ServiceDetailConfig) {
       ? loc === "tr"
         ? "Özel Fiyat"
         : "Custom Price"
-      : formatPrice(item.adultPrice, item.currency);
+      : fromPriceShort(loc, item.adultPrice, item.currency);
     // Do not repeat the region when the item name already carries it
     // ("Kapadokya Kırmızı Tur — Kapadokya €45" read as keyword stuffing and
     // pushed titles past 60 chars; final audit 2026-09-16).

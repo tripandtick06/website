@@ -3,7 +3,7 @@
     "standart-balon-ucusu": {
       "name": "Standaard Ballonvlucht",
       "shortDescription": "De voordeligste ballontour. 60 min vliegen, ruime mand, 100% terugbetaling bij annulering wegens weer.",
-      "longDescription": "De voordeligste manier om de legendarische sprookjesschoorstenen van Cappadocië vanuit de lucht te bewonderen. De standaardmand biedt plaats aan 16-20 passagiers en levert onder begeleiding van professionele piloten een vlucht van 60 minuten. Hoteltransfer, licht ontbijt, verzekering van 40 miljoen euro, vluchtcertificaat en medaille, en een landingsviering met champagne — alles is bij de prijs inbegrepen. De prijzen kunnen dagelijks variëren afhankelijk van de weersomstandigheden en de drukte — voor data die meer dan 7 dagen vooruit liggen geldt de catalogusprijs, voor data binnen 7 dagen geldt de actuele prijs.",
+      "longDescription": "De voordeligste manier om de legendarische sprookjesschoorstenen van Cappadocië vanuit de lucht te bewonderen. De standaardmand biedt plaats aan 16-20 passagiers en levert onder begeleiding van professionele piloten een vlucht van 60 minuten. Hoteltransfer, licht ontbijt, verzekering van 40 miljoen euro, vluchtcertificaat en medaille, en een landingsviering met champagne — alles is bij de prijs inbegrepen. Prijzen beginnen vanaf 100 €; app ons op WhatsApp voor de actuele prijs op basis van uw datum, het weer en de beschikbaarheid.",
       "badge": "Populairst",
       "includes": [
         "Transfer vanaf het hotel",
@@ -22,39 +22,12 @@
         "Zwangere vrouwen mogen niet mee",
         "Mensen met ernstige hart- of gezondheidsproblemen mogen niet mee",
         "Annulering afhankelijk van het weer — bij annulering door de operator 100% terugbetaling",
-        "Prijs kan binnen 7 dagen dagelijks variëren (weersomstandigheden + drukte)"
+        "Startprijs — actuele prijs op basis van uw datum en beschikbaarheid via WhatsApp"
       ],
       "highlights": [
         "60 minuten",
         "Inclusief certificaat",
         "Champagneservice"
-      ]
-    },
-    "deluxe-balon-ucusu": {
-      "name": "Deluxe Ballonvlucht",
-      "shortDescription": "Kleine mand (max. 16 personen), 60 minuten luxe beleving + kartonnen certificaat.",
-      "longDescription": "Een premium ballonbeleving. Een ruimere vlucht van 60 minuten met een kleine mand (max. 16 passagiers), een kartonnen vluchtcertificaat, een gourmetontbijt en een VIP-transfer. Wij werken met de meest vooraanstaande operators.",
-      "badge": "Deluxe",
-      "includes": [
-        "VIP-hoteltransfer",
-        "Gourmetontbijt",
-        "Verzekering van 40 mln €",
-        "Kartonnen vluchtcertificaat",
-        "Premium champagne",
-        "Professionele fotoshoot"
-      ],
-      "excludes": [
-        "Persoonlijke uitgaven"
-      ],
-      "warnings": [
-        "Kinderen onder de 6 jaar mogen niet mee",
-        "Zwangere vrouwen mogen niet mee",
-        "Mensen met ernstige hart- of gezondheidsproblemen mogen niet mee"
-      ],
-      "highlights": [
-        "60 minuten",
-        "Kleine mand (max. 16)",
-        "Kartonnen certificaat"
       ]
     },
     "romantik-ozel-balon": {
@@ -278,21 +251,6 @@
         "3 uur show"
       ]
     },
-    "turk-gecesi-yemeksiz": {
-      "name": "Turkse Avond (zonder diner)",
-      "shortDescription": "Show van de Turkse Avond — semah, folklore, oosterse dans, Kaukasisch. Diner/alcohol niet inbegrepen, alleen de show + transfer.",
-      "includes": [
-        "Semah + folklore + oosterse dans",
-        "Kaukasische dansshow",
-        "Welkomstdrankje",
-        "Hoteltransfer"
-      ],
-      "highlights": [
-        "Voordeliger",
-        "Alleen de show",
-        "Inclusief transfer"
-      ]
-    },
     "microlight-standart": {
       "name": "Microlight Standaardvlucht",
       "shortDescription": "Gemotoriseerde microlightvlucht van 15-18 minuten boven het hart van Cappadocië — inclusief privétransfer, vluchtcertificaat, uitrusting en fotoshoot.",
@@ -328,40 +286,65 @@
         "Premium foto's"
       ]
     },
-    "kirmizi-tur": {
-      "name": "Cappadocië Rode Tour (Red Tour)",
-      "shortDescription": "Openluchtmuseum Göreme, Kasteel van Uçhisar, Openluchtmuseum Zelve, Paşabağ (Monnikenvallei), Devrent (Verbeeldingsvallei), keramiekatelier in Avanos, Love Valley, Duivenvallei, Çavuşin, lederatelier — inclusief professionele gids + museumtickets + lunch.",
-      "badge": "Populairst",
+    "balon-flying-dress-cekimi": {
+      "name": "Ballon + Flying Dress Fotoshoot",
+      "shortDescription": "Zonsopgang ballonvlucht + professionele fotograaf in de mand en in het dal (30 min, 20 bewerkte foto's). Flying dress jurkverhuur optioneel toe te voegen — één product voor je Instagram/TikTok-content.",
+      "badge": "Trending",
       "includes": [
-        "Professionele tourgids (TR/EN/RU)",
-        "Transfer vanaf het hotel",
-        "Toegangstickets musea",
-        "Lunch",
-        "Alle belastingen"
+        "Zonsopgang ballonvlucht (standaard mand)",
+        "Professionele fotograaf (30 min, mand + dal)",
+        "20 bewerkte foto's (digitale levering)",
+        "Hoteltransfer"
       ],
       "highlights": [
-        "10+ stops",
-        "Openluchtmuseum Göreme",
-        "Keramiekatelier in Avanos",
-        "Inclusief museumtickets"
+        "Ballon + shoot in één product",
+        "20 bewerkte foto's",
+        "Optie jurkverhuur"
+      ]
+    },
+    "kirmizi-tur": {
+      "name": "Cappadocië Rode Tour (Red Tour)",
+      "shortDescription": "Openluchtmuseum Zelve, Kasteel Uçhisar, Paşabağ (Monnikendal), pottenbakkerswerkplaats in Avanos, Devrent (Fantasiedal), Liefdesdal, leerwinkel, Panorama Göreme, Duivendal — ophaal- en terugbrengservice, professionele gids, lunch en museumtickets inbegrepen.",
+      "badge": "Meest populair",
+      "includes": [
+        "Ophaal- en terugbrengservice",
+        "Professionele reisgids",
+        "Lunch",
+        "Museumtickets"
+      ],
+      "highlights": [
+        "Openluchtmuseum Zelve",
+        "Kasteel Uçhisar",
+        "Paşabağ (Monnikendal)",
+        "Pottenbakkerswerkplaats Avanos",
+        "Devrent (Fantasiedal)",
+        "Liefdesdal",
+        "Leerwinkel",
+        "Panorama Göreme",
+        "Duivendal"
       ]
     },
     "yesil-tur": {
       "name": "Cappadocië Groene Tour (Green Tour)",
-      "shortDescription": "Panorama van Göreme, Duivenvallei, ondergrondse stad Derinkuyu, Ihlaravallei (panoramisch glazen terras + wandeling), lunch in het dorp Belisırma, Kathedraal van Selime, Narlıgöl, Yaprakhisar — inclusief professionele gids + museumtickets + lunch in Belisırma.",
-      "badge": "Natuur",
+      "shortDescription": "Ondergrondse stad, Openluchtmuseum Zelve, Kasteel Uçhisar, Paşabağ (Monnikendal), pottenbakkerswerkplaats in Avanos, Devrent (Fantasiedal), Liefdesdal, leerwinkel, Panorama Göreme, Duivendal — ophaal- en terugbrengservice, professionele gids, lunch en museumtickets inbegrepen.",
+      "badge": "Inclusief ondergrondse stad",
       "includes": [
-        "Professionele tourgids",
-        "Transfer vanaf het hotel",
-        "Tickets ondergrondse stad + musea",
-        "Lunch in Belisırma",
-        "Alle belastingen"
+        "Ophaal- en terugbrengservice",
+        "Professionele reisgids",
+        "Lunch",
+        "Museumtickets"
       ],
       "highlights": [
         "Ondergrondse stad",
-        "Glazen terras Ihlara",
-        "Dorpslunch in Belisırma",
-        "Kathedraal van Selime"
+        "Openluchtmuseum Zelve",
+        "Kasteel Uçhisar",
+        "Paşabağ (Monnikendal)",
+        "Pottenbakkerswerkplaats Avanos",
+        "Devrent (Fantasiedal)",
+        "Liefdesdal",
+        "Leerwinkel",
+        "Panorama Göreme",
+        "Duivendal"
       ]
     },
     "mix-tur": {
@@ -381,48 +364,36 @@
         "12+ stops"
       ]
     },
-    "sari-tur": {
-      "name": "Cappadocië Gele Tour (Yellow Tour)",
-      "shortDescription": "Kerken van Soğanlı, antieke stad Sobesos, Grieks dorp Mustafapaşa, wandeling van 2 km door de Kızılçukurvallei, Byzantijnse kerk van Çavuşin, Lavendeltuin, tapijtatelier, Duivenvallei — een rustigere en diepere route.",
+    "eco-yesil-tur": {
+      "name": "Eco Green Tour",
+      "shortDescription": "Panorama Göreme, Duivendal, onyxwerkplaats, ondergrondse steden Kaymaklı en Derinkuyu, wandeling in het Ihlara-dal, Nar-meer en een proeverij van lokale smaken — professionele gids, transfer, lunch en museumtickets inbegrepen. 09:30-18:00 uur.",
+      "badge": "Natuur",
       "includes": [
-        "Professionele tourgids",
+        "Professionele reisgids",
         "Transfer",
-        "Museumtickets",
-        "Lunch"
+        "Lunch",
+        "Museumtickets"
       ],
       "highlights": [
-        "Kerken van Soğanlı",
-        "Wandeling Kızılçukur",
-        "Mustafapaşa",
-        "Rustige route"
-      ]
-    },
-    "yeralti-turu": {
-      "name": "Tour Ondergrondse Steden",
-      "shortDescription": "Ondergrondse steden Derinkuyu + Kaymaklı, Byzantijnse kerk van Çavuşin, Duivenvallei — gedetailleerde halvedagtour. Inclusief professionele gids + museumtickets.",
-      "includes": [
-        "Professionele gids",
-        "Transfer",
-        "Toegang tot 2 ondergrondse steden",
-        "Kerk van Çavuşin"
-      ],
-      "highlights": [
-        "2 ondergrondse steden",
-        "Byzantijnse kerk van Çavuşin",
-        "Halve dag"
+        "Panorama Göreme",
+        "Duivendal",
+        "Onyx",
+        "Ondergrondse steden Kaymaklı en Derinkuyu",
+        "Wandeling in het Ihlara-dal",
+        "Nar-meer",
+        "Proeverij van lokale smaken"
       ]
     },
     "gun-batimi-turu": {
-      "name": "Panoramatour bij Zonsondergang",
-      "shortDescription": "Aktepe + panorama van Göreme + Kızılçukurvallei bij zonsondergang — inclusief wijnservering.",
+      "name": "Zonsondergang Panoramatour",
+      "shortDescription": "Aktepe + Panorama Göreme + Kızılçukur-vallei bij zonsondergang — gids en transfer inbegrepen.",
       "includes": [
         "Gids",
-        "Transfer",
-        "Wijnservering"
+        "Transfer"
       ],
       "highlights": [
         "Zonsondergang",
-        "Wijnservice",
+        "Kızılçukur-vallei",
         "Panorama"
       ]
     },
@@ -1063,7 +1034,7 @@
   "faq": {
     "f0": {
       "question": "Hoeveel kost een ballontour in Cappadocië?",
-      "answer": "Bij Trip and Tick beginnen de prijzen voor een ballontour in Cappadocië vanaf €165 per persoon. Standaard €165, Deluxe €295, Romantisch privé €580. Bij alle prijzen zijn de hoteltransfer, het ontbijt, een verzekering van 40 miljoen euro, het certificaat en de champagneservice inbegrepen."
+      "answer": "Bij Trip and Tick beginnen de prijzen voor een ballontour in Cappadocië vanaf €100 per persoon. De Romantische privémand wordt op aanvraag geprijsd — vraag ons op WhatsApp naar de actuele prijs. Bij alle prijzen zijn de hoteltransfer, het ontbijt, een verzekering van 40 miljoen euro, het certificaat en de champagneservice inbegrepen."
     },
     "f1": {
       "question": "Vanaf welke leeftijd mag je mee in een ballon in Cappadocië?",
@@ -1103,7 +1074,7 @@
     },
     "f10": {
       "question": "How much is the balloon tour per person, and can I pay in Turkish lira?",
-      "answer": "The Standard flight is €165 per person, Deluxe €295; the Romantic private basket is priced on request. Prices are in euros; the site's currency selector shows the TRY and USD equivalent at that day's rate. For dates within 7 days the price can change daily with weather and demand."
+      "answer": "De Standaardvlucht begint vanaf €100 per persoon; de Romantische privémand wordt op aanvraag geprijsd. Prijzen zijn in euro's; de valutakiezer van de site toont het TRY- en USD-equivalent tegen de koers van die dag. Vraag ons op WhatsApp naar de actuele prijs."
     },
     "f11": {
       "question": "How long is the balloon flight and what time does it start?",
@@ -1111,7 +1082,7 @@
     },
     "f12": {
       "question": "How many people fit in a balloon, and is there a private balloon for two?",
-      "answer": "The Standard basket carries 16-20 passengers, the Deluxe basket up to 16. A private basket for two only is available with the Romantic Private Balloon package, popular for proposals and anniversaries."
+      "answer": "De Standaardmand vervoert 16-20 passagiers. Een privémand voor slechts twee is beschikbaar bij het Romantische Privéballon-pakket, populair voor aanzoeken en jubilea."
     },
     "f13": {
       "question": "Which month is best for a Cappadocia balloon flight?",

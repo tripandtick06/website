@@ -51,6 +51,10 @@ export interface UiText {
     infoForm: string;
     reserve: string;
     perCouple: string;
+    /** "{price}" yer tutuculu baslangic-fiyat etiketi (net fiyat verilmez). */
+    fromPrice: string;
+    /** Fiyati gizli urun (paket) icin CTA metni. */
+    askPrice: string;
   };
   reviewScore: {
     excellent: string;
@@ -111,6 +115,8 @@ const BASE_UI_TEXT = {
       infoForm: "Bilgi & Form",
       reserve: "Rezervasyon",
       perCouple: "çift başı",
+      fromPrice: "{price}'dan başlayan fiyatlarla",
+      askPrice: "Fiyat için bilgi alın",
     },
     reviewScore: {
       excellent: "Mükemmel",
@@ -169,6 +175,8 @@ const BASE_UI_TEXT = {
       infoForm: "Info & Form",
       reserve: "Book Now",
       perCouple: "per couple",
+      fromPrice: "Prices from {price}",
+      askPrice: "Ask for a price",
     },
     reviewScore: {
       excellent: "Excellent",
@@ -227,6 +235,8 @@ const BASE_UI_TEXT = {
       infoForm: "Info & Formular",
       reserve: "Jetzt buchen",
       perCouple: "pro Paar",
+      fromPrice: "Preise ab {price}",
+      askPrice: "Preis anfragen",
     },
     reviewScore: {
       excellent: "Ausgezeichnet",
@@ -285,6 +295,8 @@ const BASE_UI_TEXT = {
       infoForm: "Infos & Formulaire",
       reserve: "Réserver",
       perCouple: "par couple",
+      fromPrice: "À partir de {price}",
+      askPrice: "Demander le prix",
     },
     reviewScore: {
       excellent: "Excellent",
@@ -343,6 +355,8 @@ const BASE_UI_TEXT = {
       infoForm: "Info y formulario",
       reserve: "Reservar",
       perCouple: "por pareja",
+      fromPrice: "Desde {price}",
+      askPrice: "Solicitar precio",
     },
     reviewScore: {
       excellent: "Excelente",
@@ -401,6 +415,8 @@ const BASE_UI_TEXT = {
       infoForm: "Info & formulier",
       reserve: "Reserveren",
       perCouple: "per koppel",
+      fromPrice: "Vanaf {price}",
+      askPrice: "Prijs opvragen",
     },
     reviewScore: {
       excellent: "Uitstekend",
@@ -459,6 +475,8 @@ const BASE_UI_TEXT = {
       infoForm: "信息与表单",
       reserve: "立即预订",
       perCouple: "每对",
+      fromPrice: "{price} 起",
+      askPrice: "咨询价格",
     },
     reviewScore: {
       excellent: "极好",
@@ -517,6 +535,8 @@ const BASE_UI_TEXT = {
       infoForm: "जानकारी और फ़ॉर्म",
       reserve: "बुक करें",
       perCouple: "प्रति जोड़ा",
+      fromPrice: "{price} से शुरू",
+      askPrice: "कीमत के लिए संपर्क करें",
     },
     reviewScore: {
       excellent: "उत्कृष्ट",
@@ -575,6 +595,8 @@ const BASE_UI_TEXT = {
       infoForm: "معلومات اور فارم",
       reserve: "بک کریں",
       perCouple: "فی جوڑا",
+      fromPrice: "{price} سے شروع",
+      askPrice: "قیمت کے لیے رابطہ کریں",
     },
     reviewScore: {
       excellent: "بہترین",

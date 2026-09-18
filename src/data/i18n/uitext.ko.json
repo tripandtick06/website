@@ -32,7 +32,9 @@
   "serviceCard": {
     "infoForm": "정보 및 양식",
     "reserve": "지금 예약",
-    "perCouple": "커플당"
+    "perCouple": "커플당",
+    "fromPrice": "{price}부터",
+    "askPrice": "가격 문의"
   },
   "reviewScore": {
     "excellent": "우수",

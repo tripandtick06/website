@@ -32,7 +32,9 @@
   "serviceCard": {
     "infoForm": "Info & Modulo",
     "reserve": "Prenota ora",
-    "perCouple": "per coppia"
+    "perCouple": "per coppia",
+    "fromPrice": "A partire da {price}",
+    "askPrice": "Richiedi il prezzo"
   },
   "reviewScore": {
     "excellent": "Eccellente",

@@ -16,7 +16,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "Kapadokya'da hangi aktiviteler var?",
         answer:
-          "ATV safari, Jeep safari, at binme, Türk hamamı, Türk gecesi folklor şovu ve microlight uçuşu dahil 7+ kategori, toplam 16 farklı aktivite paketi sunuyoruz. Hepsi otel transferi dahil €29'dan başlıyor.",
+          "ATV safari, Jeep safari, at binme, Türk hamamı, Türk gecesi folklor şovu ve microlight uçuşu dahil 7+ kategori, toplam 15 farklı aktivite paketi sunuyoruz. Hepsi otel transferi dahil €29'dan başlıyor.",
       },
       {
         question: "ATV ve jeep safarinin yaş limiti nedir?",
@@ -31,24 +31,24 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "Türk Gecesi şovunda ne dahil?",
         answer:
-          "Yemekli paket €55: semah + folklor + oryantal + Kafkas dansı + 3 çeşit yemek + sınırsız alkollü/alkolsüz içecek + otel transferi (3 saat). Yemeksiz paket €35: sadece şov + hoşgeldin içeceği + transfer.",
+          "Yemekli paket €30'dan başlar: semah + folklor + oryantal + Kafkas dansı + 3 çeşit yemek + sınırsız alkollü/alkolsüz içecek + otel transferi (3 saat).",
       },
       {
         question: "Hamam paketi ne kadar sürer?",
         answer:
-          "Standart Türk Hamamı 90 dakika (€50): kese + köpük masajı + sauna + jakuzi. Deluxe paket 2 saat (€75): hamam + 30 dakika İsveç yağ masajı + tam vücut mask. Her ikisi de otel transferi dahil.",
+          "Standart Türk Hamamı 90 dakika, €50'den başlar: kese + köpük masajı + sauna + jakuzi. Deluxe paket 2 saat, €75'ten başlar: hamam + 30 dakika İsveç yağ masajı + tam vücut mask. Her ikisi de otel transferi dahil.",
       },
     ],
     packages: [
       {
         question: "Paket fiyatları kişi başı mı yoksa toplam mı?",
         answer:
-          "Belirtilen fiyatlar kişi başıdır (çift-kişilik konaklamada). Balayı paketi €1495 çift için toplam, evlilik teklifi paketi €1295 organize edilen kişi başınadır. Aile paketi 2 yetişkin + 2 çocuk toplam fiyatıdır.",
+          "Paket fiyatları sitede gösterilmez; her paket için güncel fiyatı WhatsApp'tan isteyin. Balayı paketi çift için toplam, evlilik teklifi paketi organize edilen kişi başına, aile paketi 2 yetişkin + 2 çocuk için toplam fiyatlandırılır.",
       },
       {
         question: "Paketler içinde balon turu hangi seviyede?",
         answer:
-          "Tam Gün Premium ve Macera paketleri Standart balon (€165); Aile paketi Standart balon (çocuk %80); Balayı ve Evlilik Teklifi paketleri VIP Romantik özel balon (sepette sadece siz veya 2 çift).",
+          "Tam Gün Premium ve Macera paketleri Standart balon (€100'den başlayan); Aile paketi Standart balon (çocuk %80); Balayı ve Evlilik Teklifi paketleri VIP Romantik özel balon (sepette sadece siz veya 2 çift, fiyat talebe göre).",
       },
       {
         question: "Paket rezervasyonunu ne kadar önce yapmalıyım?",
@@ -58,12 +58,12 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "Otel paketleri içinde hangi tip otel dahil?",
         answer:
-          "Tam Gün Premium: mağara otel orta segment (€120-165 gece-değeri). Balayı: VIP Honeymoon Mağara (€285 gece-değeri). Aile: Aile Resort havuzlu (€145 gece-değeri). Tüm paketlerde otel açık büfe kahvaltı dahildir.",
+          "Tam Gün Premium: mağara otel orta segment. Balayı: VIP Honeymoon Mağara. Aile: Aile Resort havuzlu. Tüm paketlerde otel açık büfe kahvaltı dahildir.",
       },
       {
         question: "Kurumsal paket nasıl çalışır?",
         answer:
-          "Minimum 10 kişi grup; kişi başı €295. Grup balonu (15+ kişilik sepet), rehberli tur, gala akşam yemeği ve kurumsal organizatör dahildir. Faturalı ödeme ve özel branding seçeneği mevcut. info@tripandtick.com'a yazarak özel teklif alabilirsiniz.",
+          "Minimum 10 kişi grup; fiyat talebe göre, güncel fiyatı WhatsApp'tan sorun. Grup balonu (15+ kişilik sepet), rehberli tur, gala akşam yemeği ve kurumsal organizatör dahildir. Faturalı ödeme ve özel branding seçeneği mevcut. info@tripandtick.com'a yazarak özel teklif alabilirsiniz.",
       },
     ],
     transfers: [
@@ -121,7 +121,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "What activities are available in Cappadocia?",
         answer:
-          "We offer 7+ categories and 16 different activity packages in total, including ATV safari, Jeep safari, horseback riding, Turkish Hammam, Turkish Night folklore show and microlight flight. All include hotel transfer and start from €29.",
+          "We offer 7+ categories and 15 different activity packages in total, including ATV safari, Jeep safari, horseback riding, Turkish Hammam, Turkish Night folklore show and microlight flight. All include hotel transfer and start from €29.",
       },
       {
         question: "What is the age limit for the ATV and jeep safari?",
@@ -136,24 +136,24 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "What is included in the Turkish Night show?",
         answer:
-          "Dinner package €55: semah + folklore + oriental + Caucasian dance + 3 courses of food + unlimited alcoholic/non-alcoholic drinks + hotel transfer (3 hours). Without dinner €35: show only + welcome drink + transfer.",
+          "Dinner package from €30: semah + folklore + oriental + Caucasian dance + 3 courses of food + unlimited alcoholic/non-alcoholic drinks + hotel transfer (3 hours).",
       },
       {
         question: "How long does the Hammam package take?",
         answer:
-          "Standard Turkish Hammam 90 minutes (€50): body scrub + foam massage + sauna + jacuzzi. Deluxe package 2 hours (€75): Hammam + 30 minutes of Swedish oil massage + full body mask. Both include hotel transfer.",
+          "Standard Turkish Hammam 90 minutes, from €50: body scrub + foam massage + sauna + jacuzzi. Deluxe package 2 hours, from €75: Hammam + 30 minutes of Swedish oil massage + full body mask. Both include hotel transfer.",
       },
     ],
     packages: [
       {
         question: "Are package prices per person or total?",
         answer:
-          "The stated prices are per person (in double occupancy). The Honeymoon package €1495 is the total for the couple, the marriage proposal package €1295 is per person organized for. The Family package is the total price for 2 adults + 2 children.",
+          "Package prices aren't shown on the site; ask us on WhatsApp for the current price of each package. The Honeymoon package is priced as a total for the couple, the marriage proposal package per person organized for, and the Family package as a total for 2 adults + 2 children.",
       },
       {
         question: "What level is the balloon ride in the packages?",
         answer:
-          "Full Day Premium and Adventure packages: Standard balloon (€165); Family package: Standard balloon (children 80%); Honeymoon and Marriage Proposal packages: VIP Romantic private balloon (only you or 2 couples in the basket).",
+          "Full Day Premium and Adventure packages: Standard balloon (from €100); Family package: Standard balloon (children 80%); Honeymoon and Marriage Proposal packages: VIP Romantic private balloon (only you or 2 couples in the basket, price on request).",
       },
       {
         question: "How far in advance should I book a package?",
@@ -163,12 +163,12 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "Which type of hotel is included in the hotel packages?",
         answer:
-          "Full Day Premium: mid-segment cave hotel (€120-165 nightly value). Honeymoon: VIP Honeymoon Cave (€285 nightly value). Family: Family Resort with pool (€145 nightly value). All packages include open buffet hotel breakfast.",
+          "Full Day Premium: mid-segment cave hotel. Honeymoon: VIP Honeymoon Cave. Family: Family Resort with pool. All packages include open buffet hotel breakfast.",
       },
       {
         question: "How does the corporate package work?",
         answer:
-          "Minimum group of 10 people; €295 per person. It includes a group balloon (15+ person basket), guided tour, gala dinner and a corporate organizer. Invoiced payment and a custom branding option are available. You can request a custom offer by writing to info@tripandtick.com.",
+          "Minimum group of 10 people; price on request — ask us on WhatsApp for the current price. It includes a group balloon (15+ person basket), guided tour, gala dinner and a corporate organizer. Invoiced payment and a custom branding option are available. You can request a custom offer by writing to info@tripandtick.com.",
       },
     ],
     transfers: [
@@ -226,7 +226,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "Welche Aktivitäten gibt es in Kappadokien?",
         answer:
-          "Wir bieten über 7 Kategorien und insgesamt 16 verschiedene Aktivitätspakete an, darunter ATV-Safari, Jeep-Safari, Reiten, Hammam, Türkische-Nacht-Folkloreshow und Microlight-Flug. Alle inklusive Hoteltransfer, ab €29.",
+          "Wir bieten über 7 Kategorien und insgesamt 15 verschiedene Aktivitätspakete an, darunter ATV-Safari, Jeep-Safari, Reiten, Hammam, Türkische-Nacht-Folkloreshow und Microlight-Flug. Alle inklusive Hoteltransfer, ab €29.",
       },
       {
         question: "Wie ist die Altersgrenze für die ATV- und Jeep-Safari?",
@@ -241,24 +241,24 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "Was ist in der Türkische-Nacht-Show enthalten?",
         answer:
-          "Paket mit Abendessen €55: Semah + Folklore + Orientalisch + kaukasischer Tanz + 3-Gänge-Essen + unbegrenzte alkoholische/alkoholfreie Getränke + Hoteltransfer (3 Stunden). Ohne Abendessen €35: nur Show + Willkommensgetränk + Transfer.",
+          "Paket mit Abendessen ab €30: Semah + Folklore + Orientalisch + kaukasischer Tanz + 3-Gänge-Essen + unbegrenzte alkoholische/alkoholfreie Getränke + Hoteltransfer (3 Stunden).",
       },
       {
         question: "Wie lange dauert das Hammam-Paket?",
         answer:
-          "Standard-Hammam 90 Minuten (€50): Peeling + Schaummassage + Sauna + Whirlpool. Deluxe-Paket 2 Stunden (€75): Hammam + 30 Minuten schwedische Ölmassage + Ganzkörpermaske. Beide inklusive Hoteltransfer.",
+          "Standard-Hammam 90 Minuten, ab €50: Peeling + Schaummassage + Sauna + Whirlpool. Deluxe-Paket 2 Stunden, ab €75: Hammam + 30 Minuten schwedische Ölmassage + Ganzkörpermaske. Beide inklusive Hoteltransfer.",
       },
     ],
     packages: [
       {
         question: "Sind die Paketpreise pro Person oder gesamt?",
         answer:
-          "Die angegebenen Preise gelten pro Person (bei Doppelbelegung). Das Flitterwochen-Paket €1495 ist der Gesamtpreis für das Paar, das Heiratsantrags-Paket €1295 gilt pro organisierter Person. Das Familienpaket ist der Gesamtpreis für 2 Erwachsene + 2 Kinder.",
+          "Paketpreise werden nicht auf der Website angezeigt; fragen Sie uns per WhatsApp nach dem aktuellen Preis jedes Pakets. Das Flitterwochen-Paket wird als Gesamtpreis für das Paar berechnet, das Heiratsantrags-Paket pro organisierter Person, und das Familienpaket als Gesamtpreis für 2 Erwachsene + 2 Kinder.",
       },
       {
         question: "Auf welchem Niveau ist die Ballonfahrt in den Paketen?",
         answer:
-          "Pakete Ganztags-Premium und Abenteuer: Standardballon (€165); Familienpaket: Standardballon (Kinder 80%); Pakete Flitterwochen und Heiratsantrag: VIP Romantic Privatballon (nur Sie oder 2 Paare im Korb).",
+          "Pakete Ganztags-Premium und Abenteuer: Standardballon (ab €100); Familienpaket: Standardballon (Kinder 80%); Pakete Flitterwochen und Heiratsantrag: VIP Romantic Privatballon (nur Sie oder 2 Paare im Korb, Preis auf Anfrage).",
       },
       {
         question: "Wie lange im Voraus sollte ich ein Paket buchen?",
@@ -268,12 +268,12 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "Welcher Hoteltyp ist in den Hotelpaketen enthalten?",
         answer:
-          "Ganztags-Premium: Höhlenhotel mittleres Segment (€120-165 Übernachtungswert). Flitterwochen: VIP Honeymoon Höhle (€285 Übernachtungswert). Familie: Familienresort mit Pool (€145 Übernachtungswert). Alle Pakete beinhalten ein Hotel-Frühstücksbuffet.",
+          "Ganztags-Premium: Höhlenhotel mittleres Segment. Flitterwochen: VIP Honeymoon Höhle. Familie: Familienresort mit Pool. Alle Pakete beinhalten ein Hotel-Frühstücksbuffet.",
       },
       {
         question: "Wie funktioniert das Firmenpaket?",
         answer:
-          "Mindestens 10 Personen pro Gruppe; €295 pro Person. Enthalten sind ein Gruppenballon (Korb für 15+ Personen), geführte Tour, Gala-Abendessen und ein Firmenorganisator. Zahlung auf Rechnung und eine individuelle Branding-Option sind verfügbar. Sie können ein individuelles Angebot anfordern, indem Sie an info@tripandtick.com schreiben.",
+          "Mindestens 10 Personen pro Gruppe; Preis auf Anfrage — fragen Sie uns per WhatsApp nach dem aktuellen Preis. Enthalten sind ein Gruppenballon (Korb für 15+ Personen), geführte Tour, Gala-Abendessen und ein Firmenorganisator. Zahlung auf Rechnung und eine individuelle Branding-Option sind verfügbar. Sie können ein individuelles Angebot anfordern, indem Sie an info@tripandtick.com schreiben.",
       },
     ],
     transfers: [
@@ -331,7 +331,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "Quelles activités y a-t-il en Cappadoce ?",
         answer:
-          "Nous proposons plus de 7 catégories et 16 forfaits d'activités différents au total, dont safari en quad, safari en jeep, équitation, Hammam, spectacle folklorique de la Nuit turque et vol en ULM. Tous incluent le transfert depuis l'hôtel et débutent à €29.",
+          "Nous proposons plus de 7 catégories et 15 forfaits d'activités différents au total, dont safari en quad, safari en jeep, équitation, Hammam, spectacle folklorique de la Nuit turque et vol en ULM. Tous incluent le transfert depuis l'hôtel et débutent à €29.",
       },
       {
         question: "Quelle est la limite d'âge pour le safari en quad et en jeep ?",
@@ -346,24 +346,24 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "Qu'est-ce qui est inclus dans le spectacle de la Nuit turque ?",
         answer:
-          "Forfait avec dîner €55 : semah + folklore + oriental + danse caucasienne + repas 3 plats + boissons alcoolisées/non alcoolisées illimitées + transfert depuis l'hôtel (3 heures). Sans dîner €35 : spectacle uniquement + boisson de bienvenue + transfert.",
+          "Forfait avec dîner à partir de €30 : semah + folklore + oriental + danse caucasienne + repas 3 plats + boissons alcoolisées/non alcoolisées illimitées + transfert depuis l'hôtel (3 heures).",
       },
       {
         question: "Combien de temps dure le forfait Hammam ?",
         answer:
-          "Hammam standard 90 minutes (€50) : gommage + massage à la mousse + sauna + jacuzzi. Forfait Deluxe 2 heures (€75) : Hammam + 30 minutes de massage à l'huile suédois + masque corporel complet. Les deux incluent le transfert depuis l'hôtel.",
+          "Hammam standard 90 minutes, à partir de €50 : gommage + massage à la mousse + sauna + jacuzzi. Forfait Deluxe 2 heures, à partir de €75 : Hammam + 30 minutes de massage à l'huile suédois + masque corporel complet. Les deux incluent le transfert depuis l'hôtel.",
       },
     ],
     packages: [
       {
         question: "Les prix des forfaits sont-ils par personne ou au total ?",
         answer:
-          "Les prix indiqués sont par personne (en occupation double). Le forfait Lune de miel €1495 est le total pour le couple, le forfait demande en mariage €1295 est par personne organisée. Le forfait Famille est le prix total pour 2 adultes + 2 enfants.",
+          "Les prix des forfaits ne sont pas affichés sur le site ; demandez-nous le prix actuel de chaque forfait sur WhatsApp. Le forfait Lune de miel est facturé au total pour le couple, le forfait demande en mariage par personne organisée, et le forfait Famille au total pour 2 adultes + 2 enfants.",
       },
       {
         question: "À quel niveau se situe le vol en montgolfière dans les forfaits ?",
         answer:
-          "Forfaits Journée complète Premium et Aventure : montgolfière Standard (€165) ; forfait Famille : montgolfière Standard (enfants 80%) ; forfaits Lune de miel et Demande en mariage : montgolfière privée VIP Romantique (uniquement vous ou 2 couples dans la nacelle).",
+          "Forfaits Journée complète Premium et Aventure : montgolfière Standard (à partir de €100) ; forfait Famille : montgolfière Standard (enfants 80%) ; forfaits Lune de miel et Demande en mariage : montgolfière privée VIP Romantique (uniquement vous ou 2 couples dans la nacelle, prix sur demande).",
       },
       {
         question: "Combien de temps à l'avance dois-je réserver un forfait ?",
@@ -373,12 +373,12 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "Quel type d'hôtel est inclus dans les forfaits hôtel ?",
         answer:
-          "Journée complète Premium : hôtel troglodyte de gamme moyenne (valeur de €120-165 la nuit). Lune de miel : VIP Honeymoon Cave (valeur de €285 la nuit). Famille : Family Resort avec piscine (valeur de €145 la nuit). Tous les forfaits incluent le petit-déjeuner buffet de l'hôtel.",
+          "Journée complète Premium : hôtel troglodyte de gamme moyenne. Lune de miel : VIP Honeymoon Cave. Famille : Family Resort avec piscine. Tous les forfaits incluent le petit-déjeuner buffet de l'hôtel.",
       },
       {
         question: "Comment fonctionne le forfait entreprise ?",
         answer:
-          "Groupe de 10 personnes minimum ; €295 par personne. Il comprend une montgolfière de groupe (nacelle de 15+ personnes), une visite guidée, un dîner de gala et un organisateur d'entreprise. Le paiement sur facture et une option de branding personnalisé sont disponibles. Vous pouvez demander une offre personnalisée en écrivant à info@tripandtick.com.",
+          "Groupe de 10 personnes minimum ; prix sur demande — demandez-nous le prix actuel sur WhatsApp. Il comprend une montgolfière de groupe (nacelle de 15+ personnes), une visite guidée, un dîner de gala et un organisateur d'entreprise. Le paiement sur facture et une option de branding personnalisé sont disponibles. Vous pouvez demander une offre personnalisée en écrivant à info@tripandtick.com.",
       },
     ],
     transfers: [
@@ -436,7 +436,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "¿Qué actividades hay en Capadocia?",
         answer:
-          "Ofrecemos más de 7 categorías y 16 paquetes de actividades diferentes en total, incluyendo safari en quad, safari en jeep, equitación, Hammam, espectáculo folclórico de la Noche Turca y vuelo en ultraligero. Todos incluyen traslado desde el hotel y empiezan desde €29.",
+          "Ofrecemos más de 7 categorías y 15 paquetes de actividades diferentes en total, incluyendo safari en quad, safari en jeep, equitación, Hammam, espectáculo folclórico de la Noche Turca y vuelo en ultraligero. Todos incluyen traslado desde el hotel y empiezan desde €29.",
       },
       {
         question: "¿Cuál es el límite de edad para el safari en quad y en jeep?",
@@ -451,24 +451,24 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "¿Qué incluye el espectáculo de la Noche Turca?",
         answer:
-          "Paquete con cena €55: semah + folclore + oriental + danza caucásica + comida de 3 platos + bebidas alcohólicas/sin alcohol ilimitadas + traslado desde el hotel (3 horas). Sin cena €35: solo espectáculo + bebida de bienvenida + traslado.",
+          "Paquete con cena desde €30: semah + folclore + oriental + danza caucásica + comida de 3 platos + bebidas alcohólicas/sin alcohol ilimitadas + traslado desde el hotel (3 horas).",
       },
       {
         question: "¿Cuánto dura el paquete de Hammam?",
         answer:
-          "Hammam estándar 90 minutos (€50): exfoliación + masaje de espuma + sauna + jacuzzi. Paquete Deluxe 2 horas (€75): Hammam + 30 minutos de masaje sueco con aceite + mascarilla corporal completa. Ambos incluyen traslado desde el hotel.",
+          "Hammam estándar 90 minutos, desde €50: exfoliación + masaje de espuma + sauna + jacuzzi. Paquete Deluxe 2 horas, desde €75: Hammam + 30 minutos de masaje sueco con aceite + mascarilla corporal completa. Ambos incluyen traslado desde el hotel.",
       },
     ],
     packages: [
       {
         question: "¿Los precios de los paquetes son por persona o en total?",
         answer:
-          "Los precios indicados son por persona (en ocupación doble). El paquete Luna de miel €1495 es el total para la pareja, el paquete de propuesta de matrimonio €1295 es por persona organizada. El paquete Familiar es el precio total para 2 adultos + 2 niños.",
+          "Los precios de los paquetes no se muestran en el sitio; pregúntenos el precio actual de cada paquete por WhatsApp. El paquete Luna de miel se cobra como total para la pareja, el paquete de propuesta de matrimonio por persona organizada, y el paquete Familiar como total para 2 adultos + 2 niños.",
       },
       {
         question: "¿En qué nivel está el vuelo en globo dentro de los paquetes?",
         answer:
-          "Paquetes Día Completo Premium y Aventura: globo Estándar (€165); paquete Familiar: globo Estándar (niños 80%); paquetes Luna de miel y Propuesta de matrimonio: globo privado VIP Romántico (solo usted o 2 parejas en la cesta).",
+          "Paquetes Día Completo Premium y Aventura: globo Estándar (desde €100); paquete Familiar: globo Estándar (niños 80%); paquetes Luna de miel y Propuesta de matrimonio: globo privado VIP Romántico (solo usted o 2 parejas en la cesta, precio a consultar).",
       },
       {
         question: "¿Con cuánta antelación debo reservar un paquete?",
@@ -478,12 +478,12 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "¿Qué tipo de hotel se incluye en los paquetes de hotel?",
         answer:
-          "Día Completo Premium: hotel cueva de segmento medio (valor de €120-165 por noche). Luna de miel: VIP Honeymoon Cave (valor de €285 por noche). Familiar: Family Resort con piscina (valor de €145 por noche). Todos los paquetes incluyen desayuno bufé del hotel.",
+          "Día Completo Premium: hotel cueva de segmento medio. Luna de miel: VIP Honeymoon Cave. Familiar: Family Resort con piscina. Todos los paquetes incluyen desayuno bufé del hotel.",
       },
       {
         question: "¿Cómo funciona el paquete corporativo?",
         answer:
-          "Grupo mínimo de 10 personas; €295 por persona. Incluye un globo de grupo (cesta de 15+ personas), tour guiado, cena de gala y un organizador corporativo. Hay pago con factura y opción de branding personalizado disponibles. Puede solicitar una oferta personalizada escribiendo a info@tripandtick.com.",
+          "Grupo mínimo de 10 personas; precio a consultar — pregúntenos el precio actual por WhatsApp. Incluye un globo de grupo (cesta de 15+ personas), tour guiado, cena de gala y un organizador corporativo. Hay pago con factura y opción de branding personalizado disponibles. Puede solicitar una oferta personalizada escribiendo a info@tripandtick.com.",
       },
     ],
     transfers: [
@@ -541,7 +541,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "Welke activiteiten zijn er in Cappadocië?",
         answer:
-          "We bieden 7+ categorieën en in totaal 16 verschillende activiteitenpakketten aan, waaronder quad-safari, jeep-safari, paardrijden, Hammam, folkloreshow van de Turkse Nacht en microlight-vlucht. Allemaal inclusief hoteltransfer en vanaf €29.",
+          "We bieden 7+ categorieën en in totaal 15 verschillende activiteitenpakketten aan, waaronder quad-safari, jeep-safari, paardrijden, Hammam, folkloreshow van de Turkse Nacht en microlight-vlucht. Allemaal inclusief hoteltransfer en vanaf €29.",
       },
       {
         question: "Wat is de leeftijdsgrens voor de quad- en jeep-safari?",
@@ -556,24 +556,24 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "Wat is inbegrepen bij de show van de Turkse Nacht?",
         answer:
-          "Pakket met diner €55: semah + folklore + oriëntaals + Kaukasische dans + 3-gangenmaaltijd + onbeperkt alcoholische/non-alcoholische drankjes + hoteltransfer (3 uur). Zonder diner €35: alleen show + welkomstdrankje + transfer.",
+          "Pakket met diner vanaf €30: semah + folklore + oriëntaals + Kaukasische dans + 3-gangenmaaltijd + onbeperkt alcoholische/non-alcoholische drankjes + hoteltransfer (3 uur).",
       },
       {
         question: "Hoe lang duurt het Hammam-pakket?",
         answer:
-          "Standaard Hammam 90 minuten (€50): scrub + schuimmassage + sauna + jacuzzi. Deluxe-pakket 2 uur (€75): Hammam + 30 minuten Zweedse oliemassage + volledig lichaamsmasker. Beide inclusief hoteltransfer.",
+          "Standaard Hammam 90 minuten, vanaf €50: scrub + schuimmassage + sauna + jacuzzi. Deluxe-pakket 2 uur, vanaf €75: Hammam + 30 minuten Zweedse oliemassage + volledig lichaamsmasker. Beide inclusief hoteltransfer.",
       },
     ],
     packages: [
       {
         question: "Zijn de pakketprijzen per persoon of totaal?",
         answer:
-          "De vermelde prijzen zijn per persoon (bij tweepersoonsbezetting). Het Huwelijksreis-pakket €1495 is het totaal voor het paar, het huwelijksaanzoek-pakket €1295 is per georganiseerde persoon. Het Gezinspakket is de totaalprijs voor 2 volwassenen + 2 kinderen.",
+          "Pakketprijzen worden niet op de site getoond; vraag ons op WhatsApp naar de actuele prijs van elk pakket. Het Huwelijksreis-pakket wordt als totaal voor het paar berekend, het huwelijksaanzoek-pakket per georganiseerde persoon, en het Gezinspakket als totaal voor 2 volwassenen + 2 kinderen.",
       },
       {
         question: "Op welk niveau is de ballonvaart in de pakketten?",
         answer:
-          "Pakketten Hele Dag Premium en Avontuur: Standaardballon (€165); Gezinspakket: Standaardballon (kinderen 80%); pakketten Huwelijksreis en Huwelijksaanzoek: VIP Romantische privéballon (alleen u of 2 paren in de mand).",
+          "Pakketten Hele Dag Premium en Avontuur: Standaardballon (vanaf €100); Gezinspakket: Standaardballon (kinderen 80%); pakketten Huwelijksreis en Huwelijksaanzoek: VIP Romantische privéballon (alleen u of 2 paren in de mand, prijs op aanvraag).",
       },
       {
         question: "Hoe ver van tevoren moet ik een pakket boeken?",
@@ -583,12 +583,12 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "Welk type hotel is inbegrepen in de hotelpakketten?",
         answer:
-          "Hele Dag Premium: grotelhotel middensegment (€120-165 overnachtingswaarde). Huwelijksreis: VIP Honeymoon Cave (€285 overnachtingswaarde). Gezin: Family Resort met zwembad (€145 overnachtingswaarde). Alle pakketten zijn inclusief een hotel-ontbijtbuffet.",
+          "Hele Dag Premium: grotelhotel middensegment. Huwelijksreis: VIP Honeymoon Cave. Gezin: Family Resort met zwembad. Alle pakketten zijn inclusief een hotel-ontbijtbuffet.",
       },
       {
         question: "Hoe werkt het zakelijke pakket?",
         answer:
-          "Groep van minimaal 10 personen; €295 per persoon. Inbegrepen zijn een groepsballon (mand voor 15+ personen), begeleide tour, galadiner en een zakelijke organisator. Betaling op factuur en een optie voor aangepaste branding zijn beschikbaar. U kunt een offerte op maat aanvragen door te schrijven naar info@tripandtick.com.",
+          "Groep van minimaal 10 personen; prijs op aanvraag — vraag ons op WhatsApp naar de actuele prijs. Inbegrepen zijn een groepsballon (mand voor 15+ personen), begeleide tour, galadiner en een zakelijke organisator. Betaling op factuur en een optie voor aangepaste branding zijn beschikbaar. U kunt een offerte op maat aanvragen door te schrijven naar info@tripandtick.com.",
       },
     ],
     transfers: [
@@ -646,7 +646,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "卡帕多西亚有哪些活动？",
         answer:
-          "我们提供 7 个以上类别、共 16 种不同的活动套餐，包括 ATV 越野、吉普车越野、骑马、Hammam、土耳其之夜民俗表演和微型飞机飞行。全部含酒店接送，€29 起。",
+          "我们提供 7 个以上类别、共 15 种不同的活动套餐，包括 ATV 越野、吉普车越野、骑马、Hammam、土耳其之夜民俗表演和微型飞机飞行。全部含酒店接送，€29 起。",
       },
       {
         question: "ATV 和吉普车越野的年龄限制是多少？",
@@ -661,24 +661,24 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "土耳其之夜表演包含什么？",
         answer:
-          "含晚餐套餐 €55：semah + 民俗 + 东方舞 + 高加索舞 + 3 道菜 + 无限量含酒精/不含酒精饮料 + 酒店接送（3 小时）。不含晚餐套餐 €35：仅表演 + 迎宾饮料 + 接送。",
+          "含晚餐套餐 €30 起：semah + 民俗 + 东方舞 + 高加索舞 + 3 道菜 + 无限量含酒精/不含酒精饮料 + 酒店接送（3 小时）。",
       },
       {
         question: "Hammam 套餐需要多长时间？",
         answer:
-          "标准 Hammam 90 分钟（€50）：去角质 + 泡沫按摩 + 桑拿 + 按摩浴缸。豪华套餐 2 小时（€75）：Hammam + 30 分钟瑞典精油按摩 + 全身面膜。两者均含酒店接送。",
+          "标准 Hammam 90 分钟，€50 起：去角质 + 泡沫按摩 + 桑拿 + 按摩浴缸。豪华套餐 2 小时，€75 起：Hammam + 30 分钟瑞典精油按摩 + 全身面膜。两者均含酒店接送。",
       },
     ],
     packages: [
       {
         question: "套餐价格是按人计还是总价？",
         answer:
-          "所标价格为每人价格（双人入住）。蜜月套餐 €1495 为情侣总价，求婚套餐 €1295 为所组织的每人价格。家庭套餐为 2 名成人 + 2 名儿童的总价。",
+          "套餐价格不在网站上显示；请通过 WhatsApp 咨询每个套餐的当前价格。蜜月套餐按情侣总价计算，求婚套餐按所组织的每人价格计算，家庭套餐为 2 名成人 + 2 名儿童的总价。",
       },
       {
         question: "套餐中的热气球之旅是什么级别？",
         answer:
-          "全日豪华和探险套餐：标准热气球（€165）；家庭套餐：标准热气球（儿童 80%）；蜜月和求婚套餐：VIP 浪漫私人热气球（吊篮中仅有您或 2 对情侣）。",
+          "全日豪华和探险套餐：标准热气球（€100 起）；家庭套餐：标准热气球（儿童 80%）；蜜月和求婚套餐：VIP 浪漫私人热气球（吊篮中仅有您或 2 对情侣，价格详询）。",
       },
       {
         question: "我应提前多久预订套餐？",
@@ -688,12 +688,12 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "酒店套餐中包含哪种类型的酒店？",
         answer:
-          "全日豪华：中档洞穴酒店（每晚价值 €120-165）。蜜月：VIP Honeymoon Cave（每晚价值 €285）。家庭：带泳池的 Family Resort（每晚价值 €145）。所有套餐均含酒店自助早餐。",
+          "全日豪华：中档洞穴酒店。蜜月：VIP Honeymoon Cave。家庭：带泳池的 Family Resort。所有套餐均含酒店自助早餐。",
       },
       {
         question: "企业套餐如何运作？",
         answer:
-          "团体最少 10 人；每人 €295。包含团体热气球（15 人以上吊篮）、导游游览、晚宴和企业组织者。提供开具发票付款和专属品牌定制选项。您可写信至 info@tripandtick.com 获取专属报价。",
+          "团体最少 10 人；价格详询——请通过 WhatsApp 咨询当前价格。包含团体热气球（15 人以上吊篮）、导游游览、晚宴和企业组织者。提供开具发票付款和专属品牌定制选项。您可写信至 info@tripandtick.com 获取专属报价。",
       },
     ],
     transfers: [
@@ -751,7 +751,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "कप्पादोसिया में कौन-कौन सी गतिविधियाँ हैं?",
         answer:
-          "हम ATV सफारी, जीप सफारी, घुड़सवारी, Hammam, टर्किश नाइट लोकनृत्य शो और माइक्रोलाइट उड़ान सहित 7+ श्रेणियों में कुल 16 अलग-अलग गतिविधि पैकेज प्रदान करते हैं। सभी में होटल ट्रांसफर शामिल है और €29 से शुरू होते हैं।",
+          "हम ATV सफारी, जीप सफारी, घुड़सवारी, Hammam, टर्किश नाइट लोकनृत्य शो और माइक्रोलाइट उड़ान सहित 7+ श्रेणियों में कुल 15 अलग-अलग गतिविधि पैकेज प्रदान करते हैं। सभी में होटल ट्रांसफर शामिल है और €29 से शुरू होते हैं।",
       },
       {
         question: "ATV और जीप सफारी के लिए आयु सीमा क्या है?",
@@ -766,24 +766,24 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "टर्किश नाइट शो में क्या शामिल है?",
         answer:
-          "रात्रिभोज पैकेज €55: semah + लोकनृत्य + ओरिएंटल + काकेशियन नृत्य + 3 व्यंजन + असीमित अल्कोहलिक/नॉन-अल्कोहलिक पेय + होटल ट्रांसफर (3 घंटे)। बिना रात्रिभोज €35: केवल शो + स्वागत पेय + ट्रांसफर।",
+          "रात्रिभोज पैकेज €30 से शुरू: semah + लोकनृत्य + ओरिएंटल + काकेशियन नृत्य + 3 व्यंजन + असीमित अल्कोहलिक/नॉन-अल्कोहलिक पेय + होटल ट्रांसफर (3 घंटे)।",
       },
       {
         question: "Hammam पैकेज कितने समय का होता है?",
         answer:
-          "स्टैंडर्ड Hammam 90 मिनट (€50): स्क्रब + फोम मसाज + सॉना + जकूज़ी। डीलक्स पैकेज 2 घंटे (€75): Hammam + 30 मिनट स्वीडिश तेल मसाज + पूर्ण शरीर मास्क। दोनों में होटल ट्रांसफर शामिल है।",
+          "स्टैंडर्ड Hammam 90 मिनट, €50 से शुरू: स्क्रब + फोम मसाज + सॉना + जकूज़ी। डीलक्स पैकेज 2 घंटे, €75 से शुरू: Hammam + 30 मिनट स्वीडिश तेल मसाज + पूर्ण शरीर मास्क। दोनों में होटल ट्रांसफर शामिल है।",
       },
     ],
     packages: [
       {
         question: "पैकेज की कीमतें प्रति व्यक्ति हैं या कुल?",
         answer:
-          "बताई गई कीमतें प्रति व्यक्ति हैं (डबल ऑक्यूपेंसी में)। हनीमून पैकेज €1495 जोड़े के लिए कुल है, विवाह प्रस्ताव पैकेज €1295 आयोजित प्रति व्यक्ति है। फैमिली पैकेज 2 वयस्क + 2 बच्चों की कुल कीमत है।",
+          "पैकेज की कीमतें साइट पर नहीं दिखाई जातीं; प्रत्येक पैकेज की मौजूदा कीमत के लिए हमें WhatsApp पर पूछें। हनीमून पैकेज जोड़े के लिए कुल कीमत पर, विवाह प्रस्ताव पैकेज आयोजित प्रति व्यक्ति, और फैमिली पैकेज 2 वयस्क + 2 बच्चों की कुल कीमत पर तय होता है।",
       },
       {
         question: "पैकेज में बैलून राइड किस स्तर की है?",
         answer:
-          "फुल डे प्रीमियम और एडवेंचर पैकेज: स्टैंडर्ड बैलून (€165); फैमिली पैकेज: स्टैंडर्ड बैलून (बच्चे 80%); हनीमून और विवाह प्रस्ताव पैकेज: VIP रोमांटिक निजी बैलून (टोकरी में केवल आप या 2 जोड़े)।",
+          "फुल डे प्रीमियम और एडवेंचर पैकेज: स्टैंडर्ड बैलून (€100 से शुरू); फैमिली पैकेज: स्टैंडर्ड बैलून (बच्चे 80%); हनीमून और विवाह प्रस्ताव पैकेज: VIP रोमांटिक निजी बैलून (टोकरी में केवल आप या 2 जोड़े, कीमत माँग पर)।",
       },
       {
         question: "मुझे पैकेज कितने पहले बुक करना चाहिए?",
@@ -793,12 +793,12 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "होटल पैकेज में किस प्रकार का होटल शामिल है?",
         answer:
-          "फुल डे प्रीमियम: मध्यम-श्रेणी का केव होटल (€120-165 प्रति रात मूल्य)। हनीमून: VIP Honeymoon Cave (€285 प्रति रात मूल्य)। फैमिली: पूल वाला Family Resort (€145 प्रति रात मूल्य)। सभी पैकेज में होटल का ओपन बुफे नाश्ता शामिल है।",
+          "फुल डे प्रीमियम: मध्यम-श्रेणी का केव होटल। हनीमून: VIP Honeymoon Cave। फैमिली: पूल वाला Family Resort। सभी पैकेज में होटल का ओपन बुफे नाश्ता शामिल है।",
       },
       {
         question: "कॉर्पोरेट पैकेज कैसे काम करता है?",
         answer:
-          "न्यूनतम 10 लोगों का समूह; प्रति व्यक्ति €295। इसमें ग्रुप बैलून (15+ व्यक्ति की टोकरी), गाइडेड टूर, गाला डिनर और कॉर्पोरेट आयोजक शामिल हैं। चालान भुगतान और कस्टम ब्रांडिंग विकल्प उपलब्ध है। आप info@tripandtick.com पर लिखकर विशेष ऑफ़र प्राप्त कर सकते हैं।",
+          "न्यूनतम 10 लोगों का समूह; कीमत माँग पर — मौजूदा कीमत के लिए हमें WhatsApp पर पूछें। इसमें ग्रुप बैलून (15+ व्यक्ति की टोकरी), गाइडेड टूर, गाला डिनर और कॉर्पोरेट आयोजक शामिल हैं। चालान भुगतान और कस्टम ब्रांडिंग विकल्प उपलब्ध है। आप info@tripandtick.com पर लिखकर विशेष ऑफ़र प्राप्त कर सकते हैं।",
       },
     ],
     transfers: [
@@ -856,7 +856,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "کاپاڈوکیا میں کون کون سی سرگرمیاں ہیں؟",
         answer:
-          "ہم ATV سفاری، جیپ سفاری، گھڑ سواری، Hammam، ترکش نائٹ لوک رقص شو اور مائیکرولائٹ پرواز سمیت 7+ زمروں میں کل 16 مختلف سرگرمی پیکجز پیش کرتے ہیں۔ سب میں ہوٹل ٹرانسفر شامل ہے اور €29 سے شروع ہوتے ہیں۔",
+          "ہم ATV سفاری، جیپ سفاری، گھڑ سواری، Hammam، ترکش نائٹ لوک رقص شو اور مائیکرولائٹ پرواز سمیت 7+ زمروں میں کل 15 مختلف سرگرمی پیکجز پیش کرتے ہیں۔ سب میں ہوٹل ٹرانسفر شامل ہے اور €29 سے شروع ہوتے ہیں۔",
       },
       {
         question: "ATV اور جیپ سفاری کے لیے عمر کی حد کیا ہے؟",
@@ -871,24 +871,24 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "ترکش نائٹ شو میں کیا شامل ہے؟",
         answer:
-          "کھانے کے ساتھ پیکج €55: semah + لوک رقص + اورینٹل + کاکیشین رقص + 3 اقسام کا کھانا + لامحدود الکوحلک/غیر الکوحلک مشروبات + ہوٹل ٹرانسفر (3 گھنٹے)۔ کھانے کے بغیر €35: صرف شو + خوش آمدید مشروب + ٹرانسفر۔",
+          "کھانے کے ساتھ پیکج €30 سے شروع: semah + لوک رقص + اورینٹل + کاکیشین رقص + 3 اقسام کا کھانا + لامحدود الکوحلک/غیر الکوحلک مشروبات + ہوٹل ٹرانسفر (3 گھنٹے)۔",
       },
       {
         question: "Hammam پیکج کتنا وقت لیتا ہے؟",
         answer:
-          "اسٹینڈرڈ Hammam 90 منٹ (€50): اسکرب + فوم مساج + ساؤنا + جکوزی۔ ڈی لکس پیکج 2 گھنٹے (€75): Hammam + 30 منٹ سویڈش آئل مساج + مکمل جسمانی ماسک۔ دونوں میں ہوٹل ٹرانسفر شامل ہے۔",
+          "اسٹینڈرڈ Hammam 90 منٹ، €50 سے شروع: اسکرب + فوم مساج + ساؤنا + جکوزی۔ ڈی لکس پیکج 2 گھنٹے، €75 سے شروع: Hammam + 30 منٹ سویڈش آئل مساج + مکمل جسمانی ماسک۔ دونوں میں ہوٹل ٹرانسفر شامل ہے۔",
       },
     ],
     packages: [
       {
         question: "پیکج کی قیمتیں فی شخص ہیں یا کل؟",
         answer:
-          "بتائی گئی قیمتیں فی شخص ہیں (ڈبل آکیوپینسی میں)۔ ہنی مون پیکج €1495 جوڑے کے لیے کل ہے، شادی کی تجویز کا پیکج €1295 منظم کیے گئے فی شخص ہے۔ فیملی پیکج 2 بالغ + 2 بچوں کی کل قیمت ہے۔",
+          "پیکج کی قیمتیں سائٹ پر نہیں دکھائی جاتیں؛ ہر پیکج کی موجودہ قیمت کے لیے ہم سے WhatsApp پر پوچھیں۔ ہنی مون پیکج جوڑے کے لیے کل قیمت پر، شادی کی تجویز کا پیکج منظم کیے گئے فی شخص، اور فیملی پیکج 2 بالغ + 2 بچوں کی کل قیمت پر طے ہوتا ہے۔",
       },
       {
         question: "پیکجز میں بیلون رائیڈ کس درجے کی ہے؟",
         answer:
-          "فل ڈے پریمیم اور ایڈونچر پیکجز: اسٹینڈرڈ بیلون (€165)؛ فیملی پیکج: اسٹینڈرڈ بیلون (بچے 80%)؛ ہنی مون اور شادی کی تجویز پیکجز: VIP رومانٹک نجی بیلون (ٹوکری میں صرف آپ یا 2 جوڑے)۔",
+          "فل ڈے پریمیم اور ایڈونچر پیکجز: اسٹینڈرڈ بیلون (€100 سے شروع)؛ فیملی پیکج: اسٹینڈرڈ بیلون (بچے 80%)؛ ہنی مون اور شادی کی تجویز پیکجز: VIP رومانٹک نجی بیلون (ٹوکری میں صرف آپ یا 2 جوڑے، قیمت طلب پر)۔",
       },
       {
         question: "مجھے پیکج کتنا پہلے بک کرنا چاہیے؟",
@@ -898,12 +898,12 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "ہوٹل پیکجز میں کس قسم کا ہوٹل شامل ہے؟",
         answer:
-          "فل ڈے پریمیم: درمیانے درجے کا کیو ہوٹل (€120-165 فی رات قدر)۔ ہنی مون: VIP Honeymoon Cave (€285 فی رات قدر)۔ فیملی: پول والا Family Resort (€145 فی رات قدر)۔ تمام پیکجز میں ہوٹل کا اوپن بوفے ناشتہ شامل ہے۔",
+          "فل ڈے پریمیم: درمیانے درجے کا کیو ہوٹل۔ ہنی مون: VIP Honeymoon Cave۔ فیملی: پول والا Family Resort۔ تمام پیکجز میں ہوٹل کا اوپن بوفے ناشتہ شامل ہے۔",
       },
       {
         question: "کارپوریٹ پیکج کیسے کام کرتا ہے؟",
         answer:
-          "کم از کم 10 افراد کا گروپ؛ فی شخص €295۔ اس میں گروپ بیلون (15+ افراد کی ٹوکری)، گائیڈڈ ٹور، گالا ڈنر اور کارپوریٹ منتظم شامل ہیں۔ انوائس ادائیگی اور کسٹم برانڈنگ کا اختیار دستیاب ہے۔ آپ info@tripandtick.com پر لکھ کر خصوصی پیشکش حاصل کر سکتے ہیں۔",
+          "کم از کم 10 افراد کا گروپ؛ قیمت طلب پر — موجودہ قیمت کے لیے ہم سے WhatsApp پر پوچھیں۔ اس میں گروپ بیلون (15+ افراد کی ٹوکری)، گائیڈڈ ٹور، گالا ڈنر اور کارپوریٹ منتظم شامل ہیں۔ انوائس ادائیگی اور کسٹم برانڈنگ کا اختیار دستیاب ہے۔ آپ info@tripandtick.com پر لکھ کر خصوصی پیشکش حاصل کر سکتے ہیں۔",
       },
     ],
     transfers: [

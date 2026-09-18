@@ -32,7 +32,9 @@
   "serviceCard": {
     "infoForm": "Informações & Formulário",
     "reserve": "Reservar Agora",
-    "perCouple": "por casal"
+    "perCouple": "por casal",
+    "fromPrice": "A partir de {price}",
+    "askPrice": "Consultar preço"
   },
   "reviewScore": {
     "excellent": "Excelente",

@@ -71,7 +71,6 @@ export interface BookingService {
   duration: string;
   adultPrice: number;
   childRatio: number;
-  marketPrice?: number;
   currency: "EUR" | "TRY" | "USD";
   minAge: number;
   capacity: { min: number; max: number };
@@ -753,11 +752,6 @@ export function BookingClient({ service }: { service: BookingService }) {
                 <span className="font-bold">{t.component.booking.booking_client.sidebar_total}</span>
                 <span className="font-bold text-amber-600">{formatPrice(discountedTotal, service.currency)}</span>
               </div>
-              {service.marketPrice && (
-                <p className="text-xs text-emerald-700">
-                  {t.component.booking.booking_client.sidebar_market_advantage.replace("{amount}", formatPrice((service.marketPrice - service.adultPrice) * adults, service.currency))}
-                </p>
-              )}
             </div>
             <div className="mt-6 space-y-2 text-xs text-slate-500">
               <p>{t.component.booking.booking_client.sidebar_guarantee_weather}</p>

@@ -31,7 +31,6 @@ export const VIDEO_FAMILY: Record<string, string> = {
   "hamam-standart": "hamam",
   "hamam-deluxe": "hamam",
   "turk-gecesi-yemekli": "turk-gecesi",
-  "turk-gecesi-yemeksiz": "turk-gecesi",
   "microlight-standart": "microlight",
   "microlight-deluxe": "microlight",
   "balon-flying-dress-cekimi": "balon-flying-dress-cekimi",
@@ -39,13 +38,12 @@ export const VIDEO_FAMILY: Record<string, string> = {
   "kirmizi-tur": "kirmizi-tur",
   "yesil-tur": "yesil-tur",
   "mix-tur": "mix-tur",
-  "sari-tur": "sari-tur",
-  "yeralti-turu": "yeralti-turu",
+  // Eco Green (Ihlara + Kaymaklı/Derinkuyu) eski yeraltı klibini kullanır.
+  "eco-yesil-tur": "yeralti-turu",
   "gun-batimi-turu": "gun-batimi-turu",
   "instagram-turu": "instagram-turu",
   // balonlar
   "standart-balon-ucusu": "standart-balon-ucusu",
-  "deluxe-balon-ucusu": "deluxe-balon-ucusu",
   "romantik-ozel-balon": "romantik-ozel-balon",
   // paketler
   "tam-gun-paket": "tam-gun-paket",
