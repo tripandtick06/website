@@ -78,8 +78,10 @@ describe("blog URLs + alternates", () => {
 describe("editorial noindex (EN cannibalisation cleanup 2026-09-16)", () => {
   it("noindexed articles are out of the sitemap and out of every hreflang cluster", () => {
     const flagged = ARTICLES.filter((a) => a.noindex);
-    expect(flagged.length).toBe(12);
-    for (const a of flagged) expect(a.locale).toBe("en");
+    // 12 EN (2026-09-16 cannibalisation) + 29 zero-impression translations (2026-09-19 GSC prune,
+    // tests/lib/blog-prune.test.ts holds the list).
+    expect(flagged.length).toBe(41);
+    for (const a of flagged) expect(["en", "de", "fr", "ja", "ko", "pt-BR"], a.slug).toContain(a.locale);
     const sitemapUrls = new Set(sitemapArticles().map((a) => blogArticleUrl(a)));
     for (const a of flagged) {
       expect(sitemapUrls.has(blogArticleUrl(a)), a.slug).toBe(false);

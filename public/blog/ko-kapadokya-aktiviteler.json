@@ -20,5 +20,7 @@
   "isAiGenerated": true,
   "seoScore": 90,
   "coverImage": "/images/blog/kapadokya-aktiviteler.jpg",
-  "faq": []
+  "faq": [],
+  "noindex": true,
+  "noindexReason": "2026-09-19 GSC 90 gün 0 gösterim (makine çevirisi; Ağustos 2026 spam update sonrası budama)"
 }

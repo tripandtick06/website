@@ -53,5 +53,7 @@
       "question": "Are restaurants and tours open in winter?",
       "answer": "Yes — about 90% of restaurants and 95% of major tours run year-round. Some small family pensions close mid-December to late February."
     }
-  ]
+  ],
+  "noindex": true,
+  "noindexReason": "2026-09-19 GSC 90 gün 0 gösterim (makine çevirisi; Ağustos 2026 spam update sonrası budama)"
 }

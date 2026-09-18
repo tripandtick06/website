@@ -53,5 +53,7 @@
       "question": "Les restaurants et les excursions sont-ils ouverts en hiver ?",
       "answer": "Oui — environ 90 % des restaurants et 95 % des principales excursions fonctionnent toute l'année. Certaines petites pensions familiales ferment de mi-décembre à fin février."
     }
-  ]
+  ],
+  "noindex": true,
+  "noindexReason": "2026-09-19 GSC 90 gün 0 gösterim (makine çevirisi; Ağustos 2026 spam update sonrası budama)"
 }
