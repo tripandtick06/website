@@ -67,7 +67,6 @@ export interface SearchResult {
   reviewCount?: number;
   duration?: string;
   durationMinutes?: number;
-  marketPrice?: number;
 }
 
 const CATEGORY_LABEL_TR: Record<SearchCategory, string> = {
@@ -159,7 +158,6 @@ function balloonToResult(): SearchResult[] {
     reviewCount: b.reviewCount,
     duration: b.duration,
     durationMinutes: b.durationMinutes,
-    marketPrice: b.marketPrice,
   }));
 }
 
@@ -180,7 +178,6 @@ function serviceToResult(
     reviewCount: s.reviewCount,
     duration: s.duration,
     durationMinutes: parseDurationMinutes(s.duration) ?? undefined,
-    marketPrice: s.marketPrice,
   }));
 }
 

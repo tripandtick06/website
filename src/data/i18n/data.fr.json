@@ -3,7 +3,7 @@
     "standart-balon-ucusu": {
       "name": "Vol en montgolfière Standard",
       "shortDescription": "Le vol en montgolfière le plus économique. 60 min de vol, grande nacelle, remboursement à 100 % en cas d'annulation météo.",
-      "longDescription": "Le moyen le plus abordable de voir les cheminées de fées, les vallées et le lever du soleil de Cappadoce depuis le ciel. Le vol dure environ 60 minutes dans une nacelle spacieuse de 16 à 20 passagers, avec un pilote professionnel. Prise en charge à l'hôtel environ une heure avant le lever du soleil ; petit-déjeuner léger sur le site de décollage, toast au champagne après l'atterrissage, certificat de vol et médaille, assurance passagers de 40 M€ et retour à l'hôtel inclus. Nous opérons ce forfait avec Kaya, İstanbul, Butterfly, Asiana et Türkiye Balloons ; l'opérateur est attribué selon la date et les disponibilités. Les enfants de moins de 6 ans, les femmes enceintes et les personnes souffrant de problèmes cardiaques ou de santé graves ne peuvent pas voler. L'autorisation de vol est donnée chaque matin par l'autorité de l'aviation civile ; en cas d'annulation météo, remboursement intégral ou nouvelle date. Prix catalogue à plus de 7 jours ; à moins de 7 jours, prix du jour selon la météo et la demande.",
+      "longDescription": "Le moyen le plus abordable de voir les cheminées de fées, les vallées et le lever du soleil de Cappadoce depuis le ciel. Le vol dure environ 60 minutes dans une nacelle spacieuse de 16 à 20 passagers, avec un pilote professionnel. Prise en charge à l'hôtel environ une heure avant le lever du soleil ; petit-déjeuner léger sur le site de décollage, toast au champagne après l'atterrissage, certificat de vol et médaille, assurance passagers de 40 M€ et retour à l'hôtel inclus. Nous opérons ce forfait avec Kaya, İstanbul, Butterfly, Asiana et Türkiye Balloons ; l'opérateur est attribué selon la date et les disponibilités. Les enfants de moins de 6 ans, les femmes enceintes et les personnes souffrant de problèmes cardiaques ou de santé graves ne peuvent pas voler. L'autorisation de vol est donnée chaque matin par l'autorité de l'aviation civile ; en cas d'annulation météo, remboursement intégral ou nouvelle date. Les prix commencent à 100 € ; contactez-nous sur WhatsApp pour connaître le prix actuel selon votre date, la météo et les disponibilités.",
       "badge": "Le plus populaire",
       "includes": [
         "Transfert depuis l'hôtel",
@@ -22,39 +22,12 @@
         "Les femmes enceintes ne peuvent pas voler",
         "Les personnes souffrant de problèmes cardiaques ou de santé graves ne peuvent pas voler",
         "Annulation liée aux conditions météo — remboursement à 100 % en cas d'annulation par l'opérateur",
-        "Le prix peut varier au quotidien dans les 7 jours (conditions météo + affluence)"
+        "Prix de départ — prix actuel selon votre date et les disponibilités sur WhatsApp"
       ],
       "highlights": [
         "60 minutes",
         "Certificat inclus",
         "Service de champagne"
-      ]
-    },
-    "deluxe-balon-ucusu": {
-      "name": "Vol en montgolfière Deluxe",
-      "shortDescription": "Petite nacelle (max 16 personnes), expérience de luxe de 60 minutes + certificat cartonné.",
-      "longDescription": "Pour ceux qui veulent moins de passagers, plus d'espace et un service plus attentif. Le vol Deluxe dure lui aussi environ 60 minutes, mais la nacelle accueille au maximum 16 personnes : chacun est au bord, face au paysage. Transfert VIP depuis l'hôtel, petit-déjeuner gastronomique sur le site de décollage, champagne premium à l'atterrissage, certificat de vol cartonné, séance photo professionnelle et assurance passagers de 40 M€ inclus. Nous opérons ce forfait avec Royal Balloon, Butterfly Balloons et Voyager Balloons. Les enfants de moins de 6 ans, les femmes enceintes et les personnes souffrant de problèmes cardiaques ou de santé graves ne peuvent pas voler. L'autorisation de vol est donnée chaque matin par l'autorité de l'aviation civile ; en cas d'annulation météo, remboursement intégral ou nouvelle date. Le choix le plus équilibré entre Standard et Romantique privé pour les lunes de miel, anniversaires et petits groupes.",
-      "badge": "Deluxe",
-      "includes": [
-        "Transfert VIP depuis l'hôtel",
-        "Petit-déjeuner gourmet",
-        "Assurance 40 M€",
-        "Certificat de vol cartonné",
-        "Champagne premium",
-        "Séance photo professionnelle"
-      ],
-      "excludes": [
-        "Dépenses personnelles"
-      ],
-      "warnings": [
-        "Les enfants de moins de 6 ans ne peuvent pas voler",
-        "Les femmes enceintes ne peuvent pas voler",
-        "Les personnes souffrant de problèmes cardiaques ou de santé graves ne peuvent pas voler"
-      ],
-      "highlights": [
-        "60 minutes",
-        "Petite nacelle (max 16)",
-        "Certificat cartonné"
       ]
     },
     "romantik-ozel-balon": {
@@ -278,21 +251,6 @@
         "Spectacle de 3 heures"
       ]
     },
-    "turk-gecesi-yemeksiz": {
-      "name": "Soirée turque (Sans dîner)",
-      "shortDescription": "Spectacle de la Soirée turque — semah, folklore, danse orientale, danse caucasienne. Dîner/alcool non inclus, uniquement le spectacle + transfert.",
-      "includes": [
-        "Semah + folklore + danse orientale",
-        "Spectacle de danse caucasienne",
-        "Boisson de bienvenue",
-        "Transfert depuis l'hôtel"
-      ],
-      "highlights": [
-        "Plus abordable",
-        "Spectacle uniquement",
-        "Transfert inclus"
-      ]
-    },
     "microlight-standart": {
       "name": "Vol en ULM Standard",
       "shortDescription": "Vol motorisé en ULM de 15 à 18 minutes au-dessus du cœur de la Cappadoce — transfert privé, certificat de vol, équipement, séance photo inclus.",
@@ -328,40 +286,65 @@
         "Photos premium"
       ]
     },
-    "kirmizi-tur": {
-      "name": "Circuit Rouge de Cappadoce (Red Tour)",
-      "shortDescription": "Musée en plein air de Göreme, château d'Uçhisar, musée en plein air de Zelve, Paşabağ (Vallée des Moines), Vallée de Devrent (Vallée de l'Imagination), atelier de poterie d'Avanos, Vallée de l'Amour, Vallée des Pigeons, Çavuşin, atelier de cuir — guide professionnel + billets de musée + déjeuner inclus.",
-      "badge": "Le plus populaire",
+    "balon-flying-dress-cekimi": {
+      "name": "Séance Photo Montgolfière + Flying Dress",
+      "shortDescription": "Vol en montgolfière au lever du soleil + séance photo professionnelle dans la nacelle et dans la vallée (30 min, 20 photos retouchées). Location de robe Flying Dress en option — un seul produit pour votre contenu Instagram/TikTok.",
+      "badge": "Tendance",
       "includes": [
-        "Guide touristique professionnel (TR/EN/RU)",
-        "Transfert depuis l'hôtel",
-        "Billets d'entrée aux musées",
-        "Déjeuner",
-        "Toutes les taxes"
+        "Vol en montgolfière au lever du soleil (nacelle standard)",
+        "Photographe professionnel (30 min, nacelle + vallée)",
+        "20 photos retouchées (livraison numérique)",
+        "Transfert depuis l'hôtel"
       ],
       "highlights": [
-        "10+ arrêts",
-        "Musée en plein air de Göreme",
+        "Vol + séance photo en un seul produit",
+        "20 photos retouchées",
+        "Option location de robe"
+      ]
+    },
+    "kirmizi-tur": {
+      "name": "Tour Rouge de Cappadoce (Red Tour)",
+      "shortDescription": "Musée en plein air de Zelve, château d'Uçhisar, Paşabağ (vallée des Moines), atelier de poterie d'Avanos, Devrent (vallée de l'Imagination), vallée de l'Amour, boutique de cuir, panorama de Göreme, vallée des Pigeons — transfert aller-retour, guide professionnel, déjeuner et billets d'entrée aux musées inclus.",
+      "badge": "Le plus populaire",
+      "includes": [
+        "Transfert aller-retour",
+        "Guide touristique professionnel",
+        "Déjeuner",
+        "Billets d'entrée aux musées"
+      ],
+      "highlights": [
+        "Musée en plein air de Zelve",
+        "Château d'Uçhisar",
+        "Paşabağ (vallée des Moines)",
         "Atelier de poterie d'Avanos",
-        "Billets de musée inclus"
+        "Devrent (vallée de l'Imagination)",
+        "Vallée de l'Amour",
+        "Boutique de cuir",
+        "Panorama de Göreme",
+        "Vallée des Pigeons"
       ]
     },
     "yesil-tur": {
-      "name": "Circuit Vert de Cappadoce (Green Tour)",
-      "shortDescription": "Panorama de Göreme, Vallée des Pigeons, ville souterraine de Derinkuyu, Vallée d'Ihlara (terrasse panoramique en verre + randonnée), déjeuner au village de Belisırma, Cathédrale de Selime, Narlıgöl, Yaprakhisar — guide professionnel + billets de musée + déjeuner à Belisırma inclus.",
-      "badge": "Nature",
+      "name": "Tour Verte de Cappadoce (Green Tour)",
+      "shortDescription": "Ville souterraine, musée en plein air de Zelve, château d'Uçhisar, Paşabağ (vallée des Moines), atelier de poterie d'Avanos, Devrent (vallée de l'Imagination), vallée de l'Amour, boutique de cuir, panorama de Göreme, vallée des Pigeons — transfert aller-retour, guide professionnel, déjeuner et billets d'entrée aux musées inclus.",
+      "badge": "Ville souterraine incluse",
       "includes": [
+        "Transfert aller-retour",
         "Guide touristique professionnel",
-        "Transfert depuis l'hôtel",
-        "Ville souterraine + billets de musée",
-        "Déjeuner à Belisırma",
-        "Toutes les taxes"
+        "Déjeuner",
+        "Billets d'entrée aux musées"
       ],
       "highlights": [
         "Ville souterraine",
-        "Terrasse en verre d'Ihlara",
-        "Repas au village de Belisırma",
-        "Cathédrale de Selime"
+        "Musée en plein air de Zelve",
+        "Château d'Uçhisar",
+        "Paşabağ (vallée des Moines)",
+        "Atelier de poterie d'Avanos",
+        "Devrent (vallée de l'Imagination)",
+        "Vallée de l'Amour",
+        "Boutique de cuir",
+        "Panorama de Göreme",
+        "Vallée des Pigeons"
       ]
     },
     "mix-tur": {
@@ -381,48 +364,36 @@
         "12+ arrêts"
       ]
     },
-    "sari-tur": {
-      "name": "Circuit Jaune de Cappadoce (Yellow Tour)",
-      "shortDescription": "Églises de Soğanlı, cité antique de Sobesos, village grec de Mustafapaşa, randonnée de 2 km dans la Vallée de Kızılçukur, église byzantine de Çavuşin, Jardin de Lavande, atelier de tapis, Vallée des Pigeons — un itinéraire plus paisible et plus approfondi.",
+    "eco-yesil-tur": {
+      "name": "Eco Green Tour",
+      "shortDescription": "Panorama de Göreme, vallée des Pigeons, atelier d'onyx, villes souterraines de Kaymaklı et Derinkuyu, randonnée dans la vallée d'Ihlara, lac Nar et dégustation de saveurs locales — guide professionnel, transfert, déjeuner et billets d'entrée aux musées inclus. 09h30-18h00.",
+      "badge": "Nature",
       "includes": [
         "Guide touristique professionnel",
         "Transfert",
-        "Billets de musée",
-        "Déjeuner"
+        "Déjeuner",
+        "Billets d'entrée aux musées"
       ],
       "highlights": [
-        "Églises de Soğanlı",
-        "Randonnée de Kızılçukur",
-        "Mustafapaşa",
-        "Itinéraire paisible"
-      ]
-    },
-    "yeralti-turu": {
-      "name": "Circuit des villes souterraines",
-      "shortDescription": "Villes souterraines de Derinkuyu + Kaymaklı, église byzantine de Çavuşin, Vallée des Pigeons — circuit détaillé d'une demi-journée. Guide professionnel + billets de musée inclus.",
-      "includes": [
-        "Guide professionnel",
-        "Transfert",
-        "Entrée 2 villes souterraines",
-        "Église de Çavuşin"
-      ],
-      "highlights": [
-        "2 villes souterraines",
-        "Église byzantine de Çavuşin",
-        "Demi-journée"
+        "Panorama de Göreme",
+        "Vallée des Pigeons",
+        "Onyx",
+        "Villes souterraines de Kaymaklı et Derinkuyu",
+        "Randonnée dans la vallée d'Ihlara",
+        "Lac Nar",
+        "Dégustation de saveurs locales"
       ]
     },
     "gun-batimi-turu": {
-      "name": "Circuit Panorama au coucher du soleil",
-      "shortDescription": "Coucher du soleil à Aktepe + panorama de Göreme + Vallée de Kızılçukur — verre de vin offert.",
+      "name": "Tour Panoramique du Coucher de Soleil",
+      "shortDescription": "Aktepe + panorama de Göreme + vallée de Kızılçukur au coucher du soleil — guide et transfert inclus.",
       "includes": [
         "Guide",
-        "Transfert",
-        "Verre de vin offert"
+        "Transfert"
       ],
       "highlights": [
-        "Coucher du soleil",
-        "Service de vin",
+        "Coucher de soleil",
+        "Vallée de Kızılçukur",
         "Panorama"
       ]
     },
@@ -1063,7 +1034,7 @@
   "faq": {
     "f0": {
       "question": "Combien coûte un vol en montgolfière en Cappadoce ?",
-      "answer": "Chez Trip and Tick, les tarifs des vols en montgolfière en Cappadoce démarrent à 165 € par personne. Standard 165 €, Deluxe 295 €, Privé romantique 580 €. Tous les tarifs incluent le transfert depuis l'hôtel, le petit-déjeuner, l'assurance de 40 millions d'euros, le certificat et le service de champagne."
+      "answer": "Chez Trip and Tick, les tarifs des vols en montgolfière en Cappadoce démarrent à 100 € par personne. La nacelle privée Romantique est sur devis — demandez-nous le prix actuel sur WhatsApp. Tous les tarifs incluent le transfert depuis l'hôtel, le petit-déjeuner, l'assurance de 40 millions d'euros, le certificat et le service de champagne."
     },
     "f1": {
       "question": "À partir de quel âge peut-on monter en montgolfière en Cappadoce ?",
@@ -1103,7 +1074,7 @@
     },
     "f10": {
       "question": "Combien coûte le vol par personne, et peut-on payer en livres turques ?",
-      "answer": "Le vol Standard coûte 165 € par personne, le Deluxe 295 €; la nacelle privée Romantique est sur devis. Les prix sont en euros; le sélecteur de devise du site affiche l'équivalent en TRY et USD au taux du jour. Pour les dates à moins de 7 jours, le prix peut varier chaque jour selon la météo et la demande."
+      "answer": "Le vol Standard démarre à 100 € par personne; la nacelle privée Romantique est sur devis. Les prix sont en euros; le sélecteur de devise du site affiche l'équivalent en TRY et USD au taux du jour. Demandez-nous le prix actuel sur WhatsApp."
     },
     "f11": {
       "question": "Combien de temps dure le vol et à quelle heure commence-t-il ?",
@@ -1111,7 +1082,7 @@
     },
     "f12": {
       "question": "Combien de personnes dans une nacelle, et existe-t-il un vol privé pour deux ?",
-      "answer": "La nacelle Standard accueille 16-20 passagers, la Deluxe jusqu'à 16. Une nacelle privée pour deux seulement est proposée avec le forfait Romantique privé, prisé pour les demandes en mariage et les anniversaires."
+      "answer": "La nacelle Standard accueille 16-20 passagers. Une nacelle privée pour deux seulement est proposée avec le forfait Romantique privé, prisé pour les demandes en mariage et les anniversaires."
     },
     "f13": {
       "question": "Quel est le meilleur mois pour un vol en Cappadoce ?",

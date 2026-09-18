@@ -32,7 +32,9 @@
   "serviceCard": {
     "infoForm": "情報 & フォーム",
     "reserve": "今すぐ予約",
-    "perCouple": "カップルごと"
+    "perCouple": "カップルごと",
+    "fromPrice": "{price}〜",
+    "askPrice": "料金をお問い合わせ"
   },
   "reviewScore": {
     "excellent": "優れた",

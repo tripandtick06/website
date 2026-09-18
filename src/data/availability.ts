@@ -31,7 +31,6 @@ export interface DayAvailability {
 export const DEFAULT_CAPACITY: Record<string, number> = {
   // Balon paketleri
   "standart-balon-ucusu": 80, // 4 sefer × 20 sepet
-  "deluxe-balon-ucusu": 32, // 2 sefer × 16 (kucuk sepet)
   "romantik-ozel-balon": 8, // özel sepet
   // ATV
   "atv-standart": 30,
@@ -49,16 +48,14 @@ export const DEFAULT_CAPACITY: Record<string, number> = {
   "kirmizi-tur": 50,
   "yesil-tur": 45,
   "mix-tur": 45,
-  "sari-tur": 30,
   "gun-batimi-turu": 40,
   "instagram-turu": 20,
-  "yeralti-turu": 50,
+  "eco-yesil-tur": 40,
   // Hamam
   "hamam-standart": 40,
   "hamam-deluxe": 20,
   // Türk Gecesi
   "turk-gecesi-yemekli": 80,
-  "turk-gecesi-yemeksiz": 80,
   // Microlight
   "microlight-standart": 12,
   "microlight-deluxe": 8,

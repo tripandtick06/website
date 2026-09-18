@@ -9,7 +9,8 @@ import NextImage from "next/image";
 import { Link } from "@/i18n/routing";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { useT, useLocale } from "@/lib/i18n/I18nProvider";
-import { formatPrice, cn } from "@/lib/utils";
+import { cn } from "@/lib/utils";
+import { fromPriceShort } from "@/lib/price-label";
 import { Star, Globe, ChevronDown } from "lucide-react";
 import { operatorDescription, operatorTagline } from "@/data/services/operators";
 import type { Operator } from "@/data/services/operators";
@@ -141,7 +142,9 @@ export function OperatorDetayContent({
                         <div className="flex items-baseline justify-between pt-3 border-t border-slate-100">
                           <span className="text-xs text-slate-500">{pkg.duration}</span>
                           <span className="font-bold text-amber-600">
-                            {formatPrice(pkg.adultPrice, pkg.currency)}
+                            {pkg.priceOnRequest
+                              ? t.page.balonlar.ozel_fiyat_sorunuz
+                              : fromPriceShort(locale, pkg.adultPrice, pkg.currency)}
                           </span>
                         </div>
                       </Link>

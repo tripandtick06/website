@@ -3,7 +3,7 @@
     "standart-balon-ucusu": {
       "name": "Standart Balon Uçuşu",
       "shortDescription": "Ən sərfəli balon turu. 60 dəqiqə uçuş, geniş sepet, %100 hava ləğvi geri qaytarılması.",
-      "longDescription": "Kapadokya'nın əfsanəvi peri daşlarını quş baxışı ilə izləmək üçün ən münasib variant. Standart sepet 16-20 sərnişin tutumuna malikdir və peşəkar pilotlar ilə 60 dəqiqə uçuş təqdim edir. Otel transferi, yüngül səhər yeməyi, 40 milyon Euro sığorta, uçuş sertifikatı və medal, şampan ilə eniş qeyd etməsi — hamısı qiymətə daxildir. Qiymətlər hava şəraiti və sıxlığa görə gündəlik dəyişə bilər — 7 gündən uzaq tarixlər üçün kataloq qiyməti, 7 gün içi üçün aktual qiymət keçərlidir.",
+      "longDescription": "Kapadokya'nın əfsanəvi peri daşlarını quş baxışı ilə izləmək üçün ən münasib variant. Standart sepet 16-20 sərnişin tutumuna malikdir və peşəkar pilotlar ilə 60 dəqiqə uçuş təqdim edir. Otel transferi, yüngül səhər yeməyi, 40 milyon Euro sığorta, uçuş sertifikatı və medal, şampan ilə eniş qeyd etməsi — hamısı qiymətə daxildir. Qiymətlər 100 €-dan başlayır; tarixinizə, hava şəraitinə və yerlərin mövcudluğuna uyğun hazırkı qiyməti öyrənmək üçün WhatsApp-dan bizə yazın.",
       "badge": "Ən Populyar",
       "includes": [
         "Otel transferi",
@@ -22,39 +22,12 @@
         "Hamilələr binə bilməz",
         "Ciddi ürək və ya sağlamlıq problemi olanlar binə bilməz",
         "Hava şəraitinə bağlı ləğv — operator ləğv edərsə %100 geri qaytarma",
-        "Qiymət 7 gün içi gündəlik dəyişə bilər (hava şəraiti + sıxlıq)"
+        "Başlanğıc qiymətidir — tarix və yerlərin mövcudluğuna uyğun hazırkı qiyməti WhatsApp-dan öyrənin"
       ],
       "highlights": [
         "60 dəqiqə",
         "Sertifikat daxil",
         "Şampan xidməti"
-      ]
-    },
-    "deluxe-balon-ucusu": {
-      "name": "Deluxe Balon Uçuşu",
-      "shortDescription": "Kiçik sepet (maks 16 nəfər), 60 dəqiqə lüks təcrübə + karton sertifikat.",
-      "longDescription": "Premium balon təcrübəsi. Kiçik sepet (maks 16 sərnişin) ilə daha geniş 60 dəqiqə uçuş, karton uçuş sertifikatı, gourmet səhər yeməyi və VIP transfer. Ən seçkin operatorlarla işlənilir.",
-      "badge": "Deluxe",
-      "includes": [
-        "VIP otel transferi",
-        "Gourmet səhər yeməyi",
-        "40M€ sığorta",
-        "Karton uçuş sertifikatı",
-        "Premium şampan",
-        "Peşəkar foto çəkilişi"
-      ],
-      "excludes": [
-        "Şəxsi xərclər"
-      ],
-      "warnings": [
-        "6 yaş altı uşaqlar binə bilməz",
-        "Hamilələr binə bilməz",
-        "Ciddi ürək və ya sağlamlıq problemi olanlar binə bilməz"
-      ],
-      "highlights": [
-        "60 dəqiqə",
-        "Kiçik sepet (maks 16)",
-        "Karton sertifikat"
       ]
     },
     "romantik-ozel-balon": {
@@ -278,21 +251,6 @@
         "3 saat şou"
       ]
     },
-    "turk-gecesi-yemeksiz": {
-      "name": "Türk Gecəsi (Yeməksiz)",
-      "shortDescription": "Türk Gecəsi şousu — semah, folklor, oryantal, Kafkas. Yemək/alkol daxil deyil, yalnız şou + transfer.",
-      "includes": [
-        "Semah + folklor + oryantal",
-        "Kafkas dans şovu",
-        "Hoş gəldin içkisi",
-        "Otel transferi"
-      ],
-      "highlights": [
-        "Daha münasib",
-        "Yalnız şou",
-        "Transfer daxil"
-      ]
-    },
     "microlight-standart": {
       "name": "Microlight Standart Uçuş",
       "shortDescription": "15-18 dəqiqəlik Kapadokya ürəyinin üzərində motorlu microlight uçuşu — xüsusi transfer, uçuş sertifikatı, avadanlıq, fotoşəkil çəkilişi daxil.",
@@ -328,40 +286,65 @@
         "Premium foto"
       ]
     },
-    "kirmizi-tur": {
-      "name": "Kapadokya Qırmızı Tur (Red Tour)",
-      "shortDescription": "Göreme Açıq Hava Muzeyi, Uçhisar Qalası, Zelve Açıq Hava Muzeyi, Paşabağ (Kəşişlər Vadisi), Devrent (Xəyal) Vadisi, Avanos çömlek atölyəsi, Aşk Vadisi, Güvercinlik Vadisi, Çavuşin, Dəri atölyəsi — peşəkar bələdçi + muzey biletləri + nahar daxil.",
-      "badge": "Ən Populyar",
+    "balon-flying-dress-cekimi": {
+      "name": "Hava Şarı + Flying Dress Foto Çəkilişi",
+      "shortDescription": "Gündoğuşu vaxtı hava şarı uçuşu + səbətdə və dərədə peşəkar fotoqraf çəkilişi (30 dəq, 20 redaktə olunmuş kadr). Flying dress paltarının icarəsi əlavə seçim kimi qoşula bilər — Instagram/TikTok kontenti üçün tək məhsulda.",
+      "badge": "Trend",
       "includes": [
-        "Peşəkar tur bələdçisi (TR/EN/RU)",
-        "Oteldən transfer",
-        "Muzey giriş biletləri",
-        "Nahar",
-        "Bütün vergilər"
+        "Gündoğuşu vaxtı hava şarı uçuşu (standart səbət)",
+        "Peşəkar fotoqraf (30 dəq, səbətdə + dərədə)",
+        "20 redaktə olunmuş kadr (rəqəmsal təhvil)",
+        "Otel transferi"
       ],
       "highlights": [
-        "10+ dayanacaq",
-        "Göreme Açıq Hava Muzeyi",
-        "Avanos çömlek atölyəsi",
-        "Muzey biletləri daxil"
+        "Hava şarı + çəkiliş tək məhsulda",
+        "20 redaktə olunmuş kadr",
+        "Paltar icarəsi seçimi"
+      ]
+    },
+    "kirmizi-tur": {
+      "name": "Kappadokiya Qırmızı Turu (Red Tour)",
+      "shortDescription": "Zelve Açıq Səma Muzeyi, Uçhisar qalası, Paşabağ (Rahiblər vadisi), Avanosda dulusçuluq emalatxanası, Devrent (Xəyal vadisi), Sevgi vadisi, dəri mağazası, Göreme panoraması, Göyərçin vadisi — otelə gətirmə və aparma transferi, peşəkar bələdçi, nahar və muzey giriş biletləri daxildir.",
+      "badge": "Ən Populyar",
+      "includes": [
+        "Otelə gətirmə və aparma transferi",
+        "Peşəkar turist bələdçisi",
+        "Nahar",
+        "Muzey giriş biletləri"
+      ],
+      "highlights": [
+        "Zelve Açıq Səma Muzeyi",
+        "Uçhisar qalası",
+        "Paşabağ (Rahiblər vadisi)",
+        "Avanosda dulusçuluq emalatxanası",
+        "Devrent (Xəyal vadisi)",
+        "Sevgi vadisi",
+        "Dəri mağazası",
+        "Göreme panoraması",
+        "Göyərçin vadisi"
       ]
     },
     "yesil-tur": {
-      "name": "Kapadokya Yaşıl Tur (Yaşıl Tur)",
-      "shortDescription": "Göreme panoraması, Güvercinlik Vadisi, Derinkuyu Yeraltı Şəhəri, Ihlara Vadisi (panoramik şüşə terras + gəzinti), Belisırma kəndində nahar, Selime Katedrali, Narlıgöl, Yaprakhisar — peşəkar bələdçi + muzey biletləri + Belisırma naharı daxildir.",
-      "badge": "Təbiət",
+      "name": "Kappadokiya Yaşıl Turu (Green Tour)",
+      "shortDescription": "Yeraltı şəhər, Zelve Açıq Səma Muzeyi, Uçhisar qalası, Paşabağ (Rahiblər vadisi), Avanosda dulusçuluq emalatxanası, Devrent (Xəyal vadisi), Sevgi vadisi, dəri mağazası, Göreme panoraması, Göyərçin vadisi — otelə gətirmə və aparma transferi, peşəkar bələdçi, nahar və muzey giriş biletləri daxildir.",
+      "badge": "Yeraltı şəhər daxildir",
       "includes": [
-        "Peşəkar tur bələdçisi",
-        "Oteldən transfer",
-        "Yeraltı şəhəri + muzey biletləri",
-        "Belisırma naharı",
-        "Bütün vergilər"
+        "Otelə gətirmə və aparma transferi",
+        "Peşəkar turist bələdçisi",
+        "Nahar",
+        "Muzey giriş biletləri"
       ],
       "highlights": [
-        "Yeraltı şəhəri",
-        "Ihlara şüşə terras",
-        "Belisırma kəndi yeməyi",
-        "Selime Katedrali"
+        "Yeraltı şəhər",
+        "Zelve Açıq Səma Muzeyi",
+        "Uçhisar qalası",
+        "Paşabağ (Rahiblər vadisi)",
+        "Avanosda dulusçuluq emalatxanası",
+        "Devrent (Xəyal vadisi)",
+        "Sevgi vadisi",
+        "Dəri mağazası",
+        "Göreme panoraması",
+        "Göyərçin vadisi"
       ]
     },
     "mix-tur": {
@@ -381,48 +364,36 @@
         "12+ dayanacaq"
       ]
     },
-    "sari-tur": {
-      "name": "Kapadokya Sarı Tur (Sarı Tur)",
-      "shortDescription": "Soğanlı kilsələri, Sobesos qədim şəhəri, Mustafapaşa Yunan kəndi, Kızılçukur Vadisi 2 km gəzinti, Çavuşin Bizans kilsəsi, Lavanta Bağı, xalça emalatxanası, Güvercinlik Vadisi — daha sakit daha dərin marşrut.",
+    "eco-yesil-tur": {
+      "name": "Eco Green Tour",
+      "shortDescription": "Göreme panoraması, Göyərçin vadisi, oniks emalatxanası, Kaymaklı və Derinkuyu yeraltı şəhərləri, İhlara vadisində piyada gəzinti, Nar gölü və yerli ləzzətlərin dadılması — peşəkar bələdçi, transfer, nahar və muzey giriş biletləri daxildir. Saat 09:30-18:00.",
+      "badge": "Təbiət",
       "includes": [
         "Peşəkar tur bələdçisi",
         "Transfer",
-        "Muzey biletləri",
-        "Nahar"
+        "Nahar",
+        "Muzey giriş biletləri"
       ],
       "highlights": [
-        "Soğanlı kilsələri",
-        "Kızılçukur gəzintisi",
-        "Mustafapaşa",
-        "Sakit marşrut"
-      ]
-    },
-    "yeralti-turu": {
-      "name": "Yeraltı Şəhərləri Turu",
-      "shortDescription": "Derinkuyu + Kaymaklı yeraltı şəhərləri, Çavuşin Bizans kilsəsi, Güvercinlik Vadisi — yarım gün detallı tur. Peşəkar bələdçi + muzey biletləri daxildir.",
-      "includes": [
-        "Peşəkar bələdçi",
-        "Transfer",
-        "2 yeraltı şəhəri girişi",
-        "Çavuşin kilsəsi"
-      ],
-      "highlights": [
-        "2 yeraltı şəhəri",
-        "Çavuşin Bizans kilsəsi",
-        "Yarım gün"
+        "Göreme panoraması",
+        "Göyərçin vadisi",
+        "Oniks",
+        "Kaymaklı və Derinkuyu yeraltı şəhərləri",
+        "İhlara vadisində piyada gəzinti",
+        "Nar gölü",
+        "Yerli ləzzətlərin dadılması"
       ]
     },
     "gun-batimi-turu": {
       "name": "Gün Batımı Panorama Turu",
-      "shortDescription": "Aktepe + Göreme panoraması + Kızılçukur Vadisi gün batımı — şərab təqdimatı daxildir.",
+      "shortDescription": "Aktepe + Göreme panoraması + Kızılçukur vadisində gün batımı — bələdçi və transfer daxildir.",
       "includes": [
         "Bələdçi",
-        "Transfer",
-        "Şərab təqdimatı"
+        "Transfer"
       ],
       "highlights": [
         "Gün batımı",
-        "Şərab xidməti",
+        "Kızılçukur vadisi",
         "Panorama"
       ]
     },
@@ -1063,7 +1034,7 @@
   "faq": {
     "f0": {
       "question": "Kapadokya balon turu nə qədərdir?",
-      "answer": "Trip and Tick-də Kapadokya balon turu qiymətləri nəfər başına €165-dən başlayır. Standart €165, Deluxe €295, Romantik xüsusi €580. Bütün qiymətlərə otel transferi, səhər yeməyi, 40 milyon Euro sığorta, sertifikat və şampan xidməti daxildir."
+      "answer": "Trip and Tick-də Kapadokya balon turu qiymətləri nəfər başına €100-dən başlayır. Romantik xüsusi səbət tələbə əsasən qiymətləndirilir — güncəl qiyməti WhatsApp-dan soruşun. Bütün qiymətlərə otel transferi, səhər yeməyi, 40 milyon Euro sığorta, sertifikat və şampan xidməti daxildir."
     },
     "f1": {
       "question": "Kapadokya balonuna neçə yaşından minmək olar?",
@@ -1103,7 +1074,7 @@
     },
     "f10": {
       "question": "How much is the balloon tour per person, and can I pay in Turkish lira?",
-      "answer": "The Standard flight is €165 per person, Deluxe €295; the Romantic private basket is priced on request. Prices are in euros; the site's currency selector shows the TRY and USD equivalent at that day's rate. For dates within 7 days the price can change daily with weather and demand."
+      "answer": "Standart uçuş nəfər başına €100-dən başlayır; Romantik xüsusi səbət tələbə əsasən qiymətləndirilir. Qiymətlər avro ilədir; saytın valyuta seçicisi günün məzənnəsi ilə TRY və USD ekvivalentini göstərir. Güncəl qiyməti WhatsApp-dan soruşun."
     },
     "f11": {
       "question": "How long is the balloon flight and what time does it start?",
@@ -1111,7 +1082,7 @@
     },
     "f12": {
       "question": "How many people fit in a balloon, and is there a private balloon for two?",
-      "answer": "The Standard basket carries 16-20 passengers, the Deluxe basket up to 16. A private basket for two only is available with the Romantic Private Balloon package, popular for proposals and anniversaries."
+      "answer": "Standart səbət 16-20 sərnişin daşıyır. Yalnız iki nəfərlik xüsusi səbət Romantik Xüsusi Balon paketi ilə mümkündür; təklif və ildönümləri üçün populyardır."
     },
     "f13": {
       "question": "Which month is best for a Cappadocia balloon flight?",

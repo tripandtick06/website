@@ -75,7 +75,7 @@ function rand(seed: number): () => number {
 
 const SERVICES = [
   { slug: "standart-balon-ucusu", name: "Standart Balon Uçuşu", category: "balloon" as const, price: 165 },
-  { slug: "deluxe-balon-ucusu", name: "Deluxe Balon Uçuşu", category: "balloon" as const, price: 295 },
+  { slug: "standart-balon-ucusu", name: "Standart Balon Uçuşu", category: "balloon" as const, price: 100 },
   { slug: "romantik-ozel-balon", name: "Romantik Özel Balon", category: "balloon" as const, price: 580 },
   { slug: "atv-standart", name: "ATV Standart Tur", category: "activity" as const, price: 29 },
   { slug: "atv-sunset", name: "Sunset ATV Turu", category: "activity" as const, price: 39 },

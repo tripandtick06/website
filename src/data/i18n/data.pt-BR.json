@@ -3,7 +3,7 @@
     "standart-balon-ucusu": {
       "name": "Voo de Balão Padrão",
       "shortDescription": "O passeio de balão mais econômico. 60 min de voo, cesto amplo, reembolso de 100% em caso de cancelamento.",
-      "longDescription": "A forma mais acessível de ver as chaminés de fada, os vales e o nascer do sol da Capadócia do alto. O voo dura cerca de 60 minutos em um cesto espaçoso para 16 a 20 passageiros, com piloto profissional. A busca no hotel é cerca de uma hora antes do nascer do sol; café da manhã leve no local de decolagem, brinde com champanhe após o pouso, certificado de voo e medalha, seguro de passageiros de €40 milhões e o retorno ao hotel estão incluídos. Operamos este pacote com Kaya, İstanbul, Butterfly, Asiana e Türkiye Balloons; o operador é definido conforme a data e a disponibilidade. Crianças menores de 6 anos, gestantes e pessoas com problemas cardíacos ou de saúde graves não podem voar. A liberação é decidida toda manhã pela autoridade de aviação civil; se o voo for cancelado pelo tempo, reembolso total ou nova data. Para datas com mais de 7 dias vale o preço de catálogo; dentro de 7 dias vale o preço do dia conforme tempo e demanda.",
+      "longDescription": "A forma mais acessível de ver as chaminés de fada, os vales e o nascer do sol da Capadócia do alto. O voo dura cerca de 60 minutos em um cesto espaçoso para 16 a 20 passageiros, com piloto profissional. A busca no hotel é cerca de uma hora antes do nascer do sol; café da manhã leve no local de decolagem, brinde com champanhe após o pouso, certificado de voo e medalha, seguro de passageiros de €40 milhões e o retorno ao hotel estão incluídos. Operamos este pacote com Kaya, İstanbul, Butterfly, Asiana e Türkiye Balloons; o operador é definido conforme a data e a disponibilidade. Crianças menores de 6 anos, gestantes e pessoas com problemas cardíacos ou de saúde graves não podem voar. A liberação é decidida toda manhã pela autoridade de aviação civil; se o voo for cancelado pelo tempo, reembolso total ou nova data. Os preços começam em 100 €; chame a gente no WhatsApp para saber o preço atual conforme a data, o clima e a disponibilidade.",
       "badge": "Mais Popular",
       "includes": [
         "Transfer do hotel",
@@ -22,39 +22,12 @@
         "Grávidas não podem embarcar",
         "Pessoas com problemas cardíacos ou de saúde graves não podem embarcar",
         "Cancelamento devido ao clima — reembolso de 100% em caso de cancelamento pelo operador",
-        "Os preços podem variar diariamente (condições climáticas + demanda)"
+        "Preço inicial — preço atual conforme a data e disponibilidade pelo WhatsApp"
       ],
       "highlights": [
         "60 minutos",
         "Certificado incluído",
         "Serviço de champanhe"
-      ]
-    },
-    "deluxe-balon-ucusu": {
-      "name": "Voo de Balão Deluxe",
-      "shortDescription": "Cesto pequeno (máx. 16 pessoas), 60 minutos de experiência de luxo + certificado de papel.",
-      "longDescription": "Para quem quer menos passageiros, mais espaço e um serviço mais atencioso. O voo Deluxe também dura cerca de 60 minutos, mas o cesto leva no máximo 16 pessoas — todos ficam na borda, de frente para a vista. Transfer VIP do hotel, café da manhã gourmet no local de decolagem, champanhe premium no pouso, certificado de voo em cartão, ensaio fotográfico profissional e seguro de passageiros de €40 milhões incluídos. Operamos este pacote com Royal Balloon, Butterfly Balloons e Voyager Balloons. Crianças menores de 6 anos, gestantes e pessoas com problemas cardíacos ou de saúde graves não podem voar. A liberação é decidida toda manhã pela autoridade de aviação civil; se o voo for cancelado pelo tempo, reembolso total ou nova data. A escolha mais equilibrada entre o Standard e o Romântico Privativo para lua de mel, aniversários e grupos pequenos.",
-      "badge": "Deluxe",
-      "includes": [
-        "Transfer VIP do hotel",
-        "Café da manhã gourmet",
-        "Seguro de 40M€",
-        "Certificado de voo de papel",
-        "Champanhe premium",
-        "Sessão de fotos profissional"
-      ],
-      "excludes": [
-        "Despesas pessoais"
-      ],
-      "warnings": [
-        "Crianças menores de 6 anos não podem embarcar",
-        "Grávidas não podem embarcar",
-        "Pessoas com problemas cardíacos ou de saúde graves não podem embarcar"
-      ],
-      "highlights": [
-        "60 minutos",
-        "Cesto pequeno (máx. 16)",
-        "Certificado de papel"
       ]
     },
     "romantik-ozel-balon": {
@@ -278,21 +251,6 @@
         "Show de 3 horas"
       ]
     },
-    "turk-gecesi-yemeksiz": {
-      "name": "Noite Turca (Sem Jantar)",
-      "shortDescription": "Show da Noite Turca — semah, folclore, dança oriental, dança do Cáucaso. Jantar/bebida não incluídos, apenas show + transfer.",
-      "includes": [
-        "Semah + folclore + dança oriental",
-        "Show de dança do Cáucaso",
-        "Bebida de boas-vindas",
-        "Transfer do hotel"
-      ],
-      "highlights": [
-        "Mais acessível",
-        "Apenas show",
-        "Transfer incluído"
-      ]
-    },
     "microlight-standart": {
       "name": "Voo Microlight Padrão",
       "shortDescription": "Voo de microlight motorizado de 15-18 minutos sobre o coração da Capadócia — transfer especial, certificado de voo, equipamento, fotos incluídas.",
@@ -328,40 +286,65 @@
         "Foto premium"
       ]
     },
-    "kirmizi-tur": {
-      "name": "Tour Vermelho da Capadócia",
-      "shortDescription": "Museu ao Ar Livre de Göreme, Castelo de Uçhisar, Museu ao Ar Livre de Zelve, Paşabağ (Vale dos Monges), Vale Devrent (Vale da Imaginação), oficina de cerâmica em Avanos, Vale do Amor, Vale das Pombas, Çavuşin, oficina de couro — guia profissional + ingressos de museu + almoço incluídos.",
-      "badge": "Mais Popular",
+    "balon-flying-dress-cekimi": {
+      "name": "Balão + Ensaio Fotográfico Flying Dress",
+      "shortDescription": "Voo de balão ao nascer do sol + fotógrafo profissional na cesta e no vale (30 min, 20 fotos editadas). Aluguel opcional do vestido flying dress — um único produto para o seu conteúdo de Instagram/TikTok.",
+      "badge": "Em alta",
       "includes": [
-        "Guia turístico profissional (TR/EN/RU)",
-        "Transfer do hotel",
-        "Ingressos para museus",
-        "Almoço",
-        "Todos os impostos"
+        "Voo de balão ao nascer do sol (cesta padrão)",
+        "Fotógrafo profissional (30 min, cesta + vale)",
+        "20 fotos editadas (entrega digital)",
+        "Transfer do hotel"
       ],
       "highlights": [
-        "10+ paradas",
-        "Museu ao Ar Livre de Göreme",
-        "Oficina de cerâmica em Avanos",
-        "Ingressos para museus incluídos"
+        "Balão + ensaio em um único produto",
+        "20 fotos editadas",
+        "Opção de aluguel de vestido"
+      ]
+    },
+    "kirmizi-tur": {
+      "name": "Tour Vermelho da Capadócia (Red Tour)",
+      "shortDescription": "Museu a Céu Aberto de Zelve, Castelo de Uçhisar, Paşabağ (Vale dos Monges), oficina de cerâmica de Avanos, Devrent (Vale da Imaginação), Vale do Amor, loja de couro, Panorama de Göreme, Vale dos Pombos — traslado de ida e volta, guia profissional, almoço e ingressos para os museus inclusos.",
+      "badge": "Mais Popular",
+      "includes": [
+        "Traslado de ida e volta",
+        "Guia turístico profissional",
+        "Almoço",
+        "Ingressos para os museus"
+      ],
+      "highlights": [
+        "Museu a Céu Aberto de Zelve",
+        "Castelo de Uçhisar",
+        "Paşabağ (Vale dos Monges)",
+        "Oficina de cerâmica de Avanos",
+        "Devrent (Vale da Imaginação)",
+        "Vale do Amor",
+        "Loja de couro",
+        "Panorama de Göreme",
+        "Vale dos Pombos"
       ]
     },
     "yesil-tur": {
-      "name": "Tour Verde da Capadócia",
-      "shortDescription": "Panorama de Göreme, Vale das Pombas, Cidade Subterrânea de Derinkuyu, Vale de Ihlara (terraço de vidro panorâmico + caminhada), almoço na vila de Belisırma, Catedral de Selime, Lago Narlı, Yaprakhisar — guia profissional + ingressos para museus + almoço em Belisırma incluídos.",
-      "badge": "Natureza",
+      "name": "Tour Verde da Capadócia (Green Tour)",
+      "shortDescription": "Cidade subterrânea, Museu a Céu Aberto de Zelve, Castelo de Uçhisar, Paşabağ (Vale dos Monges), oficina de cerâmica de Avanos, Devrent (Vale da Imaginação), Vale do Amor, loja de couro, Panorama de Göreme, Vale dos Pombos — traslado de ida e volta, guia profissional, almoço e ingressos para os museus inclusos.",
+      "badge": "Inclui cidade subterrânea",
       "includes": [
+        "Traslado de ida e volta",
         "Guia turístico profissional",
-        "Transfer do hotel",
-        "Ingressos para a cidade subterrânea + museu",
-        "Almoço em Belisırma",
-        "Todos os impostos"
+        "Almoço",
+        "Ingressos para os museus"
       ],
       "highlights": [
         "Cidade subterrânea",
-        "Terraço de vidro em Ihlara",
-        "Almoço na vila de Belisırma",
-        "Catedral de Selime"
+        "Museu a Céu Aberto de Zelve",
+        "Castelo de Uçhisar",
+        "Paşabağ (Vale dos Monges)",
+        "Oficina de cerâmica de Avanos",
+        "Devrent (Vale da Imaginação)",
+        "Vale do Amor",
+        "Loja de couro",
+        "Panorama de Göreme",
+        "Vale dos Pombos"
       ]
     },
     "mix-tur": {
@@ -381,48 +364,36 @@
         "12+ paradas"
       ]
     },
-    "sari-tur": {
-      "name": "Tour Amarelo da Capadócia",
-      "shortDescription": "Igrejas de Soğanlı, cidade antiga de Sobesos, vila grega de Mustafapaşa, caminhada de 2 km no Vale de Kızılçukur, Igreja Bizantina de Çavuşin, Jardim de Lavanda, oficina de tapetes, Vale das Pombas — rota mais tranquila e profunda.",
+    "eco-yesil-tur": {
+      "name": "Eco Green Tour",
+      "shortDescription": "Panorama de Göreme, Vale dos Pombos, oficina de ônix, cidades subterrâneas de Kaymaklı e Derinkuyu, trilha no Vale de Ihlara, Lago Nar e uma degustação de sabores locais — guia profissional, traslado, almoço e ingressos para os museus inclusos. Das 9h30 às 18h.",
+      "badge": "Natureza",
       "includes": [
-        "Guia turístico profissional",
-        "Transfer",
-        "Ingressos para museus",
-        "Almoço"
+        "Guia de turismo profissional",
+        "Traslado",
+        "Almoço",
+        "Ingressos para os museus"
       ],
       "highlights": [
-        "Igrejas de Soğanlı",
-        "Caminhada em Kızılçukur",
-        "Mustafapaşa",
-        "Rota tranquila"
-      ]
-    },
-    "yeralti-turu": {
-      "name": "Tour das Cidades Subterrâneas",
-      "shortDescription": "Cidades subterrâneas de Derinkuyu + Kaymaklı, Igreja Bizantina de Çavuşin, Vale das Pombas — tour detalhado de meio dia. Inclui guia profissional + ingressos para museus.",
-      "includes": [
-        "Guia profissional",
-        "Transfer",
-        "Entrada para 2 cidades subterrâneas",
-        "Igreja de Çavuşin"
-      ],
-      "highlights": [
-        "2 cidades subterrâneas",
-        "Igreja Bizantina de Çavuşin",
-        "Meio dia"
+        "Panorama de Göreme",
+        "Vale dos Pombos",
+        "Ônix",
+        "Cidades subterrâneas de Kaymaklı e Derinkuyu",
+        "Trilha no Vale de Ihlara",
+        "Lago Nar",
+        "Degustação de sabores locais"
       ]
     },
     "gun-batimi-turu": {
-      "name": "Tour Panorama do Pôr do Sol",
-      "shortDescription": "Aktepe + panorama de Göreme + pôr do sol no Vale de Kızılçukur — inclui serviço de vinho.",
+      "name": "Tour Panorâmico do Pôr do Sol",
+      "shortDescription": "Aktepe + panorama de Göreme + Vale de Kızılçukur ao pôr do sol — guia e traslado inclusos.",
       "includes": [
         "Guia",
-        "Transfer",
-        "Serviço de vinho"
+        "Traslado"
       ],
       "highlights": [
         "Pôr do sol",
-        "Serviço de vinho",
+        "Vale de Kızılçukur",
         "Panorama"
       ]
     },
@@ -1063,7 +1034,7 @@
   "faq": {
     "f0": {
       "question": "Qual é o preço do passeio de balão em Cappadocia?",
-      "answer": "Os preços do passeio de balão em Cappadocia na Trip and Tick começam a partir de €165 por pessoa. Standard €165, Deluxe €295, Romântico especial €580. Todos os preços incluem transfer do hotel, café da manhã, seguro de 40 milhões de euros, certificado e serviço de champanhe."
+      "answer": "Os preços do passeio de balão em Cappadocia na Trip and Tick começam a partir de €100 por pessoa. O cesto privativo Romântico é orçado sob consulta — pergunte o preço atual pelo WhatsApp. Todos os preços incluem transfer do hotel, café da manhã, seguro de 40 milhões de euros, certificado e serviço de champanhe."
     },
     "f1": {
       "question": "A partir de que idade crianças podem voar de balão em Cappadocia?",
@@ -1103,7 +1074,7 @@
     },
     "f10": {
       "question": "Quanto custa o balão por pessoa, e posso pagar em lira turca?",
-      "answer": "O voo Standard custa €165 por pessoa, o Deluxe €295; o cesto privativo Romântico é orçado sob consulta. Os preços são em euros; o seletor de moeda do site mostra o valor em TRY e USD pelo câmbio do dia. Para datas em até 7 dias o preço pode mudar diariamente conforme o tempo e a demanda."
+      "answer": "O voo Standard começa a partir de €100 por pessoa; o cesto privativo Romântico é orçado sob consulta. Os preços são em euros; o seletor de moeda do site mostra o valor em TRY e USD pelo câmbio do dia. Pergunte o preço atual pelo WhatsApp."
     },
     "f11": {
       "question": "Quanto tempo dura o voo e a que horas começa?",
@@ -1111,7 +1082,7 @@
     },
     "f12": {
       "question": "Quantas pessoas cabem no balão, e existe balão privativo para dois?",
-      "answer": "O cesto Standard leva 16-20 passageiros, o Deluxe até 16. Um cesto privativo só para dois existe no pacote Balão Romântico Privativo, muito procurado para pedidos de casamento e aniversários."
+      "answer": "O cesto Standard leva 16-20 passageiros. Um cesto privativo só para dois existe no pacote Balão Romântico Privativo, muito procurado para pedidos de casamento e aniversários."
     },
     "f13": {
       "question": "Qual é o melhor mês para voar de balão na Capadócia?",

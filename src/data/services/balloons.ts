@@ -12,7 +12,6 @@ export interface BalloonPackage {
   capacity: { min: number; max: number };
   adultPrice: number;
   childRatio: number;
-  marketPrice: number;
   currency: Currency;
   operatorIds: string[];
   badge: string;
@@ -37,13 +36,12 @@ export const BALLOON_PACKAGES: BalloonPackage[] = [
     name: "Standart Balon Uçuşu",
     shortDescription: "En ekonomik balon turu. 60 dk uçuş, geniş sepet, %100 hava iptali iadesi.",
     longDescription:
-      "Kapadokya'nın peri bacalarını, vadilerini ve gün doğumunu kuş bakışı görmenin en uygun fiyatlı yolu. Uçuş yaklaşık 60 dakika sürer; 16-20 kişilik geniş sepette profesyonel pilot eşliğinde uçarsınız. Otelden alış gün doğumundan yaklaşık bir saat önce yapılır; kalkış alanında hafif kahvaltı, iniş sonrası şampanyalı kutlama, uçuş sertifikası ve madalya, 40 milyon Euro yolcu sigortası ve otele dönüş transferi fiyata dahildir. Bu paketi Kaya, İstanbul, Butterfly, Asiana ve Türkiye Balon ile uçuruyoruz; operatör, uçuş gününe ve doluluğa göre atanır. 6 yaş altı çocuklar, hamileler ve ciddi kalp/sağlık sorunu olanlar uçamaz. Kalkış kararı her sabah sivil havacılık otoritesi tarafından verilir; hava nedeniyle iptalde ödemenin tamamı iade edilir veya uçuş başka bir güne alınır. 7 günden uzak tarihlerde katalog fiyatı, 7 gün içinde hava ve doluluğa göre güncel fiyat geçerlidir.",
+      "Kapadokya'nın peri bacalarını, vadilerini ve gün doğumunu kuş bakışı görmenin en uygun fiyatlı yolu. Uçuş yaklaşık 60 dakika sürer; 16-20 kişilik geniş sepette profesyonel pilot eşliğinde uçarsınız. Otelden alış gün doğumundan yaklaşık bir saat önce yapılır; kalkış alanında hafif kahvaltı, iniş sonrası şampanyalı kutlama, uçuş sertifikası ve madalya, 40 milyon Euro yolcu sigortası ve otele dönüş transferi fiyata dahildir. Bu paketi Kaya, İstanbul, Butterfly, Asiana ve Türkiye Balon ile uçuruyoruz; operatör, uçuş gününe ve doluluğa göre atanır. 6 yaş altı çocuklar, hamileler ve ciddi kalp/sağlık sorunu olanlar uçamaz. Kalkış kararı her sabah sivil havacılık otoritesi tarafından verilir; hava nedeniyle iptalde ödemenin tamamı iade edilir veya uçuş başka bir güne alınır. Fiyatlar 100 €'dan başlar; tarih, hava ve doluluğa göre güncel fiyatı WhatsApp'tan anında öğrenebilirsiniz.",
     duration: "60 dk",
     durationMinutes: 60,
     capacity: { min: 16, max: 20 },
-    adultPrice: 165,
+    adultPrice: 100,
     childRatio: 0.8,
-    marketPrice: 200,
     currency: "EUR",
     operatorIds: ["kaya", "istanbul", "butterfly", "asiana", "turkiye"],
     badge: "En Popüler",
@@ -65,47 +63,11 @@ export const BALLOON_PACKAGES: BalloonPackage[] = [
       "Hamileler binemez",
       "Ciddi kalp veya sağlık sorunu olanlar binemez",
       "Hava durumuna bağlı iptal — operatör iptalinde %100 iade",
-      "Fiyat 7 gün içi günlük değişebilir (hava şartları + yoğunluk)",
+      "Başlangıç fiyatıdır — tarih ve doluluğa göre güncel fiyat WhatsApp'tan",
     ],
     minAge: 6,
     highlights: ["60 dakika", "Sertifika dahil", "Şampanya servis"],
     dynamicPricing: true,
-  },
-  {
-    slug: "deluxe-balon-ucusu",
-    name: "Deluxe Balon Uçuşu",
-    shortDescription: "Küçük sepet (max 16 kişi), 60 dakika lüks deneyim + karton sertifika.",
-    longDescription:
-      "Daha az yolcu, daha çok yer ve daha özenli servis isteyenler için. Deluxe uçuş da yaklaşık 60 dakika sürer ama sepet en fazla 16 kişiliktir; herkes kenarda, manzaraya dönük durur. Otelden VIP transferle alınır, kalkış alanında gourmet kahvaltı sunulur, inişte premium şampanya açılır; karton uçuş sertifikası, profesyonel fotoğraf çekimi ve 40 milyon Euro yolcu sigortası dahildir. Bu paketi Royal Balloon, Butterfly Balloons ve Voyager Balloons ile uçuruyoruz. 6 yaş altı çocuklar, hamileler ve ciddi kalp/sağlık sorunu olanlar uçamaz. Kalkış kararı her sabah sivil havacılık otoritesi tarafından verilir; hava nedeniyle iptalde ödemenin tamamı iade edilir veya uçuş başka bir güne alınır. Balayı, doğum günü ve küçük gruplar için Standart ile Romantik Özel arasındaki en dengeli seçenektir.",
-    duration: "60 dk",
-    durationMinutes: 60,
-    capacity: { min: 8, max: 16 },
-    adultPrice: 295,
-    childRatio: 0.85,
-    marketPrice: 380,
-    currency: "EUR",
-    operatorIds: ["royal", "butterfly", "voyager"],
-    badge: "Deluxe",
-    badgeColor: "warning",
-    rating: 5.0,
-    reviewCount: 894,
-    images: ["/images/balloons/deluxe-balon-ucusu.jpg"],
-    includes: [
-      "VIP otel transferi",
-      "Gourmet kahvaltı",
-      "40M€ sigorta",
-      "Karton uçuş sertifikası",
-      "Premium şampanya",
-      "Profesyonel fotoğraf çekimi",
-    ],
-    excludes: ["Kişisel harcamalar"],
-    warnings: [
-      "6 yaş altı çocuklar binemez",
-      "Hamileler binemez",
-      "Ciddi kalp veya sağlık sorunu olanlar binemez",
-    ],
-    minAge: 6,
-    highlights: ["60 dakika", "Küçük sepet (max 16)", "Karton sertifika"],
   },
   {
     slug: "romantik-ozel-balon",
@@ -118,7 +80,6 @@ export const BALLOON_PACKAGES: BalloonPackage[] = [
     capacity: { min: 2, max: 8 },
     adultPrice: 580,
     childRatio: 0.9,
-    marketPrice: 750,
     currency: "EUR",
     operatorIds: ["royal", "butterfly"],
     badge: "Romantik",

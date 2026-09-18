@@ -32,7 +32,9 @@
   "serviceCard": {
     "infoForm": "Məlumat & Forma",
     "reserve": "İndi Rezervasiya Et",
-    "perCouple": "cütlük başına"
+    "perCouple": "cütlük başına",
+    "fromPrice": "{price}-dan başlayan qiymətlərlə",
+    "askPrice": "Qiymət üçün məlumat alın"
   },
   "reviewScore": {
     "excellent": "Əla",

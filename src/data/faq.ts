@@ -8,7 +8,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     category: "balon",
     question: "Kapadokya balon turu kaç para?",
-    answer: "Trip and Tick'te Kapadokya balon turu fiyatları kişi başı €165'ten başlar. Standart €165, Deluxe €295; Romantik özel sepet teklife göre fiyatlandırılır. Tüm fiyatlara otel transferi, kahvaltı, 40 milyon Euro sigorta, sertifika ve şampanya servisi dahildir.",
+    answer: "Trip and Tick'te Kapadokya balon turu fiyatları kişi başı €100'den başlar. Romantik özel sepet talebe göre fiyatlandırılır; güncel fiyatı WhatsApp'tan öğrenin. Tüm fiyatlara otel transferi, kahvaltı, 40 milyon Euro sigorta, sertifika ve şampanya servisi dahildir.",
   },
   {
     category: "balon",
@@ -61,7 +61,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     category: "balon",
     question: "Balon turu kişi başı ne kadar, TL ile ödenebilir mi?",
-    answer: "Standart uçuş kişi başı €165, Deluxe €295; Romantik özel sepet teklife göre fiyatlandırılır. Fiyatlar Euro bazlıdır; TL ve USD karşılığını sitedeki para birimi seçiciyle o günkü kurdan görebilirsiniz. 7 gün içindeki tarihlerde fiyat hava ve doluluğa göre günlük değişebilir.",
+    answer: "Standart uçuş kişi başı €100'den başlar; Romantik özel sepet talebe göre fiyatlandırılır. Fiyatlar Euro bazlıdır; TL ve USD karşılığını sitedeki para birimi seçiciyle o günkü kurdan görebilirsiniz. Güncel fiyatı WhatsApp'tan öğrenin.",
   },
   {
     category: "balon",
@@ -71,7 +71,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     category: "balon",
     question: "Balona kaç kişi biner, 2 kişilik özel balon var mı?",
-    answer: "Standart sepet 16-20, Deluxe sepet en fazla 16 yolcu alır. Yalnızca iki kişilik özel sepet Romantik Özel Balon paketiyle mümkündür; evlilik teklifi ve yıl dönümü için tercih edilir.",
+    answer: "Standart sepet 16-20 yolcu alır. Yalnızca iki kişilik özel sepet Romantik Özel Balon paketiyle mümkündür; evlilik teklifi ve yıl dönümü için tercih edilir.",
   },
   {
     category: "balon",

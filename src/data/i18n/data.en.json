@@ -3,7 +3,7 @@
     "standart-balon-ucusu": {
       "name": "Standard Balloon Flight",
       "shortDescription": "Our most affordable balloon tour. 60 min flight, large basket, 100% refund on weather cancellations.",
-      "longDescription": "The most affordable way to see Cappadocia's fairy chimneys, valleys and sunrise from the air. The flight lasts about 60 minutes in a spacious 16-20 passenger basket with a professional pilot. Hotel pickup is about an hour before sunrise; a light breakfast at the launch site, a champagne toast after landing, a flight certificate and medal, EUR 40M passenger insurance and the transfer back to your hotel are all included. We fly this package with Kaya, İstanbul, Butterfly, Asiana and Türkiye Balloons; the operator is assigned by flight date and availability. Children under 6, pregnant women and anyone with a serious heart or health condition cannot fly. The go/no-go is decided each morning by the civil aviation authority; if the flight is cancelled for weather you get a full refund or a new date. Catalogue price applies for dates more than 7 days out; within 7 days the live price follows weather and demand.",
+      "longDescription": "The most affordable way to see Cappadocia's fairy chimneys, valleys and sunrise from the air. The flight lasts about 60 minutes in a spacious 16-20 passenger basket with a professional pilot. Hotel pickup is about an hour before sunrise; a light breakfast at the launch site, a champagne toast after landing, a flight certificate and medal, EUR 40M passenger insurance and the transfer back to your hotel are all included. We fly this package with Kaya, İstanbul, Butterfly, Asiana and Türkiye Balloons; the operator is assigned by flight date and availability. Children under 6, pregnant women and anyone with a serious heart or health condition cannot fly. The go/no-go is decided each morning by the civil aviation authority; if the flight is cancelled for weather you get a full refund or a new date. Prices start from €100; message us on WhatsApp for the current price for your date, weather and availability.",
       "badge": "Most Popular",
       "includes": [
         "Hotel transfer",
@@ -22,39 +22,12 @@
         "Pregnant women cannot fly",
         "Those with serious heart or health conditions cannot fly",
         "Weather-dependent cancellation — 100% refund if the operator cancels",
-        "Price may vary daily within 7 days (weather conditions + demand)"
+        "Starting price — current price for your date and availability on WhatsApp"
       ],
       "highlights": [
         "60 minutes",
         "Certificate included",
         "Champagne service"
-      ]
-    },
-    "deluxe-balon-ucusu": {
-      "name": "Deluxe Balloon Flight",
-      "shortDescription": "Small basket (max 16 people), 60-minute luxury experience + cardstock certificate.",
-      "longDescription": "For travellers who want fewer passengers, more space and more attentive service. The Deluxe flight also lasts about 60 minutes, but the basket carries at most 16 people, so everyone stands at the edge facing the view. VIP hotel transfer, a gourmet breakfast at the launch site, premium champagne on landing, a cardstock flight certificate, a professional photo shoot and EUR 40M passenger insurance are included. We fly this package with Royal Balloon, Butterfly Balloons and Voyager Balloons. Children under 6, pregnant women and anyone with a serious heart or health condition cannot fly. The go/no-go is decided each morning by the civil aviation authority; if the flight is cancelled for weather you get a full refund or a new date. The best-balanced choice between Standard and Romantic Private for honeymoons, birthdays and small groups.",
-      "badge": "Deluxe",
-      "includes": [
-        "VIP hotel transfer",
-        "Gourmet breakfast",
-        "40M€ insurance",
-        "Cardstock flight certificate",
-        "Premium champagne",
-        "Professional photo shoot"
-      ],
-      "excludes": [
-        "Personal expenses"
-      ],
-      "warnings": [
-        "Children under 6 cannot fly",
-        "Pregnant women cannot fly",
-        "Those with serious heart or health conditions cannot fly"
-      ],
-      "highlights": [
-        "60 minutes",
-        "Small basket (max 16)",
-        "Cardstock certificate"
       ]
     },
     "romantik-ozel-balon": {
@@ -278,21 +251,6 @@
         "3-hour show"
       ]
     },
-    "turk-gecesi-yemeksiz": {
-      "name": "Turkish Night (without Dinner)",
-      "shortDescription": "Turkish Night show — semah, folk dance, belly dance, Caucasian dance. Dinner/alcohol not included, just the show + transfer.",
-      "includes": [
-        "Semah + folk dance + belly dance",
-        "Caucasian dance show",
-        "Welcome drink",
-        "Hotel transfer"
-      ],
-      "highlights": [
-        "More affordable",
-        "Show only",
-        "Transfer included"
-      ]
-    },
     "microlight-standart": {
       "name": "Standard Microlight Flight",
       "shortDescription": "A 15-18 minute powered microlight flight over the heart of Cappadocia — private transfer, flight certificate, equipment, and photo shoot included.",
@@ -328,40 +286,65 @@
         "Premium photos"
       ]
     },
-    "kirmizi-tur": {
-      "name": "Cappadocia Red Tour",
-      "shortDescription": "Göreme Open Air Museum, Uçhisar Castle, Zelve Open Air Museum, Paşabağ (Monks Valley), Devrent (Imagination) Valley, Avanos pottery workshop, Love Valley, Pigeon Valley, Çavuşin, leather workshop — professional guide + museum tickets + lunch included.",
-      "badge": "Most Popular",
+    "balon-flying-dress-cekimi": {
+      "name": "Balloon + Flying Dress Photo Shoot",
+      "shortDescription": "Sunrise balloon flight + professional photographer in the basket and in the valley (30 min, 20 edited frames). Optional flying dress rental — one product for your Instagram/TikTok content.",
+      "badge": "Trending",
       "includes": [
-        "Professional tour guide (TR/EN/RU)",
-        "Hotel transfer",
-        "Museum entrance tickets",
-        "Lunch",
-        "All taxes"
+        "Sunrise balloon flight (standard basket)",
+        "Professional photographer (30 min, basket + valley)",
+        "20 edited frames (digital delivery)",
+        "Hotel transfer"
       ],
       "highlights": [
-        "10+ stops",
-        "Göreme Open Air Museum",
+        "Balloon + shoot in one product",
+        "20 edited frames",
+        "Dress rental option"
+      ]
+    },
+    "kirmizi-tur": {
+      "name": "Cappadocia Red Tour",
+      "shortDescription": "Zelve Open-Air Museum, Uçhisar Castle, Paşabağ (Monks Valley), Avanos pottery workshop, Devrent (Imagination Valley), Love Valley, leather shop, Göreme Panorama, Pigeon Valley — pick-up and drop-off transfer, professional guide, lunch and museum entrance tickets included.",
+      "badge": "Most Popular",
+      "includes": [
+        "Pick-up and drop-off transfer",
+        "Professional tourist guide",
+        "Lunch",
+        "Museum entrance tickets"
+      ],
+      "highlights": [
+        "Zelve Open-Air Museum",
+        "Uçhisar Castle",
+        "Paşabağ (Monks Valley)",
         "Avanos pottery workshop",
-        "Museum tickets included"
+        "Devrent (Imagination Valley)",
+        "Love Valley",
+        "Leather shop",
+        "Göreme Panorama",
+        "Pigeon Valley"
       ]
     },
     "yesil-tur": {
       "name": "Cappadocia Green Tour",
-      "shortDescription": "Göreme panorama, Pigeon Valley, Derinkuyu Underground City, Ihlara Valley (panoramic glass terrace + hike), lunch in Belisırma village, Selime Cathedral, Narlıgöl, Yaprakhisar — professional guide + museum tickets + lunch in Belisırma included.",
-      "badge": "Nature",
+      "shortDescription": "Underground city, Zelve Open-Air Museum, Uçhisar Castle, Paşabağ (Monks Valley), Avanos pottery workshop, Devrent (Imagination Valley), Love Valley, leather shop, Göreme Panorama, Pigeon Valley — pick-up and drop-off transfer, professional guide, lunch and museum entrance tickets included.",
+      "badge": "Underground city included",
       "includes": [
-        "Professional tour guide",
-        "Hotel transfer",
-        "Underground city + museum tickets",
-        "Lunch in Belisırma",
-        "All taxes"
+        "Pick-up and drop-off transfer",
+        "Professional tourist guide",
+        "Lunch",
+        "Museum entrance tickets"
       ],
       "highlights": [
         "Underground city",
-        "Ihlara glass terrace",
-        "Belisırma village lunch",
-        "Selime Cathedral"
+        "Zelve Open-Air Museum",
+        "Uçhisar Castle",
+        "Paşabağ (Monks Valley)",
+        "Avanos pottery workshop",
+        "Devrent (Imagination Valley)",
+        "Love Valley",
+        "Leather shop",
+        "Göreme Panorama",
+        "Pigeon Valley"
       ]
     },
     "mix-tur": {
@@ -381,48 +364,36 @@
         "12+ stops"
       ]
     },
-    "sari-tur": {
-      "name": "Cappadocia Yellow Tour",
-      "shortDescription": "Soğanlı churches, the ancient city of Sobesos, the Greek village of Mustafapaşa, a 2 km hike in Kızılçukur Valley, the Byzantine church in Çavuşin, a Lavender Garden, a carpet workshop, Pigeon Valley — a quieter, more in-depth route.",
+    "eco-yesil-tur": {
+      "name": "Eco Green Tour",
+      "shortDescription": "Göreme Panorama, Pigeon Valley, onyx workshop, Kaymaklı and Derinkuyu underground cities, hike in Ihlara Valley, Nar Lake and a tasting of local flavours — professional guide, transfer, lunch and museum entrance tickets included. 09:30-18:00.",
+      "badge": "Nature",
       "includes": [
         "Professional tour guide",
         "Transfer",
-        "Museum tickets",
-        "Lunch"
+        "Lunch",
+        "Museum entrance tickets"
       ],
       "highlights": [
-        "Soğanlı churches",
-        "Kızılçukur hike",
-        "Mustafapaşa",
-        "Quiet route"
-      ]
-    },
-    "yeralti-turu": {
-      "name": "Underground Cities Tour",
-      "shortDescription": "Derinkuyu + Kaymaklı underground cities, the Byzantine church in Çavuşin, Pigeon Valley — a detailed half-day tour. Professional guide + museum tickets included.",
-      "includes": [
-        "Professional guide",
-        "Transfer",
-        "Entrance to 2 underground cities",
-        "Çavuşin church"
-      ],
-      "highlights": [
-        "2 underground cities",
-        "Çavuşin Byzantine church",
-        "Half day"
+        "Göreme Panorama",
+        "Pigeon Valley",
+        "Onyx",
+        "Kaymaklı and Derinkuyu underground cities",
+        "Hike in Ihlara Valley",
+        "Nar Lake",
+        "Tasting of local flavours"
       ]
     },
     "gun-batimi-turu": {
       "name": "Sunset Panorama Tour",
-      "shortDescription": "Sunset at Aktepe + Göreme panorama + Kızılçukur Valley — wine service included.",
+      "shortDescription": "Aktepe + Göreme panorama + Kızılçukur Valley at sunset — guide and transfer included.",
       "includes": [
         "Guide",
-        "Transfer",
-        "Wine service"
+        "Transfer"
       ],
       "highlights": [
         "Sunset",
-        "Wine service",
+        "Kızılçukur Valley",
         "Panorama"
       ]
     },
@@ -1063,7 +1034,7 @@
   "faq": {
     "f0": {
       "question": "How much does a Cappadocia balloon tour cost?",
-      "answer": "At Trip and Tick, Cappadocia balloon tour prices start from €165 per person. Standard €165, Deluxe €295; the Romantic private basket is priced on request. All prices include hotel transfer, breakfast, 40 million Euro insurance, certificate and champagne service."
+      "answer": "At Trip and Tick, Cappadocia balloon tour prices start from €100 per person. The Romantic private basket is priced on request — ask us on WhatsApp for the current price. All prices include hotel transfer, breakfast, 40 million Euro insurance, certificate and champagne service."
     },
     "f1": {
       "question": "What is the minimum age to ride a Cappadocia balloon?",
@@ -1103,7 +1074,7 @@
     },
     "f10": {
       "question": "How much is the balloon tour per person, and can I pay in Turkish lira?",
-      "answer": "The Standard flight is €165 per person, Deluxe €295; the Romantic private basket is priced on request. Prices are in euros; the site's currency selector shows the TRY and USD equivalent at that day's rate. For dates within 7 days the price can change daily with weather and demand."
+      "answer": "The Standard flight starts from €100 per person; the Romantic private basket is priced on request. Prices are in euros; the site's currency selector shows the TRY and USD equivalent at that day's rate. Ask us on WhatsApp for the current price."
     },
     "f11": {
       "question": "How long is the balloon flight and what time does it start?",
@@ -1111,7 +1082,7 @@
     },
     "f12": {
       "question": "How many people fit in a balloon, and is there a private balloon for two?",
-      "answer": "The Standard basket carries 16-20 passengers, the Deluxe basket up to 16. A private basket for two only is available with the Romantic Private Balloon package, popular for proposals and anniversaries."
+      "answer": "The Standard basket carries 16-20 passengers. A private basket for two only is available with the Romantic Private Balloon package, popular for proposals and anniversaries."
     },
     "f13": {
       "question": "Which month is best for a Cappadocia balloon flight?",

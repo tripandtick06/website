@@ -40,8 +40,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "cappadocia-hot-air-balloon-price-2026-az",
     "title": "Kapadokya İsti Hava Balonu Qiymətləri 2026 — Tam Bələdçi",
     "metaTitle": "Kapadokya İsti Hava Balonu Qiymətləri 2026 | Trip and Tick",
-    "metaDescription": "Kapadokya isti hava balonu qiymətləri 2026: Standart €165, Komfort €215, Lüks €295, Romantik €580 nəfər üçün. 9+ operator, ən aşağı qiymət zəmanəti.",
-    "excerpt": "Kapadokya isti hava balonu qiymətləri 2026-cı ildən başlayır **€165 nəfər üçün**. 9+ operatorla 4 paketi ən aşağı qiymət zəmanətimizlə müqayisə edin.",
+    "metaDescription": "Kapadokya isti hava balonu qiymətləri 2026: standart uçuşlar €100-dan başlayaraq, romantik fərdi səbət sorğu əsasında (WhatsApp). 9+ operator, ən aşağı qiymət zəmanəti.",
+    "excerpt": "Kapadokya isti hava balonu qiymətləri 2026-cı ildə **€100-dan başlayaraq** (nəfər üçün). 9+ operatorla paketləri ən aşağı qiymət zəmanətimizlə müqayisə edin.",
     "category": "balon-turlari",
     "tags": [
       "cappadocia",
@@ -63,7 +63,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "cappadocia-winter-2026-guide-az",
     "title": "Qışda Kapadokya 2026 — Tam Səyahət Bələdçisi (Qar, Balonlar, Otellər)",
     "metaTitle": "Qışda Kapadokya 2026: Qar, Balon Uçuşları & Otellər | Trip and Tick",
-    "metaDescription": "Kapadokya qış 2026 bələdçisi: qarla örtülmüş peri şamları, isti hava balonu uçuş qiymətləri 70-80%, qiymətlər €165-dan başlayır, nəyi yığmaq lazımdır, hansı mağara otelləri dekabr-fevral aylarında açıqdır.",
+    "metaDescription": "Kapadokya qış 2026 bələdçisi: qarla örtülmüş peri şamları, isti hava balonu uçuş qiymətləri 70-80%, balon uçuşları €100-dan başlayaraq, nəyi yığmaq lazımdır, hansı mağara otelləri dekabr-fevral aylarında açıqdır.",
     "excerpt": "Qışda Kapadokya 2026 ən fotogenik və ən sərfəli mövsümdür — qarla örtülmüş peri şamları, otel qiymətləri 30-40% endirimli, balon uçuşları hələ də səhərlərin 70-80%-ində fəaliyyət göstərir və mağara otelləri öz ən isti təbii 18-22°C temperaturunda olur. Qiymətlər, geyim, balon statistikaları və marşrutlar ilə dolu bir qış oyun kitabı.",
     "category": "rehber",
     "tags": [
@@ -85,10 +85,10 @@ export const ARTICLES: BlogArticleMeta[] = [
   {
     "file": "az-heissluftballon-kappadokien-preise.json",
     "slug": "heissluftballon-kappadokien-preise-buchung-az",
-    "title": "Kapadokya İsti Hava Balonu 2026 — Qiymətlər, Paketlər və Rezervasiya (Standart €165, Lüks €295)",
+    "title": "Kapadokya İsti Hava Balonu 2026 — Qiymətlər, Paketlər və Rezervasiya (Standart €100-dan başlayaraq)",
     "metaTitle": "Kapadokya İsti Hava Balonu 2026: Qiymətlər və Rezervasiya | Trip and Tick",
-    "metaDescription": "Kapadokya isti hava balonu 2026 qiymətləri: Standart €165, Lüks €295, Romantik Özəl €580 nəfər üçün. Nələr daxildir, ən yaxşı mövsüm, ləğv şərtləri — tam rezervasiya bələdçisi.",
-    "excerpt": "Kapadokya üzərindəki peri bacalarının üstündəki isti hava balonu uçuşu dünyanın ən çox rezervasiya edilən bucket-list təcrübələrindən biridir. 2026 üçün qiymətlər nəfər başına €165-dan başlayır. Bu bələdçi hər paketi, nələrin daxildir, səyahət üçün ən yaxşı vaxtı, ləğv şərtlərini və bazar qiymətindən 5% aşağı necə rezervasiya edəcəyinizi izah edir.",
+    "metaDescription": "Kapadokya isti hava balonu 2026 qiymətləri: Standart €100-dan başlayaraq, Romantik Özəl sorğu əsasında (WhatsApp), nəfər üçün. Nələr daxildir, ən yaxşı mövsüm, ləğv şərtləri — tam rezervasiya bələdçisi.",
+    "excerpt": "Kapadokya üzərindəki peri bacalarının üstündəki isti hava balonu uçuşu dünyanın ən çox rezervasiya edilən bucket-list təcrübələrindən biridir. 2026 üçün qiymətlər nəfər başına €100-dan başlayır. Bu bələdçi hər paketi, nələrin daxildir, səyahət üçün ən yaxşı vaxtı, ləğv şərtlərini və bazar qiymətindən 5% aşağı necə rezervasiya edəcəyinizi izah edir.",
     "category": "balon-turlari",
     "tags": [
       "hot air balloon",
@@ -134,7 +134,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-dugun-fotografciligi-rehberi-az",
     "title": "Kappadokya Toy Fotoqrafiyası Bələdçisi 2026 — Ən Yaxşı 10 Məkan, İcazələr və Balon Foto İpuçları",
     "metaTitle": "Kappadokya Toy Fotoqrafiyası Bələdçisi 2026 | Trip and Tick",
-    "metaDescription": "Kappadokya toy fotoqrafiyası 2026: ən yaxşı 10 məkan (Sevgi Vadisi, Uçhisar, Sevgi Vadisi), icazəyə ehtiyac var mı, mövsümi rəng bələdçisi, balon foto ipuçları, orta qiymətlər €450-€1,500.",
+    "metaDescription": "Kappadokya toy fotoqrafiyası 2026: ən yaxşı 10 məkan (Sevgi Vadisi, Uçhisar, Sevgi Vadisi), icazəyə ehtiyac var mı, mövsümi rəng bələdçisi, balon foto ipuçları, paket qiymətləri WhatsApp-da sorğu əsasında.",
     "excerpt": "Kappadokyada toy və öncəki toy fotoşəkilləri son 5 ildə qızıl dövrünü yaşayır. Nağıl tükləri, isti hava ballonları, vadilər və mağara otelləri dünya səviyyəsində kompozisiya palitrası təqdim edir. Bu bələdçidə ən yaxşı 10 məkanı, icazə prosedurunu, mövsümi rəng palitrasını, balon fotoqrafiyası üçün kritik ipuçlarını və 2026-cı il orta qiymətlərini ətraflı paylaşırıq.",
     "category": "rehber",
     "tags": [
@@ -182,7 +182,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-istanbuldan-nasil-gidilir-az",
     "title": "İstanbuldan Kapadokyaya Necə Getmək Olar? 5 Seçim — Vaxt, Qiymət və Müqayisə 2026",
     "metaTitle": "İstanbuldan Kapadokyaya Nəqliyyat 2026 | Təyyarə, Avtobus, Qatar, Maşın | Trip and Tick",
-    "metaDescription": "İstanbuldan Kapadokyaya 5 seçim: təyyarə 1.25 saat €45, avtobus 12 saat €25, qatar 18 saat €18, xüsusi maşın 8 saat €120, tur 2 gün €185. Ətraflı müqayisə və hava limanı transferləri.",
+    "metaDescription": "İstanbuldan Kapadokyaya 5 seçim: təyyarə 1.25 saat €45, avtobus 12 saat €25, qatar 18 saat €18, xüsusi maşın 8 saat €120, bələdçi tur qiyməti WhatsApp-da sorğu əsasında. Ətraflı müqayisə və hava limanı transferləri.",
     "excerpt": "İstanbuldan Kapadokyaya necə getmək olar? Təyyarə (Nevşehir/Kayseri), avtobus, qatar (Şərq Ekspresi), xüsusi maşın və bələdçi tur — bütün 5 seçim üçün vaxt, qiymət və üstünlüklərin tam müqayisəsi.",
     "category": "ulasim",
     "tags": [
@@ -232,7 +232,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-otel-tavsiye-2026-az",
     "title": "Kapadokya Otel Tövsiyələri 2026 — Mağara, Butik, Kurort və Glamping Müqayisəsi",
     "metaTitle": "Kapadokya Otel Tövsiyəsi 2026 | Mağara, Butik & Kurort | Trip and Tick",
-    "metaDescription": "Kapadokya otel tövsiyəsi 2026: mağara otelləri €120, butik otel €95, kurort €150, glamping €85, mənzil €60. Göreme, Ürgüp, Uçhisar müqayisəsi və rezervasiya məsləhətləri.",
+    "metaDescription": "Kapadokya otel tövsiyəsi 2026: mağara otelləri, butik otel, kurort, glamping, mənzil — qiymət tələb ilə. Göreme, Ürgüp, Uçhisar müqayisəsi və rezervasiya məsləhətləri.",
     "excerpt": "Kapadokyada hansı oteldə qalmalısınız? Mağara otelləri, butik konseptləri, glamping çadırları və kurortlar — Göreme, Ürgüp və Uçhisar arasındakı fərqlər, bal ayı paketləri və qiymət-dəyər bələdçisi.",
     "category": "konaklama",
     "tags": [
@@ -256,7 +256,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "cappadocia-winter-2026-guide-de",
     "title": "Kappadokien im Winter 2026 — Kompletter Reiseführer (Schnee, Ballons, Hotels)",
     "metaTitle": "Kappadokien im Winter 2026: Schnee, Ballonfahrten & Hotels | Trip and Tick",
-    "metaDescription": "Kappadokien Winter 2026 Reiseführer: schneebedeckte Feenkamine, Heißluftballon-Flugquote 70-80%, Preise ab 165 €, Packliste und welche Höhlenhotels von Dezember bis Februar geöffnet bleiben.",
+    "metaDescription": "Kappadokien Winter 2026 Reiseführer: schneebedeckte Feenkamine, Heißluftballon-Flugquote 70-80%, Preise ab 100 €, Packliste und welche Höhlenhotels von Dezember bis Februar geöffnet bleiben.",
     "excerpt": "Kappadokien im Winter 2026 ist die fotogenste und günstigste Saison — schneebedeckte Feenkamine, 30-40 % günstigere Hotelpreise, Ballonfahrten an 70-80 % der Morgen und Höhlenhotels mit ihrer wärmsten natürlichen Temperatur von 18-22 °C. Ein kompletter Winter-Leitfaden mit Preisen, Kleidung, Ballonstatistik und Reiserouten.",
     "category": "rehber",
     "tags": [
@@ -278,10 +278,10 @@ export const ARTICLES: BlogArticleMeta[] = [
   {
     "file": "de-heissluftballon-kappadokien-preise.json",
     "slug": "heissluftballon-kappadokien-preise-buchung",
-    "title": "Heißluftballon Kappadokien 2026 — Preise, Pakete & Buchung (Standard €165, Deluxe €295)",
+    "title": "Heißluftballon Kappadokien 2026 — Preise, Pakete & Buchung (Standard ab €100)",
     "metaTitle": "Heißluftballon Kappadokien 2026: Preise & Buchung | Trip and Tick",
-    "metaDescription": "Heißluftballon Kappadokien 2026 Preise: Standard €165, Deluxe €295, Romantik Privat €580 pro Person. Was ist inklusive, beste Saison, Stornobedingungen — kompletter Buchungsguide.",
-    "excerpt": "Ein Heißluftballonflug über die Feenkamine von Kappadokien gehört zu den meistgebuchten Bucket-List-Erlebnissen weltweit. Preise 2026 starten bei €165 pro Person. Dieser Guide erklärt alle Pakete, Inklusivleistungen, beste Reisezeit, Stornobedingungen und wie Sie 5% unter Marktpreis buchen.",
+    "metaDescription": "Heißluftballon Kappadokien 2026 Preise: Standard-Fahrten ab €100 pro Person, Romantik Privat auf Anfrage. Was ist inklusive, beste Saison, Stornobedingungen — kompletter Buchungsguide.",
+    "excerpt": "Ein Heißluftballonflug über die Feenkamine von Kappadokien gehört zu den meistgebuchten Bucket-List-Erlebnissen weltweit. Preise 2026 starten bei €100 pro Person. Dieser Guide erklärt beide Optionen, Inklusivleistungen, beste Reisezeit, Stornobedingungen und wie Sie 5% unter Marktpreis buchen.",
     "category": "balon-turlari",
     "tags": [
       "heißluftballon",
@@ -327,7 +327,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-dugun-fotografciligi-rehberi-de",
     "title": "Hochzeitsfotografie in Kappadokien — Leitfaden 2026: Top-10-Locations, Genehmigungen und Ballonfoto-Tipps",
     "metaTitle": "Hochzeitsfotografie in Kappadokien — Leitfaden 2026 | Trip and Tick",
-    "metaDescription": "Hochzeitsfotografie in Kappadokien 2026: Top-10-Locations (Liebestal, Uçhisar, Sevgi-Tal), brauche ich eine Genehmigung, saisonale Farbpalette, Ballonfoto-Tipps, Durchschnittspreise 450 €-1.500 €.",
+    "metaDescription": "Hochzeitsfotografie in Kappadokien 2026: Top-10-Locations (Liebestal, Uçhisar, Sevgi-Tal), brauche ich eine Genehmigung, saisonale Farbpalette, Ballonfoto-Tipps, Paketpreise per WhatsApp.",
     "excerpt": "Hochzeits- und Pre-Wedding-Fotografie in Kappadokien erlebt seit fünf Jahren ihr goldenes Zeitalter. Feenkamine, Heißluftballons, Täler und Höhlenhotels bieten eine weltweit einzigartige Kompositionspalette. In diesem Leitfaden teilen wir ausführlich die Top-10-Locations, das Genehmigungsverfahren, die saisonale Farbpalette, entscheidende Tipps für Ballonfotos und die Durchschnittspreise 2026.",
     "category": "rehber",
     "tags": [
@@ -375,7 +375,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-istanbuldan-nasil-gidilir-de",
     "title": "Wie kommt man von Istanbul nach Kappadokien? 5 Optionen — Dauer, Preis und Vergleich 2026",
     "metaTitle": "Istanbul Kappadokien Anreise 2026 | Flug, Bus, Zug, Auto | Trip and Tick",
-    "metaDescription": "Von Istanbul nach Kappadokien in 5 Optionen: Flug 1,25 Std. €45, Bus 12 Std. €25, Zug 18 Std. €18, Mietwagen 8 Std. €120, Tour 2 Tage €185. Detaillierter Vergleich und Flughafentransfer.",
+    "metaDescription": "Von Istanbul nach Kappadokien in 5 Optionen: Flug 1,25 Std. €45, Bus 12 Std. €25, Zug 18 Std. €18, Mietwagen 8 Std. €120, geführte Tour 2 Tage (Preis auf Anfrage). Detaillierter Vergleich und Flughafentransfer.",
     "excerpt": "Wie kommt man von Istanbul nach Kappadokien? Flug (Nevşehir/Kayseri), Bus, Zug (Doğu Ekspresi), Mietwagen und geführte Tour — für 5 Optionen ein kompletter Vergleich von Dauer, Preis und Vorteilen.",
     "category": "ulasim",
     "tags": [
@@ -425,7 +425,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-otel-tavsiye-2026-de",
     "title": "Hotelempfehlungen Kappadokien 2026 — Höhle, Boutique, Resort und Glamping im Vergleich",
     "metaTitle": "Hotelempfehlung Kappadokien 2026 | Höhle, Boutique & Resort | Trip and Tick",
-    "metaDescription": "Hotelempfehlung Kappadokien 2026: Höhlenhotels €120, Boutiquehotel €95, Resort €150, Glamping €85, Apartment €60. Vergleich von Göreme, Ürgüp, Uçhisar und Buchungstipps.",
+    "metaDescription": "Hotelempfehlung Kappadokien 2026: Höhlenhotels, Boutiquehotel, Resort, Glamping, Apartment — Konzeptvergleich, Preise auf Anfrage. Vergleich von Göreme, Ürgüp, Uçhisar und Buchungstipps.",
     "excerpt": "In welchem Hotel in Kappadokien sollte man übernachten? Ein kompletter Vergleich von Höhlenhotels, Boutique-Konzepten, Glamping-Zelten und Resorts — die Unterschiede zwischen Göreme, Ürgüp und Uçhisar, Flitterwochen-Pakete und ein Preis-Leistungs-Guide.",
     "category": "konaklama",
     "tags": [
@@ -518,8 +518,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "cappadocia-hot-air-balloon-price-2026",
     "title": "Cappadocia Hot Air Balloon Prices 2026 — Complete Guide",
     "metaTitle": "Cappadocia Hot Air Balloon Prices 2026 | Trip and Tick",
-    "metaDescription": "Cappadocia hot air balloon prices 2026: Standard €165, Comfort €215, Deluxe €295, Romantic €580 per person. 9+ operators, lowest price guarantee.",
-    "excerpt": "Cappadocia hot air balloon prices in 2026 start from €165 per person. Compare 4 packages from 9+ operators with our lowest price guarantee.",
+    "metaDescription": "Cappadocia hot air balloon prices 2026: Standard flights from €100 per person, Romantic private on request. 9+ operators, lowest price guarantee.",
+    "excerpt": "Cappadocia hot air balloon prices in 2026 start from €100 per person. Compare our 2 options from 9+ operators with our lowest price guarantee — current prices are one WhatsApp message away.",
     "category": "balon-turlari",
     "tags": [
       "cappadocia",
@@ -647,7 +647,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "cappadocia-winter-2026-guide",
     "title": "Cappadocia in Winter 2026 — Complete Travel Guide (Snow, Balloons, Hotels)",
     "metaTitle": "Cappadocia in Winter 2026: Snow, Balloon Flights & Hotels | Trip and Tick",
-    "metaDescription": "Cappadocia winter 2026 guide: snow-covered fairy chimneys, hot air balloon flight rates 70-80%, prices from €165, what to pack, which cave hotels stay open December-February.",
+    "metaDescription": "Cappadocia winter 2026 guide: snow-covered fairy chimneys, hot air balloon flight rates 70-80%, prices from €100, what to pack, which cave hotels stay open December-February.",
     "excerpt": "Cappadocia in winter 2026 is the most photogenic and most affordable season — snow-covered fairy chimneys, 30-40% off hotel rates, balloon flights still operating 70-80% of mornings, and cave hotels at their warmest natural 18-22°C. A full winter playbook with prices, clothing, balloon statistics and itineraries.",
     "category": "rehber",
     "tags": [
@@ -691,10 +691,10 @@ export const ARTICLES: BlogArticleMeta[] = [
   {
     "file": "en-heissluftballon-kappadokien-preise.json",
     "slug": "heissluftballon-kappadokien-preise-buchung-en",
-    "title": "Cappadocia Hot Air Balloon 2026 — Prices, Packages & Booking (Standard €165, Deluxe €295)",
+    "title": "Cappadocia Hot Air Balloon 2026 — Prices, Packages & Booking (Standard from €100)",
     "metaTitle": "Cappadocia Hot Air Balloon 2026: Prices & Booking | Trip and Tick",
-    "metaDescription": "Cappadocia hot air balloon 2026 prices: Standard €165, Deluxe €295, Romantic Private €580 per person. What's included, best season, cancellation terms — complete booking guide.",
-    "excerpt": "A hot air balloon flight over the fairy chimneys of Cappadocia is one of the most-booked bucket-list experiences in the world. Prices for 2026 start at €165 per person. This guide explains every package, what's included, the best time to travel, cancellation terms, and how to book 5% below market price.",
+    "metaDescription": "Cappadocia hot air balloon 2026 prices: Standard flights from €100 per person, Romantic Private on request. What's included, best season, cancellation terms — complete booking guide.",
+    "excerpt": "A hot air balloon flight over the fairy chimneys of Cappadocia is one of the most-booked bucket-list experiences in the world. Prices for 2026 start at €100 per person. This guide explains both options, what's included, the best time to travel, cancellation terms, and how to book 5% below market price.",
     "category": "balon-turlari",
     "tags": [
       "hot air balloon",
@@ -786,8 +786,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-dugun-fotografciligi-rehberi-en",
     "title": "Cappadocia Wedding Photography Guide 2026 — Top 10 Locations, Permits and Balloon Photo Tips",
     "metaTitle": "Cappadocia Wedding Photography Guide 2026 | Trip and Tick",
-    "metaDescription": "Cappadocia wedding photography 2026: top 10 locations (Love Valley, Uçhisar, Sevgi Valley), do you need a permit, seasonal color guide, balloon photo tips, average prices €450-€1,500.",
-    "excerpt": "Wedding and pre-wedding photo shoots in Cappadocia have been living their golden age over the past 5 years. Fairy chimneys, hot air balloons, valleys and cave hotels offer a world-class composition palette. In this guide we share the top 10 locations, the permit procedure, the seasonal color palette, critical tips for balloon photography and 2026 average prices in detail.",
+    "metaDescription": "Cappadocia wedding photography 2026: top 10 locations (Love Valley, Uçhisar, Sevgi Valley), do you need a permit, seasonal color guide, balloon photo tips, package prices on WhatsApp.",
+    "excerpt": "Wedding and pre-wedding photo shoots in Cappadocia have been living their golden age over the past 5 years. Fairy chimneys, hot air balloons, valleys and cave hotels offer a world-class composition palette. In this guide we share the top 10 locations, the permit procedure, the seasonal color palette, critical tips for balloon photography and 2026 package options in detail — current prices are one WhatsApp message away.",
     "category": "rehber",
     "tags": [
       "cappadocia",
@@ -834,7 +834,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-istanbuldan-nasil-gidilir-en",
     "title": "How to Get to Cappadocia from Istanbul? 5 Options — Time, Price and Comparison 2026",
     "metaTitle": "Istanbul to Cappadocia Transport 2026 | Plane, Bus, Train, Car | Trip and Tick",
-    "metaDescription": "5 options from Istanbul to Cappadocia: plane 1.25 hr €45, bus 12 hr €25, train 18 hr €18, private car 8 hr €120, tour 2 days €185. Detailed comparison and airport transfers.",
+    "metaDescription": "5 options from Istanbul to Cappadocia: plane 1.25 hr €45, bus 12 hr €25, train 18 hr €18, private car 8 hr €120, guided tour 2 days (price on request). Detailed comparison and airport transfers.",
     "excerpt": "How do you get to Cappadocia from Istanbul? Plane (Nevşehir/Kayseri), bus, train (Eastern Express), private car and a guided tour — a full comparison of time, price and advantages for all 5 options.",
     "category": "ulasim",
     "tags": [
@@ -884,7 +884,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-otel-tavsiye-2026-en",
     "title": "Cappadocia Hotel Recommendations 2026 — Cave, Boutique, Resort and Glamping Comparison",
     "metaTitle": "Cappadocia Hotel Recommendation 2026 | Cave, Boutique & Resort | Trip and Tick",
-    "metaDescription": "Cappadocia hotel recommendation 2026: cave hotels €120, boutique hotel €95, resort €150, glamping €85, apartment €60. Göreme, Ürgüp, Uçhisar comparison and booking tips.",
+    "metaDescription": "Cappadocia hotel recommendation 2026: cave hotels, boutique hotel, resort, glamping, apartment — concept comparison, prices on request. Göreme, Ürgüp, Uçhisar comparison and booking tips.",
     "excerpt": "Which hotel should you stay in Cappadocia? A full comparison of cave hotels, boutique concepts, glamping tents and resorts — the differences between Göreme, Ürgüp and Uçhisar, honeymoon packages and a value-for-money guide.",
     "category": "konaklama",
     "tags": [
@@ -996,7 +996,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "cappadocia-winter-2026-guide-es",
     "title": "Capadocia en Invierno 2026 — Guía de Viaje Completa (Nieve, Globos, Hoteles)",
     "metaTitle": "Capadocia en Invierno 2026: Nieve, Vuelos en Globo y Hoteles | Trip and Tick",
-    "metaDescription": "Guía de Capadocia en invierno 2026: chimeneas de hadas cubiertas de nieve, tasas de vuelos en globo del 70-80 %, precios desde 165 €, qué llevar y qué hoteles cueva permanecen abiertos de diciembre a febrero.",
+    "metaDescription": "Guía de Capadocia en invierno 2026: chimeneas de hadas cubiertas de nieve, tasas de vuelos en globo del 70-80 %, precios desde 100 €, qué llevar y qué hoteles cueva permanecen abiertos de diciembre a febrero.",
     "excerpt": "Capadocia en invierno 2026 es la temporada más fotogénica y económica: chimeneas de hadas cubiertas de nieve, un 30-40 % de descuento en hoteles, vuelos en globo que siguen operando el 70-80 % de las mañanas y hoteles cueva en su punto más cálido, a 18-22 °C de forma natural. Un manual completo de invierno con precios, ropa, estadísticas de globos e itinerarios.",
     "category": "rehber",
     "tags": [
@@ -1018,10 +1018,10 @@ export const ARTICLES: BlogArticleMeta[] = [
   {
     "file": "es-heissluftballon-kappadokien-preise.json",
     "slug": "heissluftballon-kappadokien-preise-buchung-es",
-    "title": "Globo Aerostático en Capadocia 2026 — Precios, Paquetes y Reservas (Estándar 165 €, Deluxe 295 €)",
+    "title": "Globo Aerostático en Capadocia 2026 — Precios, Paquetes y Reservas (desde 100 €)",
     "metaTitle": "Globo Aerostático Capadocia 2026: Precios y Reservas | Trip and Tick",
-    "metaDescription": "Precios del globo aerostático en Capadocia 2026: Estándar 165 €, Deluxe 295 €, Romántico Privado 580 € por persona. Qué incluye, mejor temporada, condiciones de cancelación — guía completa de reservas.",
-    "excerpt": "Un vuelo en globo aerostático sobre las chimeneas de hadas de Capadocia es una de las experiencias de lista de deseos más reservadas del mundo. Los precios de 2026 comienzan en 165 € por persona. Esta guía explica todos los paquetes, qué incluyen, la mejor época para viajar, las condiciones de cancelación y cómo reservar un 5 % por debajo del precio de mercado.",
+    "metaDescription": "Precios del globo aerostático en Capadocia 2026: Estándar desde 100 € por persona; cesta privada Romántica a consultar por WhatsApp. Qué incluye, mejor temporada, condiciones de cancelación — guía completa de reservas.",
+    "excerpt": "Un vuelo en globo aerostático sobre las chimeneas de hadas de Capadocia es una de las experiencias de lista de deseos más reservadas del mundo. Los precios de 2026 parten desde 100 € por persona. Esta guía explica todos los paquetes, qué incluyen, la mejor época para viajar, las condiciones de cancelación y cómo reservar al mejor precio.",
     "category": "balon-turlari",
     "tags": [
       "globo aerostático",
@@ -1067,7 +1067,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-dugun-fotografciligi-rehberi-es",
     "title": "Guía de Fotografía de Bodas en Capadocia 2026 — Top 10 Localizaciones, Permisos y Consejos de Foto con Globos",
     "metaTitle": "Guía de Fotografía de Bodas en Capadocia 2026 | Trip and Tick",
-    "metaDescription": "Fotografía de bodas en Capadocia 2026: top 10 localizaciones (Valle del Amor, Uçhisar, Çavuşin), ¿hace falta permiso?, guía de color estacional, consejos de foto con globos, precios medios 450 €-1.500 €.",
+    "metaDescription": "Fotografía de bodas en Capadocia 2026: top 10 localizaciones (Valle del Amor, Uçhisar, Çavuşin), ¿hace falta permiso?, guía de color estacional, consejos de foto con globos, precios de paquetes a consultar por WhatsApp.",
     "excerpt": "La fotografía de boda y pre-boda en Capadocia vive su edad de oro en los últimos 5 años. Las chimeneas de hadas, los globos aerostáticos, los valles y los hoteles cueva ofrecen una paleta de composición de talla mundial. En esta guía compartimos en detalle el top 10 de localizaciones, el procedimiento de permisos, la paleta de color estacional, consejos críticos para la foto con globos y los precios medios de 2026.",
     "category": "rehber",
     "tags": [
@@ -1115,7 +1115,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-istanbuldan-nasil-gidilir-es",
     "title": "¿Cómo Llegar de Estambul a Capadocia? 5 Opciones — Duración, Precio y Comparativa 2026",
     "metaTitle": "Transporte Estambul Capadocia 2026 | Avión, Autobús, Tren, Coche | Trip and Tick",
-    "metaDescription": "De Estambul a Capadocia, 5 opciones: avión 1,25 h 45 €, autobús 12 h 25 €, tren 18 h 18 €, coche privado 8 h 120 €, tour 2 días 185 €. Comparativa detallada y traslado al aeropuerto.",
+    "metaDescription": "De Estambul a Capadocia, 5 opciones: avión 1,25 h 45 €, autobús 12 h 25 €, tren 18 h 18 €, coche privado 8 h 120 €, tour guiado de 2 días a consultar. Comparativa detallada y traslado al aeropuerto.",
     "excerpt": "¿Cómo llegar de Estambul a Capadocia? Avión (Nevşehir/Kayseri), autobús, tren (Expreso del Este), coche privado y tour guiado — comparativa completa de duración, precio y ventajas de 5 opciones.",
     "category": "ulasim",
     "tags": [
@@ -1165,7 +1165,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-otel-tavsiye-2026-es",
     "title": "Hoteles Recomendados en Capadocia 2026 — Comparativa de Cueva, Boutique, Resort y Glamping",
     "metaTitle": "Hoteles Recomendados en Capadocia 2026 | Cueva, Boutique y Resort | Trip and Tick",
-    "metaDescription": "Hoteles recomendados en Capadocia 2026: hoteles cueva 120 €, hotel boutique 95 €, resort 150 €, glamping 85 €, apartamento 60 €. Comparativa de Göreme, Ürgüp, Uçhisar y consejos de reserva.",
+    "metaDescription": "Hoteles recomendados en Capadocia 2026: cueva, boutique, resort, glamping y apartamento — precio a consultar según categoría y fechas. Comparativa de Göreme, Ürgüp, Uçhisar y consejos de reserva.",
     "excerpt": "¿En qué hotel alojarse en Capadocia? Comparativa completa de hoteles cueva, conceptos boutique, tiendas de glamping y resorts — diferencias entre Göreme, Ürgüp y Uçhisar, paquetes de luna de miel y guía de relación calidad-precio.",
     "category": "konaklama",
     "tags": [
@@ -1189,7 +1189,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "cappadocia-winter-2026-guide-fr",
     "title": "La Cappadoce en hiver 2026 — Guide de voyage complet (neige, montgolfières, hôtels)",
     "metaTitle": "La Cappadoce en hiver 2026 : neige, vols en montgolfière & hôtels | Trip and Tick",
-    "metaDescription": "Guide hiver Cappadoce 2026 : cheminées de fées enneigées, taux de vol en montgolfière de 70-80 %, prix à partir de 165 €, quoi emporter, quels hôtels troglodytes restent ouverts de décembre à février.",
+    "metaDescription": "Guide hiver Cappadoce 2026 : cheminées de fées enneigées, taux de vol en montgolfière de 70-80 %, prix à partir de 100 €, quoi emporter, quels hôtels troglodytes restent ouverts de décembre à février.",
     "excerpt": "La Cappadoce en hiver 2026 est la saison la plus photogénique et la plus abordable — cheminées de fées enneigées, 30-40 % de réduction sur les hôtels, vols en montgolfière toujours assurés 70-80 % des matins, et hôtels troglodytes à leur température naturelle la plus chaude (18-22°C). Un guide hiver complet avec prix, vêtements, statistiques de vol et itinéraires.",
     "category": "rehber",
     "tags": [
@@ -1211,10 +1211,10 @@ export const ARTICLES: BlogArticleMeta[] = [
   {
     "file": "fr-heissluftballon-kappadokien-preise-buchung.json",
     "slug": "heissluftballon-kappadokien-preise-buchung-fr",
-    "title": "Montgolfière Cappadoce 2026 — Prix, Forfaits & Réservation (Standard 165 €, Deluxe 295 €)",
+    "title": "Montgolfière Cappadoce 2026 — Prix, Forfaits & Réservation (Standard à partir de 100 €)",
     "metaTitle": "Montgolfière Cappadoce 2026 : Prix & Réservation | Trip and Tick",
-    "metaDescription": "Prix montgolfière Cappadoce 2026 : Standard 165 €, Deluxe 295 €, Romantique Privé 580 € par personne. Ce qui est inclus, meilleure saison, conditions d'annulation — guide de réservation complet.",
-    "excerpt": "Un vol en montgolfière au-dessus des cheminées de fées de Cappadoce figure parmi les expériences « bucket-list » les plus réservées au monde. Les prix 2026 démarrent à 165 € par personne. Ce guide détaille tous les forfaits, les prestations incluses, la meilleure période, les conditions d'annulation et comment réserver 5 % en dessous du prix du marché.",
+    "metaDescription": "Prix montgolfière Cappadoce 2026 : vol Standard à partir de 100 € par personne, Romantique Privé sur devis. Ce qui est inclus, meilleure saison, conditions d'annulation — guide de réservation complet.",
+    "excerpt": "Un vol en montgolfière au-dessus des cheminées de fées de Cappadoce figure parmi les expériences « bucket-list » les plus réservées au monde. Les prix 2026 démarrent à 100 € par personne. Ce guide détaille les deux options, les prestations incluses, la meilleure période, les conditions d'annulation et comment réserver 5 % en dessous du prix du marché.",
     "category": "balon-turlari",
     "tags": [
       "montgolfière",
@@ -1260,8 +1260,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-dugun-fotografciligi-rehberi-fr",
     "title": "Guide de la photographie de mariage en Cappadoce 2026 — Top 10 des lieux, autorisations et astuces photo en montgolfière",
     "metaTitle": "Guide photographie de mariage Cappadoce 2026 | Trip and Tick",
-    "metaDescription": "Photographie de mariage en Cappadoce 2026 : top 10 des lieux (Vallée de l'Amour, Uçhisar, Vallée de Sevgi), faut-il une autorisation, guide des couleurs saisonnières, astuces photo en montgolfière, prix moyens 450 €-1 500 €.",
-    "excerpt": "Les séances photo de mariage et pré-mariage (pre-wedding) en Cappadoce vivent leur âge d'or depuis 5 ans. Cheminées de fées, montgolfières, vallées et hôtels troglodytes offrent une palette de composition de classe mondiale. Dans ce guide, nous partageons en détail le top 10 des lieux, la procédure d'autorisation, la palette de couleurs saisonnières, les astuces essentielles pour la photo en montgolfière et les prix moyens 2026.",
+    "metaDescription": "Photographie de mariage en Cappadoce 2026 : top 10 des lieux (Vallée de l'Amour, Uçhisar, Vallée de Sevgi), faut-il une autorisation, guide des couleurs saisonnières, astuces photo en montgolfière, tarifs des forfaits sur WhatsApp.",
+    "excerpt": "Les séances photo de mariage et pré-mariage (pre-wedding) en Cappadoce vivent leur âge d'or depuis 5 ans. Cheminées de fées, montgolfières, vallées et hôtels troglodytes offrent une palette de composition de classe mondiale. Dans ce guide, nous partageons en détail le top 10 des lieux, la procédure d'autorisation, la palette de couleurs saisonnières, les astuces essentielles pour la photo en montgolfière et les forfaits 2026 — tarifs actuels sur WhatsApp.",
     "category": "rehber",
     "tags": [
       "cappadoce",
@@ -1308,7 +1308,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-istanbuldan-nasil-gidilir-fr",
     "title": "Comment aller d'Istanbul en Cappadoce ? 5 options — Durée, prix et comparaison 2026",
     "metaTitle": "Transport Istanbul Cappadoce 2026 | Avion, bus, train, voiture | Trip and Tick",
-    "metaDescription": "5 options d'Istanbul à la Cappadoce : avion 1h25 45 €, bus 12h 25 €, train 18h 18 €, voiture privée 8h 120 €, tour 2 jours 185 €. Comparaison détaillée et transfert aéroport.",
+    "metaDescription": "5 options d'Istanbul à la Cappadoce : avion 1h25 45 €, bus 12h 25 €, train 18h 18 €, voiture privée 8h 120 €, tour guidé 2 jours (prix sur devis). Comparaison détaillée et transfert aéroport.",
     "excerpt": "Comment aller d'Istanbul en Cappadoce ? Avion (Nevşehir/Kayseri), bus, train (Express de l'Est), voiture privée et tour guidé — comparaison complète de la durée, du prix et des avantages des 5 options.",
     "category": "ulasim",
     "tags": [
@@ -1358,7 +1358,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-otel-tavsiye-2026-fr",
     "title": "Recommandations d'hôtels en Cappadoce 2026 — Comparaison troglodyte, boutique, resort et glamping",
     "metaTitle": "Recommandation hôtel Cappadoce 2026 | Troglodyte, boutique & resort | Trip and Tick",
-    "metaDescription": "Recommandation d'hôtels en Cappadoce 2026 : hôtels troglodytes 120 €, hôtel boutique 95 €, resort 150 €, glamping 85 €, appart 60 €. Comparaison Göreme, Ürgüp, Uçhisar et astuces de réservation.",
+    "metaDescription": "Recommandation d'hôtels en Cappadoce 2026 : hôtels troglodytes, hôtel boutique, resort, glamping, appart — comparaison des concepts, prix sur devis. Comparaison Göreme, Ürgüp, Uçhisar et astuces de réservation.",
     "excerpt": "Dans quel hôtel séjourner en Cappadoce ? Comparaison complète des hôtels troglodytes, concepts boutiques, tentes de glamping et resorts — différences entre Göreme, Ürgüp et Uçhisar, forfaits lune de miel et guide rapport qualité-prix.",
     "category": "konaklama",
     "tags": [
@@ -1382,7 +1382,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "cappadocia-winter-2026-guide-hi",
     "title": "सर्दियों में कैपाडोसिया 2026 — पूरी यात्रा गाइड (बर्फ, बैलून, होटल)",
     "metaTitle": "सर्दियों में कैपाडोसिया 2026: बर्फ, बैलून उड़ान और होटल | Trip and Tick",
-    "metaDescription": "कैपाडोसिया सर्दी 2026 गाइड: बर्फ से ढकी फेयरी चिमनियां, हॉट एयर बैलून उड़ान दर 70-80%, कीमतें €165 से, क्या पैक करें, कौन से केव होटल दिसंबर-फरवरी खुले रहते हैं।",
+    "metaDescription": "कैपाडोसिया सर्दी 2026 गाइड: बर्फ से ढकी फेयरी चिमनियां, हॉट एयर बैलून उड़ान दर 70-80%, कीमतें €100 से, क्या पैक करें, कौन से केव होटल दिसंबर-फरवरी खुले रहते हैं।",
     "excerpt": "सर्दियों में कैपाडोसिया 2026 सबसे फ़ोटोजेनिक और सबसे किफ़ायती मौसम है — बर्फ से ढकी फेयरी चिमनियां, होटल दरों पर 30-40% छूट, बैलून उड़ानें अभी भी 70-80% सुबहों पर संचालित, और केव होटल अपने सबसे गर्म प्राकृतिक 18-22°C पर। कीमतों, कपड़ों, बैलून आंकड़ों और यात्रा कार्यक्रमों के साथ एक पूरी विंटर प्लेबुक।",
     "category": "rehber",
     "tags": [
@@ -1404,10 +1404,10 @@ export const ARTICLES: BlogArticleMeta[] = [
   {
     "file": "hi-heissluftballon-kappadokien-preise-buchung.json",
     "slug": "heissluftballon-kappadokien-preise-buchung-hi",
-    "title": "कैपाडोसिया हॉट एयर बैलून 2026 — कीमतें, पैकेज और बुकिंग (स्टैंडर्ड €165, डीलक्स €295)",
+    "title": "कैपाडोसिया हॉट एयर बैलून 2026 — कीमतें, पैकेज और बुकिंग (€100 से शुरू)",
     "metaTitle": "कैपाडोसिया हॉट एयर बैलून 2026: कीमतें और बुकिंग | Trip and Tick",
-    "metaDescription": "कैपाडोसिया हॉट एयर बैलून 2026 कीमतें: स्टैंडर्ड €165, डीलक्स €295, रोमांटिक प्राइवेट €580 प्रति व्यक्ति। क्या शामिल है, सबसे अच्छा मौसम, रद्दीकरण शर्तें — पूरी बुकिंग गाइड।",
-    "excerpt": "कैपाडोसिया की फेयरी चिमनियों के ऊपर हॉट एयर बैलून उड़ान दुनिया भर के सबसे अधिक बुक किए जाने वाले बकेट-लिस्ट अनुभवों में से एक है। 2026 की कीमतें €165 प्रति व्यक्ति से शुरू होती हैं। यह गाइड सभी पैकेज, शामिल सेवाएं, यात्रा का सबसे अच्छा समय, रद्दीकरण शर्तें और बाज़ार मूल्य से 5% कम पर कैसे बुक करें समझाती है।",
+    "metaDescription": "कैपाडोसिया हॉट एयर बैलून 2026 कीमतें: स्टैंडर्ड €100 से शुरू, रोमांटिक प्राइवेट WhatsApp पर अनुरोध पर। क्या शामिल है, सबसे अच्छा मौसम, रद्दीकरण शर्तें — पूरी बुकिंग गाइड।",
+    "excerpt": "कैपाडोसिया की फेयरी चिमनियों के ऊपर हॉट एयर बैलून उड़ान दुनिया भर के सबसे अधिक बुक किए जाने वाले बकेट-लिस्ट अनुभवों में से एक है। 2026 की कीमतें €100 प्रति व्यक्ति से शुरू होती हैं। यह गाइड सभी पैकेज, शामिल सेवाएं, यात्रा का सबसे अच्छा समय, रद्दीकरण शर्तें और बाज़ार मूल्य से कम पर कैसे बुक करें समझाती है।",
     "category": "balon-turlari",
     "tags": [
       "हॉट एयर बैलून",
@@ -1453,7 +1453,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-dugun-fotografciligi-rehberi-hi",
     "title": "Cappadocia वेडिंग फोटोग्राफी गाइड 2026 — Top 10 लोकेशन, परमिट और बैलून फोटो टिप्स",
     "metaTitle": "Cappadocia वेडिंग फोटोग्राफी गाइड 2026 | Trip and Tick",
-    "metaDescription": "Cappadocia वेडिंग फोटोग्राफी 2026: top 10 लोकेशन (Aşk Vadisi, Uçhisar, Sevgi Vadisi), क्या परमिट चाहिए, सीज़नल रंग गाइड, बैलून फोटो टिप्स, औसत कीमतें €450-€1,500।",
+    "metaDescription": "Cappadocia वेडिंग फोटोग्राफी 2026: top 10 लोकेशन (Aşk Vadisi, Uçhisar, Sevgi Vadisi), क्या परमिट चाहिए, सीज़नल रंग गाइड, बैलून फोटो टिप्स, पैकेज कीमतें WhatsApp पर अनुरोध पर।",
     "excerpt": "Cappadocia में शादी और प्री-वेडिंग फोटो शूट पिछले 5 वर्षों में अपने स्वर्ण युग का अनुभव कर रहा है। परी चिमनियाँ, हॉट एयर बैलून, घाटियाँ और केव होटल विश्व स्तरीय कंपोज़िशन पैलेट प्रदान करते हैं। इस गाइड में हम top 10 लोकेशन, परमिट प्रक्रिया, सीज़नल रंग पैलेट, बैलून फोटो के लिए महत्वपूर्ण टिप्स और 2026 की औसत कीमतें विस्तार से साझा करते हैं।",
     "category": "rehber",
     "tags": [
@@ -1501,7 +1501,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-istanbuldan-nasil-gidilir-hi",
     "title": "İstanbul से Cappadocia कैसे पहुँचें? 5 विकल्प — समय, कीमत और तुलना 2026",
     "metaTitle": "İstanbul Cappadocia परिवहन 2026 | फ्लाइट, बस, ट्रेन, कार | Trip and Tick",
-    "metaDescription": "İstanbul से Cappadocia के 5 विकल्प: फ्लाइट 1.25 घं €45, बस 12 घं €25, ट्रेन 18 घं €18, निजी कार 8 घं €120, टूर 2 दिन €185। विस्तृत तुलना और एयरपोर्ट ट्रांसफर।",
+    "metaDescription": "İstanbul से Cappadocia के 5 विकल्प: फ्लाइट 1.25 घं €45, बस 12 घं €25, ट्रेन 18 घं €18, निजी कार 8 घं €120, गाइडेड टूर 2 दिन WhatsApp पर अनुरोध पर। विस्तृत तुलना और एयरपोर्ट ट्रांसफर।",
     "excerpt": "İstanbul से Cappadocia कैसे पहुँचें? फ्लाइट (Nevşehir/Kayseri), बस, ट्रेन (Doğu Ekspresi), निजी कार और गाइडेड टूर — 5 विकल्पों के लिए समय, कीमत और फ़ायदों की पूरी तुलना।",
     "category": "ulasim",
     "tags": [
@@ -1551,7 +1551,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-otel-tavsiye-2026-hi",
     "title": "Cappadocia होटल सुझाव 2026 — केव, बुटीक, रिज़ॉर्ट और ग्लैम्पिंग तुलना",
     "metaTitle": "Cappadocia होटल सुझाव 2026 | केव, बुटीक और रिज़ॉर्ट | Trip and Tick",
-    "metaDescription": "Cappadocia होटल सुझाव 2026: केव होटल €120, बुटीक होटल €95, रिज़ॉर्ट €150, ग्लैम्पिंग €85, अपार्ट €60। Göreme, Ürgüp, Uçhisar तुलना और बुकिंग टिप्स।",
+    "metaDescription": "Cappadocia होटल सुझाव 2026: केव होटल, बुटीक होटल, रिज़ॉर्ट, ग्लैम्पिंग, अपार्ट — सभी कॉन्सेप्ट की कीमत WhatsApp पर अनुरोध पर। Göreme, Ürgüp, Uçhisar तुलना और बुकिंग टिप्स।",
     "excerpt": "Cappadocia के किस होटल में रुकना चाहिए? केव होटल, बुटीक कॉन्सेप्ट, ग्लैम्पिंग टेंट और रिज़ॉर्ट की पूरी तुलना — Göreme, Ürgüp और Uçhisar के बीच अंतर, हनीमून पैकेज और कीमत-प्रदर्शन गाइड।",
     "category": "konaklama",
     "tags": [
@@ -1575,8 +1575,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "cappadocia-hot-air-balloon-price-2026-it",
     "title": "Prezzi dei palloni aerostatici in Cappadocia 2026 — Guida Completa",
     "metaTitle": "Prezzi dei palloni aerostatici in Cappadocia 2026 | Trip and Tick",
-    "metaDescription": "Prezzi dei palloni aerostatici in Cappadocia 2026: Standard €165, Comfort €215, Deluxe €295, Romantico €580 a persona. 9+ operatori, garanzia del prezzo più basso.",
-    "excerpt": "I prezzi dei palloni aerostatici in Cappadocia nel 2026 partono da **€165 a persona**. Confronta 4 pacchetti di 9+ operatori con la nostra garanzia del prezzo più basso.",
+    "metaDescription": "Prezzi dei palloni aerostatici in Cappadocia 2026: volo Standard da €100 a persona, cestello Romantico su richiesta. 9+ operatori, garanzia del prezzo più basso.",
+    "excerpt": "I prezzi dei palloni aerostatici in Cappadocia nel 2026 partono da **€100 a persona**. Confronta le nostre opzioni tra 9+ operatori con la nostra garanzia del prezzo più basso.",
     "category": "balon-turlari",
     "tags": [
       "cappadocia",
@@ -1598,7 +1598,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "cappadocia-winter-2026-guide-it",
     "title": "Cappadocia in Inverno 2026 — Guida Completa al Viaggio (Neve, Mongolfiere, Hotel)",
     "metaTitle": "Cappadocia in Inverno 2026: Neve, Volo in Mongolfiera & Hotel | Trip and Tick",
-    "metaDescription": "Guida invernale di Cappadocia 2026: camini delle fate coperti di neve, tariffe per voli in mongolfiera 70-80%, prezzi a partire da €165, cosa portare, quali hotel nelle grotte rimangono aperti da dicembre a febbraio.",
+    "metaDescription": "Guida invernale di Cappadocia 2026: camini delle fate coperti di neve, tariffe per voli in mongolfiera 70-80%, prezzi a partire da €100, cosa portare, quali hotel nelle grotte rimangono aperti da dicembre a febbraio.",
     "excerpt": "Cappadocia in inverno 2026 è la stagione più fotografica e conveniente — camini delle fate coperti di neve, sconti del 30-40% sulle tariffe degli hotel, voli in mongolfiera ancora operativi nel 70-80% delle mattine, e hotel nelle grotte alla loro temperatura naturale più calda di 18-22°C. Un completo manuale invernale con prezzi, abbigliamento, statistiche sulle mongolfiere e itinerari.",
     "category": "rehber",
     "tags": [
@@ -1620,10 +1620,10 @@ export const ARTICLES: BlogArticleMeta[] = [
   {
     "file": "it-heissluftballon-kappadokien-preise.json",
     "slug": "heissluftballon-kappadokien-preise-buchung-it",
-    "title": "Cappadocia Hot Air Balloon 2026 — Prezzi, Pacchetti e Prenotazioni (Standard €165, Deluxe €295)",
+    "title": "Cappadocia Hot Air Balloon 2026 — Prezzi, Pacchetti e Prenotazioni (da €100)",
     "metaTitle": "Cappadocia Hot Air Balloon 2026: Prezzi e Prenotazioni | Trip and Tick",
-    "metaDescription": "Prezzi per il volo in mongolfiera in Cappadocia 2026: Standard €165, Deluxe €295, Privato Romantico €580 a persona. Cosa è incluso, miglior stagione, termini di cancellazione — guida completa alla prenotazione.",
-    "excerpt": "Un volo in mongolfiera sopra le chimere di fata della Cappadocia è una delle esperienze più prenotate al mondo. I prezzi per il 2026 partono da €165 a persona. Questa guida spiega ogni pacchetto, cosa è incluso, il momento migliore per viaggiare, i termini di cancellazione e come prenotare al 5% sotto il prezzo di mercato.",
+    "metaDescription": "Prezzi per il volo in mongolfiera in Cappadocia 2026: Standard da €100 a persona, Privato Romantico su richiesta. Cosa è incluso, miglior stagione, termini di cancellazione — guida completa alla prenotazione.",
+    "excerpt": "Un volo in mongolfiera sopra le chimere di fata della Cappadocia è una delle esperienze più prenotate al mondo. I prezzi per il 2026 partono da €100 a persona. Questa guida spiega ogni pacchetto, cosa è incluso, il momento migliore per viaggiare, i termini di cancellazione e come prenotare al 5% sotto il prezzo di mercato.",
     "category": "balon-turlari",
     "tags": [
       "hot air balloon",
@@ -1669,7 +1669,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-dugun-fotografciligi-rehberi-it",
     "title": "Guida alla Fotografia di Matrimonio in Cappadocia 2026 — Top 10 Location, Permessi e Consigli per Foto con Palloni",
     "metaTitle": "Guida alla Fotografia di Matrimonio in Cappadocia 2026 | Trip and Tick",
-    "metaDescription": "Fotografia di matrimonio in Cappadocia 2026: top 10 location (Love Valley, Uçhisar, Sevgi Valley), hai bisogno di un permesso, guida ai colori stagionali, consigli per foto con palloni, prezzi medi €450-€1,500.",
+    "metaDescription": "Fotografia di matrimonio in Cappadocia 2026: top 10 location (Love Valley, Uçhisar, Sevgi Valley), hai bisogno di un permesso, guida ai colori stagionali, consigli per foto con palloni, prezzi dei pacchetti su richiesta via WhatsApp.",
     "excerpt": "Le sessioni fotografiche di matrimonio e pre-matrimonio in Cappadocia hanno vissuto il loro periodo d'oro negli ultimi 5 anni. I camini delle fate, i palloni aerostatici, le valli e gli hotel nelle grotte offrono una palette di composizione di livello mondiale. In questa guida condividiamo le top 10 location, la procedura per i permessi, la palette di colori stagionali, consigli critici per la fotografia con palloni e i prezzi medi del 2026 in dettaglio.",
     "category": "rehber",
     "tags": [
@@ -1767,7 +1767,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-otel-tavsiye-2026-it",
     "title": "Raccomandazioni per Hotel in Cappadocia 2026 — Confronto tra Hotel in Grotta, Boutique, Resort e Glamping",
     "metaTitle": "Raccomandazione Hotel Cappadocia 2026 | Grotta, Boutique & Resort | Trip and Tick",
-    "metaDescription": "Raccomandazione hotel Cappadocia 2026: hotel in grotta €120, hotel boutique €95, resort €150, glamping €85, appartamento €60. Confronto e suggerimenti per la prenotazione a Göreme, Ürgüp, Uçhisar.",
+    "metaDescription": "Raccomandazione hotel Cappadocia 2026: hotel in grotta, hotel boutique, resort, glamping e appartamento — prezzi su richiesta via WhatsApp. Confronto e suggerimenti per la prenotazione a Göreme, Ürgüp, Uçhisar.",
     "excerpt": "In quale hotel dovresti soggiornare in Cappadocia? Un confronto completo tra hotel in grotta, concetti boutique, tende glamping e resort — le differenze tra Göreme, Ürgüp e Uçhisar, pacchetti per lune di miele e una guida al miglior rapporto qualità-prezzo.",
     "category": "konaklama",
     "tags": [
@@ -1791,8 +1791,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "cappadocia-hot-air-balloon-price-2026-ja",
     "title": "カッパドキアの熱気球料金 2026年 — 完全ガイド",
     "metaTitle": "カッパドキアの熱気球料金 2026年 | Trip and Tick",
-    "metaDescription": "カッパドキアの熱気球料金 2026年: スタンダード €165, コンフォート €215, デラックス €295, ロマンティック €580（1人あたり）。9以上のオペレーター、最低価格保証。",
-    "excerpt": "カッパドキアの熱気球料金は2026年に**€165から**スタートします。9以上のオペレーターから4つのパッケージを比較し、最低価格保証を提供します。",
+    "metaDescription": "カッパドキアの熱気球料金 2026年: スタンダード €100〜、ロマンティックプライベートはWhatsAppでお問い合わせください（1人あたり）。9以上のオペレーター、最低価格保証。",
+    "excerpt": "カッパドキアの熱気球料金は2026年に**€100から**スタートします。9以上のオペレーターからスタンダードとロマンティックプライベートのパッケージを比較し、最低価格保証を提供します。",
     "category": "balon-turlari",
     "tags": [
       "cappadocia",
@@ -1814,7 +1814,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "cappadocia-winter-2026-guide-ja",
     "title": "2026年冬のカッパドキア — 完全旅行ガイド（雪、気球、ホテル）",
     "metaTitle": "2026年冬のカッパドキア：雪、気球フライト＆ホテル | Trip and Tick",
-    "metaDescription": "2026年冬のカッパドキアガイド：雪に覆われた妖精の煙突、気球フライト料金70-80%、価格は€165から、持ち物、12月から2月まで営業している洞窟ホテル。",
+    "metaDescription": "2026年冬のカッパドキアガイド：雪に覆われた妖精の煙突、気球フライト料金70-80%、スタンダード価格は€100から、持ち物、12月から2月まで営業している洞窟ホテル。",
     "excerpt": "2026年冬のカッパドキアは、最もフォトジェニックで手頃なシーズンです — 雪に覆われた妖精の煙突、ホテル料金が30-40%オフ、気球フライトは朝の70-80%が運航中、洞窟ホテルは自然な暖かさで18-22°Cです。価格、服装、気球の統計、日程を含む完全な冬のプレイブック。",
     "category": "rehber",
     "tags": [
@@ -1836,10 +1836,10 @@ export const ARTICLES: BlogArticleMeta[] = [
   {
     "file": "ja-heissluftballon-kappadokien-preise.json",
     "slug": "heissluftballon-kappadokien-preise-buchung-ja",
-    "title": "カッパドキア熱気球2026 — 料金、パッケージ & 予約 (スタンダード €165, デラックス €295)",
+    "title": "カッパドキア熱気球2026 — 料金、パッケージ & 予約 (スタンダード €100〜)",
     "metaTitle": "カッパドキア熱気球2026: 料金 & 予約 | Trip and Tick",
-    "metaDescription": "カッパドキア熱気球2026の料金: スタンダード €165, デラックス €295, ロマンティックプライベート €580（1人あたり）。含まれる内容、最適なシーズン、キャンセル条件 — 完全な予約ガイド。",
-    "excerpt": "カッパドキアの妖精の煙突の上を飛ぶ熱気球のフライトは、世界で最も予約されているバケットリスト体験の一つです。2026年の料金は1人あたり€165からスタートします。このガイドでは、すべてのパッケージ、含まれる内容、旅行の最適な時期、キャンセル条件、そして市場価格の5%引きでの予約方法を説明します。",
+    "metaDescription": "カッパドキア熱気球2026の料金: スタンダード €100〜、ロマンティックプライベートはWhatsAppでお問い合わせください（1人あたり）。含まれる内容、最適なシーズン、キャンセル条件 — 完全な予約ガイド。",
+    "excerpt": "カッパドキアの妖精の煙突の上を飛ぶ熱気球のフライトは、世界で最も予約されているバケットリスト体験の一つです。2026年のスタンダード料金は1人あたり€100からスタートします。このガイドでは、すべてのパッケージ、含まれる内容、旅行の最適な時期、キャンセル条件、そして市場価格の5%引きでの予約方法を説明します。",
     "category": "balon-turlari",
     "tags": [
       "hot air balloon",
@@ -1885,7 +1885,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-dugun-fotografciligi-rehberi-ja",
     "title": "カッパドキアウェディングフォトガイド2026 — トップ10ロケーション、許可証、バルーンフォトのヒント",
     "metaTitle": "カッパドキアウェディングフォトガイド2026 | Trip and Tick",
-    "metaDescription": "カッパドキアのウェディングフォト2026：トップ10ロケーション（ラブバレー、ウチヒサール、セブギバレー）、許可証が必要か、季節のカラーパレット、バルーンフォトのヒント、平均価格€450-€1,500。",
+    "metaDescription": "カッパドキアのウェディングフォト2026：トップ10ロケーション（ラブバレー、ウチヒサール、セブギバレー）、許可証が必要か、季節のカラーパレット、バルーンフォトのヒント、価格€450から。",
     "excerpt": "カッパドキアでのウェディングおよびプレウェディングフォト撮影は、過去5年間で黄金時代を迎えています。妖精の煙突、熱気球、谷、洞窟ホテルが世界クラスの構図パレットを提供します。このガイドでは、トップ10のロケーション、許可手続き、季節のカラーパレット、バルーンフォトのための重要なヒント、2026年の平均価格を詳しく共有します。",
     "category": "rehber",
     "tags": [
@@ -1933,7 +1933,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-istanbuldan-nasil-gidilir-ja",
     "title": "イスタンブールからカッパドキアへの行き方は？ 5つのオプション — 時間、価格、比較 2026",
     "metaTitle": "イスタンブールからカッパドキアへの交通手段 2026 | 飛行機、バス、電車、車 | Trip and Tick",
-    "metaDescription": "イスタンブールからカッパドキアへの5つのオプション：飛行機 1.25時間 €45、バス 12時間 €25、電車 18時間 €18、プライベートカー 8時間 €120、ツアー 2日間 €185。詳細な比較と空港送迎。",
+    "metaDescription": "イスタンブールからカッパドキアへの5つのオプション：飛行機 1.25時間 €45、バス 12時間 €25、電車 18時間 €18、プライベートカー 8時間 €120、ツアー 2日間（価格はWhatsAppでお問い合わせください）。詳細な比較と空港送迎。",
     "excerpt": "イスタンブールからカッパドキアに行くにはどうすればいいですか？ 飛行機（ネヴシェヒル/カイセリ）、バス、電車（イースタンエクスプレス）、プライベートカー、ガイド付きツアー — すべての5つのオプションの時間、価格、利点の完全比較。",
     "category": "ulasim",
     "tags": [
@@ -1983,7 +1983,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-otel-tavsiye-2026-ja",
     "title": "カッパドキアのホテルおすすめ 2026 — 洞窟、ブティック、リゾート、グランピングの比較",
     "metaTitle": "カッパドキアのホテルおすすめ 2026 | 洞窟、ブティック & リゾート | Trip and Tick",
-    "metaDescription": "カッパドキアのホテルおすすめ 2026: 洞窟ホテル €120、ブティックホテル €95、リゾート €150、グランピング €85、アパートメント €60。ギョレメ、ウルギュップ、ウチヒサールの比較と予約のヒント。",
+    "metaDescription": "カッパドキアのホテルおすすめ 2026: 洞窟ホテル、ブティックホテル、リゾート、グランピング、アパートメント——5つの宿泊コンセプトを徹底比較、価格はWhatsAppでお問い合わせください。ギョレメ、ウルギュップ、ウチヒサールの比較と予約のヒント。",
     "excerpt": "カッパドキアでどのホテルに宿泊すべきですか？洞窟ホテル、ブティックコンセプト、グランピングテント、リゾートの完全比較 — ギョレメ、ウルギュップ、ウチヒサールの違い、ハネムーンパッケージ、コストパフォーマンスガイド。",
     "category": "konaklama",
     "tags": [
@@ -2007,8 +2007,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "cappadocia-hot-air-balloon-price-2026-ko",
     "title": "카파도키아 열기구 가격 2026 — 완벽 가이드",
     "metaTitle": "카파도키아 열기구 가격 2026 | Trip and Tick",
-    "metaDescription": "카파도키아 열기구 가격 2026: 표준 €165, 컴포트 €215, 디럭스 €295, 로맨틱 €580 1인 기준. 9개 이상의 운영업체, 최저가 보장.",
-    "excerpt": "2026년 카파도키아 열기구 가격은 1인 기준 **€165**부터 시작합니다. 9개 이상의 운영업체에서 4개의 패키지를 비교해 보세요. 최저가 보장합니다.",
+    "metaDescription": "카파도키아 열기구 가격 2026: 표준 €100부터, 로맨틱 프라이빗은 WhatsApp으로 문의 (1인 기준). 9개 이상의 운영업체, 최저가 보장.",
+    "excerpt": "2026년 카파도키아 열기구 가격은 1인 기준 **€100**부터 시작합니다. 9개 이상의 운영업체에서 표준과 로맨틱 프라이빗 패키지를 비교해 보세요. 최저가 보장합니다.",
     "category": "balon-turlari",
     "tags": [
       "cappadocia",
@@ -2030,7 +2030,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "cappadocia-winter-2026-guide-ko",
     "title": "2026년 겨울 카파도키아 — 완벽한 여행 가이드 (눈, 열기구, 호텔)",
     "metaTitle": "2026년 겨울 카파도키아: 눈, 열기구 비행 및 호텔 | Trip and Tick",
-    "metaDescription": "2026년 카파도키아 겨울 가이드: 눈으로 덮인 요정 굴뚝, 열기구 비행 요금 70-80%, 가격은 €165부터, 무엇을 챙길지, 12월-2월에 열리는 동굴 호텔.",
+    "metaDescription": "2026년 카파도키아 겨울 가이드: 눈으로 덮인 요정 굴뚝, 열기구 비행 요금 70-80%, 표준 가격은 €100부터, 무엇을 챙길지, 12월-2월에 열리는 동굴 호텔.",
     "excerpt": "2026년 겨울 카파도키아는 가장 사진 찍기 좋고 가장 저렴한 시즌입니다 — 눈으로 덮인 요정 굴뚝, 호텔 요금 30-40% 할인, 아침 70-80%의 열기구 비행이 여전히 운영되며, 동굴 호텔은 자연적으로 따뜻한 18-22°C를 유지합니다. 가격, 의류, 열기구 통계 및 여행 일정이 포함된 완벽한 겨울 가이드입니다.",
     "category": "rehber",
     "tags": [
@@ -2052,10 +2052,10 @@ export const ARTICLES: BlogArticleMeta[] = [
   {
     "file": "ko-heissluftballon-kappadokien-preise.json",
     "slug": "heissluftballon-kappadokien-preise-buchung-ko",
-    "title": "카파도키아 열기구 2026 — 가격, 패키지 및 예약 (스탠다드 €165, 디럭스 €295)",
+    "title": "카파도키아 열기구 2026 — 가격, 패키지 및 예약 (스탠다드 €100부터)",
     "metaTitle": "카파도키아 열기구 2026: 가격 및 예약 | Trip and Tick",
-    "metaDescription": "카파도키아 열기구 2026 가격: 스탠다드 €165, 디럭스 €295, 로맨틱 프라이빗 €580 1인 기준. 포함 사항, 최적의 시즌, 취소 조건 — 완벽한 예약 가이드.",
-    "excerpt": "카파도키아의 요정 굴뚝 위에서의 열기구 비행은 세계에서 가장 많이 예약된 버킷리스트 경험 중 하나입니다. 2026년 가격은 1인 기준 €165부터 시작합니다. 이 가이드는 모든 패키지, 포함 사항, 여행하기 가장 좋은 시기, 취소 조건 및 시장 가격보다 5% 저렴하게 예약하는 방법을 설명합니다.",
+    "metaDescription": "카파도키아 열기구 2026 가격: 스탠다드 €100부터, 로맨틱 프라이빗은 WhatsApp으로 문의 (1인 기준). 포함 사항, 최적의 시즌, 취소 조건 — 완벽한 예약 가이드.",
+    "excerpt": "카파도키아의 요정 굴뚝 위에서의 열기구 비행은 세계에서 가장 많이 예약된 버킷리스트 경험 중 하나입니다. 2026년 스탠다드 가격은 1인 기준 €100부터 시작합니다. 이 가이드는 모든 패키지, 포함 사항, 여행하기 가장 좋은 시기, 취소 조건 및 시장 가격보다 5% 저렴하게 예약하는 방법을 설명합니다.",
     "category": "balon-turlari",
     "tags": [
       "hot air balloon",
@@ -2101,7 +2101,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-dugun-fotografciligi-rehberi-ko",
     "title": "카파도키아 웨딩 사진 가이드 2026 — 최고의 10개 장소, 허가 및 열기구 사진 팁",
     "metaTitle": "카파도키아 웨딩 사진 가이드 2026 | Trip and Tick",
-    "metaDescription": "카파도키아 웨딩 사진 2026: 최고의 10개 장소 (사랑의 계곡, 우치사르, 세브기 계곡), 허가 필요 여부, 계절별 색상 가이드, 열기구 사진 팁, 평균 가격 €450-€1,500.",
+    "metaDescription": "카파도키아 웨딩 사진 2026: 최고의 10개 장소 (사랑의 계곡, 우치사르, 세브기 계곡), 허가 필요 여부, 계절별 색상 가이드, 열기구 사진 팁, 가격 €450부터.",
     "excerpt": "카파도키아에서의 웨딩 및 프리 웨딩 사진 촬영은 지난 5년 동안 황금기를 맞이하고 있습니다. 요정 굴뚝, 열기구, 계곡 및 동굴 호텔은 세계적 수준의 구성 팔레트를 제공합니다. 이 가이드에서는 최고의 10개 장소, 허가 절차, 계절별 색상 팔레트, 열기구 사진을 위한 중요한 팁 및 2026년 평균 가격을 자세히 공유합니다.",
     "category": "rehber",
     "tags": [
@@ -2149,7 +2149,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-istanbuldan-nasil-gidilir-ko",
     "title": "이스탄불에서 카파도키아까지 가는 방법? 5가지 옵션 — 시간, 가격 및 비교 2026",
     "metaTitle": "이스탄불에서 카파도키아까지의 교통 2026 | 비행기, 버스, 기차, 자동차 | Trip and Tick",
-    "metaDescription": "이스탄불에서 카파도키아까지의 5가지 옵션: 비행기 1.25시간 €45, 버스 12시간 €25, 기차 18시간 €18, 개인 자동차 8시간 €120, 투어 2일 €185. 자세한 비교 및 공항 이동.",
+    "metaDescription": "이스탄불에서 카파도키아까지의 5가지 옵션: 비행기 1.25시간 €45, 버스 12시간 €25, 기차 18시간 €18, 개인 자동차 8시간 €120, 투어 2일 (가격은 WhatsApp으로 문의). 자세한 비교 및 공항 이동.",
     "excerpt": "이스탄불에서 카파도키아까지 어떻게 가나요? 비행기(네브셰히르/카이세리), 버스, 기차(동부 익스프레스), 개인 자동차 및 가이드 투어 — 모든 5가지 옵션의 시간, 가격 및 장점에 대한 완전한 비교.",
     "category": "ulasim",
     "tags": [
@@ -2199,7 +2199,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-otel-tavsiye-2026-ko",
     "title": "카파도키아 호텔 추천 2026 — 동굴, 부티크, 리조트 및 글램핑 비교",
     "metaTitle": "카파도키아 호텔 추천 2026 | 동굴, 부티크 & 리조트 | Trip and Tick",
-    "metaDescription": "카파도키아 호텔 추천 2026: 동굴 호텔 €120, 부티크 호텔 €95, 리조트 €150, 글램핑 €85, 아파트 €60. 괴레메, 우르굽, 우치사르 비교 및 예약 팁.",
+    "metaDescription": "카파도키아 호텔 추천 2026: 동굴 호텔, 부티크 호텔, 리조트, 글램핑, 아파트 — 5가지 숙박 컨셉 완벽 비교, 가격은 WhatsApp으로 문의. 괴레메, 우르굽, 우치사르 비교 및 예약 팁.",
     "excerpt": "카파도키아에서 어떤 호텔에 머물러야 할까요? 동굴 호텔, 부티크 컨셉, 글램핑 텐트 및 리조트의 완벽한 비교 — 괴레메, 우르굽 및 우치사르의 차이점, 허니문 패키지 및 가성비 가이드.",
     "category": "konaklama",
     "tags": [
@@ -2223,7 +2223,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "cappadocia-winter-2026-guide-nl",
     "title": "Cappadocië in de Winter 2026 — Complete Reisgids (Sneeuw, Ballonnen, Hotels)",
     "metaTitle": "Cappadocië in de Winter 2026: Sneeuw, Ballonvluchten & Hotels | Trip and Tick",
-    "metaDescription": "Cappadocië wintergids 2026: besneeuwde feeënschoorstenen, heteluchtballonvluchten 70-80%, prijzen vanaf €165, wat in te pakken, welke grottenhotels open blijven december-februari.",
+    "metaDescription": "Cappadocië wintergids 2026: besneeuwde feeënschoorstenen, heteluchtballonvluchten 70-80%, prijzen vanaf €100, wat in te pakken, welke grottenhotels open blijven december-februari.",
     "excerpt": "Cappadocië in de winter 2026 is het meest fotogenieke en betaalbaarste seizoen — besneeuwde feeënschoorstenen, 30-40% korting op hotelprijzen, ballonvluchten die nog 70-80% van de ochtenden plaatsvinden, en grottenhotels op hun warmste natuurlijke 18-22°C. Een volledig winterdraaiboek met prijzen, kleding, ballonstatistieken en routes.",
     "category": "rehber",
     "tags": [
@@ -2245,10 +2245,10 @@ export const ARTICLES: BlogArticleMeta[] = [
   {
     "file": "nl-heissluftballon-kappadokien-preise-buchung.json",
     "slug": "heissluftballon-kappadokien-preise-buchung-nl",
-    "title": "Heteluchtballon Cappadocië 2026 — Prijzen, Pakketten & Boeking (Standaard €165, Deluxe €295)",
+    "title": "Heteluchtballon Cappadocië 2026 — Prijzen, Pakketten & Boeking (vanaf €100)",
     "metaTitle": "Heteluchtballon Cappadocië 2026: Prijzen & Boeking | Trip and Tick",
-    "metaDescription": "Heteluchtballon Cappadocië 2026 prijzen: Standaard €165, Deluxe €295, Romantisch Privé €580 per persoon. Wat is inbegrepen, beste seizoen, annuleringsvoorwaarden — complete boekingsgids.",
-    "excerpt": "Een heteluchtballonvlucht over de feeënschoorstenen van Cappadocië behoort tot de meest geboekte bucketlist-ervaringen ter wereld. Prijzen 2026 starten vanaf €165 per persoon. Deze gids legt alle pakketten, inclusiviteiten, beste reistijd, annuleringsvoorwaarden uit en hoe u 5% onder de marktprijs boekt.",
+    "metaDescription": "Heteluchtballon Cappadocië 2026 prijzen: standaardvluchten vanaf €100 per persoon, de privémand Romantisch op aanvraag. Wat is inbegrepen, beste seizoen, annuleringsvoorwaarden — complete boekingsgids.",
+    "excerpt": "Een heteluchtballonvlucht over de feeënschoorstenen van Cappadocië behoort tot de meest geboekte bucketlist-ervaringen ter wereld. Prijzen 2026 starten vanaf €100 per persoon; de privémand Romantisch wordt op aanvraag geprijsd. Deze gids legt alle pakketten, inclusiviteiten, beste reistijd, annuleringsvoorwaarden uit en hoe u 5% onder de marktprijs boekt.",
     "category": "balon-turlari",
     "tags": [
       "heteluchtballon",
@@ -2342,7 +2342,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-istanbuldan-nasil-gidilir-nl",
     "title": "Hoe Reis Je van Istanbul naar Cappadocië? 5 Opties — Duur, Prijs en Vergelijking 2026",
     "metaTitle": "Istanbul Cappadocië Vervoer 2026 | Vliegtuig, Bus, Trein, Auto | Trip and Tick",
-    "metaDescription": "Van Istanbul naar Cappadocië 5 opties: vliegtuig 1,25 u €45, bus 12 u €25, trein 18 u €18, privéauto 8 u €120, tour 2 dagen €185. Gedetailleerde vergelijking en luchthaventransfer.",
+    "metaDescription": "Van Istanbul naar Cappadocië 5 opties: vliegtuig 1,25 u €45, bus 12 u €25, trein 18 u €18, privéauto 8 u €120, begeleide tour op aanvraag. Gedetailleerde vergelijking en luchthaventransfer.",
     "excerpt": "Hoe reis je van Istanbul naar Cappadocië? Vliegtuig (Nevşehir/Kayseri), bus, trein (Oosterse Express), privéauto en begeleide tour — voor 5 opties een volledige vergelijking van duur, prijs en voordelen.",
     "category": "ulasim",
     "tags": [
@@ -2392,7 +2392,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-otel-tavsiye-2026-nl",
     "title": "Hotelaanbevelingen Cappadocië 2026 — Vergelijking Grotten, Boetiek, Resort en Glamping",
     "metaTitle": "Hotelaanbeveling Cappadocië 2026 | Grotten, Boetiek & Resort | Trip and Tick",
-    "metaDescription": "Hotelaanbeveling Cappadocië 2026: grottenhotels €120, boetiekhotel €95, resort €150, glamping €85, appartement €60. Vergelijking Göreme, Ürgüp, Uçhisar en boekingstips.",
+    "metaDescription": "Hotelaanbeveling Cappadocië 2026: grottenhotels, boetiekhotel, resort, glamping, appartement — alle prijzen op aanvraag. Vergelijking Göreme, Ürgüp, Uçhisar en boekingstips.",
     "excerpt": "In welk hotel verblijf je in Cappadocië? Een volledige vergelijking van grottenhotels, boetiekconcepten, glampingtenten en resorts — de verschillen tussen Göreme, Ürgüp en Uçhisar, huwelijksreispakketten en een prijs-kwaliteitgids.",
     "category": "konaklama",
     "tags": [
@@ -2416,8 +2416,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "cappadocia-hot-air-balloon-price-2026-pt-BR",
     "title": "Preços de Balão de Ar Quente na Capadócia 2026 — Guia Completo",
     "metaTitle": "Preços de Balão de Ar Quente na Capadócia 2026 | Trip and Tick",
-    "metaDescription": "Preços de balão de ar quente na Capadócia 2026: Standard €165, Comfort €215, Deluxe €295, Romântico €580 por pessoa. 9+ operadores, garantia do menor preço.",
-    "excerpt": "Os preços de balão de ar quente na Capadócia em 2026 começam a partir de **€165 por pessoa**. Compare 4 pacotes de 9+ operadores com nossa garantia do menor preço.",
+    "metaDescription": "Preços de balão de ar quente na Capadócia 2026: voos Standard a partir de €100 por pessoa; cesta privativa Romântico sob consulta no WhatsApp. 9+ operadores, garantia do menor preço.",
+    "excerpt": "Os preços de balão de ar quente na Capadócia em 2026 começam a partir de **€100 por pessoa**. Compare os pacotes Standard e Romântico de 9+ operadores com nossa garantia do menor preço.",
     "category": "balon-turlari",
     "tags": [
       "cappadocia",
@@ -2439,7 +2439,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "cappadocia-winter-2026-guide-pt-BR",
     "title": "Cappadocia no Inverno 2026 — Guia Completo de Viagem (Neve, Balões, Hotéis)",
     "metaTitle": "Cappadocia no Inverno 2026: Neve, Voos de Balão & Hotéis | Trip and Tick",
-    "metaDescription": "Guia de Cappadocia inverno 2026: chaminés de fada cobertas de neve, tarifas de voos de balão 70-80%, preços a partir de €165, o que levar, quais hotéis-caverna permanecem abertos de dezembro a fevereiro.",
+    "metaDescription": "Guia de Cappadocia inverno 2026: chaminés de fada cobertas de neve, tarifas de voos de balão 70-80%, preços a partir de €100, o que levar, quais hotéis-caverna permanecem abertos de dezembro a fevereiro.",
     "excerpt": "Cappadocia no inverno 2026 é a temporada mais fotogênica e acessível — chaminés de fada cobertas de neve, 30-40% de desconto nas tarifas de hotéis, voos de balão ainda operando 70-80% das manhãs, e hotéis-caverna na sua temperatura natural mais quente de 18-22°C. Um guia completo de inverno com preços, roupas, estatísticas de balões e itinerários.",
     "category": "rehber",
     "tags": [
@@ -2461,10 +2461,10 @@ export const ARTICLES: BlogArticleMeta[] = [
   {
     "file": "pt-BR-heissluftballon-kappadokien-preise.json",
     "slug": "heissluftballon-kappadokien-preise-buchung-pt-BR",
-    "title": "Cappadocia Balão de Ar Quente 2026 — Preços, Pacotes e Reserva (Padrão €165, Deluxe €295)",
+    "title": "Cappadocia Balão de Ar Quente 2026 — Preços, Pacotes e Reserva (a partir de €100)",
     "metaTitle": "Cappadocia Balão de Ar Quente 2026: Preços e Reserva | Trip and Tick",
-    "metaDescription": "Preços do balão de ar quente em Cappadocia 2026: Padrão €165, Deluxe €295, Privado Romântico €580 por pessoa. O que está incluído, melhor temporada, termos de cancelamento — guia completo de reservas.",
-    "excerpt": "Um voo de balão de ar quente sobre as chaminés de fada de Cappadocia está entre as experiências mais reservadas do mundo. Os preços para 2026 começam em €165 por pessoa. Este guia explica todos os pacotes, o que está incluído, a melhor época para viajar, termos de cancelamento e como reservar 5% abaixo do preço de mercado.",
+    "metaDescription": "Preços do balão de ar quente em Cappadocia 2026: voos a partir de €100 por pessoa; cesta Privada Romântica sob consulta. O que está incluído, melhor temporada, termos de cancelamento — guia completo de reservas.",
+    "excerpt": "Um voo de balão de ar quente sobre as chaminés de fada de Cappadocia está entre as experiências mais reservadas do mundo. Os preços para 2026 começam a partir de €100 por pessoa. Este guia explica os pacotes, o que está incluído, a melhor época para viajar, termos de cancelamento e como reservar 5% abaixo do preço de mercado.",
     "category": "balon-turlari",
     "tags": [
       "hot air balloon",
@@ -2510,7 +2510,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-dugun-fotografciligi-rehberi-pt-BR",
     "title": "Guia de Fotografia de Casamento em Cappadocia 2026 — Top 10 Locais, Permissões e Dicas para Fotos com Balões",
     "metaTitle": "Guia de Fotografia de Casamento em Cappadocia 2026 | Trip and Tick",
-    "metaDescription": "Fotografia de casamento em Cappadocia 2026: top 10 locais (Vale do Amor, Uçhisar, Vale do Amor), você precisa de uma permissão, guia de cores sazonais, dicas para fotos com balões, preços médios €450-€1,500.",
+    "metaDescription": "Fotografia de casamento em Cappadocia 2026: top 10 locais (Vale do Amor, Uçhisar, Vale do Amor), você precisa de uma permissão, guia de cores sazonais, dicas para fotos com balões, preço sob consulta pelo WhatsApp.",
     "excerpt": "As sessões de fotos de casamento e pré-casamento em Cappadocia estão vivendo sua era de ouro nos últimos 5 anos. Chaminés de fadas, balões de ar quente, vales e hotéis em cavernas oferecem uma paleta de composição de classe mundial. Neste guia, compartilhamos os 10 melhores locais, o procedimento de permissão, a paleta de cores sazonais, dicas críticas para fotografia com balões e os preços médios de 2026 em detalhes.",
     "category": "rehber",
     "tags": [
@@ -2558,7 +2558,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-istanbuldan-nasil-gidilir-pt-BR",
     "title": "Como Chegar a Cappadocia a Partir de Istambul? 5 Opções — Tempo, Preço e Comparação 2026",
     "metaTitle": "Transporte de Istambul a Cappadocia 2026 | Avião, Ônibus, Trem, Carro | Trip and Tick",
-    "metaDescription": "5 opções de Istambul a Cappadocia: avião 1,25 hr €45, ônibus 12 hr €25, trem 18 hr €18, carro particular 8 hr €120, tour 2 dias €185. Comparação detalhada e transfers de aeroporto.",
+    "metaDescription": "5 opções de Istambul a Cappadocia: avião 1,25 hr €45, ônibus 12 hr €25, trem 18 hr €18, carro particular 8 hr €120, tour guiado de 2 dias sob consulta. Comparação detalhada e transfers de aeroporto.",
     "excerpt": "Como você chega a Cappadocia a partir de Istambul? Avião (Nevşehir/Kayseri), ônibus, trem (Expresso Oriental), carro particular e um tour guiado — uma comparação completa de tempo, preço e vantagens para todas as 5 opções.",
     "category": "ulasim",
     "tags": [
@@ -2608,7 +2608,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-otel-tavsiye-2026-pt-BR",
     "title": "Recomendações de Hotéis em Cappadocia 2026 — Comparação de Caverna, Boutique, Resort e Glamping",
     "metaTitle": "Recomendação de Hotel em Cappadocia 2026 | Caverna, Boutique & Resort | Trip and Tick",
-    "metaDescription": "Recomendação de hotel em Cappadocia 2026: hotéis caverna €120, hotel boutique €95, resort €150, glamping €85, apartamento €60. Comparação e dicas de reserva em Göreme, Ürgüp, Uçhisar.",
+    "metaDescription": "Recomendação de hotel em Cappadocia 2026: hotéis caverna, boutique, resort, glamping e apartamento — preço sob consulta pelo WhatsApp. Comparação e dicas de reserva em Göreme, Ürgüp, Uçhisar.",
     "excerpt": "Em qual hotel você deve ficar em Cappadocia? Uma comparação completa de hotéis caverna, conceitos boutique, tendas de glamping e resorts — as diferenças entre Göreme, Ürgüp e Uçhisar, pacotes de lua de mel e um guia de custo-benefício.",
     "category": "konaklama",
     "tags": [
@@ -2632,8 +2632,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "cappadocia-hot-air-balloon-price-2026-pt",
     "title": "Preços de Balões de Ar Quente na Capadócia 2026 — Guia Completo",
     "metaTitle": "Preços de Balões de Ar Quente na Capadócia 2026 | Trip and Tick",
-    "metaDescription": "Preços de balões de ar quente na Capadócia 2026: Standard €165, Comfort €215, Deluxe €295, Romântico €580 por pessoa. 9+ operadores, garantia do menor preço.",
-    "excerpt": "Os preços de balões de ar quente na Capadócia em 2026 começam a partir de **€165 por pessoa**. Compare 4 pacotes de 9+ operadores com a nossa garantia do menor preço.",
+    "metaDescription": "Preços de balões de ar quente na Capadócia 2026: voo Standard a partir de €100 por pessoa, cesto Romântico privado mediante consulta. 9+ operadores, garantia do menor preço.",
+    "excerpt": "Os voos de balão de ar quente na Capadócia em 2026 têm início a partir de **€100 por pessoa**. Compare os voos de 9+ operadores com a nossa garantia do menor preço.",
     "category": "balon-turlari",
     "tags": [
       "cappadocia",
@@ -2655,7 +2655,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "cappadocia-winter-2026-guide-pt",
     "title": "Cappadocia no Inverno 2026 — Guia Completo de Viagem (Neve, Balões, Hotéis)",
     "metaTitle": "Cappadocia no Inverno 2026: Neve, Voos de Balão & Hotéis | Trip and Tick",
-    "metaDescription": "Guia de inverno de Cappadocia 2026: chaminés de fada cobertas de neve, tarifas de voos de balão 70-80%, preços a partir de €165, o que levar, quais hotéis caverna permanecem abertos de dezembro a fevereiro.",
+    "metaDescription": "Guia de inverno de Cappadocia 2026: chaminés de fada cobertas de neve, tarifas de voos de balão 70-80%, voo Standard a partir de €100, o que levar, quais hotéis caverna permanecem abertos de dezembro a fevereiro.",
     "excerpt": "Cappadocia no inverno de 2026 é a estação mais fotogénica e acessível — chaminés de fada cobertas de neve, 30-40% de desconto nas tarifas de hotel, voos de balão ainda operando 70-80% das manhãs, e hotéis caverna na sua temperatura natural mais quente de 18-22°C. Um guia completo de inverno com preços, vestuário, estatísticas de balões e itinerários.",
     "category": "rehber",
     "tags": [
@@ -2677,10 +2677,10 @@ export const ARTICLES: BlogArticleMeta[] = [
   {
     "file": "pt-heissluftballon-kappadokien-preise.json",
     "slug": "heissluftballon-kappadokien-preise-buchung-pt",
-    "title": "Balão de Ar Quente na Capadócia 2026 — Preços, Pacotes e Reserva (Standard €165, Deluxe €295)",
+    "title": "Balão de Ar Quente na Capadócia 2026 — Preços, Pacotes e Reserva (a partir de €100)",
     "metaTitle": "Balão de Ar Quente na Capadócia 2026: Preços e Reserva | Trip and Tick",
-    "metaDescription": "Preços para balão de ar quente na Capadócia 2026: Standard €165, Deluxe €295, Privado Romântico €580 por pessoa. O que está incluído, melhor época, termos de cancelamento — guia completo de reserva.",
-    "excerpt": "Um voo de balão de ar quente sobre as chaminés de fada da Capadócia é uma das experiências mais reservadas do mundo. Os preços para 2026 começam em €165 por pessoa. Este guia explica todos os pacotes, o que está incluído, a melhor época para viajar, termos de cancelamento e como reservar 5% abaixo do preço de mercado.",
+    "metaDescription": "Preços para balão de ar quente na Capadócia 2026: voo Standard a partir de €100 por pessoa, cesto Privado Romântico mediante consulta. O que está incluído, melhor época, termos de cancelamento — guia completo de reserva.",
+    "excerpt": "Um voo de balão de ar quente sobre as chaminés de fada da Capadócia é uma das experiências mais reservadas do mundo. Os preços para 2026 têm início a partir de €100 por pessoa. Este guia explica os voos disponíveis, o que está incluído, a melhor época para viajar, termos de cancelamento e como reservar 5% abaixo do preço de mercado.",
     "category": "balon-turlari",
     "tags": [
       "hot air balloon",
@@ -2726,7 +2726,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-dugun-fotografciligi-rehberi-pt",
     "title": "Guia de Fotografia de Casamento na Capadócia 2026 — Top 10 Locais, Licenças e Dicas para Fotos com Balão",
     "metaTitle": "Guia de Fotografia de Casamento na Capadócia 2026 | Trip and Tick",
-    "metaDescription": "Fotografia de casamento na Capadócia 2026: top 10 locais (Vale do Amor, Uçhisar, Vale do Amor), precisa de licença, guia de cores sazonais, dicas para fotos com balão, preços médios €450-€1,500.",
+    "metaDescription": "Fotografia de casamento na Capadócia 2026: top 10 locais (Vale do Amor, Uçhisar, Vale do Amor), precisa de licença, guia de cores sazonais, dicas para fotos com balão, preços sob consulta (WhatsApp).",
     "excerpt": "As sessões de fotos de casamento e pré-casamento na Capadócia têm vivido a sua idade de ouro nos últimos 5 anos. Chaminés de fadas, balões de ar quente, vales e hotéis em cavernas oferecem uma palete de composição de classe mundial. Neste guia, partilhamos os 10 melhores locais, o procedimento de licença, a palete de cores sazonais, dicas críticas para a fotografia com balões e os preços médios de 2026 em detalhe.",
     "category": "rehber",
     "tags": [
@@ -2774,7 +2774,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-istanbuldan-nasil-gidilir-pt",
     "title": "Como Chegar a Cappadocia a Partir de Istambul? 5 Opções — Tempo, Preço e Comparação 2026",
     "metaTitle": "Transporte de Istambul para Cappadocia 2026 | Avião, Autocarro, Comboio, Carro | Trip and Tick",
-    "metaDescription": "5 opções de Istambul para Cappadocia: avião 1.25 hr €45, autocarro 12 hr €25, comboio 18 hr €18, carro privado 8 hr €120, tour 2 dias €185. Comparação detalhada e transferes de aeroporto.",
+    "metaDescription": "5 opções de Istambul para Cappadocia: avião 1.25 hr €45, autocarro 12 hr €25, comboio 18 hr €18, carro privado 8 hr €120, tour guiado com preço sob consulta. Comparação detalhada e transferes de aeroporto.",
     "excerpt": "Como chegar a Cappadocia a partir de Istambul? Avião (Nevşehir/Kayseri), autocarro, comboio (Eastern Express), carro privado e um tour guiado — uma comparação completa de tempo, preço e vantagens para todas as 5 opções.",
     "category": "ulasim",
     "tags": [
@@ -2824,7 +2824,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-otel-tavsiye-2026-pt",
     "title": "Recomendações de Hotéis em Cappadocia 2026 — Comparação de Caverna, Boutique, Resort e Glamping",
     "metaTitle": "Recomendação de Hotel em Cappadocia 2026 | Caverna, Boutique & Resort | Trip and Tick",
-    "metaDescription": "Recomendação de hotel em Cappadocia 2026: hotéis em caverna €120, hotel boutique €95, resort €150, glamping €85, apartamento €60. Dicas de comparação e reserva em Göreme, Ürgüp, Uçhisar.",
+    "metaDescription": "Recomendação de hotel em Cappadocia 2026: hotéis em caverna, hotel boutique, resort, glamping e apartamento com preços sob consulta. Dicas de comparação e reserva em Göreme, Ürgüp, Uçhisar.",
     "excerpt": "Qual hotel deve escolher em Cappadocia? Uma comparação completa de hotéis em caverna, conceitos boutique, tendas de glamping e resorts — as diferenças entre Göreme, Ürgüp e Uçhisar, pacotes de lua de mel e um guia de custo-benefício.",
     "category": "konaklama",
     "tags": [
@@ -2848,8 +2848,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "cappadocia-hot-air-balloon-price-2026-ru",
     "title": "Цены на воздушные шары в Каппадокии 2026 — Полное руководство",
     "metaTitle": "Цены на воздушные шары в Каппадокии 2026 | Trip and Tick",
-    "metaDescription": "Цены на воздушные шары в Каппадокии 2026: Стандартный €165, Комфорт €215, Делюкс €295, Романтический €580 с человека. Более 9 операторов, гарантия самой низкой цены.",
-    "excerpt": "Цены на воздушные шары в Каппадокии в 2026 году начинаются от **€165 с человека**. Сравните 4 пакета от более чем 9 операторов с нашей гарантией самой низкой цены.",
+    "metaDescription": "Цены на воздушные шары в Каппадокии 2026: Стандартный от €100 с человека, Романтический — цена по запросу. Более 9 операторов, гарантия самой низкой цены.",
+    "excerpt": "Цены на воздушные шары в Каппадокии в 2026 году начинаются от **€100 с человека**. Сравните варианты от более чем 9 операторов с нашей гарантией самой низкой цены.",
     "category": "balon-turlari",
     "tags": [
       "cappadocia",
@@ -2871,7 +2871,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "cappadocia-winter-2026-guide-ru",
     "title": "Каппадокия зимой 2026 — Полное руководство по путешествию (Снег, Воздушные шары, Отели)",
     "metaTitle": "Каппадокия зимой 2026: снег, полеты на воздушных шарах и отели | Trip and Tick",
-    "metaDescription": "Гид по зиме в Каппадокии 2026: сказочные дымоходы, покрытые снегом, цены на полеты на воздушных шарах 70-80%, цены от €165, что взять с собой, какие пещерные отели работают с декабря по февраль.",
+    "metaDescription": "Гид по зиме в Каппадокии 2026: сказочные дымоходы, покрытые снегом, полеты на воздушных шарах 70-80% утр, цены от €100, что взять с собой, какие пещерные отели работают с декабря по февраль.",
     "excerpt": "Каппадокия зимой 2026 — это самый фотогеничный и доступный сезон — сказочные дымоходы, покрытые снегом, скидки 30-40% на отели, полеты на воздушных шарах все еще проводятся 70-80% утр, а пещерные отели достигают своей теплой естественной температуры 18-22°C. Полный зимний путеводитель с ценами, одеждой, статистикой полетов на воздушных шарах и маршрутами.",
     "category": "rehber",
     "tags": [
@@ -2893,10 +2893,10 @@ export const ARTICLES: BlogArticleMeta[] = [
   {
     "file": "ru-heissluftballon-kappadokien-preise.json",
     "slug": "heissluftballon-kappadokien-preise-buchung-ru",
-    "title": "Горячий воздушный шар в Каппадокии 2026 — Цены, Пакеты и Бронирование (Стандарт €165, Делюкс €295)",
+    "title": "Горячий воздушный шар в Каппадокии 2026 — Цены, Пакеты и Бронирование (Стандарт от €100)",
     "metaTitle": "Горячий воздушный шар в Каппадокии 2026: Цены и Бронирование | Trip and Tick",
-    "metaDescription": "Цены на горячие воздушные шары в Каппадокии 2026: Стандарт €165, Делюкс €295, Романтический Частный €580 с человека. Что включено, лучший сезон, условия отмены — полный гид по бронированию.",
-    "excerpt": "Полет на воздушном шаре над волшебными дымоходами Каппадокии — это один из самых популярных опытов в мире. Цены на 2026 год начинаются от €165 с человека. Этот гид объясняет каждый пакет, что включено, лучшее время для поездки, условия отмены и как забронировать на 5% ниже рыночной цены.",
+    "metaDescription": "Цены на горячие воздушные шары в Каппадокии 2026: Стандарт от €100 с человека, Романтический Частный — цена по запросу. Что включено, лучший сезон, условия отмены — полный гид по бронированию.",
+    "excerpt": "Полет на воздушном шаре над волшебными дымоходами Каппадокии — это один из самых популярных опытов в мире. Цены на 2026 год начинаются от €100 с человека. Этот гид объясняет каждый вариант, что включено, лучшее время для поездки, условия отмены и как забронировать на 5% ниже рыночной цены.",
     "category": "balon-turlari",
     "tags": [
       "hot air balloon",
@@ -2942,7 +2942,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-dugun-fotografciligi-rehberi-ru",
     "title": "Гид по свадебной фотографии в Каппадокии 2026 — Топ 10 локаций, разрешения и советы по фотографированию с воздушными шарами",
     "metaTitle": "Гид по свадебной фотографии в Каппадокии 2026 | Trip and Tick",
-    "metaDescription": "Свадебная фотография в Каппадокии 2026: топ 10 локаций (Долина Любви, Учисар, Долина Любви), нужны ли разрешения, сезонный цветовой гид, советы по фотографированию с воздушными шарами, средние цены €450-€1,500.",
+    "metaDescription": "Свадебная фотография в Каппадокии 2026: топ 10 локаций (Долина Любви, Учисар, Долина Любви), нужны ли разрешения, сезонный цветовой гид, советы по фотографированию с воздушными шарами, цена по запросу.",
     "excerpt": "Свадебные и предсвадебные фотосессии в Каппадокии переживают свой золотой век последние 5 лет. Сказочные дымоходы, воздушные шары, долины и пещерные отели предлагают палитру композиций мирового класса. В этом руководстве мы делимся топ 10 локациями, процедурой получения разрешений, сезонной цветовой палитрой, критическими советами по фотографии с воздушными шарами и средними ценами на 2026 год.",
     "category": "rehber",
     "tags": [
@@ -2990,7 +2990,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-istanbuldan-nasil-gidilir-ru",
     "title": "Как добраться до Каппадокии из Стамбула? 5 вариантов — время, цена и сравнение 2026",
     "metaTitle": "Транспорт из Стамбула в Каппадокию 2026 | Самолет, автобус, поезд, автомобиль | Trip and Tick",
-    "metaDescription": "5 вариантов из Стамбула в Каппадокию: самолет 1,25 ч €45, автобус 12 ч €25, поезд 18 ч €18, частный автомобиль 8 ч €120, тур 2 дня €185. Подробное сравнение и трансферы из аэропорта.",
+    "metaDescription": "5 вариантов из Стамбула в Каппадокию: самолет 1,25 ч €45, автобус 12 ч €25, поезд 18 ч €18, частный автомобиль 8 ч €120, тур 2 дня — цена по запросу в WhatsApp. Подробное сравнение и трансферы из аэропорта.",
     "excerpt": "Как добраться до Каппадокии из Стамбула? Самолет (Невшехир/Кайсери), автобус, поезд (Восточный экспресс), частный автомобиль и экскурсионный тур — полное сравнение времени, цены и преимуществ для всех 5 вариантов.",
     "category": "ulasim",
     "tags": [
@@ -3040,7 +3040,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-otel-tavsiye-2026-ru",
     "title": "Рекомендации по отелям в Каппадокии 2026 — Сравнение пещерных, бутик-отелей, курортов и глэмпинга",
     "metaTitle": "Рекомендации по отелям в Каппадокии 2026 | Пещерные, бутик и курортные отели | Trip and Tick",
-    "metaDescription": "Рекомендации по отелям в Каппадокии 2026: пещерные отели €120, бутик-отель €95, курорт €150, глэмпинг €85, апартаменты €60. Сравнение и советы по бронированию в Гёреме, Ургюпе, Учхисаре.",
+    "metaDescription": "Рекомендации по отелям в Каппадокии 2026: пещерные отели, бутик-отель, курорт, глэмпинг, апартаменты — цена по запросу. Сравнение и советы по бронированию в Гёреме, Ургюпе, Учхисаре.",
     "excerpt": "В каком отеле остановиться в Каппадокии? Полное сравнение пещерных отелей, концепций бутик-отелей, глэмпинг-палаток и курортов — различия между Гёреме, Ургюпом и Учхисаром, пакеты для молодоженов и руководство по соотношению цены и качества.",
     "category": "konaklama",
     "tags": [
@@ -3090,7 +3090,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "cappadocia-winter-2026-guide-tr",
     "title": "Kışın Kapadokya 2026 — Eksiksiz Seyahat Rehberi (Kar, Balonlar, Oteller)",
     "metaTitle": "Kışın Kapadokya 2026: Kar, Balon Turları ve Oteller | Trip and Tick",
-    "metaDescription": "Kışın Kapadokya 2026 rehberi: karla kaplı peri bacaları, %70-80 sıcak hava balonu uçuş oranları, €165'ten başlayan fiyatlar, ne götürmeli, hangi mağara oteller aralık-şubat açık.",
+    "metaDescription": "Kışın Kapadokya 2026 rehberi: karla kaplı peri bacaları, %70-80 sıcak hava balonu uçuş oranları, €100'dan başlayan fiyatlar, ne götürmeli, hangi mağara oteller aralık-şubat açık.",
     "excerpt": "Kışın Kapadokya 2026, en fotojenik ve en uygun fiyatlı mevsimdir — karla kaplı peri bacaları, %30-40 indirimli otel fiyatları, sabahların %70-80'inde hâlâ uçan balonlar ve doğal olarak en sıcak hâllerinde (18-22°C) mağara oteller. Fiyatlar, kıyafet, balon istatistikleri ve gezi planlarıyla eksiksiz bir kış kılavuzu.",
     "category": "rehber",
     "tags": [
@@ -3138,8 +3138,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-balon-turu-fiyat-2026",
     "title": "Kapadokya Balon Turu Fiyatları 2026 — En Güncel Rehber",
     "metaTitle": "Kapadokya Balon Fiyatları 2026: Kişi Başı, Sezon ve Paket Farkları",
-    "metaDescription": "Kapadokya balon turu fiyatları 2026: Standart €165, Konfor €215, Deluxe €295, Romantik €580. 9+ operatörle en uygun fiyat garantisi.",
-    "excerpt": "Kapadokya balon turu fiyatları 2026 yılında kişi başı €165'ten başlıyor. 4 paket, 9+ operatör, %100 iade garantisi — tam fiyat dökümü ve rezervasyon ipuçları.",
+    "metaDescription": "Kapadokya balon turu fiyatları 2026: Standart uçuşlar €100'dan başlıyor, Romantik özel uçuş talebe göre. 9+ operatörle en uygun fiyat garantisi.",
+    "excerpt": "Kapadokya balon turu fiyatları 2026 yılında kişi başı €100'dan başlıyor. 2 paket, 9+ operatör, %100 iade garantisi — güncel fiyat WhatsApp'ta, rezervasyon ipuçları içeride.",
     "category": "balon-turlari",
     "tags": [
       "kapadokya",
@@ -3186,8 +3186,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-dugun-fotografciligi-rehberi",
     "title": "Kapadokya Düğün Fotoğrafçılığı Rehberi 2026 — Top 10 Lokasyon, İzinler ve Balon Fotoğrafı İpuçları",
     "metaTitle": "Kapadokya Düğün Fotoğrafçılığı Rehberi 2026 | Trip and Tick",
-    "metaDescription": "Kapadokya düğün fotoğrafçılığı 2026: top 10 lokasyon (Aşk Vadisi, Uçhisar, Sevgi Vadisi), izin gerekli mi, sezonal renk kılavuzu, balon fotoğrafı ipuçları, ortalama fiyatlar €450-€1.500.",
-    "excerpt": "Kapadokya'da düğün ve nikah-öncesi (pre-wedding) fotoğraf çekimi son 5 yılda altın çağını yaşıyor. Peri bacaları, sıcak hava balonları, vadiler ve mağara otelleri dünya çapında bir kompozisyon paleti sunuyor. Bu rehberde top 10 lokasyon, izin prosedürü, sezonal renk paleti, balon-fotoğrafı için kritik ipuçları ve 2026 ortalama fiyatları detaylı paylaşıyoruz.",
+    "metaDescription": "Kapadokya düğün fotoğrafçılığı 2026: top 10 lokasyon (Aşk Vadisi, Uçhisar, Sevgi Vadisi), izin gerekli mi, sezonal renk kılavuzu, balon fotoğrafı ipuçları, paket fiyatları WhatsApp'tan.",
+    "excerpt": "Kapadokya'da düğün ve nikah-öncesi (pre-wedding) fotoğraf çekimi son 5 yılda altın çağını yaşıyor. Peri bacaları, sıcak hava balonları, vadiler ve mağara otelleri dünya çapında bir kompozisyon paleti sunuyor. Bu rehberde top 10 lokasyon, izin prosedürü, sezonal renk paleti, balon-fotoğrafı için kritik ipuçları ve 2026 paket seçeneklerini detaylı paylaşıyoruz — güncel fiyat WhatsApp'ta.",
     "category": "rehber",
     "tags": [
       "kapadokya",
@@ -3284,7 +3284,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-otel-tavsiye-2026",
     "title": "Kapadokya Otel Tavsiyeleri 2026 — Mağara, Butik, Resort ve Glamping Karşılaştırma",
     "metaTitle": "Kapadokya Otel Tavsiyesi 2026 | Mağara, Butik & Resort | Trip and Tick",
-    "metaDescription": "Kapadokya otel tavsiyesi 2026: Mağara otelleri €120, butik otel €95, resort €150, glamping €85, apart €60. Göreme, Ürgüp, Uçhisar karşılaştırması ve rezervasyon ipuçları.",
+    "metaDescription": "Kapadokya otel tavsiyesi 2026: Mağara otelleri, butik otel, resort, glamping, apart — konsept karşılaştırması, fiyatlar talep üzerine. Göreme, Ürgüp, Uçhisar karşılaştırması ve rezervasyon ipuçları.",
     "excerpt": "Kapadokya'nın hangi otelinde kalmalı? Mağara otelleri, butik konseptler, glamping çadırları ve resort'ların tam karşılaştırması — Göreme, Ürgüp ve Uçhisar arasındaki farklar, balayı paketleri ve fiyat-performans rehberi.",
     "category": "konaklama",
     "tags": [
@@ -3308,8 +3308,8 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "cappadocia-hot-air-balloon-price-2026-uk",
     "title": "Ціни на повітряні кулі в Каппадокії 2026 — Повний посібник",
     "metaTitle": "Ціни на повітряні кулі в Каппадокії 2026 | Trip and Tick",
-    "metaDescription": "Ціни на повітряні кулі в Каппадокії 2026: Стандартний €165, Комфорт €215, Делюкс €295, Романтичний €580 з особи. 9+ операторів, гарантія найнижчої ціни.",
-    "excerpt": "Ціни на повітряні кулі в Каппадокії в 2026 році починаються з **€165 з особи**. Порівняйте 4 пакети від 9+ операторів з нашою гарантією найнижчої ціни.",
+    "metaDescription": "Ціни на повітряні кулі в Каппадокії 2026: Стандартний від €100, Романтичний приватний — за запитом, з особи. 9+ операторів, гарантія найнижчої ціни.",
+    "excerpt": "Ціни на повітряні кулі в Каппадокії в 2026 році починаються від **€100 з особи**. Порівняйте наші пакети від 9+ операторів з нашою гарантією найнижчої ціни.",
     "category": "balon-turlari",
     "tags": [
       "cappadocia",
@@ -3331,7 +3331,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "cappadocia-winter-2026-guide-uk",
     "title": "Каппадокія взимку 2026 — Повний путівник по подорожам (Сніг, Повітряні кулі, Готелі)",
     "metaTitle": "Каппадокія взимку 2026: Сніг, Політ на повітряних кулях та Готелі | Trip and Tick",
-    "metaDescription": "Посібник по Каппадокії взимку 2026: снігом покриті казкові димарі, ціни на польоти на повітряних кулях 70-80%, ціни від €165, що взяти з собою, які готелі в печерах працюють у грудні-лютому.",
+    "metaDescription": "Посібник по Каппадокії взимку 2026: снігом покриті казкові димарі, ціни на польоти на повітряних кулях 70-80%, ціни від €100, що взяти з собою, які готелі в печерах працюють у грудні-лютому.",
     "excerpt": "Каппадокія взимку 2026 — це найфотогенічніший та найдоступніший сезон — снігом покриті казкові димарі, знижки 30-40% на готелі, польоти на повітряних кулях все ще здійснюються 70-80% ранків, а готелі в печерах на своїй найтеплішій природній температурі 18-22°C. Повний зимовий план дій з цінами, одягом, статистикою польотів на повітряних кулях та маршрутами.",
     "category": "rehber",
     "tags": [
@@ -3353,10 +3353,10 @@ export const ARTICLES: BlogArticleMeta[] = [
   {
     "file": "uk-heissluftballon-kappadokien-preise.json",
     "slug": "heissluftballon-kappadokien-preise-buchung-uk",
-    "title": "Гарячий повітряний шар у Каппадокії 2026 — Ціни, Пакети та Бронювання (Стандарт €165, Делюкс €295)",
+    "title": "Гарячий повітряний шар у Каппадокії 2026 — Ціни, Пакети та Бронювання (від €100)",
     "metaTitle": "Гарячий повітряний шар у Каппадокії 2026: Ціни та Бронювання | Trip and Tick",
-    "metaDescription": "Ціни на гарячі повітряні кулі у Каппадокії 2026: Стандарт €165, Делюкс €295, Романтичний приватний €580 з особи. Що входить, найкращий сезон, умови скасування — повний посібник з бронювання.",
-    "excerpt": "Полет на гарячому повітряному шарі над казковими димниками Каппадокії — це один з найпопулярніших досвідів у світі. Ціни на 2026 рік починаються з €165 з особи. Цей посібник пояснює кожен пакет, що входить, найкращий час для подорожі, умови скасування та як забронювати на 5% нижче ринкової ціни.",
+    "metaDescription": "Ціни на гарячі повітряні кулі у Каппадокії 2026: Стандарт від €100 з особи, романтичний приватний кошик — ціна за запитом. Що входить, найкращий сезон, умови скасування — повний посібник з бронювання.",
+    "excerpt": "Полет на гарячому повітряному шарі над казковими димниками Каппадокії — це один з найпопулярніших досвідів у світі. Ціни на 2026 рік починаються від €100 з особи. Цей посібник пояснює кожен пакет, що входить, найкращий час для подорожі, умови скасування та як забронювати на 5% нижче ринкової ціни.",
     "category": "balon-turlari",
     "tags": [
       "hot air balloon",
@@ -3402,7 +3402,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-dugun-fotografciligi-rehberi-uk",
     "title": "Посібник з весільної фотографії в Каппадокії 2026 — Топ 10 локацій, дозволи та поради щодо фотографій з повітряними кулями",
     "metaTitle": "Посібник з весільної фотографії в Каппадокії 2026 | Trip and Tick",
-    "metaDescription": "Весільна фотографія в Каппадокії 2026: топ 10 локацій (Долина Любові, Ухчисар, Долина Любові), чи потрібен дозвіл, сезонна кольорова палітра, поради щодо фотографій з повітряними кулями, середні ціни €450-€1,500.",
+    "metaDescription": "Весільна фотографія в Каппадокії 2026: топ 10 локацій (Долина Любові, Ухчисар, Долина Любові), чи потрібен дозвіл, сезонна кольорова палітра, поради щодо фотографій з повітряними кулями, ціна за запитом.",
     "excerpt": "Весільні та передвесільні фотосесії в Каппадокії переживають свою золоту еру протягом останніх 5 років. Чарівні димарі, повітряні кулі, долини та печерні готелі пропонують палітру композицій світового класу. У цьому посібнику ми ділимося топ 10 локаціями, процедурою отримання дозволів, сезонною кольоровою палітрою, критичними порадами щодо фотографії з повітряними кулями та середніми цінами 2026 року в деталях.",
     "category": "rehber",
     "tags": [
@@ -3450,7 +3450,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-istanbuldan-nasil-gidilir-uk",
     "title": "Як дістатися до Каппадокії з Стамбула? 5 варіантів — час, ціна та порівняння 2026",
     "metaTitle": "Транспорт з Стамбула до Каппадокії 2026 | Літак, автобус, потяг, автомобіль | Trip and Tick",
-    "metaDescription": "5 варіантів з Стамбула до Каппадокії: літак 1.25 год €45, автобус 12 год €25, потяг 18 год €18, орендований автомобіль 8 год €120, тур 2 дні €185. Детальне порівняння та трансфери з аеропорту.",
+    "metaDescription": "5 варіантів з Стамбула до Каппадокії: літак 1.25 год €45, автобус 12 год €25, потяг 18 год €18, орендований автомобіль 8 год €120, тур 2 дні — ціна за запитом. Детальне порівняння та трансфери з аеропорту.",
     "excerpt": "Як дістатися до Каппадокії з Стамбула? Літак (Невшехір/Кайсері), автобус, потяг (Східний експрес), орендований автомобіль та екскурсійний тур — повне порівняння часу, ціни та переваг для всіх 5 варіантів.",
     "category": "ulasim",
     "tags": [
@@ -3500,7 +3500,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-otel-tavsiye-2026-uk",
     "title": "Рекомендації готелів у Каппадокії 2026 — Порівняння печерних, бутік, курортних та глемпінг готелів",
     "metaTitle": "Рекомендація готелів у Каппадокії 2026 | Печерні, бутік та курортні готелі | Trip and Tick",
-    "metaDescription": "Рекомендація готелів у Каппадокії 2026: печерні готелі €120, бутік готель €95, курорт €150, глемпінг €85, апартаменти €60. Порівняння та поради з бронювання в Гьореме, Ургупі, Учхисарі.",
+    "metaDescription": "Рекомендація готелів у Каппадокії 2026: печерні готелі, бутік готель, курорт, глемпінг, апартаменти — ціна за запитом. Порівняння та поради з бронювання в Гьореме, Ургупі, Учхисарі.",
     "excerpt": "В якому готелі зупинитися в Каппадокії? Повне порівняння печерних готелів, концепцій бутіка, глемпінг наметів та курортів — різниця між Гьореме, Ургупом та Учхисаром, пакети для молодят та посібник з вартості.",
     "category": "konaklama",
     "tags": [
@@ -3524,7 +3524,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "cappadocia-winter-2026-guide-ur",
     "title": "سردیوں میں Cappadocia 2026 — مکمل سفری گائیڈ (برف، غبارے، ہوٹل)",
     "metaTitle": "سردیوں میں Cappadocia 2026: برف، غبارہ پروازیں اور ہوٹل | Trip and Tick",
-    "metaDescription": "سردیوں میں Cappadocia 2026 گائیڈ: برف سے ڈھکے پری چمنیاں، گرم ہوا کے غبارے کی پرواز کی شرح 70-80%، قیمتیں €165 سے، کیا ساتھ لانا ہے، کون سے غار ہوٹل دسمبر تا فروری کھلے رہتے ہیں۔",
+    "metaDescription": "سردیوں میں Cappadocia 2026 گائیڈ: برف سے ڈھکے پری چمنیاں، گرم ہوا کے غبارے کی پرواز کی شرح 70-80%، قیمتیں €100 سے، کیا ساتھ لانا ہے، کون سے غار ہوٹل دسمبر تا فروری کھلے رہتے ہیں۔",
     "excerpt": "سردیوں میں Cappadocia 2026 سب سے زیادہ خوبصورت اور سب سے کم خرچ موسم ہے — برف سے ڈھکی پری چمنیاں، ہوٹل کی شرحوں پر 30-40% رعایت، غبارہ پروازیں اب بھی 70-80% صبحوں میں جاری، اور غار ہوٹل اپنی قدرتی گرم 18-22°C درجہ حرارت پر۔ قیمتوں، لباس، غبارہ اعداد و شمار اور سفری منصوبوں کے ساتھ مکمل سردیوں کا پلے بک۔",
     "category": "rehber",
     "tags": [
@@ -3546,10 +3546,10 @@ export const ARTICLES: BlogArticleMeta[] = [
   {
     "file": "ur-heissluftballon-kappadokien-preise-buchung.json",
     "slug": "heissluftballon-kappadokien-preise-buchung-ur",
-    "title": "Cappadocia ہاٹ ایئر بیلون 2026 — قیمتیں، پیکیجز اور بکنگ (اسٹینڈرڈ €165، Deluxe €295)",
+    "title": "Cappadocia ہاٹ ایئر بیلون 2026 — قیمتیں، پیکیجز اور بکنگ (€100 سے شروع)",
     "metaTitle": "Cappadocia ہاٹ ایئر بیلون 2026: قیمتیں اور بکنگ | Trip and Tick",
-    "metaDescription": "Cappadocia ہاٹ ایئر بیلون 2026 کی قیمتیں: اسٹینڈرڈ €165، Deluxe €295، رومانٹک پرائیویٹ €580 فی شخص۔ کیا شامل ہے، بہترین موسم، منسوخی کی شرائط — مکمل بکنگ گائیڈ۔",
-    "excerpt": "Cappadocia کے fairy chimneys کے اوپر ہاٹ ایئر بیلون کی پرواز دنیا بھر میں سب سے زیادہ بُک کیے جانے والے bucket-list تجربات میں شامل ہے۔ 2026 کی قیمتیں €165 فی شخص سے شروع ہوتی ہیں۔ یہ گائیڈ تمام پیکیجز، شامل خدمات، بہترین سفر کا وقت، منسوخی کی شرائط اور یہ بتاتی ہے کہ آپ مارکیٹ ریٹ سے 5% کم پر کیسے بُک کر سکتے ہیں۔",
+    "metaDescription": "Cappadocia ہاٹ ایئر بیلون 2026 کی قیمتیں: اسٹینڈرڈ €100 سے شروع، رومانٹک پرائیویٹ WhatsApp پر درخواست پر۔ کیا شامل ہے، بہترین موسم، منسوخی کی شرائط — مکمل بکنگ گائیڈ۔",
+    "excerpt": "Cappadocia کے fairy chimneys کے اوپر ہاٹ ایئر بیلون کی پرواز دنیا بھر میں سب سے زیادہ بُک کیے جانے والے bucket-list تجربات میں شامل ہے۔ 2026 کی قیمتیں €100 فی شخص سے شروع ہوتی ہیں۔ یہ گائیڈ تمام پیکیجز، شامل خدمات، بہترین سفر کا وقت، منسوخی کی شرائط اور یہ بتاتی ہے کہ آپ مارکیٹ ریٹ سے کم پر کیسے بُک کر سکتے ہیں۔",
     "category": "balon-turlari",
     "tags": [
       "ہاٹ ایئر بیلون",
@@ -3595,7 +3595,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-dugun-fotografciligi-rehberi-ur",
     "title": "Cappadocia شادی فوٹوگرافی گائیڈ 2026 — ٹاپ 10 مقامات، اجازت نامے اور غبارہ فوٹو کے نکات",
     "metaTitle": "Cappadocia شادی فوٹوگرافی گائیڈ 2026 | Trip and Tick",
-    "metaDescription": "Cappadocia شادی فوٹوگرافی 2026: ٹاپ 10 مقامات (Aşk Vadisi، Uçhisar، Sevgi Vadisi)، کیا اجازت درکار ہے، موسمی رنگ گائیڈ، غبارہ فوٹو نکات، اوسط قیمتیں €450-€1,500۔",
+    "metaDescription": "Cappadocia شادی فوٹوگرافی 2026: ٹاپ 10 مقامات (Aşk Vadisi، Uçhisar، Sevgi Vadisi)، کیا اجازت درکار ہے، موسمی رنگ گائیڈ، غبارہ فوٹو نکات، پیکیج قیمتیں WhatsApp پر درخواست پر۔",
     "excerpt": "Cappadocia میں شادی اور pre-wedding فوٹو شوٹ پچھلے 5 سالوں میں اپنا سنہری دور گزار رہا ہے۔ پری چمنیاں، گرم ہوا کے غبارے، وادیاں اور غار ہوٹل عالمی معیار کا کمپوزیشن پیلیٹ پیش کرتے ہیں۔ اس گائیڈ میں ہم ٹاپ 10 مقامات، اجازت کا طریقہ کار، موسمی رنگ پیلیٹ، غبارہ فوٹو کے اہم نکات اور 2026 اوسط قیمتیں تفصیل سے شیئر کرتے ہیں۔",
     "category": "rehber",
     "tags": [
@@ -3643,7 +3643,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-istanbuldan-nasil-gidilir-ur",
     "title": "Istanbul سے Cappadocia کیسے پہنچیں؟ 5 آپشن — دورانیہ، قیمت اور موازنہ 2026",
     "metaTitle": "Istanbul Cappadocia سفر 2026 | ہوائی جہاز، بس، ٹرین، کار | Trip and Tick",
-    "metaDescription": "Istanbul سے Cappadocia 5 آپشن: ہوائی جہاز 1.25 گھنٹہ €45، بس 12 گھنٹہ €25، ٹرین 18 گھنٹہ €18، نجی کار 8 گھنٹہ €120، ٹور 2 دن €185۔ تفصیلی موازنہ اور ایئرپورٹ ٹرانسفر۔",
+    "metaDescription": "Istanbul سے Cappadocia 5 آپشن: ہوائی جہاز 1.25 گھنٹہ €45، بس 12 گھنٹہ €25، ٹرین 18 گھنٹہ €18، نجی کار 8 گھنٹہ €120، رہنما ٹور 2 دن WhatsApp پر درخواست پر۔ تفصیلی موازنہ اور ایئرپورٹ ٹرانسفر۔",
     "excerpt": "Istanbul سے Cappadocia کیسے پہنچیں؟ ہوائی جہاز (Nevşehir/Kayseri)، بس، ٹرین (Doğu Ekspresi)، نجی کار اور رہنما ٹور — 5 آپشن کے لیے دورانیہ، قیمت اور فوائد کا مکمل موازنہ۔",
     "category": "ulasim",
     "tags": [
@@ -3693,7 +3693,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-otel-tavsiye-2026-ur",
     "title": "Cappadocia ہوٹل تجاویز 2026 — غار، بوتیک، ریزورٹ اور گلیمپنگ موازنہ",
     "metaTitle": "Cappadocia ہوٹل تجویز 2026 | غار، بوتیک اور ریزورٹ | Trip and Tick",
-    "metaDescription": "Cappadocia ہوٹل تجویز 2026: غار ہوٹل €120، بوتیک ہوٹل €95، ریزورٹ €150، گلیمپنگ €85، اپارٹمنٹ €60۔ Göreme، Ürgüp، Uçhisar موازنہ اور بکنگ نکات۔",
+    "metaDescription": "Cappadocia ہوٹل تجویز 2026: غار ہوٹل، بوتیک ہوٹل، ریزورٹ، گلیمپنگ، اپارٹمنٹ — تمام کانسپٹ کی قیمت WhatsApp پر درخواست پر۔ Göreme، Ürgüp، Uçhisar موازنہ اور بکنگ نکات۔",
     "excerpt": "Cappadocia کے کس ہوٹل میں ٹھہریں؟ غار ہوٹل، بوتیک کانسپٹ، گلیمپنگ خیمے اور ریزورٹس کا مکمل موازنہ — Göreme، Ürgüp اور Uçhisar کے درمیان فرق، ہنی مون پیکیجز اور قیمت-کارکردگی گائیڈ۔",
     "category": "konaklama",
     "tags": [
@@ -3717,7 +3717,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "cappadocia-winter-2026-guide-zh",
     "title": "冬季的卡帕多奇亚 2026 — 完整旅行指南（雪景、热气球、酒店）",
     "metaTitle": "冬季卡帕多奇亚 2026：雪景、热气球与酒店 | Trip and Tick",
-    "metaDescription": "卡帕多奇亚冬季 2026 指南：积雪覆盖的精灵烟囱、热气球可飞率 70-80%、价格 €165 起、行李清单、哪些洞穴酒店在十二月至二月仍营业。",
+    "metaDescription": "卡帕多奇亚冬季 2026 指南：积雪覆盖的精灵烟囱、热气球可飞率 70-80%、标准套餐价格 €100 起、行李清单、哪些洞穴酒店在十二月至二月仍营业。",
     "excerpt": "2026 年冬季的卡帕多奇亚是最上镜也最实惠的季节——积雪覆盖的精灵烟囱、酒店价格优惠 30-40%、热气球仍在 70-80% 的早晨运营、洞穴酒店保持其最温暖的天然 18-22°C。一份含价格、衣物、热气球数据和行程的完整冬季攻略。",
     "category": "rehber",
     "tags": [
@@ -3739,10 +3739,10 @@ export const ARTICLES: BlogArticleMeta[] = [
   {
     "file": "zh-heissluftballon-kappadokien-preise-buchung.json",
     "slug": "heissluftballon-kappadokien-preise-buchung-zh",
-    "title": "卡帕多奇亚热气球 2026 — 价格、套餐与预订（标准 €165、豪华 €295）",
+    "title": "卡帕多奇亚热气球 2026 — 价格、套餐与预订（标准 €100 起）",
     "metaTitle": "卡帕多奇亚热气球 2026：价格与预订 | Trip and Tick",
-    "metaDescription": "卡帕多奇亚热气球 2026 价格：标准 €165、豪华 €295、浪漫私人 €580 每人。含什么、最佳季节、退订条款——完整预订指南。",
-    "excerpt": "在卡帕多奇亚的精灵烟囱上空乘坐热气球，是全球预订量最高的人生清单体验之一。2026 年价格从每人 €165 起。本指南详解所有套餐、包含项目、最佳出行时间、退订条款，以及如何以低于市场价 5% 预订。",
+    "metaDescription": "卡帕多奇亚热气球 2026 价格：标准套餐 €100 起，浪漫私人套餐可通过 WhatsApp 询价。含什么、最佳季节、退订条款——完整预订指南。",
+    "excerpt": "在卡帕多奇亚的精灵烟囱上空乘坐热气球，是全球预订量最高的人生清单体验之一。2026 年标准套餐价格从每人 €100 起。本指南详解所有套餐、包含项目、最佳出行时间、退订条款，以及如何以低于市场价 5% 预订。",
     "category": "balon-turlari",
     "tags": [
       "热气球",
@@ -3788,7 +3788,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-dugun-fotografciligi-rehberi-zh",
     "title": "卡帕多奇亚婚礼摄影指南 2026 — 十大地点、许可与热气球摄影技巧",
     "metaTitle": "卡帕多奇亚婚礼摄影指南 2026 | Trip and Tick",
-    "metaDescription": "卡帕多奇亚婚礼摄影 2026：十大地点（爱情谷、Uçhisar、Sevgi 谷）、是否需要许可、季节色彩指南、热气球摄影技巧、平均价格 €450-€1,500。",
+    "metaDescription": "卡帕多奇亚婚礼摄影 2026：十大地点（爱情谷、Uçhisar、Sevgi 谷）、是否需要许可、季节色彩指南、热气球摄影技巧、价格 €450 起。",
     "excerpt": "卡帕多奇亚的婚礼及婚前（pre-wedding）拍摄在过去 5 年迎来黄金时代。精灵烟囱、热气球、山谷和洞穴酒店提供世界级的构图调色板。本指南详细分享十大地点、许可流程、季节色彩、热气球摄影关键技巧和 2026 平均价格。",
     "category": "rehber",
     "tags": [
@@ -3836,7 +3836,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-istanbuldan-nasil-gidilir-zh",
     "title": "如何从伊斯坦布尔前往卡帕多奇亚？5 种方式 — 时长、价格与对比 2026",
     "metaTitle": "伊斯坦布尔-卡帕多奇亚交通 2026 | 飞机、大巴、火车、自驾 | Trip and Tick",
-    "metaDescription": "从伊斯坦布尔前往卡帕多奇亚的 5 种方式：飞机 1.25 小时 €45、大巴 12 小时 €25、火车 18 小时 €18、私家车 8 小时 €120、跟团 2 天 €185。详细对比和机场接送。",
+    "metaDescription": "从伊斯坦布尔前往卡帕多奇亚的 5 种方式：飞机 1.25 小时 €45、大巴 12 小时 €25、火车 18 小时 €18、私家车 8 小时 €120、跟团 2 天（详询 WhatsApp）。详细对比和机场接送。",
     "excerpt": "如何从伊斯坦布尔前往卡帕多奇亚？飞机（Nevşehir/Kayseri）、大巴、火车（东方快车）、私家车和向导跟团——5 种方式的时长、价格和优势完整对比。",
     "category": "ulasim",
     "tags": [
@@ -3886,7 +3886,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-otel-tavsiye-2026-zh",
     "title": "卡帕多奇亚酒店推荐 2026 — 洞穴、精品、度假村与豪华露营对比",
     "metaTitle": "卡帕多奇亚酒店推荐 2026 | 洞穴、精品 & 度假村 | Trip and Tick",
-    "metaDescription": "卡帕多奇亚酒店推荐 2026：洞穴酒店 €120、精品酒店 €95、度假村 €150、豪华露营 €85、公寓 €60。Göreme、Ürgüp、Uçhisar 对比和预订技巧。",
+    "metaDescription": "卡帕多奇亚酒店推荐 2026：洞穴酒店、精品酒店、度假村、豪华露营、公寓——五种住宿概念全面对比，价格详询 WhatsApp。Göreme、Ürgüp、Uçhisar 对比和预订技巧。",
     "excerpt": "在卡帕多奇亚该住哪种酒店？洞穴酒店、精品概念、豪华露营帐篷和度假村的完整对比——Göreme、Ürgüp 和 Uçhisar 之间的差异、蜜月套餐和性价比指南。",
     "category": "konaklama",
     "tags": [

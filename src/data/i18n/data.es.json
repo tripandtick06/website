@@ -3,7 +3,7 @@
     "standart-balon-ucusu": {
       "name": "Vuelo en Globo Estándar",
       "shortDescription": "El tour en globo más económico. 60 min de vuelo, cesta amplia, reembolso del 100% por cancelación meteorológica.",
-      "longDescription": "La opción con la mejor relación calidad-precio para contemplar a vista de pájaro las legendarias chimeneas de hadas de Capadocia. La cesta estándar tiene capacidad para 16-20 pasajeros y ofrece 60 minutos de vuelo acompañado por pilotos profesionales. Traslado desde el hotel, desayuno ligero, seguro de 40 millones de euros, certificado y medalla de vuelo, y celebración del aterrizaje con champán: todo está incluido en el precio. Los precios pueden variar a diario según las condiciones meteorológicas y la demanda: para fechas a más de 7 días aplica el precio de catálogo, y para fechas dentro de 7 días aplica el precio actualizado.",
+      "longDescription": "La opción con la mejor relación calidad-precio para contemplar a vista de pájaro las legendarias chimeneas de hadas de Capadocia. La cesta estándar tiene capacidad para 16-20 pasajeros y ofrece 60 minutos de vuelo acompañado por pilotos profesionales. Traslado desde el hotel, desayuno ligero, seguro de 40 millones de euros, certificado y medalla de vuelo, y celebración del aterrizaje con champán: todo está incluido en el precio. Los precios comienzan desde 100 €; escríbenos por WhatsApp para conocer el precio actual según tu fecha, el clima y la disponibilidad.",
       "badge": "El Más Popular",
       "includes": [
         "Traslado desde el hotel",
@@ -22,39 +22,12 @@
         "Las embarazadas no pueden volar",
         "Las personas con problemas graves de corazón o de salud no pueden volar",
         "Cancelación según el clima: en caso de cancelación por el operador, reembolso del 100%",
-        "El precio puede variar a diario dentro de los 7 días (condiciones meteorológicas + demanda)"
+        "Precio de partida — precio actual según tu fecha y disponibilidad por WhatsApp"
       ],
       "highlights": [
         "60 minutos",
         "Certificado incluido",
         "Servicio de champán"
-      ]
-    },
-    "deluxe-balon-ucusu": {
-      "name": "Vuelo en Globo Deluxe",
-      "shortDescription": "Cesta pequeña (máx. 16 personas), experiencia de lujo de 60 minutos + certificado en cartón.",
-      "longDescription": "Una experiencia premium en globo. Vuelo de 60 minutos más espacioso en cesta pequeña (máx. 16 pasajeros), certificado de vuelo en cartón, desayuno gourmet y traslado VIP. Trabajamos con los operadores más selectos.",
-      "badge": "Deluxe",
-      "includes": [
-        "Traslado VIP desde el hotel",
-        "Desayuno gourmet",
-        "Seguro de 40M€",
-        "Certificado de vuelo en cartón",
-        "Champán premium",
-        "Sesión fotográfica profesional"
-      ],
-      "excludes": [
-        "Gastos personales"
-      ],
-      "warnings": [
-        "Los niños menores de 6 años no pueden volar",
-        "Las embarazadas no pueden volar",
-        "Las personas con problemas graves de corazón o de salud no pueden volar"
-      ],
-      "highlights": [
-        "60 minutos",
-        "Cesta pequeña (máx. 16)",
-        "Certificado en cartón"
       ]
     },
     "romantik-ozel-balon": {
@@ -278,21 +251,6 @@
         "Espectáculo de 3 horas"
       ]
     },
-    "turk-gecesi-yemeksiz": {
-      "name": "Noche Turca (sin Cena)",
-      "shortDescription": "Espectáculo de Noche Turca: semah, folclore, oriental, caucásica. No incluye comida/alcohol, solo espectáculo + traslado.",
-      "includes": [
-        "Semah + folclore + oriental",
-        "Espectáculo de danza caucásica",
-        "Bebida de bienvenida",
-        "Traslado desde el hotel"
-      ],
-      "highlights": [
-        "Más económico",
-        "Solo espectáculo",
-        "Traslado incluido"
-      ]
-    },
     "microlight-standart": {
       "name": "Vuelo en Microlight Estándar",
       "shortDescription": "Vuelo a motor en microlight de 15-18 minutos sobre el corazón de Capadocia: traslado privado, certificado de vuelo, equipo y sesión de fotos incluidos.",
@@ -328,40 +286,65 @@
         "Fotos premium"
       ]
     },
-    "kirmizi-tur": {
-      "name": "Tour Rojo de Capadocia (Red Tour)",
-      "shortDescription": "Museo al Aire Libre de Göreme, Castillo de Uçhisar, Museo al Aire Libre de Zelve, Paşabağ (Valle de los Monjes), Valle de Devrent (Valle de la Imaginación), taller de cerámica de Avanos, Valle del Amor, Valle de las Palomas, Çavuşin, taller de cuero: guía profesional + entradas a los museos + almuerzo incluidos.",
-      "badge": "El Más Popular",
+    "balon-flying-dress-cekimi": {
+      "name": "Sesión de Fotos en Globo + Flying Dress",
+      "shortDescription": "Vuelo en globo al amanecer + sesión de fotos profesional en la cesta y en el valle (30 min, 20 fotos editadas). Alquiler de vestido Flying Dress opcional — un solo producto para tu contenido de Instagram/TikTok.",
+      "badge": "Tendencia",
       "includes": [
-        "Guía turístico profesional (TR/EN/RU)",
-        "Traslado desde el hotel",
-        "Entradas a los museos",
-        "Almuerzo",
-        "Todos los impuestos"
+        "Vuelo en globo al amanecer (cesta estándar)",
+        "Fotógrafo profesional (30 min, cesta + valle)",
+        "20 fotos editadas (entrega digital)",
+        "Traslado desde el hotel"
       ],
       "highlights": [
-        "Más de 10 paradas",
-        "Museo al Aire Libre de Göreme",
+        "Globo + sesión en un solo producto",
+        "20 fotos editadas",
+        "Opción de alquiler de vestido"
+      ]
+    },
+    "kirmizi-tur": {
+      "name": "Tour Rojo de Capadocia (Red Tour)",
+      "shortDescription": "Museo al Aire Libre de Zelve, Castillo de Uçhisar, Paşabağ (Valle de los Monjes), taller de cerámica de Avanos, Devrent (Valle de la Imaginación), Valle del Amor, tienda de cuero, Panorama de Göreme, Valle de las Palomas — traslado de ida y vuelta, guía profesional, almuerzo y entradas a los museos incluidos.",
+      "badge": "Más popular",
+      "includes": [
+        "Traslado de ida y vuelta",
+        "Guía turístico profesional",
+        "Almuerzo",
+        "Entradas a los museos"
+      ],
+      "highlights": [
+        "Museo al Aire Libre de Zelve",
+        "Castillo de Uçhisar",
+        "Paşabağ (Valle de los Monjes)",
         "Taller de cerámica de Avanos",
-        "Entradas a los museos incluidas"
+        "Devrent (Valle de la Imaginación)",
+        "Valle del Amor",
+        "Tienda de cuero",
+        "Panorama de Göreme",
+        "Valle de las Palomas"
       ]
     },
     "yesil-tur": {
       "name": "Tour Verde de Capadocia (Green Tour)",
-      "shortDescription": "Panorámica de Göreme, Valle de las Palomas, Ciudad Subterránea de Derinkuyu, Valle de Ihlara (terraza panorámica de cristal + senderismo), almuerzo en el pueblo de Belisırma, Catedral de Selime, Narlıgöl, Yaprakhisar: guía profesional + entradas a los museos + almuerzo en Belisırma incluidos.",
-      "badge": "Naturaleza",
+      "shortDescription": "Ciudad subterránea, Museo al Aire Libre de Zelve, Castillo de Uçhisar, Paşabağ (Valle de los Monjes), taller de cerámica de Avanos, Devrent (Valle de la Imaginación), Valle del Amor, tienda de cuero, Panorama de Göreme, Valle de las Palomas — traslado de ida y vuelta, guía profesional, almuerzo y entradas a los museos incluidos.",
+      "badge": "Incluye ciudad subterránea",
       "includes": [
+        "Traslado de ida y vuelta",
         "Guía turístico profesional",
-        "Traslado desde el hotel",
-        "Entradas a la ciudad subterránea + museos",
-        "Almuerzo en Belisırma",
-        "Todos los impuestos"
+        "Almuerzo",
+        "Entradas a los museos"
       ],
       "highlights": [
         "Ciudad subterránea",
-        "Terraza de cristal de Ihlara",
-        "Almuerzo del pueblo de Belisırma",
-        "Catedral de Selime"
+        "Museo al Aire Libre de Zelve",
+        "Castillo de Uçhisar",
+        "Paşabağ (Valle de los Monjes)",
+        "Taller de cerámica de Avanos",
+        "Devrent (Valle de la Imaginación)",
+        "Valle del Amor",
+        "Tienda de cuero",
+        "Panorama de Göreme",
+        "Valle de las Palomas"
       ]
     },
     "mix-tur": {
@@ -381,49 +364,37 @@
         "Más de 12 paradas"
       ]
     },
-    "sari-tur": {
-      "name": "Tour Amarillo de Capadocia (Yellow Tour)",
-      "shortDescription": "Iglesias de Soğanlı, ciudad antigua de Sobesos, pueblo griego de Mustafapaşa, 2 km de senderismo por el Valle de Kızılçukur, iglesia bizantina de Çavuşin, Jardín de Lavanda, taller de alfombras, Valle de las Palomas: una ruta más tranquila y profunda.",
+    "eco-yesil-tur": {
+      "name": "Eco Green Tour",
+      "shortDescription": "Panorama de Göreme, Valle de las Palomas, taller de ónix, ciudades subterráneas de Kaymaklı y Derinkuyu, caminata en el Valle de Ihlara, Lago Nar y una degustación de sabores locales — guía profesional, traslado, almuerzo y entradas a los museos incluidos. 09:30-18:00.",
+      "badge": "Naturaleza",
       "includes": [
         "Guía turístico profesional",
         "Traslado",
-        "Entradas a los museos",
-        "Almuerzo"
+        "Almuerzo",
+        "Entradas a los museos"
       ],
       "highlights": [
-        "Iglesias de Soğanlı",
-        "Senderismo por Kızılçukur",
-        "Mustafapaşa",
-        "Ruta tranquila"
-      ]
-    },
-    "yeralti-turu": {
-      "name": "Tour de las Ciudades Subterráneas",
-      "shortDescription": "Ciudades subterráneas de Derinkuyu + Kaymaklı, iglesia bizantina de Çavuşin, Valle de las Palomas: tour detallado de medio día. Guía profesional + entradas a los museos incluidos.",
-      "includes": [
-        "Guía profesional",
-        "Traslado",
-        "Entrada a 2 ciudades subterráneas",
-        "Iglesia de Çavuşin"
-      ],
-      "highlights": [
-        "2 ciudades subterráneas",
-        "Iglesia bizantina de Çavuşin",
-        "Medio día"
+        "Panorama de Göreme",
+        "Valle de las Palomas",
+        "Ónix",
+        "Ciudades subterráneas de Kaymaklı y Derinkuyu",
+        "Caminata en el Valle de Ihlara",
+        "Lago Nar",
+        "Degustación de sabores locales"
       ]
     },
     "gun-batimi-turu": {
-      "name": "Tour Panorámico al Atardecer",
-      "shortDescription": "Atardecer en Aktepe + panorámica de Göreme + Valle de Kızılçukur: copa de vino incluida.",
+      "name": "Tour Panorámico del Atardecer",
+      "shortDescription": "Aktepe + panorama de Göreme + Valle de Kızılçukur al atardecer — guía y traslado incluidos.",
       "includes": [
         "Guía",
-        "Traslado",
-        "Copa de vino"
+        "Traslado"
       ],
       "highlights": [
         "Atardecer",
-        "Servicio de vino",
-        "Panorámica"
+        "Valle de Kızılçukur",
+        "Panorama"
       ]
     },
     "instagram-turu": {
@@ -1063,7 +1034,7 @@
   "faq": {
     "f0": {
       "question": "¿Cuánto cuesta el tour en globo en Capadocia?",
-      "answer": "En Trip and Tick, los precios del tour en globo en Capadocia comienzan desde 165 € por persona. Estándar 165 €, Deluxe 295 €, Privado romántico 580 €. Todos los precios incluyen traslado desde el hotel, desayuno, seguro de 40 millones de euros, certificado y servicio de champán."
+      "answer": "En Trip and Tick, los precios del tour en globo en Capadocia comienzan desde 100 € por persona. La cesta privada Romántica se cotiza a consulta — pregúntenos el precio actual por WhatsApp. Todos los precios incluyen traslado desde el hotel, desayuno, seguro de 40 millones de euros, certificado y servicio de champán."
     },
     "f1": {
       "question": "¿A partir de qué edad se puede subir al globo en Capadocia?",
@@ -1103,7 +1074,7 @@
     },
     "f10": {
       "question": "How much is the balloon tour per person, and can I pay in Turkish lira?",
-      "answer": "The Standard flight is €165 per person, Deluxe €295; the Romantic private basket is priced on request. Prices are in euros; the site's currency selector shows the TRY and USD equivalent at that day's rate. For dates within 7 days the price can change daily with weather and demand."
+      "answer": "El vuelo Estándar comienza desde 100 € por persona; la cesta privada Romántica se cotiza a consulta. Los precios están en euros; el selector de moneda del sitio muestra el equivalente en TRY y USD al tipo de cambio del día. Pregúntenos el precio actual por WhatsApp."
     },
     "f11": {
       "question": "How long is the balloon flight and what time does it start?",
@@ -1111,7 +1082,7 @@
     },
     "f12": {
       "question": "How many people fit in a balloon, and is there a private balloon for two?",
-      "answer": "The Standard basket carries 16-20 passengers, the Deluxe basket up to 16. A private basket for two only is available with the Romantic Private Balloon package, popular for proposals and anniversaries."
+      "answer": "La cesta Estándar lleva 16-20 pasajeros. Una cesta privada solo para dos está disponible con el paquete de Globo Privado Romántico, popular para propuestas de matrimonio y aniversarios."
     },
     "f13": {
       "question": "Which month is best for a Cappadocia balloon flight?",

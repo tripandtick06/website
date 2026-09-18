@@ -10,7 +10,7 @@ import { OPERATORS } from "@/data/services/operators";
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { serverDict } from "@/lib/i18n/serverDict";
 import { tFaq } from "@/lib/i18n/localizeData";
-import { formatPrice } from "@/lib/utils";
+import { fromPriceShort } from "@/lib/price-label";
 import {
   breadcrumbSchema,
   touristTripSchema,
@@ -33,7 +33,7 @@ export function generateMetadata({ params }: PageParams): Metadata {
   if (!pkg) return { title: "Paket Bulunamadı" };
   const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
   const path = `/balonlar/${pkg.slug}`;
-  const priceLabel = pkg.priceOnRequest ? "Özel Fiyat" : formatPrice(pkg.adultPrice, pkg.currency);
+  const priceLabel = pkg.priceOnRequest ? "Özel Fiyat" : fromPriceShort(loc, pkg.adultPrice, pkg.currency);
   // Geo modifier: TR uses "Kapadokya", others use "Cappadocia" (universally searched).
   const geo = loc === "tr" ? "Kapadokya" : "Cappadocia";
   const ogTitle = `${pkg.name} — ${geo} ${priceLabel}`;

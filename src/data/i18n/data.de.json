@@ -3,7 +3,7 @@
     "standart-balon-ucusu": {
       "name": "Standard-Ballonfahrt",
       "shortDescription": "Die günstigste Ballonfahrt. 60 Min. Flug, großer Korb, 100 % Erstattung bei wetterbedingter Absage.",
-      "longDescription": "Die günstigste Art, Kappadokiens Feenkamine, Täler und den Sonnenaufgang aus der Luft zu sehen. Die Fahrt dauert etwa 60 Minuten in einem geräumigen Korb für 16-20 Passagiere mit professionellem Piloten. Hotelabholung etwa eine Stunde vor Sonnenaufgang; leichtes Frühstück am Startplatz, Sektempfang nach der Landung, Flugzertifikat und Medaille, 40 Mio. € Passagierversicherung und der Rücktransfer zum Hotel sind inklusive. Dieses Paket fahren wir mit Kaya, İstanbul, Butterfly, Asiana und Türkiye Balloons; der Veranstalter wird nach Datum und Verfügbarkeit zugeteilt. Kinder unter 6 Jahren, Schwangere und Personen mit ernsten Herz- oder Gesundheitsproblemen dürfen nicht fahren. Die Freigabe erteilt jeden Morgen die Zivilluftfahrtbehörde; bei wetterbedingter Absage volle Erstattung oder neuer Termin. Für Termine über 7 Tage im Voraus gilt der Katalogpreis, innerhalb von 7 Tagen der Tagespreis nach Wetter und Nachfrage.",
+      "longDescription": "Die günstigste Art, Kappadokiens Feenkamine, Täler und den Sonnenaufgang aus der Luft zu sehen. Die Fahrt dauert etwa 60 Minuten in einem geräumigen Korb für 16-20 Passagiere mit professionellem Piloten. Hotelabholung etwa eine Stunde vor Sonnenaufgang; leichtes Frühstück am Startplatz, Sektempfang nach der Landung, Flugzertifikat und Medaille, 40 Mio. € Passagierversicherung und der Rücktransfer zum Hotel sind inklusive. Dieses Paket fahren wir mit Kaya, İstanbul, Butterfly, Asiana und Türkiye Balloons; der Veranstalter wird nach Datum und Verfügbarkeit zugeteilt. Kinder unter 6 Jahren, Schwangere und Personen mit ernsten Herz- oder Gesundheitsproblemen dürfen nicht fahren. Die Freigabe erteilt jeden Morgen die Zivilluftfahrtbehörde; bei wetterbedingter Absage volle Erstattung oder neuer Termin. Die Preise beginnen bei 100 €; schreiben Sie uns auf WhatsApp für den aktuellen Preis je nach Datum, Wetter und Verfügbarkeit.",
       "badge": "Am beliebtesten",
       "includes": [
         "Hoteltransfer",
@@ -22,39 +22,12 @@
         "Schwangere dürfen nicht mitfliegen",
         "Personen mit schweren Herz- oder Gesundheitsproblemen dürfen nicht mitfliegen",
         "Wetterbedingte Absage – bei Absage durch den Betreiber 100 % Erstattung",
-        "Der Preis kann innerhalb von 7 Tagen täglich variieren (Wetterlage + Auslastung)"
+        "Startpreis — aktueller Preis je nach Datum und Verfügbarkeit auf WhatsApp"
       ],
       "highlights": [
         "60 Minuten",
         "Zertifikat inklusive",
         "Champagnerservice"
-      ]
-    },
-    "deluxe-balon-ucusu": {
-      "name": "Deluxe-Ballonfahrt",
-      "shortDescription": "Kleiner Korb (max. 16 Personen), 60 Minuten Luxuserlebnis + Zertifikat in Kartonform.",
-      "longDescription": "Für Gäste, die weniger Passagiere, mehr Platz und aufmerksameren Service wünschen. Auch die Deluxe-Fahrt dauert etwa 60 Minuten, der Korb fasst jedoch höchstens 16 Personen – jeder steht am Rand mit freiem Blick. VIP-Hoteltransfer, Gourmet-Frühstück am Startplatz, Premium-Champagner nach der Landung, Flugzertifikat auf Karton, professionelles Fotoshooting und 40 Mio. € Passagierversicherung sind inklusive. Dieses Paket fahren wir mit Royal Balloon, Butterfly Balloons und Voyager Balloons. Kinder unter 6 Jahren, Schwangere und Personen mit ernsten Herz- oder Gesundheitsproblemen dürfen nicht fahren. Die Freigabe erteilt jeden Morgen die Zivilluftfahrtbehörde; bei wetterbedingter Absage volle Erstattung oder neuer Termin. Die ausgewogenste Wahl zwischen Standard und Romantik-Privat für Flitterwochen, Geburtstage und kleine Gruppen.",
-      "badge": "Deluxe",
-      "includes": [
-        "VIP-Hoteltransfer",
-        "Gourmet-Frühstück",
-        "Versicherung über 40 Mio. €",
-        "Flugzertifikat in Kartonform",
-        "Premium-Champagner",
-        "Professionelles Fotoshooting"
-      ],
-      "excludes": [
-        "Persönliche Ausgaben"
-      ],
-      "warnings": [
-        "Kinder unter 6 Jahren dürfen nicht mitfliegen",
-        "Schwangere dürfen nicht mitfliegen",
-        "Personen mit schweren Herz- oder Gesundheitsproblemen dürfen nicht mitfliegen"
-      ],
-      "highlights": [
-        "60 Minuten",
-        "Kleiner Korb (max. 16)",
-        "Zertifikat in Kartonform"
       ]
     },
     "romantik-ozel-balon": {
@@ -278,21 +251,6 @@
         "3 Stunden Show"
       ]
     },
-    "turk-gecesi-yemeksiz": {
-      "name": "Türkischer Abend (ohne Essen)",
-      "shortDescription": "Türkische-Abend-Show – Semah, Folklore, Bauchtanz, kaukasischer Tanz. Essen/Alkohol nicht inklusive, nur Show + Transfer.",
-      "includes": [
-        "Semah + Folklore + Bauchtanz",
-        "Kaukasische Tanzshow",
-        "Willkommensgetränk",
-        "Hoteltransfer"
-      ],
-      "highlights": [
-        "Günstiger",
-        "Nur Show",
-        "Transfer inklusive"
-      ]
-    },
     "microlight-standart": {
       "name": "Microlight Standardflug",
       "shortDescription": "15-18 Minuten motorisierter Microlight-Flug über das Herz von Kappadokien – Privattransfer, Flugzertifikat, Ausrüstung und Fotoshooting inklusive.",
@@ -328,40 +286,65 @@
         "Premium-Fotos"
       ]
     },
-    "kirmizi-tur": {
-      "name": "Kappadokien Rote Tour (Red Tour)",
-      "shortDescription": "Freilichtmuseum Göreme, Burg von Uçhisar, Freilichtmuseum Zelve, Paşabağ (Mönchstal), Devrent (Imaginäres Tal), Töpferwerkstatt in Avanos, Liebestal, Taubental, Çavuşin, Lederwerkstatt – professioneller Guide + Museumstickets + Mittagessen inklusive.",
-      "badge": "Am beliebtesten",
+    "balon-flying-dress-cekimi": {
+      "name": "Ballon + Flying Dress Fotoshooting",
+      "shortDescription": "Sonnenaufgangs-Ballonfahrt + professionelles Fotoshooting im Korb und im Tal (30 Min, 20 bearbeitete Bilder). Flying-Dress-Kleidverleih optional dazubuchbar — ein Produkt für deinen Instagram/TikTok-Content.",
+      "badge": "Im Trend",
       "includes": [
-        "Professioneller Tourguide (TR/EN/RU)",
-        "Hoteltransfer",
-        "Museumseintrittstickets",
-        "Mittagessen",
-        "Alle Steuern"
+        "Sonnenaufgangs-Ballonfahrt (Standardkorb)",
+        "Professioneller Fotograf (30 Min, Korb + Tal)",
+        "20 bearbeitete Bilder (digitale Lieferung)",
+        "Hoteltransfer"
       ],
       "highlights": [
-        "10+ Stationen",
-        "Freilichtmuseum Göreme",
-        "Töpferwerkstatt in Avanos",
-        "Museumstickets inklusive"
+        "Ballonfahrt + Shooting in einem Produkt",
+        "20 bearbeitete Bilder",
+        "Kleidverleih optional"
+      ]
+    },
+    "kirmizi-tur": {
+      "name": "Kappadokien Rote Tour (Red Tour)",
+      "shortDescription": "Freilichtmuseum Zelve, Burg Uçhisar, Paşabağ (Mönchstal), Töpferwerkstatt in Avanos, Devrent (Fantasietal), Liebestal, Lederladen, Göreme-Panorama, Taubental — Abholung und Rückbringung, professioneller Reiseleiter, Mittagessen und Museumseintritte inklusive.",
+      "badge": "Am beliebtesten",
+      "includes": [
+        "Abholung und Rückbringung",
+        "Professioneller Reiseleiter",
+        "Mittagessen",
+        "Museumseintritte"
+      ],
+      "highlights": [
+        "Freilichtmuseum Zelve",
+        "Burg Uçhisar",
+        "Paşabağ (Mönchstal)",
+        "Töpferwerkstatt Avanos",
+        "Devrent (Fantasietal)",
+        "Liebestal",
+        "Lederladen",
+        "Göreme-Panorama",
+        "Taubental"
       ]
     },
     "yesil-tur": {
       "name": "Kappadokien Grüne Tour (Green Tour)",
-      "shortDescription": "Göreme-Panorama, Taubental, unterirdische Stadt Derinkuyu, Ihlara-Tal (Panorama-Glasterrasse + Wanderung), Mittagessen im Dorf Belisırma, Kathedrale von Selime, Narlıgöl, Yaprakhisar – professioneller Guide + Museumstickets + Mittagessen in Belisırma inklusive.",
-      "badge": "Natur",
+      "shortDescription": "Unterirdische Stadt, Freilichtmuseum Zelve, Burg Uçhisar, Paşabağ (Mönchstal), Töpferwerkstatt in Avanos, Devrent (Fantasietal), Liebestal, Lederladen, Göreme-Panorama, Taubental — Abholung und Rückbringung, professioneller Reiseleiter, Mittagessen und Museumseintritte inklusive.",
+      "badge": "Mit unterirdischer Stadt",
       "includes": [
-        "Professioneller Tourguide",
-        "Hoteltransfer",
-        "Unterirdische Stadt + Museumstickets",
-        "Mittagessen in Belisırma",
-        "Alle Steuern"
+        "Abholung und Rückbringung",
+        "Professioneller Reiseleiter",
+        "Mittagessen",
+        "Museumseintritte"
       ],
       "highlights": [
         "Unterirdische Stadt",
-        "Ihlara-Glasterrasse",
-        "Dorfessen in Belisırma",
-        "Kathedrale von Selime"
+        "Freilichtmuseum Zelve",
+        "Burg Uçhisar",
+        "Paşabağ (Mönchstal)",
+        "Töpferwerkstatt Avanos",
+        "Devrent (Fantasietal)",
+        "Liebestal",
+        "Lederladen",
+        "Göreme-Panorama",
+        "Taubental"
       ]
     },
     "mix-tur": {
@@ -381,48 +364,36 @@
         "12+ Stationen"
       ]
     },
-    "sari-tur": {
-      "name": "Kappadokien Gelbe Tour (Yellow Tour)",
-      "shortDescription": "Kirchen von Soğanlı, antike Stadt Sobesos, griechisches Dorf Mustafapaşa, 2 km Wanderung im Kızılçukur-Tal, byzantinische Kirche von Çavuşin, Lavendelgarten, Teppichwerkstatt, Taubental – eine ruhigere und tiefgründigere Route.",
+    "eco-yesil-tur": {
+      "name": "Eco Green Tour",
+      "shortDescription": "Göreme-Panorama, Taubental, Onyx-Werkstatt, unterirdische Städte Kaymaklı und Derinkuyu, Wanderung im Ihlara-Tal, Nar-See und eine Kostprobe lokaler Spezialitäten — professioneller Reiseleiter, Transfer, Mittagessen und Museumseintritte inklusive. 09:30-18:00 Uhr.",
+      "badge": "Natur",
       "includes": [
-        "Professioneller Tourguide",
+        "Professioneller Reiseleiter",
         "Transfer",
-        "Museumstickets",
-        "Mittagessen"
+        "Mittagessen",
+        "Museumseintritte"
       ],
       "highlights": [
-        "Kirchen von Soğanlı",
-        "Wanderung im Kızılçukur",
-        "Mustafapaşa",
-        "Ruhige Route"
-      ]
-    },
-    "yeralti-turu": {
-      "name": "Tour zu den unterirdischen Städten",
-      "shortDescription": "Unterirdische Städte Derinkuyu + Kaymaklı, byzantinische Kirche von Çavuşin, Taubental – detaillierte Halbtagestour. Professioneller Guide + Museumstickets inklusive.",
-      "includes": [
-        "Professioneller Guide",
-        "Transfer",
-        "Eintritt in 2 unterirdische Städte",
-        "Kirche von Çavuşin"
-      ],
-      "highlights": [
-        "2 unterirdische Städte",
-        "Byzantinische Kirche von Çavuşin",
-        "Halber Tag"
+        "Göreme-Panorama",
+        "Taubental",
+        "Onyx",
+        "Unterirdische Städte Kaymaklı und Derinkuyu",
+        "Wanderung im Ihlara-Tal",
+        "Nar-See",
+        "Kostprobe lokaler Spezialitäten"
       ]
     },
     "gun-batimi-turu": {
       "name": "Sonnenuntergang-Panoramatour",
-      "shortDescription": "Aktepe + Göreme-Panorama + Sonnenuntergang im Kızılçukur-Tal – Weinverkostung inklusive.",
+      "shortDescription": "Aktepe + Göreme-Panorama + Kızılçukur-Tal bei Sonnenuntergang — Reiseleiter und Transfer inklusive.",
       "includes": [
-        "Guide",
-        "Transfer",
-        "Weinverkostung"
+        "Reiseleiter",
+        "Transfer"
       ],
       "highlights": [
         "Sonnenuntergang",
-        "Weinservice",
+        "Kızılçukur-Tal",
         "Panorama"
       ]
     },
@@ -1063,7 +1034,7 @@
   "faq": {
     "f0": {
       "question": "Was kostet eine Ballonfahrt in Kappadokien?",
-      "answer": "Bei Trip and Tick beginnen die Preise für eine Ballonfahrt in Kappadokien bei 165 € pro Person. Standard 165 €, Deluxe 295 €, Romantischer Privatballon 580 €. In allen Preisen sind Hoteltransfer, Frühstück, eine Versicherung über 40 Millionen Euro, Zertifikat und Champagnerservice inbegriffen."
+      "answer": "Bei Trip and Tick beginnen die Preise für eine Ballonfahrt in Kappadokien bei 100 € pro Person. Der romantische Privatkorb wird auf Anfrage kalkuliert — fragen Sie uns per WhatsApp nach dem aktuellen Preis. In allen Preisen sind Hoteltransfer, Frühstück, eine Versicherung über 40 Millionen Euro, Zertifikat und Champagnerservice inbegriffen."
     },
     "f1": {
       "question": "Ab welchem Alter darf man in Kappadokien Ballon fahren?",
@@ -1103,7 +1074,7 @@
     },
     "f10": {
       "question": "Was kostet die Ballonfahrt pro Person, und kann ich in Lira zahlen?",
-      "answer": "Die Standardfahrt kostet 165 € pro Person, Deluxe 295 €; der romantische Privatkorb wird auf Anfrage kalkuliert. Preise in Euro; die Währungsauswahl der Seite zeigt den TRY- und USD-Gegenwert zum Tageskurs. Bei Terminen innerhalb von 7 Tagen kann der Preis je nach Wetter und Nachfrage täglich schwanken."
+      "answer": "Die Standardfahrt beginnt bei 100 € pro Person; der romantische Privatkorb wird auf Anfrage kalkuliert. Preise in Euro; die Währungsauswahl der Seite zeigt den TRY- und USD-Gegenwert zum Tageskurs. Fragen Sie uns per WhatsApp nach dem aktuellen Preis."
     },
     "f11": {
       "question": "Wie lange dauert die Ballonfahrt und wann beginnt sie?",
@@ -1111,7 +1082,7 @@
     },
     "f12": {
       "question": "Wie viele Personen passen in einen Ballon, gibt es einen Ballon für zwei?",
-      "answer": "Der Standardkorb fasst 16-20 Passagiere, der Deluxe-Korb bis zu 16. Einen Privatkorb nur für zwei gibt es mit dem Paket „Romantische Privatfahrt“ – beliebt für Anträge und Jahrestage."
+      "answer": "Der Standardkorb fasst 16-20 Passagiere. Einen Privatkorb nur für zwei gibt es mit dem Paket „Romantische Privatfahrt“ – beliebt für Anträge und Jahrestage."
     },
     "f13": {
       "question": "Welcher Monat ist für eine Ballonfahrt in Kappadokien am besten?",

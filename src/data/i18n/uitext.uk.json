@@ -32,7 +32,9 @@
   "serviceCard": {
     "infoForm": "Інформація та форма",
     "reserve": "Забронювати зараз",
-    "perCouple": "за пару"
+    "perCouple": "за пару",
+    "fromPrice": "Від {price}",
+    "askPrice": "Дізнатися ціну"
   },
   "reviewScore": {
     "excellent": "Відмінно",

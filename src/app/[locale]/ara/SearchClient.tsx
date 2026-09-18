@@ -15,7 +15,7 @@
 // Para birimi filter, Sıralama dropdown."
 
 import { useEffect, useMemo, useState, useTransition, type FormEvent, type ComponentProps } from "react";
-import { useT } from "@/lib/i18n/I18nProvider";
+import { useT, useLocale } from "@/lib/i18n/I18nProvider";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Link } from "@/i18n/routing";
 import {
@@ -41,7 +41,8 @@ import {
   type SortKey,
   type SearchFilters,
 } from "@/lib/search";
-import { formatPrice, cn } from "@/lib/utils";
+import { cn } from "@/lib/utils";
+import { fromPriceShort } from "@/lib/price-label";
 
 const RECENT_KEY = "tripandtick:recent-searches";
 const RECENT_MAX = 8;
@@ -203,6 +204,7 @@ const CATEGORY_ICON: Record<SearchCategory, typeof Wind> = {
 // CATEGORY_LABEL moved into SearchClient body as useCategoryLabel() — needs t
 
 function ResultCard({ result }: { result: SearchResult }) {
+  const { locale } = useLocale();
   const t = useT();
   const ns = t.component.ara.search_client;
   const Icon = CATEGORY_ICON[result.type];
@@ -253,9 +255,10 @@ function ResultCard({ result }: { result: SearchResult }) {
               </span>
             )}
           </div>
+          {/* Net fiyat yok — kisa baslangic etiketi ("€100'dan" / "from €100") */}
           {result.price !== null && result.currency && (
             <div className="text-sm font-extrabold text-primary">
-              {formatPrice(result.price, result.currency)}
+              {fromPriceShort(locale, result.price, result.currency)}
             </div>
           )}
         </div>

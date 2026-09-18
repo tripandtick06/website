@@ -13,7 +13,9 @@ import {
 } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { useT } from "@/lib/i18n/I18nProvider";
-import { LivePrice } from "@/components/pricing/LivePrice";
+import { FromPrice } from "@/components/pricing/FromPrice";
+import { WhatsAppAskLink } from "@/components/booking/WhatsAppAskLink";
+import { useUiText } from "@/lib/i18n/uiText";
 import { BALLOON_PACKAGES } from "@/data/services/balloons";
 import { PACKAGES } from "@/data/services/catalog";
 
@@ -31,13 +33,13 @@ interface PackageCardProps {
   meta: { icon: React.ReactNode; text: string }[];
   includes: string[];
   slug: string;
-  marketPrice: number;
-  /** Katalog (fallback) fiyati — canli taban fiyat varsa LivePrice ile degisir. */
+  /** Katalog baslangic fiyati — canli taban fiyat varsa LivePrice ile degisir. */
   price: number;
+  /** Paketler: fiyat gizli, "fiyat icin bilgi alin" + WhatsApp. */
+  priceOnRequest?: boolean;
   unit: string;
   gradient: string;
   icon: React.ReactNode;
-  marketLabel: string;
   reserveLabel: string;
   photo: string;
   href: string;
@@ -50,14 +52,14 @@ function PackageCard({
   meta,
   includes,
   slug,
-  marketPrice,
   price,
+  priceOnRequest,
   unit,
-  marketLabel,
   reserveLabel,
   photo,
   href,
 }: PackageCardProps) {
+  const ui = useUiText();
   const badgeColors = {
     accent: "bg-accent",
     success: "bg-success",
@@ -105,17 +107,24 @@ function PackageCard({
           ))}
         </div>
 
-        <div className="flex items-center justify-between pt-4 border-t border-slate-100">
-          <div>
-            <div className="text-sm text-slate-400 line-through">{marketLabel}: €{marketPrice}</div>
-            <div className="text-2xl font-black text-primary">
-              <LivePrice slug={slug} fallback={price} format={(n) => `€${n}`} />
-            </div>
-            <div className="text-xs text-slate-500">{unit}</div>
+        {/* Net fiyat yok: baslangic fiyati veya "fiyat icin bilgi alin"; yaninda WhatsApp (Murat) */}
+        <div className="pt-4 border-t border-slate-100">
+          <div className="mb-3">
+            {priceOnRequest ? (
+              <div className="text-xl font-black text-primary">{ui.serviceCard.askPrice}</div>
+            ) : (
+              <>
+                <FromPrice slug={slug} price={price} priceClassName="text-2xl" labelClassName="text-xs" />
+                <div className="text-xs text-slate-500">{unit}</div>
+              </>
+            )}
           </div>
-          <Link href={href as ComponentProps<typeof Link>["href"]} className="btn-accent flex items-center gap-2 !text-sm !py-2.5 !px-5">
-            {reserveLabel} <ArrowRight className="w-4 h-4" />
-          </Link>
+          <div className="flex items-center gap-2">
+            <Link href={href as ComponentProps<typeof Link>["href"]} className="btn-accent flex flex-1 items-center justify-center gap-2 !text-sm !py-2.5 !px-5">
+              {priceOnRequest ? ui.serviceCard.askPrice : reserveLabel} <ArrowRight className="w-4 h-4" />
+            </Link>
+            <WhatsAppAskLink compact subject={title} className="flex-shrink-0" />
+          </div>
         </div>
       </div>
     </div>
@@ -124,7 +133,6 @@ function PackageCard({
 
 export function PackagesSection() {
   const t = useT();
-  const marketLabel = t.packages_section.market_price;
   const reserveLabel = t.packages_section.reserve;
   const ps = t.component.sections.packages;
 
@@ -149,7 +157,6 @@ export function PackagesSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 max-w-[1200px] mx-auto">
           <PackageCard
-            marketLabel={marketLabel}
             reserveLabel={reserveLabel}
             badge={t.packages_section.standart_badge}
             badgeColor="accent"
@@ -166,7 +173,6 @@ export function PackagesSection() {
               ps.standart_include_sampanya,
             ]}
             slug={standartBalon.slug}
-            marketPrice={standartBalon.marketPrice}
             price={standartBalon.adultPrice}
             unit={ps.unit_kisi_basi}
             gradient="bg-gradient-to-br from-primary to-accent"
@@ -176,7 +182,6 @@ export function PackagesSection() {
           />
 
           <PackageCard
-            marketLabel={marketLabel}
             reserveLabel={reserveLabel}
             badge={t.packages_section.balayi_badge}
             badgeColor="warning"
@@ -193,8 +198,8 @@ export function PackagesSection() {
               ps.balayi_include_fotograf,
             ]}
             slug={balayiPaketi.slug}
-            marketPrice={balayiPaketi.marketPrice ?? balayiPaketi.adultPrice}
             price={balayiPaketi.adultPrice}
+            priceOnRequest={balayiPaketi.priceOnRequest}
             unit={ps.unit_2_kisi_toplam}
             gradient="bg-gradient-to-br from-[#4A1A8B] to-accent"
             icon={<Heart className="w-24 h-24 text-white" />}
@@ -203,7 +208,6 @@ export function PackagesSection() {
           />
 
           <PackageCard
-            marketLabel={marketLabel}
             reserveLabel={reserveLabel}
             badge={t.packages_section.macera_badge}
             badgeColor="success"
@@ -220,8 +224,8 @@ export function PackagesSection() {
               ps.macera_include_rehber,
             ]}
             slug={maceraPaketi.slug}
-            marketPrice={maceraPaketi.marketPrice ?? maceraPaketi.adultPrice}
             price={maceraPaketi.adultPrice}
+            priceOnRequest={maceraPaketi.priceOnRequest}
             unit={ps.unit_kisi_basi}
             gradient="bg-gradient-to-br from-[#1A6B2B] to-[#4BBE6A]"
             icon={<Zap className="w-24 h-24 text-white" />}

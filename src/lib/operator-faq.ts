@@ -20,9 +20,12 @@ export interface OperatorFaqItem {
   answer: string;
 }
 
+// Fiyati gizli (priceOnRequest — romantik ozel sepet) paketler "X'den baslayan"
+// cumlesine girmez; yalnizca boyle paket varsa cevap "teklif uzerine" olur.
 function cheapestPackage(packages: BalloonPackage[]): BalloonPackage | null {
-  if (packages.length === 0) return null;
-  return packages.reduce((min, p) => (p.adultPrice < min.adultPrice ? p : min), packages[0]);
+  const priced = packages.filter((p) => !p.priceOnRequest);
+  if (priced.length === 0) return null;
+  return priced.reduce((min, p) => (p.adultPrice < min.adultPrice ? p : min), priced[0]);
 }
 
 export function operatorFaqs(
@@ -41,7 +44,7 @@ export function operatorFaqs(
         answer:
           `${name} ile uçuşlar da Kapadokya'daki her balon turu gibi gün doğumu ` +
           `saatinde yapılır: Standart Balon Uçuşu yaklaşık 60 dakika havada, 16-20 ` +
-          `kişilik bir sepette geçer. Deluxe paketlerde uçuş süresi daha uzundur. ` +
+          `kişilik bir sepette geçer. Romantik Özel sepette uçuş 60-90 dakikadır. ` +
           `Kesin kalkış ve iniş saati günün rüzgâr ve görüş koşullarına göre değişebilir.`,
       },
       {
@@ -50,10 +53,13 @@ export function operatorFaqs(
           ? `${name} ile Trip and Tick üzerinden satılan paketler ${formatPrice(
               cheapest.adultPrice,
               cheapest.currency
-            )}'den başlayan fiyatlarla rezerve edilir; güncel fiyat aşağıdaki paket ` +
-            `kartında görünür ve 7 gün içindeki tarihlerde hava ve doluluğa göre günlük değişebilir.`
-          : `Trip and Tick şu anda ${name} ile satışta olan bir paket sunmuyor; güncel ` +
-            `balon turu paketlerini /balonlar sayfasında görebilirsiniz.`,
+            )}'den başlayan fiyatlarla rezerve edilir; tarihinize göre güncel fiyatı ` +
+            `WhatsApp'tan anında öğrenebilirsiniz.`
+          : packages.length > 0
+            ? `${name} ile Trip and Tick üzerinden satılan paket teklif üzerine fiyatlandırılır; ` +
+              `tarihinizi WhatsApp'tan yazın, aynı gün teklif alın.`
+            : `Trip and Tick şu anda ${name} ile satışta olan bir paket sunmuyor; güncel ` +
+              `balon turu paketlerini /balonlar sayfasında görebilirsiniz.`,
       },
       {
         question: `${name} uçuşu saat kaçta kalkar?`,
@@ -85,7 +91,7 @@ export function operatorFaqs(
       answer:
         `Like every balloon flight in Cappadocia, ${name} flights take off around ` +
         `sunrise: the Standard Balloon Flight is about 60 minutes in the air in a ` +
-        `16-20 passenger basket. Deluxe packages fly longer. The exact take-off and ` +
+        `16-20 passenger basket. The Romantic private basket flies 60-90 minutes. The exact take-off and ` +
         `landing time depends on the day's wind and visibility.`,
     },
     {
@@ -94,10 +100,12 @@ export function operatorFaqs(
         ? `Packages sold with ${name} through Trip and Tick start from ${formatPrice(
             cheapest.adultPrice,
             cheapest.currency
-          )}; the live price is shown on the package card below and can change daily ` +
-          `with weather and demand for dates within 7 days.`
-        : `Trip and Tick does not currently sell a package with ${name}; you can see the ` +
-          `current balloon flight packages on the /balonlar page.`,
+          )}; message us on WhatsApp for the current price on your date.`
+        : packages.length > 0
+          ? `The package sold with ${name} through Trip and Tick is priced on request; ` +
+            `send your date on WhatsApp and get a same-day quote.`
+          : `Trip and Tick does not currently sell a package with ${name}; you can see the ` +
+            `current balloon flight packages on the /balonlar page.`,
     },
     {
       question: `What time does the ${name} flight take off?`,

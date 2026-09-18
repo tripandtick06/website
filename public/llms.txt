@@ -1,6 +1,6 @@
 # Trip and Tick
 
-> Trip and Tick (tripandtick.com) is a TÜRSAB-licensed online travel agency for Cappadocia, Turkey, that books hot-air balloon flights with licensed local operators. It sells hot-air balloon tours (from €165), guided day tours, activities, airport transfers and combo packages, and provides cave-hotel information with custom quotes. Indexed in 7 languages (TR, EN, DE, FR, PT-BR, JA, KO; 10 more served unindexed), with secure 3D-Secure payment, free-cancellation policies and €40M balloon insurance.
+> Trip and Tick (tripandtick.com) is a TÜRSAB-licensed online travel agency for Cappadocia, Turkey, that books hot-air balloon flights with licensed local operators. It sells hot-air balloon tours (from €100, starting price), guided day tours, activities, airport transfers and combo packages, and provides cave-hotel information with custom quotes. Indexed in 7 languages (TR, EN, DE, FR, PT-BR, JA, KO; 10 more served unindexed), with secure 3D-Secure payment, free-cancellation policies and €40M balloon insurance.
 
 Website: https://tripandtick.com
 Contact: https://tripandtick.com/iletisim
@@ -11,13 +11,13 @@ Languages: TR (default), EN, DE, FR, ES, NL, ZH, HI, UR, PT, PT-BR, JA, KO, IT, 
 
 ## Services
 
-- [Hot-air balloon tours](https://tripandtick.com/balonlar) — Standard (€165, 60 min, 16-20 seat basket), Deluxe (€295, 60 min, max 16 seats) and Romantic private (basket for two, on request); includes hotel transfer, breakfast, certificate and €40M insurance; minimum age 6; 100% refund on weather cancellation
+- [Hot-air balloon tours](https://tripandtick.com/balonlar) — Standard (from €100, 60 min, 16-20 seat basket) and Romantic private (basket for two, price on request); all prices are starting prices, current price via WhatsApp; includes hotel transfer, breakfast, certificate and €40M insurance; minimum age 6; 100% refund on weather cancellation
 - [Are the balloons flying today?](https://tripandtick.com/balonlar/bugun-ucuyor-mu) — daily sunrise wind/gust/visibility outlook for Göreme (Open-Meteo) with the caveat that the official go/no-go is issued each morning by the civil aviation authority; also at /en/balloon-tours/flying-today, /de/heissluftballonfahrten/fliegen-heute, /fr/vols-montgolfiere/vol-aujourd-hui
 - [Balloon operators](https://tripandtick.com/operatorler) — pages for Kaya, İstanbul, Ürgüp, Butterfly, Asiana, Türkiye, Universal, Voyager, Air Cappadocia and Royal Balloon: which Trip and Tick packages each operates, flight facts and FAQ (no third-party ratings or licence numbers are restated)
 - [Cave hotels](https://tripandtick.com/oteller) — cave and boutique hotels in Göreme, Ürgüp and Uçhisar; information and custom quote only (no online booking — contact for a quote)
-- [Day tours](https://tripandtick.com/turlar) — Red, Green, Yellow and Mix tours, Underground City, Sunset and Photo tours
-- [Activities](https://tripandtick.com/aktiviteler) — ATV (quad), jeep safari, horse riding, Turkish Hammam, Turkish Night show, microlight
-- [Combo packages](https://tripandtick.com/paketler) — full-day, honeymoon (per couple), family, proposal (per couple) and corporate packages
+- [Day tours](https://tripandtick.com/turlar) — Red, Green (incl. underground city), Eco Green (Ihlara, Kaymaklı & Derinkuyu, Nar Lake) and Mix tours, Sunset and Photo tours — all from €50 (sunset from €30)
+- [Activities](https://tripandtick.com/aktiviteler) — ATV (quad, from €25), jeep safari (from €25), horse riding (from €35), Turkish Hammam (from €50), Turkish Night with dinner (from €30), microlight (from €95), balloon + flying dress photo shoot (from €245) — starting prices, current price via WhatsApp
+- [Combo packages](https://tripandtick.com/paketler) — full-day, honeymoon, family, proposal and corporate packages — priced on request (WhatsApp)
 - [Airport transfers](https://tripandtick.com/transferler) — from Nevşehir (NAV) and Kayseri (ASR) airports to Cappadocia hotels
 
 ## Trust & credentials

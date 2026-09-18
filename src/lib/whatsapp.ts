@@ -59,7 +59,22 @@ export function sitePageUrl(path: string | undefined): string {
   return `${SITE_ORIGIN}${sanitizeSitePath(path)}`;
 }
 
-export function buildWhatsAppHref(locale: string | undefined, path: string | undefined): string {
-  const text = `${whatsappPrefill(locale)}\n\n📍 ${sitePageUrl(path)}`;
+const MAX_SUBJECT_LEN = 120;
+
+// Urun adi (kart/detay CTA'sindan) — Murat hangi hizmet sorulduğunu ilk satirda gorur.
+// Listing sayfasinda URL tek basina urunu soylemez; subject bu boslugu kapatir.
+function sanitizeSubject(subject: string | undefined): string {
+  if (!subject || typeof subject !== "string") return "";
+  const clean = subject.replace(/[\r\n\t]+/g, " ").replace(/\s{2,}/g, " ").trim();
+  return clean.length > MAX_SUBJECT_LEN ? clean.slice(0, MAX_SUBJECT_LEN) : clean;
+}
+
+export function buildWhatsAppHref(
+  locale: string | undefined,
+  path: string | undefined,
+  subject?: string,
+): string {
+  const subj = sanitizeSubject(subject);
+  const text = `${whatsappPrefill(locale)}${subj ? `\n\n🎈 ${subj}` : ""}\n\n📍 ${sitePageUrl(path)}`;
   return `https://wa.me/${WHATSAPP_NUMBER_E164}?text=${encodeURIComponent(text)}`;
 }

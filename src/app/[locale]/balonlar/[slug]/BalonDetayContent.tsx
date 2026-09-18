@@ -13,8 +13,7 @@ import {
   Calendar,
 } from "lucide-react";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
-import { formatPrice } from "@/lib/utils";
-import { LivePrice } from "@/components/pricing/LivePrice";
+import { FromPrice } from "@/components/pricing/FromPrice";
 import { useT, useLocale } from "@/lib/i18n/I18nProvider";
 import { tBalloon, tFaq } from "@/lib/i18n/localizeData";
 import { FAQ_ITEMS } from "@/data/faq";
@@ -217,20 +216,16 @@ export function BalonDetayContent({
                 <div className="text-xs text-slate-500 mb-1 uppercase tracking-wide font-bold">
                   {s.kisi_basi}
                 </div>
-                <div className="text-xs text-slate-400 line-through">
-                  {formatPrice(pkg.marketPrice, pkg.currency)}
-                </div>
-                <div className="text-4xl font-extrabold text-primary leading-none mb-1">
-                  <LivePrice
-                    slug={pkg.slug}
-                    fallback={pkg.adultPrice}
-                    format={(n) => formatPrice(n, pkg.currency)}
-                  />
-                </div>
-                <div className="text-xs text-success font-semibold mb-5">
-                  %{Math.round(((pkg.marketPrice - pkg.adultPrice) / pkg.marketPrice) * 100)}{" "}
-                  {s.daha_ucuz_en_dusuk_fiyat}
-                </div>
+                {/* Net fiyat yok: baslangic fiyati; ozel sepet (romantik) fiyat gizli */}
+                {pkg.priceOnRequest ? (
+                  <div className="text-2xl font-extrabold text-primary leading-tight mb-5">
+                    {t.page.balonlar.ozel_fiyat_sorunuz}
+                  </div>
+                ) : (
+                  <div className="mb-5">
+                    <FromPrice slug={pkg.slug} price={pkg.adultPrice} currency={pkg.currency} priceClassName="text-4xl" labelClassName="text-sm" />
+                  </div>
+                )}
 
                 <Link
                   href={{ pathname: "/rezervasyon/[slug]", params: { slug: pkg.slug }, hash: "tarih" }}
@@ -242,7 +237,7 @@ export function BalonDetayContent({
                   {s.tarih_seciminde_gunluk_doluluk}
                 </p>
                 {/* Soru = tek tik WhatsApp (iletisim sayfasi ara adimi kaldirildi) */}
-                <WhatsAppAskLink className="w-full" />
+                <WhatsAppAskLink className="w-full" subject={pkg.name} />
 
                 <hr className="my-5 border-slate-200" />
 

@@ -6,10 +6,11 @@ import { Wind, Clock, Users, Check, Shield } from "lucide-react";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { PageHero } from "@/components/layout/PageHero";
 import { OPERATORS, operatorTagline } from "@/data/services/operators";
-import { formatPrice } from "@/lib/utils";
 import { useT, useLocale } from "@/lib/i18n/I18nProvider";
 import { tBalloons, tFaq } from "@/lib/i18n/localizeData";
-import { LivePrice } from "@/components/pricing/LivePrice";
+import { FromPrice } from "@/components/pricing/FromPrice";
+import { fromPriceShort } from "@/lib/price-label";
+import { WhatsAppAskLink } from "@/components/booking/WhatsAppAskLink";
 
 const BADGE_BG: Record<string, string> = {
   accent: "bg-accent",
@@ -30,7 +31,7 @@ export function BalonlarContent() {
       <PageHero
         tag={b.pagehero_tag_balon_turlari}
         title={b.pagehero_title_kapadokya_balon}
-        highlight="€165'ten"
+        highlight={fromPriceShort(locale, packages[0]?.adultPrice ?? 100, packages[0]?.currency ?? "EUR")}
         description={b.pagehero_description_tursab_lisansli}
       />
 
@@ -119,8 +120,9 @@ export function BalonlarContent() {
                     ))}
                   </ul>
 
-                  <div className="flex items-end justify-between gap-3 mt-auto pt-4 border-t border-slate-100">
-                    <div>
+                  {/* Net fiyat yok — baslangic fiyati; fiyatin yaninda WhatsApp (Murat) */}
+                  <div className="mt-auto pt-4 border-t border-slate-100">
+                    <div className="mb-3">
                       {pkg.priceOnRequest ? (
                         <>
                           <div className="text-2xl font-extrabold text-primary leading-tight">
@@ -130,25 +132,17 @@ export function BalonlarContent() {
                         </>
                       ) : (
                         <>
-                          <div className="text-xs text-slate-400 line-through">
-                            {formatPrice(pkg.marketPrice, pkg.currency)}
-                          </div>
-                          <div className="text-3xl font-extrabold text-primary leading-none">
-                            <LivePrice
-                              slug={pkg.slug}
-                              fallback={pkg.adultPrice}
-                              format={(n) => formatPrice(n, pkg.currency)}
-                            />
-                          </div>
-                          <div className="text-xs text-slate-500 mt-1">
-                            {pkg.dynamicPricing ? b.kisi_basi_dinamik : b.kisi_basi_yetiskin}
-                          </div>
+                          <FromPrice slug={pkg.slug} price={pkg.adultPrice} currency={pkg.currency} priceClassName="text-3xl" labelClassName="text-sm" />
+                          <div className="text-xs text-slate-500 mt-1">{b.kisi_basi_yetiskin}</div>
                         </>
                       )}
                     </div>
-                    <Link href={{ pathname: "/balonlar/[slug]", params: { slug: pkg.slug } }} className="btn-accent text-sm">
-                      {pkg.priceOnRequest ? b.detay_iletisim : b.detay_rezerve}
-                    </Link>
+                    <div className="flex items-center gap-2">
+                      <Link href={{ pathname: "/balonlar/[slug]", params: { slug: pkg.slug } }} className="btn-accent text-sm flex-1 text-center">
+                        {pkg.priceOnRequest ? b.detay_iletisim : b.detay_rezerve}
+                      </Link>
+                      <WhatsAppAskLink compact subject={pkg.name} className="flex-shrink-0" />
+                    </div>
                   </div>
                 </div>
               </article>
