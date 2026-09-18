@@ -43,6 +43,7 @@ export function lowercaseRedirectTarget(pathname: string): string | null {
 }
 
 const RATE_LIMIT_MAX = 10; // requests / window
+const EVENT_MAX = 60; // /api/event — davranış beacon batch'leri
 const RATE_LIMIT_WINDOW_MS = 60 * 1000; // 1 dakika
 // Admin login: 5 deneme / 15 dakika / IP (brute-force koruma)
 const ADMIN_AUTH_MAX = 5;
@@ -130,6 +131,13 @@ export async function middleware(req: NextRequest) {
     res.headers.set("X-RateLimit-Limit", String(ADMIN_AUTH_MAX));
     res.headers.set("X-RateLimit-Remaining", String(rl.remaining));
     return res;
+  }
+
+  // /api/event (davranış beacon'ı): batch başına 1 istek, aktif oturumda ~6-12/dk → 60/dk.
+  if (pathname.startsWith("/api/event")) {
+    const rl = await checkRateLimit(`${ip}:${pathname}`, EVENT_MAX, RATE_LIMIT_WINDOW_MS);
+    if (!rl.ok) return new NextResponse(null, { status: 429 });
+    return NextResponse.next();
   }
 
   // Rate-limit /api/seo-agent + /api/checkout + /api/contact + /api/availability + /api/cancel + /api/b2b + /api/whatsapp-click

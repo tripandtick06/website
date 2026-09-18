@@ -58,7 +58,7 @@ export function OtelDetayContent({ hotel: hotelRaw }: OtelDetayContentProps) {
       />
 
       <article className="section-padding bg-slate-50">
-        <div className="container-main">
+        <div className="container-main" data-tt-product={hotel.slug}>
           <div className="grid gap-8 lg:grid-cols-3">
             <div className="space-y-6 lg:col-span-2">
               <div className="overflow-hidden rounded-booking border border-slate-200 bg-white shadow-booking-card">

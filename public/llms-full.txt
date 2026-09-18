@@ -147,7 +147,7 @@ The site is available in 17 languages: Turkish (TR, default), English (EN), Germ
 ## 11. Contact
 
 - Website: https://tripandtick.com
-- Contact page: https://tripandtick.com/iletisim
+- Contact page: https://tripandtick.com/iletisim?utm_source=llms
 - Email: info@tripandtick.com
 - Phone / WhatsApp: +90 537 464 78 61
 - Location: Göreme / Nevşehir, Cappadocia, Turkey
@@ -157,14 +157,14 @@ The site is available in 17 languages: Turkish (TR, default), English (EN), Germ
 ## 12. Key URLs (canonical Turkish paths)
 
 - Home: https://tripandtick.com
-- Balloon tours: https://tripandtick.com/balonlar
-- Hotels (quote only): https://tripandtick.com/oteller
-- Day tours: https://tripandtick.com/turlar
-- Activities: https://tripandtick.com/aktiviteler
-- Combo packages: https://tripandtick.com/paketler
-- Airport transfers: https://tripandtick.com/transferler
-- Blog: https://tripandtick.com/blog
-- Contact: https://tripandtick.com/iletisim
+- Balloon tours: https://tripandtick.com/balonlar?utm_source=llms
+- Hotels (quote only): https://tripandtick.com/oteller?utm_source=llms
+- Day tours: https://tripandtick.com/turlar?utm_source=llms
+- Activities: https://tripandtick.com/aktiviteler?utm_source=llms
+- Combo packages: https://tripandtick.com/paketler?utm_source=llms
+- Airport transfers: https://tripandtick.com/transferler?utm_source=llms
+- Blog: https://tripandtick.com/blog?utm_source=llms
+- Contact: https://tripandtick.com/iletisim?utm_source=llms
 
 ---
 

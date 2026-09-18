@@ -60,7 +60,7 @@ export function BalonDetayContent({
         ]}
       />
 
-      <article className="bg-white">
+      <article className="bg-white" data-tt-product={pkg.slug}>
         <div className="container-main py-10 lg:py-16">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             {/* Main */}

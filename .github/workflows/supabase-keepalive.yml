@@ -1,0 +1,20 @@
+name: Supabase keep-alive
+
+# Supabase free tier 7 gün hareketsizlikte projeyi DURAKLATIR (2026-09-18'de analytics
+# projesi öyle bulundu). /api/health işlem DB'sine gerçek bir SELECT atar; analytics DB'si
+# ise sitenin her ziyaretinde yazıldığı için canlı kalır. 12 saatte bir çağrı + alarm.
+on:
+  schedule:
+    - cron: "17 3,15 * * *"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Ping /api/health (Supabase SELECT dahil)
+        run: |
+          body=$(curl -sS --max-time 45 -A "tripandtick-keepalive" https://tripandtick.com/api/health)
+          echo "$body"
+          echo "$body" | grep -q '"supabasePing":"ok"' || { echo "::error::Supabase health != ok"; exit 1; }

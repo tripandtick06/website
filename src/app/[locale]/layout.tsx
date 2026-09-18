@@ -12,6 +12,7 @@ import { I18nProvider } from "@/lib/i18n/I18nProvider";
 import { CurrencyProvider } from "@/lib/currency";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { Analytics } from "@/components/analytics/Analytics";
+import { Tracker } from "@/components/analytics/Tracker";
 import { RegisterSW } from "@/components/sw/RegisterSW";
 import { ORGANIZATION_SCHEMA, SITE_URL } from "@/lib/schema";
 import { generateHreflang, canonicalFor } from "@/lib/hreflang";
@@ -170,10 +171,12 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
               <WhatsAppFAB />
               {/* SocialProofPopup removed 2026-09-15: fabricated 'X just booked' notices (UCPD-class deceptive pattern). */}
               <CookieConsentMount />
+              <Tracker />
             </CurrencyProvider>
           </I18nProvider>
         </NextIntlClientProvider>
         <Analytics />
+        {/* Birinci-taraf davranış ölçümü (cookie yok) — locale context gerekir, provider içinde */}
         <RegisterSW />
       </body>
     </html>

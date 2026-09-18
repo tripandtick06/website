@@ -6,6 +6,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { track } from "@/components/analytics/Tracker";
 import {
   Wind, Hotel, MountainSnow, TreePine, Package,
   CalendarDays, MapPin, Search,
@@ -53,6 +54,7 @@ export function SearchWidget() {
       destNorm.includes("kapadokya");
 
     if (!isGoremeDefault) {
+      track("search", { q: destTrimmed.slice(0, 80), tab: activeTab });
       const qs = new URLSearchParams({ q: destTrimmed }).toString();
       setTimeout(() => {
         router.push(`/ara?${qs}`);
@@ -73,6 +75,7 @@ export function SearchWidget() {
 
     const qs = params.toString();
     const target = qs ? `${basePath}?${qs}` : basePath;
+    track("search", { tab: activeTab, date: date || null, adults });
 
     setTimeout(() => {
       router.push(target);
