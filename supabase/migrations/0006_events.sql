@@ -1,10 +1,17 @@
 -- Birinci-taraf davranış ölçümü (2026-09-18).
--- Cookie YOK, kişisel veri YOK: oturum kimliği sessionStorage'da rastgele, ziyaretçi
--- hash'i sunucuda günlük tuzlu sha256(ip|ua|gün) — IP/UA saklanmaz, ertesi gün eşleşmez.
--- Yazan: src/app/api/event/route.ts (service-role, PostgREST batch insert).
--- Okuyan: src/app/api/admin/analytics/route.ts → analytics_summary(p_days) RPC.
--- Neden: sitede hiçbir davranış ölçümü yoktu (GA prod'da yok, CF Web Analytics Lite
--- 10'luk örneklem). Giriş/çıkış sayfası, funnel, WhatsApp/rezervasyon tıklaması burada.
+--
+-- BU MIGRATION İŞLEM DB'SİNE (ngygbmeforjuwqyqxgdg) DEĞİL, AYRI ANALYTICS PROJESİNE
+-- (ozmetzxcdhsqskprmbhu, FTH org) uygulanır. Neden ayrı: (1) analytics yazımı işlem
+-- DB'sini kirletmesin/yormasın, (2) o projeye Claude'un MCP erişimi var → owner-gate yok.
+-- Erişim modeli: uygulama ANON key ile yalnız aşağıdaki security-definer RPC'leri çağırır;
+-- her RPC ilk parametrede analytics_config.ingest_token ister. Tablolar RLS deny-all →
+-- anon key sızsa bile token'sız ne yazılır ne okunur.
+--
+-- Cookie YOK, kişisel veri YOK: oturum kimliği sessionStorage'da rastgele, ziyaretçi hash'i
+-- sunucuda günlük tuzlu sha256(ip|ua|gün) — IP/UA saklanmaz, ertesi gün eşleşmez.
+-- Yazan: src/app/api/event/route.ts → analytics_ingest. Okuyan: src/app/api/admin/analytics
+-- → analytics_summary_auth. Env: ANALYTICS_SUPABASE_URL / ANALYTICS_SUPABASE_ANON_KEY /
+-- ANALYTICS_TOKEN (CF Pages, API ile yazıldı 2026-09-18).
 
 create table if not exists public.events (
   id         bigint generated always as identity primary key,
@@ -29,25 +36,71 @@ create index if not exists events_name_ts_idx on public.events (name, ts desc);
 create index if not exists events_path_idx    on public.events (path);
 
 alter table public.events enable row level security;
+drop policy if exists "events no public access" on public.events;
+create policy "events no public access" on public.events for all to anon, authenticated using (false) with check (false);
 
-create policy "events no public access"
-  on public.events
-  for all
-  to anon, authenticated
-  using (false)
-  with check (false);
+-- Tek satırlık sır tablosu: ingest_token. Değer bu dosyada DEĞİL (execute_sql ile yazıldı).
+create table if not exists public.analytics_config (
+  key   text primary key,
+  value text not null
+);
+alter table public.analytics_config enable row level security;
+drop policy if exists "analytics_config no public access" on public.analytics_config;
+create policy "analytics_config no public access" on public.analytics_config for all to anon, authenticated using (false) with check (false);
 
--- 90 günden eski satırları temizle (admin API her çağrıda opportunistik çağırır).
-create or replace function public.analytics_prune(p_keep_days int default 90)
-returns int
+create or replace function public.analytics_check_token(p_token text)
+returns boolean
 language sql
+stable
 security definer
 set search_path = public
 as $$
-  with d as (
-    delete from public.events where ts < now() - make_interval(days => p_keep_days) returning 1
-  )
-  select count(*)::int from d;
+  select exists (select 1 from public.analytics_config where key = 'ingest_token' and value = p_token and length(p_token) >= 32);
+$$;
+revoke all on function public.analytics_check_token(text) from public, anon, authenticated;
+
+-- Toplu yazım: p_rows = jsonb dizisi (sid, seq, vhash, name, path, locale, ref_host, country, device, product, props).
+create or replace function public.analytics_ingest(p_token text, p_rows jsonb)
+returns int
+language plpgsql
+security definer
+set search_path = public
+as $$
+declare n int;
+begin
+  if not public.analytics_check_token(p_token) then
+    raise exception 'unauthorized' using errcode = '28000';
+  end if;
+  if jsonb_typeof(p_rows) <> 'array' or jsonb_array_length(p_rows) > 25 then
+    raise exception 'bad batch' using errcode = '22023';
+  end if;
+  insert into public.events (sid, seq, vhash, name, path, locale, ref_host, country, device, product, props)
+  select
+    left(r->>'sid', 32), coalesce((r->>'seq')::int, 1), left(r->>'vhash', 32), r->>'name', left(r->>'path', 400),
+    left(r->>'locale', 10), left(r->>'ref_host', 200), left(r->>'country', 8), left(r->>'device', 16),
+    left(r->>'product', 80), coalesce(r->'props', '{}'::jsonb)
+  from jsonb_array_elements(p_rows) r;
+  get diagnostics n = row_count;
+  return n;
+end;
+$$;
+
+-- 90 günden eski satırları temizle.
+create or replace function public.analytics_prune_auth(p_token text, p_keep_days int default 90)
+returns int
+language plpgsql
+security definer
+set search_path = public
+as $$
+declare n int;
+begin
+  if not public.analytics_check_token(p_token) then
+    raise exception 'unauthorized' using errcode = '28000';
+  end if;
+  delete from public.events where ts < now() - make_interval(days => greatest(7, p_keep_days));
+  get diagnostics n = row_count;
+  return n;
+end;
 $$;
 
 -- Özet: giriş/çıkış sayfaları, funnel, sayfa süreleri, ürünler, kaynaklar.
@@ -196,6 +249,26 @@ select jsonb_build_object(
   'searches',  (select * from searches)
 );
 $$;
-
 revoke all on function public.analytics_summary(int) from public, anon, authenticated;
-revoke all on function public.analytics_prune(int)   from public, anon, authenticated;
+
+-- Token'lı dış yüz: uygulama bunu çağırır.
+create or replace function public.analytics_summary_auth(p_token text, p_days int default 7)
+returns jsonb
+language plpgsql
+stable
+security definer
+set search_path = public
+as $$
+begin
+  if not public.analytics_check_token(p_token) then
+    raise exception 'unauthorized' using errcode = '28000';
+  end if;
+  return public.analytics_summary(p_days);
+end;
+$$;
+
+-- Eski token'sız prune (0006 ilk sürümü) kaldırıldı; anon yalnız *_auth fonksiyonlarını çağırabilir.
+drop function if exists public.analytics_prune(int);
+grant execute on function public.analytics_ingest(text, jsonb)       to anon;
+grant execute on function public.analytics_summary_auth(text, int)   to anon;
+grant execute on function public.analytics_prune_auth(text, int)     to anon;

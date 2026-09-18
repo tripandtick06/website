@@ -1,12 +1,16 @@
 // Davranış ölçümü — sunucu tarafı ortak katman (şema, bot eleme, cihaz, ziyaretçi hash'i,
-// Supabase PostgREST batch insert). Cookie/PII YOK.
+// analytics DB'ye token'lı RPC yazımı/okuması). Cookie/PII YOK.
 //
 // Importers:
-//   - src/app/api/event/route.ts          (beacon → validate → enrich → insert)
-//   - src/app/api/admin/analytics/route.ts (summary RPC)
-//   - tests/api/event.test.ts
-// Tablo: supabase/migrations/0006_events.sql. Env yoksa insert no-op (false döner) —
-// leads.ts ile aynı "sessiz kayıp = log, throw yok" ilkesi.
+//   - src/app/api/event/route.ts          (beacon → validate → enrich → analytics_ingest)
+//   - src/app/api/admin/analytics/route.ts (analytics_summary_auth / analytics_prune_auth)
+//   - tests/api/event.test.ts, tests/lib/analytics-tracker.test.ts
+//
+// DB: AYRI analytics projesi (ozmetzxcdhsqskprmbhu) — işlem DB'si (ngygbm…) DEĞİL.
+// Env: ANALYTICS_SUPABASE_URL, ANALYTICS_SUPABASE_ANON_KEY, ANALYTICS_TOKEN (CF Pages).
+// Anon key yalnız security-definer RPC'leri çağırabilir; her çağrı ANALYTICS_TOKEN ister
+// (supabase/migrations/0006_events.sql). Env yoksa no-op (false/null) — leads.ts ile aynı
+// "sessiz kayıp = log, throw yok" ilkesi.
 
 import { z } from "zod";
 
@@ -70,7 +74,6 @@ export async function visitorHash(ip: string, ua: string, salt: string, now = ne
 }
 
 export interface EventRow {
-  ts?: string;
   sid: string;
   seq: number;
   vhash: string | null;
@@ -84,56 +87,55 @@ export interface EventRow {
   props: Record<string, unknown>;
 }
 
-interface SupabaseEnv {
+export interface AnalyticsEnv {
   url?: string;
-  serviceKey?: string;
+  anonKey?: string;
+  token?: string;
 }
 
-function envOf(env?: SupabaseEnv): { url: string; key: string } | null {
-  const url = (env?.url ?? process.env.NEXT_PUBLIC_SUPABASE_URL)?.trim();
-  const key = (env?.serviceKey ?? process.env.SUPABASE_SERVICE_ROLE_KEY)?.trim();
-  if (!url || !key || url.startsWith("https://replace") || url.startsWith("https://xxx")) return null;
-  return { url: url.replace(/\/$/, ""), key };
+function envOf(env?: AnalyticsEnv): { url: string; key: string; token: string } | null {
+  const url = (env?.url ?? process.env.ANALYTICS_SUPABASE_URL)?.trim();
+  const key = (env?.anonKey ?? process.env.ANALYTICS_SUPABASE_ANON_KEY)?.trim();
+  const token = (env?.token ?? process.env.ANALYTICS_TOKEN)?.trim();
+  if (!url || !key || !token || !/^https:\/\/[a-z0-9]+\.supabase\.co$/.test(url.replace(/\/$/, ""))) return null;
+  return { url: url.replace(/\/$/, ""), key, token };
 }
 
-export async function insertEvents(rows: EventRow[], env?: SupabaseEnv): Promise<boolean> {
-  const cfg = envOf(env);
-  if (!cfg || rows.length === 0) return false;
-  try {
-    const res = await fetch(`${cfg.url}/rest/v1/events`, {
-      method: "POST",
-      headers: {
-        apikey: cfg.key,
-        Authorization: `Bearer ${cfg.key}`,
-        "Content-Type": "application/json",
-        Prefer: "return=minimal",
-      },
-      body: JSON.stringify(rows),
-    });
-    if (!res.ok) {
-      const txt = await res.text().catch(() => "");
-      console.error("[analytics] insert hata", res.status, txt.slice(0, 200));
-      return false;
-    }
-    return true;
-  } catch (err) {
-    console.error("[analytics] insert fetch error (non-fatal)", err);
-    return false;
-  }
-}
-
-export async function analyticsSummary(days: number, env?: SupabaseEnv): Promise<unknown | null> {
-  const cfg = envOf(env);
-  if (!cfg) return null;
-  const res = await fetch(`${cfg.url}/rest/v1/rpc/analytics_summary`, {
+async function rpc(cfg: { url: string; key: string }, fn: string, body: Record<string, unknown>): Promise<Response> {
+  return fetch(`${cfg.url}/rest/v1/rpc/${fn}`, {
     method: "POST",
     headers: {
       apikey: cfg.key,
       Authorization: `Bearer ${cfg.key}`,
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ p_days: days }),
+    body: JSON.stringify(body),
   });
+}
+
+/** Toplu yazım → analytics_ingest(p_token, p_rows). Yapılandırma yoksa/hata → false. */
+export async function insertEvents(rows: EventRow[], env?: AnalyticsEnv): Promise<boolean> {
+  const cfg = envOf(env);
+  if (!cfg || rows.length === 0) return false;
+  try {
+    const res = await rpc(cfg, "analytics_ingest", { p_token: cfg.token, p_rows: rows });
+    if (!res.ok) {
+      const txt = await res.text().catch(() => "");
+      console.error("[analytics] ingest hata", res.status, txt.slice(0, 200));
+      return false;
+    }
+    return true;
+  } catch (err) {
+    console.error("[analytics] ingest fetch error (non-fatal)", err);
+    return false;
+  }
+}
+
+/** Özet → analytics_summary_auth(p_token, p_days). Yapılandırma yoksa null; hata throw. */
+export async function analyticsSummary(days: number, env?: AnalyticsEnv): Promise<unknown | null> {
+  const cfg = envOf(env);
+  if (!cfg) return null;
+  const res = await rpc(cfg, "analytics_summary_auth", { p_token: cfg.token, p_days: days });
   if (!res.ok) {
     const txt = await res.text().catch(() => "");
     throw new Error(`analytics_summary ${res.status}: ${txt.slice(0, 200)}`);
@@ -141,12 +143,8 @@ export async function analyticsSummary(days: number, env?: SupabaseEnv): Promise
   return res.json();
 }
 
-export async function analyticsPrune(env?: SupabaseEnv): Promise<void> {
+export async function analyticsPrune(env?: AnalyticsEnv): Promise<void> {
   const cfg = envOf(env);
   if (!cfg) return;
-  await fetch(`${cfg.url}/rest/v1/rpc/analytics_prune`, {
-    method: "POST",
-    headers: { apikey: cfg.key, Authorization: `Bearer ${cfg.key}`, "Content-Type": "application/json" },
-    body: JSON.stringify({ p_keep_days: 90 }),
-  }).catch(() => {});
+  await rpc(cfg, "analytics_prune_auth", { p_token: cfg.token, p_keep_days: 90 }).catch(() => {});
 }

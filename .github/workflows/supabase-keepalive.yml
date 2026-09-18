@@ -1,8 +1,8 @@
 name: Supabase keep-alive
 
-# Supabase free tier 7 gün hareketsizlikte projeyi DURAKLATIR (2026-09-18'de böyle bulundu:
-# rezervasyon/lead/analytics yazımları sessizce başarısız oluyordu). /api/health Supabase'e
-# gerçek bir SELECT atar; 12 saatte bir çağırmak projeyi uyanık tutar.
+# Supabase free tier 7 gün hareketsizlikte projeyi DURAKLATIR (2026-09-18'de analytics
+# projesi öyle bulundu). /api/health işlem DB'sine gerçek bir SELECT atar; analytics DB'si
+# ise sitenin her ziyaretinde yazıldığı için canlı kalır. 12 saatte bir çağrı + alarm.
 on:
   schedule:
     - cron: "17 3,15 * * *"
