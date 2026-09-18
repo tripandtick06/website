@@ -10,6 +10,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useLocale } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { z } from "zod";
+import { track } from "@/components/analytics/Tracker";
 import {
   Calendar,
   Users,
@@ -126,6 +127,10 @@ export function BookingClient({ service }: { service: BookingService }) {
   const isOnConfirmationStep = !!sessionId || isDemo;
 
   const [step, setStep] = useState<BookingStep>(isOnConfirmationStep ? 6 : 1);
+  // Davranış ölçümü: hangi adımda kaç kişi kalıyor (/admin/analiz funnel).
+  useEffect(() => {
+    track("booking_step", { step, slug: service.slug });
+  }, [step, service.slug]);
   const formTopRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

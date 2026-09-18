@@ -52,7 +52,8 @@ export function ServiceDetailContent({
         ]}
       />
 
-      <section className="section-padding bg-white">
+      {/* data-tt-product: Tracker bu sayfayı ürün görüntüleme olarak sayar */}
+      <section className="section-padding bg-white" data-tt-product={item.slug}>
         <div className="container-main grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Gorsel: video varsa (aile klibi, 16:9) muted-loop video + ses ikonu; yoksa foto 4:3 */}
           <div className={`relative w-full overflow-hidden rounded-booking bg-slate-100 ${video ? "aspect-video" : "aspect-[4/3]"}`}>
