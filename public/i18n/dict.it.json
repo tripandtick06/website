@@ -897,7 +897,8 @@
       "cookie_type_fonksiyonel_desc": "Utilizzati per ricordare preferenze come la selezione della lingua, la valuta e le ricerche recenti.",
       "cookie_type_pazarlama_title": "Cookie di marketing",
       "cookie_type_pazarlama_desc": "Integrazione dei social media e personalizzazione degli annunci (attivi solo con consenso).",
-      "pazarlama_label": "Marketing:"
+      "pazarlama_label": "Marketing:",
+      "birinci_taraf_olcum": "Misurazione di prima parte (senza cookie): il nostro server registra in forma anonima quali pagine vengono visualizzate, quanto restano i visitatori e su quali pulsanti cliccano. Non viene impostato alcun cookie né conservato l'indirizzo IP; l'identificativo del visitatore è un hash irreversibile che cambia ogni giorno. I dati servono solo a migliorare il sito e vengono cancellati dopo 90 giorni."
     },
     "gizlilik_politikasi": {
       "10_degisiklikler": "10. Changes",

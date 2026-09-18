@@ -897,7 +897,8 @@
       "cookie_type_fonksiyonel_desc": "Dil seçimi, valyuta və son axtarışlar kimi seçimləri xatırlamaq üçün istifadə olunur.",
       "cookie_type_pazarlama_title": "Marketinq Çerezləri",
       "cookie_type_pazarlama_desc": "Sosial media inteqrasiyası və reklam fərdiləşdirməsi (yalnız razılıqla aktivdir).",
-      "pazarlama_label": "Marketinq:"
+      "pazarlama_label": "Marketinq:",
+      "birinci_taraf_olcum": "Birinci tərəf ölçmə (kukisiz): öz serverimiz hansı səhifələrin baxıldığını, ziyarətçilərin nə qədər qaldığını və hansı düymələrə klik edildiyini anonim qeyd edir. Heç bir kuki qoyulmur və IP ünvanı saxlanmır; ziyarətçi identifikatoru hər gün dəyişən, geri çevrilə bilməyən heşdir. Məlumatlar yalnız saytı təkmilləşdirmək üçün istifadə olunur və 90 gündən sonra silinir."
     },
     "gizlilik_politikasi": {
       "10_degisiklikler": "10. Changes",

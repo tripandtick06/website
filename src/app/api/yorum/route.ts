@@ -10,6 +10,7 @@
 // User verbatim: "devam et"
 
 import { NextResponse, type NextRequest } from "next/server";
+import { isAdminRequest } from "@/lib/admin-auth";
 import { z } from "zod";
 import { addReview, listReviews, type ReviewStatus } from "@/lib/reviews-store";
 
@@ -42,16 +43,8 @@ function escapeHtml(s: string): string {
     .replace(/'/g, "&#039;");
 }
 
-function isAdmin(req: NextRequest): boolean {
-  const token = req.headers.get("x-admin-token");
-  if (!token) return false;
-  const envToken = process.env.ADMIN_TOKEN;
-  if (envToken && token === envToken) return true;
-  if (process.env.NODE_ENV !== "production" || !envToken) {
-    return token.startsWith("demo-");
-  }
-  return false;
-}
+// Auth: src/lib/admin-auth.ts isAdminRequest (cookie veya ADMIN_API_TOKEN; prod'da demo- yok).
+const isAdmin = (req: NextRequest): boolean => isAdminRequest(req);
 
 export async function POST(req: NextRequest) {
   try {

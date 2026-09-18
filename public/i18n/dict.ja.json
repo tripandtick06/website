@@ -897,7 +897,8 @@
       "cookie_type_fonksiyonel_desc": "言語選択、通貨、最近の検索などの好みを記憶するために使用されます。",
       "cookie_type_pazarlama_title": "マーケティングクッキー",
       "cookie_type_pazarlama_desc": "ソーシャルメディアの統合と広告のパーソナライズ (同意がある場合のみ有効)。",
-      "pazarlama_label": "マーケティング:"
+      "pazarlama_label": "マーケティング:",
+      "birinci_taraf_olcum": "ファーストパーティ計測（Cookie不使用）：当サイトのサーバーは、閲覧されたページ、滞在時間、クリックされたボタンを匿名で記録します。Cookieは設定せず、IPアドレスも保存しません。訪問者IDは毎日変わる復元不能なハッシュです。データはサイト改善のみに使用し、90日後に削除します。"
     },
     "gizlilik_politikasi": {
       "10_degisiklikler": "10. Changes",

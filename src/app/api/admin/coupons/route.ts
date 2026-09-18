@@ -10,6 +10,7 @@
 // Auth: x-admin-token header (mevcut admin localStorage demo-... token)."
 
 import { NextResponse, type NextRequest } from "next/server";
+import { isAdminRequest } from "@/lib/admin-auth";
 import { z } from "zod";
 import {
   getAllCoupons,
@@ -38,16 +39,8 @@ const couponSchema = z.object({
   description: z.string().max(500).optional(),
 });
 
-function isAdmin(req: NextRequest): boolean {
-  const tokenHeader = req.headers.get("x-admin-token");
-  if (!tokenHeader) return false;
-  const envToken = process.env.ADMIN_TOKEN;
-  if (envToken && tokenHeader === envToken) return true;
-  if (process.env.NODE_ENV !== "production" || !envToken) {
-    return tokenHeader.startsWith("demo-");
-  }
-  return false;
-}
+// Auth: src/lib/admin-auth.ts isAdminRequest (cookie veya ADMIN_API_TOKEN; prod'da demo- yok).
+const isAdmin = (req: NextRequest): boolean => isAdminRequest(req);
 
 export async function GET(req: NextRequest) {
   if (!isAdmin(req)) {

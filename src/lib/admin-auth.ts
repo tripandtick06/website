@@ -26,3 +26,26 @@ export function verifyAdminCookieValue(value: string | undefined): boolean {
   if (!expected) return false;
   return timingSafeEqualStr(value, expected);
 }
+
+/**
+ * Admin API istekleri için tek kapı (2026-09-19). Kabul:
+ *   (a) httpOnly admin cookie (admin UI same-origin fetch'i otomatik taşır), veya
+ *   (b) `x-admin-token` header = ADMIN_API_TOKEN (AGA/cron/script).
+ * `demo-` kısayolu YALNIZ non-production: eski `isAdmin()` kopyaları prod'da
+ * `ADMIN_TOKEN` env tanımsız olduğu için `demo-*` header'ı olan herkesi admin sayıyordu
+ * (kupon/yorum/müsaitlik yazma). Bu helper o dört kopyanın yerine geçer.
+ */
+export function isAdminRequest(req: {
+  headers: { get(name: string): string | null };
+  cookies?: { get(name: string): { value: string } | undefined };
+}): boolean {
+  const cookie = req.cookies?.get(ADMIN_COOKIE_NAME)?.value;
+  if (verifyAdminCookieValue(cookie)) return true;
+  const header = req.headers.get("x-admin-token") ?? undefined;
+  if (verifyAdminCookieValue(header)) return true;
+  // Eski `ADMIN_TOKEN` env'i tanımlıysa onu da kabul et (geriye dönük).
+  const legacy = process.env.ADMIN_TOKEN;
+  if (legacy && header && timingSafeEqualStr(header, legacy)) return true;
+  if (process.env.NODE_ENV !== "production" && header?.startsWith("demo-")) return true;
+  return false;
+}

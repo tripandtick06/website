@@ -1,0 +1,29 @@
+name: Weekly behaviour report
+
+# Pazartesi 08:00 Europe/Istanbul (= 05:00 UTC) — /api/cron/weekly-report Telegram'a
+# davranış özeti + işaretsiz WhatsApp lead uyarısı yollar. Secret: TRIPANDTICK_ADMIN_API_TOKEN
+# (CF Pages ADMIN_API_TOKEN ile aynı değer; `gh secret set` ile yazıldı 2026-09-19).
+on:
+  schedule:
+    - cron: "0 5 * * 1"
+  workflow_dispatch:
+    inputs:
+      days:
+        description: "Kaç günlük özet (1-90)"
+        required: false
+        default: "7"
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Trigger report
+        env:
+          TOKEN: ${{ secrets.TRIPANDTICK_ADMIN_API_TOKEN }}
+          DAYS: ${{ github.event.inputs.days || '7' }}
+        run: |
+          test -n "$TOKEN" || { echo "::error::TRIPANDTICK_ADMIN_API_TOKEN secret eksik"; exit 1; }
+          out=$(curl -sS --max-time 60 -X POST -H "x-admin-token: $TOKEN" "https://tripandtick.com/api/cron/weekly-report?days=$DAYS")
+          echo "$out"
+          echo "$out" | grep -q '"ok":true' || { echo "::error::rapor gönderilemedi"; exit 1; }

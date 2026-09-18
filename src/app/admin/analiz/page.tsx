@@ -5,6 +5,7 @@
 // Sade + beyaz: ana sorun üstte (funnel), ayrıntı tablolar altta.
 
 import { useEffect, useState } from "react";
+import { WaLeads } from "./WaLeads";
 
 type Row = Record<string, string | number | null>;
 interface Summary {
@@ -121,6 +122,9 @@ export default function AnalizPage() {
           ))}
         </div>
       </div>
+
+      {/* Atıf döngüsü en üstte: tıklama değil, satış ölçülür */}
+      <WaLeads days={days} />
 
       {error && <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700">{error}</div>}
       {loading && !data && <p className="text-sm text-slate-500">Yükleniyor…</p>}
