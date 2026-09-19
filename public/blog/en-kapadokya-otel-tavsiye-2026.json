@@ -19,5 +19,32 @@
   "publishedAt": "2026-05-15T00:00:00.000Z",
   "isAiGenerated": true,
   "seoScore": 91,
-  "coverImage": "/images/blog/kapadokya-otel-tavsiye-2026.jpg"
+  "coverImage": "/images/blog/kapadokya-otel-tavsiye-2026.jpg",
+  "updatedAt": "2026-09-19",
+  "faq": [
+    {
+      "question": "Which hotel concept is best for a Cappadocia family holiday?",
+      "answer": "Resorts along the Ürgüp/Avanos line are ideal for families, with a children's pool, entertainment programs and large restaurants; nightly prices are quoted on request, usually with half board included for most of the season."
+    },
+    {
+      "question": "Which hotel is recommended for a honeymoon in Cappadocia?",
+      "answer": "Cave boutique hotels in Uçhisar are the most romantic choice, often combining a private terrace, balloon view and jacuzzi; Trip and Tick's honeymoon packages, priced on request via WhatsApp, bundle a cave hotel stay with a balloon ride, romantic dinner and photo shoot."
+    },
+    {
+      "question": "How many days ahead should I book a Cappadocia hotel?",
+      "answer": "Ideally 30-60 days ahead, and in peak season (May, October) properties can fill up 90 days ahead, so early booking is strongly recommended."
+    },
+    {
+      "question": "Is glamping in Cappadocia open in winter?",
+      "answer": "Most glamping facilities operate March-November; in December-February only a handful stay open with heated tents, and access can be difficult in snowfall, so a cave hotel is the better choice for winter."
+    },
+    {
+      "question": "Is there a discount for booking a hotel together with a balloon ride?",
+      "answer": "Yes — combo packages that bundle hotel, balloon and transfer together save up to 18% compared with booking each separately."
+    },
+    {
+      "question": "Do cave hotel rooms cause claustrophobia?",
+      "answer": "Cave rooms have ceiling heights of 2.8-4 meters with modern ventilation, and a \"cave room with window\" option can be requested at booking for guests who want natural light."
+    }
+  ]
 }

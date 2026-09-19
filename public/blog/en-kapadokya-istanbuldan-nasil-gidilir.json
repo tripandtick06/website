@@ -21,5 +21,32 @@
   "publishedAt": "2026-05-15T00:00:00.000Z",
   "isAiGenerated": true,
   "seoScore": 91,
-  "coverImage": "/images/blog/kapadokya-istanbuldan-nasil-gidilir.jpg"
+  "coverImage": "/images/blog/kapadokya-istanbuldan-nasil-gidilir.jpg",
+  "updatedAt": "2026-09-19",
+  "faq": [
+    {
+      "question": "What is the fastest way to get from Istanbul to Cappadocia?",
+      "answer": "By plane — flying from Sabiha Gökçen or Istanbul Airport to Nevşehir Cappadocia (NAV) airport takes about 75 minutes, and the total trip including transfer runs around 4 hours."
+    },
+    {
+      "question": "Which is the cheapest way to get from Istanbul to Cappadocia?",
+      "answer": "The train (Eastern Express seats from €18) or the night bus (€25-€35) are the cheapest; for a two-person budget the difference is limited, so the bus wins on comfort."
+    },
+    {
+      "question": "Is Kayseri or Nevşehir airport better for reaching Cappadocia?",
+      "answer": "Kayseri has more flights and is usually €15-€25 cheaper, while Nevşehir is about 30 minutes closer to Göreme; Trip and Tick's private transfer runs from €55 from Kayseri and from €35 from Nevşehir."
+    },
+    {
+      "question": "When are flight prices lowest for Istanbul to Cappadocia?",
+      "answer": "From mid-November to the end of February, excluding New Year week, when Kayseri NAV flights can drop to €40; May-September is peak pricing."
+    },
+    {
+      "question": "Is it worth driving to Cappadocia with a family?",
+      "answer": "For a 4-person family, car rental at around €50/day for 3 days plus fuel and parking totals roughly €300, about €75 per person, compared with a minimum of €240 for 4 plane tickets, and a car also allows flexible stops like Lake Tuz and Cacabey Museum."
+    },
+    {
+      "question": "Is booking a tour package cheaper than arranging transport separately?",
+      "answer": "Yes — a combo package of flight, hotel, balloon and tour runs about 18% cheaper than buying each piece separately, and Trip and Tick recommends it especially for solo travelers and first-time visitors since it handles all coordination under one booking."
+    }
+  ]
 }

@@ -29,6 +29,7 @@ const metas = files.map((file) => {
     targetKeyword: a.targetKeyword ?? "",
     locale: a.locale,
     publishedAt: a.publishedAt,
+    updatedAt: a.updatedAt ?? a.publishedAt,
     seoScore: a.seoScore ?? 0,
     isAiGenerated: a.isAiGenerated ?? false,
     noindex: a.noindex === true,
@@ -64,6 +65,8 @@ export interface BlogArticleMeta {
   targetKeyword: string;
   locale: string;
   publishedAt: string;
+  /** Son icerik guncellemesi (ISO). JSON alani updatedAt; yoksa publishedAt. dateModified buradan. */
+  updatedAt: string;
   seoScore: number;
   isAiGenerated?: boolean;
   /** Editorial decision: page stays reachable but is noindex,follow, out of

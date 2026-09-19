@@ -72,6 +72,7 @@ export async function generateMetadata({
       url: canonicalFor(path, params.locale),
       type: "article",
       publishedTime: article.publishedAt,
+      modifiedTime: article.updatedAt ?? article.publishedAt,
       tags: article.tags,
       images: [
         {
@@ -138,7 +139,7 @@ export default async function BlogArticlePage({
     description: article.metaDescription,
     image: article.coverImage,
     datePublished: article.publishedAt,
-    dateModified: article.publishedAt,
+    dateModified: article.updatedAt ?? article.publishedAt,
     // Organization author: there is no named human author behind these
     // articles (2026-09-15 trust cleanup — no placeholder Person nodes).
     authorType: "Organization",

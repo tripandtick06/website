@@ -19,5 +19,32 @@
   "publishedAt": "2026-05-15T00:00:00.000Z",
   "isAiGenerated": true,
   "seoScore": 92,
-  "coverImage": "/images/blog/kapadokya-ne-zaman-gidilir.jpg"
+  "coverImage": "/images/blog/kapadokya-ne-zaman-gidilir.jpg",
+  "updatedAt": "2026-09-19",
+  "faq": [
+    {
+      "question": "Do balloons fly in Cappadocia in winter?",
+      "answer": "Yes — balloons fly between December and February, but the flight rate drops to 50-65%; Trip and Tick offers a 100% refund or an alternative date if the flight is cancelled for weather."
+    },
+    {
+      "question": "Is April or October better for visiting Cappadocia?",
+      "answer": "Both are golden-season months — April for spring flowers and revival, October for golden leaves and photo-friendly light — with customer satisfaction scores nearly identical (9.4 for April, 9.3 for October), so it comes down to personal preference."
+    },
+    {
+      "question": "Which month has the highest chance of snow in Cappadocia?",
+      "answer": "January and February, with snowfall on 8-12 days a year; these months suit travelers chasing snowy fairy-chimney photos, though the balloon flight rate is lower in this window."
+    },
+    {
+      "question": "Is Cappadocia too hot to visit in summer?",
+      "answer": "Daytime temperatures reach +30°C to +35°C in July-August, but balloon flights launch at 04:30 at sunrise before the heat builds, and cave hotels stay naturally cool, so it's best to avoid outdoor activity in the early-to-mid afternoon."
+    },
+    {
+      "question": "Does it make sense to visit Cappadocia for New Year?",
+      "answer": "Yes, with planning — December 28 to January 3 is the peak period with prices around 50% higher, so booking 90 days ahead is recommended, but it's a memorable choice for travelers wanting the New Year gala experience."
+    },
+    {
+      "question": "Do Cappadocia balloons fly in rainy weather?",
+      "answer": "In light rain and low wind the operator decides case by case, but in a downpour or wind above 25 km/h the flight is cancelled, and Trip and Tick offers a 100% refund guarantee on weather cancellations."
+    }
+  ]
 }

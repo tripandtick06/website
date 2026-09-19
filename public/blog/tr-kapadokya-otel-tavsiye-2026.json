@@ -19,5 +19,32 @@
   "publishedAt": "2026-05-15T00:00:00.000Z",
   "isAiGenerated": false,
   "seoScore": 91,
-  "coverImage": "/images/blog/kapadokya-otel-tavsiye-2026.jpg"
+  "coverImage": "/images/blog/kapadokya-otel-tavsiye-2026.jpg",
+  "faq": [
+    {
+      "question": "Kapadokya'da mağara oteller ne kadar tutar?",
+      "answer": "Mağara otellerin gecelik fiyatı talep üzerine bildirilir; suite ve özel jakuzili odalar daha yüksek bantta yer alır. Güncel tutar için WhatsApp'tan sorabilirsiniz — Trip and Tick en uygun fiyat garantisi sunar."
+    },
+    {
+      "question": "Aile tatili için Kapadokya'da en iyi otel konsepti hangisi?",
+      "answer": "Resort'lar (Ürgüp/Avanos) çocuk havuzu, animasyon ve geniş restoranlarıyla aileler için idealdir. Gecelik fiyat talep üzerine bildirilir, yarım pansiyon çoğu sezon dahildir."
+    },
+    {
+      "question": "Kapadokya'da balayı için hangi otel önerilir?",
+      "answer": "Uçhisar'daki mağara butik oteller balayı için en romantik seçenektir; özel teras, balon manzarası ve jakuzi kombinasyonu yaygındır. Balayı paketlerinin fiyatı WhatsApp'tan sorulur."
+    },
+    {
+      "question": "Kapadokya otel rezervasyonu kaç gün önce yapılmalı?",
+      "answer": "İdeal olarak 30-60 gün önce. Pik sezonda (Mayıs, Ekim) 90 gün önceden dolar; Trip and Tick erken rezervasyon indirimi %15-25 sunar."
+    },
+    {
+      "question": "Otel rezervasyonunu balon turuyla birlikte alırsam indirim olur mu?",
+      "answer": "Evet. Trip and Tick kombo paketlerinde otel + balon + transfer birlikte alındığında %18'e varan tasarruf sağlanır."
+    },
+    {
+      "question": "Mağara odalar klostrofobi yapar mı?",
+      "answer": "Mağara odaların tavan yüksekliği 2.8-4 metre arasındadır ve havalandırma sistemi modern çalışır. Rezervasyon sırasında \"pencereli mağara oda\" seçeneği belirtilebilir."
+    }
+  ],
+  "updatedAt": "2026-09-19"
 }

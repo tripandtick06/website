@@ -16,5 +16,32 @@
   ],
   "publishedAt": "2026-09-01T11:38:54.035271+00:00",
   "seoScore": 80,
-  "isAiGenerated": true
+  "isAiGenerated": true,
+  "updatedAt": "2026-09-19",
+  "faq": [
+    {
+      "question": "How many people can ride in a hot air balloon in Cappadocia?",
+      "answer": "It depends entirely on the basket — over Göreme, baskets range from private ones for two to four people to large shared baskets carrying twenty or more, since a balloon is certified for a maximum weight rather than a fixed headcount, and the final number is confirmed by the pilot on the morning of the flight."
+    },
+    {
+      "question": "What actually limits the number of passengers on a balloon?",
+      "answer": "The manufacturer certifies a maximum take-off weight for each envelope and basket, and the pilot recalculates the passenger load against that limit before every dawn launch based on air temperature, altitude and fuel load — cold air lifts more, so balloons can often carry more passengers in winter than on a warm summer morning."
+    },
+    {
+      "question": "What's the difference between private, comfort and standard balloon baskets?",
+      "answer": "Private or exclusive baskets typically take around two to four passengers with the whole basket to your group, comfort or small-group baskets take roughly eight to twelve, standard shared baskets commonly carry sixteen to twenty-four passengers in separate compartments, and large shared baskets can carry twenty-plus."
+    },
+    {
+      "question": "Can I book a whole balloon just for my group?",
+      "answer": "Yes — a private or exclusive flight means chartering the entire basket, so the price covers the aircraft rather than a single seat, and it is the only way to be certain nobody outside your group is on board."
+    },
+    {
+      "question": "Is there a minimum age for children on a Cappadocia balloon flight?",
+      "answer": "Most operators set a minimum age of around six; children count as full passengers taking up weight and space like anyone else, and since there are no seats, everyone must be able to stand for the whole flight and climb in over the basket wall unaided."
+    },
+    {
+      "question": "Can the number of passengers on a flight change on the day?",
+      "answer": "Yes — the pilot completes a weight and balance calculation each morning against air temperature and fuel load and may fly with fewer people than the maximum, and every booking stays conditional on wind and visibility clearance."
+    }
+  ]
 }

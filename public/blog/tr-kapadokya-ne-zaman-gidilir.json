@@ -38,22 +38,6 @@
       "answer": "Gündüz +30°C / +35°C; balon uçuşu sabah 04:30'da, gün doğumunda. Mağara otelin doğal serinliği avantaj. Öğleden sonra 14:00-18:00 arası dış aktiviteden kaçının."
     },
     {
-      "question": "Yılbaşında Kapadokya'ya gitmek mantıklı mı?",
-      "answer": "Mantıklı ama planlı. 28 Aralık - 3 Ocak pik dönem, fiyatlar %50 zamlı. 90 gün önce rezervasyon zorunlu. Yılbaşı galası deneyimi isteyenler için unutulmaz."
-    },
-    {
-      "question": "Okul tatili dışında ne zaman gitmek daha iyi?",
-      "answer": "Mart'ın ikinci yarısı, Nisan ortası ve Eylül ortası. Bu pencerelerde fiyat-deneyim oranı en yüksek. Trip and Tick erken rezervasyon indirimi bu dönemlere optimize."
-    },
-    {
-      "question": "Yağmurlu havada balon uçuşu olur mu?",
-      "answer": "Hafif yağmur ve düşük rüzgarda operatör karar verir. Sağanak veya rüzgar 25 km/sa üstünde uçuş iptal edilir. Trip and Tick %100 iade garantisi sunar."
-    },
-    {
-      "question": "Sezon dışı gitmenin avantajı nedir?",
-      "answer": "%30-45 fiyat avantajı, az kalabalık, daha kişisel hizmet, otelde oda yükseltme şansı. Eksisi: balon uçuş oranı düşüş ve bazı operatörlerin bakım dönemi."
-    },
-    {
       "question": "Kapadokya balon turu saat kaçta havalanır?",
       "answer": "Her zaman gün doğumunda. Yazın (haziran-temmuz) alınma saati 04:00-04:30, kışın (aralık-ocak) 05:30-06:00 civarındadır. Operatör uçuş kararını gece 03:30-04:30 arasında verir."
     },
@@ -61,5 +45,6 @@
       "question": "Uçuşumun hava nedeniyle iptal olma riskini nasıl azaltabilirim?",
       "answer": "Tek sabah yerine 2-3 gecelik konaklama planlayarak birden fazla olası kalkış sabahı yaratın. Düşük uçuş oranlı kış aylarında bile üç sabahla en az bir kez uçma ihtimaliniz yüksektir. Trip and Tick hava iptallerinde %100 iade ya da ücretsiz tarih değişikliği sunar."
     }
-  ]
+  ],
+  "updatedAt": "2026-09-19"
 }

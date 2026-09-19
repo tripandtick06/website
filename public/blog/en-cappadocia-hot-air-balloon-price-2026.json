@@ -18,5 +18,32 @@
   "publishedAt": "2026-05-15T00:00:00.000Z",
   "isAiGenerated": false,
   "seoScore": 92,
-  "coverImage": "/images/blog/cappadocia-hot-air-balloon-price-2026.jpg"
+  "coverImage": "/images/blog/cappadocia-hot-air-balloon-price-2026.jpg",
+  "updatedAt": "2026-09-19",
+  "faq": [
+    {
+      "question": "How much does a Cappadocia hot air balloon ride cost in 2026?",
+      "answer": "Standard flights start from €100 per person for dates more than 7 days out; inside 7 days, pricing can update daily based on weather and availability, so current prices are confirmed on request via WhatsApp. Trip and Tick's Romantic Private package is always quoted on request."
+    },
+    {
+      "question": "What is the minimum age for a Cappadocia balloon flight?",
+      "answer": "The minimum age is 6; children under 6 are not permitted, and children aged 7-12 pay 80% of the adult price."
+    },
+    {
+      "question": "How long does a Cappadocia balloon tour last?",
+      "answer": "The flight itself lasts 60-90 minutes, with the total experience — transfer, breakfast, flight and landing celebration — taking 3-4 hours."
+    },
+    {
+      "question": "What happens if a balloon flight is cancelled for weather?",
+      "answer": "If a flight is cancelled for weather, travelers get a 100% refund or can rebook for an alternative date."
+    },
+    {
+      "question": "What is included in the Standard balloon package?",
+      "answer": "The Standard package (from €100) includes hotel transfer, breakfast, 40M€ insurance, a flight certificate and medal, a champagne landing celebration, and a professional pilot, for a 60+ minute flight in a 16-20 person basket."
+    },
+    {
+      "question": "What payment methods are accepted for booking a balloon flight?",
+      "answer": "Bookings accept Visa, Mastercard, Amex and UnionPay in EUR, TRY or USD, secured with 3D Secure."
+    }
+  ]
 }

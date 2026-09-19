@@ -19,5 +19,32 @@
   "publishedAt": "2026-05-15T00:00:00.000Z",
   "isAiGenerated": true,
   "seoScore": 90,
-  "coverImage": "/images/blog/kapadokya-aktiviteler.jpg"
+  "coverImage": "/images/blog/kapadokya-aktiviteler.jpg",
+  "updatedAt": "2026-09-19",
+  "faq": [
+    {
+      "question": "How many activities can fit in one day in Cappadocia?",
+      "answer": "With good planning, 3-4 activities are possible in a day: a morning balloon ride, a Red or Green tour during the day, sunset viewing in the late afternoon, and dinner with a Turkish night show in the evening."
+    },
+    {
+      "question": "What are the best activities for children in Cappadocia?",
+      "answer": "Devrent Valley's animal-shaped rocks, the Göreme Open Air Museum, making a mini pot at the Avanos ceramic workshop, and photo shoots at Üç Güzeller work well for kids; the underground cities are recommended from age 8+."
+    },
+    {
+      "question": "Which Cappadocia activities can be done in the rain?",
+      "answer": "Underground cities (Derinkuyu/Kaymaklı), cave restaurants, carpet and ceramic workshops, museums and hammams all work in the rain, while balloon flights and ATV tours are usually cancelled."
+    },
+    {
+      "question": "How many days should a full Cappadocia trip take?",
+      "answer": "A minimum of 2 nights/3 days covers a balloon flight, one tour and a museum; 3 nights/4 days is ideal for all the major activities, and 5+ days lets you add Ihlara Valley, hot springs, a photo tour and valley hikes."
+    },
+    {
+      "question": "Can a wine tasting and a balloon ride be done on the same day?",
+      "answer": "Yes — the balloon flight runs roughly 05:30-08:30 in the morning and wine tasting typically runs 14:00-17:00 in the afternoon, making it a busy but compatible combination."
+    },
+    {
+      "question": "Can Cappadocia activities be booked online?",
+      "answer": "Yes, all activities can be booked online with Trip and Tick using Visa, Mastercard, Amex or UnionPay (EUR/TRY/USD, 3D Secure), and the PDF voucher is emailed instantly."
+    }
+  ]
 }
