@@ -19,5 +19,32 @@
   "publishedAt": "2026-05-15T00:00:00.000Z",
   "isAiGenerated": true,
   "seoScore": 90,
-  "coverImage": "/images/blog/kapadokya-fotograf-noktalari.jpg"
+  "coverImage": "/images/blog/kapadokya-fotograf-noktalari.jpg",
+  "updatedAt": "2026-09-19",
+  "faq": [
+    {
+      "question": "Which season is best for photography in Cappadocia?",
+      "answer": "April-May, for spring flowers, and October, for golden leaves, are the most visual seasons — 72% of Trip and Tick's photographer tours are booked in these two periods."
+    },
+    {
+      "question": "Can a drone do balloon close-ups at sunrise in Cappadocia?",
+      "answer": "No — under SHGM rules, drones cannot be flown during balloon flight hours, roughly 05:00-08:30, since the ban exists for safety reasons to avoid collision risk."
+    },
+    {
+      "question": "How much does a professional photo tour cost in Cappadocia?",
+      "answer": "A 3-5 hour tour starts from €65 and includes 25-50 edited digital photos, with a drone shooting add-on priced on request; tours are booked through Trip and Tick's activities page."
+    },
+    {
+      "question": "Can photos be taken in cold weather in Cappadocia (December-February)?",
+      "answer": "Yes, and it's unique for capturing snowy fairy chimneys, though lens fogging can be an issue so bring a lens wiping cloth and a warming pouch — battery life also drops around 40%, so pack a spare."
+    },
+    {
+      "question": "Is professional-quality shooting possible with an iPhone in Cappadocia?",
+      "answer": "Partly — an iPhone 15 Pro Max with ProRaw and Lightroom mobile gives good results at golden hour, though it lacks a 70-200mm telephoto and shows more noise at blue hour, so a DSLR or mirrorless camera is recommended."
+    },
+    {
+      "question": "Which Cappadocia photo spots require an entry fee?",
+      "answer": "Göreme Open Air Museum costs €20 plus €5 for the Dark Church, Uçhisar Castle €8, and Derinkuyu Underground City €15 — the other locations covered in this guide are free."
+    }
+  ]
 }

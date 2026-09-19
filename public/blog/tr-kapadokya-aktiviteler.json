@@ -19,5 +19,28 @@
   "publishedAt": "2026-05-15T00:00:00.000Z",
   "isAiGenerated": false,
   "seoScore": 90,
-  "coverImage": "/images/blog/kapadokya-aktiviteler.jpg"
+  "coverImage": "/images/blog/kapadokya-aktiviteler.jpg",
+  "faq": [
+    {
+      "question": "Kapadokya'da bir günde kaç aktivite sığar?",
+      "answer": "İyi planlamayla 3-4 aktivite mümkün: balon (sabah), Kırmızı/Yeşil tur (gündüz), gün batımı izleme (akşam üstü) ve restoran + Türk gecesi (akşam)."
+    },
+    {
+      "question": "Çocuklar için en uygun Kapadokya aktiviteleri hangileri?",
+      "answer": "Devrent Vadisi (hayvan formlu kayalar), Göreme Açık Hava Müzesi, seramik atölyesinde mini çömlek yapımı ve Üç Güzeller fotoğraf çekimi. Yer altı şehri için 8 yaş ve üzeri önerilir."
+    },
+    {
+      "question": "Yağmurlu günde Kapadokya'da ne yapılabilir?",
+      "answer": "Yer altı şehri (Derinkuyu/Kaymaklı), mağara restoranlar, halı/seramik atölyeleri, müze ve hamam. Balon ve ATV genelde yağmurda iptal edilir."
+    },
+    {
+      "question": "Balayı çiftleri için en romantik aktivite hangisi?",
+      "answer": "Romantik Özel Balon (talebe göre fiyat, sadece 2 kişilik sepet), mağara otel ve profesyonel fotoğraf turu kombinasyonu. Trip and Tick'in balayı paketi de bu üçünü bir arada sunar; fiyat WhatsApp'tan sorulur."
+    },
+    {
+      "question": "Kapadokya'da aktiviteler için online rezervasyon yapılabilir mi?",
+      "answer": "Evet, tüm aktiviteler Trip and Tick üzerinden /aktiviteler sayfasından online rezerve edilir; PDF voucher e-postaya anında gönderilir."
+    }
+  ],
+  "updatedAt": "2026-09-19"
 }

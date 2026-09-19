@@ -16,5 +16,32 @@
   ],
   "publishedAt": "2026-08-29T11:48:40.856689+00:00",
   "seoScore": 80,
-  "isAiGenerated": true
+  "isAiGenerated": true,
+  "updatedAt": "2026-09-19",
+  "faq": [
+    {
+      "question": "Should I book the hotel before the balloon flight?",
+      "answer": "Book the hotel first. Balloon operators collect passengers from named hotels, so once your accommodation is confirmed you can give the exact property name and address and the pickup is arranged around it — book your sunrise flight with Trip and Tick and add your hotel name at checkout."
+    },
+    {
+      "question": "Are cave hotels comfortable for a longer stay?",
+      "answer": "Licensed cave hotels are inspected, ventilated and heated, and many travellers stay several nights without issue; the main difference from a standard room is lower light levels and a cooler, more humid feel, so ask for a window or semi-cave layout if that matters."
+    },
+    {
+      "question": "Which village is best if I only have one night in Cappadocia?",
+      "answer": "Göreme — you can walk to dinner, reach the Göreme Open Air Museum quickly, and the pre-dawn transfer to the balloon launch field is short."
+    },
+    {
+      "question": "When is the best time to book a Cappadocia hotel?",
+      "answer": "Book as early as possible for April-June and September-October, the calmest and most popular months, plus New Year and school-holiday weeks; small hotels have only a few dozen rooms so one tour group can fill a property, though winter brings far easier availability."
+    },
+    {
+      "question": "What is a cave hotel and is it worth booking?",
+      "answer": "A cave hotel is carved into soft volcanic tuff, often reusing rooms cut centuries ago as dwellings, stables or storage; cave rooms stay cool in summer and steady in winter, though they can be dim, so look for genuinely arched stone walls and a property built around an open courtyard if you want daylight."
+    },
+    {
+      "question": "How do I get a hotel room with a balloon view?",
+      "answer": "Ask for a terrace or upper-level room facing the valleys — in Göreme that usually means rooms looking toward Sunset Point and Love Valley, in Uçhisar rooms facing Pigeon Valley — and confirm with the hotel that the terrace opens at dawn."
+    }
+  ]
 }

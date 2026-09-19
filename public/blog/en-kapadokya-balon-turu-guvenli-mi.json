@@ -20,13 +20,14 @@
   "isAiGenerated": true,
   "seoScore": 90,
   "coverImage": "/images/blog/best-time-cappadocia-balloon.jpg",
+  "updatedAt": "2026-09-19",
   "faq": [
     {
       "question": "Is a Cappadocia balloon ride safe?",
       "answer": "Yes. Operators are SHGM-licensed, most comply with EASA Part-BOP standards, and every flight carries €40 million in insurance. A strict weather protocol keeps flights from going ahead in risky conditions."
     },
     {
-      "question": "What's the minimum age to fly?",
+      "question": "What's the minimum age to fly on a Cappadocia balloon ride?",
       "answer": "Children aged 6 and up can join. Children under 6, pregnant travelers, and passengers with serious heart or health conditions are not accepted for safety reasons."
     },
     {
@@ -34,20 +35,16 @@
       "answer": "Yes — operator-initiated cancellations always come with a 100% refund or a free date change."
     },
     {
-      "question": "Is the balloon flight insured?",
+      "question": "Is the Cappadocia balloon flight insured?",
       "answer": "Yes, every package booked through Trip and Tick includes €40 million in liability insurance."
     },
     {
-      "question": "Are the balloons SHGM-licensed?",
+      "question": "Are Cappadocia hot air balloons SHGM-licensed?",
       "answer": "Every operator Trip and Tick works with operates under a license from Turkey's General Directorate of Civil Aviation (SHGM)."
     },
     {
-      "question": "What happens if I cancel by my own choice?",
+      "question": "What happens if I cancel a balloon booking by my own choice?",
       "answer": "100% refund at 72 hours or more before the flight, 50% refund between 24-72 hours, no refund under 24 hours."
-    },
-    {
-      "question": "How much wind is considered safe for flying?",
-      "answer": "Operators cancel the flight once wind speed passes a set threshold (25 km/h). The final call is made by the pilot based on local weather data between 03:30 and 04:30 on the morning of the flight."
     }
   ]
 }

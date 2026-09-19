@@ -19,5 +19,28 @@
   "publishedAt": "2026-05-15T00:00:00.000Z",
   "isAiGenerated": false,
   "seoScore": 90,
-  "coverImage": "/images/blog/kapadokya-fotograf-noktalari.jpg"
+  "coverImage": "/images/blog/kapadokya-fotograf-noktalari.jpg",
+  "faq": [
+    {
+      "question": "Kapadokya'da fotoğraf çekmek için hangi mevsim en iyi?",
+      "answer": "Nisan-Mayıs (bahar çiçekleri) ve Ekim (altın yapraklar) en görsel mevsimlerdir. Trip and Tick'in fotoğrafçı turlarının %72'si bu iki dönemde rezerve edilir."
+    },
+    {
+      "question": "Drone ile gün doğumunda balona yakın çekim yapılabilir mi?",
+      "answer": "Hayır. SHGM (Sivil Havacılık Genel Müdürlüğü) kuralı gereği balon uçuş saatlerinde (05:00-08:30) drone uçurulamaz; operatörler güvenlik nedeniyle bu saatlerde uçuşu yasaklar."
+    },
+    {
+      "question": "Profesyonel fotoğraf turu ne kadar tutar?",
+      "answer": "3-5 saatlik tur €65'ten başlar ve 25-50 düzenlenmiş dijital fotoğraf teslimini kapsar. Drone çekim eki talep üzerine eklenir; rezervasyon /aktiviteler sayfasından yapılır."
+    },
+    {
+      "question": "Kışın (Aralık-Şubat) Kapadokya'da fotoğraf çekimi yapılır mı?",
+      "answer": "Yapılır ve karlı peri bacaları eşsiz kareler verir. Lens buğusu sorun olabilir; lens silici bez ve isınma poşeti önerilir, pil ömrü düştüğü için yedek pil almak gerekir."
+    },
+    {
+      "question": "Kapadokya'daki hangi fotoğraf noktalarında giriş ücreti var?",
+      "answer": "Göreme Açık Hava Müzesi €20 + Karanlık Kilise için ek €5, Uçhisar Kalesi €8, Derinkuyu €15. Listedeki diğer 12 nokta ücretsizdir."
+    }
+  ],
+  "updatedAt": "2026-09-19"
 }

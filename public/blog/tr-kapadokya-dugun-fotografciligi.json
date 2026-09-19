@@ -19,5 +19,32 @@
   "publishedAt": "2026-05-25T00:00:00.000Z",
   "isAiGenerated": false,
   "seoScore": 92,
-  "coverImage": "/images/blog/kapadokya-dugun-fotografciligi-rehberi.jpg"
+  "coverImage": "/images/blog/kapadokya-dugun-fotografciligi-rehberi.jpg",
+  "faq": [
+    {
+      "question": "Kapadokya'da düğün fotoğrafı çekimi yasal mı?",
+      "answer": "Kamuya açık alanlarda (vadiler, köy sokakları) ücretsiz ve serbest. Müze içinde tripod yasak; profesyonel çekim için Müze Müdürlüğü izni gerekir. Drone için SHGM/DHMİ izni ve sabah 09:30 sonrası saatler şart."
+    },
+    {
+      "question": "Kapadokya'da düğün fotoğrafı için hangi sezon en iyi?",
+      "answer": "Eylül-Ekim (altın saat ve renkler) ve Mayıs (bahar yeşili + bademçiçeği) en çok tercih edilen sezonlar. Kış kar manzarası için özgündür ama soğuk önlemi gerektirir."
+    },
+    {
+      "question": "Balon içinden düğün fotoğrafı çekilir mi?",
+      "answer": "Evet — Romantik Özel Balon paketinde profesyonel fotoğrafçı dahildir. Standart balon turuna kendi fotoğrafçınızı dahil etmek için operatörle koordinasyon ve ek ücret gerekir."
+    },
+    {
+      "question": "Kapadokya'da düğün çekimi için drone kullanabilir miyim?",
+      "answer": "Sadece izinli pilotlarla ve sabah 09:30 sonrasında; balon trafiği nedeniyle bu saatten önce kesinlikle yasak. Trip and Tick lisanslı drone pilotu + izin + sigorta dahil bir paket sunar, fiyat talep üzerine WhatsApp'tan sorulur."
+    },
+    {
+      "question": "Kapadokya düğün fotoğraf paketi ortalama ne kadar tutar?",
+      "answer": "Paket kapsamına göre değişir (mini, standart, deluxe, balayı); Trip and Tick paketleri piyasanın %12-18 altındadır. Güncel fiyat teyidi için WhatsApp'tan yazabilirsiniz."
+    },
+    {
+      "question": "Trip and Tick'in düğün fotoğraf paketinde neler dahil?",
+      "answer": "2 gece mağara butik otel, Romantik Özel Balon (fotoğrafçı dahil), 4 saat ek lokasyon çekimi, VIP transfer, 200+ editlenmiş kare ve 90 saniyelik video highlight. Toplam fiyat çift başına talep üzerine, WhatsApp'tan bildirilir."
+    }
+  ],
+  "updatedAt": "2026-09-19"
 }

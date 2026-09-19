@@ -21,5 +21,28 @@
   "publishedAt": "2026-05-15T00:00:00.000Z",
   "isAiGenerated": false,
   "seoScore": 91,
-  "coverImage": "/images/blog/kapadokya-istanbuldan-nasil-gidilir.jpg"
+  "coverImage": "/images/blog/kapadokya-istanbuldan-nasil-gidilir.jpg",
+  "faq": [
+    {
+      "question": "İstanbul'dan Kapadokya'ya en hızlı nasıl gidilir?",
+      "answer": "Uçakla. Sabiha Gökçen veya İstanbul Havalimanı'ndan Nevşehir Kapadokya (NAV) havalimanına uçuş 75 dakika sürer; transfer dahil toplam süre 4 saattir."
+    },
+    {
+      "question": "İstanbul'dan Kapadokya'ya en ucuz ulaşım seçeneği hangisi?",
+      "answer": "Tren (Doğu Ekspresi, koltuklu €18'den) veya gece otobüsü (€25-€35). İki kişilik bütçe için fark sınırlıdır, konfor açısından otobüs tercih edilebilir."
+    },
+    {
+      "question": "Kayseri mi Nevşehir havalimanı daha mı iyi?",
+      "answer": "Kayseri daha çok sefer sunar ve genellikle €15-€25 daha ucuzdur. Nevşehir ise Göreme'ye 30 dakika daha yakındır. Trip and Tick'te Kayseri transferi €55'ten, Nevşehir transferi €35'ten başlar."
+    },
+    {
+      "question": "Kapadokya'ya tur paketiyle mi tek tek rezervasyonla mı gitmek daha mantıklı?",
+      "answer": "Trip and Tick verisine göre kombo paket alımı tek tek alımdan %18 daha ucuzdur ve tek rezervasyonla tüm koordinasyon sağlanır; solo gezginler ve ilk kez gelenler için tur paketi öneriliyor."
+    },
+    {
+      "question": "İstanbul'dan Kapadokya gezisi için kaç gün ayırmak gerekir?",
+      "answer": "Minimum 2 gece 3 gün (gidiş + 1 gün gezme + dönüş) sınırda yeterlidir. İdeal olan 3 gece 4 gündür — balon turu, Kırmızı ve Yeşil Tur için rahat zaman bırakır."
+    }
+  ],
+  "updatedAt": "2026-09-19"
 }

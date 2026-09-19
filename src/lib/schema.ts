@@ -55,14 +55,32 @@ export const ORGANIZATION_SCHEMA = {
       contactType: "billing support",
     },
   ],
-  sameAs: [
-    COMPANY.social.instagram,
-    COMPANY.social.facebook,
-    COMPANY.social.twitter,
-    COMPANY.social.youtube,
-    COMPANY.social.linkedin,
-  ],
+  // Yalnız gerçekten var olan profiller (2026-09-19 canlı kontrol: Instagram 200; Facebook 400,
+  // X/YouTube/LinkedIn 404). Ölü sameAs, AI/Google entity eşleşmesinde ALEYHE sinyal.
+  sameAs: [COMPANY.social.instagram],
   openingHours: "Mo-Su 00:00-23:59",
+  currenciesAccepted: "EUR, TRY, USD",
+  paymentAccepted: "Credit Card, WhatsApp booking",
+  availableLanguage: ["Turkish", "English", "German", "French", "Spanish", "Portuguese", "Japanese", "Korean"],
+  // GEO: AI cevap motorları "kim, neyi, nerede" üçlüsünü entity olarak okur.
+  knowsAbout: [
+    "Cappadocia hot air balloon flights",
+    "Cappadocia balloon tour prices",
+    "Cappadocia Red Tour and Green Tour",
+    "Cappadocia ATV, jeep safari and horse riding",
+    "Nevşehir and Kayseri airport transfers",
+    "Cappadocia cave hotels",
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Cappadocia tours and activities",
+    itemListElement: [
+      { "@type": "OfferCatalog", name: "Hot air balloon flights", url: `${SITE_URL}/balonlar` },
+      { "@type": "OfferCatalog", name: "Daily sightseeing tours", url: `${SITE_URL}/turlar` },
+      { "@type": "OfferCatalog", name: "Activities", url: `${SITE_URL}/aktiviteler` },
+      { "@type": "OfferCatalog", name: "Airport transfers", url: `${SITE_URL}/transferler` },
+    ],
+  },
 };
 
 export function personSchema(p: Founder) {

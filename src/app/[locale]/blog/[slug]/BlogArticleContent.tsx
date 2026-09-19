@@ -51,6 +51,15 @@ interface BlogArticleContentProps {
   renderedContent: string;
 }
 
+// Sıkça sorulan sorular başlığı — 17 dil (sözlük churn'ü yerine yerel harita).
+const FAQ_HEADING: Record<string, string> = {
+  tr: "Sıkça Sorulan Sorular", en: "Frequently Asked Questions", de: "Häufig gestellte Fragen",
+  fr: "Questions fréquentes", es: "Preguntas frecuentes", nl: "Veelgestelde vragen", zh: "常见问题",
+  hi: "अक्सर पूछे जाने वाले प्रश्न", ur: "اکثر پوچھے گئے سوالات", pt: "Perguntas frequentes",
+  "pt-BR": "Perguntas frequentes", ja: "よくある質問", ko: "자주 묻는 질문", it: "Domande frequenti",
+  ru: "Часто задаваемые вопросы", uk: "Часті запитання", az: "Tez-tez verilən suallar",
+};
+
 export function BlogArticleContent({
   article,
   related,
@@ -129,6 +138,23 @@ export function BlogArticleContent({
           className="prose prose-slate max-w-none"
           dangerouslySetInnerHTML={{ __html: renderedContent }}
         />
+
+        {/* FAQ — JSON-LD ile aynı liste (page.tsx faqPageSchema); görünür olmalı. */}
+        {article.faq && article.faq.length > 0 && (
+          <section className="mt-10 pt-6 border-t border-slate-200" aria-labelledby="blog-faq-heading">
+            <h2 id="blog-faq-heading" className="text-2xl font-extrabold text-slate-900 mb-4">
+              {FAQ_HEADING[article.locale] ?? FAQ_HEADING.en}
+            </h2>
+            <dl className="space-y-4">
+              {article.faq.map((f) => (
+                <div key={f.question} className="rounded-xl border border-slate-200 bg-slate-50 p-4">
+                  <dt className="font-bold text-slate-900">{f.question}</dt>
+                  <dd className="mt-1 text-slate-700 leading-relaxed speakable">{f.answer}</dd>
+                </div>
+              ))}
+            </dl>
+          </section>
+        )}
 
         {/* Tags */}
         {article.tags.length > 0 && (

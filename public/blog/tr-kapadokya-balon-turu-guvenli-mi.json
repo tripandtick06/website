@@ -39,10 +39,6 @@
       "answer": "Evet, Trip and Tick üzerinden rezerve edilen tüm paketlere 40 milyon Euro sorumluluk sigortası dahildir."
     },
     {
-      "question": "Balonlar SHGM lisanslı mı?",
-      "answer": "Trip and Tick'in çalıştığı tüm operatörler Sivil Havacılık Genel Müdürlüğü (SHGM) lisansı altında faaliyet gösterir."
-    },
-    {
       "question": "Kendi isteğimle iptal edersem ne olur?",
       "answer": "72 saat ve öncesinde %100 iade, 24-72 saat arasında %50 iade, 24 saatten az kala iade yapılmaz."
     },
@@ -50,5 +46,6 @@
       "question": "Uçuş sırasında ne kadar rüzgar güvenli kabul edilir?",
       "answer": "Operatörler rüzgar hızı belirli bir eşiğin (25 km/sa) üzerine çıktığında uçuşu iptal eder. Kesin karar, uçuş sabahı 03:30-04:30 arasında yerel hava verilerine göre pilot tarafından verilir."
     }
-  ]
+  ],
+  "updatedAt": "2026-09-19"
 }

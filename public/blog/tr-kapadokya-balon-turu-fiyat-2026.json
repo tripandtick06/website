@@ -43,10 +43,7 @@
     {
       "question": "Balon fiyatı mevsime göre değişir mi?",
       "answer": "Balon fiyatları sabit değildir — Standart uçuş €100'dan başlar, uçuşa 7 günden az kala fiyat hava ve doluluğa göre güncellenebilir. Tarihiniz için güncel fiyatı WhatsApp'tan sorabilirsiniz. Otel fiyatları ise mevsimsel olarak değişir."
-    },
-    {
-      "question": "Kapadokya balon turu güvenli mi?",
-      "answer": "Evet — SHGM lisanslı operatörler, 40 milyon Euro sigorta ve sıkı hava durumu protokolleriyle çalışılır."
     }
-  ]
+  ],
+  "updatedAt": "2026-09-19"
 }
