@@ -7,7 +7,9 @@ import { PageHero } from "@/components/layout/PageHero";
 import { ServiceCard } from "@/components/layout/ServiceCard";
 import { ACTIVITIES } from "@/data/services/catalog";
 
-export function AktivitelerContent() {
+type FaqItem = { question: string; answer: string };
+
+export function AktivitelerContent({ faqs }: { faqs: FaqItem[] }) {
   const t = useT();
   const { locale } = useLocale();
   const items = tServiceList(ACTIVITIES, locale);
@@ -37,6 +39,27 @@ export function AktivitelerContent() {
             <Link href="/paketler" className="btn-primary inline-block">
               {t.page.aktiviteler.kombo_paketleri_gor}
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding bg-white" aria-label="FAQ">
+        <div className="container-main max-w-3xl">
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-8 text-center">
+            {t.nav.faq}
+          </h2>
+          <div className="space-y-3">
+            {faqs.map((faq) => (
+              <details
+                key={faq.question}
+                className="group bg-slate-50 border border-slate-200 rounded-xl px-5 py-4 open:shadow-sm"
+              >
+                <summary className="cursor-pointer list-none font-semibold text-slate-900 group-open:mb-2">
+                  {faq.question}
+                </summary>
+                <p className="text-slate-600 text-sm leading-relaxed">{faq.answer}</p>
+              </details>
+            ))}
           </div>
         </div>
       </section>

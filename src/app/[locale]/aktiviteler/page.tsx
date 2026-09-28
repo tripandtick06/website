@@ -54,7 +54,7 @@ export default function AktivitelerPage({
 
   return (
     <>
-      <AktivitelerContent />
+      <AktivitelerContent faqs={getPageFaqs("activities", loc)} />
       <JsonLd data={breadcrumbSchema([{ name: serverDict(loc).nav.activities, href: canonicalFor("/aktiviteler", loc) }])} />
       <JsonLd data={itemList} />
       <JsonLd data={faqPageSchema(getPageFaqs("activities", loc))} />
