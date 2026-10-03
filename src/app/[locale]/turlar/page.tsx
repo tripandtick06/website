@@ -54,7 +54,7 @@ export default function TurlarPage({
 
   return (
     <>
-      <TurlarContent />
+      <TurlarContent faqs={getPageFaqs("tours", loc)} />
       <JsonLd data={breadcrumbSchema([{ name: serverDict(loc).nav.tours, href: canonicalFor("/turlar", loc) }])} />
       <JsonLd data={itemList} />
       <JsonLd data={faqPageSchema(getPageFaqs("tours", loc))} />
