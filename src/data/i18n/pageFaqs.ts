@@ -38,6 +38,11 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
         answer:
           "Standart Türk Hamamı 90 dakika, €50'den başlar: kese + köpük masajı + sauna + jakuzi. Deluxe paket 2 saat, €75'ten başlar: hamam + 30 dakika İsveç yağ masajı + tam vücut mask. Her ikisi de otel transferi dahil.",
       },
+      {
+        question: "Aktivite fiyatları ne kadar?",
+        answer:
+          "Fiyatlar kişi başı başlangıç fiyatıdır: ATV ve jeep safari €25'ten, at binme €35'ten, Türk hamamı €50'den başlayan fiyatlarla. Güncel fiyat ve müsaitlik için WhatsApp'tan yazabilirsiniz.",
+      },
     ],
     packages: [
       {
@@ -65,6 +70,11 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
         answer:
           "Minimum 10 kişi grup; fiyat talebe göre, güncel fiyatı WhatsApp'tan sorun. Grup balonu (15+ kişilik sepet), rehberli tur, gala akşam yemeği ve kurumsal organizatör dahildir. Faturalı ödeme ve özel branding seçeneği mevcut. info@tripandtick.com'a yazarak özel teklif alabilirsiniz.",
       },
+      {
+        question: "Paket iptal koşulları nelerdir?",
+        answer:
+          "Rezervasyon koşullarımız: 48 saat öncesine kadar ücretsiz iptal, 24-48 saat içinde %50 iade. Hava durumu nedeniyle operatörün balon uçuşunu iptal etmesi halinde %100 iade yapılır. Paketinize özel koşul için WhatsApp'tan sorabilirsiniz.",
+      },
     ],
     transfers: [
       {
@@ -86,6 +96,16 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
         question: "Uçuş gecikirse ek ücret var mı?",
         answer:
           "Hayır, uçuşunuzu izliyoruz. 90 dakikaya kadar gecikme ücretsiz. 90+ dakika veya yeni gün geçişi durumunda €15-25 bekleme ücreti uygulanabilir. İptal: 4+ saat öncesinden %100 iade.",
+      },
+      {
+        question: "Transfer rezervasyonunu nasıl yaparım?",
+        answer:
+          "Tarih, saat, kişi sayısı ve uçuş numaranızı WhatsApp üzerinden bize iletin. Uçuş numarası, uçuşunuzu izleyip gecikmeleri takip etmemizi sağlar.",
+      },
+      {
+        question: "Transfer fiyatına neler dahil?",
+        answer:
+          "Araç ve şoför, havalimanı çıkışında isim levhalı karşılama, uçuş takibi dahildir; 90 dakikaya kadar gecikmede ek ücret alınmaz. Bagaj limiti yoktur.",
       },
     ],
     tours: [
@@ -113,6 +133,11 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
         question: "Birden fazla turu aynı günde yapabilir miyim?",
         answer:
           "Hayır, tam gün turlar (Kırmızı/Yeşil/Mix/Sarı) ayrı günlerde planlanmalı. Ancak yarım gün turlar (Yeraltı Şehirleri + Gün Batımı veya Instagram + Gün Batımı) aynı günde kombine edilebilir.",
+      },
+      {
+        question: "Tur fiyatları ne kadar?",
+        answer:
+          "Kırmızı, Yeşil, Mix ve Eco Yeşil turlar €50'den, gün batımı turu €30'dan başlayan kişi başı fiyatlarla. Güncel fiyat ve müsaitlik için WhatsApp'tan yazabilirsiniz.",
       },
     ],
   },
@@ -143,6 +168,11 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
         answer:
           "Standard Turkish Hammam 90 minutes, from €50: body scrub + foam massage + sauna + jacuzzi. Deluxe package 2 hours, from €75: Hammam + 30 minutes of Swedish oil massage + full body mask. Both include hotel transfer.",
       },
+      {
+        question: "How much do the activities cost?",
+        answer:
+          "Prices are per person starting prices: ATV and jeep safari from €25, horse riding from €35, Turkish Hammam from €50. Message us on WhatsApp for the current price and availability.",
+      },
     ],
     packages: [
       {
@@ -170,6 +200,11 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
         answer:
           "Minimum group of 10 people; price on request — ask us on WhatsApp for the current price. It includes a group balloon (15+ person basket), guided tour, gala dinner and a corporate organizer. Invoiced payment and a custom branding option are available. You can request a custom offer by writing to info@tripandtick.com.",
       },
+      {
+        question: "What is the cancellation policy for packages?",
+        answer:
+          "Our booking terms: free cancellation up to 48 hours before, 50% refund for cancellations within 24–48 hours. If the operator cancels the balloon flight due to weather, you get a 100% refund. Message us on WhatsApp for package-specific terms.",
+      },
     ],
     transfers: [
       {
@@ -191,6 +226,16 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
         question: "Is there an extra fee if my flight is delayed?",
         answer:
           "No, we track your flight. Delays of up to 90 minutes are free. For 90+ minutes or a roll-over to a new day, a €15-25 waiting fee may apply. Cancellation: 100% refund from 4+ hours in advance.",
+      },
+      {
+        question: "How do I book a transfer?",
+        answer:
+          "Send us your date, time, number of passengers and flight number on WhatsApp. The flight number lets us track your flight.",
+      },
+      {
+        question: "What does the transfer price include?",
+        answer:
+          "The vehicle and driver, a name-board pickup at arrivals and flight tracking. Delays up to 90 minutes cost nothing extra. There is no baggage limit.",
       },
     ],
     tours: [
@@ -218,6 +263,11 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
         question: "Can I do more than one tour on the same day?",
         answer:
           "No, the full-day tours (Red/Green/Mix/Yellow) must be planned on separate days. However, the half-day tours (Underground Cities + Sunset or Instagram + Sunset) can be combined on the same day.",
+      },
+      {
+        question: "How much do the tours cost?",
+        answer:
+          "Red, Green, Mix and Eco Green tours start at €50 per person, the sunset tour at €30. Message us on WhatsApp for the current price and availability.",
       },
     ],
   },

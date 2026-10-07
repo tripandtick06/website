@@ -55,7 +55,7 @@ export default function PaketlerPage({
 
   return (
     <>
-      <PaketlerContent />
+      <PaketlerContent faqs={getPageFaqs("packages", loc)} />
       <JsonLd data={breadcrumbSchema([{ name: serverDict(loc).nav.packages, href: canonicalFor("/paketler", loc) }])} />
       <JsonLd data={itemList} />
       <JsonLd data={faqPageSchema(getPageFaqs("packages", loc))} />

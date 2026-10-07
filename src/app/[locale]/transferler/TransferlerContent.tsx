@@ -7,9 +7,10 @@ import { PageHero } from "@/components/layout/PageHero";
 import { ServiceCard } from "@/components/layout/ServiceCard";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { TRANSFERS } from "@/data/services/catalog";
+import { FaqSection, type FaqItem } from "@/components/layout/FaqSection";
 import { breadcrumbSchema } from "@/lib/schema";
 
-export function TransferlerContent() {
+export function TransferlerContent({ faqs }: { faqs: FaqItem[] }) {
   const t = useT();
   const { locale } = useLocale();
   const items = tServiceList(TRANSFERS, locale);
@@ -35,6 +36,8 @@ export function TransferlerContent() {
           </div>
         </div>
       </section>
+
+      <FaqSection faqs={faqs} />
 
       <JsonLd data={breadcrumbSchema(breadcrumbItems)} />
     </>

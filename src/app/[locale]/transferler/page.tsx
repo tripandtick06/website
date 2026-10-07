@@ -56,7 +56,7 @@ export default function Page({
 
   return (
     <>
-      <TransferlerContent />
+      <TransferlerContent faqs={getPageFaqs("transfers", loc)} />
       <JsonLd data={itemList} />
       <JsonLd data={faqPageSchema(getPageFaqs("transfers", loc))} />
     </>
