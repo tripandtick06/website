@@ -16,7 +16,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "Kapadokya'da hangi aktiviteler var?",
         answer:
-          "ATV safari, Jeep safari, at binme, Türk hamamı, Türk gecesi folklor şovu ve microlight uçuşu dahil 7+ kategori, toplam 15 farklı aktivite paketi sunuyoruz. Hepsi otel transferi dahil €29'dan başlıyor.",
+          "ATV safari, Jeep safari, at binme, Türk hamamı, Türk gecesi folklor şovu ve microlight uçuşu dahil 7+ kategori, toplam 15 farklı aktivite paketi sunuyoruz. Hepsi otel transferi dahil €25'ten başlıyor.",
       },
       {
         question: "ATV ve jeep safarinin yaş limiti nedir?",
@@ -127,7 +127,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "Hangi tur en popüler?",
         answer:
-          "Kırmızı Tur (Red Tour) en çok tercih edileni — Göreme Açık Hava Müzesi, Uçhisar Kalesi, Paşabağ ve Avanos çömlek atölyesini içerir. €45'ten başlar.",
+          "Kırmızı Tur (Red Tour) en çok tercih edileni — Göreme Açık Hava Müzesi, Uçhisar Kalesi, Paşabağ ve Avanos çömlek atölyesini içerir. €50'den başlar.",
       },
       {
         question: "Birden fazla turu aynı günde yapabilir miyim?",
@@ -146,7 +146,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "What activities are available in Cappadocia?",
         answer:
-          "We offer 7+ categories and 15 different activity packages in total, including ATV safari, Jeep safari, horseback riding, Turkish Hammam, Turkish Night folklore show and microlight flight. All include hotel transfer and start from €29.",
+          "We offer 7+ categories and 15 different activity packages in total, including ATV safari, Jeep safari, horseback riding, Turkish Hammam, Turkish Night folklore show and microlight flight. All include hotel transfer and start from €25.",
       },
       {
         question: "What is the age limit for the ATV and jeep safari?",
@@ -257,7 +257,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "Which tour is the most popular?",
         answer:
-          "The Red Tour is the most preferred — it includes the Göreme Open Air Museum, Uçhisar Castle, Paşabağ and the Avanos pottery workshop. Starts from €45.",
+          "The Red Tour is the most preferred — it includes the Göreme Open Air Museum, Uçhisar Castle, Paşabağ and the Avanos pottery workshop. Starts from €50.",
       },
       {
         question: "Can I do more than one tour on the same day?",
@@ -276,7 +276,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "Welche Aktivitäten gibt es in Kappadokien?",
         answer:
-          "Wir bieten über 7 Kategorien und insgesamt 15 verschiedene Aktivitätspakete an, darunter ATV-Safari, Jeep-Safari, Reiten, Hammam, Türkische-Nacht-Folkloreshow und Microlight-Flug. Alle inklusive Hoteltransfer, ab €29.",
+          "Wir bieten über 7 Kategorien und insgesamt 15 verschiedene Aktivitätspakete an, darunter ATV-Safari, Jeep-Safari, Reiten, Hammam, Türkische-Nacht-Folkloreshow und Microlight-Flug. Alle inklusive Hoteltransfer, ab €25.",
       },
       {
         question: "Wie ist die Altersgrenze für die ATV- und Jeep-Safari?",
@@ -367,7 +367,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "Welche Tour ist am beliebtesten?",
         answer:
-          "Die Rote Tour (Red Tour) ist die beliebteste — sie umfasst das Freilichtmuseum Göreme, die Burg Uçhisar, Paşabağ und die Töpferwerkstatt von Avanos. Ab €45.",
+          "Die Rote Tour (Red Tour) ist die beliebteste — sie umfasst das Freilichtmuseum Göreme, die Burg Uçhisar, Paşabağ und die Töpferwerkstatt von Avanos. Ab €50.",
       },
       {
         question: "Kann ich mehrere Touren am selben Tag machen?",
@@ -381,7 +381,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "Quelles activités y a-t-il en Cappadoce ?",
         answer:
-          "Nous proposons plus de 7 catégories et 15 forfaits d'activités différents au total, dont safari en quad, safari en jeep, équitation, Hammam, spectacle folklorique de la Nuit turque et vol en ULM. Tous incluent le transfert depuis l'hôtel et débutent à €29.",
+          "Nous proposons plus de 7 catégories et 15 forfaits d'activités différents au total, dont safari en quad, safari en jeep, équitation, Hammam, spectacle folklorique de la Nuit turque et vol en ULM. Tous incluent le transfert depuis l'hôtel et débutent à €25.",
       },
       {
         question: "Quelle est la limite d'âge pour le safari en quad et en jeep ?",
@@ -472,7 +472,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "Quel circuit est le plus populaire ?",
         answer:
-          "Le circuit Rouge (Red Tour) est le plus prisé — il comprend le Musée en plein air de Göreme, le château d'Uçhisar, Paşabağ et l'atelier de poterie d'Avanos. À partir de €45.",
+          "Le circuit Rouge (Red Tour) est le plus prisé — il comprend le Musée en plein air de Göreme, le château d'Uçhisar, Paşabağ et l'atelier de poterie d'Avanos. À partir de €50.",
       },
       {
         question: "Puis-je faire plusieurs circuits le même jour ?",
@@ -486,7 +486,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "¿Qué actividades hay en Capadocia?",
         answer:
-          "Ofrecemos más de 7 categorías y 15 paquetes de actividades diferentes en total, incluyendo safari en quad, safari en jeep, equitación, Hammam, espectáculo folclórico de la Noche Turca y vuelo en ultraligero. Todos incluyen traslado desde el hotel y empiezan desde €29.",
+          "Ofrecemos más de 7 categorías y 15 paquetes de actividades diferentes en total, incluyendo safari en quad, safari en jeep, equitación, Hammam, espectáculo folclórico de la Noche Turca y vuelo en ultraligero. Todos incluyen traslado desde el hotel y empiezan desde €25.",
       },
       {
         question: "¿Cuál es el límite de edad para el safari en quad y en jeep?",
@@ -577,7 +577,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "¿Cuál es el tour más popular?",
         answer:
-          "El Tour Rojo (Red Tour) es el más solicitado — incluye el Museo al Aire Libre de Göreme, el Castillo de Uçhisar, Paşabağ y el taller de cerámica de Avanos. Desde €45.",
+          "El Tour Rojo (Red Tour) es el más solicitado — incluye el Museo al Aire Libre de Göreme, el Castillo de Uçhisar, Paşabağ y el taller de cerámica de Avanos. Desde €50.",
       },
       {
         question: "¿Puedo hacer más de un tour el mismo día?",
@@ -591,7 +591,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "Welke activiteiten zijn er in Cappadocië?",
         answer:
-          "We bieden 7+ categorieën en in totaal 15 verschillende activiteitenpakketten aan, waaronder quad-safari, jeep-safari, paardrijden, Hammam, folkloreshow van de Turkse Nacht en microlight-vlucht. Allemaal inclusief hoteltransfer en vanaf €29.",
+          "We bieden 7+ categorieën en in totaal 15 verschillende activiteitenpakketten aan, waaronder quad-safari, jeep-safari, paardrijden, Hammam, folkloreshow van de Turkse Nacht en microlight-vlucht. Allemaal inclusief hoteltransfer en vanaf €25.",
       },
       {
         question: "Wat is de leeftijdsgrens voor de quad- en jeep-safari?",
@@ -682,7 +682,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "Welke tour is het populairst?",
         answer:
-          "De Rode Tour (Red Tour) is de meest gekozene — deze omvat het Openluchtmuseum van Göreme, het kasteel van Uçhisar, Paşabağ en het pottenbakkersatelier van Avanos. Vanaf €45.",
+          "De Rode Tour (Red Tour) is de meest gekozene — deze omvat het Openluchtmuseum van Göreme, het kasteel van Uçhisar, Paşabağ en het pottenbakkersatelier van Avanos. Vanaf €50.",
       },
       {
         question: "Kan ik meerdere tours op dezelfde dag doen?",
@@ -696,7 +696,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "卡帕多西亚有哪些活动？",
         answer:
-          "我们提供 7 个以上类别、共 15 种不同的活动套餐，包括 ATV 越野、吉普车越野、骑马、Hammam、土耳其之夜民俗表演和微型飞机飞行。全部含酒店接送，€29 起。",
+          "我们提供 7 个以上类别、共 15 种不同的活动套餐，包括 ATV 越野、吉普车越野、骑马、Hammam、土耳其之夜民俗表演和微型飞机飞行。全部含酒店接送，€25 起。",
       },
       {
         question: "ATV 和吉普车越野的年龄限制是多少？",
@@ -787,7 +787,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "哪条线路最受欢迎？",
         answer:
-          "红线（Red Tour）最受青睐——包括 Göreme 露天博物馆、Uçhisar 城堡、Paşabağ 和 Avanos 陶艺作坊。€45 起。",
+          "红线（Red Tour）最受青睐——包括 Göreme 露天博物馆、Uçhisar 城堡、Paşabağ 和 Avanos 陶艺作坊。€50 起。",
       },
       {
         question: "我可以在同一天参加多条线路吗？",
@@ -801,7 +801,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "कप्पादोसिया में कौन-कौन सी गतिविधियाँ हैं?",
         answer:
-          "हम ATV सफारी, जीप सफारी, घुड़सवारी, Hammam, टर्किश नाइट लोकनृत्य शो और माइक्रोलाइट उड़ान सहित 7+ श्रेणियों में कुल 15 अलग-अलग गतिविधि पैकेज प्रदान करते हैं। सभी में होटल ट्रांसफर शामिल है और €29 से शुरू होते हैं।",
+          "हम ATV सफारी, जीप सफारी, घुड़सवारी, Hammam, टर्किश नाइट लोकनृत्य शो और माइक्रोलाइट उड़ान सहित 7+ श्रेणियों में कुल 15 अलग-अलग गतिविधि पैकेज प्रदान करते हैं। सभी में होटल ट्रांसफर शामिल है और €25 से शुरू होते हैं।",
       },
       {
         question: "ATV और जीप सफारी के लिए आयु सीमा क्या है?",
@@ -892,7 +892,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "कौन सा टूर सबसे लोकप्रिय है?",
         answer:
-          "रेड टूर (Red Tour) सबसे पसंदीदा है — इसमें Göreme ओपन एयर म्यूज़ियम, Uçhisar किला, Paşabağ और Avanos मिट्टी के बर्तन कार्यशाला शामिल हैं। €45 से शुरू।",
+          "रेड टूर (Red Tour) सबसे पसंदीदा है — इसमें Göreme ओपन एयर म्यूज़ियम, Uçhisar किला, Paşabağ और Avanos मिट्टी के बर्तन कार्यशाला शामिल हैं। €50 से शुरू।",
       },
       {
         question: "क्या मैं एक ही दिन में एक से अधिक टूर कर सकता हूँ?",
@@ -906,7 +906,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "کاپاڈوکیا میں کون کون سی سرگرمیاں ہیں؟",
         answer:
-          "ہم ATV سفاری، جیپ سفاری، گھڑ سواری، Hammam، ترکش نائٹ لوک رقص شو اور مائیکرولائٹ پرواز سمیت 7+ زمروں میں کل 15 مختلف سرگرمی پیکجز پیش کرتے ہیں۔ سب میں ہوٹل ٹرانسفر شامل ہے اور €29 سے شروع ہوتے ہیں۔",
+          "ہم ATV سفاری، جیپ سفاری، گھڑ سواری، Hammam، ترکش نائٹ لوک رقص شو اور مائیکرولائٹ پرواز سمیت 7+ زمروں میں کل 15 مختلف سرگرمی پیکجز پیش کرتے ہیں۔ سب میں ہوٹل ٹرانسفر شامل ہے اور €25 سے شروع ہوتے ہیں۔",
       },
       {
         question: "ATV اور جیپ سفاری کے لیے عمر کی حد کیا ہے؟",
@@ -997,7 +997,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "کون سا ٹور سب سے مقبول ہے؟",
         answer:
-          "ریڈ ٹور (Red Tour) سب سے زیادہ پسند کیا جاتا ہے — اس میں Göreme اوپن ایئر میوزیم، Uçhisar قلعہ، Paşabağ اور Avanos مٹی کے برتنوں کی ورکشاپ شامل ہیں۔ €45 سے شروع۔",
+          "ریڈ ٹور (Red Tour) سب سے زیادہ پسند کیا جاتا ہے — اس میں Göreme اوپن ایئر میوزیم، Uçhisar قلعہ، Paşabağ اور Avanos مٹی کے برتنوں کی ورکشاپ شامل ہیں۔ €50 سے شروع۔",
       },
       {
         question: "کیا میں ایک ہی دن میں ایک سے زائد ٹور کر سکتا ہوں؟",
