@@ -31,7 +31,7 @@ export async function generateMetadata({
         {
           url: ogImageUrl(
             "İptal & İade Politikası",
-            "%100 İade Garantisi · 72 Saat Kuralı"
+            "%100 İade Garantisi · 48 Saat Kuralı"
           ),
           width: 1200,
           height: 630,

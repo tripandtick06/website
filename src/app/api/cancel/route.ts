@@ -4,10 +4,11 @@
 // Callers: src/app/hesabim/page.tsx ("Iptal Talep Et" butonu — fetch POST).
 // Glob check: src/app/api/cancel/** previously empty.
 // Data: POST JSON { bookingId TT-XXXXXXXX, email, reason?, bookingDate YYYY-MM-DD?, totalPrice?, currency?, serviceName? }
-// Iptal politikasi: >=72h %100 / 24-72h %50 / <24h %0. Brevo admin mail (no file I/O).
+// Iptal politikasi: >=48h %100 / 24-48h %50 / <24h %0 (src/lib/cancellation-policy.ts). Brevo admin mail (no file I/O).
 
 import { NextResponse, type NextRequest } from "next/server";
 import { z } from "zod";
+import { refundTier } from "@/lib/cancellation-policy";
 
 export const runtime = "edge";
 export const dynamic = "force-dynamic";
@@ -33,9 +34,7 @@ function refundPolicy(bookingDateIso?: string): { hoursUntil: number; pct: numbe
   const bookingTime = new Date(bookingDateIso + "T05:00:00+03:00").getTime();
   if (isNaN(bookingTime)) return { hoursUntil: Infinity, pct: 100, days: 5 };
   const hoursUntil = (bookingTime - now) / (1000 * 60 * 60);
-  if (hoursUntil >= 72) return { hoursUntil, pct: 100, days: 5 };
-  if (hoursUntil >= 24) return { hoursUntil, pct: 50, days: 7 };
-  return { hoursUntil, pct: 0, days: 0 };
+  return { hoursUntil, ...refundTier(hoursUntil) };
 }
 
 async function sendAdminCancelMail(input: {

@@ -1058,7 +1058,7 @@
     },
     "f6": {
       "question": "¿Cuál es la política de cancelación?",
-      "answer": "Con más de 72 horas de antelación: reembolso del 100%. Entre 24 y 72 horas: reembolso del 50%. Con menos de 24 horas: sin reembolso. Cancelación por el operador (incluido el clima): siempre reembolso del 100% o fecha alternativa."
+      "answer": "Con más de 48 horas de antelación: reembolso del 100%. Entre 24 y 48 horas: reembolso del 50%. Con menos de 24 horas: sin reembolso. Cancelación por el operador (incluido el clima): siempre reembolso del 100% o fecha alternativa."
     },
     "f7": {
       "question": "¿A qué hora es el tour en globo?",

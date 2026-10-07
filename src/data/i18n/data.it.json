@@ -1058,7 +1058,7 @@
     },
     "f6": {
       "question": "Qual è la politica di cancellazione?",
-      "answer": "72+ ore prima: rimborso del 100%. 24-72 ore: rimborso del 50%. Meno di 24 ore: nessun rimborso. Cancellazione da parte dell'operatore (incluso il meteo): sempre rimborso del 100% o data alternativa."
+      "answer": "48+ ore prima: rimborso del 100%. 24-48 ore: rimborso del 50%. Meno di 24 ore: nessun rimborso. Cancellazione da parte dell'operatore (incluso il meteo): sempre rimborso del 100% o data alternativa."
     },
     "f7": {
       "question": "A che ora è il tour in mongolfiera?",

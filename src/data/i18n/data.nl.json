@@ -1058,7 +1058,7 @@
     },
     "f6": {
       "question": "Wat is het annuleringsbeleid?",
-      "answer": "Meer dan 72 uur van tevoren: 100% terugbetaling. 24-72 uur: 50% terugbetaling. Minder dan 24 uur: geen terugbetaling. Annulering door de operator (inclusief weer): altijd 100% terugbetaling of een alternatieve datum."
+      "answer": "Meer dan 48 uur van tevoren: 100% terugbetaling. 24-48 uur: 50% terugbetaling. Minder dan 24 uur: geen terugbetaling. Annulering door de operator (inclusief weer): altijd 100% terugbetaling of een alternatieve datum."
     },
     "f7": {
       "question": "Hoe laat is de ballontour?",
