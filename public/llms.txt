@@ -9,6 +9,48 @@ Phone / WhatsApp: +90 537 464 78 61
 Location: Göreme / Nevşehir, Cappadocia, Turkey
 Languages: TR (default), EN, DE, FR, ES, NL, ZH, HI, UR, PT, PT-BR, JA, KO, IT, RU, UK, AZ (17 total)
 
+## Key pages (Turkish default, unprefixed paths)
+
+- [/](https://tripandtick.com?utm_source=llms) — Home: balloon, tour, activity, package and airport transfer booking
+- [/balonlar](https://tripandtick.com/balonlar?utm_source=llms) — Hot-air balloon tours and starting prices
+- [/kapadokya](https://tripandtick.com/kapadokya?utm_source=llms) — Cappadocia travel guide
+- [/oteller](https://tripandtick.com/oteller?utm_source=llms) — Cave and boutique hotels in Göreme, Ürgüp, Uçhisar (information and quote only)
+- [/aktiviteler](https://tripandtick.com/aktiviteler?utm_source=llms) — ATV, jeep safari, horse riding, Turkish Hammam, Turkish Night, microlight
+- [/turlar](https://tripandtick.com/turlar?utm_source=llms) — Red, Green, Mix, Eco Green and sunset day tours
+- [/paketler](https://tripandtick.com/paketler?utm_source=llms) — Full-day, honeymoon, family, proposal and corporate packages (priced on request)
+- [/transferler](https://tripandtick.com/transferler?utm_source=llms) — Airport transfers from Nevşehir (NAV) and Kayseri (ASR)
+- [/operatorler](https://tripandtick.com/operatorler?utm_source=llms) — Partner balloon operators and what each one flies
+- [/blog](https://tripandtick.com/blog?utm_source=llms) — Cappadocia guides and price articles
+- [/sss](https://tripandtick.com/sss?utm_source=llms) — Frequently asked questions
+- [/yorum](https://tripandtick.com/yorum?utm_source=llms) — Guest reviews
+- [/hakkimizda](https://tripandtick.com/hakkimizda?utm_source=llms) — About Trip and Tick
+- [/iletisim](https://tripandtick.com/iletisim?utm_source=llms) — Contact: phone, WhatsApp, email
+- [/balonlar/standart-balon-ucusu](https://tripandtick.com/balonlar/standart-balon-ucusu?utm_source=llms) — Standard balloon flight (from €100)
+- [/balonlar/romantik-ozel-balon](https://tripandtick.com/balonlar/romantik-ozel-balon?utm_source=llms) — Romantic private balloon (price on request)
+- [/balonlar/bugun-ucuyor-mu](https://tripandtick.com/balonlar/bugun-ucuyor-mu?utm_source=llms) — Are balloons flying today? Daily sunrise wind outlook for Göreme
+
+## Key pages (English, /en)
+
+- [/en](https://tripandtick.com/en?utm_source=llms) — Home (English)
+- [/en/balloon-tours](https://tripandtick.com/en/balloon-tours?utm_source=llms) — Hot-air balloon tours
+- [/en/hotels](https://tripandtick.com/en/hotels?utm_source=llms) — Cave and boutique hotels (information and quote only)
+- [/en/activities](https://tripandtick.com/en/activities?utm_source=llms) — ATV, jeep safari, horse riding, Turkish Hammam, microlight
+- [/en/tours](https://tripandtick.com/en/tours?utm_source=llms) — Red, Green, Mix, Eco Green and sunset day tours
+- [/en/packages](https://tripandtick.com/en/packages?utm_source=llms) — Combo packages (priced on request)
+- [/en/transfers](https://tripandtick.com/en/transfers?utm_source=llms) — Airport transfers from Nevşehir and Kayseri
+- [/en/operators](https://tripandtick.com/en/operators?utm_source=llms) — Partner balloon operators
+- [/en/faq](https://tripandtick.com/en/faq?utm_source=llms) — Frequently asked questions
+- [/en/blog](https://tripandtick.com/en/blog?utm_source=llms) — Cappadocia guides
+- [/en/balloon-tours/flying-today](https://tripandtick.com/en/balloon-tours/flying-today?utm_source=llms) — Are balloons flying today?
+
+## Other indexed languages (home pages)
+
+- [/de](https://tripandtick.com/de?utm_source=llms) — Startseite (Deutsch)
+- [/fr](https://tripandtick.com/fr?utm_source=llms) — Accueil (Français)
+- [/pt-BR](https://tripandtick.com/pt-BR?utm_source=llms) — Página inicial (Português-BR)
+- [/ja](https://tripandtick.com/ja?utm_source=llms) — ホーム (日本語)
+- [/ko](https://tripandtick.com/ko?utm_source=llms) — 홈 (한국어)
+
 ## Services
 
 - [Hot-air balloon tours](https://tripandtick.com/balonlar?utm_source=llms) — Standard (from €100, 60 min, 16-20 seat basket) and Romantic private (basket for two, price on request); all prices are starting prices, current price via WhatsApp; includes hotel transfer, breakfast, certificate and €40M insurance; minimum age 6; 100% refund on weather cancellation

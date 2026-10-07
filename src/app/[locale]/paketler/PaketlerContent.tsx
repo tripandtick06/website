@@ -5,8 +5,9 @@ import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { PageHero } from "@/components/layout/PageHero";
 import { ServiceCard } from "@/components/layout/ServiceCard";
 import { PACKAGES } from "@/data/services/catalog";
+import { FaqSection, type FaqItem } from "@/components/layout/FaqSection";
 
-export function PaketlerContent() {
+export function PaketlerContent({ faqs }: { faqs: FaqItem[] }) {
   const t = useT();
   const { locale } = useLocale();
   const items = tServiceList(PACKAGES, locale);
@@ -30,6 +31,8 @@ export function PaketlerContent() {
           </div>
         </div>
       </section>
+
+      <FaqSection faqs={faqs} />
     </>
   );
 }
