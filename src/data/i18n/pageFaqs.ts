@@ -95,7 +95,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "Uçuş gecikirse ek ücret var mı?",
         answer:
-          "Hayır, uçuşunuzu izliyoruz. 90 dakikaya kadar gecikme ücretsiz. 90+ dakika veya yeni gün geçişi durumunda €15-25 bekleme ücreti uygulanabilir. İptal: 4+ saat öncesinden %100 iade.",
+          "Hayır, uçuşunuzu izliyoruz. 90 dakikaya kadar gecikme ücretsiz. 90+ dakika veya yeni gün geçişi durumunda €15-25 bekleme ücreti uygulanabilir. İptal: 48 saat öncesine kadar ücretsiz, 24-48 saat içinde %50 iade.",
       },
       {
         question: "Transfer rezervasyonunu nasıl yaparım?",
@@ -225,7 +225,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "Is there an extra fee if my flight is delayed?",
         answer:
-          "No, we track your flight. Delays of up to 90 minutes are free. For 90+ minutes or a roll-over to a new day, a €15-25 waiting fee may apply. Cancellation: 100% refund from 4+ hours in advance.",
+          "No, we track your flight. Delays of up to 90 minutes are free. For 90+ minutes or a roll-over to a new day, a €15-25 waiting fee may apply. Cancellation: free up to 48 hours in advance, 50% refund within 24–48 hours.",
       },
       {
         question: "How do I book a transfer?",
@@ -345,7 +345,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "Fällt eine Zusatzgebühr an, wenn mein Flug Verspätung hat?",
         answer:
-          "Nein, wir verfolgen Ihren Flug. Verspätungen bis zu 90 Minuten sind kostenlos. Bei 90+ Minuten oder Übergang in einen neuen Tag kann eine Wartegebühr von €15-25 anfallen. Stornierung: 100% Rückerstattung ab 4+ Stunden im Voraus.",
+          "Nein, wir verfolgen Ihren Flug. Verspätungen bis zu 90 Minuten sind kostenlos. Bei 90+ Minuten oder Übergang in einen neuen Tag kann eine Wartegebühr von €15-25 anfallen. Stornierung: kostenlos bis 48 Stunden vorher, 50 % Erstattung bei 24–48 Stunden.",
       },
     ],
     tours: [
@@ -450,7 +450,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "Y a-t-il des frais supplémentaires si mon vol est retardé ?",
         answer:
-          "Non, nous suivons votre vol. Les retards jusqu'à 90 minutes sont gratuits. Pour 90+ minutes ou un passage à un nouveau jour, des frais d'attente de €15-25 peuvent s'appliquer. Annulation : remboursement à 100% à partir de 4+ heures à l'avance.",
+          "Non, nous suivons votre vol. Les retards jusqu'à 90 minutes sont gratuits. Pour 90+ minutes ou un passage à un nouveau jour, des frais d'attente de €15-25 peuvent s'appliquer. Annulation : gratuite jusqu'à 48 heures à l'avance, remboursement de 50 % entre 24 et 48 heures.",
       },
     ],
     tours: [
@@ -555,7 +555,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "¿Hay un cargo extra si mi vuelo se retrasa?",
         answer:
-          "No, hacemos seguimiento de su vuelo. Los retrasos de hasta 90 minutos son gratuitos. Para 90+ minutos o paso a un nuevo día, puede aplicarse un cargo de espera de €15-25. Cancelación: reembolso del 100% desde 4+ horas de antelación.",
+          "No, hacemos seguimiento de su vuelo. Los retrasos de hasta 90 minutos son gratuitos. Para 90+ minutos o paso a un nuevo día, puede aplicarse un cargo de espera de €15-25. Cancelación: gratuita hasta 48 horas antes, reembolso del 50% entre 24 y 48 horas.",
       },
     ],
     tours: [
@@ -660,7 +660,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "Zijn er extra kosten als mijn vlucht vertraging heeft?",
         answer:
-          "Nee, we volgen uw vlucht. Vertragingen tot 90 minuten zijn gratis. Bij 90+ minuten of overgang naar een nieuwe dag kan een wachttarief van €15-25 gelden. Annulering: 100% terugbetaling vanaf 4+ uur van tevoren.",
+          "Nee, we volgen uw vlucht. Vertragingen tot 90 minuten zijn gratis. Bij 90+ minuten of overgang naar een nieuwe dag kan een wachttarief van €15-25 gelden. Annulering: gratis tot 48 uur van tevoren, 50% terugbetaling bij 24–48 uur.",
       },
     ],
     tours: [
@@ -765,7 +765,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "如果我的航班延误是否会额外收费？",
         answer:
-          "不会，我们会追踪您的航班。90 分钟以内的延误免费。超过 90 分钟或跨入新的一天可能收取 €15-25 的等候费。取消：提前 4 小时以上可 100% 退款。",
+          "不会，我们会追踪您的航班。90 分钟以内的延误免费。超过 90 分钟或跨入新的一天可能收取 €15-25 的等候费。取消：提前 48 小时以上可免费取消，提前 24–48 小时可退款 50%。",
       },
     ],
     tours: [
@@ -870,7 +870,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "यदि मेरी उड़ान में देरी हो तो क्या अतिरिक्त शुल्क है?",
         answer:
-          "नहीं, हम आपकी उड़ान को ट्रैक करते हैं। 90 मिनट तक की देरी निःशुल्क है। 90+ मिनट या नए दिन में जाने पर €15-25 प्रतीक्षा शुल्क लागू हो सकता है। रद्दीकरण: 4+ घंटे पहले से 100% रिफंड।",
+          "नहीं, हम आपकी उड़ान को ट्रैक करते हैं। 90 मिनट तक की देरी निःशुल्क है। 90+ मिनट या नए दिन में जाने पर €15-25 प्रतीक्षा शुल्क लागू हो सकता है। रद्दीकरण: 48 घंटे पहले तक निःशुल्क, 24–48 घंटे में 50% रिफंड।",
       },
     ],
     tours: [
@@ -975,7 +975,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "اگر میری پرواز میں تاخیر ہو تو کیا اضافی فیس ہے؟",
         answer:
-          "نہیں، ہم آپ کی پرواز کو ٹریک کرتے ہیں۔ 90 منٹ تک کی تاخیر مفت ہے۔ 90+ منٹ یا نئے دن میں منتقلی کی صورت میں €15-25 انتظار فیس لاگو ہو سکتی ہے۔ منسوخی: 4+ گھنٹے پہلے سے 100% رقم کی واپسی۔",
+          "نہیں، ہم آپ کی پرواز کو ٹریک کرتے ہیں۔ 90 منٹ تک کی تاخیر مفت ہے۔ 90+ منٹ یا نئے دن میں منتقلی کی صورت میں €15-25 انتظار فیس لاگو ہو سکتی ہے۔ منسوخی: 48 گھنٹے پہلے تک مفت، 24–48 گھنٹے میں 50% رقم کی واپسی۔",
       },
     ],
     tours: [

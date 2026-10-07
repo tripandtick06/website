@@ -1058,7 +1058,7 @@
     },
     "f6": {
       "question": "Quelle est la politique d'annulation ?",
-      "answer": "Plus de 72 heures à l'avance : remboursement à 100 %. 24 à 72 heures : remboursement à 50 %. Moins de 24 heures : pas de remboursement. Annulation par l'opérateur (météo incluse) : toujours remboursement à 100 % ou date alternative."
+      "answer": "Plus de 48 heures à l'avance : remboursement à 100 %. 24 à 48 heures : remboursement à 50 %. Moins de 24 heures : pas de remboursement. Annulation par l'opérateur (météo incluse) : toujours remboursement à 100 % ou date alternative."
     },
     "f7": {
       "question": "À quelle heure a lieu le vol en montgolfière ?",

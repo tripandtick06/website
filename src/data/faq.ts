@@ -38,7 +38,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     category: "iptal",
     question: "İptal politikası nedir?",
-    answer: "72+ saat öncesinde: %100 iade. 24-72 saat: %50 iade. 24 saatten az: iade yok. Operatör iptali (hava dahil): her zaman %100 iade veya alternatif tarih.",
+    answer: "48+ saat öncesinde: %100 iade (ücretsiz iptal). 24-48 saat: %50 iade. 24 saatten az: iade yok. Operatör iptali (hava dahil): her zaman %100 iade veya alternatif tarih.",
   },
   {
     category: "balon",

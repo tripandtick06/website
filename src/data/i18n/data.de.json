@@ -1058,7 +1058,7 @@
     },
     "f6": {
       "question": "Wie lautet die Stornierungsrichtlinie?",
-      "answer": "Mehr als 72 Stunden vorher: 100 % Erstattung. 24-72 Stunden: 50 % Erstattung. Weniger als 24 Stunden: keine Erstattung. Absage durch den Betreiber (inkl. Wetter): immer 100 % Erstattung oder Alternativtermin."
+      "answer": "Mehr als 48 Stunden vorher: 100 % Erstattung. 24-48 Stunden: 50 % Erstattung. Weniger als 24 Stunden: keine Erstattung. Absage durch den Betreiber (inkl. Wetter): immer 100 % Erstattung oder Alternativtermin."
     },
     "f7": {
       "question": "Um wie viel Uhr findet die Ballonfahrt statt?",
