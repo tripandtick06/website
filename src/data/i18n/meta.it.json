@@ -1,14 +1,14 @@
 {
   "page": {
     "home": {
-      "meta_title": "Trip and Tick — Le migliori esperienze in Cappadocia",
+      "meta_title": "Le migliori esperienze in Cappadocia",
       "meta_desc": "Tour in mongolfiera in Cappadocia, hotel, tour e trasferimenti aeroportuali. Garanzia del prezzo più basso, protezione di rimborso al 100%. Prenota la tua avventura in Cappadocia ora!"
     },
     "aktiviteler": {
       "meta_desc": "Le migliori attività da fare in Cappadocia: tour in ATV, passeggiate a cavallo, safari in jeep. Guidati, assicurati, trasferimento dall'hotel incluso. Prenotazione immediata.",
       "meta_desc_2": "ATV, passeggiate a cavallo, safari in jeep — guidati e assicurati.",
       "meta_og_alt": "Attività in Cappadocia — Trip and Tick",
-      "meta_title": "Attività in Cappadocia — ATV, Passeggiate a Cavallo, Safari in Jeep",
+      "meta_title": "Attività in Cappadocia — ATV",
       "meta_title_2": "Attività in Cappadocia"
     },
     "ara": {
@@ -17,15 +17,15 @@
     "b2b": {
       "meta_desc": "Programma B2B per agenzie di viaggio: commissione 12–18%, accesso REST API, manager dedicato, limite di credito, supporto multi-valuta.",
       "meta_desc_2": "Prezzi all'ingrosso · REST API · commissione 12–18% · Supporto dedicato.",
-      "meta_title": "Programma Agenzia B2B — Prezzi all'Ingrosso & API",
+      "meta_title": "Programma Agenzia B2B",
       "meta_title_2": "Programma Agenzia B2B Trip and Tick"
     },
     "balonlar": {
       "meta_desc": "Tour in mongolfiera in Cappadocia a partire da €100. Pacchetti Standard e Romantico privato. Oltre 9 operatori con licenza TÜRSAB, garanzia di rimborso al 100%, prezzo attuale su WhatsApp.",
       "meta_desc_2": "Pacchetti a partire da €100. Oltre 9 operatori, garanzia di rimborso al 100%.",
       "meta_og_alt": "Tour in Pallone in Cappadocia — Trip and Tick",
-      "meta_title": "Prezzi dei Tour in Pallone in Cappadocia 2026",
-      "meta_title_2": "Prezzi dei Tour in Pallone in Cappadocia 2026",
+      "meta_title": "Prezzi Tour in Pallone — Cappadocia 2026",
+      "meta_title_2": "Prezzi Tour in Pallone — Cappadocia 2026",
       "slug": {
         "meta_title": "Pacchetto non trovato"
       }
@@ -57,27 +57,27 @@
  "meta_desc": "Trip and Tick: un'agenzia di viaggio online autorizzata da TÜRSAB che serve la Cappadocia dal 2024. Oltre 9 operatori, garanzia del miglior prezzo.",
  "meta_desc_2": "Oltre 9 operatori, garanzia del miglior prezzo.",
       "meta_og_alt": "Trip and Tick — Chi Siamo",
-      "meta_title": "Chi Siamo — Agenzia di Cappadocia Autorizzata TÜRSAB",
+      "meta_title": "Chi Siamo",
       "meta_title_2": "Chi Siamo — Agenzia di Cappadocia Autorizzata TÜRSAB"
     },
     "iletisim": {
       "meta_desc": "Contatta Trip and Tick: info@tripandtick.com, +90 537 464 78 61. Ufficio di Göreme/Nevşehir. WhatsApp 24/7, risposta via email entro 4 ore.",
       "meta_desc_2": "WhatsApp 24/7, risposta via email entro 4 ore, ufficio di Göreme/Nevşehir.",
-      "meta_title": "Contatto — Trip and Tick Agenzia di Viaggi Cappadocia",
+      "meta_title": "Contatto — Agenzia di Viaggi Cappadocia",
       "meta_title_2": "Contatto — Trip and Tick"
     },
     "iptal_iade_politikasi": {
       "meta_desc": "Politica di cancellazione e rimborso di Trip and Tick: rimborso del 100% con 72+ ore di anticipo, cancellazioni per meteo sempre rimborsate completamente. Rimborso entro 5-10 giorni lavorativi.",
       "meta_desc_2": "Rimborso del 100% con 72+ ore di anticipo, cancellazioni per meteo sempre rimborsate completamente.",
       "meta_og_alt": "Cancellazione & Rimborso — Trip and Tick",
-      "meta_title": "Politica di Cancellazione & Rimborso — Garanzia di Rimborso del 100%",
+      "meta_title": "Politica di Cancellazione & Rimborso",
       "meta_title_2": "Politica di Cancellazione & Rimborso"
     },
     "kapadokya": {
       "meta_desc": "Guida di viaggio della Cappadocia: prezzi dei tour in pallone, i migliori hotel, tour panoramici, attività, luoghi fotografici e quando andare. La guida completa in un'unica pagina.",
       "meta_desc_2": "Palloni, hotel, tour, attività — l'intera guida sulla Cappadocia in una pagina.",
       "meta_og_alt": "Guida alla Cappadocia — Trip and Tick",
-      "meta_title": "Guida alla Cappadocia 2026 — Palloni, Hotel, Tour, Attività",
+      "meta_title": "Guida alla Cappadocia 2026 — Palloni, Hotel",
       "meta_title_2": "Guida alla Cappadocia 2026"
     },
     "kullanim_sartlari": {
@@ -109,7 +109,7 @@
       "meta_desc": "Hotel in grotta, soggiorni boutique e hotel per famiglie in Cappadocia. Opzioni centrate su Göreme e Ürgüp — preventivo rapido, consulenza gratuita.",
       "meta_desc_2": "Hotel in grotta, boutique e per famiglie — Göreme e Ürgüp.",
       "meta_og_alt": "Hotel in Cappadocia — Trip and Tick",
-      "meta_title": "Prenotazione Hotel Cappadocia — Hotel in Grotta & Boutique",
+      "meta_title": "Prenotazione Hotel Cappadocia",
       "meta_title_2": "Prenotazione Hotel Cappadocia",
       "slug": {
         "meta_title": "Hotel Non Trovato"
@@ -119,7 +119,7 @@
       "meta_desc": "Pacchetti giornalieri in Cappadocia, pacchetti per lune di miele, famiglie, avventure e proposte di matrimonio. Pallone + hotel + tour in una sola prenotazione — a un prezzo vantaggioso.",
       "meta_desc_2": "Pacchetti per lune di miele, famiglie, avventure — pallone + hotel + tour in una prenotazione.",
       "meta_og_alt": "Pacchetti Vacanze in Cappadocia — Trip and Tick",
-      "meta_title": "Pacchetti Vacanze in Cappadocia — Lune di Miele, Famiglia, Avventura",
+      "meta_title": "Pacchetti Vacanze in Cappadocia",
       "meta_title_2": "Pacchetti Vacanze in Cappadocia"
     },
     "rezervasyon": {
@@ -147,7 +147,7 @@
       "meta_desc": "Risposte rapide ai prezzi dei tour in mongolfiera in Cappadocia, limiti di età, politica di cancellazione, metodi di pagamento e altre domande frequenti. Ricerca ottimizzata da AI.",
       "meta_desc_2": "Tour in mongolfiera, prezzo, età, cancellazione, pagamento — risposte rapide.",
       "meta_og_alt": "FAQ — Trip and Tick",
-      "meta_title": "Domande Frequenti — FAQ sul Tour in Mongolfiera in Cappadocia",
+      "meta_title": "Domande Frequenti",
       "meta_title_2": "Domande Frequenti",
       "meta_og_image_subtitle": "Tour in Mongolfiera · Prezzo · Cancellazione · Pagamento — Risposte Veloci"
     },
@@ -155,14 +155,14 @@
       "meta_desc": "Trasferimenti da e per l'aeroporto di Nevşehir (NAV) e Kayseri (ASR). Opzioni di auto privata, minibus e VIP. Servizio 24/7, prezzo fisso, prenotazione immediata.",
       "meta_desc_2": "Nevşehir (NAV) & Kayseri (ASR) — 24/7, prezzo fisso.",
       "meta_og_alt": "Trasferimento Aeroportuale Cappadocia — Trip and Tick",
-      "meta_title": "Trasferimento Aeroportuale Cappadocia — Nevşehir & Kayseri",
+      "meta_title": "Trasferimento Aeroportuale Cappadocia",
       "meta_title_2": "Trasferimento Aeroportuale Cappadocia"
     },
     "turlar": {
       "meta_desc": "I tour panoramici più popolari della Cappadocia: Tour Rosso (Göreme + Uçhisar), Tour Verde (Ihlara + Derinkuyu), tour al tramonto e fotografici. Guidati, trasferimento incluso.",
       "meta_desc_2": "Tour Rosso, Verde e al Tramonto — guidati, trasferimento incluso.",
       "meta_og_alt": "Tour Panoramici Cappadocia — Trip and Tick",
-      "meta_title": "Tour Panoramici Cappadocia — Rosso, Verde, Tramonto",
+      "meta_title": "Tour Panoramici Cappadocia — Rosso, Verde",
       "meta_title_2": "Tour Panoramici Cappadocia"
     },
     "yorum": {

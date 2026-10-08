@@ -13,6 +13,7 @@ import { breadcrumbSchema, lodgingSchema } from "@/lib/schema";
 import { generateHreflang, canonicalFor, ogLocale, ogImageUrl } from "@/lib/hreflang";
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { serverDict } from "@/lib/i18n/serverDict";
+import { clampTitle } from "@/lib/title";
 import { OtelDetayContent } from "./OtelDetayContent";
 
 export const dynamic = "force-static";
@@ -36,7 +37,7 @@ export function generateMetadata({ params }: PageParams): Metadata {
   const cta = loc === "tr" ? "Bilgi & rezervasyon için bize ulaşın." : "Contact us for info & booking.";
   const enrichedDesc = `${hotel.name} — ${geo}. ${hotel.shortDescription} ${cta}`.slice(0, 154);
   return {
-    title: `${hotel.name} — ${geo}`,
+    title: clampTitle(`${hotel.name} — ${geo}`),
     description: enrichedDesc,
     alternates: { canonical: canonicalFor(path, params.locale), languages: generateHreflang(path) },
     openGraph: {

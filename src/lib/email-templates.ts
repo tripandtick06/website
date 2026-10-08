@@ -514,7 +514,7 @@ export function rescheduleBatchEmailHtml(p: RescheduleEmailParams): string {
     <h3 style="margin:18px 0 8px 0;font-size:15px;color:${BRAND_PRIMARY};">Seçenek 2 — %100 iade</h3>
     <p style="margin:0 0 14px 0;font-size:14px;color:#475569;">
       İstemezseniz <strong>${escapeHtml(formatCurrency(p.refundAmount, p.currency))}</strong> tutarın tamamı
-      hesabınıza 5 iş günü içinde iade edilir.
+      hesabınıza 5-10 iş günü içinde iade edilir.
     </p>
 
     <div style="background:#fffbeb;border:1px solid ${BRAND_GOLD};border-radius:6px;padding:10px 14px;margin:18px 0;font-size:12px;color:#78350f;">
@@ -548,7 +548,7 @@ export function rescheduleBatchEmailText(p: RescheduleEmailParams): string {
     `İki seçenek:`,
     `1) Alternatif tarih seç (önerilen):`,
     ...p.alternativeDates.slice(0, 5).map((d) => `   - ${formatDateTr(d)}`),
-    `2) %100 iade (${formatCurrency(p.refundAmount, p.currency)}) — 5 iş günü`,
+    `2) %100 iade (${formatCurrency(p.refundAmount, p.currency)}) — 5-10 iş günü`,
     ``,
     `Tek-tıklık link (${p.ttlDays} gün geçerli):`,
     p.magicLinkUrl,
@@ -600,7 +600,7 @@ export function rescheduleConfirmationEmailHtml(p: RescheduleConfirmationParams)
   const body = `
     <p style="margin:0 0 14px 0;">Merhaba <strong>${escapeHtml(p.customerName)}</strong>,</p>
     <p style="margin:0 0 14px 0;">
-      ${refundLine} talebiniz alındı. 5 iş günü içinde ödeme yaptığınız karta yansıyacaktır.
+      ${refundLine} talebiniz alındı. 5-10 iş günü içinde ödeme yaptığınız karta yansıyacaktır.
     </p>
     <p style="margin:0 0 14px 0;font-size:13px;color:#64748b;">
       Rezervasyon kodu: <strong>${escapeHtml(p.bookingId)}</strong> · ${escapeHtml(p.serviceName)}
@@ -611,7 +611,7 @@ export function rescheduleConfirmationEmailHtml(p: RescheduleConfirmationParams)
   `;
   return shellHtml({
     title: "İade Talebiniz Alındı",
-    preheader: "5 iş günü içinde iade.",
+    preheader: "5-10 iş günü içinde iade.",
     badge: "İade",
     badgeColor: BRAND_ACCENT,
     heading: "İade Talebiniz Alındı",
@@ -640,8 +640,8 @@ export function rescheduleConfirmationEmailText(p: RescheduleConfirmationParams)
     `Merhaba ${p.customerName},`,
     ``,
     p.refundAmount && p.currency
-      ? `İade tutarı: ${formatCurrency(p.refundAmount, p.currency)} — 5 iş günü içinde karta.`
-      : `Tam iade — 5 iş günü içinde karta.`,
+      ? `İade tutarı: ${formatCurrency(p.refundAmount, p.currency)} — 5-10 iş günü içinde karta.`
+      : `Tam iade — 5-10 iş günü içinde karta.`,
     `Kod: ${p.bookingId} · ${p.serviceName}`,
     ``,
     `--`,

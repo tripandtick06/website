@@ -10,6 +10,7 @@ import type { ServiceItem } from "@/data/services/catalog";
 import { getLongDescription } from "@/data/services/descriptions";
 import { isLocale, DEFAULT_LOCALE, SUPPORTED_LOCALES, type Locale } from "@/lib/i18n/dictionaries";
 import { serverDict } from "@/lib/i18n/serverDict";
+import { clampTitle } from "@/lib/title";
 import { tService } from "@/lib/i18n/localizeData";
 import { breadcrumbSchema, productSchema } from "@/lib/schema";
 import {
@@ -74,7 +75,7 @@ export function makeServiceDetailPage(cfg: ServiceDetailConfig) {
       // root layout title.template appends the brand — a hardcoded suffix here
       // rendered "… | Trip and Tick | Trip and Tick" on every activity/tour/
       // transfer page (live audit 2026-09-16).
-      title: ogTitle,
+      title: clampTitle(ogTitle),
       description: item.shortDescription,
       alternates: {
         canonical: canonicalFor(path, loc),

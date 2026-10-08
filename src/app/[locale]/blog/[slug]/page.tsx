@@ -9,6 +9,7 @@ import { blogAlternates, stripBrandSuffix } from "@/lib/blog-alternates";
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { serverDict } from "@/lib/i18n/serverDict";
 import { ARTICLES, type BlogArticle, type BlogArticleMeta } from "@/data/blog";
+import { clampTitle } from "@/lib/title";
 import { BlogArticleContent } from "./BlogArticleContent";
 
 // Tum makaleler build-time SSG -> statik HTML (indexlenebilir, noindex YOK).
@@ -51,7 +52,7 @@ export async function generateMetadata({
   // Article metaTitles often already end with the brand suffix; the layout's
   // title.template appends the brand again (doubled brand on 7/7 sampled
   // live articles, audit 2026-09-15). Strip a trailing brand here.
-  const title = stripBrandSuffix(article.metaTitle || article.title);
+  const title = clampTitle(stripBrandSuffix(article.metaTitle || article.title));
 
   // hreflang cluster: translations of this article in indexable locales
   // (src/lib/blog-alternates.ts — shared with sitemap.ts).

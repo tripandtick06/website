@@ -18,6 +18,7 @@ import {
   productSchema,
 } from "@/lib/schema";
 import { generateHreflang, ogImageUrl, canonicalFor, ogLocale } from "@/lib/hreflang";
+import { clampTitle } from "@/lib/title";
 import { BalonDetayContent } from "./BalonDetayContent";
 
 interface PageParams {
@@ -38,7 +39,7 @@ export function generateMetadata({ params }: PageParams): Metadata {
   const geo = loc === "tr" ? "Kapadokya" : "Cappadocia";
   const ogTitle = `${pkg.name} — ${geo} ${priceLabel}`;
   return {
-    title: `${pkg.name} — ${geo} ${priceLabel}`,
+    title: clampTitle(`${pkg.name} — ${geo} ${priceLabel}`),
     description: pkg.shortDescription,
     alternates: {
       canonical: canonicalFor(path, params.locale),

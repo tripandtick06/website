@@ -127,7 +127,7 @@ export async function POST(req: NextRequest) {
       hoursUntil: Math.max(0, Math.round(policy.hoursUntil)),
       message:
         policy.pct === 100
-          ? "Iptal talebiniz alindi. Tam iade 3-5 is gunu icinde kartiniza yansiyacaktir."
+          ? "Iptal talebiniz alindi. Tam iade 5-10 is gunu icinde kartiniza yansiyacaktir."
           : policy.pct === 50
             ? "Iptal talebiniz alindi. Politika geregi %50 iade uygulanacaktir."
             : "Iptal talebiniz alindi. Ucus tarihinizi 24 saatten az kaldigi icin iade yapilamamaktadir.",
