@@ -5,9 +5,12 @@ import fs from "node:fs";
 import path from "node:path";
 import { ARTICLES } from "@/data/blog";
 import { stripBrandSuffix } from "@/lib/blog-alternates";
-import { clampTitle, TITLE_BRAND_SUFFIX, TITLE_MAX } from "@/lib/title";
+import { clampTitle, TITLE_BRAND_SUFFIX_LEN, TITLE_MAX } from "@/lib/title";
 
 // Final <title> = page meta_title + layout title.template ("%s | Trip and Tick").
+// The suffix string lives only here (and in the root layout); src keeps a length
+// constant so seo-guards' doubled-title rule stays meaningful.
+const TITLE_BRAND_SUFFIX = " | Trip and Tick";
 // Site-wide ratchet: every static page meta_title in the indexable locales must
 // fit in 60 chars INCLUDING the brand suffix. Keys are collected from the
 // dictionary itself, so a newly added page is covered automatically.
@@ -28,6 +31,9 @@ function collectTitles(node: unknown, trail: string[] = []): Array<[string, stri
 }
 
 describe("title length guard (<=60 incl. brand suffix) — all static pages", () => {
+  it("src length constant matches the real layout suffix", () => {
+    expect(TITLE_BRAND_SUFFIX.length).toBe(TITLE_BRAND_SUFFIX_LEN);
+  });
   for (const loc of INDEXABLE) {
     const titles = collectTitles((serverDict(loc as Locale) as any).page);
     it(`${loc}: dictionary exposes page titles`, () => {
