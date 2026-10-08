@@ -747,7 +747,7 @@ export default function HesabimPage() {
               <span className="font-mono font-bold">{cancelDialog.bookingId}</span> rezervasyonunuzu iptal etmek istediginizden emin misiniz?
             </p>
             <div className="bg-slate-50 rounded-lg p-3 mb-4 text-xs text-slate-600 space-y-1">
-              <div><strong>72 saat once:</strong> %100 iade (3-5 is gunu)</div>
+              <div><strong>72 saat once:</strong> %100 iade (5-10 is gunu)</div>
               <div><strong>24-72 saat:</strong> %50 iade</div>
               <div><strong>24 saatten az:</strong> iade yok (operator hava iptalinde tam iade)</div>
             </div>

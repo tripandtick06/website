@@ -85,7 +85,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "Transfer fiyatı kişi başı mı?",
         answer:
-          "Hayır, fiyat araç başınadır (1-4 kişi). 5+ kişi için minibüs (€65-95) veya VIP araç (€85-120) seçeneği vardır. Bagaj limiti yoktur; özel ekipman (bisiklet, snowboard) için önceden bildirim.",
+          "Hayır, fiyat araç başınadır (1-4 kişi). 5+ kişi için paylaşımlı minibüs (kişi başı €12'den başlayan) veya VIP araç (saatlik €35'ten başlayan) seçeneği vardır. Bagaj limiti yoktur; özel ekipman (bisiklet, snowboard) için önceden bildirim.",
       },
       {
         question: "Şoför otelden alacak mı?",
@@ -215,7 +215,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "Is the transfer price per person?",
         answer:
-          "No, the price is per vehicle (1-4 people). For 5+ people there is a minibus (€65-95) or VIP vehicle (€85-120) option. There is no luggage limit; please notify us in advance for special equipment (bicycle, snowboard).",
+          "No, the price is per vehicle (1-4 people). For 5+ people there is a shared minibus (from €12 per person) or VIP vehicle (from €35 per hour) option. There is no luggage limit; please notify us in advance for special equipment (bicycle, snowboard).",
       },
       {
         question: "Will the driver pick me up from the hotel?",
@@ -335,7 +335,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "Ist der Transferpreis pro Person?",
         answer:
-          "Nein, der Preis gilt pro Fahrzeug (1-4 Personen). Für 5+ Personen gibt es einen Minibus (€65-95) oder ein VIP-Fahrzeug (€85-120). Es gibt kein Gepäcklimit; für Spezialausrüstung (Fahrrad, Snowboard) bitte vorher Bescheid geben.",
+          "Nein, der Preis gilt pro Fahrzeug (1-4 Personen). Für 5+ Personen gibt es einen Shuttle-Minibus (ab €12 pro Person) oder ein VIP-Fahrzeug (ab €35 pro Stunde). Es gibt kein Gepäcklimit; für Spezialausrüstung (Fahrrad, Snowboard) bitte vorher Bescheid geben.",
       },
       {
         question: "Holt mich der Fahrer vom Hotel ab?",
@@ -440,7 +440,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "Le prix du transfert est-il par personne ?",
         answer:
-          "Non, le prix est par véhicule (1-4 personnes). Pour 5+ personnes, il y a une option minibus (€65-95) ou véhicule VIP (€85-120). Il n'y a pas de limite de bagages ; merci de nous prévenir à l'avance pour un équipement spécial (vélo, snowboard).",
+          "Non, le prix est par véhicule (1-4 personnes). Pour 5+ personnes, il y a une option minibus partagé (à partir de €12 par personne) ou véhicule VIP (à partir de €35 par heure). Il n'y a pas de limite de bagages ; merci de nous prévenir à l'avance pour un équipement spécial (vélo, snowboard).",
       },
       {
         question: "Le chauffeur viendra-t-il me chercher à l'hôtel ?",
@@ -545,7 +545,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "¿El precio del traslado es por persona?",
         answer:
-          "No, el precio es por vehículo (1-4 personas). Para 5+ personas hay opción de minibús (€65-95) o vehículo VIP (€85-120). No hay límite de equipaje; avísenos con antelación para equipo especial (bicicleta, snowboard).",
+          "No, el precio es por vehículo (1-4 personas). Para 5+ personas hay opción de minibús compartido (desde €12 por persona) o vehículo VIP (desde €35 por hora). No hay límite de equipaje; avísenos con antelación para equipo especial (bicicleta, snowboard).",
       },
       {
         question: "¿El conductor me recogerá del hotel?",
@@ -650,7 +650,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "Is de transferprijs per persoon?",
         answer:
-          "Nee, de prijs is per voertuig (1-4 personen). Voor 5+ personen is er een minibus (€65-95) of VIP-voertuig (€85-120). Er is geen bagagelimiet; meld speciale uitrusting (fiets, snowboard) vooraf aan.",
+          "Nee, de prijs is per voertuig (1-4 personen). Voor 5+ personen is er een gedeelde minibus (vanaf €12 per persoon) of VIP-voertuig (vanaf €35 per uur). Er is geen bagagelimiet; meld speciale uitrusting (fiets, snowboard) vooraf aan.",
       },
       {
         question: "Haalt de chauffeur me op bij het hotel?",
@@ -755,7 +755,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "接送价格是按人计吗？",
         answer:
-          "不是，价格按车计（1-4 人）。5 人以上有小巴（€65-95）或 VIP 车辆（€85-120）选项。无行李限制；特殊装备（自行车、滑雪板）请提前告知。",
+          "不是，价格按车计（1-4 人）。5 人以上有拼车小巴（€12 起/人）或 VIP 车辆（€35 起/小时）选项。无行李限制；特殊装备（自行车、滑雪板）请提前告知。",
       },
       {
         question: "司机会到酒店接我吗？",
@@ -860,7 +860,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "क्या ट्रांसफर की कीमत प्रति व्यक्ति है?",
         answer:
-          "नहीं, कीमत प्रति वाहन है (1-4 लोग)। 5+ लोगों के लिए मिनीबस (€65-95) या VIP वाहन (€85-120) विकल्प है। कोई सामान सीमा नहीं है; विशेष उपकरण (साइकिल, स्नोबोर्ड) के लिए पहले से सूचित करें।",
+          "नहीं, कीमत प्रति वाहन है (1-4 लोग)। 5+ लोगों के लिए साझा मिनीबस (€12 प्रति व्यक्ति से शुरू) या VIP वाहन (€35 प्रति घंटा से शुरू) विकल्प है। कोई सामान सीमा नहीं है; विशेष उपकरण (साइकिल, स्नोबोर्ड) के लिए पहले से सूचित करें।",
       },
       {
         question: "क्या ड्राइवर मुझे होटल से लेगा?",
@@ -965,7 +965,7 @@ const PAGE_FAQS: Partial<Record<Locale, Record<PageKey, Faq[]>>> = {
       {
         question: "کیا ٹرانسفر کی قیمت فی شخص ہے؟",
         answer:
-          "نہیں، قیمت فی گاڑی ہے (1-4 افراد)۔ 5+ افراد کے لیے منی بس (€65-95) یا VIP گاڑی (€85-120) کا اختیار ہے۔ سامان کی کوئی حد نہیں؛ خصوصی سامان (سائیکل، سنو بورڈ) کے لیے پہلے سے اطلاع دیں۔",
+          "نہیں، قیمت فی گاڑی ہے (1-4 افراد)۔ 5+ افراد کے لیے مشترکہ منی بس (€12 فی کس سے شروع) یا VIP گاڑی (€35 فی گھنٹہ سے شروع) کا اختیار ہے۔ سامان کی کوئی حد نہیں؛ خصوصی سامان (سائیکل، سنو بورڈ) کے لیے پہلے سے اطلاع دیں۔",
       },
       {
         question: "کیا ڈرائیور مجھے ہوٹل سے لے گا؟",

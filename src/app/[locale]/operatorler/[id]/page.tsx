@@ -20,6 +20,7 @@ import { pickReviews } from "@/data/reviews";
 import { breadcrumbSchema, faqPageSchema } from "@/lib/schema";
 import { canonicalFor, generateHreflang } from "@/lib/hreflang";
 import { operatorFaqs } from "@/lib/operator-faq";
+import { clampTitle } from "@/lib/title";
 import { OperatorDetayContent } from "./OperatorDetayContent";
 
 export function generateStaticParams() {
@@ -34,9 +35,10 @@ export async function generateMetadata({
   const op = getOperatorById(params.id);
   if (!op) return { title: "Operator bulunamadı" };
   const isTr = params.locale === "tr";
-  const title = isTr
+  const rawTitle = isTr
     ? `${op.name} — Fiyatlar ve Rezervasyon 2026`
     : `${op.aliases[0] ?? op.name} — Prices & Booking 2026`;
+  const title = clampTitle(rawTitle);
   const description = isTr
     ? `${op.name} ile Kapadokya balon turu: Trip and Tick üzerinden paketler, güncel fiyat ve rezervasyon. Gün doğumu uçuşu, otel transferi, hava iptalinde %100 iade.`
     : `${op.aliases[0] ?? op.name} balloon flights in Cappadocia: packages, live prices and booking through Trip and Tick. Sunrise flight, hotel transfer, 100% refund on weather cancellation.`;
