@@ -1,0 +1,158 @@
+{
+  "name": "Cappadocia Hot Air Balloon Facts Index 2026",
+  "edition": "2026-10",
+  "slug": "cappadocia-balloon-facts-index",
+  "checked": "2026-10-09",
+  "description": "Sourced facts on hot air ballooning in Cappadocia, Türkiye: who regulates it, flight rules, weather limits, take-off areas, fleet and passenger statistics. Every fact links to an official source with a literal quote.",
+  "datapoints": [
+    {
+      "id": "licensing-shgm",
+      "text": "Commercial passenger balloon operations in Türkiye require an operating licence issued by the Directorate General of Civil Aviation (SHGM, Sivil Havacılık Genel Müdürlüğü), under the Commercial Balloon Operators Instruction (SHT-BALON RUHSAT).",
+      "source": {
+        "url": "https://web.shgm.gov.tr/documents/sivilhavacilik/files/mevzuat/sektorel/talimatlar/2022/SHT-BALON-RUHSAT-Rev01.pdf",
+        "quote": "balon ile icra edilen ticari yolcu operasyonu yapacak işletmelerin Genel Müdürlük tarafından ruhsatlandırılması",
+        "quoteLang": "tr",
+        "read": "2026-10-09"
+      }
+    },
+    {
+      "id": "flight-areas-only",
+      "text": "Paid passenger balloon flights may only take place in areas that SHGM has published as balloon flight areas in aviation publications (Türkiye AIP, AIC, NOTAM).",
+      "source": {
+        "url": "https://web.shgm.gov.tr/documents/sivilhavacilik/files/mevzuat/sektorel/talimatlar/karma/SHT-BALON.pdf",
+        "quote": "Genel Müdürlük tarafından havacılık yayınlarında (Türkiye AIP’si, AIC, NOTAM vb.) balon uçuş sahası olarak yayımlanmış bölgelerde gerçekleştirilebilir.",
+        "quoteLang": "tr",
+        "read": "2026-10-09"
+      }
+    },
+    {
+      "id": "flag-no-clearance",
+      "text": "In the Cappadocia flight area, take-off clearance is not given to balloon operators when a red or yellow weather flag is declared for the sector.",
+      "source": {
+        "url": "https://web.shgm.gov.tr/documents/sivilhavacilik/files/mevzuat/sektorel/talimatlar/2020/SHT-BALON_SLOT_Rev04.pdf",
+        "quote": "Kırmızı veya sarı bayrak ilan edilmesi durumunda balon işletmelerine kalkış uygunluğu verilmez.",
+        "quoteLang": "tr",
+        "read": "2026-10-09"
+      }
+    },
+    {
+      "id": "morning-period",
+      "text": "The Cappadocia slot instruction defines the morning flight period (first period) as running from 30 minutes before sunrise until 11:00 local time.",
+      "source": {
+        "url": "https://web.shgm.gov.tr/documents/sivilhavacilik/files/mevzuat/sektorel/talimatlar/2020/SHT-BALON_SLOT_Rev04.pdf",
+        "quote": "Gün doğumundan 30 dakika öncesiyle yerel 11.00 saatleri arasını",
+        "quoteLang": "tr",
+        "read": "2026-10-09"
+      }
+    },
+    {
+      "id": "max-simultaneous-2019",
+      "text": "SHGM circular UOD-2014/5 (27 June 2019) allowed at most 105 balloons to fly at the same time in the first daily period (30 minutes before sunrise to 11:00 local time) in the Cappadocia region. This is the figure in that circular; later slot rules may differ.",
+      "source": {
+        "url": "https://web.shgm.gov.tr/documents/sivilhavacilik/files/mevzuat/sektorel/genelgeler/2019/UOD-2014-5.pdf",
+        "quote": "ilk periyodu gün doğumundan 30 dakika öncesi ile yerel 11.00 saatleri arasında ve aynı anda en fazla 105 balonun uçuşuna izin verilecektir",
+        "quoteLang": "tr",
+        "read": "2026-10-09"
+      }
+    },
+    {
+      "id": "wind-limit",
+      "text": "For hot air balloons, no flight is made if the surface wind at the take-off place and time is above 10 knots on passenger flights (8 knots for solo student flights). 10 knots is about 18.5 km/h.",
+      "source": {
+        "url": "https://web.shgm.gov.tr/documents/sivilhavacilik/files/mevzuat/BALON041225.pdf",
+        "quote": "Sıcak hava balonları için, yer rüzgârı, kalkış anında ve yerinde öğrencilerin yalnız uçuşlarında 8 knot, yolculu uçuşlarda 10 knot üzerinde ise balonla uçuş yapılmaz.",
+        "quoteLang": "tr",
+        "read": "2026-10-09"
+      }
+    },
+    {
+      "id": "min-height-settlements",
+      "text": "Except for landing and emergencies, a balloon may not fly below 1,000 ft above ground level over inhabited areas.",
+      "source": {
+        "url": "https://web.shgm.gov.tr/documents/sivilhavacilik/files/mevzuat/BALON041225.pdf",
+        "quote": "İniş ve acil durumlar dışında, meskûn mahallerin üzerinde 1.000 fit AGL yükseklik altında.",
+        "quoteLang": "tr",
+        "read": "2026-10-09"
+      }
+    },
+    {
+      "id": "basket-capacity-2019",
+      "text": "SHGM circular UOD-2014/5 (2019) caps passengers per Cappadocia balloon by envelope size, within the manufacturer's limits: 24 passengers at 450,000 cu ft, 28 at 500,000 and 530,000 cu ft, 32 at 600,000 cu ft. This is the figure in that circular; later rules may differ.",
+      "source": {
+        "url": "https://web.shgm.gov.tr/documents/sivilhavacilik/files/mevzuat/sektorel/genelgeler/2019/UOD-2014-5.pdf",
+        "quote": "450 bin cuft'lik balonlarda maksimum 24, 500 bin cuft'lik balonlarda maksimum 28, 530 bin cuft'lik balonlarda maksimum 28 ve 600 bin cuft'lik balonlarda maksimum 32 yolcu taşınabilecektir",
+        "quoteLang": "tr",
+        "read": "2026-10-09"
+      }
+    },
+    {
+      "id": "fleet-2025-tr",
+      "text": "At the end of 2025, SHGM statistics show 71 licensed balloon operators and 517 balloons in Türkiye (national figure, covering Cappadocia, Pamukkale, Soğanlı, Çat, Ihlara and Frig valley).",
+      "source": {
+        "url": "https://web.shgm.gov.tr/documents/sivilhavacilik/files/kurumsal/SHGMistatistikler2025.pdf",
+        "quote": "71 balon işletmesinde toplam 517 adet balon bulunmaktadır",
+        "quoteLang": "tr",
+        "read": "2026-10-09"
+      }
+    },
+    {
+      "id": "flights-passengers-2025-tr",
+      "text": "In 2025, balloon flights in Türkiye (all flight areas) totalled 41,536 flights carrying 940,818 passengers, according to SHGM statistics.",
+      "source": {
+        "url": "https://web.shgm.gov.tr/documents/sivilhavacilik/files/kurumsal/SHGMistatistikler2025.pdf",
+        "quote": "toplam 41.536 balon uçuşu gerçekleşmiş ve 940.818 yolcuya",
+        "quoteLang": "tr",
+        "read": "2026-10-09"
+      }
+    },
+    {
+      "id": "cappadocia-passengers-2024",
+      "text": "In 2024, 769,814 domestic and foreign passengers flew in hot air balloons over Cappadocia, an all-time record at the time, according to the Nevşehir Governorship.",
+      "source": {
+        "url": "https://www.nevsehir.gov.tr/kapadokyada-sicak-hava-balonlari-rekora-uctu",
+        "quote": "UNESCO Dünya Mirası Listesi'ndeki Kapadokya'da tarihi, kültürel ve doğal güzellikleri geçen yıl 769 bin 814 yerli ve yabancı ziyaretçi gökyüzünden izledi.",
+        "quoteLang": "tr",
+        "read": "2026-10-09"
+      }
+    },
+    {
+      "id": "cappadocia-flights-2024",
+      "text": "The Nevşehir Governorship reported 27,945 balloon flights in the Cappadocia region in 2023 and 31,851 in 2024.",
+      "source": {
+        "url": "https://www.nevsehir.gov.tr/kapadokyada-sicak-hava-balonlari-rekora-uctu",
+        "quote": "2023'te bölgede 27 bin 945 balon uçuşu gerçekleşirken bu sayının 2024'te 31 bin 851'e ulaştığını kaydetti",
+        "quoteLang": "tr",
+        "read": "2026-10-09"
+      }
+    },
+    {
+      "id": "cappadocia-flight-days",
+      "text": "Balloons flew on 218 days in 2023 and 236 days in 2024 in Cappadocia, according to the Governor of Nevşehir. Flight days depend on weather.",
+      "source": {
+        "url": "https://www.nevsehir.gov.tr/kapadokyada-sicak-hava-balonlari-rekora-uctu",
+        "quote": "2023 yılında 218 gün uçuş olmuş ve yaklaşık 622 bin kişi uçuş yapmıştı. 2024'te ise 236 gün uçuş yapıldı",
+        "quoteLang": "tr",
+        "read": "2026-10-09"
+      }
+    },
+    {
+      "id": "takeoff-circle",
+      "text": "Cappadocia balloon take-offs are concentrated in a 4 km-diameter circle centred at 38°39'13\"N 34°50'20\"E (the Göreme area). Balloons flying a second (later) flight must launch from outside this circle.",
+      "source": {
+        "url": "https://web.shgm.gov.tr/documents/sivilhavacilik/files/mevzuat/sektorel/talimatlar/2020/SHT-BALON_SLOT_Rev04.pdf",
+        "quote": "İkincil uçuş yapacak balonlar, uçuşların yoğun olarak yapıldığı, 38°39'13\"K, 34°50'20\"D merkezli, 4 km çaplı dairenin dışından kalkmak zorundadır.",
+        "quoteLang": "tr",
+        "read": "2026-10-09"
+      }
+    },
+    {
+      "id": "tat-standard-from-price",
+      "text": "Trip and Tick lists its Standard Balloon Flight from €100 per person (starting price, not a fixed price; the current price depends on date and availability).",
+      "source": {
+        "url": "https://tripandtick.com/en/balloon-tours/standart-balon-ucusu",
+        "quote": "catalog",
+        "read": "2026-10-09"
+      }
+    }
+  ]
+}

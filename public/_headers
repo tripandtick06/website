@@ -7,6 +7,11 @@
   X-Robots-Tag: index, follow
   Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://www.googletagmanager.com https://static.hotjar.com https://script.hotjar.com https://aanloopai.nl; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob:; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://api.stripe.com https://api.brevo.com https://*.supabase.co wss://*.supabase.co https://www.google-analytics.com https://*.analytics.google.com https://*.hotjar.com https://*.hotjar.io wss://*.hotjar.com https://*.ingest.sentry.io https://aanloopai.nl; frame-src https://js.stripe.com https://hooks.stripe.com https://calendar.google.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests
 
+/data/*
+  Access-Control-Allow-Origin: *
+  X-Robots-Tag: noindex
+  Cache-Control: public, max-age=3600
+
 /admin/*
   X-Robots-Tag: noindex, nofollow
   Cache-Control: no-store, no-cache, must-revalidate

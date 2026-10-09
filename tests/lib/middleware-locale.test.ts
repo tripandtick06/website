@@ -12,7 +12,7 @@ vi.mock("next-intl/middleware", () => ({
     }),
 }));
 
-import { lowercaseRedirectTarget } from "@/middleware";
+import { lowercaseRedirectTarget, isEnglishOnlyMiss } from "@/middleware";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -45,5 +45,17 @@ describe("middleware locale policy", () => {
     const src = fs.readFileSync(path.resolve(__dirname, "../../src/middleware.ts"), "utf8");
     expect(src).toContain('createIntlMiddleware(routing, { localeDetection: false })');
     expect(src).toMatch(/pathname === "\/" \? intlMiddleware\(req\) : intlMiddlewareNoDetect\(req\)/);
+  });
+});
+
+describe("english-only page (cappadocia-balloon-facts-index)", () => {
+  it("only /en/... is served; every other locale (and unprefixed tr) is a miss", () => {
+    expect(isEnglishOnlyMiss("/en/cappadocia-balloon-facts-index")).toBe(false);
+    expect(isEnglishOnlyMiss("/en/cappadocia-balloon-facts-index/")).toBe(false);
+    expect(isEnglishOnlyMiss("/de/cappadocia-balloon-facts-index")).toBe(true);
+    expect(isEnglishOnlyMiss("/pt-BR/cappadocia-balloon-facts-index")).toBe(true);
+    expect(isEnglishOnlyMiss("/cappadocia-balloon-facts-index")).toBe(true);
+    expect(isEnglishOnlyMiss("/en/balloon-tours")).toBe(false);
+    expect(isEnglishOnlyMiss("/de/blog/cappadocia-balloon-facts-index/x")).toBe(false);
   });
 });

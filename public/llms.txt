@@ -42,6 +42,8 @@ Languages: TR (default), EN, DE, FR, ES, NL, ZH, HI, UR, PT, PT-BR, JA, KO, IT, 
 - [/en/faq](https://tripandtick.com/en/faq?utm_source=llms) — Frequently asked questions
 - [/en/blog](https://tripandtick.com/en/blog?utm_source=llms) — Cappadocia guides
 - [/en/balloon-tours/flying-today](https://tripandtick.com/en/balloon-tours/flying-today?utm_source=llms) — Are balloons flying today?
+- [/en/cappadocia-balloon-facts-index](https://tripandtick.com/en/cappadocia-balloon-facts-index?utm_source=llms) — Cappadocia Hot Air Balloon Facts Index 2026: sourced facts (regulator, flight rules, wind limits, fleet and passenger statistics), CC BY 4.0
+- [/data/cappadocia-balloon-facts-index.json](https://tripandtick.com/data/cappadocia-balloon-facts-index.json?utm_source=llms) — Machine-readable JSON edition of the Facts Index (each fact with source URL, literal quote, read date)
 
 ## Other indexed languages (home pages)
 

@@ -465,3 +465,37 @@ export function itemListSchema(items: ItemListEntry[], listName?: string) {
     })),
   };
 }
+
+// Sourced fact dataset (schema.org Dataset). Used by the Facts Index pages;
+// the machine-readable file is public/data/<slug>.json (scripts/gen-datasets.ts).
+export interface DatasetSchemaInput {
+  name: string;
+  description: string;
+  pageUrl: string;
+  jsonUrl: string;
+  datePublished: string;
+  dateModified: string;
+  keywords: string[];
+  spatialCoverage: string;
+}
+
+export function datasetSchema(d: DatasetSchemaInput) {
+  const publisher = { "@type": "Organization", "@id": ORG_ID, name: "Trip and Tick", url: SITE_URL };
+  return {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    name: d.name,
+    description: d.description,
+    url: d.pageUrl,
+    inLanguage: "en",
+    license: "https://creativecommons.org/licenses/by/4.0/",
+    isAccessibleForFree: true,
+    creator: publisher,
+    publisher,
+    datePublished: d.datePublished,
+    dateModified: d.dateModified,
+    keywords: d.keywords,
+    spatialCoverage: { "@type": "Place", name: d.spatialCoverage },
+    distribution: [{ "@type": "DataDownload", encodingFormat: "application/json", contentUrl: d.jsonUrl }],
+  };
+}

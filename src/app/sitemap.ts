@@ -45,6 +45,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: url("/impressum"), lastModified: new Date("2026-06-03"), changeFrequency: "yearly", priority: 0.3, alternates: alt("/impressum") },
   ];
 
+  // English-only sourced fact dataset (no hreflang cluster; other locales 404).
+  // Date mirrors `checked` in src/data/datasets/cappadocia-balloon-facts.json.
+  const factsIndexPage: MetadataRoute.Sitemap = [
+    { url: `${SITE_URL}/en/cappadocia-balloon-facts-index`, lastModified: new Date("2026-10-09"), changeFrequency: "monthly", priority: 0.7 },
+  ];
+
   const balloonPages: MetadataRoute.Sitemap = BALLOON_PACKAGES.map((pkg) => ({
     url: url(`/balonlar/${pkg.slug}`),
     lastModified: BALLOONS_UPDATED_AT,
@@ -109,6 +115,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Dedupe — bazi pillar slug'lari blog JSON slug'lariyla cakisir (intentional).
   const combined = [
     ...staticPages,
+    ...factsIndexPage,
     ...operatorPages,
     ...balloonPages,
     ...hotelPages,
