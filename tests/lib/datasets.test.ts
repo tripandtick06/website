@@ -92,7 +92,7 @@ describe("published JSON + page wiring", () => {
     expect(read("public/llms.txt")).toContain("/en/cappadocia-balloon-facts-index?utm_source=llms");
     expect(read("public/llms.txt")).toContain("/data/cappadocia-balloon-facts-index.json?utm_source=llms");
     const headers = read("public/_headers");
-    expect(headers).toMatch(/\/data\/\*\s+Access-Control-Allow-Origin: \*\s+X-Robots-Tag: noindex/);
+    expect(headers).toMatch(/\/data\/\*\s+Access-Control-Allow-Origin: \*\s+(?:! X-Robots-Tag\s+)?X-Robots-Tag: noindex/);
   });
 
   it("page is English-only (non-en locales 404)", () => {
