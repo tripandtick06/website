@@ -9,6 +9,7 @@
 
 /data/*
   Access-Control-Allow-Origin: *
+  ! X-Robots-Tag
   X-Robots-Tag: noindex
   Cache-Control: public, max-age=3600
 
