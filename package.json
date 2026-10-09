@@ -5,7 +5,7 @@
   "scripts": {
     "predev": "node scripts/gen-image-variants.mjs",
     "dev": "next dev",
-    "prebuild": "node scripts/gen-image-variants.mjs",
+    "prebuild": "node scripts/gen-image-variants.mjs && npx tsx scripts/gen-datasets.ts",
     "build": "next build",
     "postbuild": "npx tsx scripts/indexnow-postbuild.ts",
     "start": "next start",

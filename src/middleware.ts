@@ -42,6 +42,18 @@ export function lowercaseRedirectTarget(pathname: string): string | null {
   return target !== pathname ? target : null;
 }
 
+// English-only pages: /en/cappadocia-balloon-facts-index exists, every other
+// locale must be a real 404. The page itself calls notFound(), but the locale
+// layout streams (loading.tsx), so that answers 200 + noindex meta — a soft
+// 404 on an indexable locale. Rewriting the miss to a path that matches no
+// route yields the genuine 404 status. Guard: tests/lib/middleware-locale.test.ts
+const EN_ONLY_SEGMENT = "cappadocia-balloon-facts-index";
+export function isEnglishOnlyMiss(pathname: string): boolean {
+  const m = /^\/(?:([A-Za-z]{2}(?:-[A-Za-z]{2})?)\/)?([^/]+)\/?$/.exec(pathname);
+  if (!m || m[2] !== EN_ONLY_SEGMENT) return false;
+  return m[1] !== "en";
+}
+
 const RATE_LIMIT_MAX = 10; // requests / window
 const EVENT_MAX = 60; // /api/event — davranış beacon batch'leri
 const RATE_LIMIT_WINDOW_MS = 60 * 1000; // 1 dakika
@@ -76,6 +88,11 @@ export async function middleware(req: NextRequest) {
         return NextResponse.redirect(url);
       }
       return NextResponse.next();
+    }
+    if (isEnglishOnlyMiss(pathname)) {
+      const url = req.nextUrl.clone();
+      url.pathname = "/en/__en-only-miss__";
+      return NextResponse.rewrite(url);
     }
     // next-intl emits 307 (temporary) for locale redirects. KEEP them temporary:
     // root "/" redirects are per-user (Accept-Language / NEXT_LOCALE cookie based).
