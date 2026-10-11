@@ -7,7 +7,6 @@ import "@/styles/globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import CookieConsentMount from "@/components/booking/CookieConsentMount";
-import { WhatsAppFAB } from "@/components/booking/WhatsAppFAB";
 import { I18nProvider } from "@/lib/i18n/I18nProvider";
 import { CurrencyProvider } from "@/lib/currency";
 import { JsonLd } from "@/components/layout/JsonLd";
@@ -168,7 +167,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
               <Header />
               <main className="min-h-screen">{children}</main>
               <Footer />
-              <WhatsAppFAB />
+              {/* WhatsApp: header QuickContactHeader (floating FAB 2026-10-11 kaldirildi — ikinci kopya olmasin) */}
               {/* SocialProofPopup removed 2026-09-15: fabricated 'X just booked' notices (UCPD-class deceptive pattern). */}
               <CookieConsentMount />
               <Tracker />

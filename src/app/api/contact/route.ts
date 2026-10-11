@@ -6,14 +6,24 @@ import { persistLead } from "@/lib/leads";
 export const runtime = "edge";
 export const dynamic = "force-dynamic";
 
-const contactSchema = z.object({
-  name: z.string().min(2, "Ad zorunlu").max(100),
-  email: z.string().email("Geçerli e-posta girin"),
-  phone: z.string().max(40).optional(),
-  subject: z.string().min(2).max(200),
-  message: z.string().min(10).max(5000),
-  _hp: z.string().optional(),
-});
+// Tek lead hatti: /iletisim formu + her sayfadaki hizli talep karti (QuickContact).
+// Hizli talepte e-posta VEYA telefon yeter (refine), mesaj/tarih/kisi opsiyonel.
+const contactSchema = z
+  .object({
+    name: z.string().min(2, "Ad zorunlu").max(100),
+    email: z.string().email("Geçerli e-posta girin").optional().or(z.literal("")),
+    phone: z.string().max(40).optional(),
+    subject: z.string().min(2).max(200),
+    message: z.string().max(5000).optional(),
+    date: z.string().max(40).optional(),
+    people: z.string().max(10).optional(),
+    page: z.string().max(300).optional(),
+    _hp: z.string().optional(),
+  })
+  .refine((d) => Boolean(d.email) || (d.phone ?? "").trim().length >= 6, {
+    message: "E-posta veya telefon zorunlu",
+    path: ["email"],
+  });
 
 const BREVO_API_KEY = process.env.BREVO_API_KEY;
 const BREVO_FROM_EMAIL = process.env.BREVO_FROM_EMAIL ?? "hello@tripandtick.com";
@@ -35,7 +45,9 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ success: true });
     }
 
-    const { name, email, phone, subject, message } = parsed.data;
+    const { name, phone, subject, date, people, page } = parsed.data;
+    const email = parsed.data.email ?? "";
+    const message = parsed.data.message ?? "";
     const ref = `CT-${Date.now().toString(36).toUpperCase()}`;
 
     // Telegram: birincil lead kanali (Murat + owner). Brevo ile paralel, hata lead'i bozmaz.
@@ -48,6 +60,9 @@ export async function POST(req: NextRequest) {
         ["Telefon", phone],
         ["E-posta", email],
         ["Konu", subject],
+        ["Tarih", date],
+        ["Kişi", people],
+        ["Sayfa", page],
         ["Mesaj", message],
       ],
       note: "Aksiyon: müşteriyi 24 saat içinde ara veya yaz.",
@@ -66,7 +81,7 @@ export async function POST(req: NextRequest) {
           body: JSON.stringify({
             sender: { email: BREVO_FROM_EMAIL, name: "Trip and Tick Iletisim Form" },
             to: [{ email: BREVO_TO_EMAIL, name: "Trip and Tick" }],
-            replyTo: { email, name },
+            ...(email ? { replyTo: { email, name } } : {}),
             subject: `[Iletisim] ${subject}`,
             htmlContent: `
               <h2>Yeni iletisim formu</h2>
@@ -74,6 +89,8 @@ export async function POST(req: NextRequest) {
               <p><b>E-posta:</b> ${escapeHtml(email)}</p>
               <p><b>Telefon:</b> ${escapeHtml(phone ?? "—")}</p>
               <p><b>Konu:</b> ${escapeHtml(subject)}</p>
+              <p><b>Tarih / Kişi:</b> ${escapeHtml(date ?? "—")} / ${escapeHtml(people ?? "—")}</p>
+              <p><b>Sayfa:</b> ${escapeHtml(page ?? "—")}</p>
               <hr>
               <pre style="white-space:pre-wrap;font-family:inherit">${escapeHtml(message)}</pre>
             `,
@@ -98,7 +115,7 @@ export async function POST(req: NextRequest) {
       name,
       email,
       phone,
-      payload: { subject, message },
+      payload: { subject, message, date, people, page },
       telegramOk: telegram.ok,
       emailOk,
     });

@@ -21,6 +21,7 @@ import { cn } from "@/lib/utils";
 import { useLocale, useT } from "@/lib/i18n/I18nProvider";
 import { isLocale } from "@/lib/i18n/dictionaries";
 import { useUiText } from "@/lib/i18n/uiText";
+import { QuickContactHeader } from "@/components/booking/QuickContact";
 
 type LangEntry = {
   code: string;
@@ -119,11 +120,11 @@ export function Header() {
     >
       <div className="container-main flex items-center justify-between h-[68px]">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5 group">
+        <Link href="/" className="flex shrink-0 items-center gap-2.5 group">
           <div className="w-9 h-9 bg-accent rounded-lg flex items-center justify-center transition-transform group-hover:scale-105">
             <Wind className="w-5 h-5 text-white" />
           </div>
-          <span className="text-xl font-extrabold text-white tracking-tight">
+          <span className="sr-only sm:not-sr-only text-xl font-extrabold text-white tracking-tight whitespace-nowrap">
             Trip and <span className="text-accent">Tick</span>
           </span>
         </Link>
@@ -138,12 +139,12 @@ export function Header() {
                 href={item.href}
                 aria-current={active ? "page" : undefined}
                 className={cn(
-                  "relative flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors",
+                  "relative flex items-center gap-2 px-2 2xl:px-4 py-2 rounded-lg text-sm font-medium transition-colors",
                   "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-booking/[0.5]",
                   active ? "text-white" : "text-white/75 hover:text-white hover:bg-white/[0.08]"
                 )}
               >
-                <item.icon className="w-4 h-4" />
+                <item.icon className="hidden 2xl:block w-4 h-4" />
                 {item.label}
                 {active && (
                   // aktif route — booking-blue alt indikator
@@ -154,26 +155,29 @@ export function Header() {
           })}
           <Link
             href="/blog"
-            className="px-4 py-2 rounded-lg text-sm font-medium text-white/75 hover:text-white hover:bg-white/[0.08] transition-all"
+            className="px-2 2xl:px-4 py-2 rounded-lg text-sm font-medium text-white/75 hover:text-white hover:bg-white/[0.08] transition-all"
           >
             {t.nav.blog}
           </Link>
           <Link
             href="/kapadokya"
-            className="px-4 py-2 rounded-lg text-sm font-medium text-white/75 hover:text-white hover:bg-white/[0.08] transition-all"
+            className="px-2 2xl:px-4 py-2 rounded-lg text-sm font-medium text-white/75 hover:text-white hover:bg-white/[0.08] transition-all"
           >
             {t.nav_extra.kapadokya_guide}
           </Link>
           <Link
             href="/operatorler"
-            className="px-4 py-2 rounded-lg text-sm font-medium text-white/75 hover:text-white hover:bg-white/[0.08] transition-all"
+            className="px-2 2xl:px-4 py-2 rounded-lg text-sm font-medium text-white/75 hover:text-white hover:bg-white/[0.08] transition-all"
           >
             {t.nav_extra.operators}
           </Link>
         </nav>
 
         {/* Right Side */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-1 sm:gap-3">
+          {/* Talep formu + WhatsApp + e-posta — her sayfada ust kisim (tests/lib/quick-contact.test.ts) */}
+          <QuickContactHeader />
+
           {/* Search */}
           <Link
             href="/ara"

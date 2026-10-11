@@ -54,5 +54,24 @@
     "submit": "Solicitar Informações & Orçamento",
     "received": "Sua solicitação foi recebida.",
     "error": "Algo deu errado"
+  },
+  "quickContact": {
+    "title": "Pedido rápido",
+    "subtitle": "Deixe seus dados e respondemos rapidinho.",
+    "name": "Seu nome",
+    "phone": "Telefone / WhatsApp",
+    "email": "E-mail",
+    "needOne": "Telefone ou e-mail obrigatório.",
+    "date": "Data (opcional)",
+    "people": "Pessoas (opcional)",
+    "message": "Mensagem (opcional)",
+    "more": "Mais detalhes",
+    "send": "Enviar pedido",
+    "sending": "Enviando...",
+    "success": "Obrigado! Recebemos seu pedido e entraremos em contato em breve.",
+    "error": "Não foi possível enviar. Fale diretamente com a gente:",
+    "formBtn": "Pedido",
+    "mail": "Enviar e-mail",
+    "close": "Fechar"
   }
 }
