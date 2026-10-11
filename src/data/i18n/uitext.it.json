@@ -54,5 +54,24 @@
     "submit": "Richiedi informazioni e preventivo",
     "received": "La tua richiesta è stata ricevuta.",
     "error": "Qualcosa è andato storto"
+  },
+  "quickContact": {
+    "title": "Richiesta rapida",
+    "subtitle": "Lasciaci i tuoi dati e ti rispondiamo subito.",
+    "name": "Il tuo nome",
+    "phone": "Telefono / WhatsApp",
+    "email": "E-mail",
+    "needOne": "Telefono o e-mail obbligatorio.",
+    "date": "Data (facoltativo)",
+    "people": "Persone (facoltativo)",
+    "message": "Messaggio (facoltativo)",
+    "more": "Più dettagli",
+    "send": "Invia richiesta",
+    "sending": "Invio in corso...",
+    "success": "Grazie! Abbiamo ricevuto la tua richiesta e ti contatteremo presto.",
+    "error": "Invio non riuscito. Contattaci direttamente:",
+    "formBtn": "Richiesta",
+    "mail": "Invia e-mail",
+    "close": "Chiudi"
   }
 }

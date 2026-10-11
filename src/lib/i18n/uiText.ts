@@ -69,6 +69,25 @@ export interface UiText {
     limited: string;
     soldOut: string;
   };
+  quickContact: {
+    title: string;
+    subtitle: string;
+    name: string;
+    phone: string;
+    email: string;
+    needOne: string;
+    date: string;
+    people: string;
+    message: string;
+    more: string;
+    send: string;
+    sending: string;
+    success: string;
+    error: string;
+    formBtn: string;
+    mail: string;
+    close: string;
+  };
   inquiry: {
     sending: string;
     submit: string;
@@ -131,6 +150,25 @@ const BASE_UI_TEXT = {
       limited: "Az kaldı",
       soldOut: "Dolu",
     },
+    quickContact: {
+      title: "Hızlı talep",
+      subtitle: "Bilgilerinizi bırakın, hemen dönüş yapalım.",
+      name: "Adınız",
+      phone: "Telefon / WhatsApp",
+      email: "E-posta",
+      needOne: "Telefon veya e-posta zorunludur.",
+      date: "Tarih (isteğe bağlı)",
+      people: "Kişi sayısı (isteğe bağlı)",
+      message: "Mesaj (isteğe bağlı)",
+      more: "Daha fazla ayrıntı",
+      send: "Talep gönder",
+      sending: "Gönderiliyor...",
+      success: "Teşekkürler! Talebiniz alındı, en kısa sürede size dönüş yapacağız.",
+      error: "Gönderilemedi. Lütfen doğrudan ulaşın:",
+      formBtn: "Talep",
+      mail: "E-posta gönder",
+      close: "Kapat",
+    },
     inquiry: {
       sending: "Gönderiliyor...",
       submit: "Bilgi & Fiyat Teklifi İste",
@@ -190,6 +228,25 @@ const BASE_UI_TEXT = {
       lastSeats: "Last {n} seats",
       limited: "Almost gone",
       soldOut: "Sold out",
+    },
+    quickContact: {
+      title: "Quick enquiry",
+      subtitle: "Leave your details and we'll get back to you fast.",
+      name: "Your name",
+      phone: "Phone / WhatsApp",
+      email: "E-mail",
+      needOne: "Phone or e-mail is required.",
+      date: "Date (optional)",
+      people: "People (optional)",
+      message: "Message (optional)",
+      more: "More details",
+      send: "Send enquiry",
+      sending: "Sending...",
+      success: "Thank you! We received your enquiry and will contact you shortly.",
+      error: "Could not send. Please contact us directly:",
+      formBtn: "Enquiry",
+      mail: "Send e-mail",
+      close: "Close",
     },
     inquiry: {
       sending: "Sending...",
@@ -251,6 +308,25 @@ const BASE_UI_TEXT = {
       limited: "Fast ausgebucht",
       soldOut: "Ausgebucht",
     },
+    quickContact: {
+      title: "Schnellanfrage",
+      subtitle: "Hinterlassen Sie Ihre Daten, wir melden uns schnell.",
+      name: "Ihr Name",
+      phone: "Telefon / WhatsApp",
+      email: "E-Mail",
+      needOne: "Telefon oder E-Mail ist erforderlich.",
+      date: "Datum (optional)",
+      people: "Personen (optional)",
+      message: "Nachricht (optional)",
+      more: "Weitere Angaben",
+      send: "Anfrage senden",
+      sending: "Wird gesendet...",
+      success: "Vielen Dank! Ihre Anfrage ist eingegangen, wir melden uns in Kürze.",
+      error: "Senden fehlgeschlagen. Bitte kontaktieren Sie uns direkt:",
+      formBtn: "Anfrage",
+      mail: "E-Mail senden",
+      close: "Schließen",
+    },
     inquiry: {
       sending: "Wird gesendet...",
       submit: "Info & Preisangebot anfordern",
@@ -310,6 +386,25 @@ const BASE_UI_TEXT = {
       lastSeats: "Dernières {n} places",
       limited: "Bientôt complet",
       soldOut: "Complet",
+    },
+    quickContact: {
+      title: "Demande rapide",
+      subtitle: "Laissez vos coordonnées, nous vous répondons vite.",
+      name: "Votre nom",
+      phone: "Téléphone / WhatsApp",
+      email: "E-mail",
+      needOne: "Téléphone ou e-mail obligatoire.",
+      date: "Date (facultatif)",
+      people: "Personnes (facultatif)",
+      message: "Message (facultatif)",
+      more: "Plus de détails",
+      send: "Envoyer la demande",
+      sending: "Envoi...",
+      success: "Merci ! Votre demande a bien été reçue, nous vous contactons très vite.",
+      error: "Échec de l'envoi. Contactez-nous directement :",
+      formBtn: "Demande",
+      mail: "Envoyer un e-mail",
+      close: "Fermer",
     },
     inquiry: {
       sending: "Envoi en cours...",
@@ -371,6 +466,25 @@ const BASE_UI_TEXT = {
       limited: "Casi agotado",
       soldOut: "Agotado",
     },
+    quickContact: {
+      title: "Consulta rápida",
+      subtitle: "Déjenos sus datos y le respondemos enseguida.",
+      name: "Su nombre",
+      phone: "Teléfono / WhatsApp",
+      email: "Correo electrónico",
+      needOne: "Se requiere teléfono o correo electrónico.",
+      date: "Fecha (opcional)",
+      people: "Personas (opcional)",
+      message: "Mensaje (opcional)",
+      more: "Más detalles",
+      send: "Enviar consulta",
+      sending: "Enviando...",
+      success: "¡Gracias! Hemos recibido su consulta y le contactaremos pronto.",
+      error: "No se pudo enviar. Contáctenos directamente:",
+      formBtn: "Consulta",
+      mail: "Enviar correo",
+      close: "Cerrar",
+    },
     inquiry: {
       sending: "Enviando...",
       submit: "Solicitar info y presupuesto",
@@ -430,6 +544,25 @@ const BASE_UI_TEXT = {
       lastSeats: "Laatste {n} plaatsen",
       limited: "Bijna vol",
       soldOut: "Uitverkocht",
+    },
+    quickContact: {
+      title: "Snelle aanvraag",
+      subtitle: "Laat uw gegevens achter, wij reageren snel.",
+      name: "Uw naam",
+      phone: "Telefoon / WhatsApp",
+      email: "E-mail",
+      needOne: "Telefoon of e-mail is verplicht.",
+      date: "Datum (optioneel)",
+      people: "Aantal personen (optioneel)",
+      message: "Bericht (optioneel)",
+      more: "Meer details",
+      send: "Aanvraag versturen",
+      sending: "Verzenden...",
+      success: "Bedankt! Uw aanvraag is ontvangen, we nemen binnenkort contact op.",
+      error: "Verzenden mislukt. Neem direct contact met ons op:",
+      formBtn: "Aanvraag",
+      mail: "E-mail sturen",
+      close: "Sluiten",
     },
     inquiry: {
       sending: "Verzenden...",
@@ -491,6 +624,25 @@ const BASE_UI_TEXT = {
       limited: "所剩无几",
       soldOut: "已售罄",
     },
+    quickContact: {
+      title: "快速咨询",
+      subtitle: "留下您的联系方式，我们会尽快回复。",
+      name: "您的姓名",
+      phone: "电话 / WhatsApp",
+      email: "电子邮箱",
+      needOne: "电话或电子邮箱至少填写一项。",
+      date: "日期（选填）",
+      people: "人数（选填）",
+      message: "留言（选填）",
+      more: "更多详情",
+      send: "发送咨询",
+      sending: "发送中...",
+      success: "谢谢！我们已收到您的咨询，会尽快与您联系。",
+      error: "发送失败，请直接联系我们：",
+      formBtn: "咨询",
+      mail: "发送邮件",
+      close: "关闭",
+    },
     inquiry: {
       sending: "发送中...",
       submit: "索取信息与报价",
@@ -551,6 +703,25 @@ const BASE_UI_TEXT = {
       limited: "बहुत कम बची हैं",
       soldOut: "भर गया",
     },
+    quickContact: {
+      title: "त्वरित पूछताछ",
+      subtitle: "अपनी जानकारी छोड़ें, हम जल्दी जवाब देंगे।",
+      name: "आपका नाम",
+      phone: "फ़ोन / WhatsApp",
+      email: "ईमेल",
+      needOne: "फ़ोन या ईमेल आवश्यक है।",
+      date: "तारीख (वैकल्पिक)",
+      people: "लोगों की संख्या (वैकल्पिक)",
+      message: "संदेश (वैकल्पिक)",
+      more: "अधिक विवरण",
+      send: "पूछताछ भेजें",
+      sending: "भेजा जा रहा है...",
+      success: "धन्यवाद! आपकी पूछताछ मिल गई है, हम जल्द ही संपर्क करेंगे।",
+      error: "भेजा नहीं जा सका। कृपया सीधे संपर्क करें:",
+      formBtn: "पूछताछ",
+      mail: "ईमेल भेजें",
+      close: "बंद करें",
+    },
     inquiry: {
       sending: "भेजा जा रहा है...",
       submit: "जानकारी और मूल्य कोटेशन माँगें",
@@ -610,6 +781,25 @@ const BASE_UI_TEXT = {
       lastSeats: "آخری {n} نشستیں",
       limited: "بہت کم باقی",
       soldOut: "فروخت ہو چکا",
+    },
+    quickContact: {
+      title: "فوری دریافت",
+      subtitle: "اپنی تفصیلات چھوڑیں، ہم جلد جواب دیں گے۔",
+      name: "آپ کا نام",
+      phone: "فون / WhatsApp",
+      email: "ای میل",
+      needOne: "فون یا ای میل ضروری ہے۔",
+      date: "تاریخ (اختیاری)",
+      people: "افراد کی تعداد (اختیاری)",
+      message: "پیغام (اختیاری)",
+      more: "مزید تفصیلات",
+      send: "درخواست بھیجیں",
+      sending: "بھیجا جا رہا ہے...",
+      success: "شکریہ! آپ کی درخواست موصول ہو گئی ہے، ہم جلد رابطہ کریں گے۔",
+      error: "بھیجا نہیں جا سکا۔ براہ کرم براہ راست رابطہ کریں:",
+      formBtn: "دریافت",
+      mail: "ای میل بھیجیں",
+      close: "بند کریں",
     },
     inquiry: {
       sending: "بھیجا جا رہا ہے...",

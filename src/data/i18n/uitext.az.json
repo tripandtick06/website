@@ -54,5 +54,24 @@
     "submit": "Məlumat & Qiymət Təklifi İstəyin",
     "received": "Sizin istəyiniz qəbul edilib.",
     "error": "Bir şey səhv oldu"
+  },
+  "quickContact": {
+    "title": "Sürətli sorğu",
+    "subtitle": "Məlumatlarınızı qoyun, tez cavab verək.",
+    "name": "Adınız",
+    "phone": "Telefon / WhatsApp",
+    "email": "E-poçt",
+    "needOne": "Telefon və ya e-poçt mütləqdir.",
+    "date": "Tarix (könüllü)",
+    "people": "Nəfər sayı (könüllü)",
+    "message": "Mesaj (könüllü)",
+    "more": "Daha çox təfərrüat",
+    "send": "Sorğu göndər",
+    "sending": "Göndərilir...",
+    "success": "Təşəkkürlər! Sorğunuz qəbul edildi, tezliklə sizinlə əlaqə saxlayacağıq.",
+    "error": "Göndərmək mümkün olmadı. Birbaşa bizimlə əlaqə saxlayın:",
+    "formBtn": "Sorğu",
+    "mail": "E-poçt göndər",
+    "close": "Bağla"
   }
 }

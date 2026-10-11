@@ -1,7 +1,7 @@
 // WhatsApp click-to-chat yardimcilari (FAB + /api/whatsapp-click ortak).
 //
 // Importers (callers):
-//   - src/components/booking/WhatsAppFAB.tsx    (href + tiklama beacon'i)
+//   - src/components/booking/QuickContact.tsx   (header WhatsApp: href) + WhatsAppFAB.tsx (reportClick beacon)
 //   - src/app/api/whatsapp-click/route.ts       (Telegram bildirimi, sayfa URL'si)
 //   - tests/lib/whatsapp.test.ts
 //

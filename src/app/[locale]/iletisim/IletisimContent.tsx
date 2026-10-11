@@ -47,6 +47,7 @@ export function IletisimContent() {
         title={t.page.iletisim.pagehero_title_bizimle}
         highlight={t.page.iletisim.pagehero_highlight_iletisime_gec}
         description={t.page.iletisim.pagehero_description_sorulariniz_ozel}
+        contactCard={false}
       />
 
       <Breadcrumb items={[{ name: t.page.iletisim.breadcrumb_iletisim, href: "/iletisim" }]} />
@@ -116,7 +117,7 @@ export function IletisimContent() {
             </div>
 
             <div>
-              <div className="bg-white rounded-2xl border border-slate-200 p-6 lg:p-8">
+              <div id="quick-contact" className="bg-white rounded-2xl border border-slate-200 p-6 lg:p-8 scroll-mt-24">
                 <h2 className="text-2xl font-extrabold text-slate-900 mb-2">
                   {t.page.iletisim.mesaj_gonder}
                 </h2>
