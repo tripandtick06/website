@@ -1,10 +1,10 @@
 "use client";
 
-import NextImage from "next/image";
-import { MapPin, ShieldCheck, Wallet, Users } from "lucide-react";
+import { MapPin } from "lucide-react";
 import { useT } from "@/lib/i18n/I18nProvider";
 import { HeroVideo } from "@/components/media/HeroVideo";
 import { QuickContactCard } from "@/components/booking/QuickContact";
+import { TrustBadges } from "@/components/sections/TrustBadges";
 
 export function HeroSection() {
   const t = useT();
@@ -45,32 +45,7 @@ export function HeroSection() {
       <QuickContactCard className="mx-auto lg:mx-0 lg:ml-auto lg:row-span-2 lg:col-start-2 lg:row-start-1" />
 
       {/* Trust Badges */}
-      <div className="relative mt-2 flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-5 max-w-3xl lg:col-start-1">
-        <div className="flex items-center gap-2 bg-white/[0.07] border border-white/15 backdrop-blur-md rounded-full px-4 py-2 text-white/90 text-xs sm:text-sm font-medium">
-          <Wallet className="w-4 h-4 text-accent-light shrink-0" />
-          <span>{t.hero_trust.refund}</span>
-        </div>
-        <div className="flex items-center gap-2 bg-white/[0.07] border border-white/15 backdrop-blur-md rounded-full px-4 py-2 text-white/90 text-xs sm:text-sm font-medium">
-          <ShieldCheck className="w-4 h-4 text-accent-light shrink-0" />
-          <span>{t.hero_trust.insurance}</span>
-        </div>
-        <div className="flex items-center gap-2 bg-white/[0.07] border border-white/15 backdrop-blur-md rounded-full px-4 py-2 text-white/90 text-xs sm:text-sm font-medium">
-          <Users className="w-4 h-4 text-accent-light shrink-0" />
-          <span>{t.hero_trust.operators}</span>
-        </div>
-        <div className="flex items-center gap-2 bg-white/[0.07] border border-white/15 backdrop-blur-md rounded-full px-4 py-2 text-white/90 text-xs sm:text-sm font-medium">
-          <span className="flex items-center justify-center bg-white rounded-full p-0.5 shrink-0">
-            <NextImage
-              src="/images/tursab.png"
-              alt="TÜRSAB üyesi operatörler"
-              width={20}
-              height={20}
-              className="h-5 w-5"
-            />
-          </span>
-          <span>{t.hero_trust.tursab}</span>
-        </div>
-      </div>
+      <TrustBadges className="mt-2 lg:justify-start max-w-3xl lg:col-start-1" />
       </div>
     </section>
   );
