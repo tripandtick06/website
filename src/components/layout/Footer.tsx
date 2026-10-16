@@ -330,7 +330,18 @@ export function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-slate-800">
         <div className="container-main py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
-          <span>© 2026 Trip and Tick. {t.footer.rights}</span>
+          <span>
+            © 2026 Trip and Tick. {t.footer.rights}{" "}
+            <span className="text-slate-500">
+              Website:{" "}
+              <a
+                href="https://aanloopai.nl/werk/tripandtick/"
+                className="hover:text-white transition-colors"
+              >
+                Aanloop AI
+              </a>
+            </span>
+          </span>
           <span className="text-slate-500">{f.bottom_location}</span>
         </div>
       </div>
