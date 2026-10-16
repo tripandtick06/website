@@ -4,6 +4,7 @@ import { tServiceList } from "@/lib/i18n/localizeData";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { PageHero } from "@/components/layout/PageHero";
 import { ServiceCard } from "@/components/layout/ServiceCard";
+import { lowestPrice, toursSubline } from "@/lib/conversion-copy";
 import { FaqSection } from "@/components/layout/FaqSection";
 import { TOURS } from "@/data/services/catalog";
 
@@ -13,12 +14,16 @@ export function TurlarContent({ faqs }: { faqs: FaqItem[] }) {
   const t = useT();
   const { locale } = useLocale();
   const items = tServiceList(TOURS, locale);
+  const from = lowestPrice(TOURS);
   return (
     <>
       <PageHero
         tag={t.page.turlar.pagehero_tag_gezi_turlari}
         title={t.page.turlar.pagehero_title_kapadokya}
         highlight={t.page.turlar.pagehero_highlight_klasik_turlari}
+        subline={toursSubline(locale, from.price, from.currency)}
+        mobileImage={{ src: "/images/tours/kirmizi-tur.jpg", alt: items.find((i) => i.slug === "kirmizi-tur")?.name ?? "" }}
+        trust
         description={t.page.turlar.pagehero_description_unesco_dunya}
       />
 

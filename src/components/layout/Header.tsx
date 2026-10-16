@@ -117,6 +117,7 @@ export function Header() {
     <header
       ref={mobileWrapperRef}
       className="fixed top-0 left-0 right-0 z-50 bg-primary/[0.97] backdrop-blur-xl border-b border-white/[0.06]"
+      style={{ top: "var(--lang-banner-h, 0px)" }}
     >
       <div className="container-main flex items-center justify-between h-[68px]">
         {/* Logo */}

@@ -7,6 +7,7 @@ import { PageHero } from "@/components/layout/PageHero";
 import { ServiceCard } from "@/components/layout/ServiceCard";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { TRANSFERS } from "@/data/services/catalog";
+import { lowestPrice, transfersSubline } from "@/lib/conversion-copy";
 import { FaqSection, type FaqItem } from "@/components/layout/FaqSection";
 import { breadcrumbSchema } from "@/lib/schema";
 
@@ -14,6 +15,7 @@ export function TransferlerContent({ faqs }: { faqs: FaqItem[] }) {
   const t = useT();
   const { locale } = useLocale();
   const items = tServiceList(TRANSFERS, locale);
+  const from = lowestPrice(TRANSFERS);
   const breadcrumbItems = [{ name: t.page.transferler.breadcrumb_name, href: "/transferler" }];
 
   return (
@@ -22,6 +24,9 @@ export function TransferlerContent({ faqs }: { faqs: FaqItem[] }) {
         tag={t.page.transferler.pagehero_tag_transferler}
         title={t.page.transferler.pagehero_title_havalimani}
         highlight={t.page.transferler.pagehero_highlight_ozel_transfer}
+        subline={transfersSubline(locale, from.price, from.currency)}
+        mobileImage={{ src: "/images/transfers/minibus-grup.jpg", alt: items.find((i) => i.slug === "minibus-grup")?.name ?? "" }}
+        trust
         description={t.page.transferler.pagehero_description_nevsehir_nav}
       />
 

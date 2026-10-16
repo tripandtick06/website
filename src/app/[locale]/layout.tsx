@@ -5,6 +5,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import "@/styles/globals.css";
 import { Header } from "@/components/layout/Header";
+import { LangBanner } from "@/components/layout/LangBanner";
 import { Footer } from "@/components/layout/Footer";
 import CookieConsentMount from "@/components/booking/CookieConsentMount";
 import { I18nProvider } from "@/lib/i18n/I18nProvider";
@@ -164,6 +165,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
         <NextIntlClientProvider messages={messages} locale={typedLocale}>
           <I18nProvider initialLocale={typedLocale}>
             <CurrencyProvider>
+              <LangBanner />
               <Header />
               <main className="min-h-screen">{children}</main>
               <Footer />
