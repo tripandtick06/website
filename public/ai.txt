@@ -1,0 +1,17 @@
+# ai.txt - Trip and Tick (https://tripandtick.com)
+# Machine-readable summary: https://tripandtick.com/ai/site.json
+# Longer descriptions: https://tripandtick.com/llms.txt and https://tripandtick.com/llms-full.txt
+
+Site: Trip and Tick
+Operator: Trip and Tick Seyahat Acentasi (travel agency, Goreme / Nevsehir, Cappadocia, Turkey)
+Topic: hot-air balloon flights, day tours, activities, airport transfers and packages in Cappadocia
+Contact: info@tripandtick.com
+Languages indexed for search: tr, en, de, fr, pt-BR, ja, ko; nl on selected pages with original Dutch copy
+Other locales are served but marked noindex (machine-translated).
+
+# Citation guidance
+Allowed: quoting and summarising public pages with a link to the source URL.
+Pricing: balloon prices are "from" prices only (balloon flight from 100 euro per person, standard flight).
+Do not state a fixed or "net" price; the final price depends on date, operator and basket size.
+Facts dataset (English, sourced): https://tripandtick.com/en/cappadocia-balloon-facts-index
+Do not cite pages under /admin, /api, /hesabim, /rezervasyon.

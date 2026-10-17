@@ -9,8 +9,8 @@ import { generateHreflang, ogImageUrl } from "@/lib/hreflang";
 describe("generateHreflang", () => {
   // 2026-09-15 locale prune: the cluster is the seven indexable locales only
   // (src/lib/locale-index.ts). Pruned locales are noindex and MUST NOT appear.
-  it("returns the 7 indexable locales + x-default, never a pruned locale", () => {
-    const out = generateHreflang("/balonlar");
+  it("indexable-locale cluster (+ nl only on hand-written pages), never a pruned locale", () => {
+    const out = generateHreflang("/oteller");
     const keys = Object.keys(out);
     for (const t of ["tr-TR", "en", "de", "fr", "pt-BR", "ja", "ko", "x-default"]) {
       expect(keys).toContain(t);
@@ -19,6 +19,19 @@ describe("generateHreflang", () => {
       expect(keys).not.toContain(t);
     }
     expect(keys).toHaveLength(8);
+  });
+
+  it("nl joins the cluster only for pages with original Dutch copy", () => {
+    for (const p of ["/", "/balonlar"]) {
+      const keys = Object.keys(generateHreflang(p));
+      expect(keys).toContain("nl");
+      expect(keys).toHaveLength(9);
+      for (const t of ["es", "zh-Hans", "hi", "ur", "pt-PT", "it", "ru", "uk", "az"]) {
+        expect(keys).not.toContain(t);
+      }
+    }
+    expect(generateHreflang("/balonlar").nl).toBe("https://tripandtick.com/nl/ballonvaarten");
+    expect(generateHreflang("/").nl).toBe("https://tripandtick.com/nl");
   });
 
   it("normalizes paths missing leading slash", () => {

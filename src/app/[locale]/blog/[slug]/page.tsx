@@ -4,7 +4,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { SITE_URL, articleSchema, breadcrumbSchema, faqPageSchema } from "@/lib/schema";
 import { ogImageUrl, canonicalFor, ogLocale } from "@/lib/hreflang";
-import { robotsForLocale } from "@/lib/locale-index";
+import { isIndexableBlogSlug } from "@/lib/locale-index";
 import { blogAlternates, stripBrandSuffix } from "@/lib/blog-alternates";
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { serverDict } from "@/lib/i18n/serverDict";
@@ -61,7 +61,7 @@ export async function generateMetadata({
   return {
     title,
     description: article.metaDescription,
-    robots: article.noindex ? { index: false, follow: true } : robotsForLocale(params.locale),
+    robots: { index: !article.noindex && isIndexableBlogSlug(params.locale, article.slug), follow: true },
     alternates: {
       canonical: canonicalFor(path, params.locale),
       languages,

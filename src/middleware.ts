@@ -54,6 +54,20 @@ export function isEnglishOnlyMiss(pathname: string): boolean {
   return m[1] !== "en";
 }
 
+// next-intl 307s a non-localized slug to its localized one ("/en/balonlar" ->
+// "/en/balloon-tours"). That mapping is static, so it is a permanent move: 308
+// lets Google consolidate on the localized URL. Root "/" stays 307 (per-user
+// Accept-Language detection, see comment in the handler).
+export function permanentLocalizedSlugRedirect<T extends { status?: number; headers: Headers | Map<string, string> }>(
+  res: T,
+  pathname: string
+): T {
+  if (pathname === "/" || res.status !== 307) return res;
+  const location = res.headers.get("location");
+  if (!location) return res;
+  return new NextResponse(null, { status: 308, headers: res.headers as Headers }) as unknown as T;
+}
+
 const RATE_LIMIT_MAX = 10; // requests / window
 const EVENT_MAX = 60; // /api/event — davranış beacon batch'leri
 const RATE_LIMIT_WINDOW_MS = 60 * 1000; // 1 dakika
@@ -105,7 +119,8 @@ export async function middleware(req: NextRequest) {
       url.pathname = lower;
       return NextResponse.redirect(url, 308);
     }
-    const res = pathname === "/" ? intlMiddleware(req) : intlMiddlewareNoDetect(req);
+    let res = pathname === "/" ? intlMiddleware(req) : intlMiddlewareNoDetect(req);
+    res = permanentLocalizedSlugRedirect(res, pathname);
     // 2026-09-15 locale prune: header-level noindex for the ten pruned locales.
     // Independent of page metadata (some pages set robots themselves), so a
     // future page-level `index: true` cannot silently re-open a pruned locale.

@@ -2313,6 +2313,30 @@ export const ARTICLES: BlogArticleMeta[] = [
     "coverImage": "/images/blog/kapadokya-otel-tavsiye-2026.jpg"
   },
   {
+    "file": "nl-beste-tijd-ballonvaart-cappadocie.json",
+    "slug": "beste-tijd-ballonvaart-cappadocie",
+    "title": "Beste tijd voor een ballonvaart in Cappadocië",
+    "metaTitle": "Beste tijd voor een ballonvaart in Cappadocië | Trip and Tick",
+    "metaDescription": "Wanneer is de beste tijd voor een ballonvaart in Cappadocië? Maand voor maand uitleg, kans op annulering, kleding en tips voor het kiezen van de beste dag.",
+    "excerpt": "De beste maanden voor een ballonvaart in Cappadocië zijn april tot en met juni en september en oktober. Maand voor maand uitleg, plus tips om de kans op een geslaagde vlucht te vergroten.",
+    "category": "kapadokya-rehber",
+    "tags": [
+      "ballonvaart",
+      "cappadocië",
+      "beste tijd",
+      "seizoen",
+      "weer"
+    ],
+    "targetKeyword": "beste tijd ballonvaart cappadocië",
+    "locale": "nl",
+    "publishedAt": "2026-10-17T00:00:00.000Z",
+    "updatedAt": "2026-10-17",
+    "seoScore": 90,
+    "isAiGenerated": true,
+    "noindex": false,
+    "coverImage": "/images/blog/best-time-cappadocia-balloon.jpg"
+  },
+  {
     "file": "nl-cappadocia-winter-2026-guide.json",
     "slug": "cappadocia-winter-2026-guide-nl",
     "title": "Cappadocië in de Winter 2026 — Complete Reisgids (Sneeuw, Ballonnen, Hotels)",
@@ -2512,6 +2536,30 @@ export const ARTICLES: BlogArticleMeta[] = [
     "isAiGenerated": true,
     "noindex": false,
     "coverImage": "/images/blog/kapadokya-otel-tavsiye-2026.jpg"
+  },
+  {
+    "file": "nl-kosten-ballonvaart-cappadocie.json",
+    "slug": "kosten-ballonvaart-cappadocie",
+    "title": "Wat kost een ballonvaart in Cappadocië? (vanaf-prijzen)",
+    "metaTitle": "Wat kost een ballonvaart in Cappadocië? Vanaf-prijzen uitgelegd | Trip and Tick",
+    "metaDescription": "Wat kost een ballonvaart in Cappadocië? Standaardvluchten vanaf 100 euro per persoon. Uitleg over prijsverschillen, wat is inbegrepen en hoe u aanbieders vergelijkt.",
+    "excerpt": "Een standaard ballonvaart in Cappadocië kost bij Trip and Tick vanaf 100 euro per persoon. We leggen uit waarom prijzen verschillen, wat er meestal in zit en hoe u slim vergelijkt.",
+    "category": "kapadokya-rehber",
+    "tags": [
+      "ballonvaart",
+      "cappadocië",
+      "prijs",
+      "kosten",
+      "vanaf"
+    ],
+    "targetKeyword": "kosten ballonvaart cappadocië",
+    "locale": "nl",
+    "publishedAt": "2026-10-17T00:00:00.000Z",
+    "updatedAt": "2026-10-17",
+    "seoScore": 90,
+    "isAiGenerated": true,
+    "noindex": false,
+    "coverImage": "/images/blog/cappadocia-hot-air-balloon-price-2026.jpg"
   },
   {
     "file": "pt-BR-cappadocia-hot-air-balloon-price-2026.json",

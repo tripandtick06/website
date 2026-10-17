@@ -12,7 +12,7 @@ import {
   sitemapArticles,
   stripBrandSuffix,
 } from "@/lib/blog-alternates";
-import { INDEXABLE_LOCALES, NOINDEX_LOCALES } from "@/lib/locale-index";
+import { INDEXABLE_LOCALES, NOINDEX_LOCALES, isIndexableBlogSlug } from "@/lib/locale-index";
 import sitemap from "@/app/sitemap";
 
 // Live audit 2026-09-15: 154 of 251 sitemap URLs were 404 because blog
@@ -49,7 +49,9 @@ describe("blog URLs + alternates", () => {
   });
 
   it("sitemap articles exclude every noindex locale", () => {
-    const locales = new Set(sitemapArticles().map((a) => a.locale));
+    // exception: the two hand-written Dutch posts (NL_EDITORIAL_BLOG_SLUGS)
+    const rest = sitemapArticles().filter((a) => !(a.locale === "nl" && isIndexableBlogSlug("nl", a.slug)));
+    const locales = new Set(rest.map((a) => a.locale));
     for (const l of NOINDEX_LOCALES) expect(locales.has(l)).toBe(false);
     for (const l of locales) expect((INDEXABLE_LOCALES as readonly string[]).includes(l)).toBe(true);
   });

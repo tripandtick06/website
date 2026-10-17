@@ -1,0 +1,22 @@
+{
+  "name": "Trip and Tick",
+  "url": "https://tripandtick.com",
+  "description": "Online travel agency for Cappadocia (Turkey): hot-air balloon flights with licensed local operators, day tours, activities, airport transfers and packages.",
+  "legalName": "Trip and Tick Seyahat Acentası",
+  "foundingDate": "2024-06-01",
+  "location": { "locality": "Göreme", "region": "Nevşehir", "country": "TR" },
+  "contact": { "email": "info@tripandtick.com", "phone": "+90 537 464 78 61" },
+  "languages": {
+    "indexable": ["tr", "en", "de", "fr", "pt-BR", "ja", "ko"],
+    "partiallyIndexable": { "nl": ["/nl", "/nl/ballonvaarten", "/nl/blog/beste-tijd-ballonvaart-cappadocie", "/nl/blog/kosten-ballonvaart-cappadocie"] },
+    "defaultLocale": "tr"
+  },
+  "pricingPolicy": "From-prices only. Standard balloon flight: from 100 euro per person. No fixed or net prices are published; the final price depends on date, operator and basket size.",
+  "sameAs": ["https://www.instagram.com/tripandtick"],
+  "docs": {
+    "llmsTxt": "https://tripandtick.com/llms.txt",
+    "llmsFullTxt": "https://tripandtick.com/llms-full.txt",
+    "sitemap": "https://tripandtick.com/sitemap.xml",
+    "factsDataset": "https://tripandtick.com/en/cappadocia-balloon-facts-index"
+  }
+}
