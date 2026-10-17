@@ -286,6 +286,10 @@ export const routing = defineRouting({
   locales,
   defaultLocale: "tr",
   localePrefix: "as-needed",
+  // next-intl otherwise emits an HTTP `Link: rel="alternate"; hreflang` header for
+  // ALL 17 locales (incl. noindex ones), contradicting the <head>/sitemap cluster
+  // (indexable locales only). hreflang has ONE producer: lib/hreflang.ts.
+  alternateLinks: false,
   pathnames,
 });
 

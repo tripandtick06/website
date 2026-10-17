@@ -17,6 +17,8 @@ import { LoyaltySection } from "@/components/sections/LoyaltySection";
 import { StatsBar } from "@/components/sections/StatsBar";
 import { MobileStickyCTA } from "@/components/sections/MobileStickyCTA";
 
+import { robotsForPage } from "@/lib/locale-index";
+
 export const runtime = "edge";
 
 export async function generateMetadata({
@@ -34,6 +36,8 @@ export async function generateMetadata({
   return {
     title,
     description,
+    // nl home is re-opened (2026-10-17); layout default stays noindex for other pruned locales.
+    robots: robotsForPage(loc, "/"),
     alternates: {
       canonical: url,
       languages: generateHreflang("/"),

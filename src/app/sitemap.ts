@@ -45,6 +45,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: url("/impressum"), lastModified: new Date("2026-06-03"), changeFrequency: "yearly", priority: 0.3, alternates: alt("/impressum") },
   ];
 
+  // NL pages with hand-written Dutch copy (opt-in list: NL_INDEXABLE_PATHS in locale-index.ts).
+  // Own <url> entries; alternates = same single hreflang producer as the TR twins.
+  const nlPages: MetadataRoute.Sitemap = [
+    { url: `${SITE_URL}/nl`, lastModified: new Date("2026-10-17"), changeFrequency: "weekly", priority: 0.8, alternates: alt("/") },
+    { url: `${SITE_URL}/nl/ballonvaarten`, lastModified: new Date("2026-10-17"), changeFrequency: "weekly", priority: 0.8, alternates: alt("/balonlar") },
+  ];
+
   // English-only sourced fact dataset (no hreflang cluster; other locales 404).
   // Date mirrors `checked` in src/data/datasets/cappadocia-balloon-facts.json.
   const factsIndexPage: MetadataRoute.Sitemap = [
@@ -115,6 +122,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Dedupe — bazi pillar slug'lari blog JSON slug'lariyla cakisir (intentional).
   const combined = [
     ...staticPages,
+    ...nlPages,
     ...factsIndexPage,
     ...operatorPages,
     ...balloonPages,

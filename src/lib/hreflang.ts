@@ -4,7 +4,7 @@
 
 import { SITE_URL } from "@/lib/schema";
 import { routing } from "@/i18n/routing";
-import { isIndexableLocale } from "@/lib/locale-index";
+import { isIndexableLocale, isIndexablePath } from "@/lib/locale-index";
 
 const DEFAULT_LOCALE = routing.defaultLocale; // "tr"
 
@@ -47,7 +47,10 @@ function localizePath(path: string, locale: string): string {
 
 // 2026-09-15 locale prune: only indexable locales form the hreflang cluster
 // (see src/lib/locale-index.ts). A noindex page inside a cluster is a mixed
-// signal Google resolves by dropping the whole set.
+// signal Google resolves by dropping the whole set. `nl` (2026-10-17) joins the
+// cluster only for the pages that are indexable in nl (NL_INDEXABLE_PATHS).
+// This is the SINGLE hreflang producer: <head> alternates + sitemap both call
+// generateHreflang(); the HTTP Link header is disabled (routing.alternateLinks).
 const HREFLANG_LOCALES: { locale: string; tag: string }[] = ([
   { locale: "tr", tag: "tr-TR" },
   { locale: "en", tag: "en" },
@@ -66,7 +69,7 @@ const HREFLANG_LOCALES: { locale: string; tag: string }[] = ([
   { locale: "ru", tag: "ru" },
   { locale: "uk", tag: "uk" },
   { locale: "az", tag: "az" },
-] as { locale: string; tag: string }[]).filter((l) => isIndexableLocale(l.locale));
+] as { locale: string; tag: string }[]).filter((l) => isIndexableLocale(l.locale) || l.locale === "nl");
 
 /**
  * Build hreflang `alternates.languages` map for a given path.
@@ -80,6 +83,7 @@ export function generateHreflang(
   const normalized = path.startsWith("/") ? path : `/${path}`;
   const result: Record<string, string> = {};
   for (const { locale, tag } of HREFLANG_LOCALES) {
+    if (!isIndexablePath(locale, normalized)) continue;
     result[tag] = canonicalFor(normalized, locale);
   }
   result["x-default"] = canonicalFor(normalized, DEFAULT_LOCALE);

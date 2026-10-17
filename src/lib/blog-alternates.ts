@@ -14,7 +14,7 @@
 import type { BlogArticleMeta } from "@/data/blog";
 import { ARTICLES } from "@/data/blog";
 import { SITE_URL } from "@/lib/schema";
-import { INDEXABLE_LOCALES, isIndexableLocale } from "@/lib/locale-index";
+import { INDEXABLE_LOCALES, isIndexableBlogSlug } from "@/lib/locale-index";
 
 const TAG: Record<string, string> = {
   tr: "tr-TR", en: "en", de: "de", fr: "fr", es: "es",
@@ -52,14 +52,14 @@ export function blogAlternates(
 ): Record<string, string> {
   const base = blogBaseSlug(a.slug);
   const languages: Record<string, string> = {};
-  for (const loc of INDEXABLE_LOCALES) {
+  for (const loc of [...INDEXABLE_LOCALES, "nl"] as const) {
     const match = articles.find(
       (x) =>
         x.locale === loc &&
         !(x as { noindex?: boolean }).noindex &&
         (x.slug === `${base}-${loc}` || x.slug === base)
     );
-    if (!match) continue;
+    if (!match || !isIndexableBlogSlug(loc, match.slug)) continue;
     const href = blogArticleUrl(match);
     languages[TAG[loc]] = href;
     if (loc === "tr") languages["x-default"] = href;
@@ -71,7 +71,7 @@ export function blogAlternates(
 export function sitemapArticles(
   articles: readonly BlogArticleMeta[] = ARTICLES
 ): BlogArticleMeta[] {
-  return articles.filter((a) => isIndexableLocale(a.locale) && !a.noindex);
+  return articles.filter((a) => isIndexableBlogSlug(a.locale, a.slug) && !a.noindex);
 }
 
 // Article metaTitles often already end with the brand suffix; the layout's
