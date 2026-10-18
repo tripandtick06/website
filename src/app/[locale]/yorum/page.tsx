@@ -8,6 +8,7 @@
 import type { Metadata } from "next";
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { serverDict } from "@/lib/i18n/serverDict";
+import { generateHreflang, canonicalFor } from "@/lib/hreflang";
 import { YorumContent } from "./YorumContent";
 
 export const runtime = "edge";
@@ -19,6 +20,12 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   return {
     title: d.meta_title,
     description: d.meta_desc,
+    // Without this the root layout's canonical (homepage) leaked in while
+    // /yorum is in the sitemap — Google got "index me" and "I am the homepage".
+    alternates: {
+      canonical: canonicalFor("/yorum", params.locale),
+      languages: generateHreflang("/yorum"),
+    },
   };
 }
 
