@@ -15,6 +15,8 @@ import { serverDict } from "@/lib/i18n/serverDict";
 import { tBalloons, tFaq } from "@/lib/i18n/localizeData";
 import { BalonlarContent } from "./BalonlarContent";
 import { NlBalloonGuide } from "./NlBalloonGuide";
+import { TrBalloonGuide } from "./TrBalloonGuide";
+import { TR_BALLOON_GUIDE_FAQ } from "@/data/trBalloonGuide";
 import { NL_BALLOON_FAQ, NL_GUIDE_LAST_UPDATED, NL_GUIDE_TITLE } from "@/data/i18n/nlBalloonGuide";
 import { BALLOON_PACKAGES } from "@/data/services/balloons";
 import { ORG_ID, SITE_URL, productSchema, touristTripSchema } from "@/lib/schema";
@@ -65,10 +67,12 @@ export default function BalonlarPage({
   const balonFaqs = tFaq(loc).filter((f) => f.category === "balon");
 
   const isNl = loc === "nl";
+  const isTr = loc === "tr";
   // nl: original Dutch guide + its FAQ (visible on page) joins the FAQPage node.
   const faqItems = [
     ...balonFaqs.map((f) => ({ question: f.question, answer: f.answer })),
     ...(isNl ? NL_BALLOON_FAQ : []),
+    ...(isTr ? TR_BALLOON_GUIDE_FAQ : []),
   ];
   const nlUrl = canonicalFor("/balonlar", loc);
   const std = BALLOON_PACKAGES.find((b) => b.slug === "standart-balon-ucusu");
@@ -78,6 +82,7 @@ export default function BalonlarPage({
     <>
       <BalonlarContent />
       {isNl && <NlBalloonGuide />}
+      {isTr && <TrBalloonGuide />}
       <JsonLd
         data={[
           ...(isNl && std
