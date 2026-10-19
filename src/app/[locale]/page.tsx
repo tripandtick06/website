@@ -6,7 +6,9 @@ import {
 } from "@/lib/i18n/dictionaries";
 import { serverDict } from "@/lib/i18n/serverDict";
 import { JsonLd } from "@/components/layout/JsonLd";
-import { websiteSchema } from "@/lib/schema";
+import { websiteSchema, webPageSchema, SITE_URL } from "@/lib/schema";
+import { LastUpdated } from "@/components/layout/LastUpdated";
+import { PAGE_UPDATED } from "@/lib/page-dates";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { CategoriesSection } from "@/components/sections/CategoriesSection";
 import { PackagesSection } from "@/components/sections/PackagesSection";
@@ -41,6 +43,7 @@ export async function generateMetadata({
     alternates: {
       canonical: url,
       languages: generateHreflang("/"),
+      types: { "application/rss+xml": `${SITE_URL}/rss.xml` },
     },
     openGraph: {
       type: "website",
@@ -76,6 +79,14 @@ export default function HomePage({
   return (
     <>
       <JsonLd data={websiteSchema(loc)} />
+      <JsonLd
+        data={webPageSchema({
+          url: canonicalFor("/", loc),
+          name: serverDict(loc).page.home.meta_title,
+          locale: loc,
+          dateModified: PAGE_UPDATED["/"],
+        })}
+      />
       <HeroSection />
       <StatsBar />
       <CategoriesSection />
@@ -85,6 +96,7 @@ export default function HomePage({
       {/* ReviewsSection removed 2026-09-15: testimonials were mock data (src/data/reviews.ts). Re-add when moderated real reviews exist. */}
       <NewsletterSection />
       <LoyaltySection />
+      <LastUpdated iso={PAGE_UPDATED["/"]} locale={loc} />
 
       {/* Mobile Sticky CTA */}
       <MobileStickyCTA />

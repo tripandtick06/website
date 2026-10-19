@@ -88,4 +88,41 @@ export const TR_BALLOON_GUIDE_FAQ: { question: string; answer: string }[] = [
   },
 ];
 
-export const TR_GUIDE_LAST_UPDATED = "2026-10-18";
+// Verifiable regulatory facts for /balonlar (TR). Quotes are verbatim from the SHGM
+// (Sivil Havacılık Genel Müdürlüğü) documents, re-read 2026-10-19. The 105-balloon
+// limit is the 2019 circular figure; later slot rules may differ - the text says so.
+export interface TrGuideFact {
+  id: string;
+  text: string;
+  quote: string;
+  sourceLabel: string;
+  sourceUrl: string;
+}
+
+export const TR_GUIDE_FACTS_HEADING = "Rakamlarla Kapadokya balon uçuşu: resmî kurallar";
+
+export const TR_GUIDE_FACTS: TrGuideFact[] = [
+  {
+    id: "ucus-penceresi",
+    text: "Sabah uçuş dönemi (ilk periyot), gün doğumundan 30 dakika önce başlar ve yerel saatle 11.00'de biter.",
+    quote: "Gün doğumundan 30 dakika öncesiyle yerel 11.00 saatleri arasını",
+    sourceLabel: "SHGM, SHT-BALON SLOT Rev.04",
+    sourceUrl: "https://web.shgm.gov.tr/documents/sivilhavacilik/files/mevzuat/sektorel/talimatlar/2020/SHT-BALON_SLOT_Rev04.pdf",
+  },
+  {
+    id: "bayrak",
+    text: "Kırmızı ya da sarı bayrak ilan edildiğinde balon işletmelerine kalkış uygunluğu verilmez; yani şüpheli havada uçuş yapılmaz.",
+    quote: "Kırmızı veya sarı bayrak ilan edilmesi durumunda balon işletmelerine kalkış uygunluğu verilmez.",
+    sourceLabel: "SHGM, SHT-BALON SLOT Rev.04",
+    sourceUrl: "https://web.shgm.gov.tr/documents/sivilhavacilik/files/mevzuat/sektorel/talimatlar/2020/SHT-BALON_SLOT_Rev04.pdf",
+  },
+  {
+    id: "en-fazla-105",
+    text: "SHGM'nin 27 Haziran 2019 tarihli genelgesi (UOD-2014/5), Kapadokya'da ilk periyotta aynı anda en fazla 105 balonun uçmasına izin verir. Bu, o genelgedeki rakamdır; sonraki slot kuralları farklı olabilir.",
+    quote: "ilk periyodu gün doğumundan 30 dakika öncesi ile yerel 11.00 saatleri arasında ve aynı anda en fazla 105 balonun uçuşuna izin verilecektir",
+    sourceLabel: "SHGM, Kapadokya Bölgesi Balonla Uçuş Tedbirleri Genelgesi (UOD-2014/5)",
+    sourceUrl: "https://web.shgm.gov.tr/documents/sivilhavacilik/files/mevzuat/sektorel/genelgeler/2019/UOD-2014-5.pdf",
+  },
+];
+
+export const TR_GUIDE_LAST_UPDATED = "2026-10-19";

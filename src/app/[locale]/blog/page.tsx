@@ -31,7 +31,7 @@ export async function generateMetadata({
       canonical: canonicalFor("/blog", params.locale),
       languages: generateHreflang("/blog"),
       types: {
-        "application/rss+xml": `${SITE_URL}/blog/rss.xml`,
+        "application/rss+xml": `${SITE_URL}/rss.xml`,
       },
     },
     openGraph: {
