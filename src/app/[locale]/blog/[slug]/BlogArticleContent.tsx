@@ -15,6 +15,7 @@ import { ArrowLeft, Calendar, Tag, User, Clock } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { useT } from "@/lib/i18n/I18nProvider";
 import type { BlogArticle, BlogArticleMeta } from "@/data/blog";
+import { formatUpdated, updatedLabel } from "@/components/layout/LastUpdated";
 
 // NEW KEYS — pending dict addition. TR fallback used until dict is updated.
 function getCategoryLabel(
@@ -120,6 +121,14 @@ export function BlogArticleContent({
                 day: "numeric",
               })}
             </span>
+            {article.updatedAt && article.updatedAt.slice(0, 10) !== article.publishedAt.slice(0, 10) && (
+              <span className="flex items-center gap-1.5">
+                <Calendar className="w-4 h-4" />
+                <time dateTime={article.updatedAt}>
+                  {updatedLabel(article.locale)}: {formatUpdated(article.updatedAt, article.locale)}
+                </time>
+              </span>
+            )}
             <span className="flex items-center gap-1.5">
               <Clock className="w-4 h-4" />
               {readTime} {slugDict.dk_okuma}

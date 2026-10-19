@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/layout/JsonLd";
-import { breadcrumbSchema, itemListSchema, faqPageSchema } from "@/lib/schema";
+import { breadcrumbSchema, itemListSchema, faqPageSchema, webPageSchema } from "@/lib/schema";
+import { LastUpdated } from "@/components/layout/LastUpdated";
+import { PAGE_UPDATED } from "@/lib/page-dates";
 import { generateHreflang, ogImageUrl, canonicalFor, ogLocale } from "@/lib/hreflang";
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { serverDict } from "@/lib/i18n/serverDict";
@@ -55,6 +57,15 @@ export default function TurlarPage({
   return (
     <>
       <TurlarContent faqs={getPageFaqs("tours", loc)} />
+      <LastUpdated iso={PAGE_UPDATED["/turlar"]} locale={loc} />
+      <JsonLd
+        data={webPageSchema({
+          url: canonicalFor("/turlar", loc),
+          name: serverDict(loc).page.turlar.meta_title,
+          locale: loc,
+          dateModified: PAGE_UPDATED["/turlar"],
+        })}
+      />
       <JsonLd data={breadcrumbSchema([{ name: serverDict(loc).nav.tours, href: canonicalFor("/turlar", loc) }])} />
       <JsonLd data={itemList} />
       <JsonLd data={faqPageSchema(getPageFaqs("tours", loc))} />

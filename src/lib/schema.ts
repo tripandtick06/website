@@ -415,6 +415,21 @@ const SCHEMA_LANG: Record<string, string> = {
   ur: "ur-PK",
 };
 
+/** WebPage node carrying dateModified (visible date is rendered by <LastUpdated/>). */
+export function webPageSchema(input: { url: string; name: string; locale: string; dateModified: string }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${input.url}#webpage`,
+    url: input.url,
+    name: input.name,
+    inLanguage: SCHEMA_LANG[input.locale] ?? input.locale,
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+    publisher: { "@id": ORG_ID },
+    dateModified: input.dateModified,
+  };
+}
+
 /**
  * WebSite schema with SearchAction — lets search engines surface a sitelinks
  * search box and lets AI assistants discover the on-site search endpoint.

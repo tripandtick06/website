@@ -19,7 +19,9 @@ import { TrBalloonGuide } from "./TrBalloonGuide";
 import { TR_BALLOON_GUIDE_FAQ } from "@/data/trBalloonGuide";
 import { NL_BALLOON_FAQ, NL_GUIDE_LAST_UPDATED, NL_GUIDE_TITLE } from "@/data/i18n/nlBalloonGuide";
 import { BALLOON_PACKAGES } from "@/data/services/balloons";
-import { ORG_ID, SITE_URL, productSchema, touristTripSchema } from "@/lib/schema";
+import { ORG_ID, SITE_URL, productSchema, touristTripSchema, webPageSchema } from "@/lib/schema";
+import { LastUpdated } from "@/components/layout/LastUpdated";
+import { PAGE_UPDATED } from "@/lib/page-dates";
 
 import { robotsForPage } from "@/lib/locale-index";
 
@@ -66,6 +68,7 @@ export default function BalonlarPage({
   const loc: Locale = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
   const balonFaqs = tFaq(loc).filter((f) => f.category === "balon");
 
+  const d0 = serverDict(loc).page.balonlar;
   const isNl = loc === "nl";
   const isTr = loc === "tr";
   // nl: original Dutch guide + its FAQ (visible on page) joins the FAQPage node.
@@ -83,6 +86,7 @@ export default function BalonlarPage({
       <BalonlarContent />
       {isNl && <NlBalloonGuide />}
       {isTr && <TrBalloonGuide />}
+      {!isNl && !isTr && <LastUpdated iso={PAGE_UPDATED["/balonlar"]} locale={loc} />}
       <JsonLd
         data={[
           ...(isNl && std
@@ -118,6 +122,16 @@ export default function BalonlarPage({
                   currency: std.currency,
                   category: "Ballonvaart Cappadocië",
                   urlPath: nlUrl,
+                }),
+              ]
+            : []),
+          ...(!isNl
+            ? [
+                webPageSchema({
+                  url: nlUrl,
+                  name: d0.meta_title,
+                  locale: loc,
+                  dateModified: PAGE_UPDATED["/balonlar"],
                 }),
               ]
             : []),
