@@ -50,7 +50,8 @@ export async function generateMetadata({
       locale: ogLocale(loc),
       url,
       siteName: "Trip and Tick",
-      title,
+      // Brand-first og:title (geo brand_entity); <title> stays unchanged.
+      title: `Trip and Tick | ${title}`,
       description,
       images: [
         {
@@ -78,7 +79,7 @@ export default function HomePage({
   const loc = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
   return (
     <>
-      <JsonLd data={websiteSchema(loc)} />
+      <JsonLd data={websiteSchema(loc, serverDict(loc).page.home.meta_desc)} />
       <JsonLd
         data={webPageSchema({
           url: canonicalFor("/", loc),
