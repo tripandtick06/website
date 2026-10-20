@@ -12,8 +12,6 @@ import {
   Instagram,
   Facebook,
   Twitter,
-  Youtube,
-  Linkedin,
   Shield,
   CreditCard,
   Globe,
@@ -191,8 +189,6 @@ export function Footer() {
                 { Icon: Instagram, href: COMPANY.social.instagram, label: "Instagram" },
                 { Icon: Facebook, href: COMPANY.social.facebook, label: "Facebook" },
                 { Icon: Twitter, href: COMPANY.social.twitter, label: "Twitter" },
-                { Icon: Youtube, href: COMPANY.social.youtube, label: "YouTube" },
-                { Icon: Linkedin, href: COMPANY.social.linkedin, label: "LinkedIn" },
               ].map(({ Icon, href, label }) => (
                 <a
                   key={label}

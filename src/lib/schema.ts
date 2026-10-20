@@ -434,12 +434,13 @@ export function webPageSchema(input: { url: string; name: string; locale: string
  * WebSite schema with SearchAction — lets search engines surface a sitelinks
  * search box and lets AI assistants discover the on-site search endpoint.
  */
-export function websiteSchema(locale: string) {
+export function websiteSchema(locale: string, description?: string) {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": `${SITE_URL}/#website`,
     name: "Trip and Tick",
+    ...(description ? { description } : {}),
     url: SITE_URL,
     inLanguage: SCHEMA_LANG[locale] ?? "tr-TR",
     publisher: { "@id": ORG_ID },
