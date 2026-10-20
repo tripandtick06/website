@@ -6,6 +6,7 @@ import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { serverDict } from "@/lib/i18n/serverDict";
 import { FOUNDER } from "@/data/founder";
 import { HakkimizdaContent } from "./HakkimizdaContent";
+import { PageMeta } from "@/components/layout/PageMeta";
 
 export const runtime = "edge";
 
@@ -53,6 +54,7 @@ export default function HakkimizdaPage({
   return (
     <>
       <HakkimizdaContent />
+      <PageMeta dictKey="hakkimizda" path="/hakkimizda" locale={loc} />
       <JsonLd
         data={[
           breadcrumbSchema([{ name: serverDict(loc).nav.about, href: canonicalFor("/hakkimizda", loc) }]),

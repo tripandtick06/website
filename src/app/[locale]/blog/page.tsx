@@ -6,6 +6,7 @@ import { ARTICLES, type BlogArticleMeta } from "@/data/blog";
 import { blogArticleUrl } from "@/lib/blog-alternates";
 import { serverDict } from "@/lib/i18n/serverDict";
 import { BlogContent } from "./BlogContent";
+import { PageMeta } from "@/components/layout/PageMeta";
 
 // CF Pages edge runtime. Liste metadata manifest'ten (icerik statik asset).
 export const runtime = "edge";
@@ -69,6 +70,7 @@ export default async function BlogPage({
   return (
     <>
       <BlogContent articles={articles} />
+      <PageMeta dictKey="blog" path="/blog" locale={loc} />
       <JsonLd
         data={[
           breadcrumbSchema([{ name: d.nav.blog, href: canonicalFor("/blog", loc) }]),

@@ -3,6 +3,7 @@ import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { serverDict } from "@/lib/i18n/serverDict";
 import { canonicalFor, generateHreflang } from "@/lib/hreflang";
 import { OperatorlerContent } from "./OperatorlerContent";
+import { PageMeta } from "@/components/layout/PageMeta";
 
 export const runtime = "edge";
 
@@ -23,6 +24,11 @@ export async function generateMetadata({
   };
 }
 
-export default function Page() {
-  return <OperatorlerContent />;
+export default function Page({ params }: { params: { locale: string } }) {
+  return (
+    <>
+      <OperatorlerContent />
+      <PageMeta dictKey="operatorler" path="/operatorler" locale={params.locale} />
+    </>
+  );
 }

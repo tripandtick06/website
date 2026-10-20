@@ -6,6 +6,7 @@ import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { serverDict } from "@/lib/i18n/serverDict";
 import { tFaq } from "@/lib/i18n/localizeData";
 import { SssContent } from "./SssContent";
+import { PageMeta } from "@/components/layout/PageMeta";
 
 export const runtime = "edge";
 
@@ -47,6 +48,7 @@ export default function Page({ params }: { params: { locale: string } }) {
   return (
     <>
       <SssContent />
+      <PageMeta dictKey="sss" path="/sss" locale={loc} />
       <JsonLd
         data={[
           breadcrumbSchema([{ name: serverDict(loc).nav.faq, href: canonicalFor("/sss", loc) }]),

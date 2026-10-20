@@ -6,7 +6,7 @@ import {
 } from "@/lib/i18n/dictionaries";
 import { serverDict } from "@/lib/i18n/serverDict";
 import { JsonLd } from "@/components/layout/JsonLd";
-import { websiteSchema, webPageSchema, SITE_URL } from "@/lib/schema";
+import { webPageSchema, SITE_URL } from "@/lib/schema";
 import { LastUpdated } from "@/components/layout/LastUpdated";
 import { PAGE_UPDATED } from "@/lib/page-dates";
 import { HeroSection } from "@/components/sections/HeroSection";
@@ -49,7 +49,6 @@ export async function generateMetadata({
       type: "website",
       locale: ogLocale(loc),
       url,
-      siteName: "Trip and Tick",
       // Brand-first og:title (geo brand_entity); <title> stays unchanged.
       title: title.startsWith("Trip and Tick") ? title : `Trip and Tick | ${title}`,
       description,
@@ -79,11 +78,11 @@ export default function HomePage({
   const loc = isLocale(params.locale) ? params.locale : DEFAULT_LOCALE;
   return (
     <>
-      <JsonLd data={websiteSchema(loc, serverDict(loc).page.home.meta_desc)} />
       <JsonLd
         data={webPageSchema({
           url: canonicalFor("/", loc),
           name: serverDict(loc).page.home.meta_title,
+          description: serverDict(loc).page.home.meta_desc,
           locale: loc,
           dateModified: PAGE_UPDATED["/"],
         })}
