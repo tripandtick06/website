@@ -9,6 +9,7 @@ import {
 } from "@/lib/i18n/dictionaries";
 import { serverDict } from "@/lib/i18n/serverDict";
 import { CerezContent } from "./CerezContent";
+import { PageMeta } from "@/components/layout/PageMeta";
 
 export const runtime = "edge";
 
@@ -43,10 +44,11 @@ export async function generateMetadata({
   };
 }
 
-export default function CerezPage() {
+export default function CerezPage({ params }: { params: { locale: string } }) {
   return (
     <>
       <CerezContent />
+      <PageMeta dictKey="cerez_politikasi" path="/cerez-politikasi" locale={params.locale} />
       <JsonLd
         data={breadcrumbSchema([
           { name: "Çerez Politikası", href: "/cerez-politikasi" },

@@ -28,6 +28,14 @@ export interface ServiceDetailContentProps {
   longDescription?: string;
   /** "Hakkında" / "About" baslik etiketi (locale'e gore). */
   aboutLabel?: string;
+  /** Sorgu-odakli ilk-cevap paragrafi (40-60 kelime); varsa shortDescription yerine H1 altinda. */
+  answer?: string;
+  /** Gorunur SSS (FAQPage JSON-LD ile birebir ayni metin). */
+  faqs?: { q: string; a: string }[];
+  faqHeading?: string;
+  /** Baglamsal ic linkler (TR-canonical path; Link lokalize eder). */
+  related?: { href: string; label: string }[];
+  relatedHeading?: string;
 }
 
 export function ServiceDetailContent({
@@ -36,6 +44,11 @@ export function ServiceDetailContent({
   categoryHref,
   longDescription,
   aboutLabel,
+  answer,
+  faqs,
+  faqHeading,
+  related,
+  relatedHeading,
 }: ServiceDetailContentProps) {
   const t = useT();
   const ui = useUiText();
@@ -100,7 +113,7 @@ export function ServiceDetailContent({
             </div>
 
             <p className="text-lg text-slate-700 leading-relaxed mb-6">
-              {item.shortDescription}
+              {answer ?? item.shortDescription}
             </p>
 
             {/* highlights chip'leri kaldirildi: includes listesiyle ayni bilgiyi tekrarliyordu */}
@@ -166,6 +179,39 @@ export function ServiceDetailContent({
             <p className="text-slate-700 leading-relaxed text-lg whitespace-pre-line">
               {longDescription}
             </p>
+          </div>
+        </section>
+      )}
+
+      {faqs && faqs.length > 0 && (
+        <section className="section-padding">
+          <div className="container-main max-w-3xl">
+            <h2 className="text-2xl font-extrabold text-slate-900 mb-4">{faqHeading}</h2>
+            <dl className="space-y-5">
+              {faqs.map((f) => (
+                <div key={f.q}>
+                  <dt className="font-bold text-slate-900">{f.q}</dt>
+                  <dd className="mt-1 text-slate-700 leading-relaxed">{f.a}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </section>
+      )}
+
+      {related && related.length > 0 && (
+        <section className="section-padding bg-slate-50">
+          <div className="container-main max-w-3xl">
+            <h2 className="text-xl font-extrabold text-slate-900 mb-3">{relatedHeading}</h2>
+            <ul className="list-disc pl-5 space-y-1.5 text-slate-700">
+              {related.map((r) => (
+                <li key={r.href}>
+                  <Link href={r.href as ComponentProps<typeof Link>["href"]} className="text-primary font-semibold hover:underline">
+                    {r.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
       )}

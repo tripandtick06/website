@@ -14,7 +14,7 @@ import { JsonLd } from "@/components/layout/JsonLd";
 import { Analytics } from "@/components/analytics/Analytics";
 import { Tracker } from "@/components/analytics/Tracker";
 import { RegisterSW } from "@/components/sw/RegisterSW";
-import { ORGANIZATION_SCHEMA, SITE_URL } from "@/lib/schema";
+import { siteGraphSchema, SITE_URL } from "@/lib/schema";
 import { generateHreflang, canonicalFor } from "@/lib/hreflang";
 import { robotsForLocale } from "@/lib/locale-index";
 import { LOCALE_DIR, isLocale, type Locale } from "@/lib/i18n/dictionaries";
@@ -90,7 +90,6 @@ export async function generateMetadata({
     type: "website",
     locale: OG_LOCALE[typedLocale],
     url: canonicalFor("/", typedLocale),
-    siteName: "Trip and Tick",
     title: "Trip and Tick — Kapadokya'nın En İyi Deneyimleri",
     description: "En düşük fiyat garantisi ile balon turu, otel, transfer ve aktiviteler.",
     images: [
@@ -159,9 +158,11 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
         {/* Aanloop site-acties beacon: counts tel/mailto/WhatsApp/Maps clicks + form
             submits, POSTs to https://aanloopai.nl/api/visibility/event. No cookies. */}
         <script src="https://aanloopai.nl/v.js" defer></script>
+        <meta property="og:site_name" content="Trip and Tick" />
+        <link rel="alternate" type="application/rss+xml" title="Trip and Tick" href="/rss.xml" />
       </head>
       <body className="font-sans antialiased">
-        <JsonLd data={ORGANIZATION_SCHEMA} />
+        <JsonLd data={siteGraphSchema(locale)} />
         <NextIntlClientProvider messages={messages} locale={typedLocale}>
           <I18nProvider initialLocale={typedLocale}>
             <CurrencyProvider>

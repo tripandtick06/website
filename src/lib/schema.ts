@@ -416,7 +416,16 @@ const SCHEMA_LANG: Record<string, string> = {
 };
 
 /** WebPage node carrying dateModified (visible date is rendered by <LastUpdated/>). */
-export function webPageSchema(input: { url: string; name: string; locale: string; dateModified: string }) {
+export function webPageSchema(input: {
+  url: string;
+  name: string;
+  locale: string;
+  dateModified: string;
+  /** Meta description ile birebir ayni metin. */
+  description?: string;
+  /** Icerik sayfalarinda Organization yazar (kisi uydurulmaz). */
+  withAuthor?: boolean;
+}) {
   return {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -427,7 +436,39 @@ export function webPageSchema(input: { url: string; name: string; locale: string
     isPartOf: { "@id": `${SITE_URL}/#website` },
     publisher: { "@id": ORG_ID },
     dateModified: input.dateModified,
+    ...(input.description ? { description: input.description } : {}),
+    ...(input.withAuthor
+      ? { author: { "@type": "Organization", "@id": ORG_ID, name: "Trip and Tick", url: SITE_URL } }
+      : {}),
   };
+}
+
+/** VideoObject for a page that really embeds the video file. */
+export function videoObjectSchema(input: {
+  name: string;
+  description: string;
+  src: string;
+  poster: string;
+  uploadDate: string;
+  pageUrl: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name: input.name,
+    description: input.description,
+    thumbnailUrl: `${SITE_URL}${input.poster}`,
+    contentUrl: `${SITE_URL}${input.src}`,
+    uploadDate: input.uploadDate,
+    embedUrl: input.pageUrl,
+  };
+}
+
+/** Site-wide @graph: Organization + WebSite (her sayfada, layout'tan). */
+export function siteGraphSchema(locale: string) {
+  const { "@context": _c, ...org } = ORGANIZATION_SCHEMA as Record<string, unknown>;
+  const { "@context": _w, ...site } = websiteSchema(locale);
+  return { "@context": "https://schema.org", "@graph": [org, site] };
 }
 
 /**

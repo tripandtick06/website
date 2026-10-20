@@ -3,6 +3,7 @@ import { generateHreflang, canonicalFor } from "@/lib/hreflang";
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { serverDict } from "@/lib/i18n/serverDict";
 import { GdprContent } from "./GdprContent";
+import { PageMeta } from "@/components/layout/PageMeta";
 
 export const runtime = "edge";
 
@@ -27,6 +28,11 @@ export async function generateMetadata({
   };
 }
 
-export default function GdprPage() {
-  return <GdprContent />;
+export default function GdprPage({ params }: { params: { locale: string } }) {
+  return (
+    <>
+      <GdprContent />
+      <PageMeta dictKey="gdpr" path="/gdpr" locale={params.locale} />
+    </>
+  );
 }

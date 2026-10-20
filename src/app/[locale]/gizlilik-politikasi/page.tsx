@@ -9,6 +9,7 @@ import {
 } from "@/lib/i18n/dictionaries";
 import { serverDict } from "@/lib/i18n/serverDict";
 import { GizlilikContent } from "./GizlilikContent";
+import { PageMeta } from "@/components/layout/PageMeta";
 
 export const runtime = "edge";
 
@@ -43,10 +44,11 @@ export async function generateMetadata({
   };
 }
 
-export default function GizlilikPage() {
+export default function GizlilikPage({ params }: { params: { locale: string } }) {
   return (
     <>
       <GizlilikContent />
+      <PageMeta dictKey="gizlilik_politikasi" path="/gizlilik-politikasi" locale={params.locale} />
       <JsonLd
         data={breadcrumbSchema([
           { name: "Gizlilik Politikası", href: "/gizlilik-politikasi" },

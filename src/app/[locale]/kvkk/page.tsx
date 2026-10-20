@@ -5,6 +5,7 @@ import { generateHreflang, ogImageUrl, canonicalFor } from "@/lib/hreflang";
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { serverDict } from "@/lib/i18n/serverDict";
 import { KvkkContent } from "./KvkkContent";
+import { PageMeta } from "@/components/layout/PageMeta";
 
 export const runtime = "edge";
 
@@ -36,10 +37,11 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   };
 }
 
-export default function Page() {
+export default function Page({ params }: { params: { locale: string } }) {
   return (
     <>
       <KvkkContent />
+      <PageMeta dictKey="kvkk" path="/kvkk" locale={params.locale} />
       <JsonLd data={breadcrumbSchema([{ name: "KVKK", href: "/kvkk" }])} />
     </>
   );

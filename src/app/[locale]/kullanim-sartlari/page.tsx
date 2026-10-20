@@ -5,6 +5,7 @@ import { generateHreflang, ogImageUrl, canonicalFor } from "@/lib/hreflang";
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { serverDict } from "@/lib/i18n/serverDict";
 import { KullanimSartlariContent } from "./KullanimSartlariContent";
+import { PageMeta } from "@/components/layout/PageMeta";
 
 export const runtime = "edge";
 
@@ -36,10 +37,11 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   };
 }
 
-export default function Page() {
+export default function Page({ params }: { params: { locale: string } }) {
   return (
     <>
       <KullanimSartlariContent />
+      <PageMeta dictKey="kullanim_sartlari" path="/kullanim-sartlari" locale={params.locale} />
       <JsonLd data={breadcrumbSchema([{ name: "Kullanım Şartları", href: "/kullanim-sartlari" }])} />
     </>
   );

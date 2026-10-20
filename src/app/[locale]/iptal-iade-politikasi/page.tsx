@@ -5,6 +5,7 @@ import { generateHreflang, ogImageUrl, canonicalFor } from "@/lib/hreflang";
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { serverDict } from "@/lib/i18n/serverDict";
 import { IptalIadeContent } from "./IptalIadeContent";
+import { PageMeta } from "@/components/layout/PageMeta";
 
 export const runtime = "edge";
 
@@ -42,10 +43,11 @@ export async function generateMetadata({
   };
 }
 
-export default function IptalIadePage() {
+export default function IptalIadePage({ params }: { params: { locale: string } }) {
   return (
     <>
       <IptalIadeContent />
+      <PageMeta dictKey="iptal_iade_politikasi" path="/iptal-iade-politikasi" locale={params.locale} />
       <JsonLd data={breadcrumbSchema([{ name: "İptal & İade", href: "/iptal-iade-politikasi" }])} />
     </>
   );

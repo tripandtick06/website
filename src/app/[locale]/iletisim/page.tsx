@@ -5,6 +5,7 @@ import { JsonLd } from "@/components/layout/JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
 import { generateHreflang, ogImageUrl, canonicalFor, ogLocale } from "@/lib/hreflang";
 import { IletisimContent } from "./IletisimContent";
+import { PageMeta } from "@/components/layout/PageMeta";
 
 export const runtime = "edge";
 
@@ -52,6 +53,7 @@ export default function Page({
   return (
     <>
       <IletisimContent />
+      <PageMeta dictKey="iletisim" path="/iletisim" locale={loc} />
       <JsonLd data={breadcrumbSchema([{ name: serverDict(loc).nav.contact, href: canonicalFor("/iletisim", loc) }])} />
     </>
   );

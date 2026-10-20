@@ -10,6 +10,7 @@ import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { serverDict } from "@/lib/i18n/serverDict";
 import { generateHreflang, canonicalFor } from "@/lib/hreflang";
 import { YorumContent } from "./YorumContent";
+import { PageMeta } from "@/components/layout/PageMeta";
 
 export const runtime = "edge";
 
@@ -29,6 +30,11 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   };
 }
 
-export default function Page() {
-  return <YorumContent />;
+export default function Page({ params }: { params: { locale: string } }) {
+  return (
+    <>
+      <YorumContent />
+      <PageMeta dictKey="yorum" path="/yorum" locale={params.locale} />
+    </>
+  );
 }

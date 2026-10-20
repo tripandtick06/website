@@ -5,6 +5,7 @@ import { robotsForLocale } from "@/lib/locale-index";
 import { isLocale, DEFAULT_LOCALE, type Locale } from "@/lib/i18n/dictionaries";
 import { serverDict } from "@/lib/i18n/serverDict";
 import { ImpressumContent } from "./ImpressumContent";
+import { PageMeta } from "@/components/layout/PageMeta";
 
 export const runtime = "edge";
 
@@ -40,6 +41,11 @@ export async function generateMetadata({
   };
 }
 
-export default function ImpressumPage() {
-  return <ImpressumContent />;
+export default function ImpressumPage({ params }: { params: { locale: string } }) {
+  return (
+    <>
+      <ImpressumContent />
+      <PageMeta dictKey="impressum" path="/impressum" locale={params.locale} />
+    </>
+  );
 }
