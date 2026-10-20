@@ -51,7 +51,7 @@ export async function generateMetadata({
       url,
       siteName: "Trip and Tick",
       // Brand-first og:title (geo brand_entity); <title> stays unchanged.
-      title: `Trip and Tick | ${title}`,
+      title: title.startsWith("Trip and Tick") ? title : `Trip and Tick | ${title}`,
       description,
       images: [
         {
