@@ -40,8 +40,6 @@ export interface CompanySocial {
   instagram: string;
   facebook: string;
   twitter: string;
-  youtube: string;
-  linkedin: string;
 }
 
 export interface Company {
@@ -79,8 +77,6 @@ export const COMPANY: Company = {
     instagram: "https://www.instagram.com/tripandtick",
     facebook: "https://www.facebook.com/tripandtick",
     twitter: "https://twitter.com/tripandtick",
-    youtube: "https://www.youtube.com/@tripandtick",
-    linkedin: "https://www.linkedin.com/company/tripandtick",
   },
 };
 
