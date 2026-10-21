@@ -11,6 +11,7 @@ import { useLocale } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { z } from "zod";
 import { track } from "@/components/analytics/Tracker";
+import { EmailHint, useEmailHint } from "@/components/ui/EmailHint";
 import {
   Calendar,
   Users,
@@ -317,6 +318,8 @@ export function BookingClient({ service }: { service: BookingService }) {
       if (Object.keys(fieldErrs).length > 0) {
         ok = false;
         errs[i] = fieldErrs;
+        // Yalnız alan adı — değer YOK (PII).
+        for (const field of Object.keys(fieldErrs)) track("error", { form: "booking", field });
       }
     });
     setPassengerErrors(errs);
@@ -1069,7 +1072,7 @@ function Step3Passengers(props: {
               <div className="grid sm:grid-cols-2 gap-3">
                 <Field label={t.component.booking.booking_client.field_full_name} value={pax.fullName} onChange={(v) => onUpdate(i, "fullName", v)} error={errs.fullName} />
                 <Field label={t.component.booking.booking_client.field_nationality} value={pax.nationality} onChange={(v) => onUpdate(i, "nationality", v)} as="select" options={NATIONALITIES_LOCAL} />
-                <Field label={t.component.booking.booking_client.field_email} type="email" value={pax.email} onChange={(v) => onUpdate(i, "email", v)} error={errs.email} />
+                <Field label={t.component.booking.booking_client.field_email} type="email" value={pax.email} onChange={(v) => onUpdate(i, "email", v)} error={errs.email} emailHint="booking" />
                 <PhoneField label={t.component.booking.booking_client.field_phone} value={pax.phone} onChange={(v) => onUpdate(i, "phone", v)} error={errs.phone} defaultDial={dialForLocale(locale as Parameters<typeof dialForLocale>[0])} />
                 <Field label={t.component.booking.booking_client.field_passport} value={pax.passport ?? ""} onChange={(v) => onUpdate(i, "passport", v)} error={errs.passport} />
                 <Field label={t.component.booking.booking_client.field_age} type="number" value={pax.age?.toString() ?? ""} onChange={(v) => onUpdate(i, "age", v ? Number(v) : 0)} />
@@ -1095,8 +1098,11 @@ function Field(props: {
   placeholder?: string;
   as?: "input" | "select";
   options?: Array<{ code: string; label: string }>;
+  /** E-posta tikfoutu ipucunu açar (form adı olay props'una gider). */
+  emailHint?: string;
 }) {
-  const { label, value, onChange, type = "text", error, placeholder, as = "input", options = [] } = props;
+  const { label, value, onChange, type = "text", error, placeholder, as = "input", options = [], emailHint } = props;
+  const hint = useEmailHint(emailHint ?? "booking");
   return (
     <label className="block">
       <span className="block text-xs font-medium text-slate-700 mb-1">{label}</span>
@@ -1114,7 +1120,11 @@ function Field(props: {
         <input
           type={type}
           value={value}
-          onChange={(e) => onChange(e.target.value)}
+          onChange={(e) => {
+            onChange(e.target.value);
+            if (emailHint) hint.clear();
+          }}
+          onBlur={emailHint ? () => hint.check(value) : undefined}
           placeholder={placeholder}
           className={cn(
             "w-full border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500",
@@ -1123,6 +1133,7 @@ function Field(props: {
         />
       )}
       {error && <span className="text-xs text-rose-600 mt-1 block">{error}</span>}
+      {emailHint && <EmailHint hint={hint} onAccept={onChange} />}
     </label>
   );
 }

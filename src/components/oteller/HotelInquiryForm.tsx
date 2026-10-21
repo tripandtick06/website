@@ -18,6 +18,9 @@ import { Stepper } from "@/components/ui/Stepper";
 import { Button } from "@/components/ui/Button";
 import { Banner } from "@/components/ui/Banner";
 import { PhoneField, dialForLocale } from "@/components/booking/PhoneField";
+import { EmailHint, useEmailHint } from "@/components/ui/EmailHint";
+import { useFormFunnel } from "@/lib/analytics/useFormFunnel";
+import { track } from "@/components/analytics/Tracker";
 
 interface Props {
   hotelSlug: string;
@@ -45,6 +48,8 @@ export function HotelInquiryForm({ hotelSlug, hotelName, tier, region }: Props) 
   const f = t.component.oteller.hotel_inquiry_form;
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const emailHint = useEmailHint("hotel");
+  const funnel = useFormFunnel("hotel");
   const [phone, setPhone] = useState("");
   const [checkIn, setCheckIn] = useState(tomorrowIso());
   const [checkOut, setCheckOut] = useState(plusNDays(3));
@@ -79,9 +84,12 @@ export function HotelInquiryForm({ hotelSlug, hotelName, tier, region }: Props) 
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(data.error ?? `HTTP ${res.status}`);
+      funnel.done();
+      track("form_submit", { form: "hotel", ok: true });
       setResult({ kind: "ok", msg: data.message ?? ui.inquiry.received, inquiryId: data.inquiryId });
       setName(""); setEmail(""); setPhone(""); setBudget(""); setPreferences("");
     } catch (err) {
+      track("error", { form: "hotel", field: "submit" });
       setResult({ kind: "err", msg: err instanceof Error ? err.message : ui.inquiry.error });
     } finally {
       clearTimeout(timeout);
@@ -117,7 +125,7 @@ export function HotelInquiryForm({ hotelSlug, hotelName, tier, region }: Props) 
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 rounded-booking border border-slate-200 bg-white p-6 shadow-booking-card">
+    <form onSubmit={handleSubmit} onFocusCapture={funnel.onFocus} className="space-y-4 rounded-booking border border-slate-200 bg-white p-6 shadow-booking-card">
       <div>
         <h3 className="text-lg font-bold text-slate-900">{f.otel_bilgi_alin}</h3>
         <p className="mt-1 text-xs text-slate-600">
@@ -134,7 +142,19 @@ export function HotelInquiryForm({ hotelSlug, hotelName, tier, region }: Props) 
         </Field>
         <PhoneField id="hi-phone" label={f.telefon_sizi_arayacagiz} value={phone} onChange={setPhone} defaultDial={dialForLocale(locale)} required />
         <Field label={f.posta} htmlFor="hi-email" required>
-          <Input id="hi-email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required autoComplete="email" />
+          <Input
+            id="hi-email"
+            type="email"
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+              emailHint.clear();
+            }}
+            onBlur={() => emailHint.check(email)}
+            required
+            autoComplete="email"
+          />
+          <EmailHint hint={emailHint} onAccept={setEmail} />
         </Field>
         <Field label={f.giris_tarihi} htmlFor="hi-checkin" required>
           <Input id="hi-checkin" type="date" value={checkIn} min={tomorrowIso()} onChange={(e) => setCheckIn(e.target.value)} required />

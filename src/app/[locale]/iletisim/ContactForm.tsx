@@ -4,6 +4,9 @@ import { useState, FormEvent } from "react";
 import { Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 import { useT, useLocale } from "@/lib/i18n/I18nProvider";
 import { PhoneField, dialForLocale } from "@/components/booking/PhoneField";
+import { EmailHint, useEmailHint } from "@/components/ui/EmailHint";
+import { useFormFunnel } from "@/lib/analytics/useFormFunnel";
+import { track } from "@/components/analytics/Tracker";
 
 type Status = "idle" | "loading" | "success" | "error";
 
@@ -11,6 +14,9 @@ export function ContactForm() {
   const t = useT();
   const { locale } = useLocale();
   const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const emailHint = useEmailHint("contact");
+  const funnel = useFormFunnel("contact");
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
 
@@ -32,17 +38,21 @@ export function ContactForm() {
         body: JSON.stringify(Object.fromEntries(data.entries())),
       });
       if (!res.ok) throw new Error(t.component.iletisim.contact_form.error_server);
+      funnel.done();
+      track("form_submit", { form: "contact", ok: true });
       setStatus("success");
       setMessage(t.component.iletisim.contact_form.success_message);
       form.reset();
+      setEmail("");
     } catch {
+      track("error", { form: "contact", field: "submit" });
       setStatus("error");
       setMessage(t.component.iletisim.contact_form.error_send);
     }
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit} onFocusCapture={funnel.onFocus} className="space-y-4">
       <input
         type="text"
         name="_hp"
@@ -63,7 +73,21 @@ export function ContactForm() {
           <label htmlFor="email" className="block text-sm font-semibold text-slate-700 mb-1.5">
             {t.component.iletisim.contact_form.label_email}
           </label>
-          <input id="email" name="email" type="email" required className="input-field" placeholder="ornek@email.com" />
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+              emailHint.clear();
+            }}
+            onBlur={() => emailHint.check(email)}
+            className="input-field"
+            placeholder="ornek@email.com"
+          />
+          <EmailHint hint={emailHint} onAccept={setEmail} />
         </div>
       </div>
 
