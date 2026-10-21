@@ -20,6 +20,9 @@ import { useUiText } from "@/lib/i18n/uiText";
 import { buildWhatsAppHref, whatsappPrefill, sitePageUrl } from "@/lib/whatsapp";
 import { reportClick, WhatsAppIcon } from "@/components/booking/WhatsAppFAB";
 import { COMPANY } from "@/data/founder";
+import { EmailHint, useEmailHint } from "@/components/ui/EmailHint";
+import { useFormFunnel } from "@/lib/analytics/useFormFunnel";
+import { track } from "@/components/analytics/Tracker";
 
 export const QUICK_CONTACT_ID = "quick-contact";
 
@@ -49,6 +52,9 @@ export function QuickContactForm({ onSent }: { onSent?: () => void }) {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
   const [product, setProduct] = useState<string | undefined>();
+  const [email, setEmail] = useState("");
+  const emailHint = useEmailHint("quick");
+  const funnel = useFormFunnel("quick");
 
   useEffect(() => {
     setProduct(currentProduct());
@@ -62,6 +68,7 @@ export function QuickContactForm({ onSent }: { onSent?: () => void }) {
     const phone = (data.phone ?? "").trim();
     const email = (data.email ?? "").trim();
     if (!phone && !email) {
+      track("error", { form: "quick", field: "contact" });
       setStatus("error");
       setError(ui.needOne);
       return;
@@ -85,10 +92,14 @@ export function QuickContactForm({ onSent }: { onSent?: () => void }) {
         }),
       });
       if (!res.ok) throw new Error(String(res.status));
+      funnel.done();
+      track("form_submit", { form: "quick", ok: true });
       setStatus("success");
       form.reset();
+      setEmail("");
       onSent?.();
     } catch {
+      track("error", { form: "quick", field: "submit" });
       setStatus("error");
       setError(ui.error);
     }
@@ -105,7 +116,7 @@ export function QuickContactForm({ onSent }: { onSent?: () => void }) {
 
   const field = "input-field !py-2.5 !text-sm";
   return (
-    <form onSubmit={submit} className="space-y-2.5" data-quick-contact-form>
+    <form onSubmit={submit} onFocusCapture={funnel.onFocus} className="space-y-2.5" data-quick-contact-form>
       <input type="text" name="_hp" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
       {product && (
         <p className="truncate rounded-lg bg-primary/[0.06] px-3 py-1.5 text-xs font-semibold capitalize text-primary">
@@ -115,8 +126,23 @@ export function QuickContactForm({ onSent }: { onSent?: () => void }) {
       <input name="name" type="text" required minLength={2} maxLength={100} autoComplete="name" aria-label={ui.name} placeholder={ui.name} className={field} />
       <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
         <input name="phone" type="tel" maxLength={40} autoComplete="tel" inputMode="tel" aria-label={ui.phone} placeholder={ui.phone} className={field} />
-        <input name="email" type="email" maxLength={200} autoComplete="email" aria-label={ui.email} placeholder={ui.email} className={field} />
+        <input
+          name="email"
+          type="email"
+          maxLength={200}
+          autoComplete="email"
+          aria-label={ui.email}
+          placeholder={ui.email}
+          value={email}
+          onChange={(e) => {
+            setEmail(e.target.value);
+            emailHint.clear();
+          }}
+          onBlur={() => emailHint.check(email)}
+          className={field}
+        />
       </div>
+      <EmailHint hint={emailHint} onAccept={setEmail} />
       <details className="group">
         <summary className="cursor-pointer select-none text-xs font-semibold text-primary">{ui.more}</summary>
         <div className="mt-2.5 space-y-2.5">

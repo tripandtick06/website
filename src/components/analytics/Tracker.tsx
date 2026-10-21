@@ -49,6 +49,12 @@ export function track(name: TrackEvent["name"], props: TrackEvent["props"] = {})
   });
 }
 
+/** Sayfa kapanırken gönderilmesi gereken olay: kuyruğa ekle + hemen beacon ile boşalt. */
+export function trackBeacon(name: TrackEvent["name"], props: TrackEvent["props"] = {}): void {
+  track(name, props);
+  q().flush(true);
+}
+
 function isAutomated(): boolean {
   try {
     return !!(navigator as Navigator & { webdriver?: boolean }).webdriver;
