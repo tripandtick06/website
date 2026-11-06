@@ -1,3 +1,4 @@
+import { withSecurityHeaders } from "@/lib/security-headers";
 import { NextResponse, type NextRequest } from "next/server";
 import createIntlMiddleware from "next-intl/middleware";
 import { routing } from "@/i18n/routing";
@@ -84,6 +85,10 @@ function getClientIp(req: NextRequest): string {
 }
 
 export async function middleware(req: NextRequest) {
+  return withSecurityHeaders(await route(req));
+}
+
+async function route(req: NextRequest): Promise<NextResponse> {
   const { pathname } = req.nextUrl;
 
   // Non-API + non-admin paths → next-intl locale routing.
