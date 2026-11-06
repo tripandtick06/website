@@ -65,6 +65,7 @@ const nextConfig = {
       { protocol: "https", hostname: "*.cloudinary.com" },
     ],
   },
+  poweredByHeader: false,
   async headers() {
     // Guvenlik basliklari (2026-11-06 audit). CSP simdilik Report-Only: gecerli
     // kaynaklar (GA, Stripe, Supabase, Google Maps iframe, Unsplash/Cloudinary)
