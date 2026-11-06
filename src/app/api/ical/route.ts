@@ -26,7 +26,9 @@ function escapeIcal(s: string): string {
 
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
-  const bookingId = searchParams.get("bookingId") ?? "TT-UNKNOWN";
+  const rawBookingId = searchParams.get("bookingId") ?? "";
+  // CRLF/header-injection koruma: yalniz [A-Za-z0-9-] (UID, Content-Disposition, DESCRIPTION icinde kullanilir).
+  const bookingId = /^[A-Za-z0-9-]{1,40}$/.test(rawBookingId) ? rawBookingId : "TT-UNKNOWN";
   const serviceName = searchParams.get("serviceName") ?? "Kapadokya Balon Turu";
   const dateStr = searchParams.get("date") ?? "";
   const timeStr = searchParams.get("time") ?? "05:00";

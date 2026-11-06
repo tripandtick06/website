@@ -21,6 +21,10 @@ export interface RescheduleTokenPayload {
 function secret(): string {
   const s = process.env.RESCHEDULE_SECRET ?? process.env.ADMIN_API_TOKEN;
   if (!s || s.length < 8) {
+    // Fail-closed: prod\'da bilinen demo secret ile token imzalanmaz/dogrulanmaz.
+    if (process.env.NODE_ENV === "production") {
+      throw new Error("RESCHEDULE secret env eksik/kisa");
+    }
     return "demo-reschedule-secret-rotate-me-32bytes-min";
   }
   return s;

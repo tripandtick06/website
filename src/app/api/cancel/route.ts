@@ -38,6 +38,10 @@ function refundPolicy(bookingDateIso?: string): { hoursUntil: number; pct: numbe
   return { hoursUntil, pct: 0, days: 0 };
 }
 
+function esc(s: string): string {
+  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+
 async function sendAdminCancelMail(input: {
   bookingId: string;
   email: string;
@@ -57,14 +61,14 @@ async function sendAdminCancelMail(input: {
 <div style="max-width:560px;margin:0 auto;background:#fff;border-radius:12px;padding:24px;border-left:4px solid #ef4444;">
 <h2 style="color:#b91c1c;margin:0 0 12px 0;">IPTAL TALEBI</h2>
 <table style="width:100%;font-size:14px;">
-<tr><td style="color:#64748b;padding:4px 0;">Rezervasyon</td><td style="font-weight:700;font-family:monospace;">${input.bookingId}</td></tr>
-<tr><td style="color:#64748b;padding:4px 0;">Musteri</td><td style="font-weight:600;">${input.email}</td></tr>
-${input.serviceName ? `<tr><td style="color:#64748b;padding:4px 0;">Hizmet</td><td style="font-weight:600;">${input.serviceName}</td></tr>` : ""}
-${input.bookingDate ? `<tr><td style="color:#64748b;padding:4px 0;">Ucus tarihi</td><td style="font-weight:600;">${input.bookingDate}</td></tr>` : ""}
+<tr><td style="color:#64748b;padding:4px 0;">Rezervasyon</td><td style="font-weight:700;font-family:monospace;">${esc(input.bookingId)}</td></tr>
+<tr><td style="color:#64748b;padding:4px 0;">Musteri</td><td style="font-weight:600;">${esc(input.email)}</td></tr>
+${input.serviceName ? `<tr><td style="color:#64748b;padding:4px 0;">Hizmet</td><td style="font-weight:600;">${esc(input.serviceName)}</td></tr>` : ""}
+${input.bookingDate ? `<tr><td style="color:#64748b;padding:4px 0;">Ucus tarihi</td><td style="font-weight:600;">${esc(input.bookingDate)}</td></tr>` : ""}
 <tr><td style="color:#64748b;padding:4px 0;">Iade orani</td><td style="font-weight:700;color:#FF6B35;">%${input.refundPct}</td></tr>
 <tr><td style="color:#64748b;padding:4px 0;">Iade tutari</td><td style="font-weight:700;">${sym}${input.refundAmount.toFixed(2)}</td></tr>
 </table>
-${input.reason ? `<div style="margin-top:14px;padding:10px 12px;background:#fffbeb;border-left:3px solid #FFB627;border-radius:4px;font-size:13px;color:#78350f;"><strong>Sebep:</strong> ${input.reason}</div>` : ""}
+${input.reason ? `<div style="margin-top:14px;padding:10px 12px;background:#fffbeb;border-left:3px solid #FFB627;border-radius:4px;font-size:13px;color:#78350f;"><strong>Sebep:</strong> ${esc(input.reason)}</div>` : ""}
 <p style="margin-top:16px;color:#475569;">Stripe panel uzerinden refund tetiklenmelidir.</p>
 </div></body></html>`;
   const text = `IPTAL TALEBI\n\nRezervasyon: ${input.bookingId}\nMusteri: ${input.email}\nHizmet: ${input.serviceName ?? "—"}\nUcus tarihi: ${input.bookingDate ?? "—"}\nIade orani: %${input.refundPct}\nIade tutari: ${sym}${input.refundAmount.toFixed(2)}\nSebep: ${input.reason ?? "—"}\n`;

@@ -10,7 +10,7 @@ import { BALLOON_PACKAGES } from "@/data/services/balloons";
 import { ACTIVITIES, TOURS, HOTELS, PACKAGES, TRANSFERS } from "@/data/services/catalog";
 
 const AUTH_KEY = "tripandtick:admin:auth";
-const ADMIN_TOKEN = process.env.NEXT_PUBLIC_ADMIN_TOKEN ?? "demo-admin-token-rotate-me";
+const ADMIN_TOKEN = process.env.NEXT_PUBLIC_ADMIN_TOKEN ?? "";
 
 type Status = "active" | "cancelled" | "delayed" | "sold_out";
 

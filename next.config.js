@@ -65,6 +65,37 @@ const nextConfig = {
       { protocol: "https", hostname: "*.cloudinary.com" },
     ],
   },
+  async headers() {
+    // Guvenlik basliklari (2026-11-06 audit). CSP simdilik Report-Only: gecerli
+    // kaynaklar (GA, Stripe, Supabase, Google Maps iframe, Unsplash/Cloudinary)
+    // dogrulanana kadar sayfa kirilmasin; ihlaller tarayici konsolunda gorunur.
+    const csp = [
+      "default-src 'self'",
+      "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://js.stripe.com",
+      "style-src 'self' 'unsafe-inline'",
+      "img-src 'self' data: blob: https:",
+      "font-src 'self' data:",
+      "connect-src 'self' https://*.supabase.co https://www.google-analytics.com https://*.google-analytics.com https://api.stripe.com",
+      "frame-src https://js.stripe.com https://hooks.stripe.com https://www.google.com https://maps.google.com",
+      "object-src 'none'",
+      "base-uri 'self'",
+      "form-action 'self' https://checkout.stripe.com",
+      "frame-ancestors 'self'",
+    ].join("; ");
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          { key: "Strict-Transport-Security", value: "max-age=31536000" },
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(self), payment=(self)" },
+          { key: "Content-Security-Policy-Report-Only", value: csp },
+        ],
+      },
+    ];
+  },
   async redirects() {
     const redirects = [
       // www → apex (non-www) — tek canonical host; GSC "alternatif sayfa,

@@ -8,6 +8,7 @@
 
 import { NextResponse, type NextRequest } from "next/server";
 import { z } from "zod";
+import { isAdminRequest } from "@/lib/admin-auth";
 import {
   BASE_PRICE_DATE,
   getOverride,
@@ -21,12 +22,9 @@ import { sendCancellationNotifications } from "@/lib/cancel-notify";
 export const runtime = "edge";
 export const dynamic = "force-dynamic";
 
-const ADMIN_TOKEN = process.env.ADMIN_API_TOKEN ?? "demo-admin-token-rotate-me";
-
 function authorized(req: NextRequest): boolean {
-  const tok = req.headers.get("x-admin-token");
-  if (!tok) return false;
-  return tok === ADMIN_TOKEN;
+  // Fail-closed: cookie veya x-admin-token (ADMIN_API_TOKEN); env yoksa her zaman false.
+  return isAdminRequest(req);
 }
 
 const upsertSchema = z.object({
