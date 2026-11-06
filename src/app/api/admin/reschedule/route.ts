@@ -11,6 +11,7 @@
 
 import { NextResponse, type NextRequest } from "next/server";
 import { z } from "zod";
+import { isAdminRequest } from "@/lib/admin-auth";
 import { findImpactedBookings } from "@/lib/db/bookings";
 import { sendCancellationNotifications, enrichWithAlternatives } from "@/lib/cancel-notify";
 import { brevoEnabled } from "@/lib/brevo";
@@ -18,11 +19,9 @@ import { brevoEnabled } from "@/lib/brevo";
 export const runtime = "edge";
 export const dynamic = "force-dynamic";
 
-const ADMIN_TOKEN = process.env.ADMIN_API_TOKEN ?? "demo-admin-token-rotate-me";
-
 function authorized(req: NextRequest): boolean {
-  const tok = req.headers.get("x-admin-token");
-  return Boolean(tok) && tok === ADMIN_TOKEN;
+  // Fail-closed: cookie veya x-admin-token (ADMIN_API_TOKEN); env yoksa her zaman false.
+  return isAdminRequest(req);
 }
 
 const previewSchema = z.object({

@@ -22,6 +22,10 @@ export interface GdprTokenPayload {
 function secret(): string {
   const s = process.env.GDPR_SECRET ?? process.env.ADMIN_API_TOKEN;
   if (!s || s.length < 8) {
+    // Fail-closed: prod\'da bilinen demo secret ile token imzalanmaz/dogrulanmaz.
+    if (process.env.NODE_ENV === "production") {
+      throw new Error("GDPR secret env eksik/kisa");
+    }
     return "demo-gdpr-secret-rotate-me-32bytes-minimum";
   }
   return s;

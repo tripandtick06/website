@@ -55,7 +55,7 @@ const ADMIN_AUTH_KEY = "tripandtick:admin:auth";
 // tum tarihlerde gecerli olan taban fiyati tasir (bkz. /api/admin/service-override).
 const BASE_OVERRIDE_DATE = "1970-01-01";
 // x-admin-token — /admin/fiyat/page.tsx ile ayni pattern (env yoksa demo fallback).
-const ADMIN_TOKEN = process.env.NEXT_PUBLIC_ADMIN_TOKEN ?? "demo-admin-token-rotate-me";
+const ADMIN_TOKEN = process.env.NEXT_PUBLIC_ADMIN_TOKEN ?? "";
 
 type Tab =
   | "dashboard"
