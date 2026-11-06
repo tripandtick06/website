@@ -45,8 +45,18 @@ function getCategoryServiceLink(
   return { href: "/kapadokya", label: t.nav_extra.kapadokya_guide };
 }
 
+export interface BlogSource {
+  id: string;
+  url: string;
+  title: string;
+  publisher: string;
+  accessed: string;
+  citaat: string;
+}
+
 interface BlogArticleContentProps {
   article: BlogArticle;
+  sources?: BlogSource[];
   related: BlogArticleMeta[];
   readTime: number;
   renderedContent: string;
@@ -63,6 +73,7 @@ const FAQ_HEADING: Record<string, string> = {
 
 export function BlogArticleContent({
   article,
+  sources = [],
   related,
   readTime,
   renderedContent,
@@ -162,6 +173,26 @@ export function BlogArticleContent({
                 </div>
               ))}
             </dl>
+          </section>
+        )}
+
+        {/* Sources — visible external references (GEO citation standard, src/data/sources.json). */}
+        {sources.length > 0 && (
+          <section className="mt-10 pt-6 border-t border-slate-200" aria-labelledby="blog-sources-heading">
+            <h2 id="blog-sources-heading" className="text-2xl font-extrabold text-slate-900 mb-4">
+              Sources
+            </h2>
+            <ol className="list-decimal pl-5 space-y-3 text-slate-700">
+              {sources.map((s) => (
+                <li key={s.id}>
+                  <a href={s.url} rel="noopener noreferrer" target="_blank" className="font-semibold text-primary underline">
+                    {s.title}
+                  </a>{" "}
+                  — {s.publisher}, accessed {formatUpdated(s.accessed, article.locale)}.
+                  <span className="block text-sm text-slate-500">&ldquo;{s.citaat}&rdquo;</span>
+                </li>
+              ))}
+            </ol>
           </section>
         )}
 

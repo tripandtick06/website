@@ -20,15 +20,15 @@
   "isAiGenerated": true,
   "seoScore": 90,
   "coverImage": "/images/blog/kapadokya-aktiviteler.jpg",
-  "updatedAt": "2026-09-19",
+  "updatedAt": "2026-11-06",
   "faq": [
     {
       "question": "How many activities can fit in one day in Cappadocia?",
-      "answer": "With good planning, 3-4 activities are possible in a day: a morning balloon ride, a Red or Green tour during the day, sunset viewing in the late afternoon, and dinner with a Turkish night show in the evening."
+      "answer": "With good planning, 3-4 activities are possible in a day. That means a morning balloon ride, a Red or Green tour during the day, sunset viewing in the late afternoon, and dinner with a Turkish night show in the evening."
     },
     {
       "question": "What are the best activities for children in Cappadocia?",
-      "answer": "Devrent Valley's animal-shaped rocks, the Göreme Open Air Museum, making a mini pot at the Avanos ceramic workshop, and photo shoots at Üç Güzeller work well for kids; the underground cities are recommended from age 8+."
+      "answer": "Devrent Valley's animal-shaped rocks, the Göreme Open Air Museum, a mini pot at the Avanos ceramic workshop, and photo shoots at Üç Güzeller work well for kids. The underground cities are recommended from age 8+."
     },
     {
       "question": "Which Cappadocia activities can be done in the rain?",
@@ -36,7 +36,7 @@
     },
     {
       "question": "How many days should a full Cappadocia trip take?",
-      "answer": "A minimum of 2 nights/3 days covers a balloon flight, one tour and a museum; 3 nights/4 days is ideal for all the major activities, and 5+ days lets you add Ihlara Valley, hot springs, a photo tour and valley hikes."
+      "answer": "A minimum of 2 nights/3 days covers a balloon flight, one tour and a museum. 3 nights/4 days is ideal for all the major activities, and 5+ days lets you add Ihlara Valley, hot springs, a photo tour and valley hikes."
     },
     {
       "question": "Can a wine tasting and a balloon ride be done on the same day?",
@@ -46,5 +46,9 @@
       "question": "Can Cappadocia activities be booked online?",
       "answer": "Yes, all activities can be booked online with Trip and Tick using Visa, Mastercard, Amex or UnionPay (EUR/TRY/USD, 3D Secure), and the PDF voucher is emailed instantly."
     }
+  ],
+  "sources": [
+    "unesco-goreme",
+    "muze-goreme"
   ]
 }
