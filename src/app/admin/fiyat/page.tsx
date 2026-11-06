@@ -1,7 +1,7 @@
 "use client";
 
 // /admin/fiyat — admin gunluk fiyat + iptal/rotar yonetimi.
-// Auth: localStorage AUTH_KEY + x-admin-token header NEXT_PUBLIC_ADMIN_TOKEN.
+// Auth: localStorage AUTH_KEY (httpOnly admin cookie, same-origin).
 
 import { useState, useEffect, useMemo } from "react";
 import { useRouter } from "next/navigation";
@@ -10,7 +10,6 @@ import { BALLOON_PACKAGES } from "@/data/services/balloons";
 import { ACTIVITIES, TOURS, HOTELS, PACKAGES, TRANSFERS } from "@/data/services/catalog";
 
 const AUTH_KEY = "tripandtick:admin:auth";
-const ADMIN_TOKEN = process.env.NEXT_PUBLIC_ADMIN_TOKEN ?? "";
 
 type Status = "active" | "cancelled" | "delayed" | "sold_out";
 
@@ -123,7 +122,7 @@ export default function AdminFiyatPage() {
     try {
       const res = await fetch(
         `/api/admin/service-override?slug=${encodeURIComponent(slug)}&startDate=${tomorrowIso()}&endDate=${plus30DaysIso()}`,
-        { headers: { "x-admin-token": ADMIN_TOKEN } }
+        {}
       );
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
@@ -154,7 +153,7 @@ export default function AdminFiyatPage() {
 
       const res = await fetch("/api/admin/service-override", {
         method: "POST",
-        headers: { "Content-Type": "application/json", "x-admin-token": ADMIN_TOKEN },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
       });
       const data = await res.json();
@@ -173,7 +172,7 @@ export default function AdminFiyatPage() {
     try {
       const res = await fetch(
         `/api/admin/service-override?slug=${encodeURIComponent(slugX)}&date=${encodeURIComponent(dateX)}`,
-        { method: "DELETE", headers: { "x-admin-token": ADMIN_TOKEN } }
+        { method: "DELETE", headers: {} }
       );
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       await loadOverrides();
@@ -191,7 +190,7 @@ export default function AdminFiyatPage() {
     try {
       const res = await fetch("/api/admin/service-override", {
         method: "POST",
-        headers: { "Content-Type": "application/json", "x-admin-token": ADMIN_TOKEN },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           mode: "bulk-cancel",
           slugs: bulkSlugs,
@@ -222,7 +221,7 @@ export default function AdminFiyatPage() {
     try {
       const res = await fetch("/api/admin/reschedule", {
         method: "POST",
-        headers: { "Content-Type": "application/json", "x-admin-token": ADMIN_TOKEN },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ mode: "preview", slugs: bulkSlugs, date: bulkDate }),
       });
       const data = await res.json();
@@ -250,7 +249,7 @@ export default function AdminFiyatPage() {
     try {
       const res = await fetch("/api/admin/reschedule", {
         method: "POST",
-        headers: { "Content-Type": "application/json", "x-admin-token": ADMIN_TOKEN },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           mode: "send",
           slugs: bulkSlugs,
@@ -293,7 +292,7 @@ export default function AdminFiyatPage() {
       if (refundNote.trim()) body.note = refundNote.trim();
       const res = await fetch("/api/admin/refund", {
         method: "POST",
-        headers: { "Content-Type": "application/json", "x-admin-token": ADMIN_TOKEN },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
       });
       const data = await res.json();

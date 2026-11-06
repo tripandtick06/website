@@ -55,7 +55,6 @@ const ADMIN_AUTH_KEY = "tripandtick:admin:auth";
 // tum tarihlerde gecerli olan taban fiyati tasir (bkz. /api/admin/service-override).
 const BASE_OVERRIDE_DATE = "1970-01-01";
 // x-admin-token — /admin/fiyat/page.tsx ile ayni pattern (env yoksa demo fallback).
-const ADMIN_TOKEN = process.env.NEXT_PUBLIC_ADMIN_TOKEN ?? "";
 
 type Tab =
   | "dashboard"
@@ -385,7 +384,7 @@ function PricesTab() {
       // startDate=endDate=BASE_OVERRIDE_DATE kullaniyoruz (bkz. src/app/api/admin/service-override/route.ts GET).
       const res = await fetch(
         `/api/admin/service-override?startDate=${BASE_OVERRIDE_DATE}&endDate=${BASE_OVERRIDE_DATE}`,
-        { headers: { "x-admin-token": ADMIN_TOKEN } }
+        {}
       );
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
@@ -425,7 +424,7 @@ function PricesTab() {
     try {
       const res = await fetch("/api/admin/service-override", {
         method: "POST",
-        headers: { "Content-Type": "application/json", "x-admin-token": ADMIN_TOKEN },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           slug,
           date: BASE_OVERRIDE_DATE,
@@ -453,7 +452,7 @@ function PricesTab() {
     try {
       const res = await fetch(
         `/api/admin/service-override?slug=${encodeURIComponent(slug)}&date=${BASE_OVERRIDE_DATE}`,
-        { method: "DELETE", headers: { "x-admin-token": ADMIN_TOKEN } }
+        { method: "DELETE", headers: {} }
       );
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       setRowState((p) => ({ ...p, [slug]: { kind: "ok", msg: "Temizlendi — katalog fiyati gecerli" } }));
