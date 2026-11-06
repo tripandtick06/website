@@ -11,6 +11,7 @@ import { serverDict } from "@/lib/i18n/serverDict";
 import { ARTICLES, type BlogArticle, type BlogArticleMeta } from "@/data/blog";
 import { clampTitle } from "@/lib/title";
 import { BlogArticleContent } from "./BlogArticleContent";
+import SOURCES from "@/data/sources.json";
 
 // Tum makaleler build-time SSG -> statik HTML (indexlenebilir, noindex YOK).
 // Icerik public/blog/*.json'dan build'de fs ile okunur (Worker bundle'a girmez,
@@ -20,6 +21,17 @@ export const dynamicParams = false;
 
 export function generateStaticParams() {
   return ARTICLES.map((a) => ({ locale: a.locale, slug: a.slug }));
+}
+
+// Visible "Sources" list (GEO citation standard): ids in the article JSON resolve against src/data/sources.json.
+function getSources(file: string) {
+  try {
+    const raw = fs.readFileSync(path.join(process.cwd(), "public", "blog", file), "utf8");
+    const ids = (JSON.parse(raw) as { sources?: string[] }).sources ?? [];
+    return ids.flatMap((id) => SOURCES.urls.filter((u) => u.id === id));
+  } catch {
+    return [];
+  }
 }
 
 function getArticle(slug: string): BlogArticle | null {
@@ -176,6 +188,7 @@ export default async function BlogArticlePage({
       )}
       <BlogArticleContent
         article={article}
+        sources={getSources(article.file)}
         related={related}
         readTime={readTime}
         renderedContent={renderedContent}
