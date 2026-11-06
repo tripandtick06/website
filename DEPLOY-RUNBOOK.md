@@ -103,7 +103,6 @@ Settings → Environment Variables → **Production** (her variable icin "Encryp
 | `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` | Faz 1.1 — `pk_live_...` |
 | `STRIPE_WEBHOOK_SECRET` | Faz 1.1 — `whsec_...` (Encrypt) |
 | `ADMIN_API_TOKEN` | Faz 1.2 — token (Encrypt) |
-| `NEXT_PUBLIC_ADMIN_TOKEN` | Faz 1.2 — **AYNI** token |
 | `ADMIN_EMAIL` | `info@tripandtick.com` |
 | `ADMIN_PASSWORD` | Faz 1.2 — `openssl rand -base64 24` (Encrypt) |
 | `RESCHEDULE_SECRET` | Faz 1.2 — secret (Encrypt) |
