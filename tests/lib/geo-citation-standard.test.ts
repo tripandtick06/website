@@ -169,3 +169,15 @@ describe("geo citation standard — wave 3 scoped residue", () => {
     expect(a.faq.length).toBeLessThanOrEqual(8);
   });
 });
+
+// The generated manifest (src/data/blog/index.ts) feeds <meta description>; it must not
+// carry the removed Istanbul price/duration list even if public/blog JSON is clean.
+describe("geo citation standard — manifest metadata (Istanbul price list)", () => {
+  it("no locale Istanbul article metadata carries the fabricated 45/18/120 EUR list", () => {
+    const re = /(€\s?(45|18|120|185)(?!\d)|(?<![\d.,])(45|18|120|185)\s?€)/;
+    const hits = ARTICLES.filter((a) => a.slug.startsWith("kapadokya-istanbuldan-nasil-gidilir"))
+      .filter((a) => re.test([a.title, a.metaTitle, a.metaDescription, a.excerpt].join("\n")))
+      .map((a) => a.slug);
+    expect(hits).toEqual([]);
+  });
+});
