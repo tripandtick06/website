@@ -8,6 +8,9 @@ import path from "node:path";
 // The bus section also claimed a "10-hour" night trip while the table says 12-15 hr.
 const DIR = path.join(process.cwd(), "public", "blog");
 const files = readdirSync(DIR).filter((f) => f.endsWith("-kapadokya-istanbuldan-nasil-gidilir.json"));
+// 2026-11-11 GEO source standard: EN + TR were rewritten WITHOUT unsourced durations/fares (no citable source
+// for flight/bus times). They must stay qualitative; the other 15 locales keep the #71 duration lock.
+const QUALITATIVE = new Set(["en-kapadokya-istanbuldan-nasil-gidilir.json", "tr-kapadokya-istanbuldan-nasil-gidilir.json"]);
 
 describe("istanbuldan article: durations are explicit and consistent in every locale", () => {
   it("covers all 17 locales", () => {
@@ -15,6 +18,13 @@ describe("istanbuldan article: durations are explicit and consistent in every lo
   });
 
   for (const f of files) {
+    if (QUALITATIVE.has(f)) {
+      it(`${f} stays free of unsourced durations`, () => {
+        const c: string = JSON.parse(readFileSync(path.join(DIR, f), "utf8")).content;
+        expect(c).not.toMatch(/75\s?-\s?90|12\s?-\s?15/);
+      });
+      continue;
+    }
     it(`${f}`, () => {
       const content: string = JSON.parse(readFileSync(path.join(DIR, f), "utf8")).content;
       const lines = content.split("\n");

@@ -14,6 +14,12 @@ const MUST_PASS = [
   "en-cappadocia-winter-2026-guide.json",
   "en-kapadokya-aktiviteler.json",
   "en-kapadokya-fotograf-noktalari.json",
+  "en-kapadokya-istanbuldan-nasil-gidilir.json",
+  "en-kapadokya-otel-tavsiye-2026.json",
+  "en-kapadokya-dugun-fotografciligi-rehberi.json",
+  "en-3-gunluk-kapadokya-gezi-plani.json",
+  "en-cappadocia-hotel-booking-guide-en.json",
+  "en-cappadocia-how-many-people-fit-in-a-hot-air-balloon-en.json",
 ];
 
 type Article = {
