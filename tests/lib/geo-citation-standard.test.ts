@@ -95,3 +95,39 @@ describe("geo citation standard — rendering wiring (S2/S7)", () => {
     expect(p).toContain("sources={getSources(article.file)}");
   });
 });
+
+// Fabricated-claim guard, ALL locales (PR #75 removed these from EN/TR; the machine-translated
+// locales and noindex EN files must stay clean). Own-company claims (5% price match, 100% refund)
+// and the Istanbul duration lock are intentionally NOT covered here.
+const FORBIDDEN: [string, RegExp][] = [
+  ["operator data", /operator data|trip and tick data/i],
+  ["70-80% fly rate", /70\s?[-–]\s?80\s?%/],
+  ["40M insurance", /40\s?(M\b|million|milyon|millionen)/i],
+  ["12-18% below market", /12\s?[-–]\s?18\s?%/],
+  ["18% combo saving", /(?<![\d.,])18\s?%/],
+  ["41%/23%", /(?<![\d.,])(41|23)\s?%/],
+  ["72%", /(?<![\d.,])72\s?%/],
+  ["battery -40%", /[-−–]\s?40\s?%/],
+  ["25 km/h wind", /25\s?km/i],
+  ["200-hour maintenance", /200[\s-]?(h\b|hour|saat|Stunden|heures)/i],
+  ["fake permit email", /kultur\.gov\.tr/],
+  ["named operator list", /Kaya Balloons/],
+];
+const LOCALE_FILES = fs
+  .readdirSync(path.join(ROOT, "public", "blog"))
+  .filter((f) => f.endsWith(".json") && !/^(en|tr)-/.test(f) || f === "en-heissluftballon-kappadokien-preise.json");
+
+describe("geo citation standard — fabricated claims absent in every locale", () => {
+  it("covers the translated locales", () => {
+    expect(LOCALE_FILES.length).toBeGreaterThan(100);
+  });
+  it.each(FORBIDDEN)("%s", (_name, re) => {
+    const hits: string[] = [];
+    for (const f of LOCALE_FILES) {
+      const a = JSON.parse(fs.readFileSync(path.join(ROOT, "public", "blog", f), "utf8"));
+      const text = [a.title, a.metaTitle, a.metaDescription, a.excerpt, a.content, JSON.stringify(a.faq ?? [])].join("\n");
+      if (re.test(text)) hits.push(f);
+    }
+    expect(hits).toEqual([]);
+  });
+});
