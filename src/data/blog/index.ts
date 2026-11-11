@@ -190,7 +190,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-istanbuldan-nasil-gidilir-az",
     "title": "İstanbuldan Kapadokyaya Necə Getmək Olar? 5 Seçim — Vaxt, Qiymət və Müqayisə 2026",
     "metaTitle": "İstanbuldan Kapadokyaya Nəqliyyat 2026 | Təyyarə, Avtobus, Qatar, Maşın | Trip and Tick",
-    "metaDescription": "İstanbuldan Kapadokyaya 5 seçim: təyyarə 1.25 saat €45, avtobus 12 saat €25, qatar 18 saat €18, xüsusi maşın 8 saat €120, bələdçi tur qiyməti WhatsApp-da sorğu əsasında. Ətraflı müqayisə və hava limanı transferləri.",
+    "metaDescription": "İstanbuldan Kapadokyaya necə getmək olar? Təyyarə (Nevşehir/Kayseri), avtobus, qatar (Şərq Ekspresi), xüsusi maşın və bələdçi tur — bütün 5 seçim üçün vaxt, qiymət və üstünlüklərin tam müqayisəsi.",
     "excerpt": "İstanbuldan Kapadokyaya necə getmək olar? Təyyarə (Nevşehir/Kayseri), avtobus, qatar (Şərq Ekspresi), xüsusi maşın və bələdçi tur — bütün 5 seçim üçün vaxt, qiymət və üstünlüklərin tam müqayisəsi.",
     "category": "ulasim",
     "tags": [
@@ -391,7 +391,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-istanbuldan-nasil-gidilir-de",
     "title": "Wie kommt man von Istanbul nach Kappadokien? 5 Optionen — Dauer, Preis und Vergleich 2026",
     "metaTitle": "Istanbul Kappadokien Anreise 2026 | Flug, Bus, Zug, Auto | Trip and Tick",
-    "metaDescription": "Von Istanbul nach Kappadokien in 5 Optionen: Flug 1,25 Std. €45, Bus 12 Std. €25, Zug 18 Std. €18, Mietwagen 8 Std. €120, geführte Tour 2 Tage (Preis auf Anfrage). Detaillierter Vergleich und Flughafentransfer.",
+    "metaDescription": "Wie kommt man von Istanbul nach Kappadokien? Flug (Nevşehir/Kayseri), Bus, Zug (Doğu Ekspresi), Mietwagen und geführte Tour — für 5 Optionen ein kompletter Vergleich von Dauer, Preis und Vorteilen.",
     "excerpt": "Wie kommt man von Istanbul nach Kappadokien? Flug (Nevşehir/Kayseri), Bus, Zug (Doğu Ekspresi), Mietwagen und geführte Tour — für 5 Optionen ein kompletter Vergleich von Dauer, Preis und Vorteilen.",
     "category": "ulasim",
     "tags": [
@@ -1163,7 +1163,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-istanbuldan-nasil-gidilir-es",
     "title": "¿Cómo Llegar de Estambul a Capadocia? 5 Opciones — Duración, Precio y Comparativa 2026",
     "metaTitle": "Transporte Estambul Capadocia 2026 | Avión, Autobús, Tren, Coche | Trip and Tick",
-    "metaDescription": "De Estambul a Capadocia, 5 opciones: avión 1,25 h 45 €, autobús 12 h 25 €, tren 18 h 18 €, coche privado 8 h 120 €, tour guiado de 2 días a consultar. Comparativa detallada y traslado al aeropuerto.",
+    "metaDescription": "¿Cómo llegar de Estambul a Capadocia? Avión (Nevşehir/Kayseri), autobús, tren (Expreso del Este), coche privado y tour guiado — comparativa completa de duración, precio y ventajas de 5 opciones.",
     "excerpt": "¿Cómo llegar de Estambul a Capadocia? Avión (Nevşehir/Kayseri), autobús, tren (Expreso del Este), coche privado y tour guiado — comparativa completa de duración, precio y ventajas de 5 opciones.",
     "category": "ulasim",
     "tags": [
@@ -1364,7 +1364,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-istanbuldan-nasil-gidilir-fr",
     "title": "Comment aller d'Istanbul en Cappadoce ? 5 options — Durée, prix et comparaison 2026",
     "metaTitle": "Transport Istanbul Cappadoce 2026 | Avion, bus, train, voiture | Trip and Tick",
-    "metaDescription": "5 options d'Istanbul à la Cappadoce : avion 1h25 45 €, bus 12h 25 €, train 18h 18 €, voiture privée 8h 120 €, tour guidé 2 jours (prix sur devis). Comparaison détaillée et transfert aéroport.",
+    "metaDescription": "Comment aller d'Istanbul en Cappadoce ? Avion (Nevşehir/Kayseri), bus, train (Express de l'Est), voiture privée et tour guidé — comparaison complète de la durée, du prix et des avantages des 5 options.",
     "excerpt": "Comment aller d'Istanbul en Cappadoce ? Avion (Nevşehir/Kayseri), bus, train (Express de l'Est), voiture privée et tour guidé — comparaison complète de la durée, du prix et des avantages des 5 options.",
     "category": "ulasim",
     "tags": [
@@ -1565,7 +1565,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-istanbuldan-nasil-gidilir-hi",
     "title": "İstanbul से Cappadocia कैसे पहुँचें? 5 विकल्प — समय, कीमत और तुलना 2026",
     "metaTitle": "İstanbul Cappadocia परिवहन 2026 | फ्लाइट, बस, ट्रेन, कार | Trip and Tick",
-    "metaDescription": "İstanbul से Cappadocia के 5 विकल्प: फ्लाइट 1.25 घं €45, बस 12 घं €25, ट्रेन 18 घं €18, निजी कार 8 घं €120, गाइडेड टूर 2 दिन WhatsApp पर अनुरोध पर। विस्तृत तुलना और एयरपोर्ट ट्रांसफर।",
+    "metaDescription": "İstanbul से Cappadocia कैसे पहुँचें? फ्लाइट (Nevşehir/Kayseri), बस, ट्रेन (Doğu Ekspresi), निजी कार और गाइडेड टूर — 5 विकल्पों के लिए समय, कीमत और फ़ायदों की पूरी तुलना।",
     "excerpt": "İstanbul से Cappadocia कैसे पहुँचें? फ्लाइट (Nevşehir/Kayseri), बस, ट्रेन (Doğu Ekspresi), निजी कार और गाइडेड टूर — 5 विकल्पों के लिए समय, कीमत और फ़ायदों की पूरी तुलना।",
     "category": "ulasim",
     "tags": [
@@ -1790,7 +1790,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-istanbuldan-nasil-gidilir-it",
     "title": "Come arrivare a Cappadocia da Istanbul? 5 Opzioni — Tempo, Prezzo e Confronto 2026",
     "metaTitle": "Trasporto da Istanbul a Cappadocia 2026 | Aereo, Autobus, Treno, Auto | Trip and Tick",
-    "metaDescription": "5 opzioni da Istanbul a Cappadocia: aereo 1,25 ore €45, autobus 12 ore €25, treno 18 ore €18, auto privata 8 ore €120, tour 2 giorni €185. Confronto dettagliato e trasferimenti aeroportuali.",
+    "metaDescription": "Come si arriva a Cappadocia da Istanbul? Aereo (Nevşehir/Kayseri), autobus, treno (Eastern Express), auto privata e un tour guidato — un confronto completo di tempo, prezzo e vantaggi per tutte e 5 le opzioni.",
     "excerpt": "Come si arriva a Cappadocia da Istanbul? Aereo (Nevşehir/Kayseri), autobus, treno (Eastern Express), auto privata e un tour guidato — un confronto completo di tempo, prezzo e vantaggi per tutte e 5 le opzioni.",
     "category": "ulasim",
     "tags": [
@@ -2015,7 +2015,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-istanbuldan-nasil-gidilir-ja",
     "title": "イスタンブールからカッパドキアへの行き方は？ 5つのオプション — 時間、価格、比較 2026",
     "metaTitle": "イスタンブールからカッパドキアへの交通手段 2026 | 飛行機、バス、電車、車 | Trip and Tick",
-    "metaDescription": "イスタンブールからカッパドキアへの5つのオプション：飛行機 1.25時間 €45、バス 12時間 €25、電車 18時間 €18、プライベートカー 8時間 €120、ツアー 2日間（価格はWhatsAppでお問い合わせください）。詳細な比較と空港送迎。",
+    "metaDescription": "イスタンブールからカッパドキアに行くにはどうすればいいですか？ 飛行機（ネヴシェヒル/カイセリ）、バス、電車（イースタンエクスプレス）、プライベートカー、ガイド付きツアー — すべての5つのオプションの時間、価格、利点の完全比較。",
     "excerpt": "イスタンブールからカッパドキアに行くにはどうすればいいですか？ 飛行機（ネヴシェヒル/カイセリ）、バス、電車（イースタンエクスプレス）、プライベートカー、ガイド付きツアー — すべての5つのオプションの時間、価格、利点の完全比較。",
     "category": "ulasim",
     "tags": [
@@ -2240,7 +2240,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-istanbuldan-nasil-gidilir-ko",
     "title": "이스탄불에서 카파도키아까지 가는 방법? 5가지 옵션 — 시간, 가격 및 비교 2026",
     "metaTitle": "이스탄불에서 카파도키아까지의 교통 2026 | 비행기, 버스, 기차, 자동차 | Trip and Tick",
-    "metaDescription": "이스탄불에서 카파도키아까지의 5가지 옵션: 비행기 1.25시간 €45, 버스 12시간 €25, 기차 18시간 €18, 개인 자동차 8시간 €120, 투어 2일 (가격은 WhatsApp으로 문의). 자세한 비교 및 공항 이동.",
+    "metaDescription": "이스탄불에서 카파도키아까지 어떻게 가나요? 비행기(네브셰히르/카이세리), 버스, 기차(동부 익스프레스), 개인 자동차 및 가이드 투어 — 모든 5가지 옵션의 시간, 가격 및 장점에 대한 완전한 비교.",
     "excerpt": "이스탄불에서 카파도키아까지 어떻게 가나요? 비행기(네브셰히르/카이세리), 버스, 기차(동부 익스프레스), 개인 자동차 및 가이드 투어 — 모든 5가지 옵션의 시간, 가격 및 장점에 대한 완전한 비교.",
     "category": "ulasim",
     "tags": [
@@ -2330,7 +2330,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "targetKeyword": "beste tijd ballonvaart cappadocië",
     "locale": "nl",
     "publishedAt": "2026-10-17T00:00:00.000Z",
-    "updatedAt": "2026-10-17",
+    "updatedAt": "2026-11-11",
     "seoScore": 90,
     "isAiGenerated": true,
     "noindex": false,
@@ -2465,7 +2465,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-istanbuldan-nasil-gidilir-nl",
     "title": "Hoe Reis Je van Istanbul naar Cappadocië? 5 Opties — Duur, Prijs en Vergelijking 2026",
     "metaTitle": "Istanbul Cappadocië Vervoer 2026 | Vliegtuig, Bus, Trein, Auto | Trip and Tick",
-    "metaDescription": "Van Istanbul naar Cappadocië 5 opties: vliegtuig 1,25 u €45, bus 12 u €25, trein 18 u €18, privéauto 8 u €120, begeleide tour op aanvraag. Gedetailleerde vergelijking en luchthaventransfer.",
+    "metaDescription": "Hoe reis je van Istanbul naar Cappadocië? Vliegtuig (Nevşehir/Kayseri), bus, trein (Oosterse Express), privéauto en begeleide tour — voor 5 opties een volledige vergelijking van duur, prijs en voordelen.",
     "excerpt": "Hoe reis je van Istanbul naar Cappadocië? Vliegtuig (Nevşehir/Kayseri), bus, trein (Oosterse Express), privéauto en begeleide tour — voor 5 opties een volledige vergelijking van duur, prijs en voordelen.",
     "category": "ulasim",
     "tags": [
@@ -2555,7 +2555,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "targetKeyword": "kosten ballonvaart cappadocië",
     "locale": "nl",
     "publishedAt": "2026-10-17T00:00:00.000Z",
-    "updatedAt": "2026-10-17",
+    "updatedAt": "2026-11-11",
     "seoScore": 90,
     "isAiGenerated": true,
     "noindex": false,
@@ -2714,7 +2714,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-istanbuldan-nasil-gidilir-pt-BR",
     "title": "Como Chegar a Cappadocia a Partir de Istambul? 5 Opções — Tempo, Preço e Comparação 2026",
     "metaTitle": "Transporte de Istambul a Cappadocia 2026 | Avião, Ônibus, Trem, Carro | Trip and Tick",
-    "metaDescription": "5 opções de Istambul a Cappadocia: avião 1,25 hr €45, ônibus 12 hr €25, trem 18 hr €18, carro particular 8 hr €120, tour guiado de 2 dias sob consulta. Comparação detalhada e transfers de aeroporto.",
+    "metaDescription": "Como você chega a Cappadocia a partir de Istambul? Avião (Nevşehir/Kayseri), ônibus, trem (Expresso Oriental), carro particular e um tour guiado — uma comparação completa de tempo, preço e vantagens para todas as 5 opções.",
     "excerpt": "Como você chega a Cappadocia a partir de Istambul? Avião (Nevşehir/Kayseri), ônibus, trem (Expresso Oriental), carro particular e um tour guiado — uma comparação completa de tempo, preço e vantagens para todas as 5 opções.",
     "category": "ulasim",
     "tags": [
@@ -2939,7 +2939,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-istanbuldan-nasil-gidilir-pt",
     "title": "Como Chegar a Cappadocia a Partir de Istambul? 5 Opções — Tempo, Preço e Comparação 2026",
     "metaTitle": "Transporte de Istambul para Cappadocia 2026 | Avião, Autocarro, Comboio, Carro | Trip and Tick",
-    "metaDescription": "5 opções de Istambul para Cappadocia: avião 1.25 hr €45, autocarro 12 hr €25, comboio 18 hr €18, carro privado 8 hr €120, tour guiado com preço sob consulta. Comparação detalhada e transferes de aeroporto.",
+    "metaDescription": "Como chegar a Cappadocia a partir de Istambul? Avião (Nevşehir/Kayseri), autocarro, comboio (Eastern Express), carro privado e um tour guiado — uma comparação completa de tempo, preço e vantagens para todas as 5 opções.",
     "excerpt": "Como chegar a Cappadocia a partir de Istambul? Avião (Nevşehir/Kayseri), autocarro, comboio (Eastern Express), carro privado e um tour guiado — uma comparação completa de tempo, preço e vantagens para todas as 5 opções.",
     "category": "ulasim",
     "tags": [
@@ -3164,7 +3164,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-istanbuldan-nasil-gidilir-ru",
     "title": "Как добраться до Каппадокии из Стамбула? 5 вариантов — время, цена и сравнение 2026",
     "metaTitle": "Транспорт из Стамбула в Каппадокию 2026 | Самолет, автобус, поезд, автомобиль | Trip and Tick",
-    "metaDescription": "5 вариантов из Стамбула в Каппадокию: самолет 1,25 ч €45, автобус 12 ч €25, поезд 18 ч €18, частный автомобиль 8 ч €120, тур 2 дня — цена по запросу в WhatsApp. Подробное сравнение и трансферы из аэропорта.",
+    "metaDescription": "Как добраться до Каппадокии из Стамбула? Самолет (Невшехир/Кайсери), автобус, поезд (Восточный экспресс), частный автомобиль и экскурсионный тур — полное сравнение времени, цены и преимуществ для всех 5 вариантов.",
     "excerpt": "Как добраться до Каппадокии из Стамбула? Самолет (Невшехир/Кайсери), автобус, поезд (Восточный экспресс), частный автомобиль и экскурсионный тур — полное сравнение времени, цены и преимуществ для всех 5 вариантов.",
     "category": "ulasim",
     "tags": [
@@ -3643,7 +3643,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-istanbuldan-nasil-gidilir-uk",
     "title": "Як дістатися до Каппадокії з Стамбула? 5 варіантів — час, ціна та порівняння 2026",
     "metaTitle": "Транспорт з Стамбула до Каппадокії 2026 | Літак, автобус, потяг, автомобіль | Trip and Tick",
-    "metaDescription": "5 варіантів з Стамбула до Каппадокії: літак 1.25 год €45, автобус 12 год €25, потяг 18 год €18, орендований автомобіль 8 год €120, тур 2 дні — ціна за запитом. Детальне порівняння та трансфери з аеропорту.",
+    "metaDescription": "Як дістатися до Каппадокії з Стамбула? Літак (Невшехір/Кайсері), автобус, потяг (Східний експрес), орендований автомобіль та екскурсійний тур — повне порівняння часу, ціни та переваг для всіх 5 варіантів.",
     "excerpt": "Як дістатися до Каппадокії з Стамбула? Літак (Невшехір/Кайсері), автобус, потяг (Східний експрес), орендований автомобіль та екскурсійний тур — повне порівняння часу, ціни та переваг для всіх 5 варіантів.",
     "category": "ulasim",
     "tags": [
@@ -3844,7 +3844,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-istanbuldan-nasil-gidilir-ur",
     "title": "Istanbul سے Cappadocia کیسے پہنچیں؟ 5 آپشن — دورانیہ، قیمت اور موازنہ 2026",
     "metaTitle": "Istanbul Cappadocia سفر 2026 | ہوائی جہاز، بس، ٹرین، کار | Trip and Tick",
-    "metaDescription": "Istanbul سے Cappadocia 5 آپشن: ہوائی جہاز 1.25 گھنٹہ €45، بس 12 گھنٹہ €25، ٹرین 18 گھنٹہ €18، نجی کار 8 گھنٹہ €120، رہنما ٹور 2 دن WhatsApp پر درخواست پر۔ تفصیلی موازنہ اور ایئرپورٹ ٹرانسفر۔",
+    "metaDescription": "Istanbul سے Cappadocia کیسے پہنچیں؟ ہوائی جہاز (Nevşehir/Kayseri)، بس، ٹرین (Doğu Ekspresi)، نجی کار اور رہنما ٹور — 5 آپشن کے لیے دورانیہ، قیمت اور فوائد کا مکمل موازنہ۔",
     "excerpt": "Istanbul سے Cappadocia کیسے پہنچیں؟ ہوائی جہاز (Nevşehir/Kayseri)، بس، ٹرین (Doğu Ekspresi)، نجی کار اور رہنما ٹور — 5 آپشن کے لیے دورانیہ، قیمت اور فوائد کا مکمل موازنہ۔",
     "category": "ulasim",
     "tags": [
@@ -4045,7 +4045,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "slug": "kapadokya-istanbuldan-nasil-gidilir-zh",
     "title": "如何从伊斯坦布尔前往卡帕多奇亚？5 种方式 — 时长、价格与对比 2026",
     "metaTitle": "伊斯坦布尔-卡帕多奇亚交通 2026 | 飞机、大巴、火车、自驾 | Trip and Tick",
-    "metaDescription": "从伊斯坦布尔前往卡帕多奇亚的 5 种方式：飞机 1.25 小时 €45、大巴 12 小时 €25、火车 18 小时 €18、私家车 8 小时 €120、跟团 2 天（详询 WhatsApp）。详细对比和机场接送。",
+    "metaDescription": "如何从伊斯坦布尔前往卡帕多奇亚？飞机（Nevşehir/Kayseri）、大巴、火车（东方快车）、私家车和向导跟团——5 种方式的时长、价格和优势完整对比。",
     "excerpt": "如何从伊斯坦布尔前往卡帕多奇亚？飞机（Nevşehir/Kayseri）、大巴、火车（东方快车）、私家车和向导跟团——5 种方式的时长、价格和优势完整对比。",
     "category": "ulasim",
     "tags": [
