@@ -138,10 +138,10 @@ export const ARTICLES: BlogArticleMeta[] = [
   {
     "file": "az-kapadokya-dugun-fotografciligi-rehberi.json",
     "slug": "kapadokya-dugun-fotografciligi-rehberi-az",
-    "title": "Kappadokya Toy Fotoqrafiyası Bələdçisi 2026 — Ən Yaxşı 10 Məkan, İcazələr və Balon Foto İpuçları",
-    "metaTitle": "Kappadokya Toy Fotoqrafiyası Bələdçisi 2026 | Trip and Tick",
-    "metaDescription": "Kappadokya toy fotoqrafiyası 2026: ən yaxşı 10 məkan (Sevgi Vadisi, Uçhisar, Sevgi Vadisi), icazəyə ehtiyac var mı, mövsümi rəng bələdçisi, balon foto ipuçları, paket qiymətləri WhatsApp-da sorğu əsasında.",
-    "excerpt": "Kappadokyada toy və öncəki toy fotoşəkilləri son 5 ildə qızıl dövrünü yaşayır. Nağıl tükləri, isti hava ballonları, vadilər və mağara otelləri dünya səviyyəsində kompozisiya palitrası təqdim edir. Bu bələdçidə ən yaxşı 10 məkanı, icazə prosedurunu, mövsümi rəng palitrasını, balon fotoqrafiyası üçün kritik ipuçlarını və 2026-cı il orta qiymətlərini ətraflı paylaşırıq.",
+    "title": "Kapadokya Toy Fotoqrafiyası Bələdçisi 2026: Məkanlar, İcazə Qaydaları və Balon Foto İpuçları",
+    "metaTitle": "Kapadokya Toy Fotoqrafiyası Bələdçisi 2026",
+    "metaDescription": "Kapadokyada toy çəkilişinə icazə var? 8 məkan, Nevşehir iqlim məlumatları ilə mövsüm bələdçisi, balon foto ipuçları, 245 EUR-dan paltar çəkilişi.",
+    "excerpt": "Kapadokyada toy və toyaqədər çəkilişlər üçün ən yaxşı seçim gün çıxanda pəri bacaları vadiləridir. Bələdçidə 8 məkan, mövsümlər üzrə şərait, muzey və dron istifadəsindən əvvəl yoxlanmalı məqamlar və balon foto ipuçları var.",
     "category": "rehber",
     "tags": [
       "cappadocia",
@@ -339,10 +339,10 @@ export const ARTICLES: BlogArticleMeta[] = [
   {
     "file": "de-kapadokya-dugun-fotografciligi.json",
     "slug": "kapadokya-dugun-fotografciligi-rehberi-de",
-    "title": "Hochzeitsfotografie in Kappadokien — Leitfaden 2026: Top-10-Locations, Genehmigungen und Ballonfoto-Tipps",
-    "metaTitle": "Hochzeitsfotografie in Kappadokien — Leitfaden 2026 | Trip and Tick",
-    "metaDescription": "Hochzeitsfotografie in Kappadokien 2026: Top-10-Locations (Liebestal, Uçhisar, Sevgi-Tal), brauche ich eine Genehmigung, saisonale Farbpalette, Ballonfoto-Tipps, Paketpreise per WhatsApp.",
-    "excerpt": "Hochzeits- und Pre-Wedding-Fotografie in Kappadokien erlebt seit fünf Jahren ihr goldenes Zeitalter. Feenkamine, Heißluftballons, Täler und Höhlenhotels bieten eine weltweit einzigartige Kompositionspalette. In diesem Leitfaden teilen wir ausführlich die Top-10-Locations, das Genehmigungsverfahren, die saisonale Farbpalette, entscheidende Tipps für Ballonfotos und die Durchschnittspreise 2026.",
+    "title": "Hochzeitsfotografie in Kappadokien 2026: Locations, Genehmigungsregeln und Ballonfoto-Tipps",
+    "metaTitle": "Hochzeitsfotografie Kappadokien 2026",
+    "metaDescription": "Hochzeitsfotos in Kappadokien erlaubt? 8 Locations, Klimadaten aus Nevşehir, Ballonfoto-Tipps und ein Ballonkleid-Shooting ab 245 EUR.",
+    "excerpt": "Hochzeits- und Pre-Wedding-Shootings in Kappadokien gelingen am besten in den Feenkamin-Tälern bei Sonnenaufgang. Dieser Leitfaden behandelt 8 Locations, die Bedingungen je Jahreszeit, was vor Museumsbesuchen oder Drohnenflügen zu prüfen ist, und Ballonfoto-Tipps.",
     "category": "rehber",
     "tags": [
       "kappadokien",
@@ -1111,10 +1111,10 @@ export const ARTICLES: BlogArticleMeta[] = [
   {
     "file": "es-kapadokya-dugun-fotografciligi.json",
     "slug": "kapadokya-dugun-fotografciligi-rehberi-es",
-    "title": "Guía de Fotografía de Bodas en Capadocia 2026 — Top 10 Localizaciones, Permisos y Consejos de Foto con Globos",
-    "metaTitle": "Guía de Fotografía de Bodas en Capadocia 2026 | Trip and Tick",
-    "metaDescription": "Fotografía de bodas en Capadocia 2026: top 10 localizaciones (Valle del Amor, Uçhisar, Çavuşin), ¿hace falta permiso?, guía de color estacional, consejos de foto con globos, precios de paquetes a consultar por WhatsApp.",
-    "excerpt": "La fotografía de boda y pre-boda en Capadocia vive su edad de oro en los últimos 5 años. Las chimeneas de hadas, los globos aerostáticos, los valles y los hoteles cueva ofrecen una paleta de composición de talla mundial. En esta guía compartimos en detalle el top 10 de localizaciones, el procedimiento de permisos, la paleta de color estacional, consejos críticos para la foto con globos y los precios medios de 2026.",
+    "title": "Guía de Fotografía de Bodas en Capadocia 2026: Localizaciones, Normas de Permiso y Consejos de Foto con Globos",
+    "metaTitle": "Fotografía de bodas en Capadocia 2026",
+    "metaDescription": "¿Se permiten fotos de boda en Capadocia? 8 localizaciones, clima oficial de Nevşehir, consejos con globos y sesión con vestido desde 245 EUR.",
+    "excerpt": "Las sesiones de boda y preboda en Capadocia funcionan mejor en los valles de chimeneas de hadas al amanecer. Esta guía cubre 8 localizaciones, las condiciones de cada estación, qué comprobar antes de usar museos o drones y consejos para fotos con globos.",
     "category": "rehber",
     "tags": [
       "capadocia",
@@ -1312,10 +1312,10 @@ export const ARTICLES: BlogArticleMeta[] = [
   {
     "file": "fr-kapadokya-dugun-fotografciligi-rehberi.json",
     "slug": "kapadokya-dugun-fotografciligi-rehberi-fr",
-    "title": "Guide de la photographie de mariage en Cappadoce 2026 — Top 10 des lieux, autorisations et astuces photo en montgolfière",
-    "metaTitle": "Guide photographie de mariage Cappadoce 2026 | Trip and Tick",
-    "metaDescription": "Photographie de mariage en Cappadoce 2026 : top 10 des lieux (Vallée de l'Amour, Uçhisar, Vallée de Sevgi), faut-il une autorisation, guide des couleurs saisonnières, astuces photo en montgolfière, tarifs des forfaits sur WhatsApp.",
-    "excerpt": "Les séances photo de mariage et pré-mariage (pre-wedding) en Cappadoce vivent leur âge d'or depuis 5 ans. Cheminées de fées, montgolfières, vallées et hôtels troglodytes offrent une palette de composition de classe mondiale. Dans ce guide, nous partageons en détail le top 10 des lieux, la procédure d'autorisation, la palette de couleurs saisonnières, les astuces essentielles pour la photo en montgolfière et les forfaits 2026 — tarifs actuels sur WhatsApp.",
+    "title": "Guide de la photographie de mariage en Cappadoce 2026 : lieux, règles d'autorisation et conseils pour les photos en montgolfière",
+    "metaTitle": "Photo de mariage en Cappadoce 2026 : guide",
+    "metaDescription": "Photo de mariage en Cappadoce : est-ce autorisé ? 8 lieux, saisons (données officielles de Nevsehir), conseils montgolfière, shooting robe dès 245 EUR.",
+    "excerpt": "Les séances de mariage et de pré-mariage en Cappadoce fonctionnent mieux dans les vallées de cheminées de fées au lever du soleil. Ce guide présente 8 lieux, les conditions saison par saison, ce qu'il faut vérifier avant d'utiliser musées ou drones, et des conseils pour les photos en montgolfière.",
     "category": "rehber",
     "tags": [
       "cappadoce",
@@ -1513,10 +1513,10 @@ export const ARTICLES: BlogArticleMeta[] = [
   {
     "file": "hi-kapadokya-dugun-fotografciligi-rehberi.json",
     "slug": "kapadokya-dugun-fotografciligi-rehberi-hi",
-    "title": "Cappadocia वेडिंग फोटोग्राफी गाइड 2026 — Top 10 लोकेशन, परमिट और बैलून फोटो टिप्स",
-    "metaTitle": "Cappadocia वेडिंग फोटोग्राफी गाइड 2026 | Trip and Tick",
-    "metaDescription": "Cappadocia वेडिंग फोटोग्राफी 2026: top 10 लोकेशन (Aşk Vadisi, Uçhisar, Sevgi Vadisi), क्या परमिट चाहिए, सीज़नल रंग गाइड, बैलून फोटो टिप्स, पैकेज कीमतें WhatsApp पर अनुरोध पर।",
-    "excerpt": "Cappadocia में शादी और प्री-वेडिंग फोटो शूट पिछले 5 वर्षों में अपने स्वर्ण युग का अनुभव कर रहा है। परी चिमनियाँ, हॉट एयर बैलून, घाटियाँ और केव होटल विश्व स्तरीय कंपोज़िशन पैलेट प्रदान करते हैं। इस गाइड में हम top 10 लोकेशन, परमिट प्रक्रिया, सीज़नल रंग पैलेट, बैलून फोटो के लिए महत्वपूर्ण टिप्स और 2026 की औसत कीमतें विस्तार से साझा करते हैं।",
+    "title": "Cappadocia वेडिंग फोटोग्राफी गाइड 2026: लोकेशन, अनुमति के नियम और बैलून फोटो टिप्स",
+    "metaTitle": "Cappadocia वेडिंग फोटोग्राफी गाइड 2026",
+    "metaDescription": "क्या Cappadocia में वेडिंग फोटोग्राफी की अनुमति है? 8 लोकेशन, Nevsehir के आधिकारिक डेटा पर मौसम गाइड, बैलून फोटो टिप्स, €245 से ड्रेस शूट।",
+    "excerpt": "Cappadocia में वेडिंग और प्री-वेडिंग शूट सूर्योदय के समय फेयरी-चिमनी वाली घाटियों में सबसे अच्छे बैठते हैं। इस गाइड में 8 लोकेशन, मौसम के अनुसार हालात, म्यूज़ियम या ड्रोन इस्तेमाल करने से पहले क्या जाँचें, और बैलून फोटो टिप्स दिए गए हैं।",
     "category": "rehber",
     "tags": [
       "cappadocia",
@@ -1738,10 +1738,10 @@ export const ARTICLES: BlogArticleMeta[] = [
   {
     "file": "it-kapadokya-dugun-fotografciligi-rehberi.json",
     "slug": "kapadokya-dugun-fotografciligi-rehberi-it",
-    "title": "Guida alla Fotografia di Matrimonio in Cappadocia 2026 — Top 10 Location, Permessi e Consigli per Foto con Palloni",
-    "metaTitle": "Guida alla Fotografia di Matrimonio in Cappadocia 2026 | Trip and Tick",
-    "metaDescription": "Fotografia di matrimonio in Cappadocia 2026: top 10 location (Love Valley, Uçhisar, Sevgi Valley), hai bisogno di un permesso, guida ai colori stagionali, consigli per foto con palloni, prezzi dei pacchetti su richiesta via WhatsApp.",
-    "excerpt": "Le sessioni fotografiche di matrimonio e pre-matrimonio in Cappadocia hanno vissuto il loro periodo d'oro negli ultimi 5 anni. I camini delle fate, i palloni aerostatici, le valli e gli hotel nelle grotte offrono una palette di composizione di livello mondiale. In questa guida condividiamo le top 10 location, la procedura per i permessi, la palette di colori stagionali, consigli critici per la fotografia con palloni e i prezzi medi del 2026 in dettaglio.",
+    "title": "Guida alla fotografia di matrimonio in Cappadocia 2026: location, regole sui permessi e consigli per le foto con le mongolfiere",
+    "metaTitle": "Fotografia di matrimonio in Cappadocia 2026",
+    "metaDescription": "Foto di matrimonio in Cappadocia: è consentito? 8 location, stagioni (dati ufficiali Nevsehir), consigli sulle mongolfiere, shooting con abito da 245 EUR.",
+    "excerpt": "I servizi fotografici di matrimonio e pre-matrimonio in Cappadocia funzionano meglio nelle valli dei camini delle fate all'alba. Questa guida presenta 8 location, le condizioni stagione per stagione, cosa verificare prima di usare musei o droni e consigli per le foto con le mongolfiere.",
     "category": "rehber",
     "tags": [
       "cappadocia",
@@ -1963,10 +1963,10 @@ export const ARTICLES: BlogArticleMeta[] = [
   {
     "file": "ja-kapadokya-dugun-fotografciligi-rehberi.json",
     "slug": "kapadokya-dugun-fotografciligi-rehberi-ja",
-    "title": "カッパドキアウェディングフォトガイド2026 — トップ10ロケーション、許可証、バルーンフォトのヒント",
-    "metaTitle": "カッパドキアウェディングフォトガイド2026 | Trip and Tick",
-    "metaDescription": "カッパドキアのウェディングフォト2026：トップ10ロケーション（ラブバレー、ウチヒサール、セブギバレー）、許可証が必要か、季節のカラーパレット、バルーンフォトのヒント、価格€450から。",
-    "excerpt": "カッパドキアでのウェディングおよびプレウェディングフォト撮影は、過去5年間で黄金時代を迎えています。妖精の煙突、熱気球、谷、洞窟ホテルが世界クラスの構図パレットを提供します。このガイドでは、トップ10のロケーション、許可手続き、季節のカラーパレット、バルーンフォトのための重要なヒント、2026年の平均価格を詳しく共有します。",
+    "title": "カッパドキア結婚写真ガイド2026：撮影スポット、許可のルール、気球フォトのコツ",
+    "metaTitle": "カッパドキア結婚写真ガイド2026",
+    "metaDescription": "カッパドキアで結婚写真は撮れる？8つの撮影スポット、ネヴシェヒルの公式気候データによる季節ガイド、気球フォトのコツ、気球ドレス撮影（EUR245から）を紹介。",
+    "excerpt": "カッパドキアのウェディング・前撮りは、日の出の妖精の煙突の谷が向いています。このガイドでは8つの撮影スポット、季節ごとの状況、博物館やドローンを使う前の確認事項、気球フォトのコツをまとめました。",
     "category": "rehber",
     "tags": [
       "cappadocia",
@@ -2188,10 +2188,10 @@ export const ARTICLES: BlogArticleMeta[] = [
   {
     "file": "ko-kapadokya-dugun-fotografciligi-rehberi.json",
     "slug": "kapadokya-dugun-fotografciligi-rehberi-ko",
-    "title": "카파도키아 웨딩 사진 가이드 2026 — 최고의 10개 장소, 허가 및 열기구 사진 팁",
-    "metaTitle": "카파도키아 웨딩 사진 가이드 2026 | Trip and Tick",
-    "metaDescription": "카파도키아 웨딩 사진 2026: 최고의 10개 장소 (사랑의 계곡, 우치사르, 세브기 계곡), 허가 필요 여부, 계절별 색상 가이드, 열기구 사진 팁, 가격 €450부터.",
-    "excerpt": "카파도키아에서의 웨딩 및 프리 웨딩 사진 촬영은 지난 5년 동안 황금기를 맞이하고 있습니다. 요정 굴뚝, 열기구, 계곡 및 동굴 호텔은 세계적 수준의 구성 팔레트를 제공합니다. 이 가이드에서는 최고의 10개 장소, 허가 절차, 계절별 색상 팔레트, 열기구 사진을 위한 중요한 팁 및 2026년 평균 가격을 자세히 공유합니다.",
+    "title": "카파도키아 웨딩 촬영 가이드 2026: 촬영 장소, 허가 규정, 열기구 사진 팁",
+    "metaTitle": "카파도키아 웨딩 촬영 가이드 2026",
+    "metaDescription": "카파도키아에서 웨딩 촬영이 가능할까요? 8곳의 촬영 장소, 네브셰히르 공식 기후 자료 기반 계절 안내, 열기구 사진 팁, EUR245부터의 열기구 드레스 촬영을 소개합니다.",
+    "excerpt": "카파도키아의 웨딩·프리웨딩 촬영은 해 뜰 무렵 요정의 굴뚝 계곡이 잘 어울립니다. 이 가이드는 8곳의 촬영 장소, 계절별 조건, 박물관과 드론을 이용하기 전 확인할 사항, 열기구 사진 팁을 다룹니다.",
     "category": "rehber",
     "tags": [
       "cappadocia",
@@ -2413,10 +2413,10 @@ export const ARTICLES: BlogArticleMeta[] = [
   {
     "file": "nl-kapadokya-dugun-fotografciligi.json",
     "slug": "kapadokya-dugun-fotografciligi-rehberi-nl",
-    "title": "Gids Bruidsfotografie Cappadocië 2026 — Top 10 Locaties, Vergunningen en Ballonfoto-tips",
-    "metaTitle": "Gids Bruidsfotografie Cappadocië 2026 | Trip and Tick",
-    "metaDescription": "Bruidsfotografie Cappadocië 2026: top 10 locaties (Love Valley, Uçhisar, Sevgi Vadisi), is een vergunning nodig, seizoensgebonden kleurengids, ballonfoto-tips, gemiddelde prijzen €450-€1.500.",
-    "excerpt": "Bruids- en pre-weddingfotografie in Cappadocië beleeft de afgelopen 5 jaar een gouden eeuw. Feeënschoorstenen, heteluchtballonnen, valleien en grottenhotels bieden een wereldwijd uniek compositiepalet. In deze gids delen we gedetailleerd de top 10 locaties, de vergunningsprocedure, het seizoensgebonden kleurenpalet, de cruciale tips voor ballonfotografie en de gemiddelde prijzen voor 2026.",
+    "title": "Huwelijksfotografie in Cappadocië 2026: locaties, toestemmingsregels en tips voor ballonfoto's",
+    "metaTitle": "Huwelijksfotografie Cappadocië 2026",
+    "metaDescription": "Mag je trouwfoto's maken in Cappadocië? 8 locaties, seizoensgids met klimaatdata van Nevsehir, ballonfototips en een ballon-jurkshoot vanaf EUR245.",
+    "excerpt": "Trouw- en pre-weddingshoots in Cappadocië werken het best in de sprookjesschoorsteenvalleien bij zonsopgang. Deze gids behandelt 8 locaties, de omstandigheden per seizoen, wat je checkt voor je musea of drones gebruikt, en tips voor ballonfoto's.",
     "category": "rehber",
     "tags": [
       "cappadocië",
@@ -2662,10 +2662,10 @@ export const ARTICLES: BlogArticleMeta[] = [
   {
     "file": "pt-BR-kapadokya-dugun-fotografciligi-rehberi.json",
     "slug": "kapadokya-dugun-fotografciligi-rehberi-pt-BR",
-    "title": "Guia de Fotografia de Casamento em Cappadocia 2026 — Top 10 Locais, Permissões e Dicas para Fotos com Balões",
-    "metaTitle": "Guia de Fotografia de Casamento em Cappadocia 2026 | Trip and Tick",
-    "metaDescription": "Fotografia de casamento em Cappadocia 2026: top 10 locais (Vale do Amor, Uçhisar, Vale do Amor), você precisa de uma permissão, guia de cores sazonais, dicas para fotos com balões, preço sob consulta pelo WhatsApp.",
-    "excerpt": "As sessões de fotos de casamento e pré-casamento em Cappadocia estão vivendo sua era de ouro nos últimos 5 anos. Chaminés de fadas, balões de ar quente, vales e hotéis em cavernas oferecem uma paleta de composição de classe mundial. Neste guia, compartilhamos os 10 melhores locais, o procedimento de permissão, a paleta de cores sazonais, dicas críticas para fotografia com balões e os preços médios de 2026 em detalhes.",
+    "title": "Guia de Fotografia de Casamento na Capadócia 2026: Locais, Regras de Permissão e Dicas para Fotos com Balão",
+    "metaTitle": "Fotografia de Casamento na Capadócia 2026",
+    "metaDescription": "Pode fotografar casamento na Capadócia? 8 locais, estações com dados oficiais, dicas para fotos de balão e ensaio de vestido a voar desde EUR 245.",
+    "excerpt": "Os ensaios de casamento e pré-wedding na Capadócia resultam melhor nos vales de chaminés de fadas ao nascer do sol. Este guia traz 8 locais, as condições de cada estação, o que verificar antes de usar museus ou drones e dicas para fotos com balão.",
     "category": "rehber",
     "tags": [
       "cappadocia",
@@ -2887,10 +2887,10 @@ export const ARTICLES: BlogArticleMeta[] = [
   {
     "file": "pt-kapadokya-dugun-fotografciligi-rehberi.json",
     "slug": "kapadokya-dugun-fotografciligi-rehberi-pt",
-    "title": "Guia de Fotografia de Casamento na Capadócia 2026 — Top 10 Locais, Licenças e Dicas para Fotos com Balão",
-    "metaTitle": "Guia de Fotografia de Casamento na Capadócia 2026 | Trip and Tick",
-    "metaDescription": "Fotografia de casamento na Capadócia 2026: top 10 locais (Vale do Amor, Uçhisar, Vale do Amor), precisa de licença, guia de cores sazonais, dicas para fotos com balão, preços sob consulta (WhatsApp).",
-    "excerpt": "As sessões de fotos de casamento e pré-casamento na Capadócia têm vivido a sua idade de ouro nos últimos 5 anos. Chaminés de fadas, balões de ar quente, vales e hotéis em cavernas oferecem uma palete de composição de classe mundial. Neste guia, partilhamos os 10 melhores locais, o procedimento de licença, a palete de cores sazonais, dicas críticas para a fotografia com balões e os preços médios de 2026 em detalhe.",
+    "title": "Guia de Fotografia de Casamento na Capadócia 2026: Locais, Regras de Permissão e Dicas para Fotos com Balão",
+    "metaTitle": "Fotografia de Casamento na Capadócia 2026",
+    "metaDescription": "É permitido fotografar casamentos na Capadócia? 8 locais, estações com dados oficiais, dicas para fotos de balão e ensaio de vestido a voar desde EUR 245.",
+    "excerpt": "Os ensaios de casamento e pré-wedding na Capadócia resultam melhor nos vales de chaminés de fadas ao nascer do sol. Este guia traz 8 locais, as condições de cada estação, o que verificar antes de usar museus ou drones e dicas para fotos com balão.",
     "category": "rehber",
     "tags": [
       "cappadocia",
@@ -3112,10 +3112,10 @@ export const ARTICLES: BlogArticleMeta[] = [
   {
     "file": "ru-kapadokya-dugun-fotografciligi-rehberi.json",
     "slug": "kapadokya-dugun-fotografciligi-rehberi-ru",
-    "title": "Гид по свадебной фотографии в Каппадокии 2026 — Топ 10 локаций, разрешения и советы по фотографированию с воздушными шарами",
-    "metaTitle": "Гид по свадебной фотографии в Каппадокии 2026 | Trip and Tick",
-    "metaDescription": "Свадебная фотография в Каппадокии 2026: топ 10 локаций (Долина Любви, Учисар, Долина Любви), нужны ли разрешения, сезонный цветовой гид, советы по фотографированию с воздушными шарами, цена по запросу.",
-    "excerpt": "Свадебные и предсвадебные фотосессии в Каппадокии переживают свой золотой век последние 5 лет. Сказочные дымоходы, воздушные шары, долины и пещерные отели предлагают палитру композиций мирового класса. В этом руководстве мы делимся топ 10 локациями, процедурой получения разрешений, сезонной цветовой палитрой, критическими советами по фотографии с воздушными шарами и средними ценами на 2026 год.",
+    "title": "Гид по свадебной фотосъёмке в Каппадокии 2026: локации, правила и разрешения, советы по съёмке с воздушными шарами",
+    "metaTitle": "Свадебная фотосъёмка в Каппадокии 2026",
+    "metaDescription": "Разрешена ли свадебная съёмка в Каппадокии? 8 локаций, сезоны по официальным данным Невшехира, советы по съёмке с шарами и фотосессия от 245 EUR.",
+    "excerpt": "Свадебные и предсвадебные съёмки в Каппадокии лучше всего удаются в долинах «сказочных труб» на рассвете. В гиде: 8 локаций, условия по сезонам, что проверить перед музеями и дронами, и советы по съёмке с воздушными шарами.",
     "category": "rehber",
     "tags": [
       "cappadocia",
@@ -3591,10 +3591,10 @@ export const ARTICLES: BlogArticleMeta[] = [
   {
     "file": "uk-kapadokya-dugun-fotografciligi-rehberi.json",
     "slug": "kapadokya-dugun-fotografciligi-rehberi-uk",
-    "title": "Посібник з весільної фотографії в Каппадокії 2026 — Топ 10 локацій, дозволи та поради щодо фотографій з повітряними кулями",
-    "metaTitle": "Посібник з весільної фотографії в Каппадокії 2026 | Trip and Tick",
-    "metaDescription": "Весільна фотографія в Каппадокії 2026: топ 10 локацій (Долина Любові, Ухчисар, Долина Любові), чи потрібен дозвіл, сезонна кольорова палітра, поради щодо фотографій з повітряними кулями, ціна за запитом.",
-    "excerpt": "Весільні та передвесільні фотосесії в Каппадокії переживають свою золоту еру протягом останніх 5 років. Чарівні димарі, повітряні кулі, долини та печерні готелі пропонують палітру композицій світового класу. У цьому посібнику ми ділимося топ 10 локаціями, процедурою отримання дозволів, сезонною кольоровою палітрою, критичними порадами щодо фотографії з повітряними кулями та середніми цінами 2026 року в деталях.",
+    "title": "Посібник із весільної фотографії в Каппадокії 2026: локації, правила дозволів і поради для фото з повітряними кулями",
+    "metaTitle": "Весільна фотосесія в Каппадокії 2026: гід",
+    "metaDescription": "Чи можна проводити весільну зйомку в Каппадокії? 8 локацій, сезони за офіційними даними Невшехіра, поради щодо куль і зйомка в літаючій сукні від EUR 245.",
+    "excerpt": "Весільні та передвесільні зйомки в Каппадокії найкраще вдаються в долинах із «димарями фей» на сході сонця. У посібнику: 8 локацій, умови за сезонами, що перевірити перед зйомкою в музеях чи з дроном, і поради для фото з повітряними кулями.",
     "category": "rehber",
     "tags": [
       "cappadocia",
@@ -3792,10 +3792,10 @@ export const ARTICLES: BlogArticleMeta[] = [
   {
     "file": "ur-kapadokya-dugun-fotografciligi-rehberi.json",
     "slug": "kapadokya-dugun-fotografciligi-rehberi-ur",
-    "title": "Cappadocia شادی فوٹوگرافی گائیڈ 2026 — ٹاپ 10 مقامات، اجازت نامے اور غبارہ فوٹو کے نکات",
-    "metaTitle": "Cappadocia شادی فوٹوگرافی گائیڈ 2026 | Trip and Tick",
-    "metaDescription": "Cappadocia شادی فوٹوگرافی 2026: ٹاپ 10 مقامات (Aşk Vadisi، Uçhisar، Sevgi Vadisi)، کیا اجازت درکار ہے، موسمی رنگ گائیڈ، غبارہ فوٹو نکات، پیکیج قیمتیں WhatsApp پر درخواست پر۔",
-    "excerpt": "Cappadocia میں شادی اور pre-wedding فوٹو شوٹ پچھلے 5 سالوں میں اپنا سنہری دور گزار رہا ہے۔ پری چمنیاں، گرم ہوا کے غبارے، وادیاں اور غار ہوٹل عالمی معیار کا کمپوزیشن پیلیٹ پیش کرتے ہیں۔ اس گائیڈ میں ہم ٹاپ 10 مقامات، اجازت کا طریقہ کار، موسمی رنگ پیلیٹ، غبارہ فوٹو کے اہم نکات اور 2026 اوسط قیمتیں تفصیل سے شیئر کرتے ہیں۔",
+    "title": "کپاڈوکیا میں شادی کی فوٹوگرافی کی گائیڈ 2026: مقامات، اجازت کے قواعد اور غبارے کی تصویروں کے مشورے",
+    "metaTitle": "کپاڈوکیا میں شادی کی فوٹوگرافی 2026 گائیڈ",
+    "metaDescription": "کیا کپاڈوکیا میں شادی کی فوٹوگرافی کی اجازت ہے؟ 8 مقامات، نیوشہر کے سرکاری موسمی ڈیٹا پر مبنی گائیڈ، غبارے کے مشورے اور EUR 245 سے اڑتے لباس کا شوٹ۔",
+    "excerpt": "کپاڈوکیا میں شادی اور پری ویڈنگ شوٹ طلوعِ آفتاب کے وقت پریوں کی چمنیوں والی وادیوں میں سب سے اچھے رہتے ہیں۔ اس گائیڈ میں 8 مقامات، موسم بہ موسم حالات، عجائب گھروں یا ڈرون کے استعمال سے پہلے کیا دیکھنا ہے، اور غبارے کی تصویروں کے مشورے شامل ہیں۔",
     "category": "rehber",
     "tags": [
       "cappadocia",
@@ -3993,10 +3993,10 @@ export const ARTICLES: BlogArticleMeta[] = [
   {
     "file": "zh-kapadokya-dugun-fotografciligi.json",
     "slug": "kapadokya-dugun-fotografciligi-rehberi-zh",
-    "title": "卡帕多奇亚婚礼摄影指南 2026 — 十大地点、许可与热气球摄影技巧",
-    "metaTitle": "卡帕多奇亚婚礼摄影指南 2026 | Trip and Tick",
-    "metaDescription": "卡帕多奇亚婚礼摄影 2026：十大地点（爱情谷、Uçhisar、Sevgi 谷）、是否需要许可、季节色彩指南、热气球摄影技巧、价格 €450 起。",
-    "excerpt": "卡帕多奇亚的婚礼及婚前（pre-wedding）拍摄在过去 5 年迎来黄金时代。精灵烟囱、热气球、山谷和洞穴酒店提供世界级的构图调色板。本指南详细分享十大地点、许可流程、季节色彩、热气球摄影关键技巧和 2026 平均价格。",
+    "title": "2026卡帕多奇亚婚礼摄影指南：拍摄地点、许可规则与热气球拍照技巧",
+    "metaTitle": "卡帕多奇亚婚礼摄影指南2026：地点与规则",
+    "metaDescription": "卡帕多奇亚可以拍婚纱照吗？8个拍摄地点、基于内夫谢希尔官方气候数据的季节指南、热气球拍照技巧，以及245欧元起的热气球飞行婚纱拍摄。",
+    "excerpt": "在卡帕多奇亚拍婚礼和婚纱照，日出时的仙女烟囱山谷效果最好。本指南介绍8个拍摄地点、各季节的条件、使用博物馆或无人机前需要确认的事项，以及热气球拍照技巧。",
     "category": "rehber",
     "tags": [
       "卡帕多奇亚",
