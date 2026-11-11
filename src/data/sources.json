@@ -51,6 +51,42 @@
       "accessed": "2026-11-06",
       "status": 200,
       "citaat": "Direction and distance from (city) 30 KM NW of Nevşehir"
+    },
+    {
+      "id": "dhmi-ltau-kayseri",
+      "url": "https://www.dhmi.gov.tr/AIPDocuments/LT_AD_2_LTAU_en.pdf",
+      "title": "AD 2 LTAU Kayseri - Turkish AIP",
+      "publisher": "DHMI (Turkish State Airports Authority)",
+      "accessed": "2026-11-11",
+      "status": 200,
+      "citaat": "Direction and distance from (city) 5 KM North of the city"
+    },
+    {
+      "id": "muze-derinkuyu",
+      "url": "https://muze.gov.tr/muze-detay?DistId=DKY&SectionId=DKY01",
+      "title": "DERINKUYU UNDERGROUND CITY - Muze Kart",
+      "publisher": "Republic of Türkiye Ministry of Culture and Tourism (muze.gov.tr)",
+      "accessed": "2026-11-11",
+      "status": 200,
+      "citaat": "Only ten percent of the underground city of Derinkuyu, which was opened to the public in 1965, can be visited today."
+    },
+    {
+      "id": "muze-goreme-hours",
+      "url": "https://muze.gov.tr/muze-detay?SectionId=GRM01&DistId=GRM",
+      "title": "GOREME ARCHAELOGICAL SITE - hours and churches",
+      "publisher": "Republic of Türkiye Ministry of Culture and Tourism (muze.gov.tr)",
+      "accessed": "2026-11-11",
+      "status": 200,
+      "citaat": "The Göreme Open Air Museum houses the Girls and Boys Monastery, St. Basil’s Church, Elmalı Church"
+    },
+    {
+      "id": "muze-kaymakli",
+      "url": "https://muze.gov.tr/muze-detay?DistId=KYY&SectionId=KYY01",
+      "title": "KAYMAKLI UNDERGROUND CITY - Muze Kart",
+      "publisher": "Republic of Türkiye Ministry of Culture and Tourism (muze.gov.tr)",
+      "accessed": "2026-11-11",
+      "status": 200,
+      "citaat": "Currently, four floors have been unearthed, with the spaces concentrated around the ventilation shafts."
     }
   ]
 }
