@@ -131,3 +131,41 @@ describe("geo citation standard — fabricated claims absent in every locale", (
     expect(hits).toEqual([]);
   });
 });
+
+// Wave 3 — residue in translated locale articles. Scoped per article slug because the same digits
+// are legitimate elsewhere (own transfer price, bus-duration table row locked by istanbul-duration.test.ts).
+const SCOPED: [string, string, RegExp][] = [
+  ["kapadokya-istanbuldan-nasil-gidilir", "istanbul: price list in meta (EUR 45/18/120)", /€\s?(45|18|120)(?!\d)|(?<!\d)(45|18|120)\s?(€|EUR|euro)/i],
+  ["kapadokya-istanbuldan-nasil-gidilir", "istanbul: 30% intro stat", /(?<![\d.,])30\s?%/],
+  ["kapadokya-istanbuldan-nasil-gidilir", "istanbul: 20 kg bus luggage", /(?<![\d.,])20\s?(kg|кг|公斤|キロ|킬로)/i],
+  ["kapadokya-istanbuldan-nasil-gidilir", "istanbul: flights-per-day frequency", /(?<![\d.,])(4\s?[-–]\s?6|8\s?[-–]\s?12)(?![\d.,])/],
+  ["kapadokya-istanbuldan-nasil-gidilir", "istanbul: O-21 drive claim", /\bO-21\b/],
+  ["cappadocia-winter-2026-guide", "winter: O-21 drive time", /\bO-21\b/],
+  ["cappadocia-winter-2026-guide", "winter: 30% body heat / 20% pensions closed", /(?<![\d.,])(30|20)\s?%/],
+  ["cappadocia-winter-2026-guide", "winter: avg temps", /-\s?6\s?°|(?<![\d.,])3\s?°\s?C/],
+  ["kapadokya-otel-tavsiye-2026", "hotel: 30% of trip / 30-35 C", /(?<![\d.,])30\s?%|30\s?[-–]\s?35\s?°/],
+  ["kapadokya-ne-zaman-gidilir", "season: 14.5 h day length", /14[.,]5/],
+  ["kapadokya-ne-zaman-gidilir", "season: 30% sells more / 30 years operator data", /(?<![\d.,])30\s?%\s?(in più|besser|多く|más|de plus|больше|more|meer)|30(年| anos)/i],
+  ["kapadokya-fotograf-noktalari", "photo spots: 4 km from Cavusin", /(?<![\d.,])4\s?(km|км|公里|キロ|킬로)/i],
+  ["ballonvaart-cappadocie", "nl balloon: pickup hour / freezing / basket of 4-8", /vier of vijf uur|rond het vriespunt|vier tot acht/i],
+];
+const BLOG = path.join(ROOT, "public", "blog");
+
+describe("geo citation standard — wave 3 scoped residue", () => {
+  it.each(SCOPED)("%s — %s", (slug, _name, re) => {
+    const files = LOCALE_FILES.filter((f) => f.endsWith(`-${slug}.json`));
+    expect(files.length).toBeGreaterThan(0);
+    const hits: string[] = [];
+    for (const f of files) {
+      const a = JSON.parse(fs.readFileSync(path.join(BLOG, f), "utf8"));
+      const text = [a.title, a.metaTitle, a.metaDescription, a.excerpt, a.content, JSON.stringify(a.faq ?? [])].join("\n");
+      if (re.test(text)) hits.push(f);
+    }
+    expect(hits).toEqual([]);
+  });
+  it.each(["nl-beste-tijd-ballonvaart-cappadocie.json", "nl-kosten-ballonvaart-cappadocie.json"])("%s keeps 4-8 FAQ entries", (f) => {
+    const a = JSON.parse(fs.readFileSync(path.join(BLOG, f), "utf8"));
+    expect(a.faq.length).toBeGreaterThanOrEqual(4);
+    expect(a.faq.length).toBeLessThanOrEqual(8);
+  });
+});
