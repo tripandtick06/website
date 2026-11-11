@@ -85,6 +85,10 @@ jobs:
       - name: Build (next-on-pages adapter)
         run: npm run build:cf
 
+      - name: Snapshot live sitemap (IndexNow diff baseline)
+        continue-on-error: true
+        run: curl -sf "https://tripandtick.com/sitemap.xml?cb=${GITHUB_RUN_ID}" -o "$RUNNER_TEMP/sitemap-before.xml" || true
+
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
@@ -94,3 +98,12 @@ jobs:
           # (action default) fails non-interactively when project absent.
           wranglerVersion: "4"
           command: pages deploy .vercel/output/static --project-name=website --branch=master --commit-dirty=true
+
+      # Ping Bing (feeds ChatGPT search) + Yandex with ONLY the URLs that are new
+      # or whose <lastmod> changed in this deploy. Never fails the deploy.
+      - name: IndexNow — submit changed sitemap URLs
+        continue-on-error: true
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+          SITE_HOST: tripandtick.com
+        run: python3 scripts/indexnow-sitemap-diff.py "$RUNNER_TEMP/sitemap-before.xml"

@@ -6,6 +6,7 @@ import { BALLOON_PACKAGES } from "../data/services/balloons";
 import { KAPADOKYA_PILLARS, HOTELS } from "../data/services/catalog";
 import { OPERATORS } from "../data/services/operators";
 import { ARTICLES } from "../data/blog";
+import { isIndexableBlogSlug } from "./locale-index";
 
 /** Indexlenebilir statik (TR-canonical, prefix'siz) path'ler. */
 export const STATIC_PATHS: string[] = [
@@ -42,7 +43,12 @@ export function allPublicPaths(): string[] {
   for (const h of HOTELS) paths.push(`/oteller/${h.slug}`);
   for (const o of OPERATORS) paths.push(`/operatorler/${o.id}`);
   for (const k of KAPADOKYA_PILLARS) paths.push(`/blog/${k.slug}`);
-  for (const a of ARTICLES) paths.push(`/blog/${a.slug}`);
+  // Same shape + filter as sitemapArticles(): /<locale>/blog/<slug> (tr unprefixed),
+  // indexable locales only. The old /blog/<slug> for every locale 404'd for non-TR.
+  for (const a of ARTICLES) {
+    if (!isIndexableBlogSlug(a.locale, a.slug) || a.noindex) continue;
+    paths.push(`${a.locale === "tr" ? "" : `/${a.locale}`}/blog/${a.slug}`);
+  }
   return Array.from(new Set(paths));
 }
 
