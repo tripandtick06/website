@@ -29,6 +29,8 @@ jobs:
       NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: pk_test_stub
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # full history: tests/lib/sitemap-lastmod.test.ts compares data dates to git
 
       - uses: actions/setup-node@v4
         with:
