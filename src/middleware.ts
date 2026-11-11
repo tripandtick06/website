@@ -5,6 +5,7 @@ import { routing } from "@/i18n/routing";
 import { ADMIN_COOKIE_NAME, verifyAdminCookieValue } from "@/lib/admin-auth";
 import { checkRateLimit } from "@/lib/rate-limit";
 import { isNoindexPath } from "@/lib/locale-index";
+import { markdownHomeResponse, wantsMarkdown } from "@/lib/markdown-home";
 
 // Locale auto-detection (Accept-Language / NEXT_LOCALE cookie) ONLY on the
 // root URL. Deep links keep the language they were shared in: the old
@@ -90,6 +91,11 @@ export async function middleware(req: NextRequest) {
 
 async function route(req: NextRequest): Promise<NextResponse> {
   const { pathname } = req.nextUrl;
+
+  // GEO: markdown negotiation for the homepage only (Accept: text/markdown).
+  if (pathname === "/" && wantsMarkdown(req.headers.get("accept"))) {
+    return markdownHomeResponse() as NextResponse;
+  }
 
   // Non-API + non-admin paths → next-intl locale routing.
   // /admin/* is TR-only (no locale prefix), bypass intl.
