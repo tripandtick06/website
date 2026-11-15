@@ -34,7 +34,7 @@ export function StepsSection() {
               <div className="w-16 h-16 rounded-full bg-white border-[3px] border-slate-200 flex items-center justify-center mx-auto mb-4 relative z-10 transition-colors duration-200 group-hover:border-booking group-hover:bg-booking-50">
                 <step.icon className="w-6 h-6 text-slate-400 group-hover:text-booking transition-colors" />
               </div>
-              <h4 className="font-bold text-slate-900 mb-2">{step.title}</h4>
+              <h3 className="font-bold text-slate-900 mb-2">{step.title}</h3>
               <p className="text-sm text-slate-500 px-3">{step.desc}</p>
             </div>
           ))}
