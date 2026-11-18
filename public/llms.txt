@@ -21,6 +21,8 @@ Languages: TR (default), EN, DE, FR, ES, NL, ZH, HI, UR, PT, PT-BR, JA, KO, IT, 
 - [/transferler](https://tripandtick.com/transferler?utm_source=llms) — Airport transfers from Nevşehir (NAV) and Kayseri (ASR)
 - [/operatorler](https://tripandtick.com/operatorler?utm_source=llms) — Partner balloon operators and what each one flies
 - [/blog](https://tripandtick.com/blog?utm_source=llms) — Cappadocia guides and price articles
+- [/blog/kapadokya-magara-otel-rehberi](https://tripandtick.com/blog/kapadokya-magara-otel-rehberi?utm_source=llms) — Cave hotel guide (Turkish): Göreme vs Ürgüp, questions to ask, seasonal temperatures
+- [/blog/kapadokya-balayi-rehberi](https://tripandtick.com/blog/kapadokya-balayi-rehberi?utm_source=llms) — Honeymoon guide (Turkish): 3 days 2 nights package contents, best months
 - [/sss](https://tripandtick.com/sss?utm_source=llms) — Frequently asked questions
 - [/yorum](https://tripandtick.com/yorum?utm_source=llms) — Guest reviews
 - [/hakkimizda](https://tripandtick.com/hakkimizda?utm_source=llms) — About Trip and Tick

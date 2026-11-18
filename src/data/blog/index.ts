@@ -3314,6 +3314,30 @@ export const ARTICLES: BlogArticleMeta[] = [
     "coverImage": "/images/blog/kapadokya-aktiviteler.jpg"
   },
   {
+    "file": "tr-kapadokya-balayi-rehberi.json",
+    "slug": "kapadokya-balayi-rehberi",
+    "title": "Kapadokya Balayı Rehberi: 3 Gün 2 Gece Paket, Otel ve En İyi Ay (2026)",
+    "metaTitle": "Kapadokya Balayı Rehberi: 3 Gün 2 Gece",
+    "metaDescription": "Kapadokya balayı paketi neleri içerir? 3 gün 2 gece program, mağara otel, en iyi ay ve rezervasyon adımları. Fiyat talep üzerine.",
+    "excerpt": "Kapadokya balayı için paket içeriği, mağara otel seçimi, en uygun aylar ve rezervasyon adımları. Fiyat tarihe göre teklifle verilir.",
+    "category": "konaklama",
+    "tags": [
+      "kapadokya",
+      "balayı",
+      "balayı paketi",
+      "mağara otel",
+      "balon"
+    ],
+    "targetKeyword": "kapadokya balayı paketi",
+    "locale": "tr",
+    "publishedAt": "2026-11-18T00:00:00.000Z",
+    "updatedAt": "2026-11-18",
+    "seoScore": 90,
+    "isAiGenerated": false,
+    "noindex": false,
+    "coverImage": "/images/packages/balayi-paketi.jpg"
+  },
+  {
     "file": "tr-kapadokya-balon-turu-fiyat-2026.json",
     "slug": "kapadokya-balon-turu-fiyat-2026",
     "title": "Kapadokya Balon Turu Fiyatları 2026 — En Güncel Rehber",
@@ -3441,6 +3465,30 @@ export const ARTICLES: BlogArticleMeta[] = [
     "coverImage": "/images/blog/kapadokya-istanbuldan-nasil-gidilir.jpg"
   },
   {
+    "file": "tr-kapadokya-magara-otel-rehberi.json",
+    "slug": "kapadokya-magara-otel-rehberi",
+    "title": "Kapadokya Mağara Otel Rehberi: Göreme mi Ürgüp mü? (2026)",
+    "metaTitle": "Kapadokya Mağara Otel Rehberi (2026)",
+    "metaDescription": "Kapadokya mağara otel nasıl seçilir? Göreme ve Ürgüp farkı, pencere-ısıtma soruları, mevsim sıcaklıkları ve balon alınışı. Fiyat talep üzerine.",
+    "excerpt": "Mağara otel nedir, Göreme mi Ürgüp mü, rezervasyondan önce hangi soruları sormalı? Nevşehir sıcaklık verileriyle kısa rehber.",
+    "category": "konaklama",
+    "tags": [
+      "kapadokya",
+      "mağara otel",
+      "göreme",
+      "ürgüp",
+      "konaklama"
+    ],
+    "targetKeyword": "kapadokya mağara otel",
+    "locale": "tr",
+    "publishedAt": "2026-11-18T00:00:00.000Z",
+    "updatedAt": "2026-11-18",
+    "seoScore": 90,
+    "isAiGenerated": false,
+    "noindex": false,
+    "coverImage": "/images/blog/kapadokya-otel-tavsiye-2026.jpg"
+  },
+  {
     "file": "tr-kapadokya-ne-zaman-gidilir.json",
     "slug": "kapadokya-ne-zaman-gidilir",
     "title": "Kapadokya'ya Ne Zaman Gidilir? Ay Ay Hava Durumu Rehberi 2026",
@@ -3459,7 +3507,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "targetKeyword": "kapadokya ne zaman gidilir",
     "locale": "tr",
     "publishedAt": "2026-05-15T00:00:00.000Z",
-    "updatedAt": "2026-11-11",
+    "updatedAt": "2026-11-18",
     "seoScore": 92,
     "isAiGenerated": false,
     "noindex": false,
@@ -3484,7 +3532,7 @@ export const ARTICLES: BlogArticleMeta[] = [
     "targetKeyword": "kapadokya otel tavsiye",
     "locale": "tr",
     "publishedAt": "2026-05-15T00:00:00.000Z",
-    "updatedAt": "2026-11-11",
+    "updatedAt": "2026-11-18",
     "seoScore": 91,
     "isAiGenerated": false,
     "noindex": false,
