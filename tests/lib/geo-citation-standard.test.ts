@@ -84,6 +84,51 @@ describe.each(MUST_PASS)("geo citation standard — %s", (file) => {
   });
 });
 
+// Turkish (primary-language) pages: same S1/S4/S5/S6/S8 checks, Turkish interrogative regex. Ratchet only grows.
+const MUST_PASS_TR = [
+  "tr-kapadokya-magara-otel-rehberi.json",
+  "tr-kapadokya-balayi-rehberi.json",
+];
+
+describe.each(MUST_PASS_TR)("geo citation standard (TR) — %s", (file) => {
+  const a = load(file);
+  const ids = a.sources ?? [];
+  const entries = ids.map((id) => SOURCES.urls.find((u) => u.id === id));
+
+  it("S1/S10: >=2 external domains, all ids resolve in the registry", () => {
+    expect(entries.every(Boolean), `unknown source id in ${ids.join(",")}`).toBe(true);
+    expect(new Set(entries.map((e) => host(e!.url))).size).toBeGreaterThanOrEqual(2);
+  });
+
+  it("S4: first paragraph <=60 words, number within first 200 words", () => {
+    expect(words(firstParagraph(a.content))).toBeLessThanOrEqual(60);
+    expect(a.content.split(/\s+/).slice(0, 200).join(" ")).toMatch(/\d/);
+  });
+
+  it("S5/S6: 4-8 unique interrogative FAQs, answers <=200 words, first sentence <=35 words", () => {
+    const faq = a.faq ?? [];
+    expect(faq.length).toBeGreaterThanOrEqual(4);
+    expect(faq.length).toBeLessThanOrEqual(8);
+    expect(new Set(faq.map((f) => f.question)).size).toBe(faq.length);
+    for (const f of faq) {
+      expect(f.question, f.question).toMatch(/\?$/);
+      expect(f.question, f.question).toMatch(/(?<![\p{L}])(m[iıuü](dir|dır|dur|dür)?|nedir|nasıl|ne kadar|hangi\p{L}*|kaç|neler|nerede|ne zaman|kimler)(?![\p{L}])/iu);
+      expect(words(f.answer), f.question).toBeLessThanOrEqual(200);
+      expect(words(f.answer.split(/(?<=[.!?])\s/)[0]), f.question).toBeLessThanOrEqual(35);
+    }
+  });
+
+  it("S8: updatedAt is set and manifest matches", () => {
+    expect(a.updatedAt).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+    expect(ARTICLES.find((m) => m.file === file)?.updatedAt).toBe(a.updatedAt);
+  });
+
+  it("no net prices: no currency amounts in content or FAQ", () => {
+    const text = a.content + JSON.stringify(a.faq ?? []);
+    expect(text).not.toMatch(/(€|EUR|TL|₺|\$)\s*\d|\d\s*(€|EUR|TL|₺)/);
+  });
+});
+
 describe("geo citation standard — rendering wiring (S2/S7)", () => {
   const read = (p: string) => fs.readFileSync(path.join(ROOT, p), "utf8");
   it("article component renders a visible Sources h2 and the FAQ from the same list as the schema", () => {
