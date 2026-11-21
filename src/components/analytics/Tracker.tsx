@@ -14,6 +14,7 @@ import {
   classifyClick,
   nextSeq,
   referrerHost,
+  rememberFirstTouch,
   scrollDepth,
   sessionId,
   utmProps,
@@ -82,13 +83,15 @@ export function Tracker() {
     if (product) props.product = product;
     if (typeof document !== "undefined" && document.title) props.title = document.title.slice(0, 120);
     props.w = window.innerWidth;
+    const refHost = referrerHost(document.referrer, window.location.host, isNew);
+    if (isNew) rememberFirstTouch(window.location.search, refHost);
     q().push({
       name: "page_view",
       path,
       sid,
       seq,
       locale,
-      ref_host: referrerHost(document.referrer, window.location.host, isNew),
+      ref_host: refHost,
       product,
       props,
     });

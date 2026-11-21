@@ -4,8 +4,9 @@
 // Importers (callers):
 //   - src/app/api/contact/route.ts
 //   - src/app/api/hotel-inquiry/route.ts
+//   - src/app/api/booking/route.ts (source 'booking')
 //   - src/app/api/b2b/apply/route.ts
-// (booking zaten `bookings` tablosuna yaziyor — burada tekrar yazilmaz.)
+// (booking ayrica `bookings` tablosuna yazilir; leads kaydi kanal-yedegi + atif icin.)
 // Env: NEXT_PUBLIC_SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY. Yoksa no-op (false doner).
 // Tablo: supabase/migrations/0005_leads.sql. Tablo yoksa PostgREST 404 -> log, throw yok.
 

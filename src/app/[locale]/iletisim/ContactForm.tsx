@@ -7,6 +7,7 @@ import { PhoneField, dialForLocale } from "@/components/booking/PhoneField";
 import { EmailHint, useEmailHint } from "@/components/ui/EmailHint";
 import { useFormFunnel } from "@/lib/analytics/useFormFunnel";
 import { track } from "@/components/analytics/Tracker";
+import { leadAttribution } from "@/lib/analytics/tracker";
 
 type Status = "idle" | "loading" | "success" | "error";
 
@@ -35,7 +36,7 @@ export function ContactForm() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(Object.fromEntries(data.entries())),
+        body: JSON.stringify({ ...Object.fromEntries(data.entries()), ...leadAttribution("contact") }),
       });
       if (!res.ok) throw new Error(t.component.iletisim.contact_form.error_server);
       funnel.done();

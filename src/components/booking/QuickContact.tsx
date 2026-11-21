@@ -23,6 +23,7 @@ import { COMPANY } from "@/data/founder";
 import { EmailHint, useEmailHint } from "@/components/ui/EmailHint";
 import { useFormFunnel } from "@/lib/analytics/useFormFunnel";
 import { track } from "@/components/analytics/Tracker";
+import { leadAttribution } from "@/lib/analytics/tracker";
 
 export const QUICK_CONTACT_ID = "quick-contact";
 
@@ -89,6 +90,7 @@ export function QuickContactForm({ onSent }: { onSent?: () => void }) {
           subject: prod ? `Hızlı talep — ${prod}` : "Hızlı talep",
           page: `${pathname} (${locale})`,
           _hp: data._hp,
+          ...leadAttribution("quick"),
         }),
       });
       if (!res.ok) throw new Error(String(res.status));
