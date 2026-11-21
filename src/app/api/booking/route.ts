@@ -9,7 +9,9 @@ import {
 } from "@/lib/email-templates";
 import { persistBooking } from "@/lib/db/bookings";
 import { upsertCustomer } from "@/lib/db/customers";
-import { supabaseEnabled } from "@/lib/supabase";
+import { supabaseAdminEnabled, supabaseEnabled } from "@/lib/supabase";
+import { persistLead } from "@/lib/leads";
+import { attributionShape, pickAttribution } from "@/lib/attribution";
 import { notifyLead } from "@/lib/telegram";
 
 export const runtime = "edge";
@@ -38,6 +40,7 @@ const bookingSchema = z.object({
   promoCode: z.string().optional(),
   paymentSessionId: z.string().optional(),
   specialRequests: z.string().max(2000).optional(),
+  ...attributionShape,
 });
 
 const BREVO_API_KEY = process.env.BREVO_API_KEY;
@@ -141,6 +144,7 @@ export async function POST(req: NextRequest) {
       console.warn("[api/booking] upsertCustomer error (devam)", err);
     }
 
+    let bookingPersisted = false;
     try {
       await persistBooking({
         id: bookingId,
@@ -161,6 +165,8 @@ export async function POST(req: NextRequest) {
         stripeSessionId: parsed.data.paymentSessionId ?? null,
         specialRequests: parsed.data.specialRequests ?? null,
       });
+      // Env yoksa persistBooking mock-log doner: gercek kalici kayit sayilmaz.
+      bookingPersisted = supabaseAdminEnabled;
     } catch (err) {
       console.warn("[api/booking] persistBooking error (devam — mock fallback)", err);
     }
@@ -237,7 +243,7 @@ export async function POST(req: NextRequest) {
       note: "Aksiyon: ödeme/onay durumunu admin panelden kontrol et, müşteriyi ara.",
     });
 
-    // Paralel — hata olsa bile booking 200 doner
+    // Paralel — tek kanal bile basarili ise 200; hepsi dusunce asagida 502
     const [customerResult, adminResult, telegramResult] = await Promise.allSettled([
       customerSend,
       adminSend,
@@ -249,6 +255,39 @@ export async function POST(req: NextRequest) {
       admin: adminResult.status === "fulfilled" ? adminResult.value.ok : false,
     };
     const telegramOk = telegramResult.status === "fulfilled" ? telegramResult.value.ok : false;
+
+    // Lead tablosu (source 'booking'): booking persist dusse bile talep kaybolmasin.
+    const leadPersisted = await persistLead({
+      source: "booking",
+      ref: bookingId,
+      name: leadPax.fullName,
+      email: leadPax.email,
+      phone: leadPax.phone,
+      payload: {
+        serviceSlug: parsed.data.serviceSlug,
+        serviceName: parsed.data.serviceName,
+        date: parsed.data.date,
+        adults: parsed.data.adults,
+        children: parsed.data.children,
+        totalPrice: parsed.data.totalPrice,
+        currency: parsed.data.currency,
+        ...pickAttribution(parsed.data),
+      },
+      telegramOk,
+      emailOk: emailStatus.admin,
+    });
+
+    if (!bookingPersisted && !leadPersisted && !telegramOk && !emailStatus.customer && !emailStatus.admin) {
+      console.error(
+        "[api/booking] REZERVASYON HICBIR KANALA ULASMADI",
+        bookingId,
+        JSON.stringify({ name: leadPax.fullName, email: leadPax.email, phone: leadPax.phone, service: parsed.data.serviceName })
+      );
+      return NextResponse.json(
+        { error: "Rezervasyon kaydedilemedi. Lütfen tekrar deneyin veya WhatsApp kullanın." },
+        { status: 502 }
+      );
+    }
 
     if (!emailStatus.customer || !emailStatus.admin) {
       console.warn("[api/booking] Mail gonderim kismi/tam hata", JSON.stringify(emailStatus));

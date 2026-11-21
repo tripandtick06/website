@@ -2,6 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import { z } from "zod";
 import { notifyLead } from "@/lib/telegram";
 import { persistLead } from "@/lib/leads";
+import { attributionShape, pickAttribution } from "@/lib/attribution";
 
 export const runtime = "edge";
 export const dynamic = "force-dynamic";
@@ -18,6 +19,7 @@ const contactSchema = z
     date: z.string().max(40).optional(),
     people: z.string().max(10).optional(),
     page: z.string().max(300).optional(),
+    ...attributionShape,
     _hp: z.string().optional(),
   })
   .refine((d) => Boolean(d.email) || (d.phone ?? "").trim().length >= 6, {
@@ -115,12 +117,16 @@ export async function POST(req: NextRequest) {
       name,
       email,
       phone,
-      payload: { subject, message, date, people, page },
+      payload: { subject, message, date, people, page, ...pickAttribution(parsed.data) },
       telegramOk: telegram.ok,
       emailOk,
     });
     if (!telegram.ok && !emailOk && !persisted) {
       console.error("[api/contact] LEAD HICBIR KANALA ULASMADI", ref, JSON.stringify({ name, email, phone, subject }));
+      return NextResponse.json(
+        { error: "Mesaj gönderilemedi. Lütfen tekrar deneyin veya WhatsApp kullanın." },
+        { status: 502 }
+      );
     }
 
     return NextResponse.json({

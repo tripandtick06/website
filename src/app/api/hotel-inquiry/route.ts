@@ -10,6 +10,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import { z } from "zod";
 import { notifyLead } from "@/lib/telegram";
 import { persistLead } from "@/lib/leads";
+import { attributionShape, pickAttribution } from "@/lib/attribution";
 
 export const runtime = "edge";
 export const dynamic = "force-dynamic";
@@ -28,6 +29,7 @@ const inquirySchema = z.object({
   region: z.string().max(80).optional(),
   budget: z.string().max(100).optional(),
   preferences: z.string().max(2000).optional(),
+  ...attributionShape,
   _hp: z.string().optional(),
 });
 
@@ -101,6 +103,7 @@ export async function POST(req: NextRequest) {
           children: d.children,
           budget: d.budget,
           preferences: d.preferences,
+          ...pickAttribution(d),
         },
         telegramOk: telegram.ok,
         emailOk,

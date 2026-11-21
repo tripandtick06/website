@@ -152,8 +152,8 @@ export async function persistBooking(b: BookingDraftInput): Promise<string> {
   const { error } = await client.from("bookings").insert(row);
   if (error) {
     console.error("[db/bookings] insert failed", error.message, error.details);
-    // Hatasi olsa bile booking id don — caller mock fallback ile devam.
-    return bookingId;
+    // Throw: caller (booking route) kalici kaydin yazilmadigini bilsin; route yakalar ve devam eder.
+    throw new Error(`bookings insert failed: ${error.message}`);
   }
   return bookingId;
 }

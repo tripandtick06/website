@@ -6,11 +6,13 @@ import { PhoneField, dialForLocale } from "@/components/booking/PhoneField";
 import { useT } from "@/lib/i18n/I18nProvider";
 import { useUiText } from "@/lib/i18n/uiText";
 import { tNodes } from "@/lib/i18n/trans";
-import { useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useLocale } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { z } from "zod";
 import { track } from "@/components/analytics/Tracker";
+import { leadAttribution } from "@/lib/analytics/tracker";
+import { buildWhatsAppHref } from "@/lib/whatsapp";
 import { EmailHint, useEmailHint } from "@/components/ui/EmailHint";
 import {
   Calendar,
@@ -420,6 +422,12 @@ export function BookingClient({ service }: { service: BookingService }) {
         // Request mode (no payment provider yet): record the booking request now
         // so the team is notified (Telegram) before the customer sees the page.
         const bookingId = await sendBookingEmail();
+        if (!bookingId) {
+          // Talep sunucuya ulasmadi: basari sayfasina YONLENDIRME, hata + WhatsApp yedegi goster.
+          setSubmitError(ui.quickContact.error);
+          setSubmitting(false);
+          return;
+        }
         window.location.href = bookingId ? `${data.url}&bookingId=${encodeURIComponent(bookingId)}` : data.url;
         return;
       }
@@ -474,6 +482,7 @@ export function BookingClient({ service }: { service: BookingService }) {
           insurance: draft?.insurance ?? insurance,
           promoCode: draft?.promoCode,
           paymentSessionId: sessionId ?? undefined,
+          ...leadAttribution("booking"),
         }),
       });
 
@@ -1290,6 +1299,8 @@ function Step5Payment(props: {
   onPay: () => void;
 }) {
   const t = useT();
+  const locale = useLocale();
+  const pathname = usePathname() ?? "/";
   const { service, totalPrice, submitting, error, onBack, onPay } = props;
 
   return (
@@ -1320,6 +1331,9 @@ function Step5Payment(props: {
         {error && (
           <div className="border-l-4 border-rose-500 bg-rose-50 p-3 text-sm text-rose-800 rounded">
             <strong>{t.component.booking.booking_client.step5_error_prefix}</strong> {error}
+            <a href={buildWhatsAppHref(locale, pathname)} target="_blank" rel="noopener noreferrer" className="mt-1.5 block font-semibold underline">
+              WhatsApp
+            </a>
           </div>
         )}
 

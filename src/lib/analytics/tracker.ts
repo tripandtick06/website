@@ -18,6 +18,7 @@ const K_SID = "tt:sid";
 const K_LAST = "tt:last";
 const K_SEQ = "tt:seq";
 const K_REF = "tt:ref";
+const K_FT = "tt:ft";
 
 export type ClickKind = "whatsapp" | "reserve" | "tel" | "mail" | "outbound" | "track";
 
@@ -71,6 +72,7 @@ export function sessionId(now = Date.now(), store: Store | null = storage() ?? m
   s.set(K_LAST, String(now));
   s.set(K_SEQ, "0");
   s.set(K_REF, "");
+  s.set(K_FT, "");
   return { sid: fresh, isNew: true };
 }
 
@@ -101,6 +103,29 @@ export function utmProps(search: string): Record<string, string> {
     for (const k of ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "gclid", "fbclid"]) {
       const v = q.get(k);
       if (v) out[k] = v.slice(0, 100);
+    }
+  } catch {
+    /* yok */
+  }
+  return out;
+}
+
+/** Oturumun ilk sayfasindaki utm/gclid/fbclid + referrer host'u saklar (first-touch). */
+export function rememberFirstTouch(search: string, refHost: string | null, store: Store | null = storage() ?? memStore): void {
+  const s = store ?? memStore;
+  const ft = { ...utmProps(search), ...(refHost ? { ref_host: refHost } : {}) };
+  s.set(K_FT, JSON.stringify(ft));
+}
+
+/** Form gonderiminde istek govdesine eklenen atif alanlari (sid + first-touch + form konumu). */
+export function leadAttribution(form: string, store: Store | null = storage() ?? memStore, now = Date.now()): Record<string, string> {
+  const s = store ?? memStore;
+  const out: Record<string, string> = { sid: sessionId(now, s).sid, form: form.slice(0, 60) };
+  try {
+    const ft = JSON.parse(s.get(K_FT) || "{}") as Record<string, unknown>;
+    for (const k of ["utm_source", "utm_medium", "utm_campaign", "gclid", "fbclid", "ref_host"]) {
+      const v = ft[k];
+      if (typeof v === "string" && v) out[k] = v;
     }
   } catch {
     /* yok */

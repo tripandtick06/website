@@ -21,6 +21,7 @@ import { PhoneField, dialForLocale } from "@/components/booking/PhoneField";
 import { EmailHint, useEmailHint } from "@/components/ui/EmailHint";
 import { useFormFunnel } from "@/lib/analytics/useFormFunnel";
 import { track } from "@/components/analytics/Tracker";
+import { leadAttribution } from "@/lib/analytics/tracker";
 
 interface Props {
   hotelSlug: string;
@@ -79,6 +80,7 @@ export function HotelInquiryForm({ hotelSlug, hotelName, tier, region }: Props) 
           budget: budget.trim() || undefined,
           preferences: preferences.trim() || undefined,
           _hp: hp,
+          ...leadAttribution("hotel"),
         }),
         signal: controller.signal,
       });
